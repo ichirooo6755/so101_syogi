@@ -72,11 +72,11 @@ make -C vendor/Fairy-Stockfish/src -j4 build ARCH=apple-silicon largeboards=yes
 
 作業は Issue で追います。引き継ぐ人はまず open Issue と本 README を見てください。
 
-- 実機対局の成立（関節制御・較正・単駒把持）
-- 上腕の延長寸法の決定（+58/+75/+100/+125 の比較を実測で決める）
-- 盤面の位置関係の実測（盤寸法・マス間隔・駒台スロット・裏返し台）
-- 駒台の在庫管理（持ち駒の駒種・空き場所）
-- 囲碁の着手（19 路盤の交点座標・石の把持・ルールエンジン選定）
+- [#1 実機対局の成立（関節制御・較正・単駒把持）](https://github.com/ichirooo6755/so101_syogi/issues/1)
+- [#2 上腕の延長寸法の決定（+58/+75/+100/+125 の比較を実測で決める）](https://github.com/ichirooo6755/so101_syogi/issues/2)
+- [#3 盤面の位置関係の実測（盤寸法・マス間隔・駒台スロット・裏返し台）](https://github.com/ichirooo6755/so101_syogi/issues/3)
+- [#4 駒台の在庫管理（持ち駒の駒種・空き場所）](https://github.com/ichirooo6755/so101_syogi/issues/4)
+- [#5 囲碁の着手（19 路盤の交点座標・石の把持・ルールエンジン選定）](https://github.com/ichirooo6755/so101_syogi/issues/5)
 
 ## 注意
 
