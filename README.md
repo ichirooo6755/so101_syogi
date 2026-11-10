@@ -18,8 +18,10 @@ SO-101（SO-ARM101 系 6 軸アーム）で、実物の将棋と囲碁を人と�
 | 手首カメラ | XIAO ESP32S3 Sense 用ファーム（`shogi/firmware/ShogiCamera/`）とマウント試作あり。実機撮影は未試験 |
 | 囲碁 | **未着手。** 設計メモだけ [go/README.md](go/README.md) に置いた |
 
+進捗の全体地図は [docs/progress.md](docs/progress.md)。
 詳しい現状・次にやることは将棋側の正本 [shogi/README.md](shogi/README.md) と
-[shogi/docs/shogi-implementation-plan.md](shogi/docs/shogi-implementation-plan.md) が優先です。
+[shogi/docs/shogi-implementation-plan.md](shogi/docs/shogi-implementation-plan.md)、
+SO-101 本体側は [so101/README.md](so101/README.md) が優先です。
 本 README と食い違う場合はそちらを正としてください。
 
 ## フォルダ構成（ファイルの位置関係）
@@ -28,8 +30,10 @@ SO-101（SO-ARM101 系 6 軸アーム）で、実物の将棋と囲碁を人と�
 .
 ├── README.md                  # このファイル（全体の引き継ぎ）
 ├── docs/
+│   ├── progress.md            # SO-101・将棋・囲碁の進捗一覧（全体の地図）
 │   ├── organization-2026-11-10.md  # 2026-11-10 の整理の経緯・選別判断・検証結果
 │   ├── repo-map.md            # 元フォルダとの対応・上げなかったものと理由
+│   ├── large-artifacts.md     # 大容量で実ファイルを入れていないものの一覧
 │   └── board-geometry.md      # 盤面のマス／交点の位置関係（将棋9×9・囲碁19路）
 ├── shogi/                     # 将棋本体（元 ~/Documents/ChatGPT/syogi）
 │   ├── README.md              # 将棋の現状・起動・検証の正本

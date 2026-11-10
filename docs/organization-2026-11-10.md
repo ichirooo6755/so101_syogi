@@ -17,6 +17,8 @@
 | 6 | 引き継ぎ README の作成 | ルート `README.md` に現状・構成・起動・注意を集約 |
 | 7 | GitHub Issue の作成 | 残作業を Issue #1–#5 に切り、README からリンク |
 | 8 | push | コミット `08eb4da`（本体）と `a7319da`（Issue リンク追加）を `main` へ push |
+| 9 | 整理記録の追加 | `docs/organization-2026-11-10.md` を追加して push（`1ac5310`） |
+| 10 | SO-101 進捗の追加 | 「so101 と将棋囲碁の進捗も全部」の指示で `so101/` を取り込み。学習 run・FEM・薄膜状態など超大容量は [large-artifacts.md](large-artifacts.md) に一覧化し実ファイルは入れない。進捗索引は [progress.md](progress.md) |
 
 ## 選別の判断
 
@@ -65,11 +67,14 @@
 .
 ├── README.md                  # 全体の引き継ぎ（現状・構成・起動・課題リンク）
 ├── docs/
+│   ├── progress.md            # SO-101・将棋・囲碁の進捗一覧
 │   ├── organization-2026-11-10.md  # このファイル（整理の経緯）
 │   ├── repo-map.md            # 元フォルダとの対応・除外理由
+│   ├── large-artifacts.md     # 大容量で実ファイルを入れていないものの一覧
 │   └── board-geometry.md      # 盤面のマス／交点の位置関係
 ├── shogi/                     # 将棋本体（元 ~/Documents/ChatGPT/syogi）
-└── go/                        # 囲碁（未着手、設計メモのみ）
+├── go/                        # 囲碁（未着手、設計メモのみ）
+└── so101/                     # SO-101 本体まわり（台座・書道・薄膜。追加整理で取り込み）
 ```
 
 将棋・囲碁で共有する盤座標の考え方は `docs/board-geometry.md` に寄せ、
@@ -124,8 +129,11 @@ GitHub の上限（1 ファイル 100 MB、リポジトリは実質 1 GB 程度�
 
 - ✅ コピー漏れ: 元 `syogi/` の `app/`・`tests/`・`docs/` と移行先を `diff` で照合し、
   差分が `__pycache__` だけであることを確認
-- ✅ リモート確認: push 後に GitHub API でツリー（`.gitignore`、`README.md`、`docs/`、
+- ✅ リモート確認（初回）: push 後に GitHub API でツリー（`.gitignore`、`README.md`、`docs/`、
   `go/`、`shogi/`）と Issue #1–#5 の作成を確認
+- ✅ SO-101 追加後の照合: `syodo/docs`・`src`・`scripts`、`output`（大容量除外後）、
+  `shogi/output` を元フォルダと `diff` し、差分が `.DS_Store` / `__pycache__` だけであることを確認
+- ✅ 進捗索引: `docs/progress.md` に将棋・囲碁・SO-101 台座・書道・薄膜の現状を集約
 - ⚠️ テスト再実行は未完了: 移行先で元の `.venv` を使った `unittest` が、ライブラリ
   読み込み（dyld）で進まず時間内に終わらなかったため中断した。コードのエラーでは
   ありません。再実行は `shogi/` で次を行ってから:
