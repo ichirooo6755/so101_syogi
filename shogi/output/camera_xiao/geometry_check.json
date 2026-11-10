@@ -1,0 +1,33 @@
+{
+  "plane_origin_mm": [
+    0.0,
+    -14.8858,
+    16.9739
+  ],
+  "plane_normal": [
+    0.0,
+    0.766044,
+    0.642788
+  ],
+  "base_removed_volume_mm3": 45.116,
+  "original_top_removed_mm3": 0.0,
+  "reference_solids": 103,
+  "reference_intersections": [],
+  "board_seat_mm": [
+    22.4,
+    18.7,
+    2.2
+  ],
+  "keeper_clearance_bores_mm": 2.3,
+  "insert_pilot_mm": 3.2,
+  "base_top_intersection_mm3": 0.0,
+  "assumed_usb_plug_intersection_mm3": 0.0,
+  "usb_plug_envelope_mm": [
+    13,
+    10,
+    7
+  ],
+  "usb_plug_is_assumed": true,
+  "physical_module_tested": false,
+  "servo_sweep_tested": false
+}

@@ -1,0 +1,2 @@
+# Optional exact-triangle recheck for the static workspace study.
+python-fcl==0.7.0.11

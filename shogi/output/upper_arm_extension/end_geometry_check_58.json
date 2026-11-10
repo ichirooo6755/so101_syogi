@@ -1,0 +1,11 @@
+{
+  "fixed_end": {
+    "missing_mm3": 0,
+    "added_mm3": 0
+  },
+  "translated_end": {
+    "missing_mm3": 0,
+    "added_mm3": 0
+  },
+  "scope": "Boolean volume comparison only; real fit and clearances not tested."
+}

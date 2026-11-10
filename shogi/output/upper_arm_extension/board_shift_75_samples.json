@@ -1,0 +1,1242 @@
+{
+  "scope": "Eight corner samples only; static poses at six near squares and three far sentinels, convex collision model. No full motion, pieces, camera, wires, force, board calibration, or hardware validation.",
+  "nominal_center_mm": [
+    240,
+    0
+  ],
+  "offsets_mm": [
+    -5,
+    5
+  ],
+  "yaw_deg": [
+    -5,
+    5
+  ],
+  "board_mm": [
+    330,
+    360,
+    12
+  ],
+  "samples": [
+    {
+      "center_mm": [
+        235.0,
+        -5.0
+      ],
+      "yaw_deg": -5,
+      "board_bottom_mm": 0.0,
+      "base_board_distance_mm": 2.48,
+      "closest_base_mesh": "base_so101_v2",
+      "base_board_clear": true,
+      "base_board_margin_5mm": false,
+      "ik_count": 7,
+      "clear_count": 4,
+      "total": 9,
+      "squares": [
+        {
+          "square": "9d",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.785337,
+            -0.234218,
+            1.368263,
+            0.436751,
+            -2.348233
+          ],
+          "worst_contact": {
+            "depth_mm": 13.55,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_moving"
+            ]
+          }
+        },
+        {
+          "square": "8d",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.48987,
+            -0.124953,
+            1.269631,
+            0.426119,
+            -0.483243
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "9e",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.268718,
+            -0.419952,
+            1.460955,
+            0.529792,
+            -1.83701
+          ],
+          "worst_contact": {
+            "depth_mm": 23.13,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_moving"
+            ]
+          }
+        },
+        {
+          "square": "8e",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.01307,
+            -0.172431,
+            1.317041,
+            0.426187,
+            1.583645
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "9f",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.505802,
+            -0.405206,
+            1.456346,
+            0.519656,
+            -1.069722
+          ],
+          "worst_contact": {
+            "depth_mm": 25.31,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_fixed"
+            ]
+          }
+        },
+        {
+          "square": "8f",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.459428,
+            -0.139546,
+            1.284969,
+            0.425374,
+            2.024713
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "1a",
+          "ik": false,
+          "clear": false
+        },
+        {
+          "square": "1e",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.051412,
+            0.986448,
+            -0.864696,
+            1.449042,
+            0.049981
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "1i",
+          "ik": false,
+          "clear": false
+        }
+      ],
+      "offset_mm": [
+        -5,
+        -5
+      ]
+    },
+    {
+      "center_mm": [
+        235.0,
+        -5.0
+      ],
+      "yaw_deg": 5,
+      "board_bottom_mm": 0.0,
+      "base_board_distance_mm": 1.6,
+      "closest_base_mesh": "base_so101_v2",
+      "base_board_clear": true,
+      "base_board_margin_5mm": false,
+      "ik_count": 7,
+      "clear_count": 4,
+      "total": 9,
+      "squares": [
+        {
+          "square": "9d",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.339575,
+            -0.451125,
+            1.46947,
+            0.55245,
+            1.234331
+          ],
+          "worst_contact": {
+            "depth_mm": 28.42,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_fixed"
+            ]
+          }
+        },
+        {
+          "square": "8d",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.231787,
+            -0.17939,
+            1.323385,
+            0.426801,
+            1.341675
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "9e",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.228416,
+            -0.423989,
+            1.462147,
+            0.532639,
+            -1.344437
+          ],
+          "worst_contact": {
+            "depth_mm": 24.78,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_fixed"
+            ]
+          }
+        },
+        {
+          "square": "8e",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.231039,
+            -0.159462,
+            1.304792,
+            0.425467,
+            1.799028
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "9f",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.871424,
+            -0.191939,
+            1.334479,
+            0.428256,
+            2.433106
+          ],
+          "worst_contact": {
+            "depth_mm": 6.39,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_moving"
+            ]
+          }
+        },
+        {
+          "square": "8f",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.569441,
+            -0.101438,
+            1.243549,
+            0.428687,
+            0.561617
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "1a",
+          "ik": false,
+          "clear": false
+        },
+        {
+          "square": "1e",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.024501,
+            0.982681,
+            -0.856118,
+            1.444231,
+            -0.023732
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "1i",
+          "ik": false,
+          "clear": false
+        }
+      ],
+      "offset_mm": [
+        -5,
+        -5
+      ]
+    },
+    {
+      "center_mm": [
+        235.0,
+        5.0
+      ],
+      "yaw_deg": -5,
+      "board_bottom_mm": 0.0,
+      "base_board_distance_mm": 1.6,
+      "closest_base_mesh": "base_so101_v2",
+      "base_board_clear": true,
+      "base_board_margin_5mm": false,
+      "ik_count": 7,
+      "clear_count": 4,
+      "total": 9,
+      "squares": [
+        {
+          "square": "9d",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.870451,
+            -0.189788,
+            1.332605,
+            0.427979,
+            -2.432238
+          ],
+          "worst_contact": {
+            "depth_mm": 6.31,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_moving"
+            ]
+          }
+        },
+        {
+          "square": "8d",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.57782,
+            -0.099952,
+            1.241848,
+            0.428902,
+            -0.569878
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "9e",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.237877,
+            -0.429484,
+            1.46373,
+            0.53655,
+            1.335099
+          ],
+          "worst_contact": {
+            "depth_mm": 25.78,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_fixed"
+            ]
+          }
+        },
+        {
+          "square": "8e",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.102446,
+            -0.170021,
+            1.314812,
+            0.426006,
+            1.469504
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "9f",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.540332,
+            -0.401919,
+            1.455267,
+            0.517449,
+            2.106184
+          ],
+          "worst_contact": {
+            "depth_mm": 27.27,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_moving"
+            ]
+          }
+        },
+        {
+          "square": "8f",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.3579,
+            -0.16067,
+            1.305963,
+            0.425504,
+            1.924439
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "1a",
+          "ik": false,
+          "clear": false
+        },
+        {
+          "square": "1e",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.021741,
+            0.982547,
+            -0.855814,
+            1.44406,
+            0.021171
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "1i",
+          "ik": false,
+          "clear": false
+        }
+      ],
+      "offset_mm": [
+        -5,
+        5
+      ]
+    },
+    {
+      "center_mm": [
+        235.0,
+        5.0
+      ],
+      "yaw_deg": 5,
+      "board_bottom_mm": 0.0,
+      "base_board_distance_mm": 2.48,
+      "closest_base_mesh": "base_so101_v2",
+      "base_board_clear": true,
+      "base_board_margin_5mm": false,
+      "ik_count": 7,
+      "clear_count": 4,
+      "total": 9,
+      "squares": [
+        {
+          "square": "9d",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.51766,
+            -0.409944,
+            1.457872,
+            0.522868,
+            1.058052
+          ],
+          "worst_contact": {
+            "depth_mm": 27.66,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_fixed"
+            ]
+          }
+        },
+        {
+          "square": "8d",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.342718,
+            -0.163752,
+            1.308901,
+            0.425648,
+            1.23211
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "9e",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.26475,
+            -0.425364,
+            1.462551,
+            0.533609,
+            1.833043
+          ],
+          "worst_contact": {
+            "depth_mm": 23.1,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_fixed"
+            ]
+          }
+        },
+        {
+          "square": "8e",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.118812,
+            -0.169032,
+            1.313871,
+            0.425957,
+            1.688136
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "9f",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.785967,
+            -0.236824,
+            1.370179,
+            0.437442,
+            2.348769
+          ],
+          "worst_contact": {
+            "depth_mm": 13.34,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_moving"
+            ]
+          }
+        },
+        {
+          "square": "8f",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.480786,
+            -0.126275,
+            1.271065,
+            0.426007,
+            0.474286
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "1a",
+          "ik": false,
+          "clear": false
+        },
+        {
+          "square": "1e",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.054167,
+            0.986758,
+            -0.865401,
+            1.449437,
+            -0.052536
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "1i",
+          "ik": false,
+          "clear": false
+        }
+      ],
+      "offset_mm": [
+        -5,
+        5
+      ]
+    },
+    {
+      "center_mm": [
+        245.0,
+        -5.0
+      ],
+      "yaw_deg": -5,
+      "board_bottom_mm": 0.0,
+      "base_board_distance_mm": 12.44,
+      "closest_base_mesh": "base_so101_v2",
+      "base_board_clear": true,
+      "base_board_margin_5mm": true,
+      "ik_count": 7,
+      "clear_count": 4,
+      "total": 9,
+      "squares": [
+        {
+          "square": "9d",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.700293,
+            -0.189571,
+            1.332426,
+            0.427942,
+            -2.263561
+          ],
+          "worst_contact": {
+            "depth_mm": 5.77,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_moving"
+            ]
+          }
+        },
+        {
+          "square": "8d",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.44473,
+            -0.081612,
+            1.220242,
+            0.432167,
+            -0.438428
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "9e",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.034578,
+            -0.351066,
+            1.435839,
+            0.486024,
+            1.536486
+          ],
+          "worst_contact": {
+            "depth_mm": 15.63,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_fixed"
+            ]
+          }
+        },
+        {
+          "square": "8e",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.055603,
+            -0.148027,
+            1.293561,
+            0.425262,
+            -0.054849
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "9f",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.428395,
+            -0.328166,
+            1.425296,
+            0.473666,
+            -1.146643
+          ],
+          "worst_contact": {
+            "depth_mm": 14.95,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_fixed"
+            ]
+          }
+        },
+        {
+          "square": "8f",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.379212,
+            -0.131814,
+            1.276927,
+            0.425685,
+            0.374075
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "1a",
+          "ik": false,
+          "clear": false
+        },
+        {
+          "square": "1e",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.033,
+          "angle_error_deg": 0.02,
+          "q_rad": [
+            0.049931,
+            1.145434,
+            -1.23305,
+            1.658063,
+            0.048518
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "1i",
+          "ik": false,
+          "clear": false
+        }
+      ],
+      "offset_mm": [
+        5,
+        -5
+      ]
+    },
+    {
+      "center_mm": [
+        245.0,
+        -5.0
+      ],
+      "yaw_deg": 5,
+      "board_bottom_mm": 0.0,
+      "base_board_distance_mm": 11.57,
+      "closest_base_mesh": "base_so101_v2",
+      "base_board_clear": true,
+      "base_board_margin_5mm": true,
+      "ik_count": 7,
+      "clear_count": 5,
+      "total": 9,
+      "squares": [
+        {
+          "square": "9d",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.28273,
+            -0.361417,
+            1.440226,
+            0.491986,
+            1.29081
+          ],
+          "worst_contact": {
+            "depth_mm": 18.63,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_fixed"
+            ]
+          }
+        },
+        {
+          "square": "8d",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.286707,
+            -0.147814,
+            1.293341,
+            0.42527,
+            -0.282859
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "9e",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.191621,
+            -0.336979,
+            1.429494,
+            0.478281,
+            -1.381015
+          ],
+          "worst_contact": {
+            "depth_mm": 14.78,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_fixed"
+            ]
+          }
+        },
+        {
+          "square": "8e",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.15432,
+            -0.142845,
+            1.288329,
+            0.425313,
+            0.152233
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "9f",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.785909,
+            -0.154463,
+            1.299931,
+            0.425329,
+            2.347969
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "8f",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.519796,
+            -0.061499,
+            1.195367,
+            0.436929,
+            0.512331
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "1a",
+          "ik": false,
+          "clear": false
+        },
+        {
+          "square": "1e",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.023793,
+            1.136621,
+            -1.212388,
+            1.646561,
+            -0.02298
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "1i",
+          "ik": false,
+          "clear": false
+        }
+      ],
+      "offset_mm": [
+        5,
+        -5
+      ]
+    },
+    {
+      "center_mm": [
+        245.0,
+        5.0
+      ],
+      "yaw_deg": -5,
+      "board_bottom_mm": 0.0,
+      "base_board_distance_mm": 11.57,
+      "closest_base_mesh": "base_so101_v2",
+      "base_board_clear": true,
+      "base_board_margin_5mm": true,
+      "ik_count": 7,
+      "clear_count": 5,
+      "total": 9,
+      "squares": [
+        {
+          "square": "9d",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.785382,
+            -0.152274,
+            1.297786,
+            0.425285,
+            -2.34753
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "8d",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.527652,
+            -0.060216,
+            1.193745,
+            0.437269,
+            -0.520068
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "9e",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.199231,
+            -0.341553,
+            1.431605,
+            0.480744,
+            1.373505
+          ],
+          "worst_contact": {
+            "depth_mm": 15.78,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_fixed"
+            ]
+          }
+        },
+        {
+          "square": "8e",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.164356,
+            -0.142376,
+            1.287853,
+            0.42532,
+            -0.162127
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "9f",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.274035,
+            -0.356725,
+            1.438266,
+            0.489255,
+            -1.299383
+          ],
+          "worst_contact": {
+            "depth_mm": 17.61,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_fixed"
+            ]
+          }
+        },
+        {
+          "square": "8f",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.276716,
+            -0.148646,
+            1.29417,
+            0.425273,
+            0.273008
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "1a",
+          "ik": false,
+          "clear": false
+        },
+        {
+          "square": "1e",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.021114,
+            1.136241,
+            -1.211492,
+            1.646045,
+            0.020572
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "1i",
+          "ik": false,
+          "clear": false
+        }
+      ],
+      "offset_mm": [
+        5,
+        5
+      ]
+    },
+    {
+      "center_mm": [
+        245.0,
+        5.0
+      ],
+      "yaw_deg": 5,
+      "board_bottom_mm": 0.0,
+      "base_board_distance_mm": 12.44,
+      "closest_base_mesh": "base_so101_v2",
+      "base_board_clear": true,
+      "base_board_margin_5mm": true,
+      "ik_count": 7,
+      "clear_count": 4,
+      "total": 9,
+      "squares": [
+        {
+          "square": "9d",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.437922,
+            -0.332314,
+            1.427298,
+            0.475812,
+            1.137268
+          ],
+          "worst_contact": {
+            "depth_mm": 17.24,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_fixed"
+            ]
+          }
+        },
+        {
+          "square": "8d",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            -0.388658,
+            -0.130731,
+            1.275789,
+            0.425739,
+            -0.383388
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "9e",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.01,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.028361,
+            -0.346303,
+            1.433741,
+            0.483359,
+            -1.542638
+          ],
+          "worst_contact": {
+            "depth_mm": 14.71,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_moving"
+            ]
+          }
+        },
+        {
+          "square": "8e",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.04538,
+            -0.148177,
+            1.293711,
+            0.425263,
+            0.044771
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "9f",
+          "ik": true,
+          "clear": false,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.576527,
+            -0.23157,
+            1.366309,
+            0.436058,
+            -1.000488
+          ],
+          "worst_contact": {
+            "depth_mm": 4.33,
+            "geoms": [
+              "motor_holder_so101_base_v1",
+              "gripper_jaw_fixed"
+            ]
+          }
+        },
+        {
+          "square": "8f",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.009,
+          "angle_error_deg": 0.0,
+          "q_rad": [
+            0.436318,
+            -0.082742,
+            1.2216,
+            0.431939,
+            0.430141
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "1a",
+          "ik": false,
+          "clear": false
+        },
+        {
+          "square": "1e",
+          "ik": true,
+          "clear": true,
+          "position_error_mm": 0.043,
+          "angle_error_deg": 0.026,
+          "q_rad": [
+            -0.052605,
+            1.145539,
+            -1.233256,
+            1.658063,
+            -0.050909
+          ],
+          "worst_contact": null
+        },
+        {
+          "square": "1i",
+          "ik": false,
+          "clear": false
+        }
+      ],
+      "offset_mm": [
+        5,
+        5
+      ]
+    }
+  ]
+}

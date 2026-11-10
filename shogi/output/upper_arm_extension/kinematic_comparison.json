@@ -1,0 +1,1487 @@
+{
+  "scope": "static IK only; original link mesh and inertia; no collisions or hardware",
+  "results": [
+    {
+      "extension_mm": 0.0,
+      "board_center_mm": 190.0,
+      "reachable_count": 64,
+      "total": 81,
+      "squares": [
+        {
+          "square": "9a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3a",
+          "reachable": true,
+          "ik_error_mm": 0.6,
+          "angle_error_deg": 0.8
+        },
+        {
+          "square": "2a",
+          "reachable": false,
+          "ik_error_mm": 16.18,
+          "angle_error_deg": 4.56
+        },
+        {
+          "square": "1a",
+          "reachable": false,
+          "ik_error_mm": 46.35,
+          "angle_error_deg": 4.6
+        },
+        {
+          "square": "9b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2b",
+          "reachable": true,
+          "ik_error_mm": 3.24,
+          "angle_error_deg": 3.05
+        },
+        {
+          "square": "1b",
+          "reachable": false,
+          "ik_error_mm": 29.3,
+          "angle_error_deg": 4.75
+        },
+        {
+          "square": "9c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1c",
+          "reachable": false,
+          "ik_error_mm": 17.41,
+          "angle_error_deg": 4.6
+        },
+        {
+          "square": "9d",
+          "reachable": false,
+          "ik_error_mm": 41.59,
+          "angle_error_deg": 13.92
+        },
+        {
+          "square": "8d",
+          "reachable": false,
+          "ik_error_mm": 12.71,
+          "angle_error_deg": 4.28
+        },
+        {
+          "square": "7d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1d",
+          "reachable": false,
+          "ik_error_mm": 10.83,
+          "angle_error_deg": 4.27
+        },
+        {
+          "square": "9e",
+          "reachable": false,
+          "ik_error_mm": 100.1,
+          "angle_error_deg": 23.66
+        },
+        {
+          "square": "8e",
+          "reachable": false,
+          "ik_error_mm": 53.14,
+          "angle_error_deg": 18.01
+        },
+        {
+          "square": "7e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1e",
+          "reachable": false,
+          "ik_error_mm": 8.81,
+          "angle_error_deg": 4.09
+        },
+        {
+          "square": "9f",
+          "reachable": false,
+          "ik_error_mm": 42.97,
+          "angle_error_deg": 14.4
+        },
+        {
+          "square": "8f",
+          "reachable": false,
+          "ik_error_mm": 13.52,
+          "angle_error_deg": 4.55
+        },
+        {
+          "square": "7f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1f",
+          "reachable": false,
+          "ik_error_mm": 10.77,
+          "angle_error_deg": 4.26
+        },
+        {
+          "square": "9g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1g",
+          "reachable": false,
+          "ik_error_mm": 17.29,
+          "angle_error_deg": 4.59
+        },
+        {
+          "square": "9h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2h",
+          "reachable": true,
+          "ik_error_mm": 3.14,
+          "angle_error_deg": 3.01
+        },
+        {
+          "square": "1h",
+          "reachable": false,
+          "ik_error_mm": 29.12,
+          "angle_error_deg": 4.74
+        },
+        {
+          "square": "9i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3i",
+          "reachable": true,
+          "ik_error_mm": 0.54,
+          "angle_error_deg": 0.71
+        },
+        {
+          "square": "2i",
+          "reachable": false,
+          "ik_error_mm": 15.94,
+          "angle_error_deg": 4.55
+        },
+        {
+          "square": "1i",
+          "reachable": false,
+          "ik_error_mm": 46.11,
+          "angle_error_deg": 4.6
+        }
+      ]
+    },
+    {
+      "extension_mm": 58.0,
+      "board_center_mm": 190.0,
+      "reachable_count": 81,
+      "total": 81,
+      "squares": [
+        {
+          "square": "9a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1a",
+          "reachable": true,
+          "ik_error_mm": 1.27,
+          "angle_error_deg": 0.77
+        },
+        {
+          "square": "9b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "9c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "9d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "9e",
+          "reachable": true,
+          "ik_error_mm": 1.87,
+          "angle_error_deg": 0.55
+        },
+        {
+          "square": "8e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5e",
+          "reachable": true,
+          "ik_error_mm": 0.0,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "9f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "9g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "9h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "9i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1i",
+          "reachable": true,
+          "ik_error_mm": 1.17,
+          "angle_error_deg": 0.72
+        }
+      ]
+    },
+    {
+      "extension_mm": 75.0,
+      "board_center_mm": 190.0,
+      "reachable_count": 81,
+      "total": 81,
+      "squares": [
+        {
+          "square": "9a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1a",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "9b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1b",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "9c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1c",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "9d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1d",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "9e",
+          "reachable": true,
+          "ik_error_mm": 0.45,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1e",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "9f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1f",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "9g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1g",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "9h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1h",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "9i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "8i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "7i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "6i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "5i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "4i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "3i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "2i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        },
+        {
+          "square": "1i",
+          "reachable": true,
+          "ik_error_mm": 0.01,
+          "angle_error_deg": 0.0
+        }
+      ]
+    }
+  ]
+}

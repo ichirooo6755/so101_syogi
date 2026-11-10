@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SO-101 将棋</title>
+<style>
+:root{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",sans-serif;color:#24352c;background:#f3f5ef}*{box-sizing:border-box}body{margin:0}header{background:#173e32;color:#fff;padding:22px max(24px,calc((100vw - 1100px)/2))}header h1{font-size:23px;margin:0}header p{opacity:.8;margin:6px 0 0;font-size:14px}main{max-width:1100px;margin:24px auto;padding:0 20px;display:grid;grid-template-columns:minmax(280px,1fr) minmax(300px,1fr);gap:20px}.panel{background:#fff;border-radius:16px;padding:24px;box-shadow:0 3px 20px #233b2b0c}.panel h2{font-size:19px;margin:0 0 12px}p{line-height:1.7}label{display:block;font-size:14px;font-weight:600;margin:18px 0 7px}select,input,button{font:inherit}select,input{width:100%;border:1px solid #b9c8bc;border-radius:9px;background:white;padding:10px;color:#22382a}button{border:0;border-radius:9px;padding:12px 18px;background:#17684d;color:#fff;font-weight:650;cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}button.secondary{background:#e9f1eb;color:#205841}button+button{margin-left:7px}.actions{margin:20px 0 10px}.notice{border-radius:10px;background:#edf5ee;padding:14px 16px;line-height:1.65;min-height:54px}.notice.warning{background:#fff3de;color:#724b14}.small{font-size:13px;color:#586a5e}.board{display:grid;grid-template-columns:repeat(9,1fr);aspect-ratio:1;background:#e3bd7b;border:3px solid #77532c;max-width:460px;margin:auto}.cell{border:1px solid #9b7747;display:grid;place-items:center;font-size:clamp(14px,2.3vw,25px);color:#30220d}.white{transform:rotate(180deg)}.camera{display:none;width:100%;margin-top:15px;border-radius:9px}details{margin-top:20px;border-top:1px solid #e0e9e2;padding-top:14px}summary{cursor:pointer;color:#42604d}a{color:#17684d}.choices{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.choices button{margin:0;background:#e9f1eb;color:#174e39}.status-label{font-size:12px;letter-spacing:.06em;color:#65786a;font-weight:700}.move{font-size:20px;font-weight:700;margin:7px 0 12px}.hint{margin:14px 0 0}ul{padding-left:20px}li{line-height:1.7}@media(max-width:760px){main{grid-template-columns:1fr;padding:0 14px}.panel{padding:20px}header{padding:19px 20px}.cell{font-size:clamp(14px,5vw,24px)}}
+</style>
+</head>
+<body>
+<header><h1>SO-101 将棋</h1><p>あなたが指すと、カメラが手を読み取ります。</p></header>
+<main>
+<section class="panel">
+<h2>対局</h2>
+<div class="status-label">いまの状態</div><p class="move" id="turn">準備中</p>
+<div class="board" id="board" aria-label="将棋盤"></div>
+<p class="small" id="lastMove"></p>
+<div id="notice" class="notice">カメラを準備しています。</div>
+<div class="choices" id="choices"></div>
+<p class="small" id="aiMove"></p>
+<img id="camera" class="camera" alt="カメラ画像">
+</section>
+<section class="panel">
+<h2>準備して、対局を始める</h2>
+<p class="small">駒を初期配置にし、手首カメラから盤全体が見えるようにしてください。四隅のマーカーが隠れない位置で使います。</p>
+<label for="side">ロボットの手番</label><select id="side"><option value="white">後手（あなたが先手）</option><option value="black">先手</option></select>
+<label for="cameraSource">カメラ</label><select id="cameraSource"><option value="usb">XIAO（USB）</option><option value="wifi">XIAO（Wi-Fi）</option><option value="mac">Mac カメラ（確認用）</option></select>
+<div id="usbSettings"><label for="usbPort">XIAO の接続先</label><select id="usbPort"><option value="">検索中…</option></select><p class="small"><a href="#" id="refresh">接続先を再検索</a></p></div>
+<div id="wifiSettings" hidden><label for="wifiUrl">カメラの静止画 URL</label><input id="wifiUrl" placeholder="http://192.168.1.10/capture"></div>
+<div class="actions"><button id="start">対局を始める</button><button id="stop" class="secondary" hidden>自動検知を停止</button></div>
+<p class="small">現在、実機による応手は未検証のため停止しています。</p>
+<p class="small hint">カメラが手を読み取れない場合や、成り・打つ駒の種類を画像だけで区別できない場合は、画面に候補を出します。</p>
+<details><summary>マーカーの置き方</summary><p class="small"><a id="markers" target="_blank" rel="noopener">四隅マーカーを印刷</a>（A4・倍率 100%）。黒い正方形は一辺 26 mm です。番号 0・1・2・3 をそれぞれ 9一・1一・1九・9九の外側に置き、盤側の黒い角を盤の格子の角に合わせます。4 枚とも印刷された「UP」を同じ向きにします。</p><p class="small">盤はロボットと人が長辺を挟んで向き合う想定です。マーカーと盤が一緒に動くよう固定してください。</p></details>
+<details id="teaching"><summary>失敗したマスを Leader で教える</summary>
+<p class="small">標準の長さのまま、計画やシミュレーションで失敗したマスを Leader で教えます。両腕の実測位置を保存します。将棋用の Leader 追従はまだ使えません。</p>
+<p class="small" id="learnedHint">学習済みモデルの試行結果を確認しています。</p><div id="learnedChoices" class="choices"></div>
+<p class="small">各姿勢で両腕を静止させ、操作に使った画面を「切断」してから記録します。</p>
+<label for="teachFollower">Follower の USB</label><select id="teachFollower"><option value="">接続先を検索してください</option></select>
+<div id="teachLeaderBox"><label for="teachLeader">Leader の USB</label><select id="teachLeader"><option value="">接続先を検索してください</option></select></div>
+<p class="small"><a href="#" id="teachRefresh">アームの接続先を再検索</a></p>
+<label for="teachSquare">教えるマス</label><select id="teachSquare"></select>
+<label for="teachOperation">教える動き</label><select id="teachOperation"><option value="pick">そのマスの駒をつかむ</option><option value="place">そのマスに駒を置く</option></select>
+<div class="actions"><button class="secondary" id="teachBegin">このマスの記録を始める</button><button id="teachCapture" disabled>いまの姿勢を記録</button></div>
+<p class="small" id="teachStatus">マスを選び、記録を始めます。</p><p class="small">記録はこの Mac に保存します。4 姿勢の間の動きは記録せず、自動再生もまだできません。</p>
+</details>
+<details><summary>検証と盤面の修復</summary><p class="small">実機動作はまだ検証できていません。シミュレーションは仮想環境での試行で、実機が駒を動かせる証明にはなりません。</p><button class="secondary" id="simulate">AI の手をシミュレーション</button><p class="small">実盤を人が修復した場合だけ、その状態を記録します。</p><button class="secondary" id="repair">AI の手を実盤に合わせて記録</button><p class="small"><a href="#" id="newGame">新しい対局に戻す</a></p><p class="small" id="diagnostic"></p></details>
+</section>
+</main>
+<script>
+'use strict';
+const $=s=>document.querySelector(s), token=location.pathname.slice(1);
+let gameStarted=false, busy=false, latest=null, uiError=null;
+$('#markers').href=location.pathname+'/markers.svg';
+async function api(action, extra={}){const r=await fetch('/api',{method:'POST',headers:{'Content-Type':'application/json','X-Token':token},body:JSON.stringify({action,...extra})});const d=await r.json();if(!r.ok)throw Error(d.error||'通信できません');return d}
+function tell(message,warning=false){$('#notice').textContent=message;$('#notice').classList.toggle('warning',warning)}
+function square(s){return s[0]+'一二三四五六七八九'[s.charCodeAt(1)-97]}
+function moveName(usi){if(!usi)return '';const pieces={P:'歩',L:'香',N:'桂',S:'銀',G:'金',B:'角',R:'飛'};if(usi[1]==='*')return (pieces[usi[0]]||usi[0])+'を'+square(usi.slice(2,4))+'に打つ';return square(usi.slice(0,2))+' → '+square(usi.slice(2,4))+(usi.endsWith('+')?'（成る）':'')}
+function renderBoard(position){const names={p:'歩',l:'香',n:'桂',s:'銀',g:'金',b:'角',r:'飛',k:'玉','+p':'と','+l':'成香','+n':'成桂','+s':'成銀','+b':'馬','+r':'龍'}, board=$('#board');board.replaceChildren();for(const row of position.split('/')){let promote=false;for(const c of row){if(c==='+'){promote=true;continue}if(/\d/.test(c)){for(let i=0;i<Number(c);i++){const el=document.createElement('span');el.className='cell';board.append(el)}continue}const el=document.createElement('span');el.className='cell';const piece=document.createElement('span');if(c===c.toLowerCase())piece.className='white';piece.textContent=names[(promote?'+':'')+c.toLowerCase()]||c;el.append(piece);board.append(el);promote=false}}}
+function render(d){latest=d;renderTeaching(d.teaching);renderLearned(d.learned_teaching);renderBoard(d.board);const a=d.auto||{}, running=!['idle','paused','finished'].includes(a.status);if(running||a.status==='paused')gameStarted=true;$('#start').textContent=gameStarted?'自動検知を再開':'対局を始める';$('#start').hidden=running;$('#stop').hidden=!running;$('#side').disabled=gameStarted;$('#turn').textContent=d.game_over?'対局終了':(d.ai_turn?'ロボットの手番':'あなたの手番');$('#lastMove').textContent=a.last_human?'あなたの手：'+moveName(a.last_human):'';$('#aiMove').textContent=d.pending?'AI の手：'+moveName(d.pending.usi):d.engine_error?'AI：'+d.engine_error:'';tell(uiError||a.message||'盤とカメラを準備して、対局を始めてください。',Boolean(uiError)||a.status==='robot_blocked'||a.status==='ambiguous'||a.status==='looking');const choices=$('#choices');choices.replaceChildren();const options=a.candidates||[];for(const c of options){const b=document.createElement('button');const canPromote=!c.usi.endsWith('+')&&options.some(x=>x.usi===c.usi+'+');b.textContent=moveName(c.usi)+(canPromote?'（成らない）':'');b.onclick=()=>act(async()=>render(await api('auto_select',{usi:c.usi})));choices.append(b)}if(a.status==='ambiguous'){const retry=document.createElement('button');retry.textContent='候補にない・撮り直す';retry.onclick=()=>act(async()=>render(await api('auto_retry')));choices.append(retry)}for(const c of d.pending?.teach_suggestions||[]){const b=document.createElement('button');b.textContent=square(c.square)+'の'+(c.operation==='pick'?'つかみ方':'置き方')+'を教える';b.onclick=()=>act(async()=>{render(await api('auto_stop'));$('#teachSquare').value=c.square;$('#teachOperation').value=c.operation;$('#teaching').open=true;await findTeachingUSB();$('#teaching').scrollIntoView({behavior:'smooth',block:'start'})});choices.append(b)}if(d.pending&&d.pending.reach&&d.pending.reach!=='ok'){const b=document.createElement('button');b.textContent='この手は人が置いて記録';b.onclick=()=>act(async()=>{if(!confirm('表示された AI の手を実盤に反映し、持ち駒も確認しましたか？'))return;render(await api('confirm_ai',{usi:d.pending.usi,confirmed:true}))});choices.append(b)}if(a.image){$('#camera').src='data:image/jpeg;base64,'+a.image;$('#camera').style.display='block'}const sim=d.simulation||{};$('#diagnostic').textContent=sim.status==='running'?'シミュレーション中…':sim.status==='finished'?'シミュレーション：'+(sim.result?.success?'仮条件で成功':'仮条件で未完了')+'（実機は未検証）':sim.status==='error'?'シミュレーション：'+sim.error:'';}
+function renderTeaching(t){const active=t&&t.status==='recording',changed=active&&(t.mode!=='leader'||t.operation!==$('#teachOperation').value||t.square!==$('#teachSquare').value||t.side!==$('#side').value);$('#teachCapture').disabled=!active||changed;$('#teachStatus').textContent=!t||t.status==='idle'?'マスを選び、記録を始めます。':changed?'マスや動きを変えた場合は、記録を始め直してください。':t.status==='recorded_unverified'?`${square(t.square)} の 4 姿勢を保存しました。実機経路は未検証です。`:`${square(t.square)}：${t.recorded+1}/${t.total} ${t.next}`}
+function renderLearned(info){const list=$('#learnedChoices');list.replaceChildren();const candidates=info?.side===$('#side').value?info.candidates||[]:[];$('#learnedHint').textContent=candidates.length?'学習モデルの仮想試行で失敗した候補（実盤は未検証）：':'現在の設定と一致する学習試行の候補はありません。';for(const c of candidates){const b=document.createElement('button');b.textContent=square(c.square)+'の'+(c.operation==='pick'?'つかみ':'置き');b.onclick=()=>act(async()=>{if(latest?.auto?.status!=='idle'&&latest?.auto?.status!=='paused')render(await api('auto_stop'));$('#teachSquare').value=c.square;$('#teachOperation').value=c.operation;renderTeaching(latest?.teaching)});list.append(b)}}
+async function act(fn){if(busy)return;busy=true;uiError=null;try{await fn()}catch(e){uiError=e.message;tell(uiError,true);if($('#teaching').open)$('#teachStatus').textContent=e.message}finally{busy=false}}
+async function findUSB(){const d=await api('usb_ports'),el=$('#usbPort'),old=el.value;el.replaceChildren();if(!d.ports.length){const o=document.createElement('option');o.value='';o.textContent='XIAO が見つかりません';el.append(o)}else for(const p of d.ports){const o=document.createElement('option');o.value=p.device;o.textContent=p.device;el.append(o)}if([...el.options].some(o=>o.value===old))el.value=old}
+$('#refresh').onclick=e=>{e.preventDefault();act(findUSB)};
+$('#cameraSource').onchange=()=>{$('#usbSettings').hidden=$('#cameraSource').value!=='usb';$('#wifiSettings').hidden=$('#cameraSource').value!=='wifi'};
+$('#start').onclick=()=>act(async()=>{if(!gameStarted){await api('reset',{ai_side:$('#side').value});gameStarted=true}const source=$('#cameraSource').value,value=source==='usb'?$('#usbPort').value:source==='wifi'?$('#wifiUrl').value:'';render(await api('auto_start',{source,value}))});
+$('#stop').onclick=()=>act(async()=>render(await api('auto_stop')));
+$('#simulate').onclick=()=>act(async()=>render(await api('simulate_ai')));
+for(let rank=0;rank<9;rank++)for(let file=9;file>=1;file--){const o=document.createElement('option');o.value=file+'abcdefghi'[rank];o.textContent=file+'一二三四五六七八九'[rank];$('#teachSquare').append(o)}
+async function findTeachingUSB(){const d=await api('teaching_ports');for(const id of ['teachFollower','teachLeader']){const el=$('#'+id),old=el.value;el.replaceChildren();const placeholder=document.createElement('option');placeholder.value='';placeholder.textContent=d.ports.length?'選んでください':'アームが見つかりません';el.append(placeholder);for(const p of d.ports){const o=document.createElement('option');o.value=p.device;o.textContent=p.description+'（'+p.device+'）';el.append(o)}if([...el.options].some(o=>o.value===old))el.value=old}}
+$('#teaching').ontoggle=()=>{if($('#teaching').open)act(findTeachingUSB)};
+$('#teachRefresh').onclick=e=>{e.preventDefault();act(findTeachingUSB)};
+$('#teachOperation').onchange=()=>renderTeaching(latest?.teaching);
+$('#teachSquare').onchange=()=>renderTeaching(latest?.teaching);
+$('#side').onchange=()=>{renderLearned(latest?.learned_teaching);renderTeaching(latest?.teaching)};
+$('#teachBegin').onclick=()=>act(async()=>render(await api('teach_begin',{square:$('#teachSquare').value,side:$('#side').value,mode:'leader',operation:$('#teachOperation').value})));
+$('#teachCapture').onclick=()=>act(async()=>{if(!latest?.teaching?.id)throw Error('先に記録を始めてください');render(await api('teach_capture',{id:latest.teaching.id,follower_port:$('#teachFollower').value,leader_port:$('#teachLeader').value}))});
+$('#repair').onclick=()=>act(async()=>{if(!latest?.pending)throw Error('記録する AI の手がありません');if(!confirm('表示された AI の手を実盤に反映し、持ち駒も確認しましたか？'))return;render(await api('confirm_ai',{usi:latest.pending.usi,confirmed:true}))});
+$('#newGame').onclick=e=>{e.preventDefault();act(async()=>{if(!confirm('初期局面に戻しますか？'))return;render(await api('reset',{ai_side:$('#side').value}));gameStarted=false;$('#side').disabled=false;$('#start').textContent='対局を始める'})};
+async function poll(){if(!busy){try{render(await api('state'))}catch(e){tell('接続が切れました：'+e.message,true)}}setTimeout(poll,2000)}
+findUSB().catch(e=>tell(e.message,true));poll();
+</script>
+</body></html>

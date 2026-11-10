@@ -1,0 +1,549 @@
+{
+  "scope": "Static tilted IK poses, 3 seeds and sampled directions. Triangle rechecks only convex-candidate pairs. No grasp, neighbor, path, cable, strength, measured calibration or hardware validation.",
+  "board_mm": [
+    330,
+    360,
+    12
+  ],
+  "pinch_height_mm": 10,
+  "layouts": [
+    {
+      "center_mm": [
+        235.0,
+        0
+      ],
+      "squares": [
+        {
+          "square": "9d",
+          "trials": 75,
+          "ik_solutions": 15,
+          "candidates": [
+            {
+              "q_rad": [
+                -0.783887,
+                0.043201,
+                1.194579,
+                0.682082,
+                -0.784479
+              ],
+              "target_tilt_deg": 20.0,
+              "azimuth_deg": 225,
+              "position_error_mm": 2.076,
+              "direction_error_deg": 0.03,
+              "convex_worst_depth_mm": 5.023,
+              "convex_clear": false,
+              "triangle_intersections": 3
+            },
+            {
+              "q_rad": [
+                -0.783404,
+                0.095436,
+                1.157043,
+                0.667383,
+                -2.350648
+              ],
+              "target_tilt_deg": 20.0,
+              "azimuth_deg": 225,
+              "position_error_mm": 2.424,
+              "direction_error_deg": 0.039,
+              "convex_worst_depth_mm": 5.32,
+              "convex_clear": false,
+              "triangle_intersections": 3
+            },
+            {
+              "q_rad": [
+                -0.784677,
+                0.219923,
+                1.065402,
+                0.80907,
+                -0.789655
+              ],
+              "target_tilt_deg": 30.0,
+              "azimuth_deg": 225,
+              "position_error_mm": 2.106,
+              "direction_error_deg": 0.021,
+              "convex_worst_depth_mm": 7.769,
+              "convex_clear": false,
+              "triangle_intersections": 3
+            },
+            {
+              "q_rad": [
+                -0.784435,
+                0.270023,
+                1.02757,
+                0.796801,
+                -2.356031
+              ],
+              "target_tilt_deg": 30.0,
+              "azimuth_deg": 225,
+              "position_error_mm": 2.513,
+              "direction_error_deg": 0.028,
+              "convex_worst_depth_mm": 8.358,
+              "convex_clear": false,
+              "triangle_intersections": 3
+            },
+            {
+              "q_rad": [
+                -0.77868,
+                -0.088159,
+                1.284336,
+                0.549148,
+                -2.344677
+              ],
+              "target_tilt_deg": 10.0,
+              "azimuth_deg": 225,
+              "position_error_mm": 2.099,
+              "direction_error_deg": 0.067,
+              "convex_worst_depth_mm": 9.515,
+              "convex_clear": false,
+              "triangle_intersections": 6
+            },
+            {
+              "q_rad": [
+                -0.780154,
+                -0.144362,
+                1.320621,
+                0.569069,
+                -0.778662
+              ],
+              "target_tilt_deg": 10.0,
+              "azimuth_deg": 225,
+              "position_error_mm": 1.863,
+              "direction_error_deg": 0.052,
+              "convex_worst_depth_mm": 13.742,
+              "convex_clear": false,
+              "triangle_intersections": 6
+            }
+          ]
+        },
+        {
+          "square": "9e",
+          "trials": 75,
+          "ik_solutions": 9,
+          "candidates": [
+            {
+              "q_rad": [
+                -0.000116,
+                0.171743,
+                1.166869,
+                0.755782,
+                0.000586
+              ],
+              "target_tilt_deg": 30.0,
+              "azimuth_deg": 180,
+              "position_error_mm": 0.456,
+              "direction_error_deg": 0.003,
+              "convex_worst_depth_mm": 18.467,
+              "convex_clear": false,
+              "triangle_intersections": 6
+            },
+            {
+              "q_rad": [
+                -0.000242,
+                -0.02173,
+                1.286787,
+                0.654805,
+                0.000464
+              ],
+              "target_tilt_deg": 20.0,
+              "azimuth_deg": 180,
+              "position_error_mm": 0.45,
+              "direction_error_deg": 0.005,
+              "convex_worst_depth_mm": 19.872,
+              "convex_clear": false,
+              "triangle_intersections": 6
+            },
+            {
+              "q_rad": [
+                -0.121371,
+                -0.440055,
+                1.466629,
+                0.544222,
+                -1.690998
+              ],
+              "target_tilt_deg": 0.0,
+              "azimuth_deg": 0.0,
+              "position_error_mm": 0.009,
+              "direction_error_deg": 0.0,
+              "convex_worst_depth_mm": 24.835,
+              "convex_clear": false,
+              "triangle_intersections": 18
+            },
+            {
+              "q_rad": [
+                0.11558,
+                -0.445866,
+                1.468139,
+                0.548523,
+                1.685243
+              ],
+              "target_tilt_deg": 0.0,
+              "azimuth_deg": 0.0,
+              "position_error_mm": 0.01,
+              "direction_error_deg": 0.0,
+              "convex_worst_depth_mm": 25.167,
+              "convex_clear": false,
+              "triangle_intersections": 17
+            },
+            {
+              "q_rad": [
+                -0.000876,
+                -0.239709,
+                1.396565,
+                0.588473,
+                -0.000188
+              ],
+              "target_tilt_deg": 10.0,
+              "azimuth_deg": 180,
+              "position_error_mm": 0.423,
+              "direction_error_deg": 0.009,
+              "convex_worst_depth_mm": 31.711,
+              "convex_clear": false,
+              "triangle_intersections": 9
+            },
+            {
+              "q_rad": [
+                -0.000119,
+                -1.745329,
+                1.394311,
+                1.421494,
+                0.00044
+              ],
+              "target_tilt_deg": 30.0,
+              "azimuth_deg": 0,
+              "position_error_mm": 0.55,
+              "direction_error_deg": 1.334,
+              "convex_worst_depth_mm": 36.67,
+              "convex_clear": false,
+              "triangle_intersections": 19
+            }
+          ]
+        },
+        {
+          "square": "9f",
+          "trials": 75,
+          "ik_solutions": 15,
+          "candidates": [
+            {
+              "q_rad": [
+                0.783452,
+                0.092965,
+                1.158945,
+                0.667951,
+                2.350876
+              ],
+              "target_tilt_deg": 20.0,
+              "azimuth_deg": 135,
+              "position_error_mm": 2.38,
+              "direction_error_deg": 0.038,
+              "convex_worst_depth_mm": 4.994,
+              "convex_clear": false,
+              "triangle_intersections": 3
+            },
+            {
+              "q_rad": [
+                0.783371,
+                0.04058,
+                1.196304,
+                0.682978,
+                0.785115
+              ],
+              "target_tilt_deg": 20.0,
+              "azimuth_deg": 135,
+              "position_error_mm": 2.803,
+              "direction_error_deg": 0.04,
+              "convex_worst_depth_mm": 5.955,
+              "convex_clear": false,
+              "triangle_intersections": 3
+            },
+            {
+              "q_rad": [
+                0.784459,
+                0.267644,
+                1.029471,
+                0.79728,
+                2.356223
+              ],
+              "target_tilt_deg": 30.0,
+              "azimuth_deg": 135,
+              "position_error_mm": 2.465,
+              "direction_error_deg": 0.027,
+              "convex_worst_depth_mm": 7.887,
+              "convex_clear": false,
+              "triangle_intersections": 2
+            },
+            {
+              "q_rad": [
+                0.78443,
+                0.217421,
+                1.067164,
+                0.80981,
+                0.790606
+              ],
+              "target_tilt_deg": 30.0,
+              "azimuth_deg": 135,
+              "position_error_mm": 2.846,
+              "direction_error_deg": 0.028,
+              "convex_worst_depth_mm": 8.291,
+              "convex_clear": false,
+              "triangle_intersections": 3
+            },
+            {
+              "q_rad": [
+                0.778831,
+                -0.090796,
+                1.286204,
+                0.549918,
+                2.344967
+              ],
+              "target_tilt_deg": 10.0,
+              "azimuth_deg": 135,
+              "position_error_mm": 2.064,
+              "direction_error_deg": 0.065,
+              "convex_worst_depth_mm": 8.584,
+              "convex_clear": false,
+              "triangle_intersections": 6
+            },
+            {
+              "q_rad": [
+                0.778359,
+                -0.147203,
+                1.322239,
+                0.570288,
+                0.777918
+              ],
+              "target_tilt_deg": 10.0,
+              "azimuth_deg": 135,
+              "position_error_mm": 2.517,
+              "direction_error_deg": 0.07,
+              "convex_worst_depth_mm": 15.107,
+              "convex_clear": false,
+              "triangle_intersections": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "center_mm": [
+        240.0,
+        0
+      ],
+      "squares": [
+        {
+          "square": "9d",
+          "trials": 75,
+          "ik_solutions": 3,
+          "candidates": [
+            {
+              "q_rad": [
+                -0.700173,
+                -0.263431,
+                1.388542,
+                0.445685,
+                -2.264012
+              ],
+              "target_tilt_deg": 0.0,
+              "azimuth_deg": 0.0,
+              "position_error_mm": 0.01,
+              "direction_error_deg": 0.0,
+              "convex_worst_depth_mm": 17.602,
+              "convex_clear": false,
+              "triangle_intersections": 7
+            },
+            {
+              "q_rad": [
+                -0.564042,
+                -0.316741,
+                1.41958,
+                0.467957,
+                1.012487
+              ],
+              "target_tilt_deg": 0.0,
+              "azimuth_deg": 0.0,
+              "position_error_mm": 0.009,
+              "direction_error_deg": 0.0,
+              "convex_worst_depth_mm": 17.917,
+              "convex_clear": false,
+              "triangle_intersections": 8
+            },
+            {
+              "q_rad": [
+                -0.694355,
+                -0.324336,
+                1.423418,
+                0.471715,
+                -0.686479
+              ],
+              "target_tilt_deg": 0.0,
+              "azimuth_deg": 0.0,
+              "position_error_mm": 0.009,
+              "direction_error_deg": 0.0,
+              "convex_worst_depth_mm": 23.13,
+              "convex_clear": false,
+              "triangle_intersections": 8
+            }
+          ]
+        },
+        {
+          "square": "9e",
+          "trials": 75,
+          "ik_solutions": 9,
+          "candidates": [
+            {
+              "q_rad": [
+                -0.000128,
+                0.184558,
+                1.133253,
+                0.776584,
+                0.000571
+              ],
+              "target_tilt_deg": 30.0,
+              "azimuth_deg": 180,
+              "position_error_mm": 0.455,
+              "direction_error_deg": 0.004,
+              "convex_worst_depth_mm": 14.132,
+              "convex_clear": false,
+              "triangle_intersections": 4
+            },
+            {
+              "q_rad": [
+                -0.000268,
+                -0.002385,
+                1.256677,
+                0.66557,
+                0.000434
+              ],
+              "target_tilt_deg": 20.0,
+              "azimuth_deg": 180,
+              "position_error_mm": 0.448,
+              "direction_error_deg": 0.005,
+              "convex_worst_depth_mm": 14.872,
+              "convex_clear": false,
+              "triangle_intersections": 5
+            },
+            {
+              "q_rad": [
+                -0.110391,
+                -0.392226,
+                1.451954,
+                0.511068,
+                -1.680074
+              ],
+              "target_tilt_deg": 0.0,
+              "azimuth_deg": 0.0,
+              "position_error_mm": 0.01,
+              "direction_error_deg": 0.0,
+              "convex_worst_depth_mm": 20.037,
+              "convex_clear": false,
+              "triangle_intersections": 14
+            },
+            {
+              "q_rad": [
+                0.105016,
+                -0.397479,
+                1.453769,
+                0.514507,
+                1.674735
+              ],
+              "target_tilt_deg": 0.0,
+              "azimuth_deg": 0.0,
+              "position_error_mm": 0.01,
+              "direction_error_deg": 0.0,
+              "convex_worst_depth_mm": 20.384,
+              "convex_clear": false,
+              "triangle_intersections": 15
+            },
+            {
+              "q_rad": [
+                -0.000957,
+                -0.208312,
+                1.372871,
+                0.580769,
+                -0.000281
+              ],
+              "target_tilt_deg": 10.0,
+              "azimuth_deg": 180,
+              "position_error_mm": 0.414,
+              "direction_error_deg": 0.01,
+              "convex_worst_depth_mm": 26.712,
+              "convex_clear": false,
+              "triangle_intersections": 6
+            },
+            {
+              "q_rad": [
+                -0.009551,
+                -0.455682,
+                1.470579,
+                0.555899,
+                -0.009444
+              ],
+              "target_tilt_deg": 0.0,
+              "azimuth_deg": 0.0,
+              "position_error_mm": 0.01,
+              "direction_error_deg": 0.0,
+              "convex_worst_depth_mm": 37.879,
+              "convex_clear": false,
+              "triangle_intersections": 12
+            }
+          ]
+        },
+        {
+          "square": "9f",
+          "trials": 75,
+          "ik_solutions": 3,
+          "candidates": [
+            {
+              "q_rad": [
+                0.55383,
+                -0.312998,
+                1.417635,
+                0.466159,
+                -1.022523
+              ],
+              "target_tilt_deg": 0.0,
+              "azimuth_deg": 0.0,
+              "position_error_mm": 0.01,
+              "direction_error_deg": 0.0,
+              "convex_worst_depth_mm": 15.454,
+              "convex_clear": false,
+              "triangle_intersections": 7
+            },
+            {
+              "q_rad": [
+                0.700336,
+                -0.266447,
+                1.390503,
+                0.44674,
+                2.264095
+              ],
+              "target_tilt_deg": 0.0,
+              "azimuth_deg": 0.0,
+              "position_error_mm": 0.009,
+              "direction_error_deg": 0.0,
+              "convex_worst_depth_mm": 17.092,
+              "convex_clear": false,
+              "triangle_intersections": 8
+            },
+            {
+              "q_rad": [
+                0.681616,
+                -0.327185,
+                1.424815,
+                0.473167,
+                0.673874
+              ],
+              "target_tilt_deg": 0.0,
+              "azimuth_deg": 0.0,
+              "position_error_mm": 0.01,
+              "direction_error_deg": 0.0,
+              "convex_worst_depth_mm": 24.311,
+              "convex_clear": false,
+              "triangle_intersections": 8
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "source": "TheRobotStudio/SO-ARM100 STEP/SO101/Upper_arm_SO101.step",
+  "source_commit": "a758567c3978dfeefe282ede0500085a48fe8f78",
+  "extension_mm": 125.0,
+  "cut_x_mm": 0,
+  "section_faces": 1,
+  "section_area_mm2": 1398.18,
+  "single_valid_solid": true,
+  "original_bounds_mm": [
+    -65.08709720192277,
+    77.08498921788119,
+    -0.005229318594301803,
+    24.502108084041584,
+    -35.600000100000024,
+    31.7000001
+  ],
+  "extended_bounds_mm": [
+    -65.08709720192277,
+    202.08917025991536,
+    -0.007910958024331102,
+    24.502108084041584,
+    -35.601459700495795,
+    31.706217806766286
+  ],
+  "original_volume_mm3": 117417.074,
+  "extended_volume_mm3": 292189.444,
+  "warning": "Concept only: no fit, physical print, torque, collision, reach or cable validation."
+}

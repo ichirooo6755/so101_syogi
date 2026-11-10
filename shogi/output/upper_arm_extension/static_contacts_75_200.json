@@ -1,0 +1,3268 @@
+{
+  "extension_mm": 75,
+  "center_mm": 200.0,
+  "ik_reachable_count": 81,
+  "ik_reachable_without_detected_penetration": 74,
+  "squares": [
+    {
+      "square": "9a",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "8a",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "7a",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "6a",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "5a",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "4a",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "3a",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "2a",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "1a",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "9b",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "8b",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "7b",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "6b",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "5b",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "4b",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "3b",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "2b",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "1b",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "9c",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "8c",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "7c",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "6c",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "5c",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "4c",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "3c",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "2c",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "1c",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "9d",
+      "ik_reachable": true,
+      "contacts": [
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_51",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 3.9
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_51",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 3.9
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_51",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 3.89
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_51",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 3.89
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_53",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 5.17
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 20.68
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 19.82
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 19.82
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 20.68
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 28.79
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 28.79
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 35.29
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 32.08
+        },
+        {
+          "geoms": [
+            {
+              "geom": "jaw_pad_fixed",
+              "body": "gripper"
+            },
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            }
+          ],
+          "depth_mm": 7.65
+        },
+        {
+          "geoms": [
+            {
+              "geom": "jaw_pad_fixed",
+              "body": "gripper"
+            },
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            }
+          ],
+          "depth_mm": 7.56
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 6.6
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 6.59
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 6.59
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 6.6
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 15.62
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 15.61
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 15.58
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 15.58
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 11.87
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 11.89
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 11.89
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 11.87
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_51",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 7.98
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_53",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 12.07
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_53",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 12.07
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 8.79
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 8.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 8.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 8.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 20.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 20.81
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 20.81
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 20.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 6.4
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 6.36
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 6.36
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 6.4
+        }
+      ]
+    },
+    {
+      "square": "8d",
+      "ik_reachable": true,
+      "contacts": [
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 3.79
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 3.79
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 17.42
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 17.41
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 17.42
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.59
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 25.22
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 25.22
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 8.59
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 22.22
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 22.22
+        },
+        {
+          "geoms": [
+            {
+              "geom": "jaw_pad_fixed",
+              "body": "gripper"
+            },
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            }
+          ],
+          "depth_mm": 5.36
+        },
+        {
+          "geoms": [
+            {
+              "geom": "jaw_pad_fixed",
+              "body": "gripper"
+            },
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            }
+          ],
+          "depth_mm": 5.36
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 2.2
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 15.58
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 15.57
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 15.57
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 15.57
+        }
+      ]
+    },
+    {
+      "square": "7d",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "6d",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "5d",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "4d",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "3d",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "2d",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "1d",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "9e",
+      "ik_reachable": true,
+      "contacts": [
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_53",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 6.03
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 22.34
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 22.34
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 22.36
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 22.36
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 21.81
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 21.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 21.77
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 21.78
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 17.02
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 17.02
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 17.02
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 17.02
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 30.18
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 30.18
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 30.19
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 30.19
+        },
+        {
+          "geoms": [
+            {
+              "geom": "jaw_pad_fixed",
+              "body": "gripper"
+            },
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            }
+          ],
+          "depth_mm": 8.39
+        },
+        {
+          "geoms": [
+            {
+              "geom": "jaw_pad_fixed",
+              "body": "gripper"
+            },
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            }
+          ],
+          "depth_mm": 8.39
+        },
+        {
+          "geoms": [
+            {
+              "geom": "jaw_pad_fixed",
+              "body": "gripper"
+            },
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            }
+          ],
+          "depth_mm": 8.38
+        },
+        {
+          "geoms": [
+            {
+              "geom": "jaw_pad_fixed",
+              "body": "gripper"
+            },
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            }
+          ],
+          "depth_mm": 8.38
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 24.4
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 29.48
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 29.24
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 29.22
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 29.22
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 29.24
+        },
+        {
+          "geoms": [
+            {
+              "geom": "jaw_pad_moving",
+              "body": "moving_jaw_so101_v1"
+            },
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            }
+          ],
+          "depth_mm": 14.95
+        },
+        {
+          "geoms": [
+            {
+              "geom": "jaw_pad_moving",
+              "body": "moving_jaw_so101_v1"
+            },
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            }
+          ],
+          "depth_mm": 13.96
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_51",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 21.71
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_53",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 25.1
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_53",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 25.1
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 8.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 8.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 8.79
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 8.79
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 16.97
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 16.96
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 16.97
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 16.98
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 6.37
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 6.4
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 6.39
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 6.36
+        }
+      ]
+    },
+    {
+      "square": "8e",
+      "ik_reachable": true,
+      "contacts": [
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_51",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 3.17
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_51",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 3.17
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_53",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 4.43
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.67
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 13.34
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 13.35
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.67
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 33.42
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 33.42
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 33.42
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 33.42
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.79
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.79
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.79
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.79
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 41.22
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.79
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.79
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.79
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.79
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 38.22
+        },
+        {
+          "geoms": [
+            {
+              "geom": "jaw_pad_fixed",
+              "body": "gripper"
+            },
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            }
+          ],
+          "depth_mm": 13.81
+        },
+        {
+          "geoms": [
+            {
+              "geom": "jaw_pad_fixed",
+              "body": "gripper"
+            },
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            }
+          ],
+          "depth_mm": 13.81
+        },
+        {
+          "geoms": [
+            {
+              "geom": "jaw_pad_fixed",
+              "body": "gripper"
+            },
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            }
+          ],
+          "depth_mm": 13.81
+        },
+        {
+          "geoms": [
+            {
+              "geom": "jaw_pad_fixed",
+              "body": "gripper"
+            },
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            }
+          ],
+          "depth_mm": 13.81
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_51",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 4.79
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_53",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 8.78
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 8.68
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 8.69
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 8.7
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 18.83
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 18.83
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 18.83
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 18.83
+        }
+      ]
+    },
+    {
+      "square": "7e",
+      "ik_reachable": true,
+      "contacts": [
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 4.5
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 1.5
+        }
+      ]
+    },
+    {
+      "square": "6e",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "5e",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "4e",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "3e",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "2e",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "1e",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "9f",
+      "ik_reachable": true,
+      "contacts": [
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_51",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 3.9
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_51",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 3.9
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_51",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 3.89
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_51",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 3.89
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_53",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 5.27
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 22.64
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 22.64
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 28.58
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 28.58
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 28.57
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.75
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.75
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 36.38
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 33.38
+        },
+        {
+          "geoms": [
+            {
+              "geom": "jaw_pad_fixed",
+              "body": "gripper"
+            },
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            }
+          ],
+          "depth_mm": 8.23
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 8.41
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 8.41
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 8.46
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 8.46
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 15.61
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 15.57
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 12.34
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 12.34
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_51",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 8.39
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_53",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 12.49
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_53",
+              "body": "wrist"
+            }
+          ],
+          "depth_mm": 12.5
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 8.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 8.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 8.76
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 8.8
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 20.68
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 20.7
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 20.71
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 20.69
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 6.4
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 6.36
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 6.36
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_moving",
+              "body": "moving_jaw_so101_v1"
+            }
+          ],
+          "depth_mm": 6.4
+        }
+      ]
+    },
+    {
+      "square": "8f",
+      "ik_reachable": true,
+      "contacts": [
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 4.39
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 4.39
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 18.74
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 18.74
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_35",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 18.74
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.74
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.79
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.79
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 11.74
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 26.54
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_37",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 26.54
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 9.19
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 23.54
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 23.54
+        },
+        {
+          "geoms": [
+            {
+              "geom": "jaw_pad_fixed",
+              "body": "gripper"
+            },
+            {
+              "geom": "geom_39",
+              "body": "shoulder"
+            }
+          ],
+          "depth_mm": 6.01
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "geom_55",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 2.1
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 15.62
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 15.63
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 15.62
+        },
+        {
+          "geoms": [
+            {
+              "geom": "geom_43",
+              "body": "upper_arm"
+            },
+            {
+              "geom": "gripper_jaw_fixed",
+              "body": "gripper"
+            }
+          ],
+          "depth_mm": 15.62
+        }
+      ]
+    },
+    {
+      "square": "7f",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "6f",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "5f",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "4f",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "3f",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "2f",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "1f",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "9g",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "8g",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "7g",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "6g",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "5g",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "4g",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "3g",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "2g",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "1g",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "9h",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "8h",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "7h",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "6h",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "5h",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "4h",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "3h",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "2h",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "1h",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "9i",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "8i",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "7i",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "6i",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "5i",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "4i",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "3i",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "2i",
+      "ik_reachable": true,
+      "contacts": []
+    },
+    {
+      "square": "1i",
+      "ik_reachable": true,
+      "contacts": []
+    }
+  ],
+  "scope": "Static IK poses, board and model collision meshes only; no path, load, neighbor, grasp or hardware validation."
+}

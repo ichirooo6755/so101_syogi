@@ -1,0 +1,53 @@
+[
+  {
+    "extension_mm": 50,
+    "watertight": true,
+    "components": 1,
+    "volume_mm3": 187320.052,
+    "extents_mm": [
+      192.17,
+      24.5,
+      67.3
+    ],
+    "flat_best_rotation_deg": 45.0,
+    "flat_bounding_box_mm": [
+      173.08,
+      173.08
+    ],
+    "fits_180mm_square_flat_without_margin": true
+  },
+  {
+    "extension_mm": 58,
+    "watertight": true,
+    "components": 1,
+    "volume_mm3": 198505.288,
+    "extents_mm": [
+      200.17,
+      24.5,
+      67.3
+    ],
+    "flat_best_rotation_deg": 45.0,
+    "flat_bounding_box_mm": [
+      178.73,
+      178.73
+    ],
+    "fits_180mm_square_flat_without_margin": true
+  },
+  {
+    "extension_mm": 75,
+    "watertight": true,
+    "components": 1,
+    "volume_mm3": 222273.915,
+    "extents_mm": [
+      217.17,
+      24.5,
+      67.3
+    ],
+    "flat_best_rotation_deg": 45.0,
+    "flat_bounding_box_mm": [
+      190.76,
+      190.76
+    ],
+    "fits_180mm_square_flat_without_margin": false
+  }
+]

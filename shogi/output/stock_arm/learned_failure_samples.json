@@ -1,0 +1,716 @@
+{
+  "scope": "Stock SO-101, learned policy only, simulated square-to-neighbor grasps; synthetic nearby pieces, guessed dimensions/friction; no real hardware or board validation.",
+  "stock_arm": true,
+  "board_mm": [
+    330,
+    360,
+    12
+  ],
+  "board_y_m": 0.0,
+  "board_yaw_deg": 0.0,
+  "board_center_x_m": 0.19,
+  "board_side": "white",
+  "checkpoint_sha256": "bf67636728cabd83b3158eea86c4c3fff1d4761d78f5288aa1dba6f6ec81645e",
+  "input_fingerprints": {
+    "app/board_map.py": "572bd46126f2eb5eb23febd3f953212ff5f97f77c2463d900e8f88d06557bf96",
+    "simulation/pick_place.py": "974ae5a9173a33ffb5b81c9587d1b53cb0d6f24c29bb36e511c83c742fb49cc8",
+    "simulation/scene.py": "242e92445fe735d2106bf82c8eb9be8370b8ac8cf10386eb42bd6faf558b220a",
+    "simulation/train_waypoints.py": "4797237c49d7d6a401be6fd5d7600fad2b7529b51c881207ed953279d255b127",
+    "simulation/model/upstream_scene.xml": "d68b503cd3120456cd22bad710ec775ace7ad395b0daa02402d4ddc4227cae8a",
+    "simulation/model/so101_new_calib.xml": "ef1c54a2eb7654ba8062541a7b5a2b7c0c2fcc466dd6c07509f84be5c89ba2cf",
+    "vendor/so101-manipulation-eval/src/sim/so101_kinematics.py": "fefb7659c6c9f2c789f7f0ef81b2c9ec9bf860d6a4d0da9154a38d3bb2961bb2",
+    "vendor/so101-manipulation-eval/src/sim/check_contact.py": "e6f9c507a6b238322b4d75028b5af5c681eb34b849cf3d7b31986a3630cb4331"
+  },
+  "cases": [
+    {
+      "source_square": "9c",
+      "destination_square": "9b",
+      "result": {
+        "success": false,
+        "sim_only": true,
+        "model": "SO-101 upstream mesh model with physical contact pads",
+        "assumptions": {
+          "piece_mm": [
+            23,
+            27,
+            7.0
+          ],
+          "piece_mass_g": 4,
+          "board_thickness_mm": 12.0,
+          "square_xy_mm": [
+            40,
+            36.666666666666664
+          ],
+          "layout": "robot_and_human_opposite_ends",
+          "board_center_m": [
+            0.19,
+            0
+          ],
+          "stand_included": false,
+          "jaw_friction": 2.0,
+          "friction_note": "assumed; not measured",
+          "neighbors_static": true,
+          "obstacle_mode": "synthetic_neighbors",
+          "obstacle_count": 7,
+          "piece_initial_yaw_deg": 90.0,
+          "id5_range_deg": 365,
+          "id5_cable_home_rad": 0.0,
+          "promote": false
+        },
+        "source_m": [
+          0.33666666666666667,
+          -0.08,
+          0.0155
+        ],
+        "target_m": [
+          0.33666666666666667,
+          -0.12000000000000001,
+          0.0155
+        ],
+        "final_m": [
+          0.336675,
+          -0.080009,
+          0.015465
+        ],
+        "max_lift_mm": 0.0,
+        "position_error_mm": 39.99,
+        "target_radius_mm": 8.0,
+        "settled": true,
+        "quiet": true,
+        "orientation_error_deg": 0.15,
+        "orientation_ok": true,
+        "both_jaws_airborne_steps": 0,
+        "jaw_contacts_at_end": 0,
+        "neighbor_contact_steps": 3434,
+        "board_contact_steps": 5990,
+        "first_collision": {
+          "time_s": 1.92,
+          "phase": "descend",
+          "kind": "surface",
+          "geoms": [
+            "shogi_board",
+            "jaw_pad_moving"
+          ]
+        },
+        "collision_steps_by_phase": {
+          "descend": 1560,
+          "close": 1992,
+          "lift": 436,
+          "place": 1338,
+          "release": 1600,
+          "retreat": 496
+        },
+        "contact_gate_ok": true,
+        "contact_gate_problems": [],
+        "worst_penetration_mm": 0.0,
+        "object_pose_writes_during_rollout": 0,
+        "ik_residuals": {},
+        "controller": "learned_policy_no_ik_fallback",
+        "policy_calls": 475,
+        "policy_action_clipped_steps": 80,
+        "grasp_height_mm": 10.0,
+        "transit_height_mm": 60.0,
+        "grip_margin_mm": 5.0,
+        "approach_q": 0.23205128205128206,
+        "close_q": 0.065,
+        "wrist_roll_rad": 0.2907,
+        "id5_unwound": false,
+        "face_down": false,
+        "up_z": 1.0,
+        "phase_up_z": {
+          "settle": 1.0,
+          "approach": 1.0,
+          "descend": 1.0,
+          "close": 1.0,
+          "lift": 1.0,
+          "carry": 1.0,
+          "place": 1.0,
+          "release": 1.0,
+          "retreat": 1.0
+        },
+        "preclear_height_mm": null,
+        "waypoints": [
+          {
+            "phase": "settle",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.23205128205128206,
+            "duration_s": 0.4
+          },
+          {
+            "phase": "approach",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.23205128205128206,
+            "duration_s": 1.0
+          },
+          {
+            "phase": "descend",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.23205128205128206,
+            "duration_s": 1.3
+          },
+          {
+            "phase": "close",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.065,
+            "duration_s": 1.0
+          },
+          {
+            "phase": "lift",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.065,
+            "duration_s": 1.3
+          },
+          {
+            "phase": "carry",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.065,
+            "duration_s": 1.6
+          },
+          {
+            "phase": "place",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.065,
+            "duration_s": 1.2
+          },
+          {
+            "phase": "release",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.23205128205128206,
+            "duration_s": 0.8
+          },
+          {
+            "phase": "retreat",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.23205128205128206,
+            "duration_s": 0.9
+          }
+        ]
+      },
+      "teaching_candidates": [
+        {
+          "square": "9c",
+          "operation": "pick",
+          "stage": "descend",
+          "evidence": "simulated_contact",
+          "role": "move",
+          "origin": "learned_simulation"
+        }
+      ]
+    },
+    {
+      "source_square": "3f",
+      "destination_square": "3e",
+      "result": {
+        "success": false,
+        "sim_only": true,
+        "model": "SO-101 upstream mesh model with physical contact pads",
+        "assumptions": {
+          "piece_mm": [
+            23,
+            27,
+            7.0
+          ],
+          "piece_mass_g": 4,
+          "board_thickness_mm": 12.0,
+          "square_xy_mm": [
+            40,
+            36.666666666666664
+          ],
+          "layout": "robot_and_human_opposite_ends",
+          "board_center_m": [
+            0.19,
+            0
+          ],
+          "stand_included": false,
+          "jaw_friction": 2.0,
+          "friction_note": "assumed; not measured",
+          "neighbors_static": true,
+          "obstacle_mode": "synthetic_neighbors",
+          "obstacle_count": 7,
+          "piece_initial_yaw_deg": 90.0,
+          "id5_range_deg": 365,
+          "id5_cable_home_rad": 0.0,
+          "promote": false
+        },
+        "source_m": [
+          0.11666666666666667,
+          0.04,
+          0.0155
+        ],
+        "target_m": [
+          0.11666666666666667,
+          0.0,
+          0.0155
+        ],
+        "final_m": [
+          0.116675,
+          0.039991,
+          0.015465
+        ],
+        "max_lift_mm": 0.0,
+        "position_error_mm": 39.99,
+        "target_radius_mm": 8.0,
+        "settled": true,
+        "quiet": true,
+        "orientation_error_deg": 0.15,
+        "orientation_ok": true,
+        "both_jaws_airborne_steps": 0,
+        "jaw_contacts_at_end": 0,
+        "neighbor_contact_steps": 18200,
+        "board_contact_steps": 0,
+        "first_collision": {
+          "time_s": 0.4,
+          "phase": "approach",
+          "kind": "neighbor",
+          "geoms": [
+            "neighbor_0_0",
+            "46"
+          ]
+        },
+        "collision_steps_by_phase": {
+          "approach": 2000,
+          "descend": 2600,
+          "close": 2000,
+          "lift": 2600,
+          "carry": 3200,
+          "place": 2400,
+          "release": 1600,
+          "retreat": 1800
+        },
+        "contact_gate_ok": true,
+        "contact_gate_problems": [],
+        "worst_penetration_mm": 0.0,
+        "object_pose_writes_during_rollout": 0,
+        "ik_residuals": {},
+        "controller": "learned_policy_no_ik_fallback",
+        "policy_calls": 475,
+        "policy_action_clipped_steps": 35,
+        "grasp_height_mm": 10.0,
+        "transit_height_mm": 60.0,
+        "grip_margin_mm": 5.0,
+        "approach_q": 0.23205128205128206,
+        "close_q": 0.065,
+        "wrist_roll_rad": 0.406,
+        "id5_unwound": false,
+        "face_down": false,
+        "up_z": 1.0,
+        "phase_up_z": {
+          "settle": 1.0,
+          "approach": 1.0,
+          "descend": 1.0,
+          "close": 1.0,
+          "lift": 1.0,
+          "carry": 1.0,
+          "place": 1.0,
+          "release": 1.0,
+          "retreat": 1.0
+        },
+        "preclear_height_mm": null,
+        "waypoints": [
+          {
+            "phase": "settle",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.23205128205128206,
+            "duration_s": 0.4
+          },
+          {
+            "phase": "approach",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.23205128205128206,
+            "duration_s": 1.0
+          },
+          {
+            "phase": "descend",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.23205128205128206,
+            "duration_s": 1.3
+          },
+          {
+            "phase": "close",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.065,
+            "duration_s": 1.0
+          },
+          {
+            "phase": "lift",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.065,
+            "duration_s": 1.3
+          },
+          {
+            "phase": "carry",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.065,
+            "duration_s": 1.6
+          },
+          {
+            "phase": "place",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.065,
+            "duration_s": 1.2
+          },
+          {
+            "phase": "release",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.23205128205128206,
+            "duration_s": 0.8
+          },
+          {
+            "phase": "retreat",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.23205128205128206,
+            "duration_s": 0.9
+          }
+        ]
+      },
+      "teaching_candidates": [
+        {
+          "square": "3f",
+          "operation": "pick",
+          "stage": "approach",
+          "evidence": "simulated_contact",
+          "role": "move",
+          "origin": "learned_simulation"
+        }
+      ]
+    },
+    {
+      "source_square": "3c",
+      "destination_square": "3b",
+      "result": {
+        "success": false,
+        "sim_only": true,
+        "model": "SO-101 upstream mesh model with physical contact pads",
+        "assumptions": {
+          "piece_mm": [
+            23,
+            27,
+            7.0
+          ],
+          "piece_mass_g": 4,
+          "board_thickness_mm": 12.0,
+          "square_xy_mm": [
+            40,
+            36.666666666666664
+          ],
+          "layout": "robot_and_human_opposite_ends",
+          "board_center_m": [
+            0.19,
+            0
+          ],
+          "stand_included": false,
+          "jaw_friction": 2.0,
+          "friction_note": "assumed; not measured",
+          "neighbors_static": true,
+          "obstacle_mode": "synthetic_neighbors",
+          "obstacle_count": 7,
+          "piece_initial_yaw_deg": 90.0,
+          "id5_range_deg": 365,
+          "id5_cable_home_rad": 0.0,
+          "promote": false
+        },
+        "source_m": [
+          0.11666666666666667,
+          -0.08,
+          0.0155
+        ],
+        "target_m": [
+          0.11666666666666667,
+          -0.12000000000000001,
+          0.0155
+        ],
+        "final_m": [
+          0.116675,
+          -0.080009,
+          0.015465
+        ],
+        "max_lift_mm": 0.0,
+        "position_error_mm": 39.99,
+        "target_radius_mm": 8.0,
+        "settled": true,
+        "quiet": true,
+        "orientation_error_deg": 0.15,
+        "orientation_ok": true,
+        "both_jaws_airborne_steps": 0,
+        "jaw_contacts_at_end": 0,
+        "neighbor_contact_steps": 8420,
+        "board_contact_steps": 2116,
+        "first_collision": {
+          "time_s": 2.085,
+          "phase": "descend",
+          "kind": "surface",
+          "geoms": [
+            "shogi_board",
+            "jaw_pad_moving"
+          ]
+        },
+        "collision_steps_by_phase": {
+          "descend": 1230,
+          "close": 1979,
+          "lift": 2586,
+          "carry": 1279,
+          "place": 1269,
+          "release": 1600,
+          "retreat": 298
+        },
+        "contact_gate_ok": true,
+        "contact_gate_problems": [],
+        "worst_penetration_mm": 0.0,
+        "object_pose_writes_during_rollout": 0,
+        "ik_residuals": {},
+        "controller": "learned_policy_no_ik_fallback",
+        "policy_calls": 475,
+        "policy_action_clipped_steps": 0,
+        "grasp_height_mm": 10.0,
+        "transit_height_mm": 60.0,
+        "grip_margin_mm": 5.0,
+        "approach_q": 0.23205128205128206,
+        "close_q": 0.065,
+        "wrist_roll_rad": 0.7442,
+        "id5_unwound": false,
+        "face_down": false,
+        "up_z": 1.0,
+        "phase_up_z": {
+          "settle": 1.0,
+          "approach": 1.0,
+          "descend": 1.0,
+          "close": 1.0,
+          "lift": 1.0,
+          "carry": 1.0,
+          "place": 1.0,
+          "release": 1.0,
+          "retreat": 1.0
+        },
+        "preclear_height_mm": null,
+        "waypoints": [
+          {
+            "phase": "settle",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.23205128205128206,
+            "duration_s": 0.4
+          },
+          {
+            "phase": "approach",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.23205128205128206,
+            "duration_s": 1.0
+          },
+          {
+            "phase": "descend",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.23205128205128206,
+            "duration_s": 1.3
+          },
+          {
+            "phase": "close",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.065,
+            "duration_s": 1.0
+          },
+          {
+            "phase": "lift",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.065,
+            "duration_s": 1.3
+          },
+          {
+            "phase": "carry",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.065,
+            "duration_s": 1.6
+          },
+          {
+            "phase": "place",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.065,
+            "duration_s": 1.2
+          },
+          {
+            "phase": "release",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.23205128205128206,
+            "duration_s": 0.8
+          },
+          {
+            "phase": "retreat",
+            "joints_rad": [
+              0.0,
+              -0.55,
+              0.95,
+              0.82,
+              0.0
+            ],
+            "gripper": 0.23205128205128206,
+            "duration_s": 0.9
+          }
+        ]
+      },
+      "teaching_candidates": [
+        {
+          "square": "3c",
+          "operation": "pick",
+          "stage": "descend",
+          "evidence": "simulated_contact",
+          "role": "move",
+          "origin": "learned_simulation"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4332 @@
+{
+  "scope": "Triangle-surface recheck of convex candidate pairs at recorded static poses. Not an exhaustive posture search, solid containment, swept path, clearance, surrounding pieces, actual camera/wires, force or hardware test.",
+  "fcl_version": "0.7.0.11",
+  "layouts": [
+    {
+      "center_mm": [
+        210.0,
+        0.0
+      ],
+      "yaw_deg": 0.0,
+      "board_bottom_mm": 0.0,
+      "base_board": [
+        {
+          "part": {
+            "body": "base",
+            "part": "base_motor_holder_so101_v1",
+            "geom_id": 30
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 23.7
+        },
+        {
+          "part": {
+            "body": "base",
+            "part": "base_so101_v2",
+            "geom_id": 31
+          },
+          "triangle_intersection": true,
+          "surface_distance_mm": null
+        },
+        {
+          "part": {
+            "body": "base",
+            "part": "sts3215_03a_v1",
+            "geom_id": 32
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 13.77
+        },
+        {
+          "part": {
+            "body": "base",
+            "part": "waveshare_mounting_plate_so101_v2",
+            "geom_id": 33
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 73.3
+        }
+      ],
+      "near_conflicting_poses": [
+        {
+          "square": "9d",
+          "q_rad": [
+            -1.079821,
+            -0.420108,
+            1.461009,
+            0.529895,
+            -2.642225
+          ],
+          "triangle_intersections": 16,
+          "pairs": [
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "wrist",
+                  "part": "wrist_roll_pitch_so101_v2",
+                  "geom_id": 53
+                }
+              ],
+              "convex_depth_mm": 3.22,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 25.52,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 24.77,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 11.79,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 23.59,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 11.79,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 20.2,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 27.15,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 31.3,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 33.5,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "jaw_pad_moving",
+                  "geom_id": 61
+                },
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                }
+              ],
+              "convex_depth_mm": 15.19,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "wrist",
+                  "part": "wrist_roll_pitch_so101_v2",
+                  "geom_id": 53
+                }
+              ],
+              "convex_depth_mm": 2.95,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 8.81,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 17.56,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 6.41,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "base",
+                  "part": "base_motor_holder_so101_v1",
+                  "geom_id": 30
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 1.94,
+              "triangle_intersection": false,
+              "surface_distance_mm": 1.21
+            },
+            {
+              "geoms": [
+                {
+                  "body": "base",
+                  "part": "base_so101_v2",
+                  "geom_id": 31
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "jaw_pad_moving",
+                  "geom_id": 61
+                }
+              ],
+              "convex_depth_mm": 8.29,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            }
+          ]
+        },
+        {
+          "square": "8d",
+          "q_rad": [
+            -0.51298,
+            -0.274662,
+            1.395708,
+            0.44975,
+            1.063223
+          ],
+          "triangle_intersections": 5,
+          "pairs": [
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 2.81,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 2.87,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 11.17,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 8.09,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 3.35,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            }
+          ]
+        },
+        {
+          "square": "9e",
+          "q_rad": [
+            -0.024375,
+            -0.865946,
+            1.484251,
+            0.952491,
+            -0.024122
+          ],
+          "triangle_intersections": 20,
+          "pairs": [
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "wrist",
+                  "part": "sts3215_03a_no_horn_v1",
+                  "geom_id": 51
+                }
+              ],
+              "convex_depth_mm": 3.74,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "wrist",
+                  "part": "wrist_roll_pitch_so101_v2",
+                  "geom_id": 53
+                }
+              ],
+              "convex_depth_mm": 7.13,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 32.03,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 31.57,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 11.8,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 26.11,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 11.8,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 36.57,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "gripper",
+                  "part": "jaw_pad_fixed",
+                  "geom_id": 58
+                },
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                }
+              ],
+              "convex_depth_mm": 13.8,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 15.0,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 22.53,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 19.2,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "jaw_pad_moving",
+                  "geom_id": 61
+                },
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                }
+              ],
+              "convex_depth_mm": 8.13,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "wrist",
+                  "part": "sts3215_03a_no_horn_v1",
+                  "geom_id": 51
+                }
+              ],
+              "convex_depth_mm": 20.24,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "wrist",
+                  "part": "wrist_roll_pitch_so101_v2",
+                  "geom_id": 53
+                }
+              ],
+              "convex_depth_mm": 24.15,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 8.8,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 20.34,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 4.96,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "base",
+                  "part": "base_motor_holder_so101_v1",
+                  "geom_id": 30
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 20.15,
+              "triangle_intersection": false,
+              "surface_distance_mm": 1.19
+            },
+            {
+              "geoms": [
+                {
+                  "body": "base",
+                  "part": "base_so101_v2",
+                  "geom_id": 31
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 11.86,
+              "triangle_intersection": false,
+              "surface_distance_mm": 2.01
+            },
+            {
+              "geoms": [
+                {
+                  "body": "base",
+                  "part": "base_so101_v2",
+                  "geom_id": 31
+                },
+                {
+                  "body": "gripper",
+                  "part": "jaw_pad_fixed",
+                  "geom_id": 58
+                }
+              ],
+              "convex_depth_mm": 19.3,
+              "triangle_intersection": false,
+              "surface_distance_mm": 0.77
+            },
+            {
+              "geoms": [
+                {
+                  "body": "base",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 32
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 18.57,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "base",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 32
+                },
+                {
+                  "body": "gripper",
+                  "part": "jaw_pad_fixed",
+                  "geom_id": 58
+                }
+              ],
+              "convex_depth_mm": 4.67,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            }
+          ]
+        },
+        {
+          "square": "8e",
+          "q_rad": [
+            0.093594,
+            -0.339887,
+            1.430838,
+            0.479845,
+            1.663377
+          ],
+          "triangle_intersections": 11,
+          "pairs": [
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 2.52,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 6.33,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 10.46,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 13.66,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 7.2,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 10.58,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 6.24,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 14.16,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 11.17,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 6.1,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 2.58,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            }
+          ]
+        },
+        {
+          "square": "9f",
+          "q_rad": [
+            1.082698,
+            -0.422786,
+            1.461804,
+            0.531778,
+            2.644922
+          ],
+          "triangle_intersections": 16,
+          "pairs": [
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "wrist",
+                  "part": "wrist_roll_pitch_so101_v2",
+                  "geom_id": 53
+                }
+              ],
+              "convex_depth_mm": 3.27,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 26.51,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 25.3,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 11.79,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 24.11,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 11.79,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 20.71,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 27.26,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 32.69,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 32.26,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "jaw_pad_moving",
+                  "geom_id": 61
+                },
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                }
+              ],
+              "convex_depth_mm": 14.35,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "wrist",
+                  "part": "wrist_roll_pitch_so101_v2",
+                  "geom_id": 53
+                }
+              ],
+              "convex_depth_mm": 3.19,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 8.81,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 17.69,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 6.41,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "base",
+                  "part": "base_so101_v2",
+                  "geom_id": 31
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "jaw_pad_moving",
+                  "geom_id": 61
+                }
+              ],
+              "convex_depth_mm": 6.79,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            }
+          ]
+        },
+        {
+          "square": "8f",
+          "q_rad": [
+            0.503958,
+            -0.271171,
+            1.393515,
+            0.448452,
+            -1.072088
+          ],
+          "triangle_intersections": 4,
+          "pairs": [
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 0.71,
+              "triangle_intersection": false,
+              "surface_distance_mm": 0.44
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 0.91,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 8.71,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 5.71,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 0.91,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "center_mm": [
+        230.0,
+        0.0
+      ],
+      "yaw_deg": 0.0,
+      "board_bottom_mm": 0.0,
+      "base_board": [
+        {
+          "part": {
+            "body": "base",
+            "part": "base_motor_holder_so101_v1",
+            "geom_id": 30
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 26.9
+        },
+        {
+          "part": {
+            "body": "base",
+            "part": "base_so101_v2",
+            "geom_id": 31
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 0.36
+        },
+        {
+          "part": {
+            "body": "base",
+            "part": "sts3215_03a_v1",
+            "geom_id": 32
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 21.38
+        },
+        {
+          "part": {
+            "body": "base",
+            "part": "waveshare_mounting_plate_so101_v2",
+            "geom_id": 33
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 92.24
+        }
+      ],
+      "near_conflicting_poses": [
+        {
+          "square": "9d",
+          "q_rad": [
+            -0.800881,
+            -0.316599,
+            1.419499,
+            0.467896,
+            -2.364294
+          ],
+          "triangle_intersections": 11,
+          "pairs": [
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 12.96,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 12.95,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 11.79,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 13.11,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 11.79,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 9.68,
+              "triangle_intersection": false,
+              "surface_distance_mm": 2.88
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 17.58,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 25.39,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 22.22,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "jaw_pad_moving",
+                  "geom_id": 61
+                },
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                }
+              ],
+              "convex_depth_mm": 7.83,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 7.09,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 12.54,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 5.51,
+              "triangle_intersection": false,
+              "surface_distance_mm": 9.59
+            }
+          ]
+        },
+        {
+          "square": "9e",
+          "q_rad": [
+            -0.134735,
+            -0.492868,
+            1.478519,
+            0.585144,
+            -1.7043
+          ],
+          "triangle_intersections": 17,
+          "pairs": [
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "wrist",
+                  "part": "sts3215_03a_no_horn_v1",
+                  "geom_id": 51
+                }
+              ],
+              "convex_depth_mm": 3.19,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "wrist",
+                  "part": "wrist_roll_pitch_so101_v2",
+                  "geom_id": 53
+                }
+              ],
+              "convex_depth_mm": 4.45,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 19.15,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 27.27,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 11.79,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 29.62,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 11.8,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 26.26,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "gripper",
+                  "part": "jaw_pad_fixed",
+                  "geom_id": 58
+                },
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                }
+              ],
+              "convex_depth_mm": 7.2,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 11.15,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 19.23,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 14.55,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "wrist",
+                  "part": "sts3215_03a_no_horn_v1",
+                  "geom_id": 51
+                }
+              ],
+              "convex_depth_mm": 4.88,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "wrist",
+                  "part": "wrist_roll_pitch_so101_v2",
+                  "geom_id": 53
+                }
+              ],
+              "convex_depth_mm": 8.87,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 8.81,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 19.45,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 6.41,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            }
+          ]
+        },
+        {
+          "square": "9f",
+          "q_rad": [
+            0.80173,
+            -0.319717,
+            1.421094,
+            0.469419,
+            2.365038
+          ],
+          "triangle_intersections": 12,
+          "pairs": [
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 13.41,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 12.96,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 11.79,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 13.29,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 11.79,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 9.87,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 17.42,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 25.18,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 21.98,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "jaw_pad_moving",
+                  "geom_id": 61
+                },
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                }
+              ],
+              "convex_depth_mm": 7.08,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 6.84,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 12.55,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 5.91,
+              "triangle_intersection": false,
+              "surface_distance_mm": 9.71
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "center_mm": [
+        235.0,
+        0.0
+      ],
+      "yaw_deg": 0.0,
+      "board_bottom_mm": 0.0,
+      "base_board": [
+        {
+          "part": {
+            "body": "base",
+            "part": "base_motor_holder_so101_v1",
+            "geom_id": 30
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 29.54
+        },
+        {
+          "part": {
+            "body": "base",
+            "part": "base_so101_v2",
+            "geom_id": 31
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 5.36
+        },
+        {
+          "part": {
+            "body": "base",
+            "part": "sts3215_03a_v1",
+            "geom_id": 32
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 25.38
+        },
+        {
+          "part": {
+            "body": "base",
+            "part": "waveshare_mounting_plate_so101_v2",
+            "geom_id": 33
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 97.04
+        }
+      ],
+      "near_conflicting_poses": [
+        {
+          "square": "9d",
+          "q_rad": [
+            -0.747801,
+            -0.289798,
+            1.404817,
+            0.455778,
+            -2.311434
+          ],
+          "triangle_intersections": 8,
+          "pairs": [
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 8.95,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 9.18,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 11.79,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 9.73,
+              "triangle_intersection": false,
+              "surface_distance_mm": 2.08
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 11.79,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 6.31,
+              "triangle_intersection": false,
+              "surface_distance_mm": 5.43
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 13.81,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 21.61,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 18.42,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "jaw_pad_moving",
+                  "geom_id": 61
+                },
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                }
+              ],
+              "convex_depth_mm": 3.69,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 3.83,
+              "triangle_intersection": false,
+              "surface_distance_mm": 1.4
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 8.77,
+              "triangle_intersection": false,
+              "surface_distance_mm": 1.25
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 3.73,
+              "triangle_intersection": false,
+              "surface_distance_mm": 10.13
+            }
+          ]
+        },
+        {
+          "square": "9e",
+          "q_rad": [
+            -0.121371,
+            -0.440055,
+            1.466629,
+            0.544222,
+            -1.690998
+          ],
+          "triangle_intersections": 18,
+          "pairs": [
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "wrist",
+                  "part": "sts3215_03a_no_horn_v1",
+                  "geom_id": 51
+                }
+              ],
+              "convex_depth_mm": 1.46,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "wrist",
+                  "part": "wrist_roll_pitch_so101_v2",
+                  "geom_id": 53
+                }
+              ],
+              "convex_depth_mm": 3.58,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 13.97,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 22.22,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 11.79,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 24.83,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 11.79,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 21.47,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "gripper",
+                  "part": "jaw_pad_fixed",
+                  "geom_id": 58
+                },
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                }
+              ],
+              "convex_depth_mm": 4.26,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 11.72,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 19.5,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 15.2,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "jaw_pad_moving",
+                  "geom_id": 61
+                },
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                }
+              ],
+              "convex_depth_mm": 0.5,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "wrist",
+                  "part": "sts3215_03a_no_horn_v1",
+                  "geom_id": 51
+                }
+              ],
+              "convex_depth_mm": 0.83,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "wrist",
+                  "part": "wrist_roll_pitch_so101_v2",
+                  "geom_id": 53
+                }
+              ],
+              "convex_depth_mm": 4.7,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 8.65,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 17.84,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 6.41,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            }
+          ]
+        },
+        {
+          "square": "9f",
+          "q_rad": [
+            0.597384,
+            -0.346273,
+            1.433732,
+            0.483337,
+            -0.979245
+          ],
+          "triangle_intersections": 9,
+          "pairs": [
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 3.55,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 12.34,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 11.35,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 20.49,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 8.35,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 17.5,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "gripper",
+                  "part": "jaw_pad_fixed",
+                  "geom_id": 58
+                },
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                }
+              ],
+              "convex_depth_mm": 3.61,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 3.78,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 2.06,
+              "triangle_intersection": false,
+              "surface_distance_mm": 6.68
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 12.87,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "center_mm": [
+        240.0,
+        0.0
+      ],
+      "yaw_deg": 0.0,
+      "board_bottom_mm": 0.0,
+      "base_board": [
+        {
+          "part": {
+            "body": "base",
+            "part": "base_motor_holder_so101_v1",
+            "geom_id": 30
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 32.73
+        },
+        {
+          "part": {
+            "body": "base",
+            "part": "base_so101_v2",
+            "geom_id": 31
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 10.36
+        },
+        {
+          "part": {
+            "body": "base",
+            "part": "sts3215_03a_v1",
+            "geom_id": 32
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 29.67
+        },
+        {
+          "part": {
+            "body": "base",
+            "part": "waveshare_mounting_plate_so101_v2",
+            "geom_id": 33
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 101.86
+        }
+      ],
+      "near_conflicting_poses": [
+        {
+          "square": "9d",
+          "q_rad": [
+            -0.700173,
+            -0.263431,
+            1.388542,
+            0.445685,
+            -2.264012
+          ],
+          "triangle_intersections": 7,
+          "pairs": [
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 4.74,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 5.19,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 11.79,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 6.13,
+              "triangle_intersection": false,
+              "surface_distance_mm": 4.94
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 8.81,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 2.73,
+              "triangle_intersection": false,
+              "surface_distance_mm": 8.27
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 9.8,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 17.6,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 14.41,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 4.79,
+              "triangle_intersection": false,
+              "surface_distance_mm": 3.53
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 1.17,
+              "triangle_intersection": false,
+              "surface_distance_mm": 8.77
+            }
+          ]
+        },
+        {
+          "square": "9e",
+          "q_rad": [
+            -0.110391,
+            -0.392226,
+            1.451954,
+            0.511068,
+            -1.680074
+          ],
+          "triangle_intersections": 14,
+          "pairs": [
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "wrist",
+                  "part": "wrist_roll_pitch_so101_v2",
+                  "geom_id": 53
+                }
+              ],
+              "convex_depth_mm": 1.67,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 8.83,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 17.17,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 11.79,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 20.04,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 11.79,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 16.67,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 11.8,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 19.24,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 15.47,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "jaw_pad_moving",
+                  "geom_id": 61
+                },
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                }
+              ],
+              "convex_depth_mm": 0.5,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 5.25,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 16.21,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 6.37,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            }
+          ]
+        },
+        {
+          "square": "9f",
+          "q_rad": [
+            0.55383,
+            -0.312998,
+            1.417635,
+            0.466159,
+            -1.022523
+          ],
+          "triangle_intersections": 7,
+          "pairs": [
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 7.37,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 6.95,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 15.45,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 3.95,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 12.45,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 1.34,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 7.77,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "center_mm": [
+        250.0,
+        -20.0
+      ],
+      "yaw_deg": 0.0,
+      "board_bottom_mm": 0.0,
+      "base_board": [
+        {
+          "part": {
+            "body": "base",
+            "part": "base_motor_holder_so101_v1",
+            "geom_id": 30
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 40.19
+        },
+        {
+          "part": {
+            "body": "base",
+            "part": "base_so101_v2",
+            "geom_id": 31
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 20.36
+        },
+        {
+          "part": {
+            "body": "base",
+            "part": "sts3215_03a_v1",
+            "geom_id": 32
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 38.78
+        },
+        {
+          "part": {
+            "body": "base",
+            "part": "waveshare_mounting_plate_so101_v2",
+            "geom_id": 33
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 111.55
+        }
+      ],
+      "near_conflicting_poses": [
+        {
+          "square": "9d",
+          "q_rad": [
+            -0.218909,
+            -0.303978,
+            1.412815,
+            0.46196,
+            1.354101
+          ],
+          "triangle_intersections": 8,
+          "pairs": [
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 3.3,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 5.1,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 11.1,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 2.1,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 8.1,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 4.98,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 1.85,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 2.89,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            }
+          ]
+        },
+        {
+          "square": "9e",
+          "q_rad": [
+            0.211686,
+            -0.299803,
+            1.410511,
+            0.460088,
+            -1.361224
+          ],
+          "triangle_intersections": 6,
+          "pairs": [
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 3.67,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 3.22,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 10.13,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 6.95,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 6.27,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 3.2,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 3.27,
+              "triangle_intersection": false,
+              "surface_distance_mm": 1.63
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "center_mm": [
+        250.0,
+        20.0
+      ],
+      "yaw_deg": 0.0,
+      "board_bottom_mm": 0.0,
+      "base_board": [
+        {
+          "part": {
+            "body": "base",
+            "part": "base_motor_holder_so101_v1",
+            "geom_id": 30
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 40.19
+        },
+        {
+          "part": {
+            "body": "base",
+            "part": "base_so101_v2",
+            "geom_id": 31
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 20.36
+        },
+        {
+          "part": {
+            "body": "base",
+            "part": "sts3215_03a_v1",
+            "geom_id": 32
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 38.78
+        },
+        {
+          "part": {
+            "body": "base",
+            "part": "waveshare_mounting_plate_so101_v2",
+            "geom_id": 33
+          },
+          "triangle_intersection": false,
+          "surface_distance_mm": 111.55
+        }
+      ],
+      "near_conflicting_poses": [
+        {
+          "square": "9e",
+          "q_rad": [
+            -0.218909,
+            -0.303978,
+            1.412815,
+            0.46196,
+            1.354101
+          ],
+          "triangle_intersections": 8,
+          "pairs": [
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 3.3,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 5.1,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 11.1,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 2.1,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 8.1,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 4.98,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 1.85,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 2.89,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            }
+          ]
+        },
+        {
+          "square": "9f",
+          "q_rad": [
+            0.211686,
+            -0.299803,
+            1.410511,
+            0.460088,
+            -1.361224
+          ],
+          "triangle_intersections": 6,
+          "pairs": [
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 35
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 3.67,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "sts3215_03a_v1",
+                  "geom_id": 55
+                }
+              ],
+              "convex_depth_mm": 3.22,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 10.13,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 6.95,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "motor_holder_so101_base_v1",
+                  "geom_id": 37
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 6.27,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "shoulder",
+                  "part": "rotation_pitch_so101_v1",
+                  "geom_id": 39
+                },
+                {
+                  "body": "moving_jaw_so101_v1",
+                  "part": "gripper_jaw_moving",
+                  "geom_id": 60
+                }
+              ],
+              "convex_depth_mm": 3.2,
+              "triangle_intersection": true,
+              "surface_distance_mm": null
+            },
+            {
+              "geoms": [
+                {
+                  "body": "upper_arm",
+                  "part": "upper_arm_so101_v1",
+                  "geom_id": 43
+                },
+                {
+                  "body": "gripper",
+                  "part": "gripper_jaw_fixed",
+                  "geom_id": 57
+                }
+              ],
+              "convex_depth_mm": 3.27,
+              "triangle_intersection": false,
+              "surface_distance_mm": 1.63
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.log
+
+# Python environments / upstream (再取得可能)
+shogi/.venv*/
+shogi/vendor/
+shogi/build/
+
+# 実機の較正・秘密情報
+shogi/app/follower_offsets.json
+shogi/firmware/ShogiCamera/wifi_config.h
+
+# 生成物・重い試行データ
+shogi/simulation/runs/
+shogi/simulation/model/shogi_scene_*.xml
+shogi/output/firmware_xiao/
+shogi/output/xiao_camera_firmware.zip
+shogi/output/xiao_mount_package.zip
+shogi/output/camera_xiao/slice/
+shogi/output/upper_arm_extension/slice_*/

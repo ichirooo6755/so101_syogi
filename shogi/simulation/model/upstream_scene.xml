@@ -1,0 +1,119 @@
+<mujoco model="so101_workcell">
+  <!-- The SO-101 workcell.
+
+       The cube is grasped by real contact between the published jaw faces.
+       There is no mocap proxy and no kinematic attachment: the gripper closes,
+       the pads touch the cube, and friction plus normal force carry the load.
+
+       The set is built to be watched. A real bench has a work surface with a
+       marked task area, parts waiting their turn, a bin the arm is feeding,
+       and light that comes from somewhere. Everything here is static scenery
+       except the cube and the arm; none of it touches the physics of the task. -->
+  <include file="so101_new_calib.xml" />
+  <option timestep="0.0005" integrator="implicitfast" cone="elliptic" impratio="10" />
+  <visual>
+    <global offwidth="1920" offheight="1080" fovy="38" />
+    <quality shadowsize="8192" offsamples="8" />
+    <map znear="0.02" zfar="12" shadowclip="0.6" shadowscale="0.9" />
+    <rgba haze="0.10 0.13 0.17 1" />
+    <headlight ambient="0.30 0.32 0.36" diffuse="0.22 0.24 0.28" specular="0.10 0.11 0.13" />
+  </visual>
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.16 0.20 0.26" rgb2="0.04 0.05 0.07" width="512" height="3072" />
+    <texture name="floor_tex" type="2d" builtin="checker" rgb1="0.075 0.085 0.10" rgb2="0.055 0.065 0.08"
+             width="512" height="512" mark="edge" markrgb="0.11 0.13 0.16" />
+    <material name="floor" texture="floor_tex" texrepeat="18 18" reflectance="0.04" specular="0.12" shininess="0.2" />
+    <texture name="bench_tex" type="2d" builtin="flat" rgb1="0.30 0.32 0.35" rgb2="0.30 0.32 0.35"
+             width="256" height="256" mark="edge" markrgb="0.26 0.28 0.31" />
+    <material name="bench" texture="bench_tex" texrepeat="1 1" specular="0.22" shininess="0.30" reflectance="0.02" />
+    <material name="bench_edge" rgba="0.16 0.18 0.21 1" specular="0.5" shininess="0.6" />
+    <material name="steel" rgba="0.38 0.41 0.46 1" specular="0.7" shininess="0.8" reflectance="0.15" />
+    <material name="dark_steel" rgba="0.20 0.22 0.26 1" specular="0.5" shininess="0.6" />
+    <material name="target_fill" rgba="0.10 0.62 0.95 0.30" specular="0.6" shininess="0.7" />
+    <material name="target_ring" rgba="0.20 0.78 1.0 1" emission="0.55" specular="0.8" shininess="0.9" />
+    <material name="zone_line" rgba="0.32 0.56 0.72 0.85" emission="0.10" />
+    <material name="cube_orange" rgba="0.97 0.33 0.09 1" specular="0.5" shininess="0.7" />
+    <material name="cube_idle" rgba="0.42 0.46 0.52 1" specular="0.4" shininess="0.5" />
+    <material name="bin" rgba="0.20 0.36 0.42 1" specular="0.4" shininess="0.5" />
+    <material name="amber" rgba="1.0 0.68 0.18 1" emission="0.65" />
+    <material name="cyan_glow" rgba="0.25 0.80 1.0 1" emission="0.70" />
+  </asset>
+  <worldbody>
+    <geom name="floor" type="plane" pos="0 0 -0.62" size="6 6 0.1" material="floor" contype="1" conaffinity="1" />
+
+    <!-- Bench: a real slab with a visible edge and legs, not a floating box. -->
+    <geom name="bench_top" type="box" pos="0.16 0.02 -0.035" size="0.46 0.40 0.035" material="bench"
+          contype="1" conaffinity="3" condim="3" friction="0.9 0.005 0.0001"
+          solref="0.004 1" solimp="0.97 0.995 0.001" />
+    <geom name="bench_lip_front" type="box" pos="0.16 -0.392 -0.036" size="0.462 0.012 0.038" material="bench_edge" contype="0" conaffinity="0" />
+    <geom name="bench_lip_back" type="box" pos="0.16 0.432 -0.036" size="0.462 0.012 0.038" material="bench_edge" contype="0" conaffinity="0" />
+    <geom name="leg_fl" type="cylinder" pos="-0.26 -0.36 -0.345" size="0.016 0.275" material="steel" contype="0" conaffinity="0" />
+    <geom name="leg_fr" type="cylinder" pos="0.58 -0.36 -0.345" size="0.016 0.275" material="steel" contype="0" conaffinity="0" />
+    <geom name="leg_bl" type="cylinder" pos="-0.26 0.4 -0.345" size="0.016 0.275" material="steel" contype="0" conaffinity="0" />
+    <geom name="leg_br" type="cylinder" pos="0.58 0.4 -0.345" size="0.016 0.275" material="steel" contype="0" conaffinity="0" />
+
+    <!-- Robot riser, so the arm reads as bolted to the bench. -->
+    <geom name="riser" type="box" pos="0 0 -0.004" size="0.055 0.055 0.004" material="dark_steel" contype="0" conaffinity="0" />
+
+    <!-- Task area markings: pick zone, place zone, and the scored target. -->
+    <geom name="zone_pick_a" type="box" pos="0.20 -0.075 0.0012" size="0.052 0.0012 0.0012" material="zone_line" contype="0" conaffinity="0" />
+    <geom name="zone_pick_b" type="box" pos="0.20 -0.075 0.0012" size="0.0012 0.052 0.0012" material="zone_line" contype="0" conaffinity="0" />
+    <geom name="target_pad" type="cylinder" pos="0.20 0.075 0.0016" size="0.055 0.0016" material="target_fill" contype="0" conaffinity="0" />
+    <geom name="target_ring_outer" type="cylinder" pos="0.20 0.075 0.0034" size="0.057 0.0011" material="target_ring" contype="0" conaffinity="0" />
+    <geom name="target_ring_inner" type="cylinder" pos="0.20 0.075 0.0042" size="0.030 0.0009" material="zone_line" contype="0" conaffinity="0" />
+
+    <!-- Parts queued for later attempts. Static scenery: they never enter the
+         task, and they sit outside the arm's path. -->
+    <geom name="queue_1" type="box" pos="0.40 -0.20 0.014" size="0.014 0.014 0.014" material="cube_idle" contype="0" conaffinity="0" />
+    <geom name="queue_2" type="box" pos="0.40 -0.155 0.014" size="0.014 0.014 0.014" material="cube_idle" contype="0" conaffinity="0" />
+    <geom name="queue_3" type="box" pos="0.40 -0.110 0.014" size="0.014 0.014 0.014" material="cube_idle" contype="0" conaffinity="0" />
+
+    <!-- Output bin the cell is feeding. -->
+    <geom name="bin_floor" type="box" pos="0.42 0.25 0.004" size="0.075 0.075 0.004" material="bin" contype="0" conaffinity="0" />
+    <geom name="bin_w1" type="box" pos="0.42 0.325 0.022" size="0.075 0.004 0.022" material="bin" contype="0" conaffinity="0" />
+    <geom name="bin_w2" type="box" pos="0.42 0.175 0.022" size="0.075 0.004 0.022" material="bin" contype="0" conaffinity="0" />
+    <geom name="bin_w3" type="box" pos="0.345 0.25 0.022" size="0.004 0.075 0.022" material="bin" contype="0" conaffinity="0" />
+    <geom name="bin_w4" type="box" pos="0.495 0.25 0.022" size="0.004 0.075 0.022" material="bin" contype="0" conaffinity="0" />
+
+    <!-- Camera mast: the fixed external observation camera. -->
+    <geom name="mast" type="cylinder" pos="-0.14 0.30 0.16" size="0.008 0.18" material="steel" contype="0" conaffinity="0" />
+    <geom name="mast_arm" type="box" pos="-0.055 0.30 0.335" size="0.085 0.006 0.006" material="steel" contype="0" conaffinity="0" />
+    <geom name="cam_body" type="box" pos="0.025 0.30 0.325" size="0.022 0.016 0.016" material="dark_steel" contype="0" conaffinity="0" />
+    <geom name="cam_lens" type="cylinder" pos="0.025 0.30 0.305" size="0.009 0.008" material="steel" contype="0" conaffinity="0" />
+    <geom name="cam_led" type="sphere" pos="0.048 0.30 0.332" size="0.0035" material="amber" contype="0" conaffinity="0" />
+
+    <!-- Status beacon, so the cell has one live-looking accent. -->
+    <geom name="beacon_post" type="cylinder" pos="-0.16 -0.24 0.05" size="0.006 0.05" material="steel" contype="0" conaffinity="0" />
+    <geom name="beacon_lamp" type="capsule" pos="-0.16 -0.24 0.115" size="0.016 0.014" material="cyan_glow" contype="0" conaffinity="0" />
+
+    <!-- The task object. An ordinary dynamic body: nothing writes its pose. -->
+    <body name="cube" pos="0.20 -0.075 0.014">
+      <freejoint name="cube" />
+      <geom name="cube_visual" type="box" size="0.014 0.014 0.014" mass="0.020" material="cube_orange"
+            contype="2" conaffinity="2" condim="4" friction="1.6 0.02 0.002"
+            solref="0.004 1" solimp="0.97 0.995 0.001" />
+    </body>
+
+    <light name="key" pos="0.30 -0.75 1.10" dir="-0.18 0.62 -0.86" directional="true"
+           diffuse="0.95 0.90 0.82" specular="0.45 0.44 0.42" castshadow="true" />
+    <light name="fill" pos="-0.65 0.20 0.70" dir="0.75 -0.10 -0.60" directional="true"
+           diffuse="0.26 0.32 0.42" specular="0.10 0.12 0.16" castshadow="false" />
+    <light name="rim" pos="0.75 0.65 0.60" dir="-0.62 -0.55 -0.48" directional="true"
+           diffuse="0.30 0.44 0.58" specular="0.22 0.30 0.40" castshadow="false" />
+    <light name="task" pos="0.20 0.00 0.55" dir="0 0 -1" diffuse="0.55 0.55 0.52"
+           specular="0.20 0.20 0.20" cutoff="42" exponent="14" castshadow="false" />
+  </worldbody>
+  <contact>
+    <!-- The cube is gripped by the two explicit jaw pads, which sit on the
+         faces of the published jaws that actually touch an object. The concave
+         printed jaw meshes stay collidable against the world but are excluded
+         from the cube: MuJoCo's mesh-mesh path drives the cube ~21 mm into
+         them during closure before the solver reacts, which reads on screen as
+         the gripper passing through the object. High friction stands for the
+         printed PLA surface; it is a material property, not a scripted hold. -->
+    <pair geom1="cube_visual" geom2="jaw_pad_fixed" condim="4" friction="2.0 2.0 0.02 0.002 0.002"
+          solref="0.002 1" solimp="0.995 0.9999 0.0001 0.5 2" />
+    <pair geom1="cube_visual" geom2="jaw_pad_moving" condim="4" friction="2.0 2.0 0.02 0.002 0.002"
+          solref="0.002 1" solimp="0.995 0.9999 0.0001 0.5 2" />
+  </contact>
+</mujoco>

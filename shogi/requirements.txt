@@ -1,0 +1,4 @@
+python-shogi==1.1.1
+opencv-python-headless==5.0.0.93
+
+pyserial==3.5

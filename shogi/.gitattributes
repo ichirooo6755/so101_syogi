@@ -1,0 +1,5 @@
+# STEP and STL are machine-generated CAD exchange formats. Preserve bytes and
+# avoid treating their internal whitespace as source-code formatting.
+*.step binary
+*.stp binary
+*.stl binary

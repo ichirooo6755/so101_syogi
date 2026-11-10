@@ -1,0 +1,3685 @@
+{
+  "scope": "Static IK and selected interpolated descents only using assumed dimensions, upstream-derived convex meshes, three IK seeds and a fixed downward approach. Arm riser/support, desk, neighboring pieces, cables, camera, remaining paths, real motor limits, load and real arm are not verified.",
+  "board_mm": [
+    360,
+    330,
+    12
+  ],
+  "board_axes": "ranks along robot-to-human X, files across Y",
+  "riser_definition": "base elevated above board bottom; riser geometry not modelled",
+  "grasp_height_above_board_mm": 10,
+  "results": [
+    {
+      "extension_mm": 100,
+      "focus_scan": [
+        {
+          "center_mm": [
+            250.0,
+            0.0
+          ],
+          "yaw_deg": 0.0,
+          "board_bottom_mm": -0.0,
+          "base_board_distance_mm": 5.36,
+          "closest_base_mesh": "base_so101_v2",
+          "base_board_clear": true,
+          "base_board_margin_5mm": true,
+          "ik_count": 6,
+          "clear_count": 6,
+          "total": 9,
+          "squares": [
+            {
+              "square": "9a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "5a",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.001271,
+                1.072532,
+                -0.974011,
+                1.472273,
+                -0.001168
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "9i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.272902,
+                0.266031,
+                1.039642,
+                0.265123,
+                -1.25443
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5i",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "1i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.269413,
+                0.264849,
+                1.043237,
+                0.262711,
+                1.250979
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.045776,
+                0.302671,
+                0.932666,
+                0.335455,
+                -1.028659
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.062803,
+                0.185248,
+                1.468585,
+                -0.083036,
+                1.632851
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.041927,
+                0.301514,
+                0.935936,
+                0.333341,
+                1.024878
+              ],
+              "worst_contact": null
+            }
+          ],
+          "arm_riser_mm": 0.0
+        },
+        {
+          "center_mm": [
+            250.0,
+            0.0
+          ],
+          "yaw_deg": 0.0,
+          "board_bottom_mm": -15.0,
+          "base_board_distance_mm": 5.69,
+          "closest_base_mesh": "base_so101_v2",
+          "base_board_clear": true,
+          "base_board_margin_5mm": true,
+          "ik_count": 6,
+          "clear_count": 6,
+          "total": 9,
+          "squares": [
+            {
+              "square": "9a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "5a",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.001271,
+                1.088752,
+                -0.902742,
+                1.384783,
+                -0.001172
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "9i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.272926,
+                0.375222,
+                1.090533,
+                0.105043,
+                -1.254538
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5i",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "1i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.269439,
+                0.374632,
+                1.094379,
+                0.101787,
+                1.251091
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.045777,
+                0.39712,
+                0.97767,
+                0.196003,
+                -1.028726
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.066292,
+                0.534891,
+                1.629973,
+                -0.594067,
+                -1.636804
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.041928,
+                0.396351,
+                0.981091,
+                0.19335,
+                1.024946
+              ],
+              "worst_contact": null
+            }
+          ],
+          "arm_riser_mm": 15.0
+        },
+        {
+          "center_mm": [
+            250.0,
+            0.0
+          ],
+          "yaw_deg": 0.0,
+          "board_bottom_mm": -30.0,
+          "base_board_distance_mm": 16.59,
+          "closest_base_mesh": "base_so101_v2",
+          "base_board_clear": true,
+          "base_board_margin_5mm": true,
+          "ik_count": 5,
+          "clear_count": 5,
+          "total": 9,
+          "squares": [
+            {
+              "square": "9a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "5a",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.001271,
+                1.114455,
+                -0.854576,
+                1.310915,
+                -0.001175
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "9i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.272931,
+                0.493915,
+                1.131386,
+                -0.054502,
+                -1.254649
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5i",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "1i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.269443,
+                0.494001,
+                1.135455,
+                -0.058657,
+                1.251202
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.045767,
+                0.49894,
+                1.013143,
+                0.058706,
+                -1.028794
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5h",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "1h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.041918,
+                0.498606,
+                1.016696,
+                0.055488,
+                1.025013
+              ],
+              "worst_contact": null
+            }
+          ],
+          "arm_riser_mm": 30.0
+        },
+        {
+          "center_mm": [
+            255.0,
+            0.0
+          ],
+          "yaw_deg": 0.0,
+          "board_bottom_mm": -0.0,
+          "base_board_distance_mm": 10.36,
+          "closest_base_mesh": "base_so101_v2",
+          "base_board_clear": true,
+          "base_board_margin_5mm": true,
+          "ik_count": 6,
+          "clear_count": 6,
+          "total": 9,
+          "squares": [
+            {
+              "square": "9a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "5a",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.001254,
+                1.142519,
+                -1.149102,
+                1.577377,
+                -0.001135
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "9i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.242083,
+                0.269394,
+                1.029429,
+                0.271971,
+                -1.223786
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5i",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "1i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.238535,
+                0.268224,
+                1.032993,
+                0.269579,
+                1.220282
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.020678,
+                0.308757,
+                0.915551,
+                0.346483,
+                -1.003721
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.005146,
+                0.18591,
+                1.474795,
+                -0.089908,
+                -0.005077
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.016816,
+                0.307605,
+                0.918778,
+                0.344408,
+                0.99993
+              ],
+              "worst_contact": null
+            }
+          ],
+          "arm_riser_mm": 0.0
+        },
+        {
+          "center_mm": [
+            255.0,
+            0.0
+          ],
+          "yaw_deg": 0.0,
+          "board_bottom_mm": -15.0,
+          "base_board_distance_mm": 10.65,
+          "closest_base_mesh": "base_so101_v2",
+          "base_board_clear": true,
+          "base_board_margin_5mm": true,
+          "ik_count": 6,
+          "clear_count": 6,
+          "total": 9,
+          "squares": [
+            {
+              "square": "9a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "5a",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.001254,
+                1.144592,
+                -1.043159,
+                1.469361,
+                -0.001145
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "9i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.242126,
+                0.376978,
+                1.079658,
+                0.114163,
+                -1.223912
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5i",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "1i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.238565,
+                0.376354,
+                1.083444,
+                0.111,
+                1.220395
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.020679,
+                0.401228,
+                0.959792,
+                0.209771,
+                -1.003786
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.059536,
+                0.467585,
+                1.562524,
+                -0.459311,
+                1.629867
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.016817,
+                0.400442,
+                0.96316,
+                0.207189,
+                0.999995
+              ],
+              "worst_contact": null
+            }
+          ],
+          "arm_riser_mm": 15.0
+        },
+        {
+          "center_mm": [
+            255.0,
+            0.0
+          ],
+          "yaw_deg": 0.0,
+          "board_bottom_mm": -30.0,
+          "base_board_distance_mm": 18.89,
+          "closest_base_mesh": "base_so101_v2",
+          "base_board_clear": true,
+          "base_board_margin_5mm": true,
+          "ik_count": 5,
+          "clear_count": 5,
+          "total": 9,
+          "squares": [
+            {
+              "square": "9a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "5a",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.001254,
+                1.163727,
+                -0.979874,
+                1.386941,
+                -0.001149
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "9i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.242131,
+                0.493783,
+                1.119882,
+                -0.042866,
+                -1.22402
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5i",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "1i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.238571,
+                0.493817,
+                1.123892,
+                -0.046911,
+                1.220505
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.02068,
+                0.500823,
+                0.994569,
+                0.0754,
+                -1.003862
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5h",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "1h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.016815,
+                0.500455,
+                0.998076,
+                0.07226,
+                1.000066
+              ],
+              "worst_contact": null
+            }
+          ],
+          "arm_riser_mm": 30.0
+        },
+        {
+          "center_mm": [
+            260.0,
+            0.0
+          ],
+          "yaw_deg": 0.0,
+          "board_bottom_mm": -0.0,
+          "base_board_distance_mm": 15.36,
+          "closest_base_mesh": "base_so101_v2",
+          "base_board_clear": true,
+          "base_board_margin_5mm": true,
+          "ik_count": 6,
+          "clear_count": 6,
+          "total": 9,
+          "squares": [
+            {
+              "square": "9a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "5a",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 1.435,
+              "angle_error_deg": 0.462,
+              "q_rad": [
+                -0.001237,
+                1.202855,
+                -1.298193,
+                1.658063,
+                -0.00095
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "9i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.211926,
+                0.27313,
+                1.018273,
+                0.27939,
+                -1.193803
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5i",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "1i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.208299,
+                0.271951,
+                1.021793,
+                0.277049,
+                1.190224
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.996332,
+                0.315159,
+                0.897677,
+                0.357956,
+                -0.979533
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.004876,
+                0.183351,
+                1.436433,
+                -0.048986,
+                -0.004809
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.992463,
+                0.314012,
+                0.900861,
+                0.355919,
+                0.975737
+              ],
+              "worst_contact": null
+            }
+          ],
+          "arm_riser_mm": 0.0
+        },
+        {
+          "center_mm": [
+            260.0,
+            0.0
+          ],
+          "yaw_deg": 0.0,
+          "board_bottom_mm": -15.0,
+          "base_board_distance_mm": 15.61,
+          "closest_base_mesh": "base_so101_v2",
+          "base_board_clear": true,
+          "base_board_margin_5mm": true,
+          "ik_count": 6,
+          "clear_count": 6,
+          "total": 9,
+          "squares": [
+            {
+              "square": "9a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "5a",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.086,
+              "angle_error_deg": 0.001,
+              "q_rad": [
+                -0.001237,
+                1.24514,
+                -1.298645,
+                1.624281,
+                -0.001088
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "9i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.211957,
+                0.37898,
+                1.06778,
+                0.124038,
+                -1.193915
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5i",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "1i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.208332,
+                0.378333,
+                1.071517,
+                0.120948,
+                1.190338
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.996333,
+                0.405654,
+                0.941162,
+                0.223975,
+                -0.979596
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.004876,
+                0.476465,
+                1.572813,
+                -0.47848,
+                -0.004825
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.992464,
+                0.404853,
+                0.944479,
+                0.22146,
+                0.9758
+              ],
+              "worst_contact": null
+            }
+          ],
+          "arm_riser_mm": 15.0
+        },
+        {
+          "center_mm": [
+            260.0,
+            0.0
+          ],
+          "yaw_deg": 0.0,
+          "board_bottom_mm": -30.0,
+          "base_board_distance_mm": 22.1,
+          "closest_base_mesh": "base_so101_v2",
+          "base_board_clear": true,
+          "base_board_margin_5mm": true,
+          "ik_count": 6,
+          "clear_count": 5,
+          "total": 9,
+          "squares": [
+            {
+              "square": "9a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "5a",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.001237,
+                1.2354,
+                -1.16259,
+                1.497983,
+                -0.001114
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "9i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.211967,
+                0.493818,
+                1.107368,
+                -0.030387,
+                -1.194024
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5i",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "1i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.208342,
+                0.493787,
+                1.111306,
+                -0.034294,
+                1.190448
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.996332,
+                0.503051,
+                0.975291,
+                0.092449,
+                -0.979666
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5h",
+              "ik": true,
+              "clear": false,
+              "position_error_mm": 0.013,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.05977,
+                0.774946,
+                1.641395,
+                -0.845543,
+                -1.630706
+              ],
+              "worst_contact": {
+                "depth_mm": 0.53,
+                "geoms": [
+                  "upper_arm_so101_v1",
+                  "wrist_roll_pitch_so101_v2"
+                ]
+              }
+            },
+            {
+              "square": "1h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.992463,
+                0.502635,
+                0.978723,
+                0.089433,
+                0.97587
+              ],
+              "worst_contact": null
+            }
+          ],
+          "arm_riser_mm": 30.0
+        }
+      ],
+      "full_board": [
+        {
+          "center_mm": [
+            250.0,
+            0.0
+          ],
+          "yaw_deg": 0.0,
+          "board_bottom_mm": -0.0,
+          "base_board_distance_mm": 5.36,
+          "closest_base_mesh": "base_so101_v2",
+          "base_board_clear": true,
+          "base_board_margin_5mm": true,
+          "ik_count": 76,
+          "clear_count": 74,
+          "total": 81,
+          "squares": [
+            {
+              "square": "9a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "8a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "7a",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.115,
+              "angle_error_deg": 0.045,
+              "q_rad": [
+                -0.199266,
+                1.195782,
+                -1.283841,
+                1.658063,
+                -0.192985
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "6a",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.10126,
+                1.09483,
+                -1.029532,
+                1.505496,
+                -0.098155
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5a",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.001271,
+                1.072532,
+                -0.974011,
+                1.472273,
+                -0.001168
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "4a",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.098738,
+                1.09412,
+                -1.027761,
+                1.504435,
+                0.095847
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "3a",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.067,
+              "angle_error_deg": 0.027,
+              "q_rad": [
+                0.196803,
+                1.195472,
+                -1.283201,
+                1.658063,
+                0.190827
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "2a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "1a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "9b",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.424657,
+                0.994855,
+                -0.782189,
+                1.358128,
+                -0.412385
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "8b",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.327267,
+                0.903492,
+                -0.559014,
+                1.226315,
+                -0.318013
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "7b",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.223012,
+                0.848147,
+                -0.424709,
+                1.147355,
+                -0.216792
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "6b",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.113611,
+                0.817229,
+                -0.349878,
+                1.103441,
+                -0.110454
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5b",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.001428,
+                0.807124,
+                -0.32544,
+                1.089109,
+                -0.001353
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "4b",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.110783,
+                0.816925,
+                -0.349141,
+                1.103009,
+                0.107778
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "3b",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.220266,
+                0.847509,
+                -0.423163,
+                1.146447,
+                0.214199
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "2b",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.324644,
+                0.902431,
+                -0.556434,
+                1.224796,
+                0.31555
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1b",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.422187,
+                0.993045,
+                -0.777746,
+                1.355494,
+                0.410088
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9c",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.476034,
+                0.786427,
+                -0.275418,
+                1.059784,
+                -0.463336
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "8c",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.369316,
+                0.721193,
+                -0.117863,
+                0.967462,
+                -0.359686
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "7c",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.25304,
+                0.676684,
+                -0.010301,
+                0.904409,
+                -0.246549
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "6c",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.129373,
+                0.650504,
+                0.053049,
+                0.867238,
+                -0.126078
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5c",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.001628,
+                0.641765,
+                0.074214,
+                0.854812,
+                -0.001562
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "4c",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.126158,
+                0.650241,
+                0.053686,
+                0.866864,
+                0.122996
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "3c",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.249944,
+                0.676151,
+                -0.009012,
+                0.903652,
+                0.243585
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "2c",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.366396,
+                0.720368,
+                -0.11587,
+                0.966294,
+                0.356899
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1c",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.473325,
+                0.785253,
+                -0.272582,
+                1.058122,
+                0.460763
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9d",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.540185,
+                0.644001,
+                0.068795,
+                0.857996,
+                -0.526894
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "8d",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.423028,
+                0.58426,
+                0.213896,
+                0.772636,
+                -0.412906
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "7d",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.292148,
+                0.541951,
+                0.31729,
+                0.71155,
+                -0.285304
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "6d",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.150176,
+                0.516515,
+                0.379821,
+                0.674454,
+                -0.146699
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5d",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.001894,
+                0.507937,
+                0.400982,
+                0.661872,
+                -0.001833
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "4d",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.146453,
+                0.516257,
+                0.380457,
+                0.674076,
+                0.143098
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "3d",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.288608,
+                0.541435,
+                0.318555,
+                0.710801,
+                0.281885
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "2d",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.419749,
+                0.583484,
+                0.215785,
+                0.771522,
+                0.409747
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1d",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.537204,
+                0.642948,
+                0.071344,
+                0.856499,
+                0.524033
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9e",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.621763,
+                0.530241,
+                0.346042,
+                0.694508,
+                -0.607752
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "8e",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.493549,
+                0.470816,
+                0.4931,
+                0.606874,
+                -0.482818
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "7e",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.344991,
+                0.427721,
+                0.601454,
+                0.541615,
+                -0.3377
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "6e",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.178866,
+                0.401417,
+                0.668578,
+                0.500795,
+                -0.175151
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5e",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.002263,
+                0.392479,
+                0.691604,
+                0.486708,
+                -0.002205
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "4e",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.174451,
+                0.401148,
+                0.66927,
+                0.500373,
+                0.170852
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "3e",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.340875,
+                0.427189,
+                0.602803,
+                0.540798,
+                0.333698
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "2e",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.489839,
+                0.470031,
+                0.495058,
+                0.605701,
+                0.479217
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1e",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.618484,
+                0.529206,
+                0.348586,
+                0.692999,
+                0.60458
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9f",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.727315,
+                0.436314,
+                0.579703,
+                0.554773,
+                -0.712439
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "8f",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.589065,
+                0.374815,
+                0.7375,
+                0.458477,
+                -0.577569
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "7f",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.419813,
+                0.329468,
+                0.85836,
+                0.382962,
+                -0.411936
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "6f",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.005,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.220881,
+                0.301552,
+                0.935757,
+                0.333479,
+                -0.216843
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5f",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.002,
+              "angle_error_deg": 0.001,
+              "q_rad": [
+                -0.002811,
+                0.292028,
+                0.96283,
+                0.315929,
+                -0.002753
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "4f",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.005,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.21547,
+                0.301265,
+                0.936569,
+                0.332955,
+                0.211546
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "3f",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.414936,
+                0.328903,
+                0.859898,
+                0.381989,
+                0.407168
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "2f",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.584849,
+                0.373992,
+                0.739652,
+                0.457148,
+                0.573456
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1f",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.723737,
+                0.435251,
+                0.582391,
+                0.553149,
+                0.708958
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9g",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.865497,
+                0.360132,
+                0.776121,
+                0.434538,
+                -0.849589
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "8g",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.722603,
+                0.295727,
+                0.952375,
+                0.322688,
+                -0.710128
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "7g",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.53224,
+                0.248391,
+                1.095,
+                0.227407,
+                -0.523549
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "6g",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.288021,
+                0.220451,
+                1.192058,
+                0.158289,
+                -0.283501
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5g",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.003708,
+                0.211483,
+                1.227543,
+                0.131771,
+                -0.003647
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "4g",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.281074,
+                0.220172,
+                1.19311,
+                0.157516,
+                0.276671
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "3g",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.526362,
+                0.247808,
+                1.096881,
+                0.226109,
+                0.517776
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "2g",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.717853,
+                0.29486,
+                0.954854,
+                0.321077,
+                0.705474
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1g",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.861683,
+                0.359021,
+                0.779061,
+                0.432709,
+                0.845861
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.045776,
+                0.302671,
+                0.932666,
+                0.335455,
+                -1.028659
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "8h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.913561,
+                0.236593,
+                1.134172,
+                0.200033,
+                -0.899801
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "7h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.713401,
+                0.193758,
+                1.313069,
+                0.063971,
+                -0.703476
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "6h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.410542,
+                0.184091,
+                1.454231,
+                -0.067524,
+                -0.405176
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.062803,
+                0.185248,
+                1.468585,
+                -0.083036,
+                1.632851
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "4h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.40102,
+                0.184201,
+                1.455944,
+                -0.069348,
+                0.395781
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "3h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.706337,
+                0.193342,
+                1.315608,
+                0.061848,
+                0.696512
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "2h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.908433,
+                0.235724,
+                1.137132,
+                0.197942,
+                0.894754
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.041927,
+                0.301514,
+                0.935936,
+                0.333341,
+                1.024878
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.272902,
+                0.266031,
+                1.039642,
+                0.265123,
+                -1.25443
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "8i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.182511,
+                0.202174,
+                1.268772,
+                0.099851,
+                -1.167048
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "7i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.021128,
+                0.191057,
+                1.506446,
+                -0.126706,
+                -1.009131
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "6i",
+              "ik": true,
+              "clear": false,
+              "position_error_mm": 3.122,
+              "angle_error_deg": 0.492,
+              "q_rad": [
+                -0.694054,
+                0.27544,
+                1.69,
+                -0.403233,
+                -2.2594
+              ],
+              "worst_contact": {
+                "depth_mm": 19.99,
+                "geoms": [
+                  "motor_holder_so101_base_v1",
+                  "gripper_jaw_moving"
+                ]
+              }
+            },
+            {
+              "square": "5i",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "4i",
+              "ik": true,
+              "clear": false,
+              "position_error_mm": 3.447,
+              "angle_error_deg": 0.543,
+              "q_rad": [
+                0.69427,
+                0.271038,
+                1.69,
+                -0.399726,
+                2.259709
+              ],
+              "worst_contact": {
+                "depth_mm": 19.22,
+                "geoms": [
+                  "motor_holder_so101_base_v1",
+                  "gripper_jaw_moving"
+                ]
+              }
+            },
+            {
+              "square": "3i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.013429,
+                0.191945,
+                1.510504,
+                -0.131651,
+                1.001507
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "2i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.177612,
+                0.201425,
+                1.272327,
+                0.097045,
+                1.162199
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.269413,
+                0.264849,
+                1.043237,
+                0.262711,
+                1.250979
+              ],
+              "worst_contact": null
+            }
+          ],
+          "arm_riser_mm": 0.0,
+          "focus_descent": [
+            {
+              "square": "9a",
+              "checked": false,
+              "reason": "grasp_pose_not_clear"
+            },
+            {
+              "square": "5a",
+              "checked": true,
+              "sample_count": 7,
+              "clear": true,
+              "max_xy_deviation_mm": 0.58,
+              "pregrasp_q_rad": [
+                -0.001271,
+                1.075978,
+                -1.166878,
+                1.658063,
+                -0.001119
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1a",
+              "checked": false,
+              "reason": "grasp_pose_not_clear"
+            },
+            {
+              "square": "9h",
+              "checked": true,
+              "sample_count": 8,
+              "clear": true,
+              "max_xy_deviation_mm": 0.58,
+              "pregrasp_q_rad": [
+                -1.045785,
+                0.166059,
+                0.839393,
+                0.565341,
+                -1.028636
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5h",
+              "checked": true,
+              "sample_count": 16,
+              "clear": true,
+              "max_xy_deviation_mm": 1.36,
+              "pregrasp_q_rad": [
+                0.062803,
+                -0.131767,
+                1.273615,
+                0.428948,
+                1.632769
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1h",
+              "checked": true,
+              "sample_count": 8,
+              "clear": true,
+              "max_xy_deviation_mm": 0.59,
+              "pregrasp_q_rad": [
+                1.041937,
+                0.164401,
+                0.842409,
+                0.563984,
+                1.024857
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9i",
+              "checked": true,
+              "sample_count": 9,
+              "clear": true,
+              "max_xy_deviation_mm": 0.67,
+              "pregrasp_q_rad": [
+                -1.272929,
+                0.111,
+                0.936783,
+                0.52301,
+                -1.254419
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5i",
+              "checked": false,
+              "reason": "grasp_pose_not_clear"
+            },
+            {
+              "square": "1i",
+              "checked": true,
+              "sample_count": 9,
+              "clear": true,
+              "max_xy_deviation_mm": 0.67,
+              "pregrasp_q_rad": [
+                1.269441,
+                0.10912,
+                0.940008,
+                0.521666,
+                1.25097
+              ],
+              "worst_contact": null
+            }
+          ]
+        },
+        {
+          "center_mm": [
+            250.0,
+            0.0
+          ],
+          "yaw_deg": 0.0,
+          "board_bottom_mm": -15.0,
+          "base_board_distance_mm": 5.69,
+          "closest_base_mesh": "base_so101_v2",
+          "base_board_clear": true,
+          "base_board_margin_5mm": true,
+          "ik_count": 74,
+          "clear_count": 74,
+          "total": 81,
+          "squares": [
+            {
+              "square": "9a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "8a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "7a",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.199268,
+                1.179904,
+                -1.132445,
+                1.523335,
+                -0.193146
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "6a",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.10126,
+                1.107573,
+                -0.949978,
+                1.413199,
+                -0.098175
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5a",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.001271,
+                1.088752,
+                -0.902742,
+                1.384783,
+                -0.001172
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "4a",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.098738,
+                1.106988,
+                -0.948509,
+                1.412315,
+                0.095856
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "3a",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.196805,
+                1.178001,
+                -1.127622,
+                1.520415,
+                0.190916
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "2a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "1a",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "9b",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.424657,
+                1.019419,
+                -0.729294,
+                1.280669,
+                -0.412419
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "8b",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.327267,
+                0.934402,
+                -0.517158,
+                1.15355,
+                -0.318033
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "7b",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.223012,
+                0.88222,
+                -0.3868,
+                1.075373,
+                -0.216804
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "6b",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.113611,
+                0.852993,
+                -0.3136,
+                1.0314,
+                -0.110461
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5b",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.001428,
+                0.843437,
+                -0.289625,
+                1.01698,
+                -0.001353
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "4b",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.110783,
+                0.852705,
+                -0.312877,
+                1.030965,
+                0.107783
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "3b",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.220266,
+                0.881617,
+                -0.385291,
+                1.074467,
+                0.21421
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "2b",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.324645,
+                0.933396,
+                -0.514645,
+                1.152042,
+                0.315568
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1b",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.422188,
+                1.017765,
+                -0.725165,
+                1.278194,
+                0.410119
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9c",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.476035,
+                0.823869,
+                -0.240453,
+                0.987376,
+                -0.463361
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "8c",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.369316,
+                0.762301,
+                -0.08483,
+                0.893321,
+                -0.359703
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "7c",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.25304,
+                0.720492,
+                0.021939,
+                0.82836,
+                -0.246561
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "6c",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.129373,
+                0.696008,
+                0.085022,
+                0.789761,
+                -0.126085
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5c",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.001628,
+                0.687858,
+                0.106128,
+                0.776806,
+                -0.001563
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "4c",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.126159,
+                0.695763,
+                0.085657,
+                0.789371,
+                0.123001
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "3c",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.249944,
+                0.719992,
+                0.023222,
+                0.827577,
+                0.243596
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "2c",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.366397,
+                0.761524,
+                -0.082855,
+                0.892123,
+                0.356917
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1c",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.473326,
+                0.822759,
+                -0.237661,
+                0.985694,
+                0.460787
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9d",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.540185,
+                0.689937,
+                0.100744,
+                0.78011,
+                -0.526921
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "8d",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.423028,
+                0.634578,
+                0.245769,
+                0.690444,
+                -0.412927
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "7d",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.292148,
+                0.595871,
+                0.34954,
+                0.62538,
+                -0.285318
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "6d",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.150176,
+                0.572865,
+                0.412475,
+                0.585451,
+                -0.146706
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5d",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.001894,
+                0.565158,
+                0.433804,
+                0.571828,
+                -0.001833
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "4d",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.146454,
+                0.572632,
+                0.413116,
+                0.585042,
+                0.143105
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "3d",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.288608,
+                0.595403,
+                0.350811,
+                0.624577,
+                0.281899
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "2d",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.41975,
+                0.633864,
+                0.247663,
+                0.689264,
+                0.409767
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1d",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.537204,
+                0.688956,
+                0.103286,
+                0.778549,
+                0.524059
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9e",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.621764,
+                0.585252,
+                0.378459,
+                0.607079,
+                -0.607783
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "8e",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.49355,
+                0.532172,
+                0.526858,
+                0.511761,
+                -0.482843
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "7e",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.344992,
+                0.494797,
+                0.636787,
+                0.439205,
+                -0.337718
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "6e",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.178866,
+                0.472629,
+                0.705191,
+                0.392971,
+                -0.17516
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5e",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.002263,
+                0.465234,
+                0.728719,
+                0.376838,
+                -0.002205
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "4e",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.174451,
+                0.472405,
+                0.705898,
+                0.392488,
+                0.170861
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "3e",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.340876,
+                0.494343,
+                0.638159,
+                0.438287,
+                0.333715
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "2e",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.489839,
+                0.531481,
+                0.528839,
+                0.51047,
+                0.479242
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1e",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.618485,
+                0.584316,
+                0.38102,
+                0.605455,
+                0.604612
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9f",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.727315,
+                0.502154,
+                0.614656,
+                0.453981,
+                -0.712478
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "8f",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.589065,
+                0.450866,
+                0.775723,
+                0.344202,
+                -0.577602
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "7f",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.419814,
+                0.415904,
+                0.900308,
+                0.254579,
+                -0.41196
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "6f",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.005,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.220878,
+                0.396326,
+                0.980863,
+                0.193599,
+                -0.216853
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5f",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.002811,
+                0.390174,
+                1.009245,
+                0.171376,
+                -0.002753
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "4f",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.005,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.215467,
+                0.396135,
+                0.981711,
+                0.192942,
+                0.211555
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "3f",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.414937,
+                0.415491,
+                0.901902,
+                0.253398,
+                0.407191
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "2f",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.58485,
+                0.450205,
+                0.777931,
+                0.342656,
+                0.573488
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1f",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.723737,
+                0.501242,
+                0.617405,
+                0.452143,
+                0.708996
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9g",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.865498,
+                0.439204,
+                0.81538,
+                0.316207,
+                -0.84964
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "8g",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.722586,
+                0.392552,
+                0.998314,
+                0.179922,
+                -0.710156
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "7g",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.532244,
+                0.367303,
+                1.149931,
+                0.053565,
+                -0.523591
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "6g",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.288023,
+                0.361743,
+                1.256561,
+                -0.047506,
+                -0.283528
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5g",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.003708,
+                0.363406,
+                1.296712,
+                -0.08932,
+                -0.00365
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "4g",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.281075,
+                0.361768,
+                1.25775,
+                -0.04872,
+                0.276694
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "3g",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.526366,
+                0.367094,
+                1.151975,
+                0.051729,
+                0.517817
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "2g",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.007,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.717837,
+                0.391992,
+                1.000911,
+                0.177885,
+                0.705501
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1g",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.861685,
+                0.438333,
+                0.818406,
+                0.314052,
+                0.845912
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.045777,
+                0.39712,
+                0.97767,
+                0.196003,
+                -1.028726
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "8h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.913565,
+                0.363583,
+                1.192517,
+                0.014698,
+                -0.899873
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "7h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.713405,
+                0.380295,
+                1.397854,
+                -0.207351,
+                -0.703569
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "6h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.410553,
+                0.509911,
+                1.60739,
+                -0.546503,
+                -0.40538
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.066292,
+                0.534891,
+                1.629973,
+                -0.594067,
+                -1.636804
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "4h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.40103,
+                0.513822,
+                1.611082,
+                -0.554107,
+                0.39595
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "3h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.70634,
+                0.38118,
+                1.400993,
+                -0.211376,
+                0.6966
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "2h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.908437,
+                0.36337,
+                1.195757,
+                0.011671,
+                0.894826
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1h",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.041928,
+                0.396351,
+                0.981091,
+                0.19335,
+                1.024946
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.272926,
+                0.375222,
+                1.090533,
+                0.105043,
+                -1.254538
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "8i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.009,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -1.182513,
+                0.368841,
+                1.34451,
+                -0.142554,
+                -1.167155
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "7i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                -0.997248,
+                0.487006,
+                1.58436,
+                -0.500568,
+                -2.557968
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "6i",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "5i",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "4i",
+              "ik": false,
+              "clear": false
+            },
+            {
+              "square": "3i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                0.998566,
+                0.491339,
+                1.588921,
+                -0.509462,
+                2.559193
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "2i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.01,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.177614,
+                0.369521,
+                1.348711,
+                -0.147434,
+                1.162307
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1i",
+              "ik": true,
+              "clear": true,
+              "position_error_mm": 0.008,
+              "angle_error_deg": 0.0,
+              "q_rad": [
+                1.269439,
+                0.374632,
+                1.094379,
+                0.101787,
+                1.251091
+              ],
+              "worst_contact": null
+            }
+          ],
+          "arm_riser_mm": 15.0,
+          "focus_descent": [
+            {
+              "square": "9a",
+              "checked": false,
+              "reason": "grasp_pose_not_clear"
+            },
+            {
+              "square": "5a",
+              "checked": true,
+              "sample_count": 6,
+              "clear": true,
+              "max_xy_deviation_mm": 0.4,
+              "pregrasp_q_rad": [
+                -0.001271,
+                1.069468,
+                -1.040517,
+                1.541843,
+                -0.001161
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1a",
+              "checked": false,
+              "reason": "grasp_pose_not_clear"
+            },
+            {
+              "square": "9h",
+              "checked": true,
+              "sample_count": 8,
+              "clear": true,
+              "max_xy_deviation_mm": 0.57,
+              "pregrasp_q_rad": [
+                -1.045786,
+                0.244701,
+                0.897901,
+                0.428192,
+                -1.028696
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5h",
+              "checked": true,
+              "sample_count": 23,
+              "clear": true,
+              "max_xy_deviation_mm": 1.09,
+              "pregrasp_q_rad": [
+                -0.066298,
+                0.035783,
+                1.382399,
+                0.152613,
+                -1.635997
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "1h",
+              "checked": true,
+              "sample_count": 8,
+              "clear": true,
+              "max_xy_deviation_mm": 0.57,
+              "pregrasp_q_rad": [
+                1.041938,
+                0.243321,
+                0.90107,
+                0.426402,
+                1.024918
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "9i",
+              "checked": true,
+              "sample_count": 9,
+              "clear": true,
+              "max_xy_deviation_mm": 0.66,
+              "pregrasp_q_rad": [
+                -1.27293,
+                0.199802,
+                1.001006,
+                0.369986,
+                -1.254489
+              ],
+              "worst_contact": null
+            },
+            {
+              "square": "5i",
+              "checked": false,
+              "reason": "grasp_pose_not_clear"
+            },
+            {
+              "square": "1i",
+              "checked": true,
+              "sample_count": 9,
+              "clear": true,
+              "max_xy_deviation_mm": 0.66,
+              "pregrasp_q_rad": [
+                1.269442,
+                0.198305,
+                1.004453,
+                0.368036,
+                1.251042
+              ],
+              "worst_contact": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

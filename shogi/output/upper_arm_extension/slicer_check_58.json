@@ -1,0 +1,17 @@
+{
+  "returncode": 0,
+  "hardware_printed": false,
+  "printer_connected": false,
+  "machine": "Bambu Lab A1 mini, 0.4 mm nozzle",
+  "material": "Generic PLA",
+  "layer_mm": 0.2,
+  "walls": 4,
+  "infill_percent": 25,
+  "support": "organic, build plate only",
+  "brim": "none",
+  "notes": "Slicing only; support removal, strength and assembly remain untested.",
+  "outside": "false",
+  "support_used": "true",
+  "estimated_seconds": "15793",
+  "estimated_grams": "103.08"
+}

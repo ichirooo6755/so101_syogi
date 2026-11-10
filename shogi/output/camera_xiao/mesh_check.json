@@ -1,0 +1,41 @@
+{
+  "01_base_xiao.stl": {
+    "watertight": true,
+    "winding_consistent": true,
+    "components": 1,
+    "volume_mm3": 5582.801,
+    "size_mm": [
+      22.3,
+      17.94,
+      29.0
+    ],
+    "min_z_mm": 0.0,
+    "triangles": 2592
+  },
+  "02_top_xiao.stl": {
+    "watertight": true,
+    "winding_consistent": true,
+    "components": 1,
+    "volume_mm3": 4846.733,
+    "size_mm": [
+      34.0,
+      33.9,
+      33.76
+    ],
+    "min_z_mm": 0.0,
+    "triangles": 10804
+  },
+  "03_pcb_keeper.stl": {
+    "watertight": true,
+    "winding_consistent": true,
+    "components": 1,
+    "volume_mm3": 215.915,
+    "size_mm": [
+      24.2,
+      5.3,
+      1.8
+    ],
+    "min_z_mm": 0.0,
+    "triangles": 1284
+  }
+}

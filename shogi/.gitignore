@@ -1,0 +1,17 @@
+.DS_Store
+.venv*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+build/
+vendor/
+simulation/runs/
+simulation/model/shogi_scene_*.xml
+app/follower_offsets.json
+firmware/ShogiCamera/wifi_config.h
+output/firmware_xiao/
+output/xiao_camera_firmware.zip
+output/xiao_mount_package.zip
+output/camera_xiao/slice/
+output/upper_arm_extension/slice_*/
+*.log
