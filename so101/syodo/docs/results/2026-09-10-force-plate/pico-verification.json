@@ -1,0 +1,65 @@
+{
+  "port": "/dev/cu.usbmodem1101",
+  "source": "physical_pico_usb",
+  "samples": 20,
+  "all_four_ready_samples": 0,
+  "hx711_ready_last": [
+    false,
+    false,
+    false,
+    false
+  ],
+  "clock_sync": {
+    "method": "usb_round_trip_midpoint",
+    "boot_id": "690254e524c9f9b0",
+    "device_time_s": 7.753259,
+    "host_sent_s": 369097.065389833,
+    "host_received_s": 369097.071492375,
+    "offset_s": 369089.315182104,
+    "uncertainty_s": 0.00305127099272795,
+    "attempts": [
+      {
+        "device_time_s": 7.728639,
+        "host_sent_s": 369097.040521083,
+        "host_received_s": 369097.046939583,
+        "offset_s": 369089.315091333,
+        "uncertainty_s": 0.003209249989595264
+      },
+      {
+        "device_time_s": 7.734899,
+        "host_sent_s": 369097.046952083,
+        "host_received_s": 369097.053116125,
+        "offset_s": 369089.31513510406,
+        "uncertainty_s": 0.0030820209940429777
+      },
+      {
+        "device_time_s": 7.74107,
+        "host_sent_s": 369097.053121541,
+        "host_received_s": 369097.059232583,
+        "offset_s": 369089.315107062,
+        "uncertainty_s": 0.0030555209959857166
+      },
+      {
+        "device_time_s": 7.747142,
+        "host_sent_s": 369097.059238875,
+        "host_received_s": 369097.065381458,
+        "offset_s": 369089.3151681665,
+        "uncertainty_s": 0.003071291488595307
+      },
+      {
+        "device_time_s": 7.753259,
+        "host_sent_s": 369097.065389833,
+        "host_received_s": 369097.071492375,
+        "offset_s": 369089.315182104,
+        "uncertainty_s": 0.00305127099272795
+      }
+    ]
+  },
+  "raw_sha256": "ae030c3888fdb256a50c9d2ad212e892715542d97dc61dbc6276de1d42ec21f7",
+  "firmware_sha256": {
+    "main.py": "90191661f9edb540edeb4c95dac7979e4db106496af4136ed13000d250b6fa1d",
+    "hx711.py": "17071b0710bf4d3f110d001247dc270a6bba42978678cf27147306d4df2b627d"
+  },
+  "load_calibration_completed": false,
+  "robot_moved": false
+}

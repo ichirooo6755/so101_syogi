@@ -1,0 +1,125 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "file": "source_cad/01_bolted_mount_V8_editable.f3d",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 3.456079866737127e-11,
+      "size_mm": [
+        44.577500390360086,
+        35.12480363843195,
+        27.098927395636476
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/01_bolted_mount_V8.step",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 1.0368239600211382e-10,
+      "size_mm": [
+        44.5775003903601,
+        27.0989273956365,
+        35.1248036384319
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/02_slot_backing_V8_editable.f3d",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 4.547473508864641e-13,
+      "size_mm": [
+        21.500000000000004,
+        9.549999999999997,
+        23.0
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/02_slot_backing_V8.step",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 1.5916157281026244e-12,
+      "size_mm": [
+        21.5,
+        23.000000000000004,
+        9.55
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/03_XIAO_header_tray_V8_editable.f3d",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 1.77351466845721e-11,
+      "size_mm": [
+        37.03547045961105,
+        31.356892737972217,
+        33.85868808001497
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/03_XIAO_header_tray_V8.step",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 9.094947017729282e-13,
+      "size_mm": [
+        34.8,
+        9.1,
+        23.6
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/04_HX711_perf_stack_V8_editable.f3d",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 3.092281986027956e-11,
+      "size_mm": [
+        49.95156733051715,
+        49.21033805492617,
+        44.76857984942949
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/04_HX711_perf_stack_V8.step",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 1.000444171950221e-11,
+      "size_mm": [
+        40.4,
+        29.65,
+        31.74
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/05_bolted_end_plate_V8_editable.f3d",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 8.640199666842818e-12,
+      "size_mm": [
+        27.09589527237169,
+        31.245436725287483,
+        38.4957674828067
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/05_bolted_end_plate_V8.step",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 2.0463630789890885e-12,
+      "size_mm": [
+        40.4,
+        29.000000000000004,
+        6.94000000000004
+      ],
+      "reopened_in_Fusion": true
+    }
+  ]
+}

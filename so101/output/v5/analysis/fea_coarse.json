@@ -1,0 +1,386 @@
+{
+  "method": "Small-strain, isotropic, first-order tetrahedral linear elasticity",
+  "not_a_prediction_of_electrical_readout": true,
+  "source_geometry_file": "geometry_audit.json",
+  "mesh": {
+    "labels": [
+      "sensor",
+      "carrier",
+      "cartridge",
+      "base"
+    ],
+    "cad_volumes_mm3": [
+      1844.3186979165455,
+      6573.7249355018075,
+      6846.800123811135,
+      29688.678172181248
+    ],
+    "global_size_mm": 2.5,
+    "sensor_size_mm": 0.6,
+    "nodes": 36634,
+    "tetrahedra": 152965,
+    "minimum_scaled_jacobian": 0.0088874229940697,
+    "connected_components": 1,
+    "material_counts": {
+      "sensor": 53661,
+      "carrier": 15233,
+      "cartridge": 7407,
+      "base": 76664
+    },
+    "include_base": true
+  },
+  "DOF": 109902,
+  "fixed_nodes": 935,
+  "glue_load_nodes": 208,
+  "cases": [
+    {
+      "case": "normal_6N",
+      "printed_E_MPa": 1500.0,
+      "force_N": [
+        0.0,
+        0.0,
+        6.0
+      ],
+      "load_surface": "brush butt stop",
+      "additional_torque_Nmm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "assumed_brush_tip_mm": [
+        78.0,
+        2.762946202,
+        -52.0
+      ],
+      "gauge_reference_mm": [
+        78.0,
+        15.96294620236,
+        42.5
+      ],
+      "applied_resultant_N_Nmm": [
+        0.0,
+        0.0,
+        6.0,
+        -79.20000000216,
+        0.0,
+        0.0
+      ],
+      "fixed_reaction_N": [
+        -1.7151513933069684e-11,
+        -9.41045019686726e-11,
+        -5.999999998093374
+      ],
+      "fixed_reaction_moment_Nmm": [
+        79.19999998180509,
+        1.1347580652909528e-09,
+        1.2317311615106519e-09
+      ],
+      "sensor_cut_force_N": [
+        -3.582818763891993e-11,
+        -5.4975246577271264e-11,
+        -5.999999998226399
+      ],
+      "sensor_cut_moment_Nmm": [
+        79.19999997965095,
+        2.323841633011803e-09,
+        1.1065049154712625e-09
+      ],
+      "equilibrium_error_N": 1.90902394285743e-09,
+      "free_DOF_relative_residual": 2.7090451703523654e-09,
+      "max_displacement_mm": 0.5033019551879518,
+      "brush_stop_mean_displacement_mm": [
+        0.003680818995576373,
+        -0.07329460165312987,
+        0.29878179858637927
+      ],
+      "parts": {
+        "sensor": {
+          "max_displacement_mm": 0.36275835484001295,
+          "max_von_mises_MPa": 19.355358834073623,
+          "p95_von_mises_MPa": 3.000327565931294
+        },
+        "carrier": {
+          "max_displacement_mm": 0.49387146126256526,
+          "max_von_mises_MPa": 0.5249241817947334,
+          "p95_von_mises_MPa": 0.1375102821079013
+        },
+        "cartridge": {
+          "max_displacement_mm": 0.5033019551879518,
+          "max_von_mises_MPa": 0.1440227388995782,
+          "p95_von_mises_MPa": 0.06920732810686142
+        },
+        "base": {
+          "max_displacement_mm": 0.2036340728465345,
+          "max_von_mises_MPa": 6.465365742516576,
+          "p95_von_mises_MPa": 0.422976839727476
+        }
+      },
+      "sensor_gauge_p95_von_mises_MPa": 8.149618925027967,
+      "max_printed_displacement_bound_mm": 0.5033019551879518,
+      "strain_energy_Nmm": 0.8972014594785673,
+      "boundary_condition_note": "Ideal bonded contacts; both servo horn mating faces clamped; base compliance included; no bolt slip, glue creep, print anisotropy or electrical gauges"
+    },
+    {
+      "case": "normal_6N_side_X_0p5N",
+      "printed_E_MPa": 1500.0,
+      "force_N": [
+        0.5,
+        0.0,
+        6.0
+      ],
+      "load_surface": "butt stop plus bonded sleeve bore",
+      "additional_torque_Nmm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "assumed_brush_tip_mm": [
+        78.0,
+        2.762946202,
+        -52.0
+      ],
+      "gauge_reference_mm": [
+        78.0,
+        15.96294620236,
+        42.5
+      ],
+      "applied_resultant_N_Nmm": [
+        0.5,
+        0.0,
+        6.0,
+        -79.20000000216,
+        -47.25,
+        6.60000000018
+      ],
+      "fixed_reaction_N": [
+        -0.5000000000394058,
+        -1.5381731999219994e-10,
+        -5.9999999979743475
+      ],
+      "fixed_reaction_moment_Nmm": [
+        79.19999998114625,
+        47.25000000131135,
+        -6.599999998899408
+      ],
+      "sensor_cut_force_N": [
+        -0.500000000047005,
+        -1.3344297888906453e-10,
+        -5.999999998161288
+      ],
+      "sensor_cut_moment_Nmm": [
+        79.19999997830404,
+        47.25000000283578,
+        -6.599999999201746
+      ],
+      "equilibrium_error_N": 2.0318663284946143e-09,
+      "free_DOF_relative_residual": 2.72282428821905e-09,
+      "max_displacement_mm": 0.5370060842181025,
+      "brush_stop_mean_displacement_mm": [
+        0.027592127511153797,
+        -0.05664569848662434,
+        0.31815185807599666
+      ],
+      "parts": {
+        "sensor": {
+          "max_displacement_mm": 0.3858488631721039,
+          "max_von_mises_MPa": 22.59072928934453,
+          "p95_von_mises_MPa": 3.6866500339859813
+        },
+        "carrier": {
+          "max_displacement_mm": 0.5254942387897718,
+          "max_von_mises_MPa": 0.8792442610027562,
+          "p95_von_mises_MPa": 0.20888914559826793
+        },
+        "cartridge": {
+          "max_displacement_mm": 0.5370060842181025,
+          "max_von_mises_MPa": 0.19457131832872548,
+          "p95_von_mises_MPa": 0.0748851529921256
+        },
+        "base": {
+          "max_displacement_mm": 0.2241124628864367,
+          "max_von_mises_MPa": 6.0695790518458885,
+          "p95_von_mises_MPa": 0.47263286498866713
+        }
+      },
+      "sensor_gauge_p95_von_mises_MPa": 8.956145285675431,
+      "max_printed_displacement_bound_mm": 0.5370060842181025,
+      "strain_energy_Nmm": 1.0638917635957799,
+      "boundary_condition_note": "Ideal bonded contacts; both servo horn mating faces clamped; base compliance included; no bolt slip, glue creep, print anisotropy or electrical gauges"
+    },
+    {
+      "case": "normal_6N_side_Y_0p5N",
+      "printed_E_MPa": 1500.0,
+      "force_N": [
+        0.0,
+        0.5,
+        6.0
+      ],
+      "load_surface": "butt stop plus bonded sleeve bore",
+      "additional_torque_Nmm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "assumed_brush_tip_mm": [
+        78.0,
+        2.762946202,
+        -52.0
+      ],
+      "gauge_reference_mm": [
+        78.0,
+        15.96294620236,
+        42.5
+      ],
+      "applied_resultant_N_Nmm": [
+        0.0,
+        0.5,
+        6.0,
+        -31.950000002159996,
+        0.0,
+        0.0
+      ],
+      "fixed_reaction_N": [
+        -6.718400662186763e-11,
+        -0.5000000001904855,
+        -5.999999998391405
+      ],
+      "fixed_reaction_moment_Nmm": [
+        31.949999986064498,
+        6.353699788519407e-10,
+        1.5080612314477548e-09
+      ],
+      "sensor_cut_force_N": [
+        -5.568894824448112e-11,
+        -0.5000000001583135,
+        -5.999999998590825
+      ],
+      "sensor_cut_moment_Nmm": [
+        31.949999983432246,
+        2.2490551192244634e-09,
+        7.515383870781989e-10
+      ],
+      "equilibrium_error_N": 1.621226822230274e-09,
+      "free_DOF_relative_residual": 2.220057435374153e-09,
+      "max_displacement_mm": 0.3737794871225396,
+      "brush_stop_mean_displacement_mm": [
+        0.022450010595919903,
+        -0.007681292632917141,
+        0.25403563867583434
+      ],
+      "parts": {
+        "sensor": {
+          "max_displacement_mm": 0.2984488845035219,
+          "max_von_mises_MPa": 19.16795243513406,
+          "p95_von_mises_MPa": 2.4948259961704995
+        },
+        "carrier": {
+          "max_displacement_mm": 0.3686056740214087,
+          "max_von_mises_MPa": 0.8798786863040787,
+          "p95_von_mises_MPa": 0.21444353740084687
+        },
+        "cartridge": {
+          "max_displacement_mm": 0.3737794871225396,
+          "max_von_mises_MPa": 0.2100115268035144,
+          "p95_von_mises_MPa": 0.07328157394821941
+        },
+        "base": {
+          "max_displacement_mm": 0.19727367998904757,
+          "max_von_mises_MPa": 4.8036004129872785,
+          "p95_von_mises_MPa": 0.3636349037196753
+        }
+      },
+      "sensor_gauge_p95_von_mises_MPa": 6.967895673754769,
+      "max_printed_displacement_bound_mm": 0.3737794871225396,
+      "strain_energy_Nmm": 0.6933548959204682,
+      "boundary_condition_note": "Ideal bonded contacts; both servo horn mating faces clamped; base compliance included; no bolt slip, glue creep, print anisotropy or electrical gauges"
+    },
+    {
+      "case": "normal_6N_twist_Z_10Nmm",
+      "printed_E_MPa": 1500.0,
+      "force_N": [
+        0.0,
+        0.0,
+        6.0
+      ],
+      "load_surface": "brush butt stop",
+      "additional_torque_Nmm": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "assumed_brush_tip_mm": [
+        78.0,
+        2.762946202,
+        -52.0
+      ],
+      "gauge_reference_mm": [
+        78.0,
+        15.96294620236,
+        42.5
+      ],
+      "applied_resultant_N_Nmm": [
+        0.0,
+        0.0,
+        6.0,
+        -79.20000000216,
+        0.0,
+        10.0
+      ],
+      "fixed_reaction_N": [
+        -2.486316447863901e-11,
+        -1.3869363990615113e-10,
+        -5.9999999981047925
+      ],
+      "fixed_reaction_moment_Nmm": [
+        79.19999998208837,
+        1.0441922881909704e-09,
+        -9.999999998896598
+      ],
+      "sensor_cut_force_N": [
+        -2.5747164816847246e-11,
+        -1.089017764854816e-10,
+        -5.999999998217296
+      ],
+      "sensor_cut_moment_Nmm": [
+        79.1999999797971,
+        2.4324641051398643e-09,
+        -9.999999999078714
+      ],
+      "equilibrium_error_N": 1.9004383038747956e-09,
+      "free_DOF_relative_residual": 2.62209497194855e-09,
+      "max_displacement_mm": 0.4995464842646742,
+      "brush_stop_mean_displacement_mm": [
+        0.013615407772844647,
+        -0.06334004817317176,
+        0.298333549613096
+      ],
+      "parts": {
+        "sensor": {
+          "max_displacement_mm": 0.3611597758681667,
+          "max_von_mises_MPa": 19.475530376569676,
+          "p95_von_mises_MPa": 2.9891231393022912
+        },
+        "carrier": {
+          "max_displacement_mm": 0.49021682525969407,
+          "max_von_mises_MPa": 0.518082900187926,
+          "p95_von_mises_MPa": 0.14109551127551131
+        },
+        "cartridge": {
+          "max_displacement_mm": 0.4995464842646742,
+          "max_von_mises_MPa": 0.1566795593528815,
+          "p95_von_mises_MPa": 0.07109780968339813
+        },
+        "base": {
+          "max_displacement_mm": 0.1998920385708545,
+          "max_von_mises_MPa": 6.2870312824249535,
+          "p95_von_mises_MPa": 0.4230242153933789
+        }
+      },
+      "sensor_gauge_p95_von_mises_MPa": 8.149381925989486,
+      "max_printed_displacement_bound_mm": 0.4995464842646742,
+      "strain_energy_Nmm": 0.8970851472599328,
+      "boundary_condition_note": "Ideal bonded contacts; both servo horn mating faces clamped; base compliance included; no bolt slip, glue creep, print anisotropy or electrical gauges"
+    }
+  ],
+  "runtime_seconds": 18.427311897277832
+}

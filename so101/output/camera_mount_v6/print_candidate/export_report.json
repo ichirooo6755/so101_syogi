@@ -1,0 +1,147 @@
+{
+  "created_utc": "2026-10-27T15:42:18.593260+00:00",
+  "exports": [
+    {
+      "part": "01_flat_carrier_socket_V6",
+      "stem": "01_flat_carrier_socket_V6",
+      "quantity": 1,
+      "volume_mm3": 10960.732949399579,
+      "size_mm": [
+        82.20195549738193,
+        64.5506005018899,
+        32.90113058840304
+      ],
+      "solid_lumps": 1,
+      "orientation": "flat broad back face down",
+      "rotation_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "52c0412c155288ecab52d3383ca6cde25294c7381217e5ee66a7da923011aa8f"
+    },
+    {
+      "part": "02_slot_backing_V6",
+      "stem": "02_slot_backing_V6",
+      "quantity": 1,
+      "volume_mm3": 1739.8963794264173,
+      "size_mm": [
+        21.500000000000004,
+        23.0,
+        9.549999999999997
+      ],
+      "solid_lumps": 1,
+      "orientation": "flat broad back face down",
+      "rotation_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "f5bb3982cb1e9a6f119221b0f9980fe121b1571d63b36c3cec41232259b22f7a"
+    },
+    {
+      "part": "03_common_screw_locked_gate_V6",
+      "stem": "03_common_screw_locked_gate_V6",
+      "quantity": 1,
+      "volume_mm3": 4971.126658084923,
+      "size_mm": [
+        60.949999999999996,
+        64.50000000000001,
+        15.749999999999872
+      ],
+      "solid_lumps": 1,
+      "orientation": "flat broad back face down",
+      "rotation_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "349542f98dd8c2243b6bfe239387286d04f8004b05b9094f326eaa8c5c12e094"
+    },
+    {
+      "part": "04_slide_in_camera_tray_V6",
+      "stem": "04_slide_in_camera_tray_V6",
+      "quantity": 1,
+      "volume_mm3": 1986.7724221329897,
+      "size_mm": [
+        23.600000000000023,
+        34.80000000000001,
+        6.400000000000001
+      ],
+      "solid_lumps": 1,
+      "orientation": "camera tray broad back face down",
+      "rotation_matrix": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708,
+        0.0,
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637,
+        0.0,
+        0.3101394316820215,
+        -0.6400302253466693,
+        -0.7029757062364562,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "424979d2dc64384bc7e2f9496129b9eb709d7105d38fdaf800f287f99d17298f"
+    }
+  ],
+  "assembly_archive": "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/camera_mount_v6/print_candidate/source_cad/SO101_Glueless_Camera_HX711_V6_assembly_DO_NOT_PRINT.f3d",
+  "existing_assembly_preserved": true,
+  "hardware": {
+    "M3x12": 2,
+    "M3_hex_nut": 2
+  },
+  "printed_parts": 4,
+  "hot_glue_required": false,
+  "PCB_or_camera_extra_fasteners": 0,
+  "physical_print_fit_strength_and_electrical_test_performed": false
+}

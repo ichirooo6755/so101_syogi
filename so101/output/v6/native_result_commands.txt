@@ -1,0 +1,29 @@
+  Commands.ActivateTableCommandInputRow            - Activate row in the table
+  Commands.CommandInputCellDoubleClickedEvent      - Fire CommandInput CellDoubleClicked Event
+  Commands.CommandInputFocusChangeEvent            - Fire CommandInput FocusChange Event
+  Commands.CommandInputQueryGroupButtonCommandEvent - Fire CommandInput TriggerGroupButtonCommand Event
+  Commands.CommandInputTableMenuActionClickedEvent - Fire CommandInput TableMenuActionClicked Event
+  Commands.CommandInputTriggerGroupMoreCommandEvent - Fire CommandInput TriggerGroupMoreCommand Event
+  Commands.CommandInputTriggerMRUCommandEvent      - Fire CommandInput CommandInputTriggerMRUCommand Event
+  Commands.LoftProfileDoubleClick                  - Process double click event for LoftProfilePOPCommandInput
+  Commands.PreSelection                            - Given a target label force a preselection event through a SelectionCommandInput
+  Commands.PreUnSelection                          - Given a target label force a preselection unhighlight event through a SelectionCommandInput
+  Commands.SelectTableCommandInputMultiColumns     - Select multiple columns in the table
+  Commands.SelectTableCommandInputMultiRows        - Select multiple rows in the table
+  Commands.SelReorderCmdInput                      - Process mouse press event for SelReorderCommandInput
+  Commands.TreeCommandInput                        - Process tree control events for TreeCommandInput
+  Commands.TrimPreSelection                        - Given a target faces force a preselection event through a SurfTrimSelCommandInput
+  DebugCommands.ActiveCommandInputIcons            - [/ChildInputs] Shows info on the ActiveCommand icons
+  UI.CurrentCommandInfo                            - Shows info on the ActiveCommand and its inputs
+  UI.DisableCommandInput                           - <input id: String> Disable the given input in the active command
+  UI.EnableCommandInput                            - <input id: String> Enable the given input in the active command
+  UI.GetCurrentCommandToolbar                      - returns the current command toolbar and tab ID as JSON.
+  UI.GetCurrentCommandToolbarInfo                  - returns the current command toolbar info as JSON. This allows a developer to know where to add his command to
+('SimReportCmd', 'レポート')
+('ResultSyncCommand', '結果タイプを同期')
+('SimResultTypeCmd', '結果タイプ')
+('SimResultTypeGroupCmd', '結果タイプ グループ')
+('SimSyncResultTypeCmd', '結果タイプを同期')
+('IronAutomatedCAMShowReport', 'レポートを表示')
+('IronInspectionReport', '検査レポート')
+('SDK.MAGNestReportCmd.Show', 'レポート')

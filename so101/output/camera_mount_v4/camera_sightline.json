@@ -1,0 +1,308 @@
+{
+  "eye_mm": [
+    38.77595663943964,
+    50.690066030064,
+    0.6406403549310387
+  ],
+  "assumed_tip_mm": [
+    62,
+    2.76294620236,
+    -52
+  ],
+  "relative_tool_hits": [],
+  "fixed_body_poses": [
+    {
+      "angle_deg": -180,
+      "hits": []
+    },
+    {
+      "angle_deg": -175,
+      "hits": []
+    },
+    {
+      "angle_deg": -170,
+      "hits": []
+    },
+    {
+      "angle_deg": -165,
+      "hits": []
+    },
+    {
+      "angle_deg": -160,
+      "hits": []
+    },
+    {
+      "angle_deg": -155,
+      "hits": []
+    },
+    {
+      "angle_deg": -150,
+      "hits": []
+    },
+    {
+      "angle_deg": -145,
+      "hits": []
+    },
+    {
+      "angle_deg": -140,
+      "hits": []
+    },
+    {
+      "angle_deg": -135,
+      "hits": []
+    },
+    {
+      "angle_deg": -130,
+      "hits": []
+    },
+    {
+      "angle_deg": -125,
+      "hits": []
+    },
+    {
+      "angle_deg": -120,
+      "hits": []
+    },
+    {
+      "angle_deg": -115,
+      "hits": []
+    },
+    {
+      "angle_deg": -110,
+      "hits": []
+    },
+    {
+      "angle_deg": -105,
+      "hits": []
+    },
+    {
+      "angle_deg": -100,
+      "hits": []
+    },
+    {
+      "angle_deg": -95,
+      "hits": []
+    },
+    {
+      "angle_deg": -90,
+      "hits": []
+    },
+    {
+      "angle_deg": -85,
+      "hits": []
+    },
+    {
+      "angle_deg": -80,
+      "hits": []
+    },
+    {
+      "angle_deg": -75,
+      "hits": []
+    },
+    {
+      "angle_deg": -70,
+      "hits": []
+    },
+    {
+      "angle_deg": -65,
+      "hits": []
+    },
+    {
+      "angle_deg": -60,
+      "hits": []
+    },
+    {
+      "angle_deg": -55,
+      "hits": []
+    },
+    {
+      "angle_deg": -50,
+      "hits": []
+    },
+    {
+      "angle_deg": -45,
+      "hits": []
+    },
+    {
+      "angle_deg": -40,
+      "hits": []
+    },
+    {
+      "angle_deg": -35,
+      "hits": []
+    },
+    {
+      "angle_deg": -30,
+      "hits": []
+    },
+    {
+      "angle_deg": -25,
+      "hits": []
+    },
+    {
+      "angle_deg": -20,
+      "hits": []
+    },
+    {
+      "angle_deg": -15,
+      "hits": []
+    },
+    {
+      "angle_deg": -10,
+      "hits": []
+    },
+    {
+      "angle_deg": -5,
+      "hits": []
+    },
+    {
+      "angle_deg": 0,
+      "hits": []
+    },
+    {
+      "angle_deg": 5,
+      "hits": []
+    },
+    {
+      "angle_deg": 10,
+      "hits": []
+    },
+    {
+      "angle_deg": 15,
+      "hits": []
+    },
+    {
+      "angle_deg": 20,
+      "hits": []
+    },
+    {
+      "angle_deg": 25,
+      "hits": []
+    },
+    {
+      "angle_deg": 30,
+      "hits": []
+    },
+    {
+      "angle_deg": 35,
+      "hits": []
+    },
+    {
+      "angle_deg": 40,
+      "hits": []
+    },
+    {
+      "angle_deg": 45,
+      "hits": []
+    },
+    {
+      "angle_deg": 50,
+      "hits": []
+    },
+    {
+      "angle_deg": 55,
+      "hits": []
+    },
+    {
+      "angle_deg": 60,
+      "hits": []
+    },
+    {
+      "angle_deg": 65,
+      "hits": []
+    },
+    {
+      "angle_deg": 70,
+      "hits": []
+    },
+    {
+      "angle_deg": 75,
+      "hits": []
+    },
+    {
+      "angle_deg": 80,
+      "hits": []
+    },
+    {
+      "angle_deg": 85,
+      "hits": []
+    },
+    {
+      "angle_deg": 90,
+      "hits": []
+    },
+    {
+      "angle_deg": 95,
+      "hits": []
+    },
+    {
+      "angle_deg": 100,
+      "hits": []
+    },
+    {
+      "angle_deg": 105,
+      "hits": []
+    },
+    {
+      "angle_deg": 110,
+      "hits": []
+    },
+    {
+      "angle_deg": 115,
+      "hits": []
+    },
+    {
+      "angle_deg": 120,
+      "hits": []
+    },
+    {
+      "angle_deg": 125,
+      "hits": []
+    },
+    {
+      "angle_deg": 130,
+      "hits": []
+    },
+    {
+      "angle_deg": 135,
+      "hits": []
+    },
+    {
+      "angle_deg": 140,
+      "hits": []
+    },
+    {
+      "angle_deg": 145,
+      "hits": []
+    },
+    {
+      "angle_deg": 150,
+      "hits": []
+    },
+    {
+      "angle_deg": 155,
+      "hits": []
+    },
+    {
+      "angle_deg": 160,
+      "hits": []
+    },
+    {
+      "angle_deg": 165,
+      "hits": []
+    },
+    {
+      "angle_deg": 170,
+      "hits": []
+    },
+    {
+      "angle_deg": 175,
+      "hits": []
+    },
+    {
+      "angle_deg": 180,
+      "hits": []
+    }
+  ],
+  "optical_focus_and_actual_FOV_not_tested": true
+}

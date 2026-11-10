@@ -1,0 +1,27 @@
+{
+  "main_force_N": [
+    0,
+    0,
+    6
+  ],
+  "main_force_point_mm": [
+    61.99999999999999,
+    31.234660960830766,
+    39.5
+  ],
+  "bending_couple_N": 23.08517412878168,
+  "moment_X_Nmm": -170.8302885529846,
+  "pair_y_mm": [
+    26.962946202359998,
+    34.36294620236001
+  ],
+  "near_default_normal_force_input_N": 23.08517412878168,
+  "far_default_normal_force_input_N": -23.08517412878168,
+  "resultant_force_N": [
+    0,
+    0,
+    6
+  ],
+  "equivalent_axial_application_y_mm": 2.762946202,
+  "local_load_distribution_note": "Ideal base-design equivalent wrench, not a detailed bolt/contact solve"
+}

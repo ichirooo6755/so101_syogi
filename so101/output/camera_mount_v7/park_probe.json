@@ -1,0 +1,415 @@
+[
+  {
+    "park_y_mm": 0.5,
+    "gate_vs_final_unit": [],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        0.5,
+        1.7089
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 1.0,
+    "gate_vs_final_unit": [],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        0.5,
+        1.714
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 1.5,
+    "gate_vs_final_unit": [],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        0.5,
+        1.7054
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 2.0,
+    "gate_vs_final_unit": [],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        0.5,
+        1.6485
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 2.5,
+    "gate_vs_final_unit": [],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        0.5,
+        1.5427
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 3.0,
+    "gate_vs_final_unit": [],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        0.5,
+        1.3977
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 3.5,
+    "gate_vs_final_unit": [],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        0.5,
+        1.2136
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 4.0,
+    "gate_vs_final_unit": [],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        0.5,
+        0.9989
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 4.5,
+    "gate_vs_final_unit": [],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        0.5,
+        0.7633
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 5.0,
+    "gate_vs_final_unit": [
+      [
+        "05_HX711_perf_stack_V7",
+        0.014
+      ]
+    ],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        0.5,
+        0.5068
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 5.5,
+    "gate_vs_final_unit": [
+      [
+        "05_HX711_perf_stack_V7",
+        0.1199
+      ]
+    ],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        0.5,
+        0.2436
+      ],
+      [
+        "05_HX711_perf_stack_V7",
+        0.1,
+        0.058
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 6.0,
+    "gate_vs_final_unit": [
+      [
+        "05_HX711_perf_stack_V7",
+        0.4135
+      ]
+    ],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        0.5,
+        0.0927
+      ],
+      [
+        "05_HX711_perf_stack_V7",
+        0.1,
+        0.2609
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 6.5,
+    "gate_vs_final_unit": [
+      [
+        "05_HX711_perf_stack_V7",
+        0.9904
+      ]
+    ],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        0.5,
+        0.0426
+      ],
+      [
+        "05_HX711_perf_stack_V7",
+        0.1,
+        0.7068
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 7.0,
+    "gate_vs_final_unit": [
+      [
+        "05_HX711_perf_stack_V7",
+        1.9465
+      ]
+    ],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        0.5,
+        0.0123
+      ],
+      [
+        "05_HX711_perf_stack_V7",
+        0.1,
+        1.4916
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 7.5,
+    "gate_vs_final_unit": [
+      [
+        "05_HX711_perf_stack_V7",
+        3.354
+      ]
+    ],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        1,
+        0.1067
+      ],
+      [
+        "05_HX711_perf_stack_V7",
+        0.1,
+        2.7042
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 8.0,
+    "gate_vs_final_unit": [
+      [
+        "05_HX711_perf_stack_V7",
+        5.225
+      ]
+    ],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        1,
+        0.0145
+      ],
+      [
+        "05_HX711_perf_stack_V7",
+        0.1,
+        4.3818
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 8.5,
+    "gate_vs_final_unit": [
+      [
+        "05_HX711_perf_stack_V7",
+        7.5363
+      ]
+    ],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        2,
+        1.8563
+      ],
+      [
+        "05_HX711_perf_stack_V7",
+        0.1,
+        6.5111
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 9.0,
+    "gate_vs_final_unit": [
+      [
+        "05_HX711_perf_stack_V7",
+        10.2281
+      ]
+    ],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        2,
+        1.2059
+      ],
+      [
+        "05_HX711_perf_stack_V7",
+        0.1,
+        9.0552
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 9.5,
+    "gate_vs_final_unit": [
+      [
+        "05_HX711_perf_stack_V7",
+        13.1837
+      ]
+    ],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        2,
+        0.7061
+      ],
+      [
+        "05_HX711_perf_stack_V7",
+        0.1,
+        11.9146
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 10.0,
+    "gate_vs_final_unit": [
+      [
+        "05_HX711_perf_stack_V7",
+        16.2818
+      ]
+    ],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        2,
+        0.3468
+      ],
+      [
+        "05_HX711_perf_stack_V7",
+        0.1,
+        14.9671
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 10.5,
+    "gate_vs_final_unit": [
+      [
+        "05_HX711_perf_stack_V7",
+        19.4195
+      ]
+    ],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        2,
+        0.1185
+      ],
+      [
+        "05_HX711_perf_stack_V7",
+        0.1,
+        18.0988
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 11.0,
+    "gate_vs_final_unit": [
+      [
+        "05_HX711_perf_stack_V7",
+        22.5135
+      ]
+    ],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        2,
+        0.0115
+      ],
+      [
+        "05_HX711_perf_stack_V7",
+        0.1,
+        21.2202
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 11.5,
+    "gate_vs_final_unit": [
+      [
+        "05_HX711_perf_stack_V7",
+        25.5181
+      ]
+    ],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        3,
+        0.7143
+      ],
+      [
+        "05_HX711_perf_stack_V7",
+        0.1,
+        24.2647
+      ]
+    ]
+  },
+  {
+    "park_y_mm": 12.0,
+    "gate_vs_final_unit": [
+      [
+        "05_HX711_perf_stack_V7",
+        28.4264
+      ],
+      [
+        "06_stack_end_cap_V7",
+        0.0239
+      ]
+    ],
+    "insertion_hits": [
+      [
+        "04_XIAO_header_tray_V7",
+        3,
+        0.4363
+      ],
+      [
+        "05_HX711_perf_stack_V7",
+        0.1,
+        27.2125
+      ]
+    ]
+  }
+]

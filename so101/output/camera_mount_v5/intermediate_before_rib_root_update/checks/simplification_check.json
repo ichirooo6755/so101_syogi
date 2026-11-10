@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "printed_parts": 2,
+  "bolts": {
+    "M3x10": 2
+  },
+  "nuts": {
+    "M3_hex": 2
+  },
+  "separate_PCB_keepers": 0,
+  "hot_glue_required_for_PCB_retention": true,
+  "existing_assembly_preserved": true,
+  "reference": "https://github.com/TheRobotStudio/SO-ARM100/blob/main/Optional/SO101_Wrist_Cam_Hex-Nut_Mount_32x32_UVC_Module/README.md"
+}

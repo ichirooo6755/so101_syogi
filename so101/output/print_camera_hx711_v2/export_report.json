@@ -1,0 +1,220 @@
+{
+  "created_utc": "2026-10-27T08:18:19.931343+00:00",
+  "exports": [
+    {
+      "part": "01_A_left_arm_frame_V2",
+      "stem": "01_A_left_arm_frame_V2",
+      "quantity": 1,
+      "volume_mm3": 10990.48797901192,
+      "size_mm": [
+        107.2,
+        32.5251841601755,
+        67.24506165897972
+      ],
+      "solid_lumps": 1,
+      "orientation": "assembly orientation; brim and removable support required beneath the arm and camera cradle",
+      "rotation_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "e99351e7f24bf5e8bb2f8421729d2fe13317c3502f45007ed71164ecf73f6fd6"
+    },
+    {
+      "part": "02_A_slot_inner_jaw_V2",
+      "stem": "02_A_slot_inner_jaw_V2",
+      "quantity": 1,
+      "volume_mm3": 1395.9300764992122,
+      "size_mm": [
+        21.500000000000004,
+        23.0,
+        9.549999999999997
+      ],
+      "solid_lumps": 1,
+      "orientation": "inner jaw broad back face on bed; slot keys and nut tunnels upwards",
+      "rotation_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "b51da96acdd8f3637b32a1afa3bbc58cfbec005805ee9b3c8e582dc43983ad5c"
+    },
+    {
+      "part": "03_camera_end_keeper_V2",
+      "stem": "03_camera_end_keeper_V2",
+      "quantity": 1,
+      "volume_mm3": 309.0207797694323,
+      "size_mm": [
+        9.400000000000004,
+        20.599999999999994,
+        3.000000000000007
+      ],
+      "solid_lumps": 1,
+      "orientation": "camera keeper broad outer face on bed; locating pins upwards",
+      "rotation_matrix": [
+        0.42261826174069944,
+        0.9063077870366499,
+        0.0,
+        0.0,
+        -0.4531538935183249,
+        0.2113091308703497,
+        -0.8660254037844386,
+        0.0,
+        -0.7848855672213958,
+        0.36599815077066683,
+        0.49999999999999994,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "d006300d50f7d2c4313bf07bcfc7f9aa1c1adb419d7c3cdc13cf68f19dadfabc"
+    },
+    {
+      "part": "04_HX711_header_keeper_V2",
+      "stem": "04_HX711_header_keeper_V2",
+      "quantity": 1,
+      "volume_mm3": 298.7532755698016,
+      "size_mm": [
+        8.899999999999997,
+        21.999999999999996,
+        1.6000000000000014
+      ],
+      "solid_lumps": 1,
+      "orientation": "HX711 keeper broad outer face on bed",
+      "rotation_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "0349a1b2efa4dbfd2dd9e45adb60c0c219c1fa397d7a5f6ae2659206ffdfd5e1"
+    },
+    {
+      "part": "05_HX711_terminal_keeper_V2",
+      "stem": "05_HX711_terminal_keeper_V2",
+      "quantity": 1,
+      "volume_mm3": 261.4412755698014,
+      "size_mm": [
+        8.899999999999988,
+        21.99999999999999,
+        1.6000000000000014
+      ],
+      "solid_lumps": 1,
+      "orientation": "HX711 keeper broad outer face on bed",
+      "rotation_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "a6256c94df38e7ff8612a253c88ad024779436d9d7dc5af4d5e6c30dbdc68f58"
+    },
+    {
+      "part": "06_TXS0108E_top_keeper_V2",
+      "stem": "06_TXS0108E_top_keeper_V2",
+      "quantity": 1,
+      "volume_mm3": 827.5752901059593,
+      "size_mm": [
+        32.0,
+        8.549999999999995,
+        4.800000000000004
+      ],
+      "solid_lumps": 1,
+      "orientation": "TXS0108E keeper nut-entry face on bed; pins upwards",
+      "rotation_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "39bed5f740338c1ac1b77d22c024ef6880142c12a85929d47be92ba49ec89595"
+    }
+  ],
+  "assembly_archive": "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/print_camera_hx711_v2/source_cad/SO101_SelectionA_Left_Camera_HX711_V2_assembly_DO_NOT_PRINT.f3d",
+  "source_geometry_poses_materials_preserved": true,
+  "source_fingerprint_verified_by_build": true,
+  "cloud_copy": {
+    "saveAs_returned": true,
+    "document": "so101_SelectionA_Left_Camera_HX711_V2",
+    "id": "/Users/sugawaraichirou/Library/Application Support/Autodesk/Autodesk Fusion 360/4SY29298NXZFBXAG/W.login/F/_so101_SelectionA_Left_Camera_HX711_V2.17515ac1-a7e7-4cba-a6cd-d419990fd466.f3d",
+    "version": 1,
+    "cloud_upload_completion_verified": false
+  },
+  "attachment_moves_with_part_1": true,
+  "hardware": {
+    "M3x8": 3,
+    "M3x10": 3,
+    "M3_hex_nut": 6
+  },
+  "physical_print_fit_strength_or_electrical_test_performed": false
+}

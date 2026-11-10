@@ -1,0 +1,27 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Leader コントローラー</title>
+<style>
+body{font:16px -apple-system,BlinkMacSystemFont,sans-serif;background:#f3f5f6;color:#17252c;margin:0}main{max-width:720px;margin:40px auto;padding:0 20px}h1{font-size:26px}section{background:white;border-radius:14px;padding:20px;margin:14px 0;box-shadow:0 2px 12px #17252c0d}button{font-size:16px;border:0;border-radius:9px;padding:13px 18px;background:#176f68;color:white;cursor:pointer;margin:4px}button.stop{background:#ae3232}button.secondary{background:#52636b}p{line-height:1.65}#state{font-weight:bold}small{color:#52636b}table{width:100%;line-height:1.8}td:last-child{text-align:right}
+</style><main><h1>Leader コントローラー</h1>
+<p>周囲を空け、腕を支えられる状態で操作してください。Follower は接続しません。</p>
+<section><strong>コントローラー</strong><p id="gamepad">検出待ち。画面を選び、Xbox のボタンを一度押してください。</p><strong>Leader の USB</strong><p id="usb">確認中…</p><strong>操作状態</strong><p id="state">未接続</p>
+<button onclick="action('connect')">Leader に接続</button><button onclick="action('arm')">操作開始</button><button class="stop" onclick="action('stop')">停止</button><button class="secondary" onclick="action('disconnect')">切断</button></section>
+<section><strong>操作方法</strong><p>RB を押している間だけ動きます。放すと停止して位置を保持します。最初は少しずつ方向を確認してください。</p><table><tr><td>左スティック 左右／上下</td><td>肩の回転／上下</td></tr><tr><td>右スティック 上下／左右</td><td>ひじ／手首の曲げ</td></tr><tr><td>A ／ B</td><td>グリッパー 開／閉</td></tr></table><small>手首回転（ID5）は指令しません。画面を隠す・コントローラー切断・通信停止でも操作を解除します。停止後もモーターは保持するため、切断前に腕を支えてください。</small></section>
+</main><script>
+const token='__TOKEN__'; let busy=false, padIndex=null, pending=null, wasVisible=true;
+async function post(body){const r=await fetch('/api',{method:'POST',headers:{'Content-Type':'application/json','X-Token':token},body:JSON.stringify(body)});if(!r.ok)throw Error('通信エラー');const s=await r.json();document.getElementById('state').textContent=s.state;document.getElementById('usb').textContent=s.usb?'USB ポートを検出（操作準備は未確認）':'USB ポートが見つかりません';}
+function action(kind){pending=kind;}
+function pad(){const pads=navigator.getGamepads();return Array.from(pads).find(p=>p && p.connected && p.mapping==='standard') || null;}
+async function tick(){
+ if(busy)return; busy=true;
+ try{let p=pad(), visible=document.visibilityState==='visible' && document.hasFocus();
+ document.getElementById('gamepad').textContent=p ? '接続済み：'+p.id : '検出待ち。画面を選び、Xbox のボタンを一度押してください。';
+ if(padIndex!==null && (!p || p.index!==padIndex)){pending='stop';} padIndex=p?p.index:null;
+ if(!visible && wasVisible) pending='stop'; wasVisible=visible;
+ if(pending){let kind=pending;pending=null;await post({kind});}
+ else if(p && visible){let a=p.axes, b=p.buttons;await post({kind:'input',deadman:!!b[5]?.pressed,axes:[a[0]||0,-(a[1]||0),-(a[3]||0),a[2]||0,(b[0]?.pressed?1:0)-(b[1]?.pressed?1:0)]});}
+ else await post({kind:'status'});
+ }catch(e){document.getElementById('state').textContent='通信エラー・操作を停止';}finally{busy=false;}
+}
+setInterval(tick,70);tick();
+</script></html>

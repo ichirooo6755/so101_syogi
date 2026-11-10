@@ -1,0 +1,88 @@
+{
+  "created_utc": "2026-10-27T14:02:13.199862+00:00",
+  "exports": [
+    {
+      "part": "01_simple_camera_HX711_bracket_V4",
+      "stem": "01_simple_camera_HX711_bracket_V4",
+      "quantity": 1,
+      "volume_mm3": 6719.161584840918,
+      "size_mm": [
+        32.99999999999999,
+        59.30966875965833,
+        34.83167441664924
+      ],
+      "solid_lumps": 1,
+      "orientation": "A contact face on bed; removable open support under PCB tray and angled camera ledge required",
+      "rotation_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "9b7f5536cb80a5d4c2dbf71da176c249679aa3be429916f651b5ac3c4b2475e2"
+    },
+    {
+      "part": "02_A_slot_backing_V4",
+      "stem": "02_A_slot_backing_V4",
+      "quantity": 1,
+      "volume_mm3": 1395.9300764992122,
+      "size_mm": [
+        21.500000000000004,
+        23.0,
+        9.549999999999997
+      ],
+      "solid_lumps": 1,
+      "orientation": "inner jaw broad back face on bed; slot keys and nut tunnels upwards",
+      "rotation_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "b51da96acdd8f3637b32a1afa3bbc58cfbec005805ee9b3c8e582dc43983ad5c"
+    }
+  ],
+  "assembly_archive": "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/print_camera_hx711_v4/source_cad/SO101_SelectionA_Simple_Camera_HX711_V4_assembly_DO_NOT_PRINT.f3d",
+  "source_geometry_poses_materials_preserved": true,
+  "source_fingerprint_verified_by_build": true,
+  "cloud_copy": {
+    "saveAs_returned": true,
+    "document": "so101_SelectionA_Simple_Camera_HX711_V4",
+    "id": "/Users/sugawaraichirou/Library/Application Support/Autodesk/Autodesk Fusion 360/4SY29298NXZFBXAG/W.login/F/_so101_SelectionA_Simple_Camera_HX711_V4.961da1bf-7416-407d-9a3d-5eea605d8bdc.f3d",
+    "version": 1,
+    "cloud_upload_completion_verified": false
+  },
+  "attachment_moves_with_part_1": true,
+  "hardware": {
+    "M3x8": 0,
+    "M3x10": 2,
+    "M3_hex_nut": 2
+  },
+  "physical_print_fit_strength_or_electrical_test_performed": false
+}

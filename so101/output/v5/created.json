@@ -1,0 +1,74 @@
+{
+  "parts": {
+    "base": "部品１_V5可動域改善:1",
+    "carrier": "Brush_Load_Carrier_Compact_V5:1",
+    "cartridge": "Brush_Cartridge_Symmetric_15mm_V5:1",
+    "wrist": "Wrist_Roll_Clearance_V5:1"
+  },
+  "part_volumes_mm3": {
+    "部品１_V5可動域改善:1": 29688.678172181015,
+    "Brush_Load_Carrier_Compact_V5:1": 6573.724935501749,
+    "Brush_Cartridge_Symmetric_15mm_V5:1": 6846.800123811279,
+    "Wrist_Roll_Clearance_V5:1": 40078.42968499753
+  },
+  "wrist_removed_mm3": 161.19812457753142,
+  "brush_axis_mm": [
+    78.0,
+    2.762946202
+  ],
+  "sensor_translation_mm": [
+    48,
+    0,
+    15
+  ],
+  "sensor_before_transform": [
+    2.2204460492502263e-16,
+    -1.2212453270876509e-15,
+    -1.000000000000001,
+    3.15,
+    -1.0000000000000002,
+    3.622102617839579e-15,
+    -2.2204460492502786e-16,
+    3.7462946202360063,
+    3.622102617839576e-15,
+    1.0000000000000013,
+    -1.2351231148955076e-15,
+    1.699999999999995,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "sensor_after_transform": [
+    2.2204460492502263e-16,
+    -1.2212453270876509e-15,
+    -1.000000000000001,
+    7.949999999999999,
+    -1.0000000000000002,
+    3.622102617839579e-15,
+    -2.2204460492502786e-16,
+    3.746294620236006,
+    3.622102617839576e-15,
+    1.0000000000000013,
+    -1.2351231148955078e-15,
+    3.199999999999995,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "carrier_height_mm": 33,
+  "cartridge_length_mm": 24,
+  "brush_stop_z_mm": 30.5,
+  "cartridge_cap_top_z_mm": 32.5,
+  "suspended_upper_plate_z_mm": 33.5,
+  "suppressed_legacy_joints": [
+    "SC616C_fixed_end_to_yoke",
+    "Free_end_to_carrier",
+    "Cartridge_to_receiver",
+    "Slide_in_cover_to_fixed_base",
+    "V4_sensor_to_centered_carrier",
+    "V4_centered_cartridge_to_carrier"
+  ],
+  "timeline_future_count": 31
+}

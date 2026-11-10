@@ -1,0 +1,80 @@
+[
+  {
+    "file": "01_fixed_electronics_frame.stl",
+    "triangles": 3048,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      23.032289505004883,
+      46.400001525878906,
+      72.25
+    ],
+    "mesh_volume_mm3": 9192.629523832853,
+    "cad_volume_error_fraction": 3.613721772111424e-05
+  },
+  {
+    "file": "02_wrist_lower_shoe.stl",
+    "triangles": 612,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      40.5,
+      36.0,
+      11.0
+    ],
+    "mesh_volume_mm3": 1970.9537559375963,
+    "cad_volume_error_fraction": 2.411003231492845e-05
+  },
+  {
+    "file": "03_camera_end_keeper.stl",
+    "triangles": 920,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      9.399999618530273,
+      20.600000381469727,
+      3.0000000000000053
+    ],
+    "mesh_volume_mm3": 309.02744294880193,
+    "cad_volume_error_fraction": 2.1562237250520253e-05
+  },
+  {
+    "file": "04_hx711_edge_keeper_L.stl",
+    "triangles": 352,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      8.899999618530273,
+      22.0,
+      1.600000023841858
+    ],
+    "mesh_volume_mm3": 298.76680951657596,
+    "cad_volume_error_fraction": 4.530141719741148e-05
+  },
+  {
+    "file": "05_hx711_edge_keeper_R.stl",
+    "triangles": 368,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      8.899999618530273,
+      22.0,
+      1.600000023841858
+    ],
+    "mesh_volume_mm3": 261.45480751036644,
+    "cad_volume_error_fraction": 5.1759006058096946e-05
+  },
+  {
+    "file": "06_level_shifter_top_keeper.stl",
+    "triangles": 804,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      32.0,
+      8.550000190734863,
+      4.800000190734863
+    ],
+    "mesh_volume_mm3": 827.5631154281076,
+    "cad_volume_error_fraction": 1.4711263121044508e-05
+  }
+]

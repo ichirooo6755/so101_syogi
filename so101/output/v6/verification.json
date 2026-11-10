@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "parts": {
+    "base": "部品１_V5_短縮補強_16mm:1",
+    "carrier": "Brush_Load_Carrier_Compact_V5:1",
+    "cartridge": "Brush_Cartridge_Symmetric_15mm_V5:1",
+    "wrist": "Wrist_Roll_Clearance_V5:1"
+  },
+  "static_interference_count": 0,
+  "rotary_sweep": {
+    "range_deg": [
+      -180,
+      180
+    ],
+    "step_deg": 5,
+    "poses": 73,
+    "all_clear": true,
+    "assumed_brush_diameter_mm": 15,
+    "assumed_brush_tip_z_mm": -52,
+    "excluded": "Upstream arm absent, wires, servo limits, print tolerance and elastic deformation"
+  },
+  "gauge_keepout_overlap_mm3": {
+    "base": 0.0,
+    "carrier": 0.0,
+    "cartridge": 0.0
+  },
+  "cartridge_pullout": [
+    {
+      "down_mm": 1,
+      "max_overlap_mm3": 0.0
+    },
+    {
+      "down_mm": 10,
+      "max_overlap_mm3": 0.0
+    },
+    {
+      "down_mm": 24,
+      "max_overlap_mm3": 0.0
+    },
+    {
+      "down_mm": 50,
+      "max_overlap_mm3": 0.0
+    },
+    {
+      "down_mm": 100,
+      "max_overlap_mm3": 0.0
+    }
+  ],
+  "cell_slide_in": [
+    {
+      "from_front_mm": 1,
+      "max_overlap_mm3": 0.0
+    },
+    {
+      "from_front_mm": 5,
+      "max_overlap_mm3": 0.0
+    },
+    {
+      "from_front_mm": 15,
+      "max_overlap_mm3": 0.0
+    },
+    {
+      "from_front_mm": 45,
+      "max_overlap_mm3": 0.0
+    },
+    {
+      "from_front_mm": 70,
+      "max_overlap_mm3": 0.0
+    }
+  ],
+  "symmetry": [
+    {
+      "part": "cartridge",
+      "axis": 0,
+      "difference_mm3": 2.637534635141492e-10
+    },
+    {
+      "part": "cartridge",
+      "axis": 1,
+      "difference_mm3": -7.275957614183426e-12
+    },
+    {
+      "part": "carrier",
+      "axis": 0,
+      "difference_mm3": -1.3096723705530167e-10
+    }
+  ],
+  "brush_diameter_parameter_roundtrip_mm": [
+    12,
+    17
+  ],
+  "user_wrist_preserved": true,
+  "healthy_feature_count": 72,
+  "future_features_preserved": 31,
+  "volumes_mm3": {
+    "base": 34383.20028727208,
+    "carrier": 6573.724935501749,
+    "cartridge": 6846.800123811279,
+    "wrist": 22072.992902446946,
+    "sensor": 1844.3186979165364
+  },
+  "wrist_all_body_volumes_mm3": [
+    3.3316342766821095e-05,
+    22072.992902446946
+  ],
+  "load_cell_orientation_unchanged": true,
+  "full_robot_motion_validated": false,
+  "sensor_electrical_accuracy_validated": false,
+  "print_test_performed": false
+}

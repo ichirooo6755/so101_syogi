@@ -1,0 +1,81 @@
+{
+    "error_string": "Success.",
+    "export_time": 1625,
+    "layer_height": 0.20000000298023224,
+    "plate_index": 0,
+    "prepare_time": 25,
+    "return_code": 0,
+    "sliced_plates": [
+        {
+            "feature_type_times": {
+                "Bottom surface": 24.8245849609375,
+                "Bridge": 52.594608306884766,
+                "Brim": 24.07029914855957,
+                "Custom": 366.13568115234375,
+                "Flush": 28.0,
+                "Gap infill": 113.22396850585938,
+                "Inner wall": 558.2384033203125,
+                "Internal solid infill": 255.12130737304688,
+                "Outer wall": 615.8851928710938,
+                "Overhang wall": 97.89878845214844,
+                "Sparse infill": 11.34432315826416,
+                "Support": 938.7803955078125,
+                "Support interface": 71.21851348876953,
+                "Top surface": 63.468719482421875,
+                "Travel": 946.1646728515625,
+                "Undefined": 928.0509033203125
+            },
+            "filament_change_times": 0,
+            "filaments": [
+                {
+                    "filament_id": "GFL99",
+                    "id": 1,
+                    "main_used_g": 13.96429443359375,
+                    "total_used_g": 13.964295387268066
+                }
+            ],
+            "generate_support_material_time": 1346,
+            "id": 1,
+            "infill_time": 66,
+            "layer_filament_change": 0,
+            "main_predication": 3744.56396484375,
+            "make_perimeters_time": 100,
+            "obj_cached_cnt": 0,
+            "objects": [
+                {
+                    "bbox": {
+                        "depth": 59.309669494628906,
+                        "height": 34.83167266845703,
+                        "width": 33.000003814697266,
+                        "x": 96.25000762939453,
+                        "y": 60.34516906738281,
+                        "z": 0.0
+                    },
+                    "id": 38,
+                    "name": "01_simple_camera_HX711_bracket_V4.stl",
+                    "triangle_count": 1376
+                },
+                {
+                    "bbox": {
+                        "depth": 23.0,
+                        "height": 9.550000190734863,
+                        "width": 21.499998092651367,
+                        "x": 50.7500114440918,
+                        "y": 78.5,
+                        "z": 0.0
+                    },
+                    "id": 49,
+                    "name": "02_A_slot_backing_V4.stl",
+                    "triangle_count": 2044
+                }
+            ],
+            "sliced_time": 3118,
+            "sliced_time_with_cache": 1482,
+            "total_predication": 4148.5859375,
+            "triangle_count": 3420,
+            "warning_message": ""
+        }
+    ],
+    "sparse_infill_density": 25.0,
+    "wall_loops": 6
+}

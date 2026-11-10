@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "direction": {
+    "document": "so101_SelectionA_Left_Camera_HX711_V2",
+    "selection": "選択セット2",
+    "plane_y_mm": 42.74999999999999,
+    "direction_from_A_world": [
+      0,
+      1,
+      0
+    ],
+    "reason": "Extend a short distance outward from A, not 60 mm along -X"
+  },
+  "previous_V2_preserved": true,
+  "board_center_previous_mm": [
+    -45.0,
+    40.55,
+    46.0
+  ],
+  "board_center_compact_mm": [
+    28.0,
+    52.55,
+    46.0
+  ],
+  "extension_beam_previous_length_mm": 87.0,
+  "extension_beam_compact_outward_length_mm": 14.0,
+  "approximate_frame_x_width_previous_mm": 107.2,
+  "frame_x_width_compact_mm": 46.400000000000006
+}

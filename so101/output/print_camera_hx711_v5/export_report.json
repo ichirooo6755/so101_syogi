@@ -1,0 +1,88 @@
+{
+  "created_utc": "2026-10-27T14:55:34.575588+00:00",
+  "exports": [
+    {
+      "part": "01_A1mini_ribbed_camera_bracket_V5",
+      "stem": "01_A1mini_ribbed_camera_bracket_V5",
+      "quantity": 1,
+      "volume_mm3": 11056.451159144735,
+      "size_mm": [
+        36.0,
+        58.49177281921499,
+        35.59971068706523
+      ],
+      "solid_lumps": 1,
+      "orientation": "A contact face on bed; 45 degree ribs and low overhangs; verify limited organic support in supplied A1 mini 3MF",
+      "rotation_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "81da91bc887ab5f489af6c43b5f0da7eea9a84a6ae63c034be30ed1bbcd17a48"
+    },
+    {
+      "part": "02_joined_slot_backing_V5",
+      "stem": "02_joined_slot_backing_V5",
+      "quantity": 1,
+      "volume_mm3": 1739.8963794264173,
+      "size_mm": [
+        21.500000000000004,
+        23.0,
+        9.549999999999997
+      ],
+      "solid_lumps": 1,
+      "orientation": "inner jaw broad back face on bed; slot keys and nut tunnels upwards",
+      "rotation_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "f5bb3982cb1e9a6f119221b0f9980fe121b1571d63b36c3cec41232259b22f7a"
+    }
+  ],
+  "assembly_archive": "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/print_camera_hx711_v5/source_cad/SO101_SelectionA_Printable_Camera_HX711_V5_assembly_DO_NOT_PRINT.f3d",
+  "source_geometry_poses_materials_preserved": true,
+  "source_fingerprint_verified_by_build": true,
+  "cloud_copy": {
+    "saveAs_returned": true,
+    "document": "so101_A1mini_PLA_造形用_V5",
+    "id": "urn:adsk.wipprod:dm.lineage:iHy_q88CR9K6O3f8HSf5iw",
+    "version": 1,
+    "cloud_upload_completion_verified": false
+  },
+  "attachment_moves_with_part_1": true,
+  "hardware": {
+    "M3x8": 0,
+    "M3x10": 2,
+    "M3_hex_nut": 2
+  },
+  "physical_print_fit_strength_or_electrical_test_performed": false
+}

@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "source_document": "部品１_V8_元取付形状保持",
+  "base_volume_mm3": 38550.50206478457,
+  "fixed_loadcell_holes": [
+    {
+      "y_mm": 26.96294620236,
+      "shank_diameter_mm": 3.4,
+      "head_access_diameter_mm": 6.2,
+      "shaft_overlap_mm3": 0.0,
+      "seated_head_overlap_mm3": 0.0,
+      "head_pushed_0p1mm_overlap_mm3": 1.4679091673898648,
+      "M3x12_nominal_engagement_mm": 5.2
+    },
+    {
+      "y_mm": 34.36294620236,
+      "shank_diameter_mm": 3.4,
+      "head_access_diameter_mm": 6.2,
+      "shaft_overlap_mm3": 0.0,
+      "seated_head_overlap_mm3": 0.0,
+      "head_pushed_0p1mm_overlap_mm3": 1.4679091673898648,
+      "M3x12_nominal_engagement_mm": 5.2
+    }
+  ],
+  "servo_8_small_head_bolts": [
+    {
+      "side": "negative",
+      "index": 0,
+      "shaft_overlap_mm3": 0.0,
+      "small_head_overlap_mm3": 0.0,
+      "normal_5p5mm_head_overlap_mm3": 2.568251994309781,
+      "head_pocket_diameter_mm": 5.4,
+      "required_small_head_diameter_mm": 4.5,
+      "M3x6_nominal_engagement_mm": 2.5
+    },
+    {
+      "side": "negative",
+      "index": 1,
+      "shaft_overlap_mm3": 0.0,
+      "small_head_overlap_mm3": 0.0,
+      "normal_5p5mm_head_overlap_mm3": 2.568251994309781,
+      "head_pocket_diameter_mm": 5.4,
+      "required_small_head_diameter_mm": 4.5,
+      "M3x6_nominal_engagement_mm": 2.5
+    },
+    {
+      "side": "negative",
+      "index": 2,
+      "shaft_overlap_mm3": 0.0,
+      "small_head_overlap_mm3": 0.0,
+      "normal_5p5mm_head_overlap_mm3": 2.568251994309781,
+      "head_pocket_diameter_mm": 5.4,
+      "required_small_head_diameter_mm": 4.5,
+      "M3x6_nominal_engagement_mm": 2.5
+    },
+    {
+      "side": "negative",
+      "index": 3,
+      "shaft_overlap_mm3": 0.0,
+      "small_head_overlap_mm3": 0.0,
+      "normal_5p5mm_head_overlap_mm3": 2.568251994309781,
+      "head_pocket_diameter_mm": 5.4,
+      "required_small_head_diameter_mm": 4.5,
+      "M3x6_nominal_engagement_mm": 2.5
+    },
+    {
+      "side": "positive",
+      "index": 0,
+      "shaft_overlap_mm3": 0.0,
+      "small_head_overlap_mm3": 0.0,
+      "normal_5p5mm_head_overlap_mm3": 2.5682519943097533,
+      "head_pocket_diameter_mm": 5.4,
+      "required_small_head_diameter_mm": 4.5,
+      "M3x6_nominal_engagement_mm": 2.5
+    },
+    {
+      "side": "positive",
+      "index": 1,
+      "shaft_overlap_mm3": 0.0,
+      "small_head_overlap_mm3": 0.0,
+      "normal_5p5mm_head_overlap_mm3": 2.568251994309781,
+      "head_pocket_diameter_mm": 5.4,
+      "required_small_head_diameter_mm": 4.5,
+      "M3x6_nominal_engagement_mm": 2.5
+    },
+    {
+      "side": "positive",
+      "index": 2,
+      "shaft_overlap_mm3": 0.0,
+      "small_head_overlap_mm3": 0.0,
+      "normal_5p5mm_head_overlap_mm3": 2.568251994309781,
+      "head_pocket_diameter_mm": 5.4,
+      "required_small_head_diameter_mm": 4.5,
+      "M3x6_nominal_engagement_mm": 2.5
+    },
+    {
+      "side": "positive",
+      "index": 3,
+      "shaft_overlap_mm3": 0.0,
+      "small_head_overlap_mm3": 0.0,
+      "normal_5p5mm_head_overlap_mm3": 2.568251994309781,
+      "head_pocket_diameter_mm": 5.4,
+      "required_small_head_diameter_mm": 4.5,
+      "M3x6_nominal_engagement_mm": 2.5
+    }
+  ],
+  "physical_print_and_actual_thread_depth_not_tested": true
+}

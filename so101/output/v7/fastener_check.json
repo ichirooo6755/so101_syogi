@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "holes": [
+    {
+      "y_mm": 26.96294620236,
+      "shank_hole_mm": 3.4,
+      "head_bore_mm": 6.2,
+      "head_seat_z_mm": 32.7,
+      "seat_annulus_mm2": 21.11150263212334,
+      "M3_3mm_shaft_interference_mm3": 0.0,
+      "M3_5p5mm_head_seated_interference_mm3": 0.0,
+      "head_cannot_pass_seat_interference_at_0p1mm_mm3": 1.4679091673898648,
+      "fixed_screw_M3x12_nominal_engagement_mm": 5.2
+    },
+    {
+      "y_mm": 34.36294620236,
+      "shank_hole_mm": 3.4,
+      "head_bore_mm": 6.2,
+      "head_seat_z_mm": 32.7,
+      "seat_annulus_mm2": 21.11150263212334,
+      "M3_3mm_shaft_interference_mm3": 0.0,
+      "M3_5p5mm_head_seated_interference_mm3": 0.0,
+      "head_cannot_pass_seat_interference_at_0p1mm_mm3": 1.4679091673898648,
+      "fixed_screw_M3x12_nominal_engagement_mm": 5.2
+    }
+  ],
+  "sensor_material": "SC616C_USER_SELECTED_STEEL",
+  "sensor_E_MPa": 210000.0,
+  "material_source": "SC616C_1kg_Fusion.f3d ",
+  "actual_sensor_alloy_verified": false
+}

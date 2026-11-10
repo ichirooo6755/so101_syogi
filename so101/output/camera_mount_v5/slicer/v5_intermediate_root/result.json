@@ -1,0 +1,81 @@
+{
+    "error_string": "Success.",
+    "export_time": 1964,
+    "layer_height": 0.20000000298023224,
+    "plate_index": 0,
+    "prepare_time": 19,
+    "return_code": 0,
+    "sliced_plates": [
+        {
+            "feature_type_times": {
+                "Bottom surface": 41.57046890258789,
+                "Bridge": 24.09443473815918,
+                "Brim": 56.89128875732422,
+                "Custom": 366.1586608886719,
+                "Flush": 28.0,
+                "Gap infill": 136.06243896484375,
+                "Inner wall": 1106.1715087890625,
+                "Internal solid infill": 221.54998779296875,
+                "Outer wall": 654.6148071289063,
+                "Overhang wall": 8.580873489379883,
+                "Sparse infill": 54.900123596191406,
+                "Support": 212.41285705566406,
+                "Support interface": 1.674475073814392,
+                "Top surface": 63.81072235107422,
+                "Travel": 646.4453125,
+                "Undefined": 628.3677368164063
+            },
+            "filament_change_times": 0,
+            "filaments": [
+                {
+                    "filament_id": "GFL99",
+                    "id": 1,
+                    "main_used_g": 15.769550323486328,
+                    "total_used_g": 15.769550323486328
+                }
+            ],
+            "generate_support_material_time": 514,
+            "id": 1,
+            "infill_time": 102,
+            "layer_filament_change": 0,
+            "main_predication": 3200.7109375,
+            "make_perimeters_time": 145,
+            "obj_cached_cnt": 0,
+            "objects": [
+                {
+                    "bbox": {
+                        "depth": 58.49177169799805,
+                        "height": 35.59971237182617,
+                        "width": 36.000003814697266,
+                        "x": 94.75000762939453,
+                        "y": 60.754119873046875,
+                        "z": 0.0
+                    },
+                    "id": 38,
+                    "name": "01_A1mini_ribbed_camera_bracket_V5.stl",
+                    "triangle_count": 1514
+                },
+                {
+                    "bbox": {
+                        "depth": 23.0,
+                        "height": 9.550000190734863,
+                        "width": 21.499998092651367,
+                        "x": 49.2500114440918,
+                        "y": 78.5,
+                        "z": 0.0
+                    },
+                    "id": 49,
+                    "name": "02_joined_slot_backing_V5.stl",
+                    "triangle_count": 1354
+                }
+            ],
+            "sliced_time": 2480,
+            "sliced_time_with_cache": 1655,
+            "total_predication": 3604.7919921875,
+            "triangle_count": 2868,
+            "warning_message": ""
+        }
+    ],
+    "sparse_infill_density": 25.0,
+    "wall_loops": 6
+}

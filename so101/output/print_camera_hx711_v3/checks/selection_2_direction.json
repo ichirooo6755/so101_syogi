@@ -1,0 +1,11 @@
+{
+  "document": "so101_SelectionA_Left_Camera_HX711_V2",
+  "selection": "選択セット2",
+  "plane_y_mm": 42.74999999999999,
+  "direction_from_A_world": [
+    0,
+    1,
+    0
+  ],
+  "reason": "Extend a short distance outward from A, not 60 mm along -X"
+}

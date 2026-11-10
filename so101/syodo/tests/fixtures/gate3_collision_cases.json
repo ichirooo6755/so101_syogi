@@ -1,0 +1,16 @@
+[
+  {"character": "伴", "layout_index": 0, "collision": "arm-floor"},
+  {"character": "壇", "layout_index": 0, "collision": "arm-floor"},
+  {"character": "娯", "layout_index": 0, "collision": "self-collision"},
+  {"character": "挨", "layout_index": 1, "collision": "arm-floor"},
+  {"character": "朴", "layout_index": 1, "collision": "arm-floor"},
+  {"character": "沸", "layout_index": 0, "collision": "self-collision"},
+  {"character": "相", "layout_index": 0, "collision": "arm-floor"},
+  {"character": "緯", "layout_index": 1, "collision": "arm-floor"},
+  {"character": "虚", "layout_index": 0, "collision": "arm-floor"},
+  {"character": "警", "layout_index": 0, "collision": "arm-floor"},
+  {"character": "越", "layout_index": 0, "collision": "arm-floor"},
+  {"character": "輩", "layout_index": 0, "collision": "arm-floor"},
+  {"character": "閥", "layout_index": 0, "collision": "self-collision"},
+  {"character": "革", "layout_index": 0, "collision": "arm-floor"}
+]

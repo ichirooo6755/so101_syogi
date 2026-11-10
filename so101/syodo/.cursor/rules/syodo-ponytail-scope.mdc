@@ -1,0 +1,15 @@
+---
+description: syodo では ponytail を適用する範囲（RL/評価は削らない）
+alwaysApply: true
+---
+
+# syodo + ponytail のスコープ
+
+このリポジトリは書道 RL（PPO / MuJoCo / 全数評価）です。ponytail の「最小 diff」は **スクリプトの冗長化・過剰抽象・不要依存** に効かせ、次は削らない:
+
+- 学習 run の provenance（`command.txt`, `run.json`, `status.md`, `progress.json`）
+- 評価・Cゲート（`characters.csv`, `acceptance`, hard-mining, contact sheet）
+- メトリクス定義（`metrics.py`, `brushwork.py`, 線幅サブ指標）
+- 既存テストで担保している挙動
+
+書家レベルは **C（機械）→ A（目視）**。C未達のまま学習を短縮したり、評価をスキップしない。

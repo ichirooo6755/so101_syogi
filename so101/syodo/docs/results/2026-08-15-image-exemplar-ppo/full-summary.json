@@ -1,0 +1,74 @@
+{
+  "model": "models/professional-image-v3-ppo.zip",
+  "model_timesteps": 31744,
+  "all_joyo_evaluated": true,
+  "shard_count": 6,
+  "acceptance": {
+    "mean_at_least_75": true,
+    "minimum_at_least_60": true,
+    "all_complete": true,
+    "zero_drips": true,
+    "zero_collisions": true
+  },
+  "evaluation": {
+    "ablation": "all",
+    "count": 2136,
+    "unique_character_count": 2136,
+    "success_rate": 1.0,
+    "mean_beauty_score": 76.57321013582128,
+    "p10_beauty_score": 74.57548752947226,
+    "minimum_beauty_score": 70.99903791509405,
+    "total_drips": 0,
+    "collision_count": 0,
+    "component_means": {
+      "glyph_shape": 44.21386070344919,
+      "stroke_placement": 90.40179676997329,
+      "stroke_length": 62.22760896270249,
+      "stroke_angle": 95.67501343426953,
+      "line_width": 38.63416428143064,
+      "trajectory": 94.56807830386782,
+      "stroke_order": 100.0,
+      "smoothness": 95.56192149820384,
+      "brushwork": 58.206976356473575,
+      "ink_quality": 96.65545266167689,
+      "ink_loading": 75.20604939340524,
+      "drip_control": 100.0,
+      "collision_safety": 100.0,
+      "balance": 94.85733316799003
+    },
+    "component_minimums": {
+      "glyph_shape": 14.41643466910865,
+      "stroke_placement": 48.10366693388182,
+      "stroke_length": 30.282383390392635,
+      "stroke_angle": 78.14792974593142,
+      "line_width": 13.128205377567479,
+      "trajectory": 88.76234887465215,
+      "stroke_order": 100.0,
+      "smoothness": 93.66755711847586,
+      "brushwork": 45.63154826610673,
+      "ink_quality": 72.70154612978588,
+      "ink_loading": 40.96892132719451,
+      "drip_control": 100.0,
+      "collision_safety": 100.0,
+      "balance": 60.511965490376106
+    },
+    "technique_means": {
+      "tome": {
+        "count": 16038,
+        "finish": 44.23705236507099,
+        "width": 31.665457511301213
+      },
+      "hane": {
+        "count": 1784,
+        "finish": 51.63167281837781,
+        "width": 55.810831435795606
+      },
+      "harai": {
+        "count": 4544,
+        "finish": 42.984821993437464,
+        "width": 43.71638664000659
+      }
+    },
+    "robust_score": 74.95894504008858
+  }
+}

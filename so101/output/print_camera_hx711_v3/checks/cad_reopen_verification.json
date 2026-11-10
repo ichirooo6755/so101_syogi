@@ -1,0 +1,149 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "file": "source_cad/01_A_compact_outward_frame_V3_editable.f3d",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 1.8189894035458565e-12,
+      "size_mm": [
+        46.400000000000006,
+        34.83167441664924,
+        66.29557313775989
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/01_A_compact_outward_frame_V3.step",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 9.307768777944148e-09,
+      "size_mm": [
+        46.4,
+        34.8316744166492,
+        66.2955731377599
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/02_A_slot_inner_jaw_V3_editable.f3d",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 4.547473508864641e-13,
+      "size_mm": [
+        21.500000000000004,
+        9.549999999999997,
+        23.0
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/02_A_slot_inner_jaw_V3.step",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 2.0463630789890885e-12,
+      "size_mm": [
+        21.5,
+        23.000000000000004,
+        9.55
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/03_camera_end_keeper_V3_editable.f3d",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 7.74264208303066e-10,
+      "size_mm": [
+        14.931630166158723,
+        17.968194256766246,
+        16.056956954327497
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/03_camera_end_keeper_V3.step",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 5.684341886080802e-14,
+      "size_mm": [
+        9.4,
+        20.6,
+        3.0000000000000107
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/04_HX711_header_keeper_V3_editable.f3d",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 0.0,
+      "size_mm": [
+        8.900000000000006,
+        1.6000000000000014,
+        21.999999999999996
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/04_HX711_header_keeper_V3.step",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 0.0,
+      "size_mm": [
+        8.90000000000001,
+        22.0,
+        1.6000000000000003
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/05_HX711_terminal_keeper_V3_editable.f3d",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 0.0,
+      "size_mm": [
+        8.899999999999999,
+        1.6000000000000014,
+        21.99999999999999
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/05_HX711_terminal_keeper_V3.step",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 5.684341886080802e-14,
+      "size_mm": [
+        8.900000000000002,
+        22.0,
+        1.6000000000000003
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/06_TXS0108E_top_keeper_V3_editable.f3d",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 0.0,
+      "size_mm": [
+        32.0,
+        4.800000000000004,
+        8.549999999999995
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/06_TXS0108E_top_keeper_V3.step",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 5.684341886080801e-13,
+      "size_mm": [
+        32.0,
+        8.55,
+        4.8
+      ],
+      "reopened_in_Fusion": true
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+    "error_string": "Success.",
+    "export_time": 1082,
+    "layer_height": 0.20000000298023224,
+    "plate_index": 0,
+    "prepare_time": 28,
+    "return_code": 0,
+    "sliced_plates": [
+        {
+            "feature_type_times": {
+                "Bottom surface": 108.90758514404297,
+                "Bridge": 65.21102142333984,
+                "Brim": 101.55482482910156,
+                "Custom": 366.23016357421875,
+                "Flush": 28.0,
+                "Gap infill": 124.085693359375,
+                "Inner wall": 1017.4684448242188,
+                "Internal solid infill": 492.71380615234375,
+                "Outer wall": 750.3327026367188,
+                "Overhang wall": 17.155824661254883,
+                "Sparse infill": 49.244686126708984,
+                "Support": 172.0558319091797,
+                "Support interface": 1.6334118843078613,
+                "Top surface": 119.26871490478516,
+                "Travel": 657.5413208007813,
+                "Undefined": 639.4629516601563
+            },
+            "filament_change_times": 0,
+            "filaments": [
+                {
+                    "filament_id": "GFL99",
+                    "id": 1,
+                    "main_used_g": 18.55420684814453,
+                    "total_used_g": 18.55420684814453
+                }
+            ],
+            "generate_support_material_time": 227,
+            "id": 1,
+            "infill_time": 61,
+            "layer_filament_change": 0,
+            "main_predication": 3649.082763671875,
+            "make_perimeters_time": 72,
+            "obj_cached_cnt": 0,
+            "objects": [
+                {
+                    "bbox": {
+                        "depth": 64.55059814453125,
+                        "height": 32.90113067626953,
+                        "width": 82.20195770263672,
+                        "x": 48.71617889404297,
+                        "y": 81.5241470336914,
+                        "z": 0.0
+                    },
+                    "id": 74,
+                    "name": "01_flat_carrier_socket_V6.stl",
+                    "triangle_count": 800
+                },
+                {
+                    "bbox": {
+                        "depth": 23.600000381469727,
+                        "height": 6.400000095367432,
+                        "width": 34.79999542236328,
+                        "x": 96.48383331298828,
+                        "y": 33.92414093017578,
+                        "z": 0.0
+                    },
+                    "id": 107,
+                    "name": "04_slide_in_camera_tray_V6.stl",
+                    "triangle_count": 200
+                },
+                {
+                    "bbox": {
+                        "depth": 21.499998092651367,
+                        "height": 9.550000190734863,
+                        "width": 23.000001907348633,
+                        "x": 49.483848571777344,
+                        "y": 36.024131774902344,
+                        "z": 0.0
+                    },
+                    "id": 85,
+                    "name": "02_slot_backing_V6.stl",
+                    "triangle_count": 1354
+                }
+            ],
+            "sliced_time": 833,
+            "sliced_time_with_cache": 444,
+            "total_predication": 4053.234619140625,
+            "triangle_count": 2354,
+            "warning_message": ""
+        },
+        {
+            "feature_type_times": {
+                "Bottom surface": 7.378480911254883,
+                "Bridge": 3.313694715499878,
+                "Brim": 78.32630157470703,
+                "Custom": 366.5564880371094,
+                "Flush": 28.0,
+                "Gap infill": 52.741912841796875,
+                "Inner wall": 413.02838134765625,
+                "Internal solid infill": 49.71329116821289,
+                "Outer wall": 246.37948608398438,
+                "Sparse infill": 22.042457580566406,
+                "Top surface": 30.670812606811523,
+                "Travel": 210.70558166503906,
+                "Undefined": 192.20704650878906
+            },
+            "filament_change_times": 0,
+            "filaments": [
+                {
+                    "filament_id": "GFL99",
+                    "id": 1,
+                    "main_used_g": 6.19428014755249,
+                    "total_used_g": 6.19428014755249
+                }
+            ],
+            "generate_support_material_time": 5,
+            "id": 2,
+            "infill_time": 20,
+            "layer_filament_change": 0,
+            "main_predication": 1086.2811279296875,
+            "make_perimeters_time": 19,
+            "obj_cached_cnt": 0,
+            "objects": [
+                {
+                    "bbox": {
+                        "depth": 64.5,
+                        "height": 15.75,
+                        "width": 60.950008392333984,
+                        "x": 275.5249938964844,
+                        "y": 57.7500114440918,
+                        "z": 0.0
+                    },
+                    "id": 96,
+                    "name": "03_common_screw_locked_gate_V6.stl",
+                    "triangle_count": 592
+                }
+            ],
+            "sliced_time": 138,
+            "sliced_time_with_cache": 88,
+            "total_predication": 1490.339111328125,
+            "triangle_count": 592,
+            "warning_message": ""
+        }
+    ],
+    "sparse_infill_density": 25.0,
+    "wall_loops": 6
+}

@@ -1,0 +1,196 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-26T05:39:02.216049+00:00",
+  "folder": "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/print_v8",
+  "source_document": "so101書道",
+  "source_cloud_version": 26,
+  "source_assembly_geometry_and_parameters_unchanged": true,
+  "stl_count": 4,
+  "total_print_quantity": 4,
+  "stl_checks": [
+    {
+      "file": "01_base_original_mount_V8.stl",
+      "cad_connected_solid_count": 1,
+      "mesh_boundary_surface_count": 2,
+      "enclosed_void_count": 1,
+      "surface_details": [
+        {
+          "triangles": 7586,
+          "signed_volume_mm3": 39631.89728837736,
+          "minimum_mm": [
+            0.0,
+            -4.440892098500626e-15,
+            -2.220446049250313e-15
+          ],
+          "maximum_mm": [
+            84.19999694824219,
+            78.06294250488281,
+            28.5
+          ]
+        },
+        {
+          "triangles": 20,
+          "signed_volume_mm3": -1073.8332653045654,
+          "minimum_mm": [
+            64.0,
+            8.0,
+            17.0
+          ],
+          "maximum_mm": [
+            67.0,
+            64.0,
+            23.5
+          ]
+        }
+      ],
+      "surface_topology_matches_CAD": true,
+      "all_edges_used_by_two_triangles": true,
+      "outward_signed_volume_positive": true,
+      "bounds_mm": [
+        [
+          0.0,
+          -4.440892098500626e-15,
+          -2.220446049250313e-15
+        ],
+        [
+          84.19999694824219,
+          78.06294250488281,
+          28.5
+        ]
+      ],
+      "quantity": 1,
+      "unit_to_use_in_slicer": "mm",
+      "scale_percent": 100,
+      "sha256": "bef47b4e569a6994f98bfa6563454a470c27dafa9023515fc479462d9a997a95"
+    },
+    {
+      "file": "02_load_carrier_V5.stl",
+      "cad_connected_solid_count": 1,
+      "mesh_boundary_surface_count": 1,
+      "enclosed_void_count": 0,
+      "surface_details": [
+        {
+          "triangles": 2458,
+          "signed_volume_mm3": 6574.063361983399,
+          "minimum_mm": [
+            0.003465664805844426,
+            0.0,
+            0.0
+          ],
+          "maximum_mm": [
+            31.99653434753418,
+            52.0,
+            33.0
+          ]
+        }
+      ],
+      "surface_topology_matches_CAD": true,
+      "all_edges_used_by_two_triangles": true,
+      "outward_signed_volume_positive": true,
+      "bounds_mm": [
+        [
+          0.003465664805844426,
+          0.0,
+          0.0
+        ],
+        [
+          31.99653434753418,
+          52.0,
+          33.0
+        ]
+      ],
+      "quantity": 1,
+      "unit_to_use_in_slicer": "mm",
+      "scale_percent": 100,
+      "sha256": "8fcfce69d58a8f8812fe48b7da9a67044f469968591aa234e40e84fc02a6a4eb"
+    },
+    {
+      "file": "03_brush_cartridge_15mm_V5.stl",
+      "cad_connected_solid_count": 1,
+      "mesh_boundary_surface_count": 1,
+      "enclosed_void_count": 0,
+      "surface_details": [
+        {
+          "triangles": 3452,
+          "signed_volume_mm3": 6845.843600925651,
+          "minimum_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_mm": [
+            30.0,
+            52.0,
+            24.0
+          ]
+        }
+      ],
+      "surface_topology_matches_CAD": true,
+      "all_edges_used_by_two_triangles": true,
+      "outward_signed_volume_positive": true,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          30.0,
+          52.0,
+          24.0
+        ]
+      ],
+      "quantity": 1,
+      "unit_to_use_in_slicer": "mm",
+      "scale_percent": 100,
+      "sha256": "3cfb0af8d944b65a3af007ef9f3bbc580cc7e4370cea3285b8edd602fa27a24b"
+    },
+    {
+      "file": "04_wrist_clearance_V8.stl",
+      "cad_connected_solid_count": 1,
+      "mesh_boundary_surface_count": 1,
+      "enclosed_void_count": 0,
+      "surface_details": [
+        {
+          "triangles": 12040,
+          "signed_volume_mm3": 22025.291248350535,
+          "minimum_mm": [
+            -1.4098658266255916e-16,
+            0.0,
+            -1.5420970706989112e-13
+          ],
+          "maximum_mm": [
+            38.06304168701172,
+            52.0,
+            47.19944381713867
+          ]
+        }
+      ],
+      "surface_topology_matches_CAD": true,
+      "all_edges_used_by_two_triangles": true,
+      "outward_signed_volume_positive": true,
+      "bounds_mm": [
+        [
+          -1.4098658266255916e-16,
+          0.0,
+          -1.5420970706989112e-13
+        ],
+        [
+          38.06304168701172,
+          52.0,
+          47.19944381713867
+        ]
+      ],
+      "quantity": 1,
+      "unit_to_use_in_slicer": "mm",
+      "scale_percent": 100,
+      "sha256": "ae47b6fefa44c93e9a4865235753135dc5e8519af10a077f58bcbf46ddf6a113"
+    }
+  ],
+  "native_archive_reopen_passed": true,
+  "brush_diameter_regeneration_test_passed": true,
+  "step_exchange_drift_recorded_in_cad_report_and_readme": true,
+  "source_folder": "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/v8/print_export_2026-10-26",
+  "slicer_profiles_or_gcode_included": false,
+  "physical_print_and_load_tests_performed": false
+}

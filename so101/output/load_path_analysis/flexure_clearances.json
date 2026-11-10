@@ -1,0 +1,18 @@
+{
+  "live_source_matches_analysis_snapshot": {
+    "base": true,
+    "carrier": true,
+    "cartridge": true,
+    "sensor": true
+  },
+  "gaps": {
+    "base_to_sensor_flexure_mm": 1.5000000000000657,
+    "carrier_to_sensor_flexure_mm": 0.4999999999999305,
+    "cartridge_to_sensor_flexure_mm": 6.090640713711789
+  },
+  "flexure_y_range_mm": [
+    9.96294620236,
+    21.96294620236
+  ],
+  "note": "Positive CAD distances only, not a claim that electrical accuracy is validated"
+}

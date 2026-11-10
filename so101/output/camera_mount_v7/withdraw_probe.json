@@ -1,0 +1,50 @@
+[
+  {
+    "withdraw_mm": 0.1,
+    "hits": []
+  },
+  {
+    "withdraw_mm": 0.25,
+    "hits": []
+  },
+  {
+    "withdraw_mm": 0.5,
+    "hits": []
+  },
+  {
+    "withdraw_mm": 1,
+    "hits": []
+  },
+  {
+    "withdraw_mm": 1.2,
+    "hits": []
+  },
+  {
+    "withdraw_mm": 2,
+    "hits": []
+  },
+  {
+    "withdraw_mm": 3,
+    "hits": []
+  },
+  {
+    "withdraw_mm": 4,
+    "hits": []
+  },
+  {
+    "withdraw_mm": 5,
+    "hits": []
+  },
+  {
+    "withdraw_mm": 8,
+    "hits": []
+  },
+  {
+    "withdraw_mm": 10,
+    "hits": []
+  },
+  {
+    "withdraw_mm": 15,
+    "hits": []
+  }
+]

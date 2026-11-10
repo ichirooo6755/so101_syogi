@@ -1,0 +1,73 @@
+{
+  "brush_axis_mm": [
+    62,
+    2.762946202
+  ],
+  "brush_stop_z_mm": 30.5,
+  "assumed_brush_tip_z_mm": -52,
+  "bore_load_z_min_mm": 10.5,
+  "bore_load_z_max_mm": 28.5,
+  "source_geometry_preserved": true,
+  "source": "OFFLINE candidate geometric twin; Fusion edit blocked and unverified",
+  "sensor_model_note": "Approximate aluminium solid with no gauges, bridge, resin, cable, slip or bolt preload",
+  "parts": {
+    "base": {
+      "volume_mm3": 34383.200287272404
+    },
+    "carrier": {
+      "volume_mm3": 6573.724935501749
+    },
+    "cartridge": {
+      "volume_mm3": 6846.800123811279
+    },
+    "sensor": {
+      "volume_mm3": 1844.3186979165378
+    }
+  },
+  "materials": [
+    {
+      "name": "PRINT_ASSUMED_E1500MPa_ISOTROPIC_NOT_TESTED",
+      "properties": {
+        "structural_Density": {
+          "value": 1240.0,
+          "units": "KilogramPerCubicMeter"
+        },
+        "structural_Minimum_yield_stress": {
+          "value": 20000.0,
+          "units": "Kilopascal"
+        },
+        "structural_Poisson_ratio": {
+          "value": 0.35,
+          "units": "Unitless"
+        },
+        "structural_Young_modulus": {
+          "value": 1500000.0,
+          "units": "Kilopascal"
+        }
+      }
+    },
+    {
+      "name": "SC616C_APPROX_Al_E69000MPa_ALLOY_UNKNOWN",
+      "properties": {
+        "structural_Density": {
+          "value": 2700.0,
+          "units": "KilogramPerCubicMeter"
+        },
+        "structural_Minimum_yield_stress": {
+          "value": 55000.0,
+          "units": "Kilopascal"
+        },
+        "structural_Poisson_ratio": {
+          "value": 0.33,
+          "units": "Unitless"
+        },
+        "structural_Young_modulus": {
+          "value": 69000000.0,
+          "units": "Kilopascal"
+        }
+      }
+    }
+  ],
+  "base_included": true,
+  "native_Fusion_updated": false
+}

@@ -1,0 +1,46 @@
+{
+  "brush_axis_mm": [
+    50,
+    2.762946202360091
+  ],
+  "current_arm_outer_faces_y_mm": [
+    -21.73705379763993,
+    27.262946202360112
+  ],
+  "free_end_holes_y_mm": [
+    -2.4370537976399254,
+    4.962946202360068
+  ],
+  "sensor_transform": [
+    2.2204460492502263e-16,
+    -1.2212453270876509e-15,
+    -1.000000000000001,
+    3.15,
+    -1.0000000000000002,
+    3.622102617839579e-15,
+    -2.2204460492502786e-16,
+    3.7462946202360063,
+    3.622102617839576e-15,
+    1.0000000000000013,
+    -1.2351231148955076e-15,
+    1.699999999999995,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "fixed_support_mm": 10,
+  "fixed_M3_screw": "M3x12, 5.2 mm nominal engagement",
+  "moving_M3_screw": "M3x8, 5.2 mm nominal engagement",
+  "cartridge_screws": "2x M3x10 + 2x standard M3 hex nuts",
+  "cartridge_bore_mm": 16,
+  "cartridge_OD_mm": 22,
+  "receiver_ID_mm": 22.6,
+  "free_end_contact_limit_y_mm": 9.46294620236007,
+  "glue": "hot glue through four 5x5 mm key windows",
+  "part_volumes_mm3": {
+    "部品１": 12989.121590887939,
+    "Brush_Load_Carrier": 5634.985662029202,
+    "Brush_Cartridge_15mm": 8519.914347057143
+  }
+}

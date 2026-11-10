@@ -1,0 +1,1256 @@
+{
+  "passed": true,
+  "failures": {
+    "path_issues": [],
+    "annuli_incomplete": [],
+    "module_issues": [],
+    "usb_hits": [],
+    "driver_hits": [],
+    "wire_hits": [],
+    "cartridge_hits": [],
+    "xiao_support_missing": false
+  },
+  "paths": [
+    {
+      "label": "empty frame onto loose tray",
+      "offset_mm": 0.1,
+      "direction": [
+        0.7685162090835727,
+        0.6040652767195253,
+        -0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "empty frame onto loose tray",
+      "offset_mm": 0.5,
+      "direction": [
+        0.7685162090835727,
+        0.6040652767195253,
+        -0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "empty frame onto loose tray",
+      "offset_mm": 1,
+      "direction": [
+        0.7685162090835727,
+        0.6040652767195253,
+        -0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "empty frame onto loose tray",
+      "offset_mm": 3,
+      "direction": [
+        0.7685162090835727,
+        0.6040652767195253,
+        -0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "empty frame onto loose tray",
+      "offset_mm": 5,
+      "direction": [
+        0.7685162090835727,
+        0.6040652767195253,
+        -0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "empty frame onto loose tray",
+      "offset_mm": 10,
+      "direction": [
+        0.7685162090835727,
+        0.6040652767195253,
+        -0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "empty frame onto loose tray",
+      "offset_mm": 20,
+      "direction": [
+        0.7685162090835727,
+        0.6040652767195253,
+        -0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "empty frame onto loose tray",
+      "offset_mm": 30,
+      "direction": [
+        0.7685162090835727,
+        0.6040652767195253,
+        -0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "empty frame onto loose tray",
+      "offset_mm": 40,
+      "direction": [
+        0.7685162090835727,
+        0.6040652767195253,
+        -0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "XIAO with headers and connectors",
+      "offset_mm": 0.1,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "XIAO with headers and connectors",
+      "offset_mm": 0.5,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "XIAO with headers and connectors",
+      "offset_mm": 1,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "XIAO with headers and connectors",
+      "offset_mm": 3,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "XIAO with headers and connectors",
+      "offset_mm": 5,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "XIAO with headers and connectors",
+      "offset_mm": 10,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "XIAO with headers and connectors",
+      "offset_mm": 20,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "XIAO with headers and connectors",
+      "offset_mm": 30,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "XIAO with headers and connectors",
+      "offset_mm": 40,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "HX711 into frame",
+      "offset_mm": 0.1,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "HX711 into frame",
+      "offset_mm": 0.5,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "HX711 into frame",
+      "offset_mm": 1,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "HX711 into frame",
+      "offset_mm": 3,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "HX711 into frame",
+      "offset_mm": 5,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "HX711 into frame",
+      "offset_mm": 10,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "HX711 into frame",
+      "offset_mm": 20,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "HX711 into frame",
+      "offset_mm": 30,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "HX711 into frame",
+      "offset_mm": 40,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "perfboard into frame",
+      "offset_mm": 0.1,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "perfboard into frame",
+      "offset_mm": 0.5,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "perfboard into frame",
+      "offset_mm": 1,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "perfboard into frame",
+      "offset_mm": 3,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "perfboard into frame",
+      "offset_mm": 5,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "perfboard into frame",
+      "offset_mm": 10,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "perfboard into frame",
+      "offset_mm": 20,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "perfboard into frame",
+      "offset_mm": 30,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "perfboard into frame",
+      "offset_mm": 40,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "rigid end plate onto frame",
+      "offset_mm": 0.1,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "rigid end plate onto frame",
+      "offset_mm": 0.5,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "rigid end plate onto frame",
+      "offset_mm": 1,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "rigid end plate onto frame",
+      "offset_mm": 3,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "rigid end plate onto frame",
+      "offset_mm": 5,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "rigid end plate onto frame",
+      "offset_mm": 10,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "rigid end plate onto frame",
+      "offset_mm": 20,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "rigid end plate onto frame",
+      "offset_mm": 30,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "rigid end plate onto frame",
+      "offset_mm": 40,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "complete cassette slides onto mounted base",
+      "offset_mm": 0.1,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "complete cassette slides onto mounted base",
+      "offset_mm": 0.5,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "complete cassette slides onto mounted base",
+      "offset_mm": 1,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "complete cassette slides onto mounted base",
+      "offset_mm": 3,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "complete cassette slides onto mounted base",
+      "offset_mm": 5,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "complete cassette slides onto mounted base",
+      "offset_mm": 10,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "complete cassette slides onto mounted base",
+      "offset_mm": 20,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "complete cassette slides onto mounted base",
+      "offset_mm": 30,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "complete cassette slides onto mounted base",
+      "offset_mm": 40,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_22",
+      "offset_mm": 0.1,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_22",
+      "offset_mm": 1,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_22",
+      "offset_mm": 3,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_22",
+      "offset_mm": 7,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_22",
+      "offset_mm": 12,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_22",
+      "offset_mm": 20,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_22",
+      "offset_mm": 30,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_34",
+      "offset_mm": 0.1,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_34",
+      "offset_mm": 1,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_34",
+      "offset_mm": 3,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_34",
+      "offset_mm": 7,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_34",
+      "offset_mm": 12,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_34",
+      "offset_mm": 20,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_34",
+      "offset_mm": 30,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_tray_-6",
+      "offset_mm": 0.1,
+      "direction": [
+        0.3101394316820215,
+        -0.6400302253466693,
+        -0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_tray_-6",
+      "offset_mm": 1,
+      "direction": [
+        0.3101394316820215,
+        -0.6400302253466693,
+        -0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_tray_-6",
+      "offset_mm": 3,
+      "direction": [
+        0.3101394316820215,
+        -0.6400302253466693,
+        -0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_tray_-6",
+      "offset_mm": 6,
+      "direction": [
+        0.3101394316820215,
+        -0.6400302253466693,
+        -0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_tray_-6",
+      "offset_mm": 12,
+      "direction": [
+        0.3101394316820215,
+        -0.6400302253466693,
+        -0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_tray_-6",
+      "offset_mm": 20,
+      "direction": [
+        0.3101394316820215,
+        -0.6400302253466693,
+        -0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_tray_-6",
+      "offset_mm": 0.1,
+      "direction": [
+        -0.3101394316820215,
+        0.6400302253466693,
+        0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_tray_-6",
+      "offset_mm": 1,
+      "direction": [
+        -0.3101394316820215,
+        0.6400302253466693,
+        0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_tray_-6",
+      "offset_mm": 3,
+      "direction": [
+        -0.3101394316820215,
+        0.6400302253466693,
+        0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_tray_-6",
+      "offset_mm": 6,
+      "direction": [
+        -0.3101394316820215,
+        0.6400302253466693,
+        0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_tray_-6",
+      "offset_mm": 12,
+      "direction": [
+        -0.3101394316820215,
+        0.6400302253466693,
+        0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_tray_-6",
+      "offset_mm": 20,
+      "direction": [
+        -0.3101394316820215,
+        0.6400302253466693,
+        0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_tray_6",
+      "offset_mm": 0.1,
+      "direction": [
+        0.3101394316820215,
+        -0.6400302253466693,
+        -0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_tray_6",
+      "offset_mm": 1,
+      "direction": [
+        0.3101394316820215,
+        -0.6400302253466693,
+        -0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_tray_6",
+      "offset_mm": 3,
+      "direction": [
+        0.3101394316820215,
+        -0.6400302253466693,
+        -0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_tray_6",
+      "offset_mm": 6,
+      "direction": [
+        0.3101394316820215,
+        -0.6400302253466693,
+        -0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_tray_6",
+      "offset_mm": 12,
+      "direction": [
+        0.3101394316820215,
+        -0.6400302253466693,
+        -0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_tray_6",
+      "offset_mm": 20,
+      "direction": [
+        0.3101394316820215,
+        -0.6400302253466693,
+        -0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_tray_6",
+      "offset_mm": 0.1,
+      "direction": [
+        -0.3101394316820215,
+        0.6400302253466693,
+        0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_tray_6",
+      "offset_mm": 1,
+      "direction": [
+        -0.3101394316820215,
+        0.6400302253466693,
+        0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_tray_6",
+      "offset_mm": 3,
+      "direction": [
+        -0.3101394316820215,
+        0.6400302253466693,
+        0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_tray_6",
+      "offset_mm": 6,
+      "direction": [
+        -0.3101394316820215,
+        0.6400302253466693,
+        0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_tray_6",
+      "offset_mm": 12,
+      "direction": [
+        -0.3101394316820215,
+        0.6400302253466693,
+        0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_tray_6",
+      "offset_mm": 20,
+      "direction": [
+        -0.3101394316820215,
+        0.6400302253466693,
+        0.7029757062364562
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_cap_-16.4",
+      "offset_mm": 0.1,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_cap_-16.4",
+      "offset_mm": 1,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_cap_-16.4",
+      "offset_mm": 3,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_cap_-16.4",
+      "offset_mm": 6,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_cap_-16.4",
+      "offset_mm": 12,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_cap_-16.4",
+      "offset_mm": 20,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_cap_-16.4",
+      "offset_mm": 0.1,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_cap_-16.4",
+      "offset_mm": 0.5,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_cap_-16.4",
+      "offset_mm": 1,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_cap_-16.4",
+      "offset_mm": 3,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_cap_-16.4",
+      "offset_mm": 6,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_cap_-16.4",
+      "offset_mm": 12,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_cap_16.4",
+      "offset_mm": 0.1,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_cap_16.4",
+      "offset_mm": 1,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_cap_16.4",
+      "offset_mm": 3,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_cap_16.4",
+      "offset_mm": 6,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_cap_16.4",
+      "offset_mm": 12,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_cap_16.4",
+      "offset_mm": 20,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_cap_16.4",
+      "offset_mm": 0.1,
+      "direction": [
+        0.559639499402756,
+        -0.4748330781490009,
+        0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_cap_16.4",
+      "offset_mm": 0.5,
+      "direction": [
+        0.559639499402756,
+        -0.4748330781490009,
+        0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_cap_16.4",
+      "offset_mm": 1,
+      "direction": [
+        0.559639499402756,
+        -0.4748330781490009,
+        0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_cap_16.4",
+      "offset_mm": 3,
+      "direction": [
+        0.559639499402756,
+        -0.4748330781490009,
+        0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_cap_16.4",
+      "offset_mm": 6,
+      "direction": [
+        0.559639499402756,
+        -0.4748330781490009,
+        0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3_nut_cap_16.4",
+      "offset_mm": 12,
+      "direction": [
+        0.559639499402756,
+        -0.4748330781490009,
+        0.6792180641029637
+      ],
+      "hits": []
+    }
+  ],
+  "bolt_bearing_annuli": [
+    {
+      "label": "arm_mount_22",
+      "expected_mm3": 111.3317604579199,
+      "present_mm3": 111.3317604579199,
+      "fraction": 1.0
+    },
+    {
+      "label": "arm_backing_22",
+      "expected_mm3": 30.712209781495172,
+      "present_mm3": 30.712209781495172,
+      "fraction": 1.0
+    },
+    {
+      "label": "arm_mount_34",
+      "expected_mm3": 111.3317604579199,
+      "present_mm3": 111.3317604579199,
+      "fraction": 1.0
+    },
+    {
+      "label": "arm_backing_34",
+      "expected_mm3": 30.712209781495172,
+      "present_mm3": 30.712209781495172,
+      "fraction": 1.0
+    },
+    {
+      "label": "tray_-6",
+      "expected_mm3": 76.78052445373774,
+      "present_mm3": 76.78052445373774,
+      "fraction": 1.0
+    },
+    {
+      "label": "mount_tongue_-6",
+      "expected_mm3": 69.10247200097261,
+      "present_mm3": 69.10247200097261,
+      "fraction": 1.0
+    },
+    {
+      "label": "tray_6",
+      "expected_mm3": 76.7805244537376,
+      "present_mm3": 76.7805244537376,
+      "fraction": 1.0
+    },
+    {
+      "label": "mount_tongue_6",
+      "expected_mm3": 69.10247200097258,
+      "present_mm3": 69.10247200097258,
+      "fraction": 1.0
+    },
+    {
+      "label": "frame_lug_-16.4",
+      "expected_mm3": 115.1707866805981,
+      "present_mm3": 115.1707866805981,
+      "fraction": 1.0
+    },
+    {
+      "label": "end_plate_-16.4",
+      "expected_mm3": 34.55123600418164,
+      "present_mm3": 34.55123600418164,
+      "fraction": 1.0
+    },
+    {
+      "label": "frame_lug_16.4",
+      "expected_mm3": 115.17078668059824,
+      "present_mm3": 115.17078668059824,
+      "fraction": 1.0
+    },
+    {
+      "label": "end_plate_16.4",
+      "expected_mm3": 34.55123600418153,
+      "present_mm3": 34.55123600418153,
+      "fraction": 1.0
+    }
+  ],
+  "xiao_support_contacts_mm3": [
+    0.07200000000017034,
+    0.0720000000002072,
+    0.06486455836344844,
+    0.06486455836343576
+  ],
+  "hardware": "6 x M3x12 and 6 x M3 nuts; physical assembly untested"
+}

@@ -1,0 +1,396 @@
+{
+  "schema": 1,
+  "issue": 17,
+  "visual_acceptance": "pending_human_review",
+  "source": "existing_ppo_evaluation",
+  "evaluation_dir": "/Users/sugawaraichirou/Documents/syodo/runs/kaisho-yohitsu-sansetsu-joyo-eval",
+  "model": "/Users/sugawaraichirou/Documents/syodo/runs/kaisho-yohitsu-sansetsu/final_model.zip",
+  "model_sha256_at_review": "ef229f002b763c1e9ae4cc178f5205bb6585face45910bd3f2b072e8ecfeff83",
+  "historical_model_hash_verified": false,
+  "characters_csv_sha256": "f102f687f8f8508ea3e17bb61498de57a845f85bb5790862fb93565d3b7f3a19",
+  "summary_json_sha256": "87c7a333e8196dbd746402351f28827e7ae38080618ab0a2ad7ea11e629f21d1",
+  "count": 2136,
+  "seed": 17,
+  "weakest_per_metric": 6,
+  "acceptance": {
+    "mean_at_least_75": true,
+    "mean_at_least_80": true,
+    "p10_at_least_80": true,
+    "minimum_at_least_60": true,
+    "all_complete": true,
+    "zero_drips": true,
+    "zero_collisions": true,
+    "mean_line_width_at_least_65": true,
+    "mean_brushwork_at_least_62": true,
+    "per_char_lw_bw_pass_fraction_at_least_95": true,
+    "mean_glyph_shape_at_least_50": true,
+    "mean_harai_finish_at_least_65": true
+  },
+  "evaluation": {
+    "ablation": "all",
+    "count": 2136,
+    "unique_character_count": 2136,
+    "layout_count": 1,
+    "success_rate": 1.0,
+    "mean_beauty_score": 84.96077834703512,
+    "p10_beauty_score": 82.44509014587655,
+    "minimum_beauty_score": 77.55756831401187,
+    "total_drips": 0,
+    "collision_count": 0,
+    "endpoint_triangle": {
+      "count": 0,
+      "mean": 100.0,
+      "minimum": 100.0
+    },
+    "component_means": {
+      "glyph_shape": 59.027929561474075,
+      "stroke_placement": 89.01136221628272,
+      "stroke_length": 97.14503220752064,
+      "stroke_angle": 98.13274616806497,
+      "line_width": 88.29298981783451,
+      "trajectory": 93.97570915825663,
+      "stroke_order": 100.0,
+      "smoothness": 95.29967981467804,
+      "brushwork": 82.97220800941858,
+      "ink_quality": 94.35309988676599,
+      "ink_loading": 68.86424318500858,
+      "drip_control": 100.0,
+      "collision_safety": 100.0,
+      "balance": 95.00606027030302
+    },
+    "component_minimums": {
+      "glyph_shape": 24.03332928929962,
+      "stroke_placement": 39.489173875834005,
+      "stroke_length": 78.97990998695359,
+      "stroke_angle": 89.24516721127883,
+      "line_width": 67.74674652428601,
+      "trajectory": 90.19473499078241,
+      "stroke_order": 100.0,
+      "smoothness": 93.38415258598071,
+      "brushwork": 65.74128691487526,
+      "ink_quality": 65.25702740987677,
+      "ink_loading": 38.825024428503994,
+      "drip_control": 100.0,
+      "collision_safety": 100.0,
+      "balance": 69.19550281636288
+    },
+    "technique_means": {
+      "hane": {
+        "count": 1784,
+        "finish": 80.99230068376731,
+        "width": 89.7237367045602
+      },
+      "harai": {
+        "count": 4544,
+        "finish": 71.38753565055117,
+        "width": 82.90350842625976
+      },
+      "tome": {
+        "count": 16038,
+        "finish": 91.14748466981311,
+        "width": 88.66043056296193
+      }
+    },
+    "layout_summaries": {},
+    "pressure_calibration_sample_count": 0,
+    "pressure_calibration_clipped_count": 0,
+    "pressure_calibration_fallback_count": 0,
+    "pressure_calibration_clip_rate": 0.0,
+    "pressure_calibration_fallback_rate": 0.0,
+    "robust_score": 82.85121429014083
+  },
+  "visual_metrics": {
+    "glyph_shape": {
+      "mean": 59.02792956147407,
+      "minimum": 24.03332928929962,
+      "below_50": 228
+    },
+    "exemplar_mask_iou": {
+      "mean": 55.324205769151575,
+      "minimum": 18.961301057317463,
+      "below_50": 484
+    }
+  },
+  "selected": [
+    {
+      "character": "一",
+      "grade": "1",
+      "glyph_shape": 75.11731927621625,
+      "exemplar_mask_iou": 68.50196715261949,
+      "ink_path": "ink/04e00-一.png",
+      "ink_sha256": "a47fa0bf59c2ae199cfe1224723b9ca071691c3567d60e066498ff304ccaece1",
+      "comparison_path": "comparisons/04e00-一.png",
+      "comparison_sha256": "0d05a8d844c20ff8732f039f34a85c56aa60f4a860cd1332c05b513dae63c171"
+    },
+    {
+      "character": "十",
+      "grade": "1",
+      "glyph_shape": 70.54389653103512,
+      "exemplar_mask_iou": 65.11197732600414,
+      "ink_path": "ink/05341-十.png",
+      "ink_sha256": "fa172d7775ebd09c0cb659f4a9739b1d25cdadf0a814fb3061155aaef1d01af5",
+      "comparison_path": "comparisons/05341-十.png",
+      "comparison_sha256": "4d70a6d6f9e5f1a35e9757ed5910f840115f2cebe4600f1f22b0a9c3e6fb3510"
+    },
+    {
+      "character": "永",
+      "grade": "5",
+      "glyph_shape": 64.92515163819911,
+      "exemplar_mask_iou": 60.119808659113886,
+      "ink_path": "ink/06c38-永.png",
+      "ink_sha256": "680190adaad4f38c3a4071ae60a45156d861289b6365c8e55f4915eadc567ced",
+      "comparison_path": "comparisons/06c38-永.png",
+      "comparison_sha256": "92d5a2a666e40b296f786e557c6e6bf3c24f1eeaf6b8f60cb849752aed32a6b4"
+    },
+    {
+      "character": "水",
+      "grade": "1",
+      "glyph_shape": 57.095466371279926,
+      "exemplar_mask_iou": 51.62429246074013,
+      "ink_path": "ink/06c34-水.png",
+      "ink_sha256": "8fab55727c369e66b4dd527c0e175bd1afb93f4d91dbefa9f3a731bf9b29375d",
+      "comparison_path": "comparisons/06c34-水.png",
+      "comparison_sha256": "50ba07f581d345564df4b732c4ec90a8e3c1dce46bd6de8e98e10393273de2f6"
+    },
+    {
+      "character": "小",
+      "grade": "1",
+      "glyph_shape": 50.22749299562974,
+      "exemplar_mask_iou": 43.77599332918134,
+      "ink_path": "ink/05c0f-小.png",
+      "ink_sha256": "52923bdcc89c3c26933605a1119ceddee6c64d600b16f826f6d1962858b5e6b2",
+      "comparison_path": "comparisons/05c0f-小.png",
+      "comparison_sha256": "a29b4d1141e82e288ccac4d997f55d1b29d39415d68b3a2c4554bf4c7202c971"
+    },
+    {
+      "character": "語",
+      "grade": "2",
+      "glyph_shape": 61.7710334478066,
+      "exemplar_mask_iou": 58.565554042636606,
+      "ink_path": "ink/08a9e-語.png",
+      "ink_sha256": "079d696b24b67451dcc754f2dd03f01c21c4e851aff4db19a942ed27ff932df7",
+      "comparison_path": "comparisons/08a9e-語.png",
+      "comparison_sha256": "d9968103c8d3d661a867c870843a963c5ebee87aff5e512f06dc346b1f3246bb"
+    },
+    {
+      "character": "教",
+      "grade": "2",
+      "glyph_shape": 69.34749107936302,
+      "exemplar_mask_iou": 65.57617054940728,
+      "ink_path": "ink/06559-教.png",
+      "ink_sha256": "1e2546395a2f7f600732f22903af838300aad760930255633c88fa2a876cb8de",
+      "comparison_path": "comparisons/06559-教.png",
+      "comparison_sha256": "95f3d90031a8983126ce571243dcfc4874384fbdf6cdb1c61c8ada0d20e5c043"
+    },
+    {
+      "character": "鬱",
+      "grade": "8",
+      "glyph_shape": 57.23287799317295,
+      "exemplar_mask_iou": 54.5657664038496,
+      "ink_path": "ink/09b31-鬱.png",
+      "ink_sha256": "cb7f91d7cb58f155e137cdc23e622b701996ad834a83586751d4bc23a49d5eb1",
+      "comparison_path": "comparisons/09b31-鬱.png",
+      "comparison_sha256": "f2bf17bb441d7484e696879d5b7372bc2aba32a4597967e9e20927554269abe0"
+    },
+    {
+      "character": "旬",
+      "grade": "8",
+      "glyph_shape": 24.03332928929962,
+      "exemplar_mask_iou": 18.961301057317463,
+      "ink_path": "ink/065ec-旬.png",
+      "ink_sha256": "afe70d0e21662c05766ead06361d00ad25f506cdd997d773decbf005c359a4a1",
+      "comparison_path": "comparisons/065ec-旬.png",
+      "comparison_sha256": "4741c7bbc758cff99af6320f2f17699fe1632fe1f879da653c2479017c5386aa"
+    },
+    {
+      "character": "目",
+      "grade": "1",
+      "glyph_shape": 25.043433949192917,
+      "exemplar_mask_iou": 20.68707735026236,
+      "ink_path": "ink/076ee-目.png",
+      "ink_sha256": "a8b60e649c23e355ba93a19569c56ebec23089f7c28d1c9f830e7e44a571e9c3",
+      "comparison_path": "comparisons/076ee-目.png",
+      "comparison_sha256": "36bb2cf1d036f15a8a940e5c0014fe34c1621072fcc69b21de150c2301f378da"
+    },
+    {
+      "character": "片",
+      "grade": "6",
+      "glyph_shape": 26.047942371001515,
+      "exemplar_mask_iou": 19.71146014007701,
+      "ink_path": "ink/07247-片.png",
+      "ink_sha256": "8b572a5028b6e027bff11a02b1be9b1acffb5a43b3c7a46a345d890ae8ad05f9",
+      "comparison_path": "comparisons/07247-片.png",
+      "comparison_sha256": "acb0ffc69ed0b629858adbcb9875f4a36dfe8795907441646b6518e5c6d3bc1d"
+    },
+    {
+      "character": "工",
+      "grade": "2",
+      "glyph_shape": 27.53527080959286,
+      "exemplar_mask_iou": 21.875331926247345,
+      "ink_path": "ink/05de5-工.png",
+      "ink_sha256": "f8dd9e439342b3c7c96573927c87ed71d713a1be55c675427f9942f0efb37891",
+      "comparison_path": "comparisons/05de5-工.png",
+      "comparison_sha256": "fe5f7fa0145f8b2fcbc0600dd09935d233198a74ebe4902583d7b239e0e97d98"
+    },
+    {
+      "character": "旨",
+      "grade": "8",
+      "glyph_shape": 27.755010776289552,
+      "exemplar_mask_iou": 22.768236733705447,
+      "ink_path": "ink/065e8-旨.png",
+      "ink_sha256": "016ffaad908b86fcc136872091545e9c98410903631fe0ee85fcf3547eb56f11",
+      "comparison_path": "comparisons/065e8-旨.png",
+      "comparison_sha256": "7400a7e65e12d52776907cc538f410ad900d575e15a076b0cd8b46261dab65a1"
+    },
+    {
+      "character": "三",
+      "grade": "1",
+      "glyph_shape": 28.495883995349086,
+      "exemplar_mask_iou": 22.186442160533485,
+      "ink_path": "ink/04e09-三.png",
+      "ink_sha256": "9bb3005501a5b33a84ec9d4fe9266ff2c75ba859bf29d7baa9a9bf339ff61136",
+      "comparison_path": "comparisons/04e09-三.png",
+      "comparison_sha256": "1be5928b99beabf124e5cd28fd78a019a6edb362f54a9926db0c91f578adabc2"
+    },
+    {
+      "character": "糸",
+      "grade": "1",
+      "glyph_shape": 38.90590317696039,
+      "exemplar_mask_iou": 33.05289027365408,
+      "ink_path": "ink/07cf8-糸.png",
+      "ink_sha256": "110e0b76193ae55e887f121549fd4ad989ab7594b050a4efbf5e20172dfa60c0",
+      "comparison_path": "comparisons/07cf8-糸.png",
+      "comparison_sha256": "a15960a64db848fb9299d6c3cdb5cd37b3686ab0d2a77ca44ba5952c77da84bf"
+    },
+    {
+      "character": "玉",
+      "grade": "1",
+      "glyph_shape": 44.85322361536961,
+      "exemplar_mask_iou": 39.205040758002994,
+      "ink_path": "ink/07389-玉.png",
+      "ink_sha256": "917b61f7d6300c624552140f2bab8c7ad4e7d1eda12bc2f128bf7f7362cf4311",
+      "comparison_path": "comparisons/07389-玉.png",
+      "comparison_sha256": "61b9ddb1e93825d1d78abfeed1723fbfb8a1f10a1d2dc7fb109d7f099e7bfc28"
+    },
+    {
+      "character": "書",
+      "grade": "2",
+      "glyph_shape": 68.71675680243533,
+      "exemplar_mask_iou": 65.966383488562,
+      "ink_path": "ink/066f8-書.png",
+      "ink_sha256": "ab84daf3ec5db5efbd689c1d858ea77a2e58b11813715dd76b8d000238651f25",
+      "comparison_path": "comparisons/066f8-書.png",
+      "comparison_sha256": "a79ad1f830af954bd6372df9f0820d02249b846c3fc876e3d756b78f344087d7"
+    },
+    {
+      "character": "父",
+      "grade": "2",
+      "glyph_shape": 55.286012989341636,
+      "exemplar_mask_iou": 50.33407402692954,
+      "ink_path": "ink/07236-父.png",
+      "ink_sha256": "157f89cbab9efb781f332a042a3c1c9a25509fc3162c893f84b5f77b8afd1b34",
+      "comparison_path": "comparisons/07236-父.png",
+      "comparison_sha256": "893f169d712faaab63a4fdea7307f5b1603fe51299273341fdbd1e3570a84f17"
+    },
+    {
+      "character": "打",
+      "grade": "3",
+      "glyph_shape": 47.41285417409354,
+      "exemplar_mask_iou": 41.696974553786234,
+      "ink_path": "ink/06253-打.png",
+      "ink_sha256": "a5f07a9c8c22fb5b478b349484784b94eeace564ab5ee6e76baadeca38221157",
+      "comparison_path": "comparisons/06253-打.png",
+      "comparison_sha256": "755bb1cbc24a1fdf0a031fd7a168c3ff128e8621a76fd553c15cb456ae053408"
+    },
+    {
+      "character": "安",
+      "grade": "3",
+      "glyph_shape": 62.580193753231164,
+      "exemplar_mask_iou": 58.65441541424949,
+      "ink_path": "ink/05b89-安.png",
+      "ink_sha256": "437dc947a734a6120c5c34e2e57ca43c3d0f659760a78dcf3a06e1f292816875",
+      "comparison_path": "comparisons/05b89-安.png",
+      "comparison_sha256": "6c63d1332ab72b9965a2c846ebd351dccfcb5245479db5958ef72677a61cf935"
+    },
+    {
+      "character": "飛",
+      "grade": "4",
+      "glyph_shape": 66.24688006637936,
+      "exemplar_mask_iou": 63.561109321747864,
+      "ink_path": "ink/098db-飛.png",
+      "ink_sha256": "f3510c3338b86f70003958e6057e55b8e2826cac3f99bbd34cc956ab6d29ff3d",
+      "comparison_path": "comparisons/098db-飛.png",
+      "comparison_sha256": "a698a662957b66d7927f43132d2989bcc75f69fdc0cd987c59dd3077e04a7cbd"
+    },
+    {
+      "character": "連",
+      "grade": "4",
+      "glyph_shape": 64.42639457132522,
+      "exemplar_mask_iou": 61.35275617071753,
+      "ink_path": "ink/09023-連.png",
+      "ink_sha256": "069e07925ff53d4845ff4c1a5b085023e6341cac2fa7f469e488f55d23d2b697",
+      "comparison_path": "comparisons/09023-連.png",
+      "comparison_sha256": "c9b8f334b2cd31951df265f3a8f94f3b2e28dd52ef839fa1c9dfd8ed5626329c"
+    },
+    {
+      "character": "適",
+      "grade": "5",
+      "glyph_shape": 61.00227395749378,
+      "exemplar_mask_iou": 58.07895128108932,
+      "ink_path": "ink/09069-適.png",
+      "ink_sha256": "0092d13cb06c5adb653569a1f63570f86fd8828f0f7ddb9c479f639119f51e77",
+      "comparison_path": "comparisons/09069-適.png",
+      "comparison_sha256": "47b04d68ebfd872e040dccdbfd001dac1b56574bdc3deb09a52e24e0b58d8364"
+    },
+    {
+      "character": "義",
+      "grade": "5",
+      "glyph_shape": 64.0536809937494,
+      "exemplar_mask_iou": 60.09770077547297,
+      "ink_path": "ink/07fa9-義.png",
+      "ink_sha256": "769012a8229de2139916cb3cf4fa88dc24561ffbb7f7064a8cb2b683668895b9",
+      "comparison_path": "comparisons/07fa9-義.png",
+      "comparison_sha256": "836fafac1174ba8333a9c86590e7f364d24ef5954c8bc2df46ee74f6bf246042"
+    },
+    {
+      "character": "諸",
+      "grade": "6",
+      "glyph_shape": 52.580344267015846,
+      "exemplar_mask_iou": 49.66115378464306,
+      "ink_path": "ink/08af8-諸.png",
+      "ink_sha256": "aa2ea5dfb03939e8cedc9a1e1f42fd1b1dad467c36dd387a3b0a23f1e1cf89bd",
+      "comparison_path": "comparisons/08af8-諸.png",
+      "comparison_sha256": "0963214993871cb7186b82cfb83816a2f821e7d4be4641ad79f9bef40e44e7f5"
+    },
+    {
+      "character": "担",
+      "grade": "6",
+      "glyph_shape": 44.30616399582601,
+      "exemplar_mask_iou": 40.16600820742159,
+      "ink_path": "ink/062c5-担.png",
+      "ink_sha256": "e13ef2e0a1c50fc3ca2c2194e801252e6c7839685baa51f7e27986ef206be5a6",
+      "comparison_path": "comparisons/062c5-担.png",
+      "comparison_sha256": "015f0dadca61a782a0c64ec0413c019adcdb4af31252cefc51d85504b49eff88"
+    },
+    {
+      "character": "嫉",
+      "grade": "8",
+      "glyph_shape": 56.81524452730938,
+      "exemplar_mask_iou": 52.528885066055366,
+      "ink_path": "ink/05ac9-嫉.png",
+      "ink_sha256": "4e2b2caf8f2bb45848c8edac08cf524b54ee39c245a4817ff8f1865eb462fe3e",
+      "comparison_path": "comparisons/05ac9-嫉.png",
+      "comparison_sha256": "1fc62d3bcb736ff755db126978e26a2933212c3c072e9e3e953c529991b1966c"
+    },
+    {
+      "character": "催",
+      "grade": "8",
+      "glyph_shape": 59.17267648441895,
+      "exemplar_mask_iou": 56.46200890426357,
+      "ink_path": "ink/050ac-催.png",
+      "ink_sha256": "13ab9315af030d7ee7b71f0c9c0499799477340804fe6e15b0bb74e57e0b85e3",
+      "comparison_path": "comparisons/050ac-催.png",
+      "comparison_sha256": "d39a97bcc05a0dee711b4a9e94b7866947aaab39e4b6d7df9ec45a69f6482665"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "model": "beauty-techniques-ppo.zip",
+  "sha256": "584d211f2a5cb0d1881e58b880e304413a75fb0a52cd03fef47d6df0ae373132",
+  "cumulative_ppo_timesteps": 115200,
+  "selected_checkpoint": "mixed-final",
+  "basic_techniques": {
+    "episodes": 7,
+    "success_rate": 1.0,
+    "mean_beauty_score": 75.12574185637894,
+    "minimum_beauty_score": 67.63299420670688,
+    "scores": {
+      "horizontal_tome": 67.63299420670688,
+      "vertical_tome": 71.77268006229355,
+      "dot_tome": 74.06880739765232,
+      "left_harai": 77.61605548500012,
+      "right_harai": 72.05958709035538,
+      "turn_tome": 79.4099336755451,
+      "hane": 83.3201350770992
+    }
+  },
+  "robustness": {
+    "deterministic": {
+      "seeds": 5,
+      "episodes": 35,
+      "success_rate": 1.0,
+      "mean_beauty_score": 75.04112692495254,
+      "between_seed_std": 0.3561666870827715,
+      "minimum_beauty_score": 67.07925292074567,
+      "mean_unintended_ink_fraction": 0.010126911951579547,
+      "maximum_peak_force": 4.323151059094741
+    },
+    "domain_randomized": {
+      "seeds": 10,
+      "episodes": 70,
+      "success_rate": 1.0,
+      "mean_beauty_score": 74.90014028825394,
+      "between_seed_std": 0.6342794158909496,
+      "minimum_beauty_score": 66.33812252321879,
+      "mean_unintended_ink_fraction": 0.013707565873217522,
+      "maximum_peak_force": 5.1361255160763495
+    }
+  },
+  "unseen_kanji": {
+    "characters": "一人小学永書美道風夢",
+    "episodes": 10,
+    "success_rate": 1.0,
+    "mean_beauty_score": 64.52913579506559,
+    "minimum_beauty_score": 53.38275373000426,
+    "scores": {
+      "一": 67.26389703075722,
+      "人": 71.72379123046832,
+      "小": 71.56273057309403,
+      "学": 53.38275373000426,
+      "永": 61.80561133501941,
+      "書": 71.16786247457851,
+      "美": 66.14334607958222,
+      "道": 54.19427359241901,
+      "風": 70.7924270375494,
+      "夢": 57.254664867183514
+    }
+  },
+  "education_kanji_generalization": {
+    "characters": 1026,
+    "success_count": 1026,
+    "success_rate": 1.0,
+    "mean_beauty_score": 65.82865596053082,
+    "median_beauty_score": 66.72261596706743,
+    "minimum_beauty_score": 44.40186961907581,
+    "maximum_peak_force": 4.662519355409558,
+    "mean_unintended_ink_fraction": 0.02790737049465492,
+    "grade_success_rates": {
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "5": 1.0,
+      "6": 1.0
+    },
+    "grade_mean_beauty_scores": {
+      "1": 70.6907378667555,
+      "2": 66.8552124935322,
+      "3": 65.13467587025475,
+      "4": 65.47848111402406,
+      "5": 64.9475088309589,
+      "6": 64.91963572638835
+    }
+  },
+  "note": "beauty_score is an engineering metric, not a human aesthetic judgement"
+}

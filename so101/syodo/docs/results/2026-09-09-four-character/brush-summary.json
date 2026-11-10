@@ -1,0 +1,76 @@
+{
+  "model": "mujoco_rigid_holder_three_segment_tuft_v2",
+  "mujoco_version": "3.11.0",
+  "physical_writing_verified": false,
+  "material_calibrated": false,
+  "arm_motion": "prescribed_waypoints_with_large_armature",
+  "material_parameters_source": "bundled_material_hypothesis_with_configured_tuft_length",
+  "ink_model": "existing_force_width_mapping_at_simulated_contact",
+  "parameters": {
+    "timestep_s": 0.001,
+    "sample_period_s": 0.01,
+    "settle_s": 0.5,
+    "stiffness_scale": 1.0,
+    "friction_scale": 1.0,
+    "distributed_contact": true
+  },
+  "brush_total_length_mm": 120.0,
+  "brush_rigid_length_mm": 79.99999999999997,
+  "brush_tuft_length_mm": 40.00000000000001,
+  "unbent_tip_reference_gap_mm": 1.3904866443919909e-14,
+  "paper_surface_z_m": 0.014444658759796392,
+  "paper_contact_solref": [
+    0.05,
+    1.0
+  ],
+  "brush_joint_stiffness": [
+    0.035,
+    0.035,
+    0.026,
+    0.026,
+    0.018,
+    0.018
+  ],
+  "brush_joint_damping": [
+    0.002,
+    0.002,
+    0.0016,
+    0.0016,
+    0.0012,
+    0.0012
+  ],
+  "metrics": {
+    "duration_s": 252.7500000008428,
+    "intended_contact_s": 60.62499999994941,
+    "actual_contact_s": 38.83700000000019,
+    "missed_contact_s": 31.875000000015973,
+    "missed_contact_fraction": 0.5257731958769909,
+    "unintended_contact_s": 10.086999999999849,
+    "high_air_s": 159.27400000039646,
+    "high_air_contact_s": 0.0,
+    "high_air_contact_fraction": 0.0,
+    "contact_xy_error_p90_mm": 7.369431226475349,
+    "contact_xy_error_max_mm": 13.006763229912687,
+    "force_peak_n": 5.396714562950233,
+    "contact_impulse_ns": 81.01470590191559,
+    "deflection_max_mm": 13.63099481883206,
+    "bend_max_deg": 13.964831295293422,
+    "prescribed_arm_error_max_deg": 1.2788374263228508e-10,
+    "ink_area_mm2": 1390.9999999999998,
+    "unintended_ink_fraction": 0.13964032219541653,
+    "solver_warnings": 0
+  },
+  "limitations": [
+    "stiffness, friction, damping and tip cross section unmeasured",
+    "ink pressure and width are not calibrated for the physical 40 mm tuft",
+    "three capsule bundles and terminal sphere; individual and split hairs omitted",
+    "capsule radius does not reproduce water-dependent hair opening",
+    "no servo lag or closed-loop pressure correction replayed",
+    "no hardware acceptance inferred from simulated contact"
+  ],
+  "word": "春夏秋冬",
+  "scenario": "nominal",
+  "trace_sha256": "b2ea8559800cfc606403998c59499447ca10efcc0c8af68e3abec6c1512c6d88",
+  "desk_fingerprint": "3f9a6e1cafd672cd9e26f1a68e1ff51366fd454ad58288d35376c344c706a6e9",
+  "speed": 1.5
+}

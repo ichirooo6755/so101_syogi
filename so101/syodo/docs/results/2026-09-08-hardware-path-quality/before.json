@@ -1,0 +1,110 @@
+{
+  "results": [
+    {
+      "word": "文字",
+      "trace": "/Users/sugawaraichirou/Documents/syodo/runs/hardware-quality-20260908/before/trace-文字.npz",
+      "trace_schema": 3,
+      "trace_sha256": "18a59f0f0931f0073cea10c9d0120eafdc29c5f9a1473da6ff42cffdbc58b9b8",
+      "desk_fingerprint": "bf996c3c718a2f73cc64980e18b8f1d1a5518e890c5deb9db0b6474c32bcbd0a",
+      "count": 754,
+      "pen_down_count": 282,
+      "measurement_kind": "forward_kinematics_of_commanded_positions",
+      "physical_writing_verified": false,
+      "metrics": {
+        "fk_error_max_mm": 18.373878318950634,
+        "fk_error_p90_mm": 1.7968909905754364,
+        "write_fk_error_max_mm": 18.373878318950634,
+        "write_xy_error_max_mm": 5.580383006446839,
+        "tilt_max_deg": 11.116049802829705,
+        "joint_step_max_deg": 72.77713234338655,
+        "joint_margin_min_deg": 2.0000000000000027,
+        "air_fk_error_max_mm": 0.06342394423923747,
+        "transfer_clearance_min_mm": 40.355185601777,
+        "last_clearance_mm": 40.26773647387586,
+        "standby_error_mm": 0.023141223986084158
+      },
+      "gates": {
+        "position_within_1mm": false,
+        "upright_within_8deg": false,
+        "step_within_5deg": false,
+        "joint_margin_2deg": true,
+        "air_position_within_1mm": true,
+        "transfer_clearance_60mm": false,
+        "final_lift_60mm": false,
+        "standby_position_within_1mm": true
+      },
+      "passed": false
+    },
+    {
+      "word": "学習",
+      "trace": "/Users/sugawaraichirou/Documents/syodo/runs/hardware-quality-20260908/before/trace-学習.npz",
+      "trace_schema": 3,
+      "trace_sha256": "65f7cafa8179c2c89cfce9c6891de9d255f078e7756128f533dffa1fc8f5df4b",
+      "desk_fingerprint": "bf996c3c718a2f73cc64980e18b8f1d1a5518e890c5deb9db0b6474c32bcbd0a",
+      "count": 1296,
+      "pen_down_count": 375,
+      "measurement_kind": "forward_kinematics_of_commanded_positions",
+      "physical_writing_verified": false,
+      "metrics": {
+        "fk_error_max_mm": 17.238828802073776,
+        "fk_error_p90_mm": 1.8552062555127902,
+        "write_fk_error_max_mm": 17.238828802073776,
+        "write_xy_error_max_mm": 4.461276394486731,
+        "tilt_max_deg": 10.810892942084024,
+        "joint_step_max_deg": 58.867454829273385,
+        "joint_margin_min_deg": 2.0000000000000027,
+        "air_fk_error_max_mm": 0.060613818400618705,
+        "transfer_clearance_min_mm": 40.10656903347068,
+        "last_clearance_mm": 40.59963224628958,
+        "standby_error_mm": 0.023141223986084158
+      },
+      "gates": {
+        "position_within_1mm": false,
+        "upright_within_8deg": false,
+        "step_within_5deg": false,
+        "joint_margin_2deg": true,
+        "air_position_within_1mm": true,
+        "transfer_clearance_60mm": false,
+        "final_lift_60mm": false,
+        "standby_position_within_1mm": true
+      },
+      "passed": false
+    },
+    {
+      "word": "菅原",
+      "trace": "/Users/sugawaraichirou/Documents/syodo/runs/hardware-quality-20260908/before/trace-菅原.npz",
+      "trace_schema": 3,
+      "trace_sha256": "4d1a5930803fa7d461ea07430afa63c83e02a671e4881f731d0485a4b648b2a9",
+      "desk_fingerprint": "bf996c3c718a2f73cc64980e18b8f1d1a5518e890c5deb9db0b6474c32bcbd0a",
+      "count": 1438,
+      "pen_down_count": 395,
+      "measurement_kind": "forward_kinematics_of_commanded_positions",
+      "physical_writing_verified": false,
+      "metrics": {
+        "fk_error_max_mm": 22.857362011275548,
+        "fk_error_p90_mm": 1.8757635722150008,
+        "write_fk_error_max_mm": 22.857362011275548,
+        "write_xy_error_max_mm": 6.870220448517116,
+        "tilt_max_deg": 12.53282028081172,
+        "joint_step_max_deg": 79.92689648557534,
+        "joint_margin_min_deg": 2.0000000000000027,
+        "air_fk_error_max_mm": 0.057568656705314185,
+        "transfer_clearance_min_mm": 40.2003078259818,
+        "last_clearance_mm": 40.26413090121336,
+        "standby_error_mm": 0.023141223986084158
+      },
+      "gates": {
+        "position_within_1mm": false,
+        "upright_within_8deg": false,
+        "step_within_5deg": false,
+        "joint_margin_2deg": true,
+        "air_position_within_1mm": true,
+        "transfer_clearance_60mm": false,
+        "final_lift_60mm": false,
+        "standby_position_within_1mm": true
+      },
+      "passed": false
+    }
+  ],
+  "passed": false
+}

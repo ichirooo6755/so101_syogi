@@ -1,0 +1,28 @@
+const fs = require('fs');
+const vm = require('vm');
+const assert = require('assert');
+const html = fs.readFileSync('scripts/follower_pad/index.html', 'utf8');
+const source = html.split('<script>')[1].split('</script>')[0];
+const els = new Map();
+const el = id => {if (!els.has(id)) els.set(id, {textContent:'', disabled:false, checked:false, value:'20'}); return els.get(id)};
+const buttons = Array.from({length: 16}, () => ({pressed:false, value:0}));
+const gamepad = {connected:true, mapping:'standard', index:0, axes:[.5,-.4,0,0], buttons};
+let sent;
+const context = {document:{visibilityState:'visible',getElementById:el}, navigator:{getGamepads:()=>[gamepad]}, setInterval:()=>{}, confirm:()=>false, fetch:async (url, request)=>{sent = JSON.parse(request.body); return {ok:true,json:async()=>({preferences:{speed:20,mirror:false}, mode:'controller', state:'停止', usb:true, armed:false, calibration_state:'idle',calibration_target:'Follower', calibration_connected:false,calibration_ranges:{}})};}};
+vm.createContext(context);
+vm.runInContext(source.replace('setInterval(tick,70);tick();', ''), context);
+(async()=>{
+  await context.tick();
+  buttons[7].value=.7; buttons[12].pressed=true; buttons[15].pressed=true;
+  await context.tick();
+  assert.deepStrictEqual(sent.axes, [.5,.4,.7,-1,1,0]);
+  assert.strictEqual(sent.neutral_extra, false);
+  el('mirror').checked=true;
+  await context.tick();
+  assert.deepStrictEqual(sent.axes, [-.5,.4,.7,-1,-1,0]);
+  buttons[6].value=.7; buttons[7].value=.7;
+  await context.tick();
+  assert.strictEqual(sent.axes[2], 0);
+  assert.strictEqual(sent.neutral_extra, false);
+  console.log('gamepad mapping OK');
+})().catch(e=>{console.error(e);process.exitCode=1});

@@ -1,0 +1,313 @@
+<mujoco model="so101_calligraphy">
+  <!--
+    Lightweight training model. Joint names, order, limits, and principal link
+    lengths follow TheRobotStudio's public so101_new_calib.urdf. Meshes are
+    intentionally replaced by primitives for fast Apple Silicon CPU training.
+  -->
+  <compiler angle="radian" autolimits="true" inertiafromgeom="true"/>
+  <option timestep="0.005" gravity="0 0 -9.81" integrator="implicitfast">
+    <flag contact="enable"/>
+  </option>
+
+  <default>
+    <joint damping="1.1" armature="0.015" frictionloss="0.04" limited="true"/>
+    <geom density="320" friction="0.9 0.02 0.002" condim="3"/>
+    <site group="2"/>
+  </default>
+
+  <visual>
+    <headlight ambient="0.35 0.35 0.35" diffuse="0.75 0.75 0.75" specular="0.1 0.1 0.1"/>
+    <rgba haze="0.95 0.95 0.98 1"/>
+    <global azimuth="-130" elevation="-28" offwidth="1280" offheight="960"/>
+  </visual>
+
+  <asset>
+    <texture name="grid" type="2d" builtin="checker" rgb1="0.93 0.93 0.93"
+             rgb2="0.86 0.86 0.86" width="512" height="512"/>
+    <material name="floor_material" texture="grid" texrepeat="4 4" reflectance="0.05"/>
+    <material name="paper_material" rgba="0.98 0.97 0.91 1"/>
+    <material name="printed_yellow" rgba="1.0 0.72 0.08 1"/>
+    <material name="motor_dark" rgba="0.12 0.14 0.17 1"/>
+    <material name="brush_dark" rgba="0.14 0.07 0.025 1"/>
+    <material name="inkstone_material" rgba="0.055 0.060 0.070 1"/>
+    <material name="ink_material" rgba="0.008 0.006 0.006 1"/>
+  </asset>
+
+  <worldbody>
+    <light pos="0.0 -0.35 0.65" dir="0.2 0.3 -1" directional="true"/>
+    <geom name="floor" type="plane" pos="0 0 -0.001" size="1 1 0.02"
+          material="floor_material"/>
+    <!-- solref の時定数を既定 0.02 から 0.05 へ。既定では紙が硬すぎて、穂先が
+         0.164mm しか食い込んでいない払いの末端でも接触力 0.474N が残り、
+         force_pressure = 1-exp(-F/1.5) が 0.27 を返していた。計画の末端目標圧
+         0.02 に必要な力は 0.034N なので 14 倍の乖離があり、「筆を浮かせながら
+         引く」動作が物理的に成立しなかった。制御側の対策（引き上げ上限・サーボ
+         ゲイン・穂の剛性）がことごとく無効だったのはこのため。
+         0.07 まで柔らかくすると line_width が 90.58->86.64 と崩れ、0.10 では
+         滞留して完走しない。 -->
+    <!-- 紙。2026-08-21: 上端ヒンジの可動ボディにしたところ、筆に押されて振動し
+         接触ソルバが収束しない字（広・戸など）が出て、評価が CPU 95% で無限
+         ループした（学習は 1 プロセスなので通るが、評価は並列なので 1 つ詰まると
+         全体が終わらない）。実機忠実性より評価の完走を優先し固定に戻す。
+         可動版は git 履歴（2026-08-21 の commit）にあり、接触パラメータを
+         詰めてから入れ直す。solref の柔らかさ（0.05）は残す。 -->
+    <geom name="paper" type="box" pos="0.200 0 0.007" size="0.105 0.1485 0.005"
+          material="paper_material" friction="0.8 0.02 0.002"
+          contype="0" conaffinity="2"
+          solref="0.05 1"/>
+    <geom name="inkstone_base" type="box" pos="0.205 -0.205 0.008"
+          size="0.055 0.044 0.008" material="inkstone_material" friction="1.0 0.03 0.004"
+          contype="0" conaffinity="0"/>
+    <geom name="ink_pool" type="box" pos="0.205 -0.205 0.021"
+          size="0.038 0.027 0.003" material="ink_material" friction="0.35 0.015 0.002"
+          contype="0" conaffinity="2"
+          solref="0.010 1" solimp="0.88 0.97 0.003"/>
+    <geom name="inkstone_lip" type="box" pos="0.205 -0.161 0.021"
+          size="0.050 0.006 0.006" material="inkstone_material" friction="1.25 0.035 0.005"
+          contype="0" conaffinity="2"/>
+    <camera name="overview" pos="0.52 -0.52 0.43"
+            xyaxes="0.72 0.69 0 -0.43 0.45 0.78"/>
+
+    <body name="target_mocap" mocap="true" pos="0.235 0 0.055">
+      <site name="target_marker" type="sphere" size="0.005" rgba="0.95 0.12 0.12 0.9" group="3"/>
+    </body>
+
+    <body name="trajectory_display" pos="0 0 0">
+      <site name="path_marker_000" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_001" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_002" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_003" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_004" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_005" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_006" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_007" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_008" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_009" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_010" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_011" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_012" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_013" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_014" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_015" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_016" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_017" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_018" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_019" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_020" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_021" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_022" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_023" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_024" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_025" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_026" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_027" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_028" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_029" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_030" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_031" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_032" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_033" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_034" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_035" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_036" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_037" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_038" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_039" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_040" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_041" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_042" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_043" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_044" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_045" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_046" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_047" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_048" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_049" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_050" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_051" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_052" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_053" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_054" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_055" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_056" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_057" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_058" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_059" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_060" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_061" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_062" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_063" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_064" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_065" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_066" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_067" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_068" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_069" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_070" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_071" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_072" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_073" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_074" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_075" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_076" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_077" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_078" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_079" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_080" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_081" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_082" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_083" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_084" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_085" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_086" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_087" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_088" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_089" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_090" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_091" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_092" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_093" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_094" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+      <site name="path_marker_095" pos="0 0 -1" type="sphere" size="0.0018" rgba="0.15 0.45 0.95 0" group="3"/>
+    </body>
+
+    <!-- 実機は 35mm スペーサー上。短い筆でも前腕を机へ通さず elbow-up を保つ。 -->
+    <body name="base_link" pos="0 0 0.100">
+      <geom name="base_geom" type="cylinder" pos="0 0 0.030" size="0.055 0.030"
+            material="printed_yellow"/>
+
+      <body name="shoulder_pan_link" pos="0.0388353 0 0.0624">
+        <joint name="shoulder_pan" type="hinge" axis="0 0 1" range="-1.91986 1.91986"/>
+        <geom name="shoulder_pan_geom" type="cylinder" pos="0 0 0.028" size="0.026 0.030"
+              material="motor_dark"/>
+
+        <body name="shoulder_lift_link" pos="0 0 0.055">
+          <joint name="shoulder_lift" type="hinge" axis="0 1 0" range="-1.74533 1.74533"/>
+          <geom name="upper_arm_geom" type="capsule" fromto="0 0 0 0.11257 0 0"
+                size="0.018" material="printed_yellow"/>
+
+          <body name="elbow_link" pos="0.11257 0 0">
+            <joint name="elbow_flex" type="hinge" axis="0 1 0" range="-1.69 1.69"/>
+            <geom name="elbow_motor_geom" type="cylinder" euler="1.570796 0 0"
+                  size="0.024 0.021" material="motor_dark"/>
+            <geom name="lower_arm_geom" type="capsule" fromto="0 0 0 0.1349 0 0"
+                  size="0.017" material="printed_yellow"/>
+
+            <body name="wrist_flex_link" pos="0.1349 0 0">
+              <joint name="wrist_flex" type="hinge" axis="0 1 0" range="-1.65806 1.65806"/>
+              <geom name="wrist_flex_geom" type="capsule" fromto="0 0 0 0.055 0 0"
+                    size="0.016" material="printed_yellow"/>
+
+              <body name="wrist_roll_link" pos="0.055 0 0">
+                <joint name="wrist_roll" type="hinge" axis="1 0 0" range="-2.74385 2.84121"/>
+                <!-- ponytail: この円柱と箱は軽量表示用で、実 STEP の follower / 固定顎
+                     より下へ張り出して短い筆より先に紙・硯へ当たる。衝突形状が必要に
+                     なった時は assembly_reference.step から低ポリ mesh を作る。 -->
+                <geom name="wrist_roll_geom" type="cylinder" euler="0 1.570796 0"
+                      size="0.021 0.026" material="motor_dark"
+                      contype="0" conaffinity="0"/>
+                <geom name="gripper_body_geom" type="box" pos="0.027 0 0"
+                      size="0.029 0.022 0.018" material="printed_yellow"
+                      contype="0" conaffinity="0"/>
+
+                <!-- Fusion `so101書道` の確定アセンブリ。サーボ軸は follower
+                     座標系の Y、筆軸はそれと直角で X に 7.765mm オフセットする。
+                     穂先はピボットから 30mm、穂は 38mm、軸は 18mm。 -->
+                <body name="brush_tilt_link" pos="0.020077 0 0.024350">
+                  <joint name="gripper" type="hinge" axis="0 1 0"
+                         range="-0.174533 1.74533" ref="0.7853981634"/>
+                  <geom name="tilt_yoke_geom" type="capsule"
+                        fromto="0 0 0 0.007764571 0 0.009022225" size="0.006"
+                        material="motor_dark" density="900"
+                        contype="0" conaffinity="0"/>
+                  <geom name="brush_shaft" type="capsule"
+                        fromto="0.007764571 0 0.009022225 0.007764571 0 0.027022225"
+                        size="0.005" material="brush_dark" density="120"/>
+                  <!-- Site/body の +X を実物の筆先方向 (-Z) へ向けることで、
+                       既存の分節穂と姿勢 Jacobian をそのまま使う。 -->
+                  <site name="brush_mount_site" pos="0.007764571 0 0.009022225"
+                        quat="0.7071067812 0 0.7071067812 0" size="0.0015"
+                        rgba="0.25 0.12 0.03 0"/>
+                  <site name="brush_rest_tip_site" pos="0.007764571 0 -0.028977775"
+                        size="0.0015"
+                        rgba="0.25 0.12 0.03 0"/>
+
+                  <body name="brush_bristle_link" pos="0.007764571 0 0.009022225"
+                        quat="0.7071067812 0 0.7071067812 0">
+                    <joint name="brush_bend_y" type="hinge" axis="0 1 0"
+                           range="-0.45 0.45" stiffness="0.035" springref="0"
+                           damping="0.002" frictionloss="0.0002" armature="0.00002"/>
+                    <joint name="brush_bend_z" type="hinge" axis="0 0 1"
+                           range="-0.45 0.45" stiffness="0.035" springref="0"
+                           damping="0.002" frictionloss="0.0002" armature="0.00002"/>
+                    <geom name="brush_bristles" type="capsule" fromto="0 0 0 0.01209 0 0"
+                          size="0.0028" rgba="0.09 0.035 0.012 1" density="65"
+                          contype="0" conaffinity="0"/>
+                    <body name="brush_mid_link" pos="0.01209 0 0">
+                      <joint name="brush_mid_bend_y" type="hinge" axis="0 1 0"
+                             range="-0.40 0.40" stiffness="0.026" springref="0"
+                             damping="0.0016" frictionloss="0.00015" armature="0.000015"/>
+                      <joint name="brush_mid_bend_z" type="hinge" axis="0 0 1"
+                             range="-0.40 0.40" stiffness="0.026" springref="0"
+                             damping="0.0016" frictionloss="0.00015" armature="0.000015"/>
+                      <geom name="brush_bristles_mid" type="capsule" fromto="0 0 0 0.01209 0 0"
+                            size="0.00245" rgba="0.075 0.028 0.010 1" density="58"
+                            contype="0" conaffinity="0"/>
+                      <body name="brush_tip_link" pos="0.01209 0 0">
+                        <joint name="brush_tip_bend_y" type="hinge" axis="0 1 0"
+                               range="-0.36 0.36" stiffness="0.018" springref="0"
+                               damping="0.0012" frictionloss="0.0001" armature="0.00001"/>
+                        <joint name="brush_tip_bend_z" type="hinge" axis="0 0 1"
+                               range="-0.36 0.36" stiffness="0.018" springref="0"
+                               damping="0.0012" frictionloss="0.0001" armature="0.00001"/>
+                        <site name="brush_terminal_root_site" pos="0 0 0" size="0.001"
+                              rgba="0.05 0.02 0.01 0"/>
+                        <geom name="brush_bristles_tip" type="capsule" fromto="0 0 0 0.01036 0 0"
+                              size="0.0021" rgba="0.055 0.020 0.008 1" density="52"
+                              contype="0" conaffinity="0"/>
+                        <geom name="brush_tip" type="sphere" pos="0.01382 0 0" size="0.0025"
+                              rgba="0.025 0.015 0.01 1" density="55" friction="1.1 0.025 0.003"
+                              contype="2" conaffinity="1"
+                              solref="0.006 1" solimp="0.92 0.98 0.002"/>
+                        <site name="brush_tip_site" pos="0.01382 0 0" size="0.0018"
+                              rgba="0.05 0.02 0.01 1"/>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <!-- 傾斜リンクは手首の子。同一剛体だった頃は衝突しなかったが、
+       ジョイントで分けたので隣接ボディ同士を除外する。穂は曲がると
+       ホルダへ戻るので、tip と手首の接触も書字の自己衝突にしない。 -->
+  <contact>
+    <exclude body1="wrist_roll_link" body2="brush_tilt_link"/>
+    <exclude body1="wrist_roll_link" body2="brush_bristle_link"/>
+    <exclude body1="wrist_roll_link" body2="brush_mid_link"/>
+    <exclude body1="wrist_roll_link" body2="brush_tip_link"/>
+    <exclude body1="brush_tilt_link" body2="brush_bristle_link"/>
+    <exclude body1="brush_tilt_link" body2="brush_mid_link"/>
+    <exclude body1="brush_tilt_link" body2="brush_tip_link"/>
+  </contact>
+
+  <actuator>
+    <position name="shoulder_pan_motor" joint="shoulder_pan" kp="45" kv="4"
+              ctrlrange="-1.91986 1.91986"/>
+    <position name="shoulder_lift_motor" joint="shoulder_lift" kp="45" kv="4"
+              ctrlrange="-1.74533 1.74533"/>
+    <position name="elbow_flex_motor" joint="elbow_flex" kp="40" kv="3.5"
+              ctrlrange="-1.69 1.69"/>
+    <position name="wrist_flex_motor" joint="wrist_flex" kp="35" kv="3"
+              ctrlrange="-1.65806 1.65806"/>
+    <position name="wrist_roll_motor" joint="wrist_roll" kp="25" kv="2.5"
+              ctrlrange="-2.74385 2.84121"/>
+    <position name="gripper_motor" joint="gripper" kp="20" kv="2"
+              ctrlrange="-0.174533 1.74533"/>
+  </actuator>
+</mujoco>

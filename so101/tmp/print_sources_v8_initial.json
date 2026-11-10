@@ -1,0 +1,554 @@
+{
+  "fusion_version": "2705.1.30",
+  "active_command": "SelectCommand",
+  "active_document": "so101書道",
+  "documents": [
+    {
+      "name": "SC616C_1kg_Fusion.f3d ",
+      "modified": false,
+      "data_id": "urn:adsk.wipprod:dm.lineage:ex5Zzo5OQp6rMH_XefpmOg",
+      "version": 1,
+      "timeline": [
+        2,
+        2
+      ],
+      "occurrences": []
+    },
+    {
+      "name": "部品１_V8_元取付形状保持",
+      "modified": false,
+      "data_id": "urn:adsk.wipprod:dm.lineage:XtiWTLVgQnG9rXbhTDzOxQ",
+      "version": 2,
+      "timeline": [
+        1,
+        1
+      ],
+      "occurrences": []
+    },
+    {
+      "name": "Wrist_Roll_Clearance_V8_元取付対応",
+      "modified": false,
+      "data_id": "urn:adsk.wipprod:dm.lineage:qSwc8phQRdK6pMUhhr_QoA",
+      "version": 3,
+      "timeline": [
+        1,
+        1
+      ],
+      "occurrences": []
+    },
+    {
+      "name": "部品１_V5_短縮補強_16mm",
+      "modified": false,
+      "data_id": "urn:adsk.wipprod:dm.lineage:ZmrWKX4PQdGbIw2Ef1jI9w",
+      "version": 1,
+      "timeline": [
+        75,
+        75
+      ],
+      "occurrences": []
+    },
+    {
+      "name": "so101書道",
+      "modified": false,
+      "data_id": "urn:adsk.wipprod:dm.lineage:daA_9GXeT5CRZG-dahRL9A",
+      "version": 26,
+      "timeline": [
+        520,
+        520
+      ],
+      "occurrences": [
+        {
+          "name": "Wrist_Roll_Follower_SO101 v1:1",
+          "visible": false,
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "bodies": [
+            {
+              "name": "ボディ1",
+              "solid": true,
+              "lumps": 0,
+              "volume_mm3": 0.0
+            },
+            {
+              "name": "ボディ2",
+              "solid": true,
+              "lumps": 1,
+              "volume_mm3": 40239.62780957502
+            }
+          ]
+        },
+        {
+          "name": "部品１:1",
+          "visible": false,
+          "transform": [
+            0.9999999999999991,
+            -3.2751579226441956e-15,
+            4.3293867896380924e-15,
+            -0.1622628494696552,
+            -1.8318679906315213e-15,
+            -1.0000000000000007,
+            -4.0245584642661915e-16,
+            0.12629462023601076,
+            1.165734175856402e-15,
+            -1.1518563880485997e-15,
+            -1.0,
+            3.3895568113228793,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "bodies": [
+            {
+              "name": "SO101_Yoke_SC616C_Slide_In_Base",
+              "solid": true,
+              "lumps": 1,
+              "volume_mm3": 15190.66848698307
+            }
+          ]
+        },
+        {
+          "name": "SC616C_1kg_Fusion:1",
+          "visible": true,
+          "transform": [
+            2.2204460492502263e-16,
+            -1.2212453270876509e-15,
+            -1.000000000000001,
+            6.35,
+            -1.0000000000000002,
+            3.622102617839579e-15,
+            -2.2204460492502786e-16,
+            3.7462946202360055,
+            3.622102617839576e-15,
+            1.0000000000000013,
+            -1.235123114895508e-15,
+            3.199999999999995,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "bodies": []
+        },
+        {
+          "name": "Brush_Load_Carrier:1",
+          "visible": false,
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "bodies": [
+            {
+              "name": "Brush_Load_Carrier_M3_Captive_Nuts_FDM",
+              "solid": true,
+              "lumps": 1,
+              "volume_mm3": 6331.074693360861
+            }
+          ]
+        },
+        {
+          "name": "Brush_Cartridge_15mm:1",
+          "visible": false,
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "bodies": [
+            {
+              "name": "Brush_Cartridge_15mm_FDM",
+              "solid": true,
+              "lumps": 1,
+              "volume_mm3": 8531.709330455738
+            }
+          ]
+        },
+        {
+          "name": "SC616C_Slide_In_Top_Cover:1",
+          "visible": false,
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "bodies": [
+            {
+              "name": "SC616C_Slide_In_Top_Cover_FDM",
+              "solid": true,
+              "lumps": 1,
+              "volume_mm3": 2651.583812865026
+            }
+          ]
+        },
+        {
+          "name": "Wrist_Roll_Follower_SO101 v1:3",
+          "visible": false,
+          "transform": [
+            0.9999999999999936,
+            5.04811271609238e-44,
+            4.116867849121931e-30,
+            -0.19999999999999996,
+            -7.138335960180981e-44,
+            -0.9999999999999939,
+            1.340594302234876e-14,
+            0.022196673926735244,
+            6.113672015462816e-30,
+            -1.3405943022348844e-14,
+            -1.0000000000000002,
+            3.2777638160534086,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "bodies": [
+            {
+              "name": "ボディ1",
+              "solid": true,
+              "lumps": 0,
+              "volume_mm3": 0.0
+            },
+            {
+              "name": "ボディ2",
+              "solid": true,
+              "lumps": 1,
+              "volume_mm3": 40239.62780957502
+            }
+          ]
+        },
+        {
+          "name": "Brush_Load_Carrier_Centered:1",
+          "visible": false,
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "bodies": [
+            {
+              "name": "Centered_Carrier_M3_Captive_Nuts_FDM",
+              "solid": true,
+              "lumps": 1,
+              "volume_mm3": 8457.924935501684
+            }
+          ]
+        },
+        {
+          "name": "Brush_Cartridge_Centered_15mm:1",
+          "visible": false,
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "bodies": [
+            {
+              "name": "Centered_15mm_Hot_Glue_Cartridge_With_Stop",
+              "solid": true,
+              "lumps": 1,
+              "volume_mm3": 8933.833190115252
+            }
+          ]
+        },
+        {
+          "name": "部品１_V5可動域改善:1",
+          "visible": false,
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "bodies": [
+            {
+              "name": "V5_one_piece_yoke_M3_clearance_slide_socket",
+              "solid": true,
+              "lumps": 1,
+              "volume_mm3": 29688.678172181015
+            }
+          ]
+        },
+        {
+          "name": "Brush_Load_Carrier_Compact_V5:1",
+          "visible": true,
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            -1.6,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "bodies": [
+            {
+              "name": "V5_compact_carrier_two_M3_nuts",
+              "solid": true,
+              "lumps": 1,
+              "volume_mm3": 6573.724935501749
+            }
+          ]
+        },
+        {
+          "name": "Brush_Cartridge_Symmetric_15mm_V5:1",
+          "visible": true,
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            -1.6,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "bodies": [
+            {
+              "name": "V5_XY_mirror_symmetric_hot_glue_cartridge",
+              "solid": true,
+              "lumps": 1,
+              "volume_mm3": 6846.800123811279
+            }
+          ]
+        },
+        {
+          "name": "Wrist_Roll_Clearance_V5:1",
+          "visible": false,
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "bodies": [
+            {
+              "name": "V5_wrist_with_concentric_pad_relief",
+              "solid": true,
+              "lumps": 1,
+              "volume_mm3": 3.3316342766821095e-05
+            },
+            {
+              "name": "V5_wrist_with_concentric_pad_relief (1)",
+              "solid": true,
+              "lumps": 1,
+              "volume_mm3": 22072.992902446946
+            }
+          ]
+        },
+        {
+          "name": "部品１_V5_短縮補強_16mm:1",
+          "visible": false,
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "bodies": [
+            {
+              "name": "V6_short_deep_rails_closed_tie_supported_socket",
+              "solid": true,
+              "lumps": 1,
+              "volume_mm3": 34383.20028727208
+            }
+          ]
+        },
+        {
+          "name": "部品１_V8_元取付形状保持:1",
+          "visible": true,
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "bodies": [
+            {
+              "name": "ボディ1",
+              "solid": true,
+              "lumps": 1,
+              "volume_mm3": 38550.50206478457
+            }
+          ]
+        },
+        {
+          "name": "Wrist_Roll_Clearance_V8_元取付対応:1",
+          "visible": true,
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "bodies": [
+            {
+              "name": "Wrist_V8_latest_user_edits_plus_shallow_annular_reliefs",
+              "solid": true,
+              "lumps": 1,
+              "volume_mm3": 22025.213051512656
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2053 @@
+{
+  "active_document": "部品１_V7_閉断面台座補強",
+  "active_command": "SelectCommand",
+  "active_product": "adsk::fusion::Design",
+  "selections": [],
+  "documents": [
+    {
+      "name": "SC616C_1kg_Fusion.f3d ",
+      "modified": false,
+      "root_bodies": [],
+      "occurrences": [
+        {
+          "name": "Aluminium_body_M3_nominal_relief_APPROX_no_resin_no_cable:1",
+          "bodies": [
+            {
+              "name": "ボディ1",
+              "volume_mm3": 1844.3186979165364,
+              "material": {
+                "name": "鋼",
+                "id": "PrismMaterial-018",
+                "properties": {
+                  "structural_Density": {
+                    "value": 7850.0,
+                    "units": "KilogramPerCubicMeter"
+                  },
+                  "structural_Minimum_tensile_strength": {
+                    "value": 345000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Minimum_yield_stress": {
+                    "value": 207000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Poisson_ratio": {
+                    "value": 0.3,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_12": {
+                    "value": 0.3,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_23": {
+                    "value": 0.3,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_X": {
+                    "value": 0.3,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Y": {
+                    "value": 0.3,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Z": {
+                    "value": 0.3,
+                    "units": "Unitless"
+                  },
+                  "structural_Shear_modulus": {
+                    "value": 80000000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_12": {
+                    "value": 80000000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_X": {
+                    "value": 80000000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Y": {
+                    "value": 80000000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Z": {
+                    "value": 80000000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus": {
+                    "value": 210000000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_1": {
+                    "value": 210000000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_2": {
+                    "value": 210000000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_X": {
+                    "value": 210000000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Y": {
+                    "value": 210000000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Z": {
+                    "value": 210000000.0,
+                    "units": "Kilopascal"
+                  },
+                  "thermal_Density": {
+                    "value": 7850.0,
+                    "units": "KilogramPerCubicMeter"
+                  }
+                }
+              },
+              "bbox_mm": [
+                [
+                  0.0,
+                  -4.5,
+                  0.0
+                ],
+                [
+                  45.0,
+                  4.5,
+                  6.000000000000001
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "部品１_V5_短縮補強_16mm",
+      "modified": false,
+      "root_bodies": [
+        {
+          "name": "V6_short_deep_rails_closed_tie_supported_socket",
+          "volume_mm3": 34383.20028727208,
+          "material": {
+            "name": "PA 12 - Nylon - PA 603-CF (EOS P 3D プリンタ使用)",
+            "id": "PrismMaterial-419",
+            "properties": {
+              "structural_Density": {
+                "value": 1100.0,
+                "units": "KilogramPerCubicMeter"
+              },
+              "structural_Minimum_tensile_strength": {
+                "value": 32740.0,
+                "units": "Kilopascal"
+              },
+              "structural_Minimum_yield_stress": {
+                "value": 25860.0,
+                "units": "Kilopascal"
+              },
+              "structural_Poisson_ratio": {
+                "value": 0.18,
+                "units": "Unitless"
+              },
+              "structural_Poisson_ratio_12": {
+                "value": 0.18,
+                "units": "Unitless"
+              },
+              "structural_Poisson_ratio_23": {
+                "value": 0.18,
+                "units": "Unitless"
+              },
+              "structural_Poisson_ratio_X": {
+                "value": 0.18,
+                "units": "Unitless"
+              },
+              "structural_Poisson_ratio_Y": {
+                "value": 0.18,
+                "units": "Unitless"
+              },
+              "structural_Poisson_ratio_Z": {
+                "value": 0.18,
+                "units": "Unitless"
+              },
+              "structural_Shear_modulus": {
+                "value": 1313000.0,
+                "units": "Kilopascal"
+              },
+              "structural_Shear_modulus_12": {
+                "value": 1313000.0,
+                "units": "Kilopascal"
+              },
+              "structural_Shear_modulus_X": {
+                "value": 1313000.0,
+                "units": "Kilopascal"
+              },
+              "structural_Shear_modulus_Y": {
+                "value": 1313000.0,
+                "units": "Kilopascal"
+              },
+              "structural_Shear_modulus_Z": {
+                "value": 1313000.0,
+                "units": "Kilopascal"
+              },
+              "structural_Young_modulus": {
+                "value": 2881000.0,
+                "units": "Kilopascal"
+              },
+              "structural_Young_modulus_1": {
+                "value": 2881000.0,
+                "units": "Kilopascal"
+              },
+              "structural_Young_modulus_2": {
+                "value": 2881000.0,
+                "units": "Kilopascal"
+              },
+              "structural_Young_modulus_X": {
+                "value": 2881000.0,
+                "units": "Kilopascal"
+              },
+              "structural_Young_modulus_Y": {
+                "value": 2881000.0,
+                "units": "Kilopascal"
+              },
+              "structural_Young_modulus_Z": {
+                "value": 2881000.0,
+                "units": "Kilopascal"
+              }
+            }
+          },
+          "bbox_mm": [
+            [
+              -15.0,
+              -36.5,
+              21.0
+            ],
+            [
+              69.2,
+              41.56294620236,
+              49.5
+            ]
+          ]
+        }
+      ],
+      "occurrences": []
+    },
+    {
+      "name": "so101書道",
+      "modified": false,
+      "root_bodies": [],
+      "occurrences": [
+        {
+          "name": "Wrist_Roll_Follower_SO101 v1:1",
+          "visible": false,
+          "body_count": 2,
+          "mesh_count": 0,
+          "bodies": [
+            {
+              "name": "ボディ1",
+              "volume_mm3": 0.0,
+              "material": {
+                "name": "PA 12 - Nylon - PA 603-CF (EOS P 3D プリンタ使用)",
+                "id": "PrismMaterial-419",
+                "properties": {
+                  "structural_Density": {
+                    "value": 1100.0,
+                    "units": "KilogramPerCubicMeter"
+                  },
+                  "structural_Minimum_tensile_strength": {
+                    "value": 32740.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Minimum_yield_stress": {
+                    "value": 25860.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Poisson_ratio": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_12": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_23": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_X": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Y": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Z": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Shear_modulus": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_12": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_X": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Y": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Z": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_1": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_2": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_X": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Y": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Z": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  }
+                }
+              },
+              "bbox_mm": [
+                [
+                  5.0,
+                  5.0,
+                  5.0
+                ],
+                [
+                  5.0,
+                  5.0,
+                  5.0
+                ]
+              ]
+            },
+            {
+              "name": "ボディ2",
+              "volume_mm3": 40239.62780957502,
+              "material": {
+                "name": "PA 12 - Nylon - PA 603-CF (EOS P 3D プリンタ使用)",
+                "id": "PrismMaterial-419",
+                "properties": {
+                  "structural_Density": {
+                    "value": 1100.0,
+                    "units": "KilogramPerCubicMeter"
+                  },
+                  "structural_Minimum_tensile_strength": {
+                    "value": 32740.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Minimum_yield_stress": {
+                    "value": 25860.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Poisson_ratio": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_12": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_23": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_X": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Y": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Z": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Shear_modulus": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_12": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_X": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Y": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Z": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_1": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_2": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_X": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Y": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Z": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  }
+                }
+              },
+              "bbox_mm": [
+                [
+                  -24.400293546521414,
+                  -24.5192144793536,
+                  -9.924099329447705
+                ],
+                [
+                  13.662748787941439,
+                  27.480785520646403,
+                  55.2759
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "name": "部品１:1",
+          "visible": false,
+          "body_count": 1,
+          "mesh_count": 0,
+          "bodies": [
+            {
+              "name": "SO101_Yoke_SC616C_Slide_In_Base",
+              "volume_mm3": 15190.66848698307,
+              "material": {
+                "name": "PA 12 - Nylon - PA 603-CF (EOS P 3D プリンタ使用)",
+                "id": "PrismMaterial-419",
+                "properties": {
+                  "structural_Density": {
+                    "value": 1100.0,
+                    "units": "KilogramPerCubicMeter"
+                  },
+                  "structural_Minimum_tensile_strength": {
+                    "value": 32740.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Minimum_yield_stress": {
+                    "value": 25860.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Poisson_ratio": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_12": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_23": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_X": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Y": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Z": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Shear_modulus": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_12": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_X": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Y": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Z": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_1": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_2": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_X": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Y": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Z": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  }
+                }
+              },
+              "bbox_mm": [
+                [
+                  -11.622628494696661,
+                  -21.737053797639998,
+                  4.499999999999917
+                ],
+                [
+                  37.0000000000001,
+                  41.56294620236017,
+                  43.89556811322889
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "name": "STS3215_c:1+Middle:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "STS3215_c:1+Top:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "STS3215_c:1+Bottom:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "STS3215_c:1+Spox_Molex_3pin_001:1+Spox Molex 3pin v1:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "STS3215_c:1+Spox_Molex_3pin_001:1+Spox Molex 3pin v002:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "STS3215_c:1+Spox_Molex_3pin_001:1+Spox Molex 3pin v003:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "STS3215_c:1+Spox_Molex_3pin_001:1+Spox Molex 3pin v004:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "STS3215_c:1+Spox_Molex_3pin_001:1",
+          "visible": true,
+          "body_count": 0,
+          "mesh_count": 0
+        },
+        {
+          "name": "STS3215_c:1+Spox_Molex_3pin_002:1",
+          "visible": true,
+          "body_count": 4,
+          "mesh_count": 0
+        },
+        {
+          "name": "STS3215_c:1+Freetech_sts3215:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "STS3215_c:1+M2x6-Vis001:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "STS3215_c:1+M2x6-Vis:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "STS3215_c:1+M2x4-Vis001:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "STS3215_c:1+M2x4-Vis:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "STS3215_c:1+Axes:1+GE_27:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "STS3215_c:1+Axes:1+/X2/91D15C5E823576D8FF089A7152A8FF09/X0/ v2:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "STS3215_c:1+Axes:1+/X2/91D15C5E823576D8FF084ECE52A8FF09/X0/ v2:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "STS3215_c:1+Axes:1+M3x4-Vis:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "STS3215_c:1+Axes:1+M3x4-Vis001:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "STS3215_c:1+Axes:1",
+          "visible": true,
+          "body_count": 0,
+          "mesh_count": 0
+        },
+        {
+          "name": "STS3215_c:1",
+          "visible": true,
+          "body_count": 0,
+          "mesh_count": 0
+        },
+        {
+          "name": "クランプ:1",
+          "visible": false,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "筆:1",
+          "visible": false,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "SC616C_1kg_Fusion:1+Aluminium_body_M3_nominal_relief_APPROX_no_resin_no_cable:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "SC616C_1kg_Fusion:1",
+          "visible": true,
+          "body_count": 0,
+          "mesh_count": 0,
+          "bodies": []
+        },
+        {
+          "name": "Brush_Load_Carrier:1",
+          "visible": false,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "Brush_Cartridge_15mm:1",
+          "visible": false,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "SC616C_Slide_In_Top_Cover:1",
+          "visible": false,
+          "body_count": 1,
+          "mesh_count": 0,
+          "bodies": [
+            {
+              "name": "SC616C_Slide_In_Top_Cover_FDM",
+              "volume_mm3": 2651.583812865026,
+              "material": {
+                "name": "PA 12 - Nylon - PA 603-CF (EOS P 3D プリンタ使用)",
+                "id": "PrismMaterial-419",
+                "properties": {
+                  "structural_Density": {
+                    "value": 1100.0,
+                    "units": "KilogramPerCubicMeter"
+                  },
+                  "structural_Minimum_tensile_strength": {
+                    "value": 32740.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Minimum_yield_stress": {
+                    "value": 25860.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Poisson_ratio": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_12": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_23": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_X": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Y": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Z": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Shear_modulus": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_12": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_X": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Y": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Z": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_1": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_2": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_X": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Y": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Z": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  }
+                }
+              },
+              "bbox_mm": [
+                [
+                  18.0,
+                  15.962946202360069,
+                  30.5
+                ],
+                [
+                  42.0,
+                  41.56294620236007,
+                  35.4
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Wrist_Roll_Follower_SO101 v1:3",
+          "visible": false,
+          "body_count": 2,
+          "mesh_count": 0,
+          "bodies": [
+            {
+              "name": "ボディ1",
+              "volume_mm3": 0.0,
+              "material": {
+                "name": "PA 12 - Nylon - PA 603-CF (EOS P 3D プリンタ使用)",
+                "id": "PrismMaterial-419",
+                "properties": {
+                  "structural_Density": {
+                    "value": 1100.0,
+                    "units": "KilogramPerCubicMeter"
+                  },
+                  "structural_Minimum_tensile_strength": {
+                    "value": 32740.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Minimum_yield_stress": {
+                    "value": 25860.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Poisson_ratio": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_12": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_23": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_X": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Y": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Z": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Shear_modulus": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_12": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_X": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Y": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Z": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_1": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_2": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_X": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Y": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Z": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  }
+                }
+              },
+              "bbox_mm": [
+                [
+                  2.999999999999968,
+                  -4.77803326073255,
+                  27.777638160534018
+                ],
+                [
+                  2.999999999999968,
+                  -4.77803326073255,
+                  27.777638160534018
+                ]
+              ]
+            },
+            {
+              "name": "ボディ2",
+              "volume_mm3": 40239.62780957502,
+              "material": {
+                "name": "PA 12 - Nylon - PA 603-CF (EOS P 3D プリンタ使用)",
+                "id": "PrismMaterial-419",
+                "properties": {
+                  "structural_Density": {
+                    "value": 1100.0,
+                    "units": "KilogramPerCubicMeter"
+                  },
+                  "structural_Minimum_tensile_strength": {
+                    "value": 32740.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Minimum_yield_stress": {
+                    "value": 25860.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Poisson_ratio": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_12": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_23": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_X": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Y": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Z": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Shear_modulus": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_12": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_X": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Y": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Z": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_1": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_2": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_X": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Y": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Z": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  }
+                }
+              },
+              "bbox_mm": [
+                [
+                  -26.400293546521254,
+                  -27.258818781379013,
+                  -22.498261839466288
+                ],
+                [
+                  11.662748787941348,
+                  24.74118121862155,
+                  42.70173748998212
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Brush_Load_Carrier_Centered:1",
+          "visible": false,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "Brush_Cartridge_Centered_15mm:1",
+          "visible": false,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "部品１_V5可動域改善:1",
+          "visible": false,
+          "body_count": 1,
+          "mesh_count": 0,
+          "bodies": [
+            {
+              "name": "V5_one_piece_yoke_M3_clearance_slide_socket",
+              "volume_mm3": 29688.678172181015,
+              "material": {
+                "name": "PA 12 - Nylon - PA 603-CF (EOS P 3D プリンタ使用)",
+                "id": "PrismMaterial-419",
+                "properties": {
+                  "structural_Density": {
+                    "value": 1100.0,
+                    "units": "KilogramPerCubicMeter"
+                  },
+                  "structural_Minimum_tensile_strength": {
+                    "value": 32740.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Minimum_yield_stress": {
+                    "value": 25860.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Poisson_ratio": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_12": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_23": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_X": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Y": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Z": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Shear_modulus": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_12": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_X": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Y": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Z": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_1": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_2": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_X": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Y": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Z": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  }
+                }
+              },
+              "bbox_mm": [
+                [
+                  -15.0,
+                  -32.5,
+                  20.999999999999996
+                ],
+                [
+                  85.19999999999999,
+                  41.56294620236,
+                  55.50000000000001
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Brush_Load_Carrier_Compact_V5:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "Brush_Cartridge_Symmetric_15mm_V5:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0
+        },
+        {
+          "name": "Wrist_Roll_Clearance_V5:1",
+          "visible": true,
+          "body_count": 2,
+          "mesh_count": 0,
+          "bodies": [
+            {
+              "name": "V5_wrist_with_concentric_pad_relief",
+              "volume_mm3": 3.3316342766821095e-05,
+              "material": {
+                "name": "PA 12 - Nylon - PA 603-CF (EOS P 3D プリンタ使用)",
+                "id": "PrismMaterial-419",
+                "properties": {
+                  "structural_Density": {
+                    "value": 1100.0,
+                    "units": "KilogramPerCubicMeter"
+                  },
+                  "structural_Minimum_tensile_strength": {
+                    "value": 32740.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Minimum_yield_stress": {
+                    "value": 25860.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Poisson_ratio": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_12": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_23": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_X": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Y": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Z": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Shear_modulus": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_12": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_X": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Y": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Z": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_1": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_2": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_X": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Y": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Z": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  }
+                }
+              },
+              "bbox_mm": [
+                [
+                  -20.399045931004302,
+                  16.38239033977017,
+                  -7.500000111758709
+                ],
+                [
+                  -20.354622218727382,
+                  16.91044738693234,
+                  -7.49770505676092
+                ]
+              ]
+            },
+            {
+              "name": "V5_wrist_with_concentric_pad_relief (1)",
+              "volume_mm3": 22072.992902446946,
+              "material": {
+                "name": "PA 12 - Nylon - PA 603-CF (EOS P 3D プリンタ使用)",
+                "id": "PrismMaterial-419",
+                "properties": {
+                  "structural_Density": {
+                    "value": 1100.0,
+                    "units": "KilogramPerCubicMeter"
+                  },
+                  "structural_Minimum_tensile_strength": {
+                    "value": 32740.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Minimum_yield_stress": {
+                    "value": 25860.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Poisson_ratio": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_12": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_23": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_X": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Y": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Z": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Shear_modulus": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_12": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_X": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Y": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Z": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_1": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_2": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_X": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Y": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Z": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  }
+                }
+              },
+              "bbox_mm": [
+                [
+                  -26.400293546521418,
+                  -27.258818781378935,
+                  -4.49770505676092
+                ],
+                [
+                  11.662748787941442,
+                  24.741181218621186,
+                  42.70173748998198
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "name": "部品１_V5_短縮補強_16mm:1",
+          "visible": true,
+          "body_count": 1,
+          "mesh_count": 0,
+          "bodies": [
+            {
+              "name": "V6_short_deep_rails_closed_tie_supported_socket",
+              "volume_mm3": 34383.20028727208,
+              "material": {
+                "name": "PA 12 - Nylon - PA 603-CF (EOS P 3D プリンタ使用)",
+                "id": "PrismMaterial-419",
+                "properties": {
+                  "structural_Density": {
+                    "value": 1100.0,
+                    "units": "KilogramPerCubicMeter"
+                  },
+                  "structural_Minimum_tensile_strength": {
+                    "value": 32740.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Minimum_yield_stress": {
+                    "value": 25860.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Poisson_ratio": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_12": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_23": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_X": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Y": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Z": {
+                    "value": 0.18,
+                    "units": "Unitless"
+                  },
+                  "structural_Shear_modulus": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_12": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_X": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Y": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Z": {
+                    "value": 1313000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_1": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_2": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_X": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Y": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Z": {
+                    "value": 2881000.0,
+                    "units": "Kilopascal"
+                  }
+                }
+              },
+              "bbox_mm": [
+                [
+                  -15.0,
+                  -36.5,
+                  21.0
+                ],
+                [
+                  69.2,
+                  41.56294620236,
+                  49.5
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "部品１_V7_閉断面台座補強",
+      "modified": false,
+      "root_bodies": [
+        {
+          "name": "V7_closed_upper_box_deep_web_full_socket_support",
+          "volume_mm3": 39664.62284866992,
+          "material": {
+            "name": "PA 12 - Nylon - PA 603-CF (EOS P 3D プリンタ使用)",
+            "id": "PrismMaterial-419",
+            "properties": {
+              "structural_Density": {
+                "value": 1100.0,
+                "units": "KilogramPerCubicMeter"
+              },
+              "structural_Minimum_tensile_strength": {
+                "value": 32740.0,
+                "units": "Kilopascal"
+              },
+              "structural_Minimum_yield_stress": {
+                "value": 25860.0,
+                "units": "Kilopascal"
+              },
+              "structural_Poisson_ratio": {
+                "value": 0.18,
+                "units": "Unitless"
+              },
+              "structural_Poisson_ratio_12": {
+                "value": 0.18,
+                "units": "Unitless"
+              },
+              "structural_Poisson_ratio_23": {
+                "value": 0.18,
+                "units": "Unitless"
+              },
+              "structural_Poisson_ratio_X": {
+                "value": 0.18,
+                "units": "Unitless"
+              },
+              "structural_Poisson_ratio_Y": {
+                "value": 0.18,
+                "units": "Unitless"
+              },
+              "structural_Poisson_ratio_Z": {
+                "value": 0.18,
+                "units": "Unitless"
+              },
+              "structural_Shear_modulus": {
+                "value": 1313000.0,
+                "units": "Kilopascal"
+              },
+              "structural_Shear_modulus_12": {
+                "value": 1313000.0,
+                "units": "Kilopascal"
+              },
+              "structural_Shear_modulus_X": {
+                "value": 1313000.0,
+                "units": "Kilopascal"
+              },
+              "structural_Shear_modulus_Y": {
+                "value": 1313000.0,
+                "units": "Kilopascal"
+              },
+              "structural_Shear_modulus_Z": {
+                "value": 1313000.0,
+                "units": "Kilopascal"
+              },
+              "structural_Young_modulus": {
+                "value": 2881000.0,
+                "units": "Kilopascal"
+              },
+              "structural_Young_modulus_1": {
+                "value": 2881000.0,
+                "units": "Kilopascal"
+              },
+              "structural_Young_modulus_2": {
+                "value": 2881000.0,
+                "units": "Kilopascal"
+              },
+              "structural_Young_modulus_X": {
+                "value": 2881000.0,
+                "units": "Kilopascal"
+              },
+              "structural_Young_modulus_Y": {
+                "value": 2881000.0,
+                "units": "Kilopascal"
+              },
+              "structural_Young_modulus_Z": {
+                "value": 2881000.0,
+                "units": "Kilopascal"
+              }
+            }
+          },
+          "bbox_mm": [
+            [
+              -15.0,
+              -36.5,
+              21.0
+            ],
+            [
+              69.2,
+              41.56294620236,
+              49.5
+            ]
+          ]
+        }
+      ],
+      "occurrences": []
+    },
+    {
+      "name": "so101_V7_閉断面補強_筆圧検証",
+      "modified": false,
+      "root_bodies": [],
+      "occurrences": [
+        {
+          "name": "carrier:1",
+          "bodies": [
+            {
+              "name": "carrier",
+              "volume_mm3": 6573.724935501749,
+              "material": {
+                "name": "PRINT_ASSUMED_E1500MPa_ISOTROPIC_NOT_TESTED",
+                "id": "PrismMaterial-022",
+                "properties": {
+                  "structural_Density": {
+                    "value": 1240.0,
+                    "units": "KilogramPerCubicMeter"
+                  },
+                  "structural_Minimum_tensile_strength": {
+                    "value": 25000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Minimum_yield_stress": {
+                    "value": 20000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Poisson_ratio": {
+                    "value": 0.35,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_12": {
+                    "value": 0.35,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_23": {
+                    "value": 0.35,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_X": {
+                    "value": 0.35,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Y": {
+                    "value": 0.35,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Z": {
+                    "value": 0.35,
+                    "units": "Unitless"
+                  },
+                  "structural_Shear_modulus": {
+                    "value": 555555.5555555555,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_12": {
+                    "value": 555555.5555555555,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_X": {
+                    "value": 555555.5555555555,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Y": {
+                    "value": 555555.5555555555,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Z": {
+                    "value": 555555.5555555555,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus": {
+                    "value": 1500000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_1": {
+                    "value": 1500000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_2": {
+                    "value": 1500000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_X": {
+                    "value": 1500000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Y": {
+                    "value": 1500000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Z": {
+                    "value": 1500000.0,
+                    "units": "Kilopascal"
+                  }
+                }
+              },
+              "bbox_mm": [
+                [
+                  45.999999999999986,
+                  -23.237053797999998,
+                  12.5
+                ],
+                [
+                  78.0,
+                  28.762946202000002,
+                  45.50000000000001
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cartridge:1",
+          "bodies": [
+            {
+              "name": "cartridge",
+              "volume_mm3": 6846.8001238112865,
+              "material": {
+                "name": "PRINT_ASSUMED_E1500MPa_ISOTROPIC_NOT_TESTED",
+                "id": "PrismMaterial-022",
+                "properties": {
+                  "structural_Density": {
+                    "value": 1240.0,
+                    "units": "KilogramPerCubicMeter"
+                  },
+                  "structural_Minimum_tensile_strength": {
+                    "value": 25000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Minimum_yield_stress": {
+                    "value": 20000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Poisson_ratio": {
+                    "value": 0.35,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_12": {
+                    "value": 0.35,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_23": {
+                    "value": 0.35,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_X": {
+                    "value": 0.35,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Y": {
+                    "value": 0.35,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Z": {
+                    "value": 0.35,
+                    "units": "Unitless"
+                  },
+                  "structural_Shear_modulus": {
+                    "value": 555555.5555555555,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_12": {
+                    "value": 555555.5555555555,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_X": {
+                    "value": 555555.5555555555,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Y": {
+                    "value": 555555.5555555555,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Z": {
+                    "value": 555555.5555555555,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus": {
+                    "value": 1500000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_1": {
+                    "value": 1500000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_2": {
+                    "value": 1500000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_X": {
+                    "value": 1500000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Y": {
+                    "value": 1500000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Z": {
+                    "value": 1500000.0,
+                    "units": "Kilopascal"
+                  }
+                }
+              },
+              "bbox_mm": [
+                [
+                  46.999999999999986,
+                  -23.237053797999998,
+                  8.5
+                ],
+                [
+                  77.0,
+                  28.762946202000002,
+                  32.50000000000001
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "name": "sensor:1",
+          "bodies": [
+            {
+              "name": "sensor",
+              "volume_mm3": 1844.31869791654,
+              "material": {
+                "name": "SC616C_APPROX_Al_E69000MPa_ALLOY_UNKNOWN",
+                "id": "PrismMaterial-002",
+                "properties": {
+                  "structural_Density": {
+                    "value": 2700.0,
+                    "units": "KilogramPerCubicMeter"
+                  },
+                  "structural_Minimum_tensile_strength": {
+                    "value": 90000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Minimum_yield_stress": {
+                    "value": 55000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Poisson_ratio": {
+                    "value": 0.33,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_12": {
+                    "value": 0.33,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_23": {
+                    "value": 0.33,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_X": {
+                    "value": 0.33,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Y": {
+                    "value": 0.33,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Z": {
+                    "value": 0.33,
+                    "units": "Unitless"
+                  },
+                  "structural_Shear_modulus": {
+                    "value": 25939849.62406015,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_12": {
+                    "value": 25939849.62406015,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_X": {
+                    "value": 25939849.62406015,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Y": {
+                    "value": 25939849.62406015,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Z": {
+                    "value": 25939849.62406015,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus": {
+                    "value": 69000000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_1": {
+                    "value": 69000000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_2": {
+                    "value": 69000000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_X": {
+                    "value": 69000000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Y": {
+                    "value": 69000000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Z": {
+                    "value": 69000000.0,
+                    "units": "Kilopascal"
+                  },
+                  "thermal_Density": {
+                    "value": 2700.0,
+                    "units": "KilogramPerCubicMeter"
+                  }
+                }
+              },
+              "bbox_mm": [
+                [
+                  57.50000000000001,
+                  -6.537053797639936,
+                  39.49999999999993
+                ],
+                [
+                  66.50000000000001,
+                  38.462946202360065,
+                  45.49999999999993
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "name": "base:1",
+          "bodies": [
+            {
+              "name": "base",
+              "volume_mm3": 39254.02925521634,
+              "material": {
+                "name": "PRINT_ASSUMED_E1500MPa_ISOTROPIC_NOT_TESTED",
+                "id": "PrismMaterial-022",
+                "properties": {
+                  "structural_Density": {
+                    "value": 1240.0,
+                    "units": "KilogramPerCubicMeter"
+                  },
+                  "structural_Minimum_tensile_strength": {
+                    "value": 25000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Minimum_yield_stress": {
+                    "value": 20000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Poisson_ratio": {
+                    "value": 0.35,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_12": {
+                    "value": 0.35,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_23": {
+                    "value": 0.35,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_X": {
+                    "value": 0.35,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Y": {
+                    "value": 0.35,
+                    "units": "Unitless"
+                  },
+                  "structural_Poisson_ratio_Z": {
+                    "value": 0.35,
+                    "units": "Unitless"
+                  },
+                  "structural_Shear_modulus": {
+                    "value": 555555.5555555555,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_12": {
+                    "value": 555555.5555555555,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_X": {
+                    "value": 555555.5555555555,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Y": {
+                    "value": 555555.5555555555,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Shear_modulus_Z": {
+                    "value": 555555.5555555555,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus": {
+                    "value": 1500000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_1": {
+                    "value": 1500000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_2": {
+                    "value": 1500000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_X": {
+                    "value": 1500000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Y": {
+                    "value": 1500000.0,
+                    "units": "Kilopascal"
+                  },
+                  "structural_Young_modulus_Z": {
+                    "value": 1500000.0,
+                    "units": "Kilopascal"
+                  }
+                }
+              },
+              "bbox_mm": [
+                [
+                  -15.0,
+                  -36.5,
+                  21.0
+                ],
+                [
+                  69.2,
+                  41.56294620236,
+                  49.5
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

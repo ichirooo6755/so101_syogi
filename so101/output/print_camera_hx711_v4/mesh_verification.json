@@ -1,0 +1,28 @@
+[
+  {
+    "file": "01_simple_camera_HX711_bracket_V4.stl",
+    "triangles": 1376,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      33.0,
+      59.309669494628906,
+      34.83167266845703
+    ],
+    "mesh_volume_mm3": 6719.510940338853,
+    "cad_volume_error_fraction": 5.199391226476436e-05
+  },
+  {
+    "file": "02_A_slot_backing_V4.stl",
+    "triangles": 2044,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      21.5,
+      23.0,
+      9.550000190734863
+    ],
+    "mesh_volume_mm3": 1395.5755258408944,
+    "cad_volume_error_fraction": 0.0002539888381851543
+  }
+]

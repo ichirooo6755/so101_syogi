@@ -1,0 +1,349 @@
+{
+  "active_document": "so101_SelectionA_Left_Camera_HX711_V2",
+  "documents": [
+    {
+      "name": "SC616C_1kg_Fusion.f3d ",
+      "modified": false,
+      "selection_sets": []
+    },
+    {
+      "name": "部品１_V8_元取付形状保持",
+      "modified": false,
+      "selection_sets": []
+    },
+    {
+      "name": "Wrist_Roll_Clearance_V8_元取付対応",
+      "modified": false,
+      "selection_sets": []
+    },
+    {
+      "name": "部品１_V5_短縮補強_16mm",
+      "modified": false,
+      "selection_sets": []
+    },
+    {
+      "name": "so101書道",
+      "modified": false,
+      "selection_sets": [
+        {
+          "name": "面A",
+          "entities": [
+            {
+              "type": "adsk::fusion::BRepFace",
+              "bounds_mm": [
+                [
+                  19.877371505303365,
+                  -21.737053797639962,
+                  12.395568113228798
+                ],
+                [
+                  19.87737150530358,
+                  18.462946202360015,
+                  30.359913295274367
+                ]
+              ],
+              "area_mm2": 722.1666763182304,
+              "centroid_mm": [
+                19.877371505303472,
+                -1.6370537976399349,
+                21.37774070425159
+              ],
+              "body": "SO101_Yoke_SC616C_Slide_In_Base",
+              "volume_mm3": 15190.66848698307,
+              "component": "部品１",
+              "occurrence": "部品１:1",
+              "normal": [
+                1.0,
+                -3.2751579226441984e-15,
+                4.329386789638094e-15
+              ],
+              "plane_origin_mm": [
+                19.877371505303607,
+                25.26294620236008,
+                10.895568113228848
+              ]
+            }
+          ]
+        },
+        {
+          "name": "選択セット2",
+          "entities": [
+            {
+              "type": "adsk::fusion::BRepFace",
+              "bounds_mm": [
+                [
+                  19.877371505303365,
+                  -21.737053797639962,
+                  12.395568113228798
+                ],
+                [
+                  19.87737150530358,
+                  18.462946202360015,
+                  30.359913295274367
+                ]
+              ],
+              "area_mm2": 722.1666763182304,
+              "centroid_mm": [
+                19.877371505303472,
+                -1.6370537976399349,
+                21.37774070425159
+              ],
+              "body": "SO101_Yoke_SC616C_Slide_In_Base",
+              "volume_mm3": 15190.66848698307,
+              "component": "部品１",
+              "occurrence": "部品１:1",
+              "normal": [
+                1.0,
+                -3.2751579226441984e-15,
+                4.329386789638094e-15
+              ],
+              "plane_origin_mm": [
+                19.877371505303607,
+                25.26294620236008,
+                10.895568113228848
+              ]
+            }
+          ]
+        },
+        {
+          "name": "選択セット3",
+          "entities": [
+            {
+              "type": "adsk::core::SelectionSet"
+            }
+          ]
+        },
+        {
+          "name": "1-1",
+          "entities": [
+            {
+              "type": "adsk::fusion::BRepFace",
+              "bounds_mm": [
+                [
+                  4.928203230275509,
+                  -32.5,
+                  45.0
+                ],
+                [
+                  64.0,
+                  -28.5,
+                  45.0
+                ]
+              ],
+              "area_mm2": 236.28718707889794,
+              "centroid_mm": [
+                34.46410161513776,
+                -30.5,
+                45.0
+              ],
+              "body": "V5_one_piece_yoke_M3_clearance_slide_socket",
+              "volume_mm3": 29688.678172181015,
+              "component": "部品１_V5可動域改善",
+              "occurrence": "部品１_V5可動域改善:1",
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "plane_origin_mm": [
+                35.0,
+                -30.5,
+                45.0
+              ]
+            },
+            {
+              "type": "adsk::fusion::BRepFace",
+              "bounds_mm": [
+                [
+                  64.0,
+                  -32.5,
+                  55.50000000000001
+                ],
+                [
+                  72.0,
+                  31.500000000000004,
+                  55.50000000000001
+                ]
+              ],
+              "area_mm2": 511.99999999999994,
+              "centroid_mm": [
+                68.0,
+                -0.5000000000000004,
+                55.5
+              ],
+              "body": "V5_one_piece_yoke_M3_clearance_slide_socket",
+              "volume_mm3": 29688.678172181015,
+              "component": "部品１_V5可動域改善",
+              "occurrence": "部品１_V5可動域改善:1",
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "plane_origin_mm": [
+                68.0,
+                -30.5,
+                55.5
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "無題",
+      "modified": true,
+      "selection_sets": []
+    },
+    {
+      "name": "so101_Camera_HX711_V1_追加台座",
+      "modified": true,
+      "selection_sets": [
+        {
+          "name": "選択セットA",
+          "entities": [
+            {
+              "type": "adsk::fusion::BRepFace",
+              "bounds_mm": [
+                [
+                  -15.0,
+                  35.5,
+                  21.0
+                ],
+                [
+                  54.0,
+                  35.5,
+                  47.0
+                ]
+              ],
+              "area_mm2": 1027.2938076199125,
+              "centroid_mm": [
+                16.056427738362103,
+                35.5,
+                34.4727226002901
+              ],
+              "body": "ボディ26",
+              "volume_mm3": 38550.50206478457,
+              "component": "REFERENCE_existing_SO101_do_not_print",
+              "occurrence": "REFERENCE_existing_SO101_do_not_print:1",
+              "normal": [
+                0.0,
+                1.0,
+                -0.0
+              ],
+              "plane_origin_mm": [
+                54.0,
+                35.5,
+                35.5
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "so101_SelectionA_Left_Camera_HX711_V2",
+      "modified": false,
+      "selection_sets": [
+        {
+          "name": "選択セットA",
+          "entities": [
+            {
+              "type": "adsk::fusion::BRepFace",
+              "bounds_mm": [
+                [
+                  -15.0,
+                  35.5,
+                  21.0
+                ],
+                [
+                  54.0,
+                  35.5,
+                  47.0
+                ]
+              ],
+              "area_mm2": 1027.2938076199125,
+              "centroid_mm": [
+                16.056427738362103,
+                35.5,
+                34.4727226002901
+              ],
+              "body": "ボディ26",
+              "volume_mm3": 38550.50206478457,
+              "component": "REFERENCE_SO101_unchanged",
+              "occurrence": "REFERENCE_SO101_unchanged:1",
+              "normal": [
+                0.0,
+                1.0,
+                -0.0
+              ],
+              "plane_origin_mm": [
+                54.0,
+                35.5,
+                35.5
+              ]
+            }
+          ]
+        },
+        {
+          "name": "選択セット2",
+          "entities": [
+            {
+              "type": "adsk::fusion::BRepFace",
+              "bounds_mm": [
+                [
+                  -63.99999999999999,
+                  42.74999999999999,
+                  21.5
+                ],
+                [
+                  23.0,
+                  42.74999999999999,
+                  31.5
+                ]
+              ],
+              "area_mm2": 865.6902177292479,
+              "centroid_mm": [
+                -20.392383024199347,
+                42.74999999999999,
+                26.52055940851279
+              ],
+              "body": "01_A_left_arm_frame_V2",
+              "volume_mm3": 10990.487979011918,
+              "component": "01_A_left_arm_frame_V2",
+              "occurrence": "01_A_left_arm_frame_V2:1",
+              "normal": [
+                0.0,
+                -1.0,
+                0.0
+              ],
+              "plane_origin_mm": [
+                -20.5,
+                42.74999999999999,
+                26.5
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "active_selection": [],
+  "camera": {
+    "eye_mm": [
+      41.890435136732904,
+      -392.3302185849039,
+      103.53030395128894
+    ],
+    "target_mm": [
+      4.905000000000004,
+      11.224455193654542,
+      31.496147471619466
+    ],
+    "up": [
+      -0.015832191361876725,
+      0.1749021343387739,
+      0.9844585238192732
+    ]
+  }
+}

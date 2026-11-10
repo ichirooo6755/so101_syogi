@@ -1,0 +1,151 @@
+{
+  "passed": true,
+  "paths": [
+    {
+      "part": "02_wrist_lower_shoe",
+      "offset_mm": 0.1,
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "hits": []
+    },
+    {
+      "part": "02_wrist_lower_shoe",
+      "offset_mm": 0.25,
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "hits": []
+    },
+    {
+      "part": "02_wrist_lower_shoe",
+      "offset_mm": 0.5,
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "hits": []
+    },
+    {
+      "part": "02_wrist_lower_shoe",
+      "offset_mm": 1,
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "hits": []
+    },
+    {
+      "part": "02_wrist_lower_shoe",
+      "offset_mm": 3,
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "hits": []
+    },
+    {
+      "part": "02_wrist_lower_shoe",
+      "offset_mm": 10,
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "hits": []
+    },
+    {
+      "part": "02_wrist_lower_shoe",
+      "offset_mm": 30,
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "hits": []
+    },
+    {
+      "part": "01_fixed_electronics_frame",
+      "offset_mm": 0.1,
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "part": "01_fixed_electronics_frame",
+      "offset_mm": 1,
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "part": "01_fixed_electronics_frame",
+      "offset_mm": 5,
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "part": "01_fixed_electronics_frame",
+      "offset_mm": 20,
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "part": "01_fixed_electronics_frame",
+      "offset_mm": 60,
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "hits": []
+    }
+  ],
+  "cartridge_removal": [
+    {
+      "down_mm": 1,
+      "hits": []
+    },
+    {
+      "down_mm": 5,
+      "hits": []
+    },
+    {
+      "down_mm": 10,
+      "hits": []
+    },
+    {
+      "down_mm": 25,
+      "hits": []
+    },
+    {
+      "down_mm": 50,
+      "hits": []
+    },
+    {
+      "down_mm": 100,
+      "hits": []
+    }
+  ]
+}

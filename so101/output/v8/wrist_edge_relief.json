@@ -1,0 +1,65 @@
+{
+  "document": "Wrist_Roll_Clearance_V8_元取付対応",
+  "original_wrist_volume_mm3": 22072.992902446946,
+  "new_volume_mm3": 22025.213051512656,
+  "removed_mm3": 47.77985093429015,
+  "user_features_copied_as_geometry": [
+    "V5_original_wrist_geometry",
+    "V5_rotary_pad_clearance_negative (1)",
+    "V5_rotary_pad_clearance_positive (1)",
+    "押し出し3",
+    "押し出し4",
+    "押し出し5",
+    "押し出し6",
+    "押し出し7",
+    "押し出し8",
+    "押し出し9",
+    "押し出し10",
+    "押し出し11",
+    "押し出し12",
+    "押し出し13",
+    "押し出し14",
+    "押し出し15",
+    "押し出し16",
+    "面を削除1",
+    "押し出し17",
+    "押し出し18",
+    "押し出し19",
+    "押し出し20",
+    "押し出し21"
+  ],
+  "relief_y_intervals_mm": [
+    [
+      -17.15,
+      -15.45
+    ],
+    [
+      18.6,
+      20.3
+    ]
+  ],
+  "relief_radii_mm": [
+    10.8,
+    13.4
+  ],
+  "source_occurrence_transform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "main_wrist_unchanged": true,
+  "original_servo_interface_on_base_unchanged": true
+}

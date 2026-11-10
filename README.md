@@ -4,7 +4,7 @@ SO-101（SO-ARM101 系 6 軸アーム）で、実物の将棋と囲碁を人と�
 **現状は将棋の開発途中で、実機対局はまだ成立していません。囲碁は未着手です。**
 
 - 対象リポジトリ: https://github.com/ichirooo6755/so101_syogi
-- 作業元（ローカル）: `~/Documents/ChatGPT/syogi` が将棋の本体。`~/Documents/ChatGPT/so101`、`nnw`、`kobelco` は別プロジェクトなので本リポジトリには入れていません（理由は [docs/repo-map.md](docs/repo-map.md)）。
+- 作業元（ローカル）: `~/Documents/ChatGPT/syogi` が将棋の本体、`~/Documents/ChatGPT/so101` が SO-101 本体まわり（カメラ／ロードセル台座・書道）。どちらも本リポジトリに入れました。`nnw`、`kobelco` は別プロジェクトなので入れていません（理由は [docs/repo-map.md](docs/repo-map.md)）。
 
 ## 現在地（2026-11-10 時点・引き継ぎ用）
 
@@ -41,8 +41,15 @@ SO-101（SO-ARM101 系 6 軸アーム）で、実物の将棋と囲碁を人と�
 │   ├── tests/                 # 単体テスト
 │   ├── scripts/fetch_upstream.sh  # vendor/ の再取得（Fairy-Stockfish 等）
 │   └── output/                # 延長部品 STEP/STL と試算 JSON、マウント試作
-└── go/                        # 囲碁（未着手、設計メモのみ）
-    └── README.md
+├── go/                        # 囲碁（未着手、設計メモのみ）
+│   └── README.md
+└── so101/                     # SO-101 本体まわり（元 ~/Documents/ChatGPT/so101）
+    ├── README.md              # 本体側の進捗の索引
+    ├── output/                # 手首カメラ＋HX711台座 V1–V8、筆保持 V2–V8
+    ├── scripts/               # 上記CADの生成・検査スクリプト
+    ├── reference/             # 変更前スナップショットと資料
+    ├── syodo/                 # 書道（別リポジトリ syodo と同内容の取り込み）
+    └── soap_film/             # 薄膜シミュ（履歴として取り込み、代表出力のみ）
 ```
 
 将棋・囲碁で共有する盤座標の考え方は [docs/board-geometry.md](docs/board-geometry.md) にまとめました。
@@ -66,8 +73,8 @@ make -C vendor/Fairy-Stockfish/src -j4 build ARCH=apple-silicon largeboards=yes
 
 - `kobelco/` — 明示的に対象外。別プロジェクト。
 - `nnw/` — NW-E507 型 DAP の基板・ファーム。将棋・囲碁と無関係。
-- `so101/syodo/`（書道）、`so101/soap_film/`（薄膜シミュ）、`so101/output・scripts・reference`（筆用ロードセル／カメラマウント）— SO-101 を使うが将棋・囲碁用ではない。書道は別リポジトリ管理。
-- 将棋フォルダ内でも `.venv*/`、`vendor/`（再取得可能）、`build/`、`simulation/runs/`、Wi-Fi 設定 `wifi_config.h`、較正値 `app/follower_offsets.json`、スライサ出力（gcode/3mf、slice フォルダ）は含めていません。詳細は [docs/repo-map.md](docs/repo-map.md)。
+- 大容量の再生成できる中間ファイル（書道・将棋の学習 run、FEM の `.vtu/.msh`、薄膜の `state_*.npz`、`.f3d` 中間バックアップ、仮想環境、`vendor/`、`build/`、Wi-Fi 設定、実機較正値）は実ファイルを入れず、生成元と一覧で辿れるようにしています。一覧は [docs/large-artifacts.md](docs/large-artifacts.md)。
+- SO-101 本体まわり（台座・書道・薄膜）は 2026-11-10 の追加整理で `so101/` に入れました。経緯は [docs/organization-2026-11-10.md](docs/organization-2026-11-10.md)。
 
 ## 課題管理（GitHub Issues）
 

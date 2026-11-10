@@ -1,0 +1,77 @@
+{
+  "document": "so101_V8_元取付部保持_ジェネレーティブ",
+  "cloud_id": "/Users/sugawaraichirou/Library/Application Support/Autodesk/Autodesk Fusion 360/4SY29298NXZFBXAG/W.login/F/_so101_V8_元取付部保持_ジェネレーティブ.d6536fce-bd32-4a6f-97b0-342b77512c2f.f3d",
+  "preserve_bodies": [
+    "PRESERVE_01_original_negative_servo_interface",
+    "PRESERVE_02_original_positive_servo_interface",
+    "PRESERVE_03_M3_slide_in_fixed_socket"
+  ],
+  "obstacle_bodies": [
+    "OBSTACLE_wrist_full_rotation_core",
+    "OBSTACLE_negative_wrist_sweep_annulus",
+    "OBSTACLE_positive_wrist_sweep_annulus",
+    "OBSTACLE_cartridge_neck_pullout",
+    "OBSTACLE_cartridge_flange_ears_pullout",
+    "OBSTACLE_carrier_upper_bridge",
+    "OBSTACLE_load_cell_sliding_corridor",
+    "OBSTACLE_cell_strain_gauge_clearance",
+    "OBSTACLE_fixed_M3_head_driver_0",
+    "OBSTACLE_fixed_M3_shank_0",
+    "OBSTACLE_fixed_M3_head_driver_1",
+    "OBSTACLE_fixed_M3_shank_1",
+    "OBSTACLE_negative_original_head_driver_0",
+    "OBSTACLE_negative_original_shank_0",
+    "OBSTACLE_negative_original_head_driver_1",
+    "OBSTACLE_negative_original_shank_1",
+    "OBSTACLE_negative_original_head_driver_2",
+    "OBSTACLE_negative_original_shank_2",
+    "OBSTACLE_negative_original_head_driver_3",
+    "OBSTACLE_negative_original_shank_3",
+    "OBSTACLE_positive_original_head_driver_0",
+    "OBSTACLE_positive_original_shank_0",
+    "OBSTACLE_positive_original_head_driver_1",
+    "OBSTACLE_positive_original_shank_1",
+    "OBSTACLE_positive_original_head_driver_2",
+    "OBSTACLE_positive_original_shank_2",
+    "OBSTACLE_positive_original_head_driver_3",
+    "OBSTACLE_positive_original_shank_3",
+    "OBSTACLE_negative_exact_original_mount_voids",
+    "OBSTACLE_positive_exact_original_mount_voids"
+  ],
+  "starting_volume_mm3": 38550.50206478457,
+  "obstacle_starting_interferences": [],
+  "printed_material_E_MPa": 1500,
+  "sensor_in_designable_material": false,
+  "nominal_brush_axis_mm": [
+    62,
+    2.762946202
+  ],
+  "brush_tip_z_mm": -52,
+  "required_base_equivalent_load": {
+    "force_N": [
+      0,
+      0,
+      6
+    ],
+    "application_point_mm": [
+      62,
+      2.762946202,
+      30.5
+    ],
+    "fixed_socket_reference_mm": [
+      62,
+      30.66294620236,
+      39.5
+    ],
+    "moment_at_socket_Nmm": [
+      -167.4,
+      0,
+      0
+    ]
+  },
+  "additional_load_cases_required": "Brush-side +/-0.5 N at Z=-52 and +/-10 Nmm twist",
+  "suggested_objective": "Maximize stiffness; mass target 0.045 kg; safety factor 2; displacement limit 0.1 mm",
+  "preserved_mount_details": "Original copied diagonal holes and inner pockets, no redesign",
+  "native_generation_started": false,
+  "credits_spent": 0
+}

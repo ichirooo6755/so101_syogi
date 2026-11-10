@@ -1,0 +1,67 @@
+[
+  {
+    "file": "01_bolted_mount_V8.stl",
+    "triangles": 1634,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      44.57749938964844,
+      27.098926544189453,
+      35.12480545043945
+    ],
+    "mesh_volume_mm3": 7429.6404201448295,
+    "cad_volume_error_fraction": 7.378378112880133e-05
+  },
+  {
+    "file": "02_slot_backing_V8.stl",
+    "triangles": 1354,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      21.5,
+      23.0,
+      9.550000190734863
+    ],
+    "mesh_volume_mm3": 1739.7435258976143,
+    "cad_volume_error_fraction": 8.785208740614628e-05
+  },
+  {
+    "file": "03_XIAO_header_tray_V8.stl",
+    "triangles": 1036,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      34.79999923706055,
+      9.100000381469727,
+      23.600000381469727
+    ],
+    "mesh_volume_mm3": 2431.1708693839787,
+    "cad_volume_error_fraction": 5.190058524841788e-05
+  },
+  {
+    "file": "04_HX711_perf_stack_V8.stl",
+    "triangles": 1510,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      40.40000152587891,
+      29.64999961853028,
+      31.739999771118164
+    ],
+    "mesh_volume_mm3": 5652.85933286339,
+    "cad_volume_error_fraction": 5.193791919044835e-05
+  },
+  {
+    "file": "05_bolted_end_plate_V8.stl",
+    "triangles": 540,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      40.400001525878906,
+      29.000000000000007,
+      6.940000057220461
+    ],
+    "mesh_volume_mm3": 1698.8325887454757,
+    "cad_volume_error_fraction": 4.1795047307303246e-05
+  }
+]

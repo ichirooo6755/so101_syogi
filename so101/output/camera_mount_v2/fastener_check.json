@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "head_stops": [
+    {
+      "name": "M3x10_A_22",
+      "head_pushed_0p1mm_overlap_mm3": 1.4679091673898033
+    },
+    {
+      "name": "M3x10_A_34",
+      "head_pushed_0p1mm_overlap_mm3": 1.4679091673898033
+    },
+    {
+      "name": "M3x8_HX_-19.2",
+      "head_pushed_0p1mm_overlap_mm3": 1.4679091673898688
+    },
+    {
+      "name": "M3x8_HX_19.2",
+      "head_pushed_0p1mm_overlap_mm3": 1.4679091673898688
+    },
+    {
+      "name": "M3x8_TXS",
+      "head_pushed_0p1mm_overlap_mm3": 1.467909167389804
+    },
+    {
+      "name": "M3x10_camera",
+      "head_pushed_0p1mm_overlap_mm3": 1.467909167389831
+    }
+  ],
+  "stock": {
+    "M3x8": 3,
+    "M3x10": 3,
+    "M3_nut": 6
+  },
+  "nut_engagement_mm": 2.4,
+  "clamp_bolt_tip_y_mm": 29.0,
+  "nut_inner_outer_y_mm": [
+    30.5,
+    32.9
+  ]
+}

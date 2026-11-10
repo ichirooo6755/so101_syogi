@@ -1,0 +1,145 @@
+{
+  "results": [
+    {
+      "word": "文字",
+      "trace": "/Users/sugawaraichirou/Documents/syodo-issue-resolution/runs/hardware-two-character/20260908-145000/trace.npz",
+      "trace_schema": 4,
+      "trace_sha256": "ed9234d5df96510eb901a9e9a74daa902247a8b122e60d4df45e2e39056e24b4",
+      "desk_fingerprint": "bf996c3c718a2f73cc64980e18b8f1d1a5518e890c5deb9db0b6474c32bcbd0a",
+      "count": 754,
+      "pen_down_count": 282,
+      "measurement_kind": "forward_kinematics_of_commanded_positions",
+      "physical_writing_verified": false,
+      "metrics": {
+        "fk_error_max_mm": 0.08114973698407162,
+        "fk_error_p90_mm": 0.0020397704910975617,
+        "write_fk_error_max_mm": 0.08114973698407162,
+        "write_xy_error_max_mm": 0.08073952243338967,
+        "tilt_max_deg": 5.623851544123252,
+        "joint_step_max_deg": 4.999986489789209,
+        "joint_margin_min_deg": 2.00000000000013,
+        "air_fk_error_max_mm": 0.06342394423923747,
+        "transfer_clearance_min_mm": 59.999219843174096,
+        "last_clearance_mm": 59.99798934427823,
+        "standby_error_mm": 0.023141223986084158
+      },
+      "gates": {
+        "position_within_1mm": true,
+        "upright_within_8deg": true,
+        "step_within_5deg": true,
+        "joint_margin_2deg": true,
+        "air_position_within_1mm": true,
+        "transfer_clearance_60mm": true,
+        "final_lift_60mm": true,
+        "standby_position_within_1mm": true
+      },
+      "passed": true
+    },
+    {
+      "word": "学習",
+      "trace": "/Users/sugawaraichirou/Documents/syodo-issue-resolution/runs/hardware-two-character/20260908-145006/trace.npz",
+      "trace_schema": 4,
+      "trace_sha256": "9e3928cc1a5d615c9d50831640719891c5c43562910ff2a140b74c812930ac59",
+      "desk_fingerprint": "bf996c3c718a2f73cc64980e18b8f1d1a5518e890c5deb9db0b6474c32bcbd0a",
+      "count": 1296,
+      "pen_down_count": 375,
+      "measurement_kind": "forward_kinematics_of_commanded_positions",
+      "physical_writing_verified": false,
+      "metrics": {
+        "fk_error_max_mm": 0.08481922535927831,
+        "fk_error_p90_mm": 0.0027321459430325835,
+        "write_fk_error_max_mm": 0.08311254097247632,
+        "write_xy_error_max_mm": 0.08239233094443695,
+        "tilt_max_deg": 5.401924785239664,
+        "joint_step_max_deg": 4.999994259197776,
+        "joint_margin_min_deg": 2.00000000000013,
+        "air_fk_error_max_mm": 0.060613818400618705,
+        "transfer_clearance_min_mm": 59.9990783032296,
+        "last_clearance_mm": 59.99871247969318,
+        "standby_error_mm": 0.023141223986084158
+      },
+      "gates": {
+        "position_within_1mm": true,
+        "upright_within_8deg": true,
+        "step_within_5deg": true,
+        "joint_margin_2deg": true,
+        "air_position_within_1mm": true,
+        "transfer_clearance_60mm": true,
+        "final_lift_60mm": true,
+        "standby_position_within_1mm": true
+      },
+      "passed": true
+    },
+    {
+      "word": "菅原",
+      "trace": "/Users/sugawaraichirou/Documents/syodo-issue-resolution/runs/hardware-two-character/20260908-145016/trace.npz",
+      "trace_schema": 4,
+      "trace_sha256": "084d5b986e0066a4b4923ff5f5967ac09f7a7513e8526e93b63f0f069d7ca54b",
+      "desk_fingerprint": "bf996c3c718a2f73cc64980e18b8f1d1a5518e890c5deb9db0b6474c32bcbd0a",
+      "count": 1438,
+      "pen_down_count": 395,
+      "measurement_kind": "forward_kinematics_of_commanded_positions",
+      "physical_writing_verified": false,
+      "metrics": {
+        "fk_error_max_mm": 0.10713343666550888,
+        "fk_error_p90_mm": 0.0021848764200751735,
+        "write_fk_error_max_mm": 0.10713343666550888,
+        "write_xy_error_max_mm": 0.10668857121319847,
+        "tilt_max_deg": 6.83524776975422,
+        "joint_step_max_deg": 4.999999999998218,
+        "joint_margin_min_deg": 2.00000000000013,
+        "air_fk_error_max_mm": 0.057568656705314185,
+        "transfer_clearance_min_mm": 59.99922226571336,
+        "last_clearance_mm": 59.99882845717161,
+        "standby_error_mm": 0.023141223986084158
+      },
+      "gates": {
+        "position_within_1mm": true,
+        "upright_within_8deg": true,
+        "step_within_5deg": true,
+        "joint_margin_2deg": true,
+        "air_position_within_1mm": true,
+        "transfer_clearance_60mm": true,
+        "final_lift_60mm": true,
+        "standby_position_within_1mm": true
+      },
+      "passed": true
+    },
+    {
+      "word": "永",
+      "trace": "/Users/sugawaraichirou/Documents/syodo-issue-resolution/runs/hardware-two-character/20260908-145025/trace.npz",
+      "trace_schema": 4,
+      "trace_sha256": "537c9956d864056f4013f05e79db08967a50cfa120bc68899c35a3a6e07286ce",
+      "desk_fingerprint": "bf996c3c718a2f73cc64980e18b8f1d1a5518e890c5deb9db0b6474c32bcbd0a",
+      "count": 371,
+      "pen_down_count": 122,
+      "measurement_kind": "forward_kinematics_of_commanded_positions",
+      "physical_writing_verified": false,
+      "metrics": {
+        "fk_error_max_mm": 0.02363684471609882,
+        "fk_error_p90_mm": 0.0013732010479225042,
+        "write_fk_error_max_mm": 0.001916068255755841,
+        "write_xy_error_max_mm": 0.001850110190382046,
+        "tilt_max_deg": 2.1999666923605816,
+        "joint_step_max_deg": 2.6941331125162677,
+        "joint_margin_min_deg": 2.00000000000013,
+        "air_fk_error_max_mm": 0.02363684471609882,
+        "transfer_clearance_min_mm": 59.99981009583283,
+        "last_clearance_mm": 59.99873144970688,
+        "standby_error_mm": 0.023141223986084158
+      },
+      "gates": {
+        "position_within_1mm": true,
+        "upright_within_8deg": true,
+        "step_within_5deg": true,
+        "joint_margin_2deg": true,
+        "air_position_within_1mm": true,
+        "transfer_clearance_60mm": true,
+        "final_lift_60mm": true,
+        "standby_position_within_1mm": true
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}

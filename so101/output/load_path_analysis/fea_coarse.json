@@ -1,0 +1,602 @@
+{
+  "method": "Small-strain, isotropic, first-order tetrahedral linear elasticity",
+  "not_a_prediction_of_electrical_readout": true,
+  "source_geometry_file": "geometry_audit.json",
+  "mesh": {
+    "labels": [
+      "sensor",
+      "carrier",
+      "cartridge"
+    ],
+    "cad_volumes_mm3": [
+      1844.3186979165448,
+      6331.074693361666,
+      8531.709330455533
+    ],
+    "global_size_mm": 2.5,
+    "sensor_size_mm": 0.6,
+    "nodes": 18815,
+    "tetrahedra": 79322,
+    "minimum_scaled_jacobian": 0.12169997080221427,
+    "connected_components": 1,
+    "material_counts": {
+      "sensor": 54693,
+      "carrier": 15921,
+      "cartridge": 8708
+    }
+  },
+  "DOF": 56445,
+  "fixed_nodes": 4854,
+  "glue_load_nodes": 505,
+  "cases": [
+    {
+      "case": "normal_1N",
+      "printed_E_MPa": 1500.0,
+      "force_N": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "assumed_brush_tip_mm": [
+        50.0,
+        2.762946202,
+        -40.0
+      ],
+      "gauge_reference_mm": [
+        30.0,
+        15.96294620236,
+        27.5
+      ],
+      "applied_resultant_N_Nmm": [
+        0.0,
+        0.0,
+        1.0,
+        -13.20000000036,
+        -20.0,
+        0.0
+      ],
+      "fixed_reaction_N": [
+        -3.97777644156605e-12,
+        1.3788969965844444e-13,
+        -0.999999999987438
+      ],
+      "fixed_reaction_moment_Nmm": [
+        13.200000000152473,
+        20.000000000007795,
+        -5.6436522122282895e-11
+      ],
+      "sensor_cut_force_N": [
+        -4.189201069371151e-12,
+        4.639899575664685e-13,
+        -0.9999999999864635
+      ],
+      "sensor_cut_moment_Nmm": [
+        13.200000000153166,
+        20.000000000004025,
+        -5.5747684246654217e-11
+      ],
+      "equilibrium_error_N": 1.3177417954585095e-11,
+      "free_DOF_relative_residual": 2.613899786943177e-10,
+      "max_displacement_mm": 0.013874835270676358,
+      "parts": {
+        "sensor": {
+          "max_displacement_mm": 0.0026261643278298716,
+          "max_von_mises_MPa": 5.949911097835159,
+          "p95_von_mises_MPa": 1.00033138364556
+        },
+        "carrier": {
+          "max_displacement_mm": 0.013754932578209422,
+          "max_von_mises_MPa": 0.3381837173593876,
+          "p95_von_mises_MPa": 0.058531241282201045
+        },
+        "cartridge": {
+          "max_displacement_mm": 0.013874835270676358,
+          "max_von_mises_MPa": 0.0337609076921441,
+          "p95_von_mises_MPa": 0.010313503059136392
+        }
+      },
+      "sensor_gauge_p95_von_mises_MPa": 2.074191728970025,
+      "max_printed_displacement_bound_mm": 0.013874835270676358,
+      "strain_energy_Nmm": 0.003782016956413727,
+      "boundary_condition_note": "Ideal bonded fastening faces; entire fixed sensor block clamped; no printed-base compliance, bolt slip, glue creep or electrical gauges"
+    },
+    {
+      "case": "normal_5N",
+      "printed_E_MPa": 1500.0,
+      "force_N": [
+        0.0,
+        0.0,
+        5.0
+      ],
+      "assumed_brush_tip_mm": [
+        50.0,
+        2.762946202,
+        -40.0
+      ],
+      "gauge_reference_mm": [
+        30.0,
+        15.96294620236,
+        27.5
+      ],
+      "applied_resultant_N_Nmm": [
+        0.0,
+        0.0,
+        5.0,
+        -66.0000000018,
+        -100.0,
+        0.0
+      ],
+      "fixed_reaction_N": [
+        -1.9914292437306358e-11,
+        5.592193375036913e-13,
+        -4.999999999937192
+      ],
+      "fixed_reaction_moment_Nmm": [
+        66.00000000076263,
+        100.0000000000387,
+        -2.820050859497769e-10
+      ],
+      "sensor_cut_force_N": [
+        -2.0912757636715185e-11,
+        2.536082455151245e-12,
+        -4.999999999933064
+      ],
+      "sensor_cut_moment_Nmm": [
+        66.00000000076714,
+        100.00000000002284,
+        -2.7896707166519263e-10
+      ],
+      "equilibrium_error_N": 6.589226082435277e-11,
+      "free_DOF_relative_residual": 2.5755896571561895e-10,
+      "max_displacement_mm": 0.069374176353382,
+      "parts": {
+        "sensor": {
+          "max_displacement_mm": 0.013130821639149342,
+          "max_von_mises_MPa": 29.749555489175652,
+          "p95_von_mises_MPa": 5.001656918227823
+        },
+        "carrier": {
+          "max_displacement_mm": 0.06877466289104733,
+          "max_von_mises_MPa": 1.690918586796876,
+          "p95_von_mises_MPa": 0.29265620641101414
+        },
+        "cartridge": {
+          "max_displacement_mm": 0.069374176353382,
+          "max_von_mises_MPa": 0.16880453846072296,
+          "p95_von_mises_MPa": 0.0515675152956835
+        }
+      },
+      "sensor_gauge_p95_von_mises_MPa": 10.370958644850115,
+      "max_printed_displacement_bound_mm": 0.069374176353382,
+      "strain_energy_Nmm": 0.09455042391023635,
+      "boundary_condition_note": "Ideal bonded fastening faces; entire fixed sensor block clamped; no printed-base compliance, bolt slip, glue creep or electrical gauges"
+    },
+    {
+      "case": "side_X_0p5N",
+      "printed_E_MPa": 1500.0,
+      "force_N": [
+        0.5,
+        0.0,
+        0.0
+      ],
+      "assumed_brush_tip_mm": [
+        50.0,
+        2.762946202,
+        -40.0
+      ],
+      "gauge_reference_mm": [
+        30.0,
+        15.96294620236,
+        27.5
+      ],
+      "applied_resultant_N_Nmm": [
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        -33.75,
+        6.60000000018
+      ],
+      "fixed_reaction_N": [
+        -0.5000000000054288,
+        1.4335407860777138e-13,
+        1.6384922932322077e-12
+      ],
+      "fixed_reaction_moment_Nmm": [
+        -1.357901291410002e-11,
+        33.750000000049745,
+        -6.6000000002450845
+      ],
+      "sensor_cut_force_N": [
+        -0.5000000000056599,
+        4.890671201351893e-13,
+        2.23280074984622e-12
+      ],
+      "sensor_cut_moment_Nmm": [
+        -1.3281375998985823e-11,
+        33.75000000004857,
+        -6.600000000245369
+      ],
+      "equilibrium_error_N": 5.67245408186206e-12,
+      "free_DOF_relative_residual": 4.5350437960258364e-11,
+      "max_displacement_mm": 0.02587123262481364,
+      "parts": {
+        "sensor": {
+          "max_displacement_mm": 0.0018134910006020097,
+          "max_von_mises_MPa": 7.071305603090847,
+          "p95_von_mises_MPa": 1.4454329529086327
+        },
+        "carrier": {
+          "max_displacement_mm": 0.023883673639325274,
+          "max_von_mises_MPa": 0.5434610277603431,
+          "p95_von_mises_MPa": 0.11493641848083774
+        },
+        "cartridge": {
+          "max_displacement_mm": 0.02587123262481364,
+          "max_von_mises_MPa": 0.1392692880220959,
+          "p95_von_mises_MPa": 0.039155581425817446
+        }
+      },
+      "sensor_gauge_p95_von_mises_MPa": 2.864286539668046,
+      "max_printed_displacement_bound_mm": 0.02587123262481364,
+      "strain_energy_Nmm": 0.011629054366489998,
+      "boundary_condition_note": "Ideal bonded fastening faces; entire fixed sensor block clamped; no printed-base compliance, bolt slip, glue creep or electrical gauges"
+    },
+    {
+      "case": "side_Y_0p5N",
+      "printed_E_MPa": 1500.0,
+      "force_N": [
+        0.0,
+        0.5,
+        0.0
+      ],
+      "assumed_brush_tip_mm": [
+        50.0,
+        2.762946202,
+        -40.0
+      ],
+      "gauge_reference_mm": [
+        30.0,
+        15.96294620236,
+        27.5
+      ],
+      "applied_resultant_N_Nmm": [
+        0.0,
+        0.5,
+        0.0,
+        33.75,
+        -0.0,
+        10.0
+      ],
+      "fixed_reaction_N": [
+        5.833623514805986e-13,
+        -0.4999999999986752,
+        -9.379007986920485e-12
+      ],
+      "fixed_reaction_moment_Nmm": [
+        -33.74999999982381,
+        1.2334683621717524e-11,
+        -9.999999999981034
+      ],
+      "sensor_cut_force_N": [
+        5.431458234561592e-13,
+        -0.4999999999987606,
+        -9.503230667673446e-12
+      ],
+      "sensor_cut_moment_Nmm": [
+        -33.749999999823736,
+        1.2889113387704043e-11,
+        -9.999999999980691
+      ],
+      "equilibrium_error_N": 9.490054141417964e-12,
+      "free_DOF_relative_residual": 5.665143525152918e-11,
+      "max_displacement_mm": 0.007050463333947447,
+      "parts": {
+        "sensor": {
+          "max_displacement_mm": 0.0020651684278353575,
+          "max_von_mises_MPa": 2.4262306176568087,
+          "p95_von_mises_MPa": 0.8273566103041412
+        },
+        "carrier": {
+          "max_displacement_mm": 0.006671657049906164,
+          "max_von_mises_MPa": 0.7044941393723992,
+          "p95_von_mises_MPa": 0.059932414169603175
+        },
+        "cartridge": {
+          "max_displacement_mm": 0.007050463333947447,
+          "max_von_mises_MPa": 0.07214969971911356,
+          "p95_von_mises_MPa": 0.02917407905150608
+        }
+      },
+      "sensor_gauge_p95_von_mises_MPa": 1.5344312258412223,
+      "max_printed_displacement_bound_mm": 0.007050463333947447,
+      "strain_energy_Nmm": 0.004138492559158318,
+      "boundary_condition_note": "Ideal bonded fastening faces; entire fixed sensor block clamped; no printed-base compliance, bolt slip, glue creep or electrical gauges"
+    },
+    {
+      "case": "normal_1N",
+      "printed_E_MPa": 3000.0,
+      "force_N": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "assumed_brush_tip_mm": [
+        50.0,
+        2.762946202,
+        -40.0
+      ],
+      "gauge_reference_mm": [
+        30.0,
+        15.96294620236,
+        27.5
+      ],
+      "applied_resultant_N_Nmm": [
+        0.0,
+        0.0,
+        1.0,
+        -13.20000000036,
+        -20.0,
+        0.0
+      ],
+      "fixed_reaction_N": [
+        -1.1679129885422412e-12,
+        -2.1578017150858386e-12,
+        -1.0000000000004012
+      ],
+      "fixed_reaction_moment_Nmm": [
+        13.200000000321017,
+        20.00000000006295,
+        -1.796762738592861e-11
+      ],
+      "sensor_cut_force_N": [
+        -1.2050742348446164e-12,
+        -1.8281348657112062e-12,
+        -0.9999999999994594
+      ],
+      "sensor_cut_moment_Nmm": [
+        13.200000000322278,
+        20.000000000058076,
+        -1.7326307055753887e-11
+      ],
+      "equilibrium_error_N": 2.4861854708674805e-12,
+      "free_DOF_relative_residual": 2.719944354119039e-10,
+      "max_displacement_mm": 0.0108401052880555,
+      "parts": {
+        "sensor": {
+          "max_displacement_mm": 0.0026145614961732397,
+          "max_von_mises_MPa": 5.947522675145562,
+          "p95_von_mises_MPa": 0.9993562575188486
+        },
+        "carrier": {
+          "max_displacement_mm": 0.010741924415084265,
+          "max_von_mises_MPa": 0.34793169339544017,
+          "p95_von_mises_MPa": 0.06022510364545363
+        },
+        "cartridge": {
+          "max_displacement_mm": 0.0108401052880555,
+          "max_von_mises_MPa": 0.033519657159198774,
+          "p95_von_mises_MPa": 0.010314347541352754
+        }
+      },
+      "sensor_gauge_p95_von_mises_MPa": 2.0739489755514904,
+      "max_printed_displacement_bound_mm": 0.0108401052880555,
+      "strain_energy_Nmm": 0.0030771943033387414,
+      "boundary_condition_note": "Ideal bonded fastening faces; entire fixed sensor block clamped; no printed-base compliance, bolt slip, glue creep or electrical gauges"
+    },
+    {
+      "case": "normal_5N",
+      "printed_E_MPa": 3000.0,
+      "force_N": [
+        0.0,
+        0.0,
+        5.0
+      ],
+      "assumed_brush_tip_mm": [
+        50.0,
+        2.762946202,
+        -40.0
+      ],
+      "gauge_reference_mm": [
+        30.0,
+        15.96294620236,
+        27.5
+      ],
+      "applied_resultant_N_Nmm": [
+        0.0,
+        0.0,
+        5.0,
+        -66.0000000018,
+        -100.0,
+        0.0
+      ],
+      "fixed_reaction_N": [
+        -5.8402171987381735e-12,
+        -1.0763168134531043e-11,
+        -5.000000000002039
+      ],
+      "fixed_reaction_moment_Nmm": [
+        66.00000000160502,
+        100.00000000031466,
+        -8.984812893686467e-11
+      ],
+      "sensor_cut_force_N": [
+        -6.137923502791409e-12,
+        -9.740763751153736e-12,
+        -4.999999999995825
+      ],
+      "sensor_cut_moment_Nmm": [
+        66.00000000161104,
+        100.00000000029027,
+        -8.731348977164544e-11
+      ],
+      "equilibrium_error_N": 1.2414205451431806e-11,
+      "free_DOF_relative_residual": 2.591228293143954e-10,
+      "max_displacement_mm": 0.05420052644027748,
+      "parts": {
+        "sensor": {
+          "max_displacement_mm": 0.013072807480866212,
+          "max_von_mises_MPa": 29.737613375727488,
+          "p95_von_mises_MPa": 4.996781287594435
+        },
+        "carrier": {
+          "max_displacement_mm": 0.053709622075421334,
+          "max_von_mises_MPa": 1.7396584669770743,
+          "p95_von_mises_MPa": 0.3011255182272609
+        },
+        "cartridge": {
+          "max_displacement_mm": 0.05420052644027748,
+          "max_von_mises_MPa": 0.16759828579597183,
+          "p95_von_mises_MPa": 0.05157173770676143
+        }
+      },
+      "sensor_gauge_p95_von_mises_MPa": 10.369744877757466,
+      "max_printed_displacement_bound_mm": 0.05420052644027748,
+      "strain_energy_Nmm": 0.07692985758345014,
+      "boundary_condition_note": "Ideal bonded fastening faces; entire fixed sensor block clamped; no printed-base compliance, bolt slip, glue creep or electrical gauges"
+    },
+    {
+      "case": "side_X_0p5N",
+      "printed_E_MPa": 3000.0,
+      "force_N": [
+        0.5,
+        0.0,
+        0.0
+      ],
+      "assumed_brush_tip_mm": [
+        50.0,
+        2.762946202,
+        -40.0
+      ],
+      "gauge_reference_mm": [
+        30.0,
+        15.96294620236,
+        27.5
+      ],
+      "applied_resultant_N_Nmm": [
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        -33.75,
+        6.60000000018
+      ],
+      "fixed_reaction_N": [
+        -0.49999999999966094,
+        -8.437972542907346e-13,
+        -3.902822509616044e-12
+      ],
+      "fixed_reaction_moment_Nmm": [
+        7.1084242658781e-11,
+        33.75000000007909,
+        -6.600000000140798
+      ],
+      "sensor_cut_force_N": [
+        -0.49999999999968275,
+        -4.66876537430494e-13,
+        -2.9934076051230107e-12
+      ],
+      "sensor_cut_moment_Nmm": [
+        7.157965886683826e-11,
+        33.75000000007806,
+        -6.600000000140865
+      ],
+      "equilibrium_error_N": 4.007365776107621e-12,
+      "free_DOF_relative_residual": 5.137933343267971e-11,
+      "max_displacement_mm": 0.017628021248320247,
+      "parts": {
+        "sensor": {
+          "max_displacement_mm": 0.0017964993353699645,
+          "max_von_mises_MPa": 7.074759556499939,
+          "p95_von_mises_MPa": 1.4452941383366555
+        },
+        "carrier": {
+          "max_displacement_mm": 0.017297812299353177,
+          "max_von_mises_MPa": 0.5478623000675001,
+          "p95_von_mises_MPa": 0.11722274759136386
+        },
+        "cartridge": {
+          "max_displacement_mm": 0.017628021248320247,
+          "max_von_mises_MPa": 0.13944585052920072,
+          "p95_von_mises_MPa": 0.03912235116225477
+        }
+      },
+      "sensor_gauge_p95_von_mises_MPa": 2.8646300984422686,
+      "max_printed_displacement_bound_mm": 0.017628021248320247,
+      "strain_energy_Nmm": 0.008152449210255566,
+      "boundary_condition_note": "Ideal bonded fastening faces; entire fixed sensor block clamped; no printed-base compliance, bolt slip, glue creep or electrical gauges"
+    },
+    {
+      "case": "side_Y_0p5N",
+      "printed_E_MPa": 3000.0,
+      "force_N": [
+        0.0,
+        0.5,
+        0.0
+      ],
+      "assumed_brush_tip_mm": [
+        50.0,
+        2.762946202,
+        -40.0
+      ],
+      "gauge_reference_mm": [
+        30.0,
+        15.96294620236,
+        27.5
+      ],
+      "applied_resultant_N_Nmm": [
+        0.0,
+        0.5,
+        0.0,
+        33.75,
+        -0.0,
+        10.0
+      ],
+      "fixed_reaction_N": [
+        2.433925457012709e-12,
+        -0.4999999999968547,
+        -3.099822482033332e-12
+      ],
+      "fixed_reaction_moment_Nmm": [
+        -33.74999999990527,
+        -2.136555082160596e-11,
+        -9.999999999927667
+      ],
+      "sensor_cut_force_N": [
+        2.4584232219404534e-12,
+        -0.4999999999969383,
+        -3.2737527966286706e-12
+      ],
+      "sensor_cut_moment_Nmm": [
+        -33.74999999990532,
+        -2.0516196380659935e-11,
+        -9.999999999927377
+      ],
+      "equilibrium_error_N": 5.042411498398299e-12,
+      "free_DOF_relative_residual": 5.935033803366148e-11,
+      "max_displacement_mm": 0.005577721775285071,
+      "parts": {
+        "sensor": {
+          "max_displacement_mm": 0.00203378872958558,
+          "max_von_mises_MPa": 2.4197429089072013,
+          "p95_von_mises_MPa": 0.8206008624660441
+        },
+        "carrier": {
+          "max_displacement_mm": 0.005310425358973274,
+          "max_von_mises_MPa": 0.7786282140470444,
+          "p95_von_mises_MPa": 0.06253706554755045
+        },
+        "cartridge": {
+          "max_displacement_mm": 0.005577721775285071,
+          "max_von_mises_MPa": 0.0720774386635215,
+          "p95_von_mises_MPa": 0.0292949611692415
+        }
+      },
+      "sensor_gauge_p95_von_mises_MPa": 1.5341375641100823,
+      "max_printed_displacement_bound_mm": 0.005577721775285071,
+      "strain_energy_Nmm": 0.0028824998903592405,
+      "boundary_condition_note": "Ideal bonded fastening faces; entire fixed sensor block clamped; no printed-base compliance, bolt slip, glue creep or electrical gauges"
+    }
+  ],
+  "runtime_seconds": 13.198830127716064
+}

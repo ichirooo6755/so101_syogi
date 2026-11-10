@@ -1,0 +1,28 @@
+[
+  {
+    "file": "01_A1mini_ribbed_camera_bracket_V5.stl",
+    "triangles": 1210,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      36.0,
+      58.49177169799805,
+      35.59971237182617
+    ],
+    "mesh_volume_mm3": 11056.738599329317,
+    "cad_volume_error_fraction": 2.5997508644016387e-05
+  },
+  {
+    "file": "02_joined_slot_backing_V5.stl",
+    "triangles": 1354,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      21.5,
+      23.0,
+      9.550000190734863
+    ],
+    "mesh_volume_mm3": 1739.7435258976143,
+    "cad_volume_error_fraction": 8.785208740614628e-05
+  }
+]

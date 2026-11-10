@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-10-27T15:02:56.584284+00:00",
+  "passed": true,
+  "printable_part_types": 2,
+  "printed_piece_count": 2,
+  "connectivity": [
+    {
+      "file": "01_A1mini_ribbed_camera_bracket_V5.stl",
+      "surface_components": 1,
+      "quantity": 1
+    },
+    {
+      "file": "02_joined_slot_backing_V5.stl",
+      "surface_components": 1,
+      "quantity": 1
+    }
+  ],
+  "new_fasteners": {
+    "M3x10_socket_cap": 2,
+    "M3_hex_nut": 2
+  },
+  "native_cad_reopened": 4,
+  "sampled_rotation_poses": 73,
+  "rotation_collisions": 0,
+  "source_version_preserved": 26,
+  "source_timeline_preserved": [
+    520,
+    520
+  ],
+  "physical_fit_strength_or_electrical_test_performed": false
+}

@@ -1,0 +1,1023 @@
+{
+  "document": "so101_Camera_HX711_V1_追加台座",
+  "modified": true,
+  "timeline": [
+    20,
+    20
+  ],
+  "selection_api": {
+    "design": [
+      "_get_selectionSets",
+      "selectionSets"
+    ],
+    "root": [],
+    "document": []
+  },
+  "sets": [
+    {
+      "owner": "design",
+      "name": "選択セットA",
+      "api": [
+        "cast",
+        "classType",
+        "deleteMe",
+        "entities",
+        "isValid",
+        "name",
+        "objectType",
+        "select",
+        "this",
+        "thisown"
+      ],
+      "entities": [
+        {
+          "type": "adsk::fusion::BRepFace",
+          "entityToken": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/61VO5LUMBA9AREX0AVU1Wq1ZCmlYJONSEinZEuuIgGKgnzTDbgJR4ELcAQCzoA+1ozl8QizteUZq9V6/fq1fgaGTDCpmbFknA6SAynPyQTLnTeS06yV0zBaJwyDiE14SBaaaAlGyaPZy1+PL36+vv/+8Pvb2x9/4D4iMPEOk7EIXnOHk+M0mZnbOThunNJ2RKe9s0XBONlZDwY4OIhIH2Zu0Hs+grQDydGoCfu5kGAeRJQ/wxSVByv5OFjiflYy2BEcjTZrJyYZSqVZbIVisRXxlaqTIo2vulS6uHRNM4q47lIdlTkJxPYSCbolgrZLFa5auGrhagUXjGF+SsA2YdVWu01+wtIuYqtDsbykTeWipRNtqaKVK1ZksjqaGbVZaJShlsxCAO2g1RYNPbTcokUPTVs0rtFiNdEKqkNvHbR1yJUD2Pjx6wcf/Gl2Uzh9DtP7T+Hk3RfHXt0xdsfS9PGYktibaEer/PAylIzF965A5M5gMjAZKec+TjYBuVAm4r6PR0mkN+ZdsSMDayD0ZJxR1JdxLbdXOT1HSqqGOpJS9VJeU+3jVDX0kZS6l/Kaah+nm4VermhZl3i10D0lsqfkcIZn3oBnhiGflUq/N1hYcXlyhi6j6TGaa8Z/a7Q9RvsURgE9yjL635z9KwVbXFlqFR8636k3Is/HW8iLLpW/tPlrG/9dXd0NeIT9RuRl89GlIloiS7+rq3sRHWG/EUntnJeKai0H5gu7ug6wP3kH/AXsv+tdMwoAAA==",
+          "bounds_mm": [
+            [
+              -15.0,
+              35.5,
+              21.0
+            ],
+            [
+              54.0,
+              35.5,
+              47.0
+            ]
+          ],
+          "area_mm2": 1027.2938076199125,
+          "centroid_mm": [
+            16.056427738362103,
+            35.5,
+            34.4727226002901
+          ],
+          "surface_type": 0,
+          "normal": [
+            0.0,
+            1.0,
+            -0.0
+          ],
+          "plane_origin_mm": [
+            54.0,
+            35.5,
+            35.5
+          ],
+          "vertices_mm": [
+            [
+              -2.0,
+              35.5,
+              47.0
+            ],
+            [
+              54.0,
+              35.5,
+              47.0
+            ],
+            [
+              54.0,
+              35.5,
+              39.5
+            ],
+            [
+              47.0,
+              35.5,
+              39.5
+            ],
+            [
+              47.0,
+              35.5,
+              21.0
+            ],
+            [
+              -2.0,
+              35.5,
+              21.0
+            ],
+            [
+              0.2497474683058326,
+              35.5,
+              38.94974746830583
+            ],
+            [
+              -9.649747468305831,
+              35.5,
+              38.94974746830583
+            ],
+            [
+              -9.649747468305833,
+              35.5,
+              29.05025253169417
+            ],
+            [
+              0.2497474683058315,
+              35.5,
+              29.050252531694166
+            ],
+            [
+              19.0,
+              35.5,
+              41.99999999999999
+            ],
+            [
+              19.0,
+              35.5,
+              26.0
+            ],
+            [
+              36.0,
+              35.5,
+              25.999999999999996
+            ],
+            [
+              36.0,
+              35.5,
+              42.0
+            ]
+          ],
+          "body_name": "ボディ26",
+          "body_volume_mm3": 38550.50206478457,
+          "occurrence": "REFERENCE_existing_SO101_do_not_print:1",
+          "component": "REFERENCE_existing_SO101_do_not_print"
+        }
+      ]
+    }
+  ],
+  "active_selection": [],
+  "camera": {
+    "eye_mm": [
+      1054.2087790560258,
+      765.719214140202,
+      1687.5076694635752
+    ],
+    "target_mm": [
+      15.74272694959108,
+      -39.7202315618037,
+      -13.007221568727662
+    ],
+    "up": [
+      -0.6252293442020973,
+      -0.4849309954902139,
+      0.6114983211436363
+    ],
+    "screen_left_unit": [
+      0.6128702852735838,
+      -0.7901835314840953,
+      -2.7755575615628907e-17
+    ],
+    "view_extents_cm": 21.49161574741862
+  },
+  "root_occurrences": [
+    {
+      "name": "01_fixed_electronics_frame:1",
+      "visible": false,
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bodies": [
+        {
+          "name": "ボディ1",
+          "volume_mm3": 9192.297339782528
+        }
+      ]
+    },
+    {
+      "name": "02_wrist_lower_shoe:1",
+      "visible": false,
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bodies": [
+        {
+          "name": "ボディ1",
+          "volume_mm3": 1970.9062373245258
+        }
+      ]
+    },
+    {
+      "name": "03_camera_end_keeper:1",
+      "visible": false,
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bodies": [
+        {
+          "name": "03_camera_end_keeper_1",
+          "volume_mm3": 309.0207797694316
+        }
+      ]
+    },
+    {
+      "name": "04_hx711_edge_keeper_L:1",
+      "visible": false,
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bodies": [
+        {
+          "name": "04_hx711_edge_keeper_L_1",
+          "volume_mm3": 298.7532755698003
+        }
+      ]
+    },
+    {
+      "name": "05_hx711_edge_keeper_R:1",
+      "visible": false,
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bodies": [
+        {
+          "name": "05_hx711_edge_keeper_R_1",
+          "volume_mm3": 261.4412755698004
+        }
+      ]
+    },
+    {
+      "name": "06_level_shifter_top_keeper:1",
+      "visible": false,
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bodies": [
+        {
+          "name": "06_level_shifter_top_keeper_1",
+          "volume_mm3": 827.5752901059527
+        }
+      ]
+    },
+    {
+      "name": "REFERENCE_existing_SO101_do_not_print:1",
+      "visible": true,
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bodies": [
+        {
+          "name": "ボディ1",
+          "volume_mm3": 14253.283864902352
+        },
+        {
+          "name": "ボディ2",
+          "volume_mm3": 10402.253168496005
+        },
+        {
+          "name": "ボディ3",
+          "volume_mm3": 8492.313546669719
+        },
+        {
+          "name": "ボディ4",
+          "volume_mm3": 146.4146844064167
+        },
+        {
+          "name": "ボディ5",
+          "volume_mm3": 3.328948339133163
+        },
+        {
+          "name": "ボディ6",
+          "volume_mm3": 3.3289483391331616
+        },
+        {
+          "name": "ボディ7",
+          "volume_mm3": 3.328948339133163
+        },
+        {
+          "name": "ボディ8",
+          "volume_mm3": 146.41468440641677
+        },
+        {
+          "name": "ボディ9",
+          "volume_mm3": 3.3289483391331656
+        },
+        {
+          "name": "ボディ10",
+          "volume_mm3": 3.328948339133164
+        },
+        {
+          "name": "ボディ11",
+          "volume_mm3": 3.3289483391331594
+        },
+        {
+          "name": "ボディ12",
+          "volume_mm3": 19.389566500593435
+        },
+        {
+          "name": "ボディ13",
+          "volume_mm3": 33.46329098223951
+        },
+        {
+          "name": "ボディ14",
+          "volume_mm3": 33.46329098223951
+        },
+        {
+          "name": "ボディ15",
+          "volume_mm3": 27.18010567505967
+        },
+        {
+          "name": "ボディ16",
+          "volume_mm3": 27.18010567505968
+        },
+        {
+          "name": "ボディ17",
+          "volume_mm3": 22025.213051512656
+        },
+        {
+          "name": "ボディ18",
+          "volume_mm3": 825.088304745796
+        },
+        {
+          "name": "ボディ19",
+          "volume_mm3": 757.4285886184375
+        },
+        {
+          "name": "ボディ20",
+          "volume_mm3": 566.0485673616445
+        },
+        {
+          "name": "ボディ21",
+          "volume_mm3": 72.10568515019307
+        },
+        {
+          "name": "ボディ22",
+          "volume_mm3": 82.96011275769129
+        },
+        {
+          "name": "ボディ23",
+          "volume_mm3": 1844.31869791654
+        },
+        {
+          "name": "ボディ24",
+          "volume_mm3": 6573.724935501749
+        },
+        {
+          "name": "ボディ25",
+          "volume_mm3": 6846.8001238112865
+        },
+        {
+          "name": "ボディ26",
+          "volume_mm3": 38550.50206478457
+        }
+      ]
+    },
+    {
+      "name": "REFERENCE_XIAO_2023_do_not_print:1",
+      "visible": false,
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bodies": [
+        {
+          "name": "ボディ1",
+          "volume_mm3": 0.18000000000000138
+        },
+        {
+          "name": "ボディ2",
+          "volume_mm3": 0.8370110881296573
+        },
+        {
+          "name": "ボディ3",
+          "volume_mm3": 0.8370110881296573
+        },
+        {
+          "name": "ボディ4",
+          "volume_mm3": 0.08999999999999943
+        },
+        {
+          "name": "ボディ5",
+          "volume_mm3": 0.1799999999999987
+        },
+        {
+          "name": "ボディ6",
+          "volume_mm3": 0.09000000000000119
+        },
+        {
+          "name": "ボディ7",
+          "volume_mm3": 0.8370110881296574
+        },
+        {
+          "name": "ボディ8",
+          "volume_mm3": 0.08999999999999976
+        },
+        {
+          "name": "ボディ9",
+          "volume_mm3": 0.09000000000000141
+        },
+        {
+          "name": "ボディ10",
+          "volume_mm3": 0.17999999999999974
+        },
+        {
+          "name": "ボディ11",
+          "volume_mm3": 19.829215584327063
+        },
+        {
+          "name": "ボディ12",
+          "volume_mm3": 0.0900000000000017
+        },
+        {
+          "name": "ボディ13",
+          "volume_mm3": 0.09000000000000122
+        },
+        {
+          "name": "ボディ14",
+          "volume_mm3": 0.8370110881296571
+        },
+        {
+          "name": "ボディ15",
+          "volume_mm3": 0.8370110881296584
+        },
+        {
+          "name": "ボディ16",
+          "volume_mm3": 0.09000000000000057
+        },
+        {
+          "name": "ボディ17",
+          "volume_mm3": 0.8370110881296577
+        },
+        {
+          "name": "ボディ18",
+          "volume_mm3": 0.18000000000000074
+        },
+        {
+          "name": "ボディ19",
+          "volume_mm3": 41.30871464169202
+        },
+        {
+          "name": "ボディ20",
+          "volume_mm3": 0.09000000000000088
+        },
+        {
+          "name": "ボディ21",
+          "volume_mm3": 0.8370110881296468
+        },
+        {
+          "name": "ボディ22",
+          "volume_mm3": 0.8370110881296465
+        },
+        {
+          "name": "ボディ23",
+          "volume_mm3": 44.8778972893245
+        },
+        {
+          "name": "ボディ24",
+          "volume_mm3": 0.8370110881296577
+        },
+        {
+          "name": "ボディ25",
+          "volume_mm3": 42.530714598098044
+        },
+        {
+          "name": "ボディ26",
+          "volume_mm3": 2.620800000000005
+        },
+        {
+          "name": "ボディ27",
+          "volume_mm3": 0.0193599999999998
+        },
+        {
+          "name": "ボディ28",
+          "volume_mm3": 0.019359999999999853
+        },
+        {
+          "name": "ボディ29",
+          "volume_mm3": 0.01935999999999972
+        },
+        {
+          "name": "ボディ30",
+          "volume_mm3": 0.01935999999999977
+        },
+        {
+          "name": "ボディ31",
+          "volume_mm3": 3.164119002222978
+        },
+        {
+          "name": "ボディ32",
+          "volume_mm3": 9.259701012878796
+        },
+        {
+          "name": "ボディ33",
+          "volume_mm3": 2.6207999999999987
+        },
+        {
+          "name": "ボディ34",
+          "volume_mm3": 0.019359999999999808
+        },
+        {
+          "name": "ボディ35",
+          "volume_mm3": 0.019359999999999856
+        },
+        {
+          "name": "ボディ36",
+          "volume_mm3": 0.01936000000000059
+        },
+        {
+          "name": "ボディ37",
+          "volume_mm3": 0.019360000000000634
+        },
+        {
+          "name": "ボディ38",
+          "volume_mm3": 445.4038880444348
+        },
+        {
+          "name": "ボディ39",
+          "volume_mm3": 0.00875411944901936
+        },
+        {
+          "name": "ボディ40",
+          "volume_mm3": 0.008754119449019158
+        },
+        {
+          "name": "ボディ41",
+          "volume_mm3": 0.00875411944901898
+        },
+        {
+          "name": "ボディ42",
+          "volume_mm3": 0.008754119449019297
+        },
+        {
+          "name": "ボディ43",
+          "volume_mm3": 0.008754119449019063
+        },
+        {
+          "name": "ボディ44",
+          "volume_mm3": 0.008754119449018962
+        },
+        {
+          "name": "ボディ45",
+          "volume_mm3": 0.008754119449018972
+        },
+        {
+          "name": "ボディ46",
+          "volume_mm3": 0.008754119449019097
+        },
+        {
+          "name": "ボディ47",
+          "volume_mm3": 0.00875411944901932
+        },
+        {
+          "name": "ボディ48",
+          "volume_mm3": 0.008754119449019278
+        },
+        {
+          "name": "ボディ49",
+          "volume_mm3": 0.008754119449019248
+        },
+        {
+          "name": "ボディ50",
+          "volume_mm3": 55.62081112411284
+        },
+        {
+          "name": "ボディ51",
+          "volume_mm3": 0.008754119449019236
+        },
+        {
+          "name": "ボディ52",
+          "volume_mm3": 0.00875411944901884
+        },
+        {
+          "name": "ボディ53",
+          "volume_mm3": 0.008754119449019385
+        },
+        {
+          "name": "ボディ54",
+          "volume_mm3": 0.008754119449019158
+        },
+        {
+          "name": "ボディ55",
+          "volume_mm3": 0.008754119449018969
+        },
+        {
+          "name": "ボディ56",
+          "volume_mm3": 0.008754119449018952
+        },
+        {
+          "name": "ボディ57",
+          "volume_mm3": 0.008754119449019259
+        },
+        {
+          "name": "ボディ58",
+          "volume_mm3": 0.00875411944901928
+        },
+        {
+          "name": "ボディ59",
+          "volume_mm3": 0.008754119449019184
+        },
+        {
+          "name": "ボディ60",
+          "volume_mm3": 0.008754119449019179
+        },
+        {
+          "name": "ボディ61",
+          "volume_mm3": 0.008754119449019347
+        },
+        {
+          "name": "ボディ62",
+          "volume_mm3": 0.008754119449019139
+        },
+        {
+          "name": "ボディ63",
+          "volume_mm3": 0.008754119449019094
+        },
+        {
+          "name": "ボディ64",
+          "volume_mm3": 0.008754119449018978
+        },
+        {
+          "name": "ボディ65",
+          "volume_mm3": 0.00875411944901964
+        },
+        {
+          "name": "ボディ66",
+          "volume_mm3": 0.008754119449019002
+        },
+        {
+          "name": "ボディ67",
+          "volume_mm3": 0.008754119449019382
+        },
+        {
+          "name": "ボディ68",
+          "volume_mm3": 0.008754119449019243
+        },
+        {
+          "name": "ボディ69",
+          "volume_mm3": 0.008754119449019241
+        },
+        {
+          "name": "ボディ70",
+          "volume_mm3": 0.08812499999999783
+        },
+        {
+          "name": "ボディ71",
+          "volume_mm3": 58.98046441822649
+        },
+        {
+          "name": "ボディ72",
+          "volume_mm3": 303.5475507679488
+        },
+        {
+          "name": "ボディ73",
+          "volume_mm3": 135.83061962874683
+        },
+        {
+          "name": "ボディ74",
+          "volume_mm3": 1.081970225696059
+        },
+        {
+          "name": "ボディ75",
+          "volume_mm3": 1.0819702256960513
+        },
+        {
+          "name": "ボディ76",
+          "volume_mm3": 1.0819702256960506
+        },
+        {
+          "name": "ボディ77",
+          "volume_mm3": 1.081970225696054
+        },
+        {
+          "name": "ボディ78",
+          "volume_mm3": 1.0819702256960535
+        },
+        {
+          "name": "ボディ79",
+          "volume_mm3": 1.0819702256960557
+        },
+        {
+          "name": "ボディ80",
+          "volume_mm3": 1.081970225696056
+        },
+        {
+          "name": "ボディ81",
+          "volume_mm3": 1.081970225696056
+        },
+        {
+          "name": "ボディ82",
+          "volume_mm3": 1.0819702256960564
+        },
+        {
+          "name": "ボディ83",
+          "volume_mm3": 1.0819702256960595
+        },
+        {
+          "name": "ボディ84",
+          "volume_mm3": 1.0819702256960617
+        },
+        {
+          "name": "ボディ85",
+          "volume_mm3": 1.081970225696058
+        },
+        {
+          "name": "ボディ86",
+          "volume_mm3": 1.0819702256960582
+        },
+        {
+          "name": "ボディ87",
+          "volume_mm3": 1.081970225696042
+        },
+        {
+          "name": "ボディ88",
+          "volume_mm3": 1.0819702256960582
+        },
+        {
+          "name": "ボディ89",
+          "volume_mm3": 1.081970225696057
+        },
+        {
+          "name": "ボディ90",
+          "volume_mm3": 1.08197022569604
+        },
+        {
+          "name": "ボディ91",
+          "volume_mm3": 1.0819702256960497
+        },
+        {
+          "name": "ボディ92",
+          "volume_mm3": 1.0819702256960482
+        },
+        {
+          "name": "ボディ93",
+          "volume_mm3": 1.0819702256960462
+        },
+        {
+          "name": "ボディ94",
+          "volume_mm3": 1.0819702256960446
+        },
+        {
+          "name": "ボディ95",
+          "volume_mm3": 1.081970225696059
+        },
+        {
+          "name": "ボディ96",
+          "volume_mm3": 1.0819702256960542
+        },
+        {
+          "name": "ボディ97",
+          "volume_mm3": 33.95369460788034
+        },
+        {
+          "name": "ボディ98",
+          "volume_mm3": 1.081970225696062
+        },
+        {
+          "name": "ボディ99",
+          "volume_mm3": 82.52798459136638
+        },
+        {
+          "name": "ボディ100",
+          "volume_mm3": 17.499999999999883
+        },
+        {
+          "name": "ボディ101",
+          "volume_mm3": 5.498243178720748
+        },
+        {
+          "name": "ボディ102",
+          "volume_mm3": 262.8772720182383
+        },
+        {
+          "name": "ボディ103",
+          "volume_mm3": 5.84925282190271
+        }
+      ]
+    },
+    {
+      "name": "REFERENCE_HX711_TXS_envelopes_do_not_print:1",
+      "visible": true,
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bodies": [
+        {
+          "name": "REFERENCE_HX711_TXS_envelopes_do_not_print_1",
+          "volume_mm3": 1056.000000000001
+        },
+        {
+          "name": "REFERENCE_HX711_TXS_envelopes_do_not_print_2",
+          "volume_mm3": 5939.999999999999
+        },
+        {
+          "name": "REFERENCE_HX711_TXS_envelopes_do_not_print_3",
+          "volume_mm3": 1458.6000000000004
+        },
+        {
+          "name": "REFERENCE_HX711_TXS_envelopes_do_not_print_4",
+          "volume_mm3": 1800.0000000000007
+        },
+        {
+          "name": "REFERENCE_HX711_TXS_envelopes_do_not_print_5",
+          "volume_mm3": 567.7408000000003
+        },
+        {
+          "name": "REFERENCE_HX711_TXS_envelopes_do_not_print_6",
+          "volume_mm3": 1420.8479999999997
+        }
+      ]
+    },
+    {
+      "name": "REFERENCE_screws_do_not_print:1",
+      "visible": false,
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bodies": [
+        {
+          "name": "REFERENCE_screws_do_not_print_1",
+          "volume_mm3": 127.82355109292925
+        },
+        {
+          "name": "REFERENCE_screws_do_not_print_2",
+          "volume_mm3": 127.82355109292925
+        },
+        {
+          "name": "REFERENCE_screws_do_not_print_3",
+          "volume_mm3": 127.82355109292939
+        },
+        {
+          "name": "REFERENCE_screws_do_not_print_4",
+          "volume_mm3": 127.82355109292936
+        },
+        {
+          "name": "REFERENCE_screws_do_not_print_5",
+          "volume_mm3": 127.82355109292916
+        },
+        {
+          "name": "REFERENCE_screws_do_not_print_6",
+          "volume_mm3": 141.96071803408284
+        },
+        {
+          "name": "REFERENCE_screws_do_not_print_7",
+          "volume_mm3": 44.759021074152294
+        },
+        {
+          "name": "REFERENCE_screws_do_not_print_8",
+          "volume_mm3": 44.759021074152294
+        },
+        {
+          "name": "REFERENCE_screws_do_not_print_9",
+          "volume_mm3": 44.75902107415242
+        },
+        {
+          "name": "REFERENCE_screws_do_not_print_10",
+          "volume_mm3": 44.759021074152415
+        },
+        {
+          "name": "REFERENCE_screws_do_not_print_11",
+          "volume_mm3": 44.759021074152336
+        },
+        {
+          "name": "REFERENCE_screws_do_not_print_12",
+          "volume_mm3": 44.75902107415202
+        }
+      ]
+    }
+  ]
+}

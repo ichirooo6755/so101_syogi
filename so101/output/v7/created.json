@@ -1,0 +1,120 @@
+{
+  "document": "部品１_V7_閉断面台座補強",
+  "cloud_id": "/Users/sugawaraichirou/Library/Application Support/Autodesk/Autodesk Fusion 360/4SY29298NXZFBXAG/W.login/F/_部品１_V7_閉断面台座補強.c51e25db-36b4-4802-9d6e-9c682ea3ded3.f3d",
+  "base_volume_mm3": 39541.145691013226,
+  "original_base_volume_mm3": 34383.20028727208,
+  "healthy_features": 28,
+  "before_assembly": {
+    "base": {
+      "volumes_mm3": [
+        34383.20028727208
+      ],
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "carrier": {
+      "volumes_mm3": [
+        6573.724935501749
+      ],
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        -1.6,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "cartridge": {
+      "volumes_mm3": [
+        6846.800123811279
+      ],
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        -1.6,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "wrist": {
+      "volumes_mm3": [
+        3.3316342766821095e-05,
+        22072.992902446946
+      ],
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  },
+  "original_assembly_untouched": true,
+  "preserved_assembly_timeline": [
+    515,
+    515
+  ],
+  "native_solved": false,
+  "brush_axis_mm": [
+    62,
+    2.762946202
+  ],
+  "simulation_document": "so101_V7_閉断面補強_筆圧検証",
+  "simulation_cloud_id": "urn:adsk.wipprod:dm.lineage:1DubX5HyQy2Bw53IOMRnaQ",
+  "static_interference_count": 0,
+  "revision": "Closed upper box with cartridge-clearing deep web",
+  "document_cloud_id": "urn:adsk.wipprod:dm.lineage:2MifWxFaS7-sWbDex35zHg",
+  "fastener_check_passed": true,
+  "sensor_material": "SC616C_USER_SELECTED_STEEL",
+  "steel_comparison_pending": true
+}

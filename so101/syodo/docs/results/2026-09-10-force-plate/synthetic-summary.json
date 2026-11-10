@@ -1,0 +1,28 @@
+{
+  "samples": 480,
+  "valid_samples": 234,
+  "aligned_samples": 479,
+  "recording_errors": [],
+  "invalid_reasons": {
+    "below_contact_threshold": 245,
+    "channel_not_ready": 1
+  },
+  "mean_force_n": 0.3537669507306753,
+  "peak_force_n": 0.45004799159953096,
+  "missing_contact_samples": 5,
+  "unexpected_contact_samples": 0,
+  "physical_writing_verified": false,
+  "training_eligible": false,
+  "source": "synthetic",
+  "reason": "Diagnostic dataset; dynamic delay, independent ink/camera validation and held-out writing evaluation required",
+  "recording_sha256": "74ea358dfd96db4d1e7b625934a385167c0a264ea0217849c67156723fa72024",
+  "calibration_sha256": "35bd7215cd1319912b31c205cbb2223aa805bad9d8085fdb9bc9cf1e53b08b2a",
+  "robot_log_sha256": "144fbe6aa0806bcfcacf81d0ba25f32a6e09515012842db53b2d8cd75b2c96cc",
+  "registration_sha256": null,
+  "clock_note": "DOUT-ready plus USB round-trip clock fit; HX711 filter delay is not removed",
+  "advice": [
+    "Use stroke force variation and contact gaps to select depth/speed experiments.",
+    "target_pressure remains the existing model unit; it is not a Newton target.",
+    "The centre is the resultant of all contacts, not a pressure map or measured brush tip."
+  ]
+}

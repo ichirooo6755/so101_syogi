@@ -1,0 +1,80 @@
+[
+  {
+    "file": "01_A_compact_outward_frame_V3.stl",
+    "triangles": 3344,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      46.400001525878906,
+      34.83167266845703,
+      66.29557037353516
+    ],
+    "mesh_volume_mm3": 8241.413469663477,
+    "cad_volume_error_fraction": 5.849295493904895e-05
+  },
+  {
+    "file": "02_A_slot_inner_jaw_V3.stl",
+    "triangles": 2044,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      21.5,
+      23.0,
+      9.550000190734863
+    ],
+    "mesh_volume_mm3": 1395.5755258408944,
+    "cad_volume_error_fraction": 0.0002539888381851543
+  },
+  {
+    "file": "03_camera_end_keeper_V3.stl",
+    "triangles": 920,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      9.399999618530277,
+      20.600000381469727,
+      3.0000000000000018
+    ],
+    "mesh_volume_mm3": 309.0274421131996,
+    "cad_volume_error_fraction": 2.155953322885841e-05
+  },
+  {
+    "file": "04_HX711_header_keeper_V3.stl",
+    "triangles": 352,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      8.899999618530273,
+      22.0,
+      1.600000023841858
+    ],
+    "mesh_volume_mm3": 298.76680953597094,
+    "cad_volume_error_fraction": 4.53014821117887e-05
+  },
+  {
+    "file": "05_HX711_terminal_keeper_V3.stl",
+    "triangles": 368,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      8.899999618530273,
+      22.000000000000007,
+      1.600000023841858
+    ],
+    "mesh_volume_mm3": 261.4548277088678,
+    "cad_volume_error_fraction": 5.1836264326275084e-05
+  },
+  {
+    "file": "06_TXS0108E_top_keeper_V3.stl",
+    "triangles": 804,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      32.00000000000001,
+      8.550000190734863,
+      4.800000190734863
+    ],
+    "mesh_volume_mm3": 827.5630984217462,
+    "cad_volume_error_fraction": 1.4731812753601828e-05
+  }
+]

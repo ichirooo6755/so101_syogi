@@ -1,0 +1,88 @@
+{
+  "created_utc": "2026-10-27T14:48:42.458690+00:00",
+  "exports": [
+    {
+      "part": "01_A1mini_ribbed_camera_bracket_V5",
+      "stem": "01_A1mini_ribbed_camera_bracket_V5",
+      "quantity": 1,
+      "volume_mm3": 10965.75458165337,
+      "size_mm": [
+        36.0,
+        58.49177281921499,
+        35.59971068706523
+      ],
+      "solid_lumps": 1,
+      "orientation": "A contact face on bed; 45 degree ribs and low overhangs; verify limited organic support in supplied A1 mini 3MF",
+      "rotation_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "603e58d00cebd4441a7fe7749c60c7ce4f2666e46977fd10cf0c787372f81ade"
+    },
+    {
+      "part": "02_joined_slot_backing_V5",
+      "stem": "02_joined_slot_backing_V5",
+      "quantity": 1,
+      "volume_mm3": 1739.8963794264173,
+      "size_mm": [
+        21.500000000000004,
+        23.0,
+        9.549999999999997
+      ],
+      "solid_lumps": 1,
+      "orientation": "inner jaw broad back face on bed; slot keys and nut tunnels upwards",
+      "rotation_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "f5bb3982cb1e9a6f119221b0f9980fe121b1571d63b36c3cec41232259b22f7a"
+    }
+  ],
+  "assembly_archive": "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/print_camera_hx711_v5/source_cad/SO101_SelectionA_Printable_Camera_HX711_V5_assembly_DO_NOT_PRINT.f3d",
+  "source_geometry_poses_materials_preserved": true,
+  "source_fingerprint_verified_by_build": true,
+  "cloud_copy": {
+    "saveAs_returned": true,
+    "document": "so101_SelectionA_Printable_Camera_HX711_V5",
+    "id": "/Users/sugawaraichirou/Library/Application Support/Autodesk/Autodesk Fusion 360/4SY29298NXZFBXAG/W.login/F/_so101_SelectionA_Printable_Camera_HX711_V5.0d7d9dde-b01d-4bfb-91ea-1be0634af956.f3d",
+    "version": 1,
+    "cloud_upload_completion_verified": false
+  },
+  "attachment_moves_with_part_1": true,
+  "hardware": {
+    "M3x8": 0,
+    "M3x10": 2,
+    "M3_hex_nut": 2
+  },
+  "physical_print_fit_strength_or_electrical_test_performed": false
+}

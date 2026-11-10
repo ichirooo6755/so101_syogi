@@ -1,0 +1,44 @@
+[
+  {
+    "shift_x_mm": -10,
+    "brush_axis_x_mm": 68,
+    "all_poses_clear": true,
+    "collision_angles_deg": [],
+    "collisions": []
+  },
+  {
+    "shift_x_mm": -14,
+    "brush_axis_x_mm": 64,
+    "all_poses_clear": true,
+    "collision_angles_deg": [],
+    "collisions": []
+  },
+  {
+    "shift_x_mm": -16,
+    "brush_axis_x_mm": 62,
+    "all_poses_clear": true,
+    "collision_angles_deg": [],
+    "collisions": []
+  },
+  {
+    "shift_x_mm": -18,
+    "brush_axis_x_mm": 60,
+    "all_poses_clear": true,
+    "collision_angles_deg": [],
+    "collisions": []
+  },
+  {
+    "shift_x_mm": -20,
+    "brush_axis_x_mm": 58,
+    "all_poses_clear": true,
+    "collision_angles_deg": [],
+    "collisions": []
+  },
+  {
+    "shift_x_mm": -24,
+    "brush_axis_x_mm": 54,
+    "all_poses_clear": true,
+    "collision_angles_deg": [],
+    "collisions": []
+  }
+]

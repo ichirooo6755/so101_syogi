@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+exec "${SYODO_PYTHON:-$ROOT/.venv/bin/python}" "$ROOT/scripts/force_plate.py" "$@"

@@ -1,0 +1,41 @@
+[
+  {
+    "file": "01_reinforced_base.stl",
+    "triangles": 4888,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      47.61842299159616,
+      39.3952193041041,
+      61.20000076293948
+    ],
+    "mesh_volume_mm3": 12989.143819328165,
+    "cad_volume_error_fraction": 1.7113120432558537e-06
+  },
+  {
+    "file": "02_load_carrier.stl",
+    "triangles": 1582,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      41.989662170410156,
+      52.0,
+      12.0
+    ],
+    "mesh_volume_mm3": 5619.291800661656,
+    "cad_volume_error_fraction": 0.0003579755268962434
+  },
+  {
+    "file": "03_brush_cartridge_15mm.stl",
+    "triangles": 2084,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      29.979026100598276,
+      52.0,
+      36.0
+    ],
+    "mesh_volume_mm3": 8527.181214984163,
+    "cad_volume_error_fraction": 0.0005307395383735132
+  }
+]

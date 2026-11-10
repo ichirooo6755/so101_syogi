@@ -1,0 +1,109 @@
+{
+  "restored": true,
+  "part": "Brush_Load_Carrier:1",
+  "M3_nut_pockets": 2,
+  "nut_AF_mm": 5.8,
+  "nut_pocket_depth_mm": 2.6,
+  "clearance_diameter_mm": 3.4,
+  "screws": "2x M3x10 + 2x standard M3 hex nuts",
+  "suppressed_features": [
+    "V3_cartridge_M3x0p5_modeled",
+    "V3_replace_nut_pocket_-17.237053797999998 (1)",
+    "V3_replace_nut_pocket_22.762946202000002 (1)",
+    "V3_cartridge_thread_pilots (1)"
+  ],
+  "carrier_volume_mm3": 5617.280951553299,
+  "matches_v2_carrier_volume": true,
+  "clearance_holes": [
+    {
+      "x_mm": 50.0,
+      "y_mm": -17.23705379763991,
+      "z_mm": [
+        12.5,
+        15.9
+      ]
+    },
+    {
+      "x_mm": 50.0,
+      "y_mm": 22.76294620236009,
+      "z_mm": [
+        12.5,
+        15.9
+      ]
+    }
+  ],
+  "hex_vertical_faces": 12,
+  "other_parts_preserved": {
+    "部品１:1": {
+      "volume_mm3": 17036.624632827883,
+      "transform": [
+        0.9999999999999991,
+        -3.2751579226441956e-15,
+        4.3293867896380924e-15,
+        -0.1622628494696552,
+        -1.8318679906315213e-15,
+        -1.0000000000000007,
+        -4.0245584642661915e-16,
+        0.12629462023601076,
+        1.165734175856402e-15,
+        -1.1518563880485997e-15,
+        -1.0,
+        3.3895568113228793,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visible": true
+    },
+    "Brush_Cartridge_15mm:1": {
+      "volume_mm3": 8531.709330455738,
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visible": true
+    },
+    "SC616C_Slide_In_Top_Cover:1": {
+      "volume_mm3": 2651.583812865026,
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visible": false
+    }
+  },
+  "sensor_transform_preserved": true,
+  "timeline_marker": 219,
+  "timeline_count": 250,
+  "saved": true,
+  "assembly_interference_not_resolved": true
+}

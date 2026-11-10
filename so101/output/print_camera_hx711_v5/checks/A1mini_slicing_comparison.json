@@ -1,0 +1,179 @@
+{
+  "passed": true,
+  "printer": "Bambu Lab A1 mini",
+  "nozzle_mm": 0.4,
+  "material": "Generic PLA",
+  "actual_spool_and_bed_conditions_unverified": true,
+  "layer_mm": 0.2,
+  "walls": 6,
+  "infill": "25% gyroid",
+  "brim_mm": 5,
+  "organic_support_enabled": true,
+  "support_threshold_deg_from_horizontal": 40,
+  "v4": {
+    "variant": "v4",
+    "slicer_success": true,
+    "warnings": "",
+    "total_estimated_seconds": 4148.5859375,
+    "total_estimated_filament_g": 13.964295387268066,
+    "support_toolpath_filament_mm": 1376.4145699999945,
+    "support_toolpath_estimated_g": 4.1052246226472615,
+    "support_estimated_seconds": 1009.998908996582,
+    "objects": [
+      {
+        "bbox": {
+          "depth": 59.309669494628906,
+          "height": 34.83167266845703,
+          "width": 33.000003814697266,
+          "x": 96.25000762939453,
+          "y": 60.34516906738281,
+          "z": 0.0
+        },
+        "id": 38,
+        "name": "01_simple_camera_HX711_bracket_V4.stl",
+        "triangle_count": 1376
+      },
+      {
+        "bbox": {
+          "depth": 23.0,
+          "height": 9.550000190734863,
+          "width": 21.499998092651367,
+          "x": 50.7500114440918,
+          "y": 78.5,
+          "z": 0.0
+        },
+        "id": 49,
+        "name": "02_A_slot_backing_V4.stl",
+        "triangle_count": 2044
+      }
+    ],
+    "source_stl_sha256": {
+      "01_simple_camera_HX711_bracket_V4.stl": "9b7f5536cb80a5d4c2dbf71da176c249679aa3be429916f651b5ac3c4b2475e2",
+      "02_A_slot_backing_V4.stl": "b51da96acdd8f3637b32a1afa3bbc58cfbec005805ee9b3c8e582dc43983ad5c"
+    },
+    "invocation": {
+      "command": [
+        "/Applications/BambuStudio.app/Contents/MacOS/BambuStudio",
+        "--debug",
+        "2",
+        "--datadir",
+        "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/camera_mount_v5/slicer/v4/isolated_config",
+        "--load-settings",
+        "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/camera_mount_v5/slicer/machine.json;/Users/sugawaraichirou/Documents/ChatGPT/so101/output/camera_mount_v5/slicer/process.json",
+        "--load-filaments",
+        "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/camera_mount_v5/slicer/filament.json",
+        "--arrange",
+        "1",
+        "--orient",
+        "0",
+        "--slice",
+        "0",
+        "--mstpp",
+        "60",
+        "--outputdir",
+        "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/camera_mount_v5/slicer/v4",
+        "--export-3mf",
+        "SO101_A1mini_PLA_v4.3mf",
+        "--export-slicedata",
+        "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/camera_mount_v5/slicer/v4/slicedata",
+        "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/print_camera_hx711_v4/01_simple_camera_HX711_bracket_V4.stl",
+        "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/print_camera_hx711_v4/02_A_slot_backing_V4.stl"
+      ],
+      "returncode": 0,
+      "printer": "A1 mini",
+      "nozzle_mm": 0.4,
+      "filament": "Generic PLA (actual spool unspecified)",
+      "layer_height_mm": 0.2,
+      "walls": 6,
+      "infill": "25% gyroid",
+      "support_threshold_from_horizontal_deg": 40,
+      "printer_connection_or_print_job_sent": false
+    }
+  },
+  "v5": {
+    "variant": "v5",
+    "slicer_success": true,
+    "warnings": "",
+    "total_estimated_seconds": 3592.904052734375,
+    "total_estimated_filament_g": 15.848342895507812,
+    "support_toolpath_filament_mm": 289.10106000000013,
+    "support_toolpath_estimated_g": 0.8622582293250707,
+    "support_estimated_seconds": 199.16266548633575,
+    "objects": [
+      {
+        "bbox": {
+          "depth": 58.49177169799805,
+          "height": 35.59971237182617,
+          "width": 36.000003814697266,
+          "x": 94.75000762939453,
+          "y": 60.754119873046875,
+          "z": 0.0
+        },
+        "id": 38,
+        "name": "01_A1mini_ribbed_camera_bracket_V5.stl",
+        "triangle_count": 1210
+      },
+      {
+        "bbox": {
+          "depth": 23.0,
+          "height": 9.550000190734863,
+          "width": 21.499998092651367,
+          "x": 49.2500114440918,
+          "y": 78.5,
+          "z": 0.0
+        },
+        "id": 49,
+        "name": "02_joined_slot_backing_V5.stl",
+        "triangle_count": 1354
+      }
+    ],
+    "source_stl_sha256": {
+      "01_A1mini_ribbed_camera_bracket_V5.stl": "81da91bc887ab5f489af6c43b5f0da7eea9a84a6ae63c034be30ed1bbcd17a48",
+      "02_joined_slot_backing_V5.stl": "f5bb3982cb1e9a6f119221b0f9980fe121b1571d63b36c3cec41232259b22f7a"
+    },
+    "invocation": {
+      "command": [
+        "/Applications/BambuStudio.app/Contents/MacOS/BambuStudio",
+        "--debug",
+        "2",
+        "--datadir",
+        "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/camera_mount_v5/slicer/v5/isolated_config",
+        "--load-settings",
+        "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/camera_mount_v5/slicer/machine.json;/Users/sugawaraichirou/Documents/ChatGPT/so101/output/camera_mount_v5/slicer/process.json",
+        "--load-filaments",
+        "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/camera_mount_v5/slicer/filament.json",
+        "--arrange",
+        "1",
+        "--orient",
+        "0",
+        "--slice",
+        "0",
+        "--mstpp",
+        "60",
+        "--outputdir",
+        "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/camera_mount_v5/slicer/v5",
+        "--export-3mf",
+        "SO101_A1mini_PLA_v5.3mf",
+        "--export-slicedata",
+        "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/camera_mount_v5/slicer/v5/slicedata",
+        "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/print_camera_hx711_v5/01_A1mini_ribbed_camera_bracket_V5.stl",
+        "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/print_camera_hx711_v5/02_joined_slot_backing_V5.stl"
+      ],
+      "returncode": 0,
+      "printer": "A1 mini",
+      "nozzle_mm": 0.4,
+      "filament": "Generic PLA (actual spool unspecified)",
+      "layer_height_mm": 0.2,
+      "walls": 6,
+      "infill": "25% gyroid",
+      "support_threshold_from_horizontal_deg": 40,
+      "printer_connection_or_print_job_sent": false
+    }
+  },
+  "support_extrusion_reduction_fraction": 0.7899607674161708,
+  "support_time_reduction_fraction": 0.8028090290867733,
+  "total_time_reduction_fraction": 0.1339448894484001,
+  "physical_print_or_strength_test_performed": false,
+  "printer_job_sent": false,
+  "three_mf_members": 20
+}

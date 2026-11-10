@@ -1,0 +1,30 @@
+{
+  "brush_axis_mm": [
+    78,
+    2.762946202
+  ],
+  "brush_stop_z_mm": 30.5,
+  "assumed_brush_tip_z_mm": -52,
+  "bore_load_z_min_mm": 10.5,
+  "bore_load_z_max_mm": 28.5,
+  "base_included": true,
+  "base_clamp_faces_y_mm": [
+    -17.05,
+    20.2
+  ],
+  "source": "Actual Fusion BRep snapshot; original V5 vs16mm-shortened yoke",
+  "parts": {
+    "base": {
+      "volume_mm3": 29688.678172181015
+    },
+    "carrier": {
+      "volume_mm3": 6573.724935501751
+    },
+    "cartridge": {
+      "volume_mm3": 6846.8001238112865
+    },
+    "sensor": {
+      "volume_mm3": 1844.3186979165396
+    }
+  }
+}

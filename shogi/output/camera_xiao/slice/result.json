@@ -1,0 +1,10 @@
+{
+  "returncode": 0,
+  "machine": "Bambu Lab A1 mini",
+  "nozzle_mm": 0.4,
+  "material": "Generic PLA",
+  "layer_mm": 0.2,
+  "support": "tree automatic",
+  "hardware_printed": false,
+  "printer_connected": false
+}

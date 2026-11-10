@@ -1,0 +1,28 @@
+{
+  "brush_axis_mm": [
+    30.0,
+    2.762946202
+  ],
+  "brush_stop_z_mm": 7.5,
+  "assumed_brush_tip_z_mm": -75.0,
+  "bore_load_z_min_mm": -24.5,
+  "bore_load_z_max_mm": 5.5,
+  "source_geometry_preserved": true,
+  "source": "V4 centered replacement after parameter roundtrip",
+  "load_path_note": "Axial load on the closed brush stop; lateral loads on the ideally bonded hot-glue bore",
+  "sensor_model_note": "Existing approximate sensor; unknown actual gauge and bridge; no electrical accuracy prediction",
+  "parts": {
+    "base": {
+      "volume_mm3": 15613.525323043013
+    },
+    "carrier": {
+      "volume_mm3": 7489.324935501688
+    },
+    "cartridge": {
+      "volume_mm3": 8933.833190115252
+    },
+    "sensor": {
+      "volume_mm3": 1844.3186979165364
+    }
+  }
+}

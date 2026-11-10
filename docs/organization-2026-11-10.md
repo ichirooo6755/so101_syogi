@@ -87,6 +87,39 @@
 | [#4](https://github.com/ichirooo6755/so101_syogi/issues/4) | 駒台の在庫管理（持ち駒の駒種・空き場所・成駒の表戻し） |
 | [#5](https://github.com/ichirooo6755/so101_syogi/issues/5) | 囲碁の着手（19 路盤の交点座標・石の把持・ルール選定） |
 
+## 追加整理（2026-11-10 11:29 の指示で実施）
+
+「`so101` と将棋・囲碁の進捗も全部入れて」という追加指示を受け、初回整理で外した
+SO-101 本体まわりも取り込みました。
+
+| 追加したもの | 置き場 | 備考 |
+| --- | --- | --- |
+| 手首カメラ＋HX711 台座 V1–V8、筆保持 V2–V8 の CAD・印刷パッケージ・検査記録 | `so101/output/`（元構成のまま） | 完成形の STEP/STL・印刷 zip・検査 JSON を収録。説明の正本は `so101/output/README.md` |
+| 上記 CAD の生成・検査スクリプト群（約 250 ファイル） | `so101/scripts/` | 成果物の生成元 |
+| 変更前スナップショット、データシート、XIAO 公式資料 | `so101/reference/` | `.f3d` 本体は中間複製を除き収録 |
+| 組立部品表、ロードセル資料、結果ファイル | `so101/組立部品表.md`、`so101/SC616C-1kg load cell.pdf`、`so101/result.json`、`so101/tmp/` | - |
+| 書道一式（コード・ドキュメント・モデル・ファーム） | `so101/syodo/` | 正本は別リポジトリ https://github.com/ichirooo6755/syodo 。これは同内容の取り込みで、二重管理に注意 |
+| 薄膜シミュレーター | `so101/soap_film/` | コードと代表出力（preview・設定・比較結果）を収録 |
+| 将棋の書き込み用ファーム bin、配布 zip、スライス結果 | `shogi/output/firmware_xiao/`、`shogi/output/*.zip`、`shogi/output/*/slice*/` | 初回整理で外した小さな出力も追加 |
+
+### それでも実ファイルを入れていないもの
+
+GitHub の上限（1 ファイル 100 MB、リポジトリは実質 1 GB 程度）を超えるため、
+実ファイルではなく生成元・要約・一覧で辿れるようにしました。詳細は
+[large-artifacts.md](large-artifacts.md) を参照。
+
+- 書道の学習 run `syodo/runs/`（約 3.4 GB・約 19 万ファイル）→ 要約は `so101/syodo/docs/training-runs.md`
+- 将棋の学習 run `shogi/simulation/runs/`（約 779 MB）→ 記録は `shogi/simulation/README.md`
+- 薄膜の状態ファイル `state_*.npz` 群（約 3.9 GB）と連番フレーム
+- FEM の場の結果 `*.vtu`・メッシュ `*.msh`（約 1.2 GB、生成元は `so101/scripts/`）
+- `.f3d` の中間バックアップ複製（完成形は収録）
+- 書道のデータセット `syodo/data/`（元リポジトリでも Git 対象外、実機較正を含む）
+- 仮想環境・`vendor/`・`build/`
+
+なお、元フォルダの多数のファイルがクラウドの未取得（dataless）状態だったため、
+コピー時に取得を伴い時間がかかりました。取得できなかったファイルがあれば
+`docs/large-artifacts.md` の手順で元フォルダから個別に追加してください。
+
 ## 検証したこと／できていないこと
 
 - ✅ コピー漏れ: 元 `syogi/` の `app/`・`tests/`・`docs/` と移行先を `diff` で照合し、

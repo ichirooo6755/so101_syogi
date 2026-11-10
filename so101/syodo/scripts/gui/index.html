@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2">
+  <title>書道 — SO-101</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="/" aria-label="書道 ホーム"><span class="seal">書</span><span>書道<small>SO-101 STUDIO</small></span></a>
+    <nav aria-label="メインメニュー">
+      <button class="nav active" data-page="write" aria-current="page">書く</button>
+      <button class="nav" data-page="setup">準備<span id="setup-dot" class="notice-dot"></span></button>
+      <button class="nav" data-page="connect">接続</button>
+    </nav>
+    <div id="connection" class="connection"><span class="status-dot"></span><span id="connection-text">接続中</span></div>
+  </header>
+
+  <main>
+    <section id="page-write" class="page">
+      <div class="page-heading"><div><p class="eyebrow">WORKSPACE</p><h1>今日は、何を書きますか。</h1></div><span id="brush-summary" class="subtle">筆 240 mm / 穂 42 mm</span></div>
+      <div class="workspace">
+        <aside class="controls panel">
+          <div class="segmented" role="group" aria-label="操作モード">
+            <button id="mode-write" class="selected" aria-pressed="true">自動書字</button>
+            <button id="mode-bilateral" aria-pressed="false">バイラテラル</button>
+          </div>
+          <div id="automatic-controls">
+            <label class="field-label" for="word">書く文字<span>大きな1〜2文字</span></label>
+            <input id="word" class="word-input" maxlength="2" value="一" autocomplete="off" spellcheck="false">
+            <div class="presets" aria-label="文字の候補"><button data-word="一">一</button><button data-word="書道">書道</button><button data-word="永">永</button></div>
+            <label class="stacked" for="glyph-mm">1文字の大きさ（mm角）<input id="glyph-mm" type="number" min="60" max="180" step="1" value="100"></label><p id="layout-hint" class="hint">まず中央に、大きな1文字。</p>
+            <div class="divider"></div>
+            <div class="range-label"><label for="speed">速さ</label><output id="speed-value" for="speed">1.0 ×</output></div>
+            <input id="speed" type="range" min="0.1" max="1.5" step="0.1" value="1.0">
+            <div class="range-ends"><span>ゆっくり</span><span>速く</span></div>
+            <div class="divider"></div>
+            <label class="toggle-row" for="camera-enabled"><span>ESP32カメラ<small>書字中の映像を監視</small></span><input id="camera-enabled" class="switch" type="checkbox"></label>
+            <p id="camera-mode-hint" class="hint">カメラなしで使用します。</p>
+            <div class="action-area">
+              <div id="ready-note" class="inline-note">最初に筆と机の準備をしてください。</div>
+              <button id="prepare" class="button secondary full">軌道を確認</button>
+              <button id="air-test" class="button secondary full" disabled>空中で試す</button><button id="write" class="button primary full" disabled>書き始める <span aria-hidden="true">↗</span></button>
+              <p class="micro">経路確認では位置を読むだけで、アームは動きません。</p>
+            </div>
+          </div>
+          <div id="bilateral-controls" hidden>
+            <div class="mode-symbol" aria-hidden="true">↔</div>
+            <h2>手の動きを、もう一方へ。</h2>
+            <p class="body-note">LeaderとFollowerを双方向につなぎます。開始時にLeaderをFollowerの姿勢に合わせます。</p>
+            <div class="inline-note">両方のアームの周囲を空けてください。筆元の回転は手で置いた姿勢を保ちます。</div>
+            <button id="bilateral" class="button primary full">バイラテラルを開始</button>
+            <p class="micro">終了するときは「停止」を押します。</p>
+          </div>
+        </aside>
+
+        <section class="preview panel" aria-label="文字の配置プレビュー">
+          <div class="preview-toolbar"><span><span class="tiny-square"></span> 半紙</span><span id="preview-label">配置プレビュー</span></div>
+          <div class="paper-stage">
+            <span class="paper-orientation">奥</span>
+            <div id="paper" class="paper measured-paper" aria-label="書字領域の実寸に対応する文字配置"></div><img id="planned-image" class="planned-image" alt="検証済みの指令経路。実測筆跡ではありません" hidden>
+            <span class="paper-orientation">手前</span>
+          </div>
+          <div class="preview-footer"><span id="paper-size">書字領域は較正後に表示</span><span id="glyph-credit">筆順：<a href="https://kanjivg.tagaini.net/" target="_blank" rel="noopener noreferrer">KanjiVG</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></span></div>
+        </section>
+      </div>
+      <details id="camera-panel" class="camera-panel panel" hidden>
+        <summary>カメラ <span id="camera-status">開くと映像を表示します</span></summary>
+        <div class="camera-body"><div class="camera-frame"><img id="camera-image" alt="ESP32カメラの画像" hidden><p id="camera-placeholder">カメラに接続しています…</p></div><p class="hint">画像は約1.5秒ごとに更新します。カメラは腕と一緒に動きます。</p></div>
+      </details>
+    </section>
+
+    <section id="page-setup" class="page" hidden>
+      <div class="page-heading"><div><p class="eyebrow">SETUP</p><h1>筆と机を、合わせる。</h1></div><span id="setup-progress" class="subtle">0 / 12 記録</span></div>
+      <details class="panel guide-panel" open><summary>動かす場所を図で見る</summary><div class="guide-grid"><img src="/arm-guide.svg" alt="アーム全体図。肩、ひじ、手首の曲げ、筆元の回転、先端の傾きの位置"><img src="/brush-guide.svg" alt="筆まわりの拡大図。手首を曲げる動き、筆元を回す動き、先端で筆を傾ける動きを比較"></div></details>
+      <details class="panel guide-panel"><summary>カメラで紙と硯を見つける</summary><p class="hint">まず手動で紙と硯の位置・高さを較正します。紙の四隅に 0・1・2・3、中央に 6 の印を置き、硯と一緒に動く板に 4・5 を取り付けます。印の中心は紙面と同じ高さに揃えます。撮影時は全ての印を見せ、基準と同じ姿勢で腕を静止してください。</p><img src="/camera-guide.svg" alt="紙の四隅と中央、および硯に固定する目印の配置図" style="max-width:100%;height:auto"><p class="hint">筆先付近しか映らず全ての目印が一度に見えない場合は、この検出方式を使用できません。</p><p><a href="/camera-markers.svg" target="_blank">目印を開いて印刷</a></p><div class="finish-actions"><button id="camera-calibrate" class="button secondary">カメラの基準を記録</button><button id="camera-detect" class="button secondary">紙と硯を検出</button><button id="camera-apply" class="button secondary">検出位置を反映</button></div><img id="camera-overlay" alt="検出した目印の確認画像" style="max-width:100%;margin-top:1rem" hidden><p id="camera-detection-status" class="hint">検出画像を確認し、反映後は筆圧と空中移動をもう一度確認してください。画像だけでは高さや衝突は分かりません。</p></details>
+      <section class="panel brush-panel">
+        <div class="section-intro"><span class="step-number">01</span><div><h2>使う筆</h2><p class="hint">全長と、取り付け位置から毛先までの長さを分けて設定します。</p></div></div>
+        <form id="brush-form"><div class="brush-fields">
+          <label>筆の全長<div class="number-unit"><input id="brush-length" type="number" min="40" max="300" step="0.1" value="240" required><span>mm</span></div></label>
+          <label>穂の長さ<div class="number-unit"><input id="tuft-length" type="number" min="20" max="80" step="0.1" value="42" required><span>mm</span></div></label>
+          <label>取り付け位置 → 毛先<div class="number-unit"><input id="brush-reach" type="number" min="40" max="300" step="0.1" placeholder="実測して入力" required><span>mm</span></div></label>
+          <button class="button secondary" type="submit">筆を保存</button>
+        </div></form>
+        <p class="hint brush-explanation">筆全体が240 mmでも、取り付ける位置によってアームから毛先までの距離は変わります。筆を変更したら位置を取り直します。</p>
+      </section>
+      <section class="panel brush-panel"><div class="section-intro"><span class="step-number">02</span><div><h2>紙に、書く長方形を決める</h2><p class="hint">紙の内側に4つの印を付け、その印の奥行きと幅を定規で測ります。図の奥がアームから遠い側です。</p></div></div><form id="paper-form"><div class="brush-fields"><label>奥行き（手前 → 奥）<div class="number-unit"><input id="paper-depth" type="number" min="100" max="450" placeholder="定規で実測" required><span>mm</span></div></label><label>幅（左 → 右）<div class="number-unit"><input id="paper-width" type="number" min="100" max="450" placeholder="定規で実測" required><span>mm</span></div></label><label>紙面からの移動高さ<div class="number-unit"><input id="travel-mm" type="number" min="20" max="80" value="30" required><span>mm</span></div></label><button class="button secondary" type="submit">紙の実測値を保存</button></div></form><p class="hint">紙の辺をアームの前後・左右と平行に置き、印の四隅と中央を下で記録します。定規の値と計算位置が5 mmより違う場合は較正を止めます。</p></section>
+      <div class="setup-workspace">
+        <section class="panel pose-panel">
+          <div class="section-intro"><span class="step-number">02</span><div><h2>位置を記録する</h2><p class="hint">アームを手で支え、毛先を案内の位置に合わせます。</p></div></div>
+          <button id="limp" class="button secondary full">腕を支えて、トルクをOFF</button>
+          <div id="pose-list" class="pose-list" aria-label="記録する位置"></div>
+        </section>
+        <section class="panel teaching-panel">
+          <div class="teaching-top"><span class="eyebrow">TEACH POSITION</span><span id="pose-recorded" class="tag">未記録</span></div>
+          <h2 id="pose-title">筆を垂直に</h2><p id="pose-hint" class="body-note"></p>
+          <svg id="desk-diagram" class="desk-diagram" viewBox="0 0 400 320" role="img" aria-label="紙と硯の位置の目安。実際の座標は教示から計算します。">
+            <text x="190" y="22" text-anchor="middle" class="diagram-label">奥</text>
+            <rect x="93" y="42" width="194" height="234" rx="3" class="diagram-paper"/>
+            <path d="M190 42V276 M93 159H287" class="diagram-grid"/>
+            <rect x="319" y="131" width="54" height="93" rx="22" class="diagram-inkstone"/><ellipse cx="346" cy="162" rx="15" ry="19" class="diagram-pool"/>
+            <text x="346" y="248" text-anchor="middle" class="diagram-label">硯</text><text x="190" y="305" text-anchor="middle" class="diagram-label">手前</text>
+            <circle id="pose-marker" cx="190" cy="159" r="8"/>
+          </svg>
+          <div id="reference-panel" hidden><button id="preview-home" class="button secondary">基準画像を作成</button><img id="reference-image" alt="アームのL字の基準姿勢" hidden><p class="hint">画像が表示されたら、実機を同じL字の姿勢に合わせます。</p></div>
+          <button id="snap" class="button primary full">この位置を記録 <span aria-hidden="true">＋</span></button>
+          <p class="micro">記録時にトルクをOFFにします。腕を手で支えてください。</p>
+        </section>
+      </div>
+      <section class="panel finish-panel"><div class="section-intro"><span class="step-number">04</span><div><h2>較正を仕上げる</h2><p class="hint">位置を計算した後、現在のサーボ較正・USB識別を同期します。</p></div></div><div class="finish-actions"><button id="solve" class="button secondary">紙・硯の位置を計算</button><button id="sync-limits" class="button secondary">接続中のサーボ較正を同期</button><button id="validate" class="button secondary">較正を再検証</button></div><p id="calibration-summary" class="hint"></p></section>
+      <section class="panel finish-panel"><div class="section-intro"><span class="step-number">05</span><div><h2>筆圧を合わせる</h2><p class="hint">墨なしで空中リハーサルを行い、準備ができたら別紙に試験線を書きます。上下それぞれ5本から、良い線を選びます。</p></div></div><div class="finish-actions"><button id="pressure-plan" class="button secondary">筆圧の試験軌道を確認</button><button id="pressure-calibrate" class="button primary" disabled>試験線を書いて較正</button></div><p id="pressure-summary" class="hint">位置の較正後に実行できます。</p></section>
+      <section class="panel finish-panel"><div class="section-intro"><span class="step-number">06</span><div><h2>硯の位置と動き</h2><p class="hint">最初は手で墨を付けて1文字を確認できます。自動で付ける場合は「硯の墨池」と「硯の手前の端」を両方記録してください。</p></div></div><form id="ink-form"><label class="stacked">墨を付ける方法<select id="ink-mode"><option value="manual">手で付ける（硯へ移動しない）</option><option value="automatic">硯で付ける</option></select></label><div class="ink-fields"><label>引く回数<input id="ink-trips" type="number" min="1" max="3" step="1" value="1"></label><label>引く速さ mm/s<input id="ink-speed" type="number" min="1" max="20" value="10"></label><label>墨池で待つ 秒<input id="ink-dwell" type="number" min="0" max="10" step="0.5" value="2"></label><label>引いた端で待つ 秒<input id="ink-wait" type="number" min="0" max="10" step="0.5" value="3"></label><label>戻すときの浮かせ量 mm<input id="ink-lift" type="number" min="1" max="15" value="5"></label></div><div class="finish-actions"><button class="button secondary" type="submit">硯の設定を保存</button><button id="ink-prepare" type="button" class="button secondary">硯の経路を確認</button><button id="ink-test" type="button" class="button primary" disabled>硯の動きだけ試す</button></div></form><p id="ink-summary" class="hint">引く長さは教示した2点の距離です。固定の7 cmや90°回転は使いません。</p></section>
+    </section>
+
+    <section id="page-connect" class="page" hidden>
+      <div class="page-heading"><div><p class="eyebrow">CONNECTION</p><h1>道具を、つなぐ。</h1></div></div>
+      <form id="connection-form" class="connection-grid">
+        <section class="panel connection-panel"><h2>アーム</h2><p class="hint">Followerは筆を持つ側、Leaderは手で操作する側です。</p><label class="stacked">Followerのポート<input id="follower-port" type="text" required spellcheck="false"></label><label class="stacked">Leaderのポート<input id="leader-port" type="text" required spellcheck="false"></label><p id="port-list" class="hint"></p><p class="micro">ポートの設定だけではアームは動きません。</p></section>
+        <section class="panel connection-panel"><h2>ESP32-S3</h2><p class="hint">カメラとロードセルは同じESP32-S3のURLを使います。対応ファームウェアはXIAO ESP32S3 Sense向けです。</p><label class="stacked">ESP32-S3のURL<input id="camera-url" type="url" placeholder="http://192.168.4.1" required spellcheck="false"></label><button id="camera-test" type="button" class="button secondary">接続を確認</button><details class="advanced"><summary>ESP32-S3にプログラムを書き込む</summary><p class="hint">XIAO ESP32S3 SenseをUSB接続し、そのポートを入力します。既存のプログラムは置き換わります。アームのポートは選べません。</p><label class="stacked">XIAOのUSBポート<input id="esp-port" placeholder="/dev/cu.usbmodem..." spellcheck="false"></label><button id="esp-flash" type="button" class="button secondary">XIAOへ書き込む</button></details><details class="advanced" hidden><summary>監視する紙面の範囲</summary><p class="hint">画像の左上が0・0、右下が1・1です。</p><div class="roi-fields"><label>左<input id="roi-x0" type="number" min="0" max="1" step="0.01"></label><label>上<input id="roi-y0" type="number" min="0" max="1" step="0.01"></label><label>右<input id="roi-x1" type="number" min="0" max="1" step="0.01"></label><label>下<input id="roi-y1" type="number" min="0" max="1" step="0.01"></label></div></details></section>
+        <section class="panel connection-panel loadcell-panel"><h2>筆元のロードセル（1個）</h2><p class="hint">HX711 → ESP32の /force から取得。上のカメラと同じURLを使います。カメラOFFでも荷重を取得できます。</p><label class="toggle-row" for="loadcell-enabled"><span>ロードセルを使用<small>書字・教示中にアームと同期して記録</small></span><input id="loadcell-enabled" class="switch" type="checkbox"></label><div class="force-readout"><strong id="force-value">— N</strong><span id="force-raw">生値 —</span><p id="force-status" class="hint">未接続</p></div><p class="hint">計測方向の力です。腕を動かすと筆・ホルダの自重や慣性も変わります。較正は紙から筆を離し、筆を垂直にして行います。</p><div class="loadcell-fields"><label>換算用の重り g<input id="force-mass" type="number" min="5" max="500" value="100"></label><label>確認用の別の重り g<input id="force-check-mass" type="number" min="5" max="500" value="50"></label><label>動作を止める力の大きさ N<input id="force-limit" type="number" min="0.1" max="5" step="0.1" value="2"></label></div><div class="finish-actions"><button id="force-tare" class="button secondary" type="button">無荷重でゼロ点</button><button id="force-gain" class="button secondary" type="button">既知の重りで換算</button><button id="force-verify" class="button secondary" type="button">別の重りで確認</button></div><p class="micro">姿勢と荷重を変えたら3秒静止してから押します。未較正の生値をNとして表示しません。</p></section>
+        <details class="panel environment-panel"><summary>実行環境</summary><div class="environment-fields"><label class="stacked">書道用Python<input id="sim-python" required spellcheck="false"></label><label class="stacked">実機用Python（LeRobot）<input id="hw-python" required spellcheck="false"></label><p class="hint">コピーしたフォルダの仮想環境を使えない場合は、このMacで作成した環境を指定してください。</p><p id="desk-path" class="micro path-text"></p></div></details>
+        <div class="connection-save"><button class="button primary" type="submit">接続設定を保存</button><p class="hint">接続状態は実行時に確認します。</p></div>
+      </form>
+    </section>
+
+    <section class="activity panel" aria-label="実行状態"><div class="activity-bar"><div><span id="job-dot" class="status-dot"></span><strong id="job-label">待機中</strong><span id="live-force" class="hint"></span><span id="job-state" class="hint">準備をして、最初の一文字を。</span></div><button id="stop" class="button stop" disabled>■ 停止</button></div><div id="job-prompt" class="job-prompt" hidden><p id="prompt-text"></p><button id="prompt-continue" class="button primary">準備できたので続ける</button><div id="prompt-lines" class="prompt-lines" hidden><button class="button secondary" data-line="1">1</button><button class="button secondary" data-line="2">2</button><button class="button secondary" data-line="3">3</button><button class="button secondary" data-line="4">4</button><button class="button secondary" data-line="5">5</button><button class="button secondary" data-line="none">良い線がない</button></div></div><details id="log-details"><summary>操作ログ</summary><pre id="log" tabindex="0" aria-label="操作ログ"></pre></details></section>
+    <section id="session-review" class="panel session-review" hidden><p id="review-prompt">今の字・教示の結果を記録する</p><button class="button secondary" id="review-good">良い</button> <button class="button secondary" id="review-bad">やり直し</button> <button class="button secondary" id="export-learning">学習用データを書き出す</button><p class="hint">実測値と人の評価を学習用に残します。これだけで学習済みにはなりません。</p></section>
+    <footer class="footer"><span>一筆ずつ、ゆっくりと。</span><span>SO-101 CALLIGRAPHY</span></footer>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

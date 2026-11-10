@@ -1,0 +1,32 @@
+{
+  "brush_axis_mm": [
+    62,
+    2.762946202
+  ],
+  "brush_stop_z_mm": 30.5,
+  "assumed_brush_tip_z_mm": -52,
+  "bore_load_z_min_mm": 10.5,
+  "bore_load_z_max_mm": 28.5,
+  "base_included": true,
+  "base_clamp_faces_y_mm": [
+    -17.05,
+    20.2
+  ],
+  "source": "Final V8 actual BRep: original diagonal servo interfaces restored; M3 shank holes verified open",
+  "sensor_native_material": "鋼",
+  "sensor_PDF_material": "Aluminum alloy; compare separately, do not silently overwrite user selection",
+  "parts": {
+    "base": {
+      "volume_mm3": 38550.50206478457
+    },
+    "carrier": {
+      "volume_mm3": 6573.724935501749
+    },
+    "cartridge": {
+      "volume_mm3": 6846.8001238112865
+    },
+    "sensor": {
+      "volume_mm3": 1844.31869791654
+    }
+  }
+}

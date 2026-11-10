@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 590" role="img" aria-labelledby="title desc">
+<title id="title">筆まわりの3つの動き</title><desc id="desc">手首の曲げは腕と筆の角度を変える主な部分。筆元の回転は筆受け全体を回す別の部分。一番先端の傾きは起筆のように筆を寝かせる補助です。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#75846a"/></marker></defs>
+<rect width="900" height="590" rx="16" fill="#fafbf7"/>
+<g font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans',sans-serif" fill="#2e3728">
+<text x="32" y="41" font-size="21" font-weight="600">似ていますが、別の動きです</text>
+<text x="32" y="70" font-size="14" fill="#7b866f">筆に近い3か所を拡大。矢印は動かす方向の説明です。</text>
+<g transform="translate(25 103)"><rect width="270" height="438" rx="12" fill="#fff" stroke="#e5e9dc"/>
+<text x="20" y="35" font-size="19" fill="#94652f" font-weight="600">手首を曲げる</text>
+<path d="M26 131L113 151" stroke="#e8c350" stroke-width="29" stroke-linecap="round"/>
+<circle cx="116" cy="152" r="22" fill="#fff4dc" stroke="#b78142" stroke-width="6"/>
+<path d="M119 160L175 187" stroke="#e8c350" stroke-width="24" stroke-linecap="round"/>
+<path d="M174 188L174 289" stroke="#9b7040" stroke-width="12"/>
+<path d="M168 287Q163 309 175 327Q184 310 181 287Z" fill="#353225"/>
+<path d="M126 157L201 146L236 232" fill="none" stroke="#c9d0bd" stroke-width="10" stroke-dasharray="8 6"/>
+<path d="M164 117Q210 111 222 151" fill="none" stroke="#b78142" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="20" y="369" font-size="16">筆を垂直にする主役。</text><text x="20" y="397" font-size="14" fill="#7b866f">位置がずれた分は肩・ひじで</text><text x="20" y="419" font-size="14" fill="#7b866f">合わせ直します。</text></g>
+<g transform="translate(315 103)"><rect width="270" height="438" rx="12" fill="#fff" stroke="#e5e9dc"/>
+<text x="20" y="35" font-size="19" fill="#496b8d" font-weight="600">筆元を回す</text>
+<path d="M25 146H112" stroke="#e8c350" stroke-width="28" stroke-linecap="round"/>
+<path d="M107 128L171 146L160 182L96 164Z" fill="#587b9d" stroke="#3a5f82" stroke-width="2"/>
+<path d="M163 180L174 289" stroke="#9b7040" stroke-width="12"/>
+<path d="M168 287Q163 309 175 327Q184 310 181 287Z" fill="#353225"/>
+<path d="M104 115Q154 87 190 136Q209 173 174 201" fill="none" stroke="#55799d" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M132 146L232 169" stroke="#9eafbd" stroke-dasharray="5 5" stroke-width="1.5"/>
+<text x="20" y="369" font-size="16">筆受けごと回る部分。</text><text x="20" y="397" font-size="14" fill="#7b866f">筆を立てる代わりには</text><text x="20" y="419" font-size="14" fill="#7b866f">使いません。</text></g>
+<g transform="translate(605 103)"><rect width="270" height="438" rx="12" fill="#fff" stroke="#e5e9dc"/>
+<text x="20" y="35" font-size="19" fill="#5d7a48" font-weight="600">先端で傾ける</text>
+<path d="M25 146L113 164" stroke="#e8c350" stroke-width="28" stroke-linecap="round"/>
+<circle cx="140" cy="176" r="20" fill="#eff5e8" stroke="#718f5c" stroke-width="6"/>
+<path d="M140 193V287" stroke="#9b7040" stroke-width="12"/>
+<path d="M134 287Q129 308 141 327Q150 309 147 287Z" fill="#353225"/>
+<path d="M148 192L214 279" stroke="#c8d4b9" stroke-width="10" stroke-dasharray="8 6"/>
+<path d="M159 231Q196 214 214 250" fill="none" stroke="#718f5c" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="20" y="369" font-size="16">立つ・寝るの微調整。</text><text x="20" y="397" font-size="14" fill="#7b866f">傾けると毛先も動きます。</text><text x="20" y="419" font-size="14" fill="#7b866f">紙に押し付けたまま回しません。</text></g>
+<text x="33" y="572" font-size="14" fill="#7b866f">形と寸法は説明用です。サーボ番号を覚える必要はありません。</text>
+</g></svg>

@@ -1,0 +1,54 @@
+{
+  "source": "Original 部品１:1; mounting detail copied as BRep, not recreated",
+  "mounts": [
+    {
+      "side": "negative",
+      "rigid_translation_mm": [
+        -0.37737150530351005,
+        -0.8129462023599991,
+        0.10443188677118087
+      ],
+      "source_inner_mount_face_y_mm": -16.23705379764,
+      "registered_inner_face_y_mm": -17.05,
+      "registered_head_seat_y_mm": -20.55,
+      "original_clamped_thickness_mm": 3.5,
+      "through_hole_mm": 3.2,
+      "head_pocket_mm": 5.4,
+      "diagonal_hole_pitch_circle_mm": 14.0
+    },
+    {
+      "side": "positive",
+      "rigid_translation_mm": [
+        -0.37737150530351005,
+        0.03705379763999872,
+        0.10443188677118087
+      ],
+      "source_inner_mount_face_y_mm": 20.16294620236,
+      "registered_inner_face_y_mm": 20.2,
+      "registered_head_seat_y_mm": 23.7,
+      "original_clamped_thickness_mm": 3.5,
+      "through_hole_mm": 3.2,
+      "head_pocket_mm": 5.4,
+      "diagonal_hole_pitch_circle_mm": 14.0
+    }
+  ],
+  "preservation": [
+    {
+      "side": "negative",
+      "symmetric_difference_signed_residue_mm3": -0.0002562223080531112,
+      "boolean_volume_tolerance_mm3": 0.001
+    },
+    {
+      "side": "positive",
+      "symmetric_difference_signed_residue_mm3": -0.0002562223448876466,
+      "boolean_volume_tolerance_mm3": 0.001
+    }
+  ],
+  "fixed_interferences": [],
+  "base_volume_mm3": 38550.50206478457,
+  "main_assembly_edited": false,
+  "original_mount_reference_confirmation_pending": false,
+  "document": "部品１_V8_元取付形状保持",
+  "cloud_id": "/Users/sugawaraichirou/Library/Application Support/Autodesk/Autodesk Fusion 360/4SY29298NXZFBXAG/W.login/F/_部品１_V8_元取付形状保持.77a8bb8c-2591-4578-ba94-b906645a86ec.f3d",
+  "user_confirmed_reference": "First original 部品１ inner diagonal four-hole and mating design, confirmed 2026-10-22"
+}

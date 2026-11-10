@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "preserved_camera_and_PCB_poses": true,
+  "M3x10_bolts": 2,
+  "M3_nuts": 2,
+  "printed_parts": 2,
+  "camera_floor_old_mm": 1.2,
+  "camera_floor_new_mm": 2.4,
+  "A_plate_old_mm": 3.25,
+  "A_plate_new_mm": 4.25,
+  "nominal_print_up_world": [
+    0,
+    1,
+    0
+  ],
+  "actual_printer": "A1 mini",
+  "nozzle_mm": 0.4,
+  "filament": "PLA",
+  "print_strength_not_tested": true
+}

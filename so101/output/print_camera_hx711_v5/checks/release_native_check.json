@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "source_V4_preserved": true,
+  "original_so101_version": 26,
+  "original_so101_timeline": [
+    520,
+    520
+  ],
+  "original_so101_unmodified": true,
+  "assembly_archive_reopened": true,
+  "assembly_root_occurrences": 7,
+  "fastener_engagement": [
+    {
+      "bolt": "M3x10_A_22",
+      "nut": "M3_nut_A_22",
+      "under_head_length_mm": 10.000000000000007,
+      "nut_axial_thickness_mm": 2.3999999999999986,
+      "nominal_thread_engagement_mm": 2.3999999999999986,
+      "tip_beyond_nut_mm": 0.5,
+      "thread_form_not_modeled": true
+    },
+    {
+      "bolt": "M3x10_A_34",
+      "nut": "M3_nut_A_34",
+      "under_head_length_mm": 10.000000000000007,
+      "nut_axial_thickness_mm": 2.3999999999999986,
+      "nominal_thread_engagement_mm": 2.3999999999999986,
+      "tip_beyond_nut_mm": 0.5,
+      "thread_form_not_modeled": true
+    }
+  ],
+  "selection_sets": [
+    "選択セットA",
+    "選択セット2_外側方向"
+  ],
+  "active_document": "so101_A1mini_PLA_造形用_V5",
+  "current_document_modified": false
+}

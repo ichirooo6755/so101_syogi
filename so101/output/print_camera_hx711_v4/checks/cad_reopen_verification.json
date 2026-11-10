@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "file": "source_cad/01_simple_camera_HX711_bracket_V4_editable.f3d",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 3.637978807091713e-12,
+      "size_mm": [
+        32.99999999999999,
+        34.83167441664924,
+        59.30966875965833
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/01_simple_camera_HX711_bracket_V4.step",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 1.2732925824820995e-11,
+      "size_mm": [
+        33.0,
+        59.3096687596583,
+        34.8316744166492
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/02_A_slot_backing_V4_editable.f3d",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 4.547473508864641e-13,
+      "size_mm": [
+        21.500000000000004,
+        9.549999999999997,
+        23.0
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/02_A_slot_backing_V4.step",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 2.0463630789890885e-12,
+      "size_mm": [
+        21.5,
+        23.000000000000004,
+        9.55
+      ],
+      "reopened_in_Fusion": true
+    }
+  ]
+}

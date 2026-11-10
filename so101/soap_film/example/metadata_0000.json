@@ -1,0 +1,19 @@
+{
+  "params": {
+    "subdivision": 3,
+    "dt": 0.015,
+    "swirl": 0.65,
+    "drainage": 0.035,
+    "thickness_nm": 450.0,
+    "variation_nm": 130.0,
+    "seed": 12
+  },
+  "time": 0.12,
+  "width": 512,
+  "height": 256,
+  "thickness_png": "uint16 nanometers; clamped to 0..65535",
+  "velocity_png": "RGB global XYZ: decode (RGB/255*2-1)*1.0; components outside range clipped",
+  "direction_png": "RGB global XYZ: decode RGB/255*2-1; zero-speed pixels encode 128,128,128",
+  "color": "approximate normal-incidence thin-film interference, sRGB-like",
+  "coordinate": "x=cos(lat)cos(lon), y=cos(lat)sin(lon), z=sin(lat); top=north; pixel centers; seam at lon=+/-pi"
+}

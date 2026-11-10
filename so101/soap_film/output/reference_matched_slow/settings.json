@@ -1,0 +1,12 @@
+{
+  "solver": "grid",
+  "origin": "independent deterministic simulation; saved state after 125 preparation steps",
+  "preparation_steps": 125,
+  "preparation_step_dt": 0.035,
+  "frame_steps": 1,
+  "frame_step_dt": 0.015,
+  "frames": 24,
+  "preview_fps": 8,
+  "output_width": 1024,
+  "velocity_range": 8
+}

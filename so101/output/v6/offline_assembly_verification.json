@@ -1,0 +1,9 @@
+{
+  "independent_offline_archive_reopened": true,
+  "external_references": false,
+  "visible_component_count": 23,
+  "solid_body_count": 26,
+  "volume_sum_mm3": 107625.99820431326,
+  "full_parametric_history": false,
+  "note": "World-position solid snapshot only. Main cloud design and separate editable part archives retain history."
+}

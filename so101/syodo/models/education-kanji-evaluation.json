@@ -1,0 +1,22 @@
+{
+  "model": "education-kanji-ppo.zip",
+  "model_sha256": "f3a2dde52b81e7ab2e3eea14feca93e5f6e06bf0b4ad091c363535038fc0b736",
+  "algorithm": "PPO with DLS nominal control and learned joint residuals",
+  "cumulative_timesteps": 5433344,
+  "evaluation_seed": "7 + education-kanji index",
+  "success_count": 1026,
+  "total": 1026,
+  "success_rate": 1.0,
+  "collision_count": 0,
+  "minimum_progress": 1.0,
+  "maximum_steps": 1850,
+  "grade_success": {
+    "1": "80/80",
+    "2": "160/160",
+    "3": "200/200",
+    "4": "202/202",
+    "5": "193/193",
+    "6": "191/191"
+  },
+  "kanjivg_revision": "r20250816"
+}

@@ -1,0 +1,40 @@
+{
+  "results": [
+    {
+      "word": "春夏秋冬",
+      "trace": "/Users/sugawaraichirou/Documents/syodo/runs/hardware-two-character/20260909-015626/trace.npz",
+      "trace_schema": 5,
+      "trace_sha256": "b2ea8559800cfc606403998c59499447ca10efcc0c8af68e3abec6c1512c6d88",
+      "desk_fingerprint": "3f9a6e1cafd672cd9e26f1a68e1ff51366fd454ad58288d35376c344c706a6e9",
+      "count": 2023,
+      "pen_down_count": 485,
+      "measurement_kind": "forward_kinematics_of_commanded_positions",
+      "physical_writing_verified": false,
+      "metrics": {
+        "fk_error_max_mm": 0.03861354742874517,
+        "fk_error_p90_mm": 0.0019163246053075019,
+        "write_fk_error_max_mm": 0.003274673402989006,
+        "write_xy_error_max_mm": 0.0032716728454527996,
+        "tilt_max_deg": 3.5904528215739444,
+        "joint_step_max_deg": 4.691189355057963,
+        "joint_margin_min_deg": 2.00000000000013,
+        "air_fk_error_max_mm": 0.03861354742874517,
+        "transfer_clearance_min_mm": 59.999520790972596,
+        "last_clearance_mm": 59.99741872985176,
+        "standby_error_mm": 0.023141223986084158
+      },
+      "gates": {
+        "position_within_1mm": true,
+        "upright_within_8deg": true,
+        "step_within_5deg": true,
+        "joint_margin_2deg": true,
+        "air_position_within_1mm": true,
+        "transfer_clearance_60mm": true,
+        "final_lift_60mm": true,
+        "standby_position_within_1mm": true
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}

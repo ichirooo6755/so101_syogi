@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "file": "source_cad/01_A1mini_ribbed_camera_bracket_V5_editable.f3d",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 1.6370904631912708e-11,
+      "size_mm": [
+        36.0,
+        35.59971068706523,
+        58.49177281921499
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/01_A1mini_ribbed_camera_bracket_V5.step",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 0.0,
+      "size_mm": [
+        36.0,
+        58.491772819215,
+        35.5997106870652
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/02_joined_slot_backing_V5_editable.f3d",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 4.547473508864641e-13,
+      "size_mm": [
+        21.500000000000004,
+        9.549999999999997,
+        23.0
+      ],
+      "reopened_in_Fusion": true
+    },
+    {
+      "file": "source_cad/02_joined_slot_backing_V5.step",
+      "solid_count": 1,
+      "lumps": 1,
+      "volume_error_mm3": 1.5916157281026244e-12,
+      "size_mm": [
+        21.5,
+        23.000000000000004,
+        9.55
+      ],
+      "reopened_in_Fusion": true
+    }
+  ]
+}

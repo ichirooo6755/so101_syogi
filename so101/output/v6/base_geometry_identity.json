@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "comparison": [
+    {
+      "part": "base",
+      "offline_volume_mm3": 34383.200287272215,
+      "Fusion_volume_mm3": 34383.20028727235,
+      "symmetric_difference_mm3": 4.3655745685100555e-11
+    }
+  ],
+  "scope": "Base only. Other bodies solved from actual Fusion exports."
+}

@@ -1,0 +1,133 @@
+{
+  "passed": true,
+  "native_interference_count": 0,
+  "fixed_M3": {
+    "clearance_mm": 3.4,
+    "head_recess_mm": [
+      6.2,
+      3.2
+    ],
+    "plate_thickness_mm": 10,
+    "material_above_head_mm": 6.8,
+    "screws": "2x M3x12",
+    "engagement_mm": 5.2
+  },
+  "free_M3": {
+    "clearance_mm": 3.4,
+    "head_recess_mm": [
+      6.2,
+      3.2
+    ],
+    "plate_thickness_mm": 6,
+    "screws": "2x M3x8",
+    "engagement_mm": 5.2
+  },
+  "cartridge_M3": {
+    "screws": "2x M3x10",
+    "nuts": "2x standard M3 hex nuts",
+    "nut_pocket_AF_mm": 5.8,
+    "nut_pocket_depth_mm": 2.6
+  },
+  "brush_axis_mm": [
+    50,
+    2.762946202
+  ],
+  "guide_bore_mm": 15.4,
+  "glue_bore_mm": 16,
+  "cartridge_OD_mm": 22,
+  "receiver_ID_mm": 22.6,
+  "parameter_sweep": [
+    {
+      "brush_diameter_mm": 12,
+      "glue_bore_mm": 13,
+      "guide_bore_mm": 12.4,
+      "cartridge_od_mm": 22
+    },
+    {
+      "brush_diameter_mm": 17,
+      "glue_bore_mm": 18,
+      "guide_bore_mm": 17.4,
+      "cartridge_od_mm": 22
+    }
+  ],
+  "head_access": [
+    {
+      "interface": "fixed",
+      "x": 30.00000000000003,
+      "y": 26.962946202360072,
+      "head_insertion_clear": true
+    },
+    {
+      "interface": "fixed",
+      "x": 30.00000000000003,
+      "y": 34.36294620236007,
+      "head_insertion_clear": true
+    },
+    {
+      "interface": "free",
+      "x": 30.0,
+      "y": -2.4370537976399254,
+      "head_insertion_clear": true
+    },
+    {
+      "interface": "free",
+      "x": 30.0,
+      "y": 4.962946202360068,
+      "head_insertion_clear": true
+    },
+    {
+      "interface": "cartridge",
+      "x": 50.0,
+      "y": -17.237053797999998,
+      "head_insertion_clear": true
+    },
+    {
+      "interface": "cartridge",
+      "x": 50.0,
+      "y": 22.762946202000002,
+      "head_insertion_clear": true
+    }
+  ],
+  "brush_clearance_interference_mm3": [
+    1.7763568394002505e-12,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "cartridge_removal": [
+    {
+      "downward_travel_mm": 1,
+      "interference_mm3": [
+        1.7763568394002505e-12,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "downward_travel_mm": 10,
+      "interference_mm3": [
+        1.7763568394002505e-12,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "downward_travel_mm": 33,
+      "interference_mm3": [
+        1.7763568394002505e-12,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "fixed_to_carrier_gap_mm": 4.122628494696514,
+  "fixed_to_cartridge_gap_mm": 8.246211251235355,
+  "part_volumes_mm3": {
+    "部品１:1": 12989.121590887939,
+    "Brush_Load_Carrier:1": 5617.280951553299,
+    "Brush_Cartridge_15mm:1": 8531.709330455738
+  },
+  "feature_count_checked": 28,
+  "load_test_performed": false,
+  "print_test_performed": false
+}

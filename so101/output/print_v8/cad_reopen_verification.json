@@ -1,0 +1,204 @@
+{
+  "passed": true,
+  "source_assembly_unchanged": true,
+  "files": [
+    {
+      "file": "source_cad/01_base_original_mount_V8_editable.f3d",
+      "reopened_in_Fusion": true,
+      "solid_body_count": 1,
+      "lump_count": 1,
+      "volume_mm3": 38550.50206478457,
+      "volume_error_mm3": 0.0,
+      "volume_error_fraction": 0.0,
+      "volume_tolerance_mm3": 0.01,
+      "size_mm": [
+        84.2,
+        78.06294620236,
+        28.5
+      ],
+      "user_parameters": []
+    },
+    {
+      "file": "source_cad/01_base_original_mount_V8.step",
+      "reopened_in_Fusion": true,
+      "solid_body_count": 1,
+      "lump_count": 1,
+      "volume_mm3": 38550.50206478452,
+      "volume_error_mm3": 4.3655745685100555e-11,
+      "volume_error_fraction": 1.1324300163908779e-15,
+      "volume_tolerance_mm3": 38.55050206478457,
+      "size_mm": [
+        84.2,
+        78.06294620236,
+        28.5
+      ],
+      "user_parameters": []
+    },
+    {
+      "file": "source_cad/02_load_carrier_V5_editable.f3d",
+      "reopened_in_Fusion": true,
+      "solid_body_count": 1,
+      "lump_count": 1,
+      "volume_mm3": 6573.724935501749,
+      "volume_error_mm3": 9.094947017729282e-13,
+      "volume_error_fraction": 1.383530206536562e-16,
+      "volume_tolerance_mm3": 0.01,
+      "size_mm": [
+        32.000000000000014,
+        52.0,
+        33.00000000000001
+      ],
+      "user_parameters": [
+        {
+          "name": "brush_receiver_od",
+          "expression": "brush_cartridge_od + 10 mm"
+        },
+        {
+          "name": "brush_cartridge_od",
+          "expression": "22 mm"
+        },
+        {
+          "name": "brush_receiver_id",
+          "expression": "brush_cartridge_od + brush_fit_clearance"
+        },
+        {
+          "name": "brush_fit_clearance",
+          "expression": "0.6 mm"
+        },
+        {
+          "name": "sc_screw_clearance",
+          "expression": "3.4 mm"
+        },
+        {
+          "name": "sc_head_dia",
+          "expression": "6.2 mm"
+        },
+        {
+          "name": "sc_head_depth",
+          "expression": "3.2 mm"
+        },
+        {
+          "name": "brush_nut_depth",
+          "expression": "2.6 mm"
+        }
+      ]
+    },
+    {
+      "file": "source_cad/02_load_carrier_V5.step",
+      "reopened_in_Fusion": true,
+      "solid_body_count": 1,
+      "lump_count": 1,
+      "volume_mm3": 6573.724935501752,
+      "volume_error_mm3": 3.637978807091713e-12,
+      "volume_error_fraction": 5.534120826146248e-16,
+      "volume_tolerance_mm3": 6.573724935501748,
+      "size_mm": [
+        32.0,
+        52.0,
+        33.0
+      ],
+      "user_parameters": []
+    },
+    {
+      "file": "source_cad/03_brush_cartridge_15mm_V5_editable.f3d",
+      "reopened_in_Fusion": true,
+      "solid_body_count": 1,
+      "lump_count": 1,
+      "volume_mm3": 6846.800123811279,
+      "volume_error_mm3": 6.366462912410498e-12,
+      "volume_error_fraction": 9.298450074903885e-16,
+      "volume_tolerance_mm3": 0.01,
+      "size_mm": [
+        30.000000000000018,
+        52.0,
+        24.000000000000004
+      ],
+      "user_parameters": [
+        {
+          "name": "brush_flange_od",
+          "expression": "brush_cartridge_od + 8 mm"
+        },
+        {
+          "name": "brush_cartridge_od",
+          "expression": "22 mm"
+        },
+        {
+          "name": "brush_flange_thickness",
+          "expression": "4 mm"
+        },
+        {
+          "name": "v5_brush_sleeve_length",
+          "expression": "24 mm"
+        },
+        {
+          "name": "brush_cartridge_id",
+          "expression": "brush_dia + brush_glue_allowance"
+        },
+        {
+          "name": "brush_dia",
+          "expression": "15 mm"
+        },
+        {
+          "name": "brush_glue_allowance",
+          "expression": "1.0 mm"
+        },
+        {
+          "name": "brush_guide_dia",
+          "expression": "brush_dia + 0.4 mm"
+        },
+        {
+          "name": "sc_screw_clearance",
+          "expression": "3.4 mm"
+        }
+      ]
+    },
+    {
+      "file": "source_cad/03_brush_cartridge_15mm_V5.step",
+      "reopened_in_Fusion": true,
+      "solid_body_count": 1,
+      "lump_count": 1,
+      "volume_mm3": 6846.800123811272,
+      "volume_error_mm3": 1.3642420526593924e-11,
+      "volume_error_fraction": 1.9925250160508323e-15,
+      "volume_tolerance_mm3": 6.846800123811286,
+      "size_mm": [
+        30.0,
+        52.0,
+        24.000000000000004
+      ],
+      "user_parameters": []
+    },
+    {
+      "file": "source_cad/04_wrist_clearance_V8_editable.f3d",
+      "reopened_in_Fusion": true,
+      "solid_body_count": 1,
+      "lump_count": 1,
+      "volume_mm3": 22025.213051512656,
+      "volume_error_mm3": 1.2005330063402653e-10,
+      "volume_error_fraction": 5.4507214233635216e-15,
+      "volume_tolerance_mm3": 0.01,
+      "size_mm": [
+        38.06304233446286,
+        52.000000000000114,
+        47.1994425467429
+      ],
+      "user_parameters": []
+    },
+    {
+      "file": "source_cad/04_wrist_clearance_V8.step",
+      "reopened_in_Fusion": true,
+      "solid_body_count": 1,
+      "lump_count": 1,
+      "volume_mm3": 22023.871219549437,
+      "volume_error_mm3": 1.3418319633383362,
+      "volume_error_fraction": 6.092254182513681e-05,
+      "volume_tolerance_mm3": 22.025213051512775,
+      "size_mm": [
+        38.063042334477,
+        52.0000000000001,
+        47.1994425467429
+      ],
+      "user_parameters": []
+    }
+  ]
+}

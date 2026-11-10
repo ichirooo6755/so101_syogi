@@ -1,0 +1,28 @@
+[
+  {
+    "file": "01_centered_load_carrier.stl",
+    "triangles": 1524,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      32.0,
+      52.0,
+      53.0
+    ],
+    "mesh_volume_mm3": 7490.710252972875,
+    "cad_volume_error_fraction": 0.00018497227495350662
+  },
+  {
+    "file": "02_centered_brush_cartridge_15mm.stl",
+    "triangles": 2080,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      29.979026100598276,
+      52.0,
+      36.0
+    ],
+    "mesh_volume_mm3": 8928.61468373174,
+    "cad_volume_error_fraction": 0.0005841284779405505
+  }
+]

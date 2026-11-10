@@ -1,0 +1,123 @@
+{
+  "parameters": {
+    "printer": "Bambu Lab A1 mini",
+    "nozzle_mm": 0.4,
+    "filament": "PLA",
+    "printed_piece_count": 4,
+    "attachment": "selection A, same slot and two axes; short outward side",
+    "board_retention": "rigid sliding edge rails + screw-captured common end gate; no glue, snaps or PCB screws",
+    "camera_retention": "rigid edge rails, fixed stop on socket, keyed tongue blocked by common gate",
+    "screw_clearance_mm": 3.4,
+    "nut_pocket_AF_mm": 5.8,
+    "clamp_head_seat_y_mm": 42.0,
+    "clamp_bolt_tip_y_mm": 30.0,
+    "clamp_bolt_axes_xz_mm": [
+      [
+        22,
+        35
+      ],
+      [
+        34,
+        35
+      ]
+    ],
+    "clamp_nut_faces_y_mm": [
+      30.5,
+      32.9
+    ],
+    "camera_pcb_origin_mm": [
+      40.14178762289697,
+      63.51740109711649,
+      9.42290099601739
+    ],
+    "camera_down_angle_deg": 44.666235570320495,
+    "camera_inward_yaw_deg": 64.1465647044914,
+    "original_lens_position_mm": [
+      38.77595663943964,
+      50.690066030064,
+      0.6406403549310387
+    ],
+    "USB_direction_before": [
+      -0.8002526170372957,
+      -0.5226566382099909,
+      0.2939826312216121
+    ],
+    "USB_direction_after": [
+      -0.7685162090835727,
+      -0.6040652767195253,
+      0.21092173391468708
+    ],
+    "USB_change_deg": 6.91152297867016,
+    "camera_optical_axis_preserved": true,
+    "PCB_slot_thickness_mm": 2.05,
+    "PCB_assumed_thickness_mm": 1.6,
+    "PCB_rear_solder_clearance_min_mm": 2.0,
+    "physical_validation": false
+  },
+  "parts": {
+    "01_flat_carrier_socket_V6": {
+      "volume_mm3": 10976.243699399574,
+      "lumps": 1,
+      "bbox_mm": [
+        [
+          -18.0,
+          35.75,
+          13.4493994981101
+        ],
+        [
+          64.20195549738193,
+          68.65113058840305,
+          78.0
+        ]
+      ]
+    },
+    "02_slot_backing_V6": {
+      "volume_mm3": 1739.8963794264168,
+      "lumps": 1,
+      "bbox_mm": [
+        [
+          17.500000000000004,
+          25.25,
+          22.5
+        ],
+        [
+          39.0,
+          34.8,
+          45.5
+        ]
+      ]
+    },
+    "03_common_screw_locked_gate_V6": {
+      "volume_mm3": 4971.126658084922,
+      "lumps": 1,
+      "bbox_mm": [
+        [
+          -15.949999999999998,
+          38.74999999999999,
+          18.499999999999996
+        ],
+        [
+          45.0,
+          54.49999999999987,
+          83.0
+        ]
+      ]
+    },
+    "04_slide_in_camera_tray_V6": {
+      "volume_mm3": 1814.0059630560127,
+      "lumps": 1,
+      "bbox_mm": [
+        [
+          24.254535444143556,
+          46.95942737226758,
+          -2.1708486431458134
+        ],
+        [
+          60.52148969467103,
+          77.71225483352028,
+          30.352156572976135
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "solver": "grid",
+  "parameters": {
+    "grid_width": 1024,
+    "dt": 0.035,
+    "swirl": 50.0,
+    "fine_vortices": 20.0,
+    "gravity": 0.008,
+    "marangoni": 0.04,
+    "thickness_nm": 6.0,
+    "variation_nm": 3.0,
+    "surfactant_variation": 0.12,
+    "exposure": 0.35,
+    "saturation": 1.0,
+    "seed": 12
+  },
+  "preparation_steps": 200,
+  "frame_steps": 1,
+  "frame_time_scale": 0.45,
+  "frame_step_dt": 0.015750000000000004,
+  "output_width": 1024,
+  "frames": 24,
+  "velocity_range": 8.0
+}

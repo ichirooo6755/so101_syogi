@@ -1,0 +1,410 @@
+[
+  {
+    "name": "SC616C_1kg_Fusion.f3d ",
+    "active": false,
+    "modified": false,
+    "root_occurrences": [
+      {
+        "name": "Aluminium_body_M3_nominal_relief_APPROX_no_resin_no_cable:1",
+        "visible": true
+      }
+    ],
+    "electronics": []
+  },
+  {
+    "name": "部品１_V8_元取付形状保持",
+    "active": false,
+    "modified": false,
+    "root_occurrences": [],
+    "electronics": []
+  },
+  {
+    "name": "Wrist_Roll_Clearance_V8_元取付対応",
+    "active": false,
+    "modified": false,
+    "root_occurrences": [],
+    "electronics": []
+  },
+  {
+    "name": "部品１_V5_短縮補強_16mm",
+    "active": false,
+    "modified": false,
+    "root_occurrences": [],
+    "electronics": []
+  },
+  {
+    "name": "so101書道",
+    "active": false,
+    "modified": false,
+    "root_occurrences": [
+      {
+        "name": "Wrist_Roll_Follower_SO101 v1:1",
+        "visible": false
+      },
+      {
+        "name": "部品１:1",
+        "visible": false
+      },
+      {
+        "name": "STS3215_c:1",
+        "visible": true
+      },
+      {
+        "name": "クランプ:1",
+        "visible": false
+      },
+      {
+        "name": "筆:1",
+        "visible": false
+      },
+      {
+        "name": "SC616C_1kg_Fusion:1",
+        "visible": true
+      },
+      {
+        "name": "Brush_Load_Carrier:1",
+        "visible": false
+      },
+      {
+        "name": "Brush_Cartridge_15mm:1",
+        "visible": false
+      },
+      {
+        "name": "SC616C_Slide_In_Top_Cover:1",
+        "visible": false
+      },
+      {
+        "name": "Wrist_Roll_Follower_SO101 v1:3",
+        "visible": false
+      },
+      {
+        "name": "Brush_Load_Carrier_Centered:1",
+        "visible": false
+      },
+      {
+        "name": "Brush_Cartridge_Centered_15mm:1",
+        "visible": false
+      },
+      {
+        "name": "部品１_V5可動域改善:1",
+        "visible": false
+      },
+      {
+        "name": "Brush_Load_Carrier_Compact_V5:1",
+        "visible": true
+      },
+      {
+        "name": "Brush_Cartridge_Symmetric_15mm_V5:1",
+        "visible": true
+      },
+      {
+        "name": "Wrist_Roll_Clearance_V5:1",
+        "visible": false
+      },
+      {
+        "name": "部品１_V5_短縮補強_16mm:1",
+        "visible": false
+      },
+      {
+        "name": "部品１_V8_元取付形状保持:1",
+        "visible": true
+      },
+      {
+        "name": "Wrist_Roll_Clearance_V8_元取付対応:1",
+        "visible": true
+      }
+    ],
+    "electronics": []
+  },
+  {
+    "name": "無題",
+    "active": false,
+    "modified": true,
+    "root_occurrences": [
+      {
+        "name": "Seeed Studio XIAO-ESP32-S3 (Sense):1",
+        "visible": true
+      },
+      {
+        "name": "Sense Expansion Board:1",
+        "visible": true
+      },
+      {
+        "name": "Camer Module:1",
+        "visible": true
+      }
+    ],
+    "electronics": []
+  },
+  {
+    "name": "so101_Camera_HX711_V1_追加台座",
+    "active": true,
+    "modified": true,
+    "root_occurrences": [
+      {
+        "name": "01_fixed_electronics_frame:1",
+        "visible": false
+      },
+      {
+        "name": "02_wrist_lower_shoe:1",
+        "visible": false
+      },
+      {
+        "name": "03_camera_end_keeper:1",
+        "visible": false
+      },
+      {
+        "name": "04_hx711_edge_keeper_L:1",
+        "visible": false
+      },
+      {
+        "name": "05_hx711_edge_keeper_R:1",
+        "visible": false
+      },
+      {
+        "name": "06_level_shifter_top_keeper:1",
+        "visible": false
+      },
+      {
+        "name": "REFERENCE_existing_SO101_do_not_print:1",
+        "visible": true
+      },
+      {
+        "name": "REFERENCE_XIAO_2023_do_not_print:1",
+        "visible": false
+      },
+      {
+        "name": "REFERENCE_HX711_TXS_envelopes_do_not_print:1",
+        "visible": true
+      },
+      {
+        "name": "REFERENCE_screws_do_not_print:1",
+        "visible": false
+      }
+    ],
+    "electronics": [
+      {
+        "path": "04_hx711_edge_keeper_L:1",
+        "visible": false,
+        "bodies": [
+          {
+            "name": "04_hx711_edge_keeper_L_1",
+            "visible": false,
+            "light_on": true,
+            "size_mm": [
+              1.6000000000000014,
+              8.899999999999997,
+              21.999999999999996
+            ],
+            "bounds_mm": [
+              [
+                19.0,
+                -23.2,
+                34.99999999999999
+              ],
+              [
+                20.6,
+                -14.3,
+                56.99999999999999
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "path": "05_hx711_edge_keeper_R:1",
+        "visible": false,
+        "bodies": [
+          {
+            "name": "05_hx711_edge_keeper_R_1",
+            "visible": false,
+            "light_on": true,
+            "size_mm": [
+              1.6000000000000014,
+              8.900000000000002,
+              21.99999999999999
+            ],
+            "bounds_mm": [
+              [
+                19.0,
+                14.3,
+                35.00000000000001
+              ],
+              [
+                20.6,
+                23.200000000000003,
+                56.99999999999999
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "path": "06_level_shifter_top_keeper:1",
+        "visible": false,
+        "bodies": [
+          {
+            "name": "06_level_shifter_top_keeper_1",
+            "visible": false,
+            "light_on": true,
+            "size_mm": [
+              4.799999999999999,
+              31.999999999999996,
+              8.549999999999995
+            ],
+            "bounds_mm": [
+              [
+                9.4,
+                -15.999999999999998,
+                58.95
+              ],
+              [
+                14.2,
+                15.999999999999998,
+                67.5
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "path": "REFERENCE_HX711_TXS_envelopes_do_not_print:1",
+        "visible": true,
+        "bodies": [
+          {
+            "name": "REFERENCE_HX711_TXS_envelopes_do_not_print_1",
+            "visible": true,
+            "light_on": true,
+            "size_mm": [
+              1.6000000000000014,
+              30.0,
+              21.999999999999996
+            ],
+            "bounds_mm": [
+              [
+                17.0,
+                -15.0,
+                34.99999999999999
+              ],
+              [
+                18.6,
+                15.0,
+                56.99999999999999
+              ]
+            ]
+          },
+          {
+            "name": "REFERENCE_HX711_TXS_envelopes_do_not_print_2",
+            "visible": false,
+            "light_on": false,
+            "size_mm": [
+              10.999999999999998,
+              27.0,
+              20.0
+            ],
+            "bounds_mm": [
+              [
+                18.6,
+                -13.5,
+                36.0
+              ],
+              [
+                29.6,
+                13.5,
+                56.0
+              ]
+            ]
+          },
+          {
+            "name": "REFERENCE_HX711_TXS_envelopes_do_not_print_3",
+            "visible": true,
+            "light_on": true,
+            "size_mm": [
+              10.999999999999998,
+              6.499999999999999,
+              20.40000000000001
+            ],
+            "bounds_mm": [
+              [
+                18.6,
+                8.5,
+                35.79999999999999
+              ],
+              [
+                29.6,
+                15.0,
+                56.2
+              ]
+            ]
+          },
+          {
+            "name": "REFERENCE_HX711_TXS_envelopes_do_not_print_4",
+            "visible": false,
+            "light_on": false,
+            "size_mm": [
+              9.000000000000004,
+              10.0,
+              20.0
+            ],
+            "bounds_mm": [
+              [
+                23.0,
+                14.0,
+                36.0
+              ],
+              [
+                32.0,
+                24.0,
+                56.0
+              ]
+            ]
+          },
+          {
+            "name": "REFERENCE_HX711_TXS_envelopes_do_not_print_5",
+            "visible": true,
+            "light_on": true,
+            "size_mm": [
+              1.6000000000000014,
+              27.94,
+              12.699999999999996
+            ],
+            "bounds_mm": [
+              [
+                10.599999999999998,
+                -13.97,
+                46.00000000000001
+              ],
+              [
+                12.2,
+                13.97,
+                58.7
+              ]
+            ]
+          },
+          {
+            "name": "REFERENCE_HX711_TXS_envelopes_do_not_print_6",
+            "visible": false,
+            "light_on": false,
+            "size_mm": [
+              4.6,
+              26.4,
+              11.7
+            ],
+            "bounds_mm": [
+              [
+                6.000000000000001,
+                -13.2,
+                46.5
+              ],
+              [
+                10.600000000000001,
+                13.2,
+                58.2
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

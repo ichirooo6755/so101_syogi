@@ -1,0 +1,54 @@
+[
+  {
+    "file": "01_flat_carrier_socket_V6.stl",
+    "triangles": 800,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      82.20195770263672,
+      64.55059814453126,
+      32.90113067626953
+    ],
+    "mesh_volume_mm3": 10960.957047213638,
+    "cad_volume_error_fraction": 2.044551355227899e-05
+  },
+  {
+    "file": "02_slot_backing_V6.stl",
+    "triangles": 1354,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      21.5,
+      23.0,
+      9.550000190734863
+    ],
+    "mesh_volume_mm3": 1739.7435258976143,
+    "cad_volume_error_fraction": 8.785208740614628e-05
+  },
+  {
+    "file": "03_common_screw_locked_gate_V6.stl",
+    "triangles": 592,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      60.95000076293945,
+      64.5,
+      15.75
+    ],
+    "mesh_volume_mm3": 4971.352876065916,
+    "cad_volume_error_fraction": 4.550638045489032e-05
+  },
+  {
+    "file": "04_slide_in_camera_tray_V6.stl",
+    "triangles": 200,
+    "watertight": true,
+    "consistent_winding": true,
+    "size_mm": [
+      23.600000381469734,
+      34.79999923706055,
+      6.400000095367432
+    ],
+    "mesh_volume_mm3": 1986.7723227793545,
+    "cad_volume_error_fraction": 5.000755706652879e-08
+  }
+]

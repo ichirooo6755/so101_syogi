@@ -1,0 +1,116 @@
+{
+  "fusion_saved": true,
+  "main_cloud_version": 19,
+  "exports": [
+    {
+      "part": "base",
+      "stem": "01_yoke_rotary_clearance_V5",
+      "min_mm": [
+        0.0,
+        0.0,
+        2.220446049250313e-15
+      ],
+      "size_mm": [
+        100.19999999999999,
+        74.06294620236,
+        34.500000000000014
+      ],
+      "volume_mm3": 29688.678172181015,
+      "archive_reported": true
+    },
+    {
+      "part": "carrier",
+      "stem": "02_compact_load_carrier_V5",
+      "min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_mm": [
+        32.000000000000014,
+        52.0,
+        33.00000000000001
+      ],
+      "volume_mm3": 6573.724935501747,
+      "archive_reported": true
+    },
+    {
+      "part": "cartridge",
+      "stem": "03_symmetric_brush_cartridge_15mm_V5",
+      "min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_mm": [
+        30.000000000000018,
+        52.0,
+        24.000000000000004
+      ],
+      "volume_mm3": 6846.800123811286,
+      "archive_reported": true
+    },
+    {
+      "part": "wrist",
+      "stem": "04_wrist_roll_clearance_V5",
+      "min_mm": [
+        0.0,
+        8.326672684688674e-16,
+        -9.071689045813708e-16
+      ],
+      "size_mm": [
+        38.06304233446285,
+        52.000000000000114,
+        65.19999932944776
+      ],
+      "volume_mm3": 30761.54808667121,
+      "archive_reported": true
+    }
+  ],
+  "native_simulation_document": "so101_V5_筆圧検証_理想接触",
+  "materials": [
+    {
+      "name": "PRINT_ASSUMED_E1500MPa_ISOTROPIC_NOT_TESTED",
+      "properties": {
+        "structural_Density": {
+          "value": 1240.0,
+          "units": "KilogramPerCubicMeter"
+        },
+        "structural_Minimum_yield_stress": {
+          "value": 20000.0,
+          "units": "Kilopascal"
+        },
+        "structural_Poisson_ratio": {
+          "value": 0.35,
+          "units": "Unitless"
+        },
+        "structural_Young_modulus": {
+          "value": 1500000.0,
+          "units": "Kilopascal"
+        }
+      }
+    },
+    {
+      "name": "SC616C_APPROX_Al_E69000MPa_ALLOY_UNKNOWN",
+      "properties": {
+        "structural_Density": {
+          "value": 2700.0,
+          "units": "KilogramPerCubicMeter"
+        },
+        "structural_Minimum_yield_stress": {
+          "value": 55000.0,
+          "units": "Kilopascal"
+        },
+        "structural_Poisson_ratio": {
+          "value": 0.33,
+          "units": "Unitless"
+        },
+        "structural_Young_modulus": {
+          "value": 69000000.0,
+          "units": "Kilopascal"
+        }
+      }
+    }
+  ],
+  "native_simulation_solved": false
+}

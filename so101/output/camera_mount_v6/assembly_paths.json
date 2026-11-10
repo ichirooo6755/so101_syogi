@@ -1,0 +1,1081 @@
+{
+  "passed": false,
+  "PCB_and_gate_assembly_paths": [
+    {
+      "label": "XIAO into loose tray",
+      "offset_mm": 0.1,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "XIAO into loose tray",
+      "offset_mm": 0.25,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "XIAO into loose tray",
+      "offset_mm": 0.5,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "XIAO into loose tray",
+      "offset_mm": 1,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "XIAO into loose tray",
+      "offset_mm": 3,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "XIAO into loose tray",
+      "offset_mm": 5,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "XIAO into loose tray",
+      "offset_mm": 10,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "XIAO into loose tray",
+      "offset_mm": 20,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "XIAO into loose tray",
+      "offset_mm": 30,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "XIAO into loose tray",
+      "offset_mm": 40,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "hits": []
+    },
+    {
+      "label": "Tray and populated XIAO into socket",
+      "offset_mm": 0.1,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "Tray and populated XIAO into socket",
+      "offset_mm": 0.25,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "Tray and populated XIAO into socket",
+      "offset_mm": 0.5,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "Tray and populated XIAO into socket",
+      "offset_mm": 1,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "Tray and populated XIAO into socket",
+      "offset_mm": 3,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "Tray and populated XIAO into socket",
+      "offset_mm": 5,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "Tray and populated XIAO into socket",
+      "offset_mm": 10,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "Tray and populated XIAO into socket",
+      "offset_mm": 20,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "Tray and populated XIAO into socket",
+      "offset_mm": 30,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "Tray and populated XIAO into socket",
+      "offset_mm": 40,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "hits": []
+    },
+    {
+      "label": "HX711 from right before gate",
+      "offset_mm": 0.1,
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "HX711 from right before gate",
+      "offset_mm": 0.25,
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "HX711 from right before gate",
+      "offset_mm": 0.5,
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "HX711 from right before gate",
+      "offset_mm": 1,
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "HX711 from right before gate",
+      "offset_mm": 3,
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "HX711 from right before gate",
+      "offset_mm": 5,
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "HX711 from right before gate",
+      "offset_mm": 10,
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "HX711 from right before gate",
+      "offset_mm": 20,
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "HX711 from right before gate",
+      "offset_mm": 30,
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "HX711 from right before gate",
+      "offset_mm": 40,
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "TXS0108E from left before gate",
+      "offset_mm": 0.1,
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "TXS0108E from left before gate",
+      "offset_mm": 0.25,
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "TXS0108E from left before gate",
+      "offset_mm": 0.5,
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "TXS0108E from left before gate",
+      "offset_mm": 1,
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "TXS0108E from left before gate",
+      "offset_mm": 3,
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "hits": [
+        [
+          "TXS0108E_leads_right_keepout",
+          "01_flat_carrier_socket_V6",
+          0.113647
+        ]
+      ]
+    },
+    {
+      "label": "TXS0108E from left before gate",
+      "offset_mm": 5,
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "hits": [
+        [
+          "TXS0108E_leads_right_keepout",
+          "01_flat_carrier_socket_V6",
+          0.113647
+        ]
+      ]
+    },
+    {
+      "label": "TXS0108E from left before gate",
+      "offset_mm": 10,
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "TXS0108E from left before gate",
+      "offset_mm": 20,
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "TXS0108E from left before gate",
+      "offset_mm": 30,
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "TXS0108E from left before gate",
+      "offset_mm": 40,
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "Common gate outside approach",
+      "offset_mm": 0.1,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "Common gate outside approach",
+      "offset_mm": 0.25,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "Common gate outside approach",
+      "offset_mm": 0.5,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "Common gate outside approach",
+      "offset_mm": 1,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "Common gate outside approach",
+      "offset_mm": 3,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "Common gate outside approach",
+      "offset_mm": 5,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "Common gate outside approach",
+      "offset_mm": 10,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "Common gate outside approach",
+      "offset_mm": 20,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "Common gate outside approach",
+      "offset_mm": 30,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    }
+  ],
+  "complete_bolt_approach": [
+    {
+      "label": "M3x12_A_22",
+      "offset_mm": 0.1,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_22",
+      "offset_mm": 1,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_22",
+      "offset_mm": 3,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_22",
+      "offset_mm": 7,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_22",
+      "offset_mm": 12,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_22",
+      "offset_mm": 20,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_22",
+      "offset_mm": 30,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_34",
+      "offset_mm": 0.1,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_34",
+      "offset_mm": 1,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_34",
+      "offset_mm": 3,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_34",
+      "offset_mm": 7,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_34",
+      "offset_mm": 12,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_34",
+      "offset_mm": 20,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    },
+    {
+      "label": "M3x12_A_34",
+      "offset_mm": 30,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "hits": []
+    }
+  ],
+  "path_issues": [
+    {
+      "label": "TXS0108E from left before gate",
+      "offset_mm": 3,
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "hits": [
+        [
+          "TXS0108E_leads_right_keepout",
+          "01_flat_carrier_socket_V6",
+          0.113647
+        ]
+      ]
+    },
+    {
+      "label": "TXS0108E from left before gate",
+      "offset_mm": 5,
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "hits": [
+        [
+          "TXS0108E_leads_right_keepout",
+          "01_flat_carrier_socket_V6",
+          0.113647
+        ]
+      ]
+    }
+  ],
+  "between_electronics_hits": [],
+  "PCB_positive_retention": [
+    {
+      "part": "HX711 PCB",
+      "axis_index": 0,
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "displacement_mm": 1.2,
+      "retaining_hits": [
+        [
+          "01_flat_carrier_socket_V6",
+          30.4
+        ]
+      ]
+    },
+    {
+      "part": "HX711 PCB",
+      "axis_index": 0,
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "displacement_mm": 1.2,
+      "retaining_hits": [
+        [
+          "03_common_screw_locked_gate_V6",
+          33.44
+        ]
+      ]
+    },
+    {
+      "part": "HX711 PCB",
+      "axis_index": 1,
+      "direction": [
+        0,
+        -1,
+        0
+      ],
+      "displacement_mm": 1.2,
+      "retaining_hits": [
+        [
+          "01_flat_carrier_socket_V6",
+          1.92
+        ]
+      ]
+    },
+    {
+      "part": "HX711 PCB",
+      "axis_index": 1,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "displacement_mm": 1.2,
+      "retaining_hits": [
+        [
+          "01_flat_carrier_socket_V6",
+          8.298721
+        ]
+      ]
+    },
+    {
+      "part": "HX711 PCB",
+      "axis_index": 2,
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "displacement_mm": 1.2,
+      "retaining_hits": [
+        [
+          "01_flat_carrier_socket_V6",
+          45.6
+        ]
+      ]
+    },
+    {
+      "part": "HX711 PCB",
+      "axis_index": 2,
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "displacement_mm": 1.2,
+      "retaining_hits": [
+        [
+          "01_flat_carrier_socket_V6",
+          45.6
+        ]
+      ]
+    },
+    {
+      "part": "TXS0108E PCB",
+      "axis_index": 0,
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "displacement_mm": 1.2,
+      "retaining_hits": [
+        [
+          "03_common_screw_locked_gate_V6",
+          42.4688
+        ]
+      ]
+    },
+    {
+      "part": "TXS0108E PCB",
+      "axis_index": 0,
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "displacement_mm": 1.2,
+      "retaining_hits": [
+        [
+          "01_flat_carrier_socket_V6",
+          39.52
+        ]
+      ]
+    },
+    {
+      "part": "TXS0108E PCB",
+      "axis_index": 1,
+      "direction": [
+        0,
+        -1,
+        0
+      ],
+      "displacement_mm": 1.2,
+      "retaining_hits": [
+        [
+          "01_flat_carrier_socket_V6",
+          5.64
+        ]
+      ]
+    },
+    {
+      "part": "TXS0108E PCB",
+      "axis_index": 1,
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "displacement_mm": 1.2,
+      "retaining_hits": [
+        [
+          "01_flat_carrier_socket_V6",
+          1.576757
+        ]
+      ]
+    },
+    {
+      "part": "TXS0108E PCB",
+      "axis_index": 2,
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "displacement_mm": 1.2,
+      "retaining_hits": [
+        [
+          "01_flat_carrier_socket_V6",
+          19.304
+        ]
+      ]
+    },
+    {
+      "part": "TXS0108E PCB",
+      "axis_index": 2,
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "displacement_mm": 1.2,
+      "retaining_hits": [
+        [
+          "01_flat_carrier_socket_V6",
+          19.304
+        ]
+      ]
+    },
+    {
+      "part": "XIAO main PCB",
+      "axis_index": 0,
+      "direction": [
+        0.7685162090835727,
+        0.6040652767195253,
+        -0.21092173391468708
+      ],
+      "displacement_mm": 1.2,
+      "retaining_hits": [
+        [
+          "04_slide_in_camera_tray_V6",
+          18.877674
+        ]
+      ]
+    },
+    {
+      "part": "XIAO main PCB",
+      "axis_index": 0,
+      "direction": [
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708
+      ],
+      "displacement_mm": 1.2,
+      "retaining_hits": [
+        [
+          "01_flat_carrier_socket_V6",
+          3.063369
+        ]
+      ]
+    },
+    {
+      "part": "XIAO main PCB",
+      "axis_index": 1,
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "displacement_mm": 1.2,
+      "retaining_hits": [
+        [
+          "04_slide_in_camera_tray_V6",
+          10.756166
+        ]
+      ]
+    },
+    {
+      "part": "XIAO main PCB",
+      "axis_index": 1,
+      "direction": [
+        0.559639499402756,
+        -0.4748330781490009,
+        0.6792180641029637
+      ],
+      "displacement_mm": 1.2,
+      "retaining_hits": [
+        [
+          "04_slide_in_camera_tray_V6",
+          10.756166
+        ]
+      ]
+    },
+    {
+      "part": "XIAO main PCB",
+      "axis_index": 2,
+      "direction": [
+        -0.3101394316820215,
+        0.6400302253466693,
+        0.7029757062364562
+      ],
+      "displacement_mm": 1.2,
+      "retaining_hits": [
+        [
+          "04_slide_in_camera_tray_V6",
+          75.954759
+        ]
+      ]
+    },
+    {
+      "part": "XIAO main PCB",
+      "axis_index": 2,
+      "direction": [
+        0.3101394316820215,
+        -0.6400302253466693,
+        -0.7029757062364562
+      ],
+      "displacement_mm": 1.2,
+      "retaining_hits": [
+        [
+          "01_flat_carrier_socket_V6",
+          1.945003
+        ],
+        [
+          "04_slide_in_camera_tray_V6",
+          1.216565
+        ]
+      ]
+    }
+  ],
+  "camera_tongue_axial_retention": [
+    {
+      "direction": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637
+      ],
+      "offset_mm": 1.2,
+      "hits": [
+        [
+          "03_common_screw_locked_gate_V6",
+          7.982194
+        ]
+      ]
+    },
+    {
+      "direction": [
+        0.559639499402756,
+        -0.4748330781490009,
+        0.6792180641029637
+      ],
+      "offset_mm": 1.2,
+      "hits": [
+        [
+          "01_flat_carrier_socket_V6",
+          55.393832
+        ]
+      ]
+    }
+  ],
+  "four_camera_PCB_support_contacts": [
+    {
+      "pad_a_b_mm": [
+        -8.5,
+        -6.5
+      ],
+      "PCB_pushed_0p05mm_contact_mm3": 0.07156791044792529
+    },
+    {
+      "pad_a_b_mm": [
+        -8.5,
+        6.5
+      ],
+      "PCB_pushed_0p05mm_contact_mm3": 0.07156791044768407
+    },
+    {
+      "pad_a_b_mm": [
+        8.5,
+        -6.5
+      ],
+      "PCB_pushed_0p05mm_contact_mm3": 0.07180643598032092
+    },
+    {
+      "pad_a_b_mm": [
+        8.5,
+        6.5
+      ],
+      "PCB_pushed_0p05mm_contact_mm3": 0.07180643598029016
+    }
+  ],
+  "GPIO_wire_paths_included": 14,
+  "gap_closing_per_jaw_mm": 0.25,
+  "gap_closed_hits": [],
+  "cartridge_removal": [
+    {
+      "offset_down_mm": 1,
+      "hits": []
+    },
+    {
+      "offset_down_mm": 5,
+      "hits": []
+    },
+    {
+      "offset_down_mm": 10,
+      "hits": []
+    },
+    {
+      "offset_down_mm": 25,
+      "hits": []
+    },
+    {
+      "offset_down_mm": 50,
+      "hits": []
+    },
+    {
+      "offset_down_mm": 100,
+      "hits": []
+    }
+  ],
+  "representative_USB_C_plug_local_mm": [
+    [
+      12.2,
+      -5,
+      0.5
+    ],
+    [
+      30,
+      5,
+      5.8
+    ]
+  ],
+  "USB_plug_hits": [],
+  "actual_print_tolerance_retention_force_and_cable_flex_unverified": true
+}

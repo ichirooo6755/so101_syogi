@@ -1,0 +1,405 @@
+{
+  "document": "so101書道",
+  "modified": true,
+  "timeline_marker": 150,
+  "timeline_count": 181,
+  "parameters": [
+    {
+      "name": "pivot_to_tip",
+      "expression": "36.7220 mm"
+    },
+    {
+      "name": "brush_dia",
+      "expression": "15 mm"
+    },
+    {
+      "name": "brush_grip_len",
+      "expression": "16 mm"
+    },
+    {
+      "name": "bristle_len",
+      "expression": "38 mm"
+    },
+    {
+      "name": "horn_dia",
+      "expression": "20 mm"
+    },
+    {
+      "name": "horn_screw_pcd",
+      "expression": "14 mm"
+    },
+    {
+      "name": "wall",
+      "expression": "2.4 mm"
+    },
+    {
+      "name": "tilt_min",
+      "expression": "-10 deg"
+    },
+    {
+      "name": "tilt_max",
+      "expression": "100 deg"
+    },
+    {
+      "name": "pivot_lateral",
+      "expression": "pivot_to_tip * sin(entry_angle)"
+    },
+    {
+      "name": "pivot_axial",
+      "expression": "sqrt(pivot_to_tip ^ 2 - pivot_lateral ^ 2)"
+    },
+    {
+      "name": "horn_face_y",
+      "expression": "jaw_inner_drive"
+    },
+    {
+      "name": "bearing_face_y",
+      "expression": "jaw_inner_pass"
+    },
+    {
+      "name": "horn_recess",
+      "expression": "1.5 mm"
+    },
+    {
+      "name": "arm_w",
+      "expression": "12 mm"
+    },
+    {
+      "name": "pin_dia",
+      "expression": "3.9 mm"
+    },
+    {
+      "name": "clamp_slit",
+      "expression": "1.6 mm"
+    },
+    {
+      "name": "screw_pitch",
+      "expression": "16 mm"
+    },
+    {
+      "name": "jaw_outer_drive",
+      "expression": "-24.0 mm"
+    },
+    {
+      "name": "jaw_cbore_drive",
+      "expression": "-22.4 mm"
+    },
+    {
+      "name": "jaw_mate_drive",
+      "expression": "-18.9 mm"
+    },
+    {
+      "name": "jaw_inner_drive",
+      "expression": "-17.4 mm"
+    },
+    {
+      "name": "jaw_inner_pass",
+      "expression": "16.0 mm"
+    },
+    {
+      "name": "jaw_mate_pass",
+      "expression": "17.5 mm"
+    },
+    {
+      "name": "jaw_cbore_pass",
+      "expression": "21.0 mm"
+    },
+    {
+      "name": "jaw_outer_pass",
+      "expression": "24.0 mm"
+    },
+    {
+      "name": "arm_dia",
+      "expression": "20.0 mm"
+    },
+    {
+      "name": "horn_screw_dia",
+      "expression": "3.2 mm"
+    },
+    {
+      "name": "horn_cbore_dia",
+      "expression": "5.4 mm"
+    },
+    {
+      "name": "entry_angle",
+      "expression": "51.9055 deg"
+    },
+    {
+      "name": "brush_total_length",
+      "expression": "56 mm"
+    },
+    {
+      "name": "brush_mass",
+      "expression": "8 g"
+    },
+    {
+      "name": "yoke_index",
+      "expression": "0 deg"
+    },
+    {
+      "name": "jaw_trim_x",
+      "expression": "15.076 mm"
+    },
+    {
+      "name": "sc_hole_pitch",
+      "expression": "7.4 mm"
+    },
+    {
+      "name": "sc_screw_clearance",
+      "expression": "3.4 mm"
+    },
+    {
+      "name": "sc_mount_thickness",
+      "expression": "10 mm"
+    },
+    {
+      "name": "sc_head_dia",
+      "expression": "6.2 mm"
+    },
+    {
+      "name": "sc_head_depth",
+      "expression": "3.2 mm"
+    },
+    {
+      "name": "sc_brush_axis_x",
+      "expression": "50 mm"
+    },
+    {
+      "name": "sc_brush_axis_y",
+      "expression": "2.762946202 mm"
+    },
+    {
+      "name": "brush_glue_allowance",
+      "expression": "1.0 mm"
+    },
+    {
+      "name": "brush_cartridge_od",
+      "expression": "22 mm"
+    },
+    {
+      "name": "brush_cartridge_id",
+      "expression": "brush_dia + brush_glue_allowance"
+    },
+    {
+      "name": "brush_fit_clearance",
+      "expression": "0.6 mm"
+    },
+    {
+      "name": "brush_receiver_id",
+      "expression": "brush_cartridge_od + brush_fit_clearance"
+    },
+    {
+      "name": "brush_receiver_od",
+      "expression": "brush_cartridge_od + 10 mm"
+    },
+    {
+      "name": "brush_flange_od",
+      "expression": "brush_cartridge_od + 8 mm"
+    },
+    {
+      "name": "brush_sleeve_length",
+      "expression": "36 mm"
+    },
+    {
+      "name": "brush_receiver_thickness",
+      "expression": "6 mm"
+    },
+    {
+      "name": "brush_flange_thickness",
+      "expression": "4 mm"
+    },
+    {
+      "name": "brush_nut_af",
+      "expression": "5.8 mm"
+    },
+    {
+      "name": "brush_nut_depth",
+      "expression": "2.6 mm"
+    },
+    {
+      "name": "brush_guide_dia",
+      "expression": "brush_dia + 0.4 mm"
+    }
+  ],
+  "selection": [],
+  "occurrences": [
+    {
+      "name": "部品１:1",
+      "transform": [
+        0.9999999999999991,
+        -3.2751579226441956e-15,
+        4.3293867896380924e-15,
+        -0.1622628494696552,
+        -1.8318679906315213e-15,
+        -1.0000000000000007,
+        -4.0245584642661915e-16,
+        0.12629462023601076,
+        1.165734175856402e-15,
+        -1.1518563880485997e-15,
+        -1.0,
+        3.3895568113228793,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bodies": [
+        {
+          "name": "SO101_Yoke_SC616C_Reinforced",
+          "volume": 12989.121590887939,
+          "bbox": [
+            [
+              -11.622628494696661,
+              -21.737053797639998,
+              4.499999999999917
+            ],
+            [
+              36.00000000000014,
+              39.46294620236014,
+              43.89556811322889
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SC616C_1kg_Fusion:1+Aluminium_body_M3_nominal_relief_APPROX_no_resin_no_cable:1",
+      "transform": [
+        4.163336342344713e-16,
+        1.0000000000000018,
+        -9.15933995315731e-16,
+        3.000000000000002,
+        -0.9999999999999998,
+        4.1633363423439806e-16,
+        3.6221026178396205e-15,
+        3.8462946202360073,
+        3.62210261783958e-15,
+        8.049116928532596e-16,
+        1.0000000000000013,
+        2.4499999999999935,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bodies": [
+        {
+          "name": "ボディ1",
+          "volume": 1844.3186979165364,
+          "bbox": [
+            [
+              25.500000000000007,
+              -6.537053797639918,
+              24.49999999999993
+            ],
+            [
+              34.50000000000005,
+              38.4629462023601,
+              30.50000000000011
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SC616C_1kg_Fusion:1",
+      "transform": [
+        2.2204460492502263e-16,
+        -1.2212453270876509e-15,
+        -1.000000000000001,
+        3.15,
+        -1.0000000000000002,
+        3.622102617839579e-15,
+        -2.2204460492502786e-16,
+        3.7462946202360063,
+        3.622102617839576e-15,
+        1.0000000000000013,
+        -1.2351231148955076e-15,
+        1.699999999999995,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bodies": []
+    },
+    {
+      "name": "Brush_Load_Carrier:1",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bodies": [
+        {
+          "name": "Brush_Load_Carrier_FDM",
+          "volume": 5617.280951553299,
+          "bbox": [
+            [
+              24.0,
+              -23.23705379763991,
+              12.5
+            ],
+            [
+              66.0,
+              28.762946202360084,
+              24.5
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Brush_Cartridge_15mm:1",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bodies": [
+        {
+          "name": "Brush_Cartridge_15mm_FDM",
+          "volume": 8531.709330455738,
+          "bbox": [
+            [
+              35.0,
+              -23.237053797999998,
+              8.5
+            ],
+            [
+              65.0,
+              28.762946202000002,
+              44.5
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

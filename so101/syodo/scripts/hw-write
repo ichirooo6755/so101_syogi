@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+# 入力した1〜4文字の軌道を現在のdeskから毎回作り、すぐ本書きする。
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+SIM_PY="${SYODO_PYTHON:-$ROOT/.venv/bin/python}"
+PY="${LEROBOT_HW_PYTHON:-$HOME/Documents/lerobot-hw/.venv/bin/python}"
+
+if [[ $# -eq 0 || "$1" == -* ]]; then
+  echo "使い方: $0 <1〜4文字> [--prepare-only] [playオプション]" >&2
+  exit 2
+fi
+
+WORD="$1"
+shift
+PREPARE_ONLY=0
+SIM_SPEED=1.5
+PLAY_ARGS=(--speed 1.5 --stride 1 --hold-s 0 --approach-s 6)
+EXPECT_SPEED=0
+for ARG in "$@"; do
+  if [[ "$EXPECT_SPEED" == "1" ]]; then
+    SIM_SPEED="$ARG"
+    EXPECT_SPEED=0
+  elif [[ "$ARG" == "--speed" ]]; then
+    EXPECT_SPEED=1
+  elif [[ "$ARG" == --speed=* ]]; then
+    SIM_SPEED="${ARG#--speed=}"
+  fi
+  if [[ "$ARG" == "--prepare-only" ]]; then
+    PREPARE_ONLY=1
+  else
+    PLAY_ARGS+=("$ARG")
+  fi
+done
+if (( ${#WORD} < 1 || ${#WORD} > 4 )); then
+  echo "書けるのは1〜4文字です: $WORD" >&2
+  exit 2
+fi
+
+RUN_ROOT="${SYODO_RUN_ROOT:-$ROOT/runs/hardware-two-character}"
+RUN_DIR="$RUN_ROOT/$(date +%Y%m%d-%H%M%S)"
+TRACE="$RUN_DIR/trace.npz"
+
+cd "$ROOT"
+mkdir -p "$RUN_DIR"
+PYTHONPATH="$ROOT/src" "$SIM_PY" \
+  "$ROOT/scripts/hardware_write.py" trace "$WORD" --out "$TRACE"
+PYTHONPATH="$ROOT/src" "$SIM_PY" \
+  "$ROOT/scripts/audit_hardware_trace.py" "$TRACE" --output "$RUN_DIR/preflight.json"
+PYTHONPATH="$ROOT/src:$ROOT" "$SIM_PY" \
+  "$ROOT/scripts/simulate_hardware_brush.py" "$TRACE" \
+  --out "$RUN_DIR/brush-simulation" --speed "$SIM_SPEED"
+PYTHONPATH="$ROOT/src" "$SIM_PY" \
+  "$ROOT/scripts/hardware_write.py" prepare-groom
+if [[ "$PREPARE_ONLY" == 1 ]]; then
+  echo "軌道と送信前検証を保存: $RUN_DIR"
+  exit 0
+fi
+exec "$PY" "$ROOT/scripts/hardware_write.py" play "$TRACE" \
+  --log "$RUN_DIR/write.csv" "${PLAY_ARGS[@]}"

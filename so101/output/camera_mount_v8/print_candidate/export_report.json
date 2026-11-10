@@ -1,0 +1,180 @@
+{
+  "created_utc": "2026-10-28T06:33:21.958697+00:00",
+  "exports": [
+    {
+      "part": "01_bolted_mount_V8",
+      "stem": "01_bolted_mount_V8",
+      "quantity": 1,
+      "volume_mm3": 7429.092273626527,
+      "size_mm": [
+        44.577500390360086,
+        27.098927395636476,
+        35.12480363843195
+      ],
+      "solid_lumps": 1,
+      "orientation": "flat broad back face down",
+      "rotation_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "ce1812cf62d83f4a6f3b8fda9a1dc0a5e53a1cc1d7152b528b957372b39b0954"
+    },
+    {
+      "part": "02_slot_backing_V8",
+      "stem": "02_slot_backing_V8",
+      "quantity": 1,
+      "volume_mm3": 1739.8963794264173,
+      "size_mm": [
+        21.500000000000004,
+        23.0,
+        9.549999999999997
+      ],
+      "solid_lumps": 1,
+      "orientation": "flat broad back face down",
+      "rotation_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "f5bb3982cb1e9a6f119221b0f9980fe121b1571d63b36c3cec41232259b22f7a"
+    },
+    {
+      "part": "03_XIAO_header_tray_V8",
+      "stem": "03_XIAO_header_tray_V8",
+      "quantity": 1,
+      "volume_mm3": 2431.0446967414528,
+      "size_mm": [
+        34.800000000000004,
+        9.100000000000001,
+        23.600000000000023
+      ],
+      "solid_lumps": 1,
+      "orientation": "camera or stack end face down",
+      "rotation_matrix": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637,
+        0.0,
+        0.3101394316820215,
+        -0.6400302253466693,
+        -0.7029757062364562,
+        0.0,
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "f11937353cd1c7bffdce87890d12b9ac4c923d55d986efb69858741078f25b6e"
+    },
+    {
+      "part": "04_HX711_perf_stack_V8",
+      "stem": "04_HX711_perf_stack_V8",
+      "quantity": 1,
+      "volume_mm3": 5652.565750360229,
+      "size_mm": [
+        40.400000000000006,
+        29.650000000000006,
+        31.740000000000013
+      ],
+      "solid_lumps": 1,
+      "orientation": "camera or stack end face down",
+      "rotation_matrix": [
+        -0.559639499402756,
+        0.4748330781490009,
+        -0.6792180641029637,
+        0.0,
+        0.3101394316820215,
+        -0.6400302253466693,
+        -0.7029757062364562,
+        0.0,
+        -0.7685162090835727,
+        -0.6040652767195253,
+        0.21092173391468708,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "2d64a8e5caffd48132dfa6f15fa0402418402428c91169f287fad5ae74a1f8d6"
+    },
+    {
+      "part": "05_bolted_end_plate_V8",
+      "stem": "05_bolted_end_plate_V8",
+      "quantity": 1,
+      "volume_mm3": 1698.7615889245028,
+      "size_mm": [
+        40.400000000000006,
+        28.999999999999993,
+        6.940000000000044
+      ],
+      "solid_lumps": 1,
+      "orientation": "camera or stack end face down",
+      "rotation_matrix": [
+        0.559639499402756,
+        -0.4748330781490009,
+        0.6792180641029637,
+        0.0,
+        0.3101394316820215,
+        -0.6400302253466693,
+        -0.7029757062364562,
+        0.0,
+        0.7685162090835727,
+        0.6040652767195253,
+        -0.21092173391468708,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stl_units": "mm",
+      "stl_sha256": "bb7c1768f1941705c6233eb36990d327d6b969bacf6447fc2f5247f3964e5b76"
+    }
+  ],
+  "assembly_archive": "/Users/sugawaraichirou/Documents/ChatGPT/so101/output/camera_mount_v8/print_candidate/source_cad/SO101_XIAO_SEN13879_bolted_V8_assembly_DO_NOT_PRINT.f3d",
+  "existing_assembly_preserved": true,
+  "hardware": {
+    "M3x12": 6,
+    "M3_hex_nut": 6
+  },
+  "printed_parts": 5,
+  "hot_glue_required": false,
+  "PCB_or_camera_extra_fasteners": 4,
+  "physical_print_fit_strength_and_electrical_test_performed": false
+}

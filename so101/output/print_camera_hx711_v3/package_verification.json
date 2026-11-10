@@ -1,0 +1,52 @@
+{
+  "created_utc": "2026-10-27T12:44:13.591154+00:00",
+  "passed": true,
+  "printable_part_types": 6,
+  "printed_piece_count": 6,
+  "connectivity": [
+    {
+      "file": "01_A_compact_outward_frame_V3.stl",
+      "surface_components": 1,
+      "quantity": 1
+    },
+    {
+      "file": "02_A_slot_inner_jaw_V3.stl",
+      "surface_components": 1,
+      "quantity": 1
+    },
+    {
+      "file": "03_camera_end_keeper_V3.stl",
+      "surface_components": 1,
+      "quantity": 1
+    },
+    {
+      "file": "04_HX711_header_keeper_V3.stl",
+      "surface_components": 1,
+      "quantity": 1
+    },
+    {
+      "file": "05_HX711_terminal_keeper_V3.stl",
+      "surface_components": 1,
+      "quantity": 1
+    },
+    {
+      "file": "06_TXS0108E_top_keeper_V3.stl",
+      "surface_components": 1,
+      "quantity": 1
+    }
+  ],
+  "new_fasteners": {
+    "M3x8_socket_cap": 3,
+    "M3x10_socket_cap": 3,
+    "M3_hex_nut": 6
+  },
+  "native_cad_reopened": 12,
+  "sampled_rotation_poses": 73,
+  "rotation_collisions": 0,
+  "source_version_preserved": 26,
+  "source_timeline_preserved": [
+    520,
+    520
+  ],
+  "physical_fit_strength_or_electrical_test_performed": false
+}

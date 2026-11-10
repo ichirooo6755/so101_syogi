@@ -1,0 +1,360 @@
+{
+  "passed": true,
+  "static_interferences": [],
+  "rotary_poses": [
+    {
+      "angle_deg": -180,
+      "hits": []
+    },
+    {
+      "angle_deg": -175,
+      "hits": []
+    },
+    {
+      "angle_deg": -170,
+      "hits": []
+    },
+    {
+      "angle_deg": -165,
+      "hits": []
+    },
+    {
+      "angle_deg": -160,
+      "hits": []
+    },
+    {
+      "angle_deg": -155,
+      "hits": []
+    },
+    {
+      "angle_deg": -150,
+      "hits": []
+    },
+    {
+      "angle_deg": -145,
+      "hits": []
+    },
+    {
+      "angle_deg": -140,
+      "hits": []
+    },
+    {
+      "angle_deg": -135,
+      "hits": []
+    },
+    {
+      "angle_deg": -130,
+      "hits": []
+    },
+    {
+      "angle_deg": -125,
+      "hits": []
+    },
+    {
+      "angle_deg": -120,
+      "hits": []
+    },
+    {
+      "angle_deg": -115,
+      "hits": []
+    },
+    {
+      "angle_deg": -110,
+      "hits": []
+    },
+    {
+      "angle_deg": -105,
+      "hits": []
+    },
+    {
+      "angle_deg": -100,
+      "hits": []
+    },
+    {
+      "angle_deg": -95,
+      "hits": []
+    },
+    {
+      "angle_deg": -90,
+      "hits": []
+    },
+    {
+      "angle_deg": -85,
+      "hits": []
+    },
+    {
+      "angle_deg": -80,
+      "hits": []
+    },
+    {
+      "angle_deg": -75,
+      "hits": []
+    },
+    {
+      "angle_deg": -70,
+      "hits": []
+    },
+    {
+      "angle_deg": -65,
+      "hits": []
+    },
+    {
+      "angle_deg": -60,
+      "hits": []
+    },
+    {
+      "angle_deg": -55,
+      "hits": []
+    },
+    {
+      "angle_deg": -50,
+      "hits": []
+    },
+    {
+      "angle_deg": -45,
+      "hits": []
+    },
+    {
+      "angle_deg": -40,
+      "hits": []
+    },
+    {
+      "angle_deg": -35,
+      "hits": []
+    },
+    {
+      "angle_deg": -30,
+      "hits": []
+    },
+    {
+      "angle_deg": -25,
+      "hits": []
+    },
+    {
+      "angle_deg": -20,
+      "hits": []
+    },
+    {
+      "angle_deg": -15,
+      "hits": []
+    },
+    {
+      "angle_deg": -10,
+      "hits": []
+    },
+    {
+      "angle_deg": -5,
+      "hits": []
+    },
+    {
+      "angle_deg": 0,
+      "hits": []
+    },
+    {
+      "angle_deg": 5,
+      "hits": []
+    },
+    {
+      "angle_deg": 10,
+      "hits": []
+    },
+    {
+      "angle_deg": 15,
+      "hits": []
+    },
+    {
+      "angle_deg": 20,
+      "hits": []
+    },
+    {
+      "angle_deg": 25,
+      "hits": []
+    },
+    {
+      "angle_deg": 30,
+      "hits": []
+    },
+    {
+      "angle_deg": 35,
+      "hits": []
+    },
+    {
+      "angle_deg": 40,
+      "hits": []
+    },
+    {
+      "angle_deg": 45,
+      "hits": []
+    },
+    {
+      "angle_deg": 50,
+      "hits": []
+    },
+    {
+      "angle_deg": 55,
+      "hits": []
+    },
+    {
+      "angle_deg": 60,
+      "hits": []
+    },
+    {
+      "angle_deg": 65,
+      "hits": []
+    },
+    {
+      "angle_deg": 70,
+      "hits": []
+    },
+    {
+      "angle_deg": 75,
+      "hits": []
+    },
+    {
+      "angle_deg": 80,
+      "hits": []
+    },
+    {
+      "angle_deg": 85,
+      "hits": []
+    },
+    {
+      "angle_deg": 90,
+      "hits": []
+    },
+    {
+      "angle_deg": 95,
+      "hits": []
+    },
+    {
+      "angle_deg": 100,
+      "hits": []
+    },
+    {
+      "angle_deg": 105,
+      "hits": []
+    },
+    {
+      "angle_deg": 110,
+      "hits": []
+    },
+    {
+      "angle_deg": 115,
+      "hits": []
+    },
+    {
+      "angle_deg": 120,
+      "hits": []
+    },
+    {
+      "angle_deg": 125,
+      "hits": []
+    },
+    {
+      "angle_deg": 130,
+      "hits": []
+    },
+    {
+      "angle_deg": 135,
+      "hits": []
+    },
+    {
+      "angle_deg": 140,
+      "hits": []
+    },
+    {
+      "angle_deg": 145,
+      "hits": []
+    },
+    {
+      "angle_deg": 150,
+      "hits": []
+    },
+    {
+      "angle_deg": 155,
+      "hits": []
+    },
+    {
+      "angle_deg": 160,
+      "hits": []
+    },
+    {
+      "angle_deg": 165,
+      "hits": []
+    },
+    {
+      "angle_deg": 170,
+      "hits": []
+    },
+    {
+      "angle_deg": 175,
+      "hits": []
+    },
+    {
+      "angle_deg": 180,
+      "hits": []
+    }
+  ],
+  "wrist_candidate_document": "Wrist_Roll_Clearance_V8_元取付対応",
+  "fixed_body_count": 17,
+  "gauge_keepout_mm3": {
+    "base": 0.0,
+    "carrier": 0.0,
+    "cartridge": 0.0
+  },
+  "cartridge_pullout_down_mm_overlap_mm3": [
+    [
+      1,
+      0.0
+    ],
+    [
+      10,
+      0.0
+    ],
+    [
+      24,
+      0.0
+    ],
+    [
+      50,
+      0.0
+    ],
+    [
+      100,
+      0.0
+    ]
+  ],
+  "cell_slide_in_mm_overlap_mm3": [
+    [
+      1,
+      0.0
+    ],
+    [
+      5,
+      0.0
+    ],
+    [
+      15,
+      0.0
+    ],
+    [
+      45,
+      0.0
+    ],
+    [
+      70,
+      0.0
+    ]
+  ],
+  "base_volume_mm3": 38550.50206478457,
+  "main_timeline": [
+    515,
+    515
+  ],
+  "wrist_volumes_mm3": [
+    3.3316342766821095e-05,
+    22072.992902446946
+  ],
+  "limitations": "5 degree sampled sweep, no upstream arm/wires/servo travel limits/FDM tolerances or elastic deflection",
+  "main_geometry_edited": false
+}

@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "file": "source_cad/03_brush_cartridge_15mm_V5_editable.f3d",
+  "tested_only_in_disposable_copy": true,
+  "source_archive_not_saved_or_modified": true,
+  "main_assembly_unchanged": true,
+  "checks": [
+    {
+      "brush_dia_mm": 12,
+      "volume_mm3": 8217.147298300351,
+      "size_mm": [
+        30.000000000000018,
+        52.0,
+        24.000000000000004
+      ],
+      "cylinder_radii_mm": [
+        1.7,
+        6.2,
+        6.5,
+        11.0,
+        15.0
+      ],
+      "healthy_features": true
+    },
+    {
+      "brush_dia_mm": 17,
+      "volume_mm3": 5760.144284482937,
+      "size_mm": [
+        30.000000000000018,
+        52.0,
+        24.000000000000004
+      ],
+      "cylinder_radii_mm": [
+        1.7,
+        8.7,
+        9.0,
+        11.0,
+        15.0
+      ],
+      "healthy_features": true
+    },
+    {
+      "brush_dia_mm": 15,
+      "volume_mm3": 6846.800123811279,
+      "size_mm": [
+        30.000000000000018,
+        52.0,
+        24.000000000000004
+      ],
+      "cylinder_radii_mm": [
+        1.7,
+        7.7,
+        8.0,
+        11.0,
+        15.0
+      ],
+      "healthy_features": true
+    }
+  ]
+}

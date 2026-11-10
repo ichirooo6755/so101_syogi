@@ -1,0 +1,2310 @@
+{
+  "created_utc": "2026-10-26T05:30:45.906077+00:00",
+  "fusion_version": "2705.1.30",
+  "source_document": "so101書道",
+  "source_cloud_id": "urn:adsk.wipprod:dm.lineage:daA_9GXeT5CRZG-dahRL9A",
+  "main_cloud_version": 26,
+  "main_saved": true,
+  "timeline": [
+    520,
+    520
+  ],
+  "exports": [
+    {
+      "part": "base",
+      "stem": "01_base_original_mount_V8",
+      "quantity": 1,
+      "source_occurrence": "部品１_V8_元取付形状保持:1",
+      "volume_mm3": 38550.50206478457,
+      "size_mm": [
+        84.2,
+        78.06294620236,
+        28.5
+      ],
+      "printed_body_count": 1,
+      "original_CAD_body_count": 1,
+      "omitted_fragment_mm3": 0,
+      "translation_from_assembly_mm": [
+        15.0,
+        36.49999999999999,
+        -21.0
+      ],
+      "rotation_from_assembly": "identity; no print orientation optimisation",
+      "stl_units": "mm",
+      "mesh_refinement": "Fusion High",
+      "stl_bytes": 380384,
+      "stl_sha256": "bef47b4e569a6994f98bfa6563454a470c27dafa9023515fc479462d9a997a95",
+      "editable_archive_export_result": true
+    },
+    {
+      "part": "carrier",
+      "stem": "02_load_carrier_V5",
+      "quantity": 1,
+      "source_occurrence": "Brush_Load_Carrier_Compact_V5:1",
+      "volume_mm3": 6573.724935501748,
+      "size_mm": [
+        32.000000000000014,
+        52.0,
+        33.00000000000001
+      ],
+      "printed_body_count": 1,
+      "original_CAD_body_count": 1,
+      "omitted_fragment_mm3": 0,
+      "translation_from_assembly_mm": [
+        -45.999999999999986,
+        23.237053797999998,
+        -12.5
+      ],
+      "rotation_from_assembly": "identity; no print orientation optimisation",
+      "stl_units": "mm",
+      "mesh_refinement": "Fusion High",
+      "stl_bytes": 122984,
+      "stl_sha256": "8fcfce69d58a8f8812fe48b7da9a67044f469968591aa234e40e84fc02a6a4eb",
+      "editable_archive_export_result": true
+    },
+    {
+      "part": "cartridge",
+      "stem": "03_brush_cartridge_15mm_V5",
+      "quantity": 1,
+      "source_occurrence": "Brush_Cartridge_Symmetric_15mm_V5:1",
+      "volume_mm3": 6846.800123811286,
+      "size_mm": [
+        30.000000000000018,
+        52.0,
+        24.000000000000004
+      ],
+      "printed_body_count": 1,
+      "original_CAD_body_count": 1,
+      "omitted_fragment_mm3": 0,
+      "translation_from_assembly_mm": [
+        -46.999999999999986,
+        23.237053797999998,
+        -8.5
+      ],
+      "rotation_from_assembly": "identity; no print orientation optimisation",
+      "stl_units": "mm",
+      "mesh_refinement": "Fusion High",
+      "stl_bytes": 172684,
+      "stl_sha256": "3cfb0af8d944b65a3af007ef9f3bbc580cc7e4370cea3285b8edd602fa27a24b",
+      "editable_archive_export_result": true
+    },
+    {
+      "part": "wrist",
+      "stem": "04_wrist_clearance_V8",
+      "quantity": 1,
+      "source_occurrence": "Wrist_Roll_Clearance_V8_元取付対応:1",
+      "volume_mm3": 22025.213051512776,
+      "size_mm": [
+        38.06304233446286,
+        52.000000000000114,
+        47.1994425467429
+      ],
+      "printed_body_count": 1,
+      "original_CAD_body_count": 1,
+      "omitted_fragment_mm3": 0,
+      "translation_from_assembly_mm": [
+        26.400293546521418,
+        27.258818781378935,
+        4.49770505676092
+      ],
+      "rotation_from_assembly": "identity; no print orientation optimisation",
+      "stl_units": "mm",
+      "mesh_refinement": "Fusion High",
+      "stl_bytes": 602084,
+      "stl_sha256": "ae47b6fefa44c93e9a4865235753135dc5e8519af10a077f58bcbf46ddf6a113",
+      "editable_archive_export_result": true
+    }
+  ],
+  "source_geometry_and_parameters_preserved": true,
+  "source_fingerprint_before": {
+    "modified": false,
+    "version": 26,
+    "timeline": [
+      520,
+      520
+    ],
+    "parameters": [
+      [
+        "pivot_to_tip",
+        "36.7220 mm"
+      ],
+      [
+        "brush_dia",
+        "15 mm"
+      ],
+      [
+        "brush_grip_len",
+        "16 mm"
+      ],
+      [
+        "bristle_len",
+        "38 mm"
+      ],
+      [
+        "horn_dia",
+        "20 mm"
+      ],
+      [
+        "horn_screw_pcd",
+        "14 mm"
+      ],
+      [
+        "wall",
+        "2.4 mm"
+      ],
+      [
+        "tilt_min",
+        "-10 deg"
+      ],
+      [
+        "tilt_max",
+        "100 deg"
+      ],
+      [
+        "pivot_lateral",
+        "pivot_to_tip * sin(entry_angle)"
+      ],
+      [
+        "pivot_axial",
+        "sqrt(pivot_to_tip ^ 2 - pivot_lateral ^ 2)"
+      ],
+      [
+        "horn_face_y",
+        "jaw_inner_drive"
+      ],
+      [
+        "bearing_face_y",
+        "jaw_inner_pass"
+      ],
+      [
+        "horn_recess",
+        "1.5 mm"
+      ],
+      [
+        "arm_w",
+        "12 mm"
+      ],
+      [
+        "pin_dia",
+        "3.9 mm"
+      ],
+      [
+        "clamp_slit",
+        "1.6 mm"
+      ],
+      [
+        "screw_pitch",
+        "16 mm"
+      ],
+      [
+        "jaw_outer_drive",
+        "-24.0 mm"
+      ],
+      [
+        "jaw_cbore_drive",
+        "-22.4 mm"
+      ],
+      [
+        "jaw_mate_drive",
+        "-18.9 mm"
+      ],
+      [
+        "jaw_inner_drive",
+        "-17.4 mm"
+      ],
+      [
+        "jaw_inner_pass",
+        "16.0 mm"
+      ],
+      [
+        "jaw_mate_pass",
+        "17.5 mm"
+      ],
+      [
+        "jaw_cbore_pass",
+        "21.0 mm"
+      ],
+      [
+        "jaw_outer_pass",
+        "24.0 mm"
+      ],
+      [
+        "arm_dia",
+        "20.0 mm"
+      ],
+      [
+        "horn_screw_dia",
+        "3.2 mm"
+      ],
+      [
+        "horn_cbore_dia",
+        "5.4 mm"
+      ],
+      [
+        "entry_angle",
+        "51.9055 deg"
+      ],
+      [
+        "brush_total_length",
+        "56 mm"
+      ],
+      [
+        "brush_mass",
+        "8 g"
+      ],
+      [
+        "yoke_index",
+        "0 deg"
+      ],
+      [
+        "jaw_trim_x",
+        "15.076 mm"
+      ],
+      [
+        "sc_hole_pitch",
+        "7.4 mm"
+      ],
+      [
+        "sc_screw_clearance",
+        "3.4 mm"
+      ],
+      [
+        "sc_mount_thickness",
+        "10 mm"
+      ],
+      [
+        "sc_head_dia",
+        "6.2 mm"
+      ],
+      [
+        "sc_head_depth",
+        "3.2 mm"
+      ],
+      [
+        "sc_brush_axis_x",
+        "50 mm"
+      ],
+      [
+        "sc_brush_axis_y",
+        "2.762946202 mm"
+      ],
+      [
+        "brush_glue_allowance",
+        "1.0 mm"
+      ],
+      [
+        "brush_cartridge_od",
+        "22 mm"
+      ],
+      [
+        "brush_cartridge_id",
+        "brush_dia + brush_glue_allowance"
+      ],
+      [
+        "brush_fit_clearance",
+        "0.6 mm"
+      ],
+      [
+        "brush_receiver_id",
+        "brush_cartridge_od + brush_fit_clearance"
+      ],
+      [
+        "brush_receiver_od",
+        "brush_cartridge_od + 10 mm"
+      ],
+      [
+        "brush_flange_od",
+        "brush_cartridge_od + 8 mm"
+      ],
+      [
+        "brush_sleeve_length",
+        "36 mm"
+      ],
+      [
+        "brush_receiver_thickness",
+        "6 mm"
+      ],
+      [
+        "brush_flange_thickness",
+        "4 mm"
+      ],
+      [
+        "brush_nut_af",
+        "5.8 mm"
+      ],
+      [
+        "brush_nut_depth",
+        "2.6 mm"
+      ],
+      [
+        "brush_guide_dia",
+        "brush_dia + 0.4 mm"
+      ],
+      [
+        "sc_slide_width",
+        "10 mm"
+      ],
+      [
+        "sc_lid_flexure_gap",
+        "1.5 mm"
+      ],
+      [
+        "sc_lid_top",
+        "35.4 mm"
+      ],
+      [
+        "sc_lid_bolt_pitch",
+        "16 mm"
+      ],
+      [
+        "centered_brush_axis_x",
+        "30 mm"
+      ],
+      [
+        "centered_brush_axis_y",
+        "sc_brush_axis_y"
+      ],
+      [
+        "centered_receiver_z",
+        "-22.5 mm"
+      ],
+      [
+        "centered_cartridge_flange_z",
+        "centered_receiver_z - brush_flange_thickness"
+      ],
+      [
+        "centered_brush_stop_z",
+        "7.5 mm"
+      ],
+      [
+        "centered_brush_cap_thickness",
+        "2 mm"
+      ],
+      [
+        "v5_brush_axis_x",
+        "78 mm"
+      ],
+      [
+        "v5_brush_sleeve_length",
+        "24 mm"
+      ],
+      [
+        "v5_cartridge_flange_z",
+        "8.5 mm"
+      ],
+      [
+        "v5_brush_stop_z",
+        "v5_cartridge_flange_z + v5_brush_sleeve_length - 2 mm"
+      ],
+      [
+        "v5_rotary_axis_x",
+        "-2 mm"
+      ],
+      [
+        "v5_rotary_axis_z",
+        "34 mm"
+      ],
+      [
+        "v6_tool_translation_x",
+        "-16 mm"
+      ],
+      [
+        "v6_brush_axis_x",
+        "v5_brush_axis_x + v6_tool_translation_x"
+      ]
+    ],
+    "occurrences": [
+      {
+        "name": "Wrist_Roll_Follower_SO101 v1:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "ボディ1",
+            "volume_mm3": 0.0,
+            "faces": 0,
+            "bounds_cm": [
+              [
+                0.5,
+                0.5,
+                0.5
+              ],
+              [
+                0.5,
+                0.5,
+                0.5
+              ]
+            ]
+          },
+          {
+            "name": "ボディ2",
+            "volume_mm3": 40239.62780957502,
+            "faces": 186,
+            "bounds_cm": [
+              [
+                -2.4400293546521414,
+                -2.45192144793536,
+                -0.9924099329447704
+              ],
+              [
+                1.3662748787941439,
+                2.7480785520646402,
+                5.52759
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "部品１:1",
+        "visible": false,
+        "transform": [
+          0.9999999999999991,
+          -3.2751579226441956e-15,
+          4.3293867896380924e-15,
+          -0.1622628494696552,
+          -1.8318679906315213e-15,
+          -1.0000000000000007,
+          -4.0245584642661915e-16,
+          0.12629462023601076,
+          1.165734175856402e-15,
+          -1.1518563880485997e-15,
+          -1.0,
+          3.3895568113228793,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "SO101_Yoke_SC616C_Slide_In_Base",
+            "volume_mm3": 15190.66848698307,
+            "faces": 114,
+            "bounds_cm": [
+              [
+                -1.162262849469666,
+                -2.173705379764,
+                0.44999999999999174
+              ],
+              [
+                3.70000000000001,
+                4.156294620236017,
+                4.389556811322889
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "STS3215_c:1",
+        "visible": true,
+        "transform": [
+          -2.636779683484746e-16,
+          1.5681900222830336e-15,
+          1.0,
+          -0.20000000000000284,
+          -2.7755575615628997e-16,
+          1.0,
+          -1.5681900222830336e-15,
+          0.10000000000000345,
+          -1.000000000000003,
+          -5.689893001203915e-16,
+          -2.636779683484742e-16,
+          3.4000000000000052,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": []
+      },
+      {
+        "name": "クランプ:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "ç­ã¯ã©ã³ã",
+            "volume_mm3": 7560.623406907392,
+            "faces": 29,
+            "bounds_cm": [
+              [
+                1.6500000000000001,
+                -2.1,
+                1.2344
+              ],
+              [
+                3.99,
+                2.1,
+                3.1344000000000003
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "筆:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "ç­_åç§",
+            "volume_mm3": 8299.040593233478,
+            "faces": 3,
+            "bounds_cm": [
+              [
+                2.3899999999999997,
+                -0.5,
+                -2.2656
+              ],
+              [
+                3.3899999999999997,
+                0.5,
+                10.834400000000002
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "SC616C_1kg_Fusion:1",
+        "visible": true,
+        "transform": [
+          2.2204460492502263e-16,
+          -1.2212453270876509e-15,
+          -1.000000000000001,
+          6.35,
+          -1.0000000000000002,
+          3.622102617839579e-15,
+          -2.2204460492502786e-16,
+          3.7462946202360055,
+          3.622102617839576e-15,
+          1.0000000000000013,
+          -1.235123114895508e-15,
+          3.199999999999995,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": []
+      },
+      {
+        "name": "Brush_Load_Carrier:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "Brush_Load_Carrier_M3_Captive_Nuts_FDM",
+            "volume_mm3": 6331.074693360861,
+            "faces": 53,
+            "bounds_cm": [
+              [
+                2.4,
+                -2.323705379763991,
+                1.25
+              ],
+              [
+                6.6,
+                2.8762946202360085,
+                3.0500000000000003
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Brush_Cartridge_15mm:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "Brush_Cartridge_15mm_FDM",
+            "volume_mm3": 8531.709330455738,
+            "faces": 35,
+            "bounds_cm": [
+              [
+                3.5,
+                -2.3237053798,
+                0.8500000000000001
+              ],
+              [
+                6.5,
+                2.8762946202000004,
+                4.45
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "SC616C_Slide_In_Top_Cover:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "SC616C_Slide_In_Top_Cover_FDM",
+            "volume_mm3": 2651.583812865026,
+            "faces": 10,
+            "bounds_cm": [
+              [
+                1.8,
+                1.5962946202360069,
+                3.05
+              ],
+              [
+                4.2,
+                4.1562946202360065,
+                3.54
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Wrist_Roll_Follower_SO101 v1:3",
+        "visible": false,
+        "transform": [
+          0.9999999999999936,
+          5.04811271609238e-44,
+          4.116867849121931e-30,
+          -0.19999999999999996,
+          -7.138335960180981e-44,
+          -0.9999999999999939,
+          1.340594302234876e-14,
+          0.022196673926735244,
+          6.113672015462816e-30,
+          -1.3405943022348844e-14,
+          -1.0000000000000002,
+          3.2777638160534086,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "ボディ1",
+            "volume_mm3": 0.0,
+            "faces": 0,
+            "bounds_cm": [
+              [
+                0.2999999999999968,
+                -0.477803326073255,
+                2.777763816053402
+              ],
+              [
+                0.2999999999999968,
+                -0.477803326073255,
+                2.777763816053402
+              ]
+            ]
+          },
+          {
+            "name": "ボディ2",
+            "volume_mm3": 40239.62780957502,
+            "faces": 186,
+            "bounds_cm": [
+              [
+                -2.6400293546521256,
+                -2.7258818781379013,
+                -2.2498261839466287
+              ],
+              [
+                1.1662748787941348,
+                2.474118121862155,
+                4.270173748998213
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Brush_Load_Carrier_Centered:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "Centered_Carrier_M3_Captive_Nuts_FDM",
+            "volume_mm3": 8457.924935501684,
+            "faces": 55,
+            "bounds_cm": [
+              [
+                1.4000000000000004,
+                -2.3237053798,
+                -2.25
+              ],
+              [
+                4.6,
+                2.8762946202000004,
+                3.0500000000000007
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Brush_Cartridge_Centered_15mm:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "Centered_15mm_Hot_Glue_Cartridge_With_Stop",
+            "volume_mm3": 8933.833190115252,
+            "faces": 36,
+            "bounds_cm": [
+              [
+                1.5,
+                -2.3237053798,
+                -2.65
+              ],
+              [
+                4.5,
+                2.8762946202000004,
+                0.9500000000000002
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "部品１_V5可動域改善:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "V5_one_piece_yoke_M3_clearance_slide_socket",
+            "volume_mm3": 29688.678172181015,
+            "faces": 71,
+            "bounds_cm": [
+              [
+                -1.5,
+                -3.25,
+                2.0999999999999996
+              ],
+              [
+                8.52,
+                4.156294620236,
+                5.550000000000001
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Brush_Load_Carrier_Compact_V5:1",
+        "visible": true,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          -1.6,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "V5_compact_carrier_two_M3_nuts",
+            "volume_mm3": 6573.724935501749,
+            "faces": 49,
+            "bounds_cm": [
+              [
+                4.6,
+                -2.3237053798,
+                1.25
+              ],
+              [
+                7.800000000000001,
+                2.8762946202000004,
+                4.550000000000001
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Brush_Cartridge_Symmetric_15mm_V5:1",
+        "visible": true,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          -1.6,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "V5_XY_mirror_symmetric_hot_glue_cartridge",
+            "volume_mm3": 6846.800123811279,
+            "faces": 36,
+            "bounds_cm": [
+              [
+                4.699999999999999,
+                -2.3237053798,
+                0.85
+              ],
+              [
+                7.700000000000001,
+                2.8762946202000004,
+                3.2500000000000004
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Wrist_Roll_Clearance_V5:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "V5_wrist_with_concentric_pad_relief",
+            "volume_mm3": 3.3316342766821095e-05,
+            "faces": 5,
+            "bounds_cm": [
+              [
+                -2.03990459310043,
+                1.6382390339770168,
+                -0.7500000111758709
+              ],
+              [
+                -2.0354622218727383,
+                1.6910447386932341,
+                -0.749770505676092
+              ]
+            ]
+          },
+          {
+            "name": "V5_wrist_with_concentric_pad_relief (1)",
+            "volume_mm3": 22072.992902446946,
+            "faces": 176,
+            "bounds_cm": [
+              [
+                -2.6400293546521416,
+                -2.7258818781378933,
+                -0.44977050567609206
+              ],
+              [
+                1.1662748787941442,
+                2.4741181218621184,
+                4.270173748998198
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "部品１_V5_短縮補強_16mm:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "V6_short_deep_rails_closed_tie_supported_socket",
+            "volume_mm3": 34383.20028727208,
+            "faces": 85,
+            "bounds_cm": [
+              [
+                -1.5,
+                -3.65,
+                2.1
+              ],
+              [
+                6.92,
+                4.156294620236,
+                4.95
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "部品１_V8_元取付形状保持:1",
+        "visible": true,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "ボディ1",
+            "volume_mm3": 38550.50206478457,
+            "faces": 100,
+            "bounds_cm": [
+              [
+                -1.5,
+                -3.6499999999999995,
+                2.1
+              ],
+              [
+                6.92,
+                4.156294620236,
+                4.95
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Wrist_Roll_Clearance_V8_元取付対応:1",
+        "visible": true,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "Wrist_V8_latest_user_edits_plus_shallow_annular_reliefs",
+            "volume_mm3": 22025.213051512656,
+            "faces": 182,
+            "bounds_cm": [
+              [
+                -2.6400293546521416,
+                -2.7258818781378933,
+                -0.44977050567609206
+              ],
+              [
+                1.1662748787941442,
+                2.4741181218621184,
+                4.270173748998198
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "source_fingerprint_after": {
+    "modified": false,
+    "version": 26,
+    "timeline": [
+      520,
+      520
+    ],
+    "parameters": [
+      [
+        "pivot_to_tip",
+        "36.7220 mm"
+      ],
+      [
+        "brush_dia",
+        "15 mm"
+      ],
+      [
+        "brush_grip_len",
+        "16 mm"
+      ],
+      [
+        "bristle_len",
+        "38 mm"
+      ],
+      [
+        "horn_dia",
+        "20 mm"
+      ],
+      [
+        "horn_screw_pcd",
+        "14 mm"
+      ],
+      [
+        "wall",
+        "2.4 mm"
+      ],
+      [
+        "tilt_min",
+        "-10 deg"
+      ],
+      [
+        "tilt_max",
+        "100 deg"
+      ],
+      [
+        "pivot_lateral",
+        "pivot_to_tip * sin(entry_angle)"
+      ],
+      [
+        "pivot_axial",
+        "sqrt(pivot_to_tip ^ 2 - pivot_lateral ^ 2)"
+      ],
+      [
+        "horn_face_y",
+        "jaw_inner_drive"
+      ],
+      [
+        "bearing_face_y",
+        "jaw_inner_pass"
+      ],
+      [
+        "horn_recess",
+        "1.5 mm"
+      ],
+      [
+        "arm_w",
+        "12 mm"
+      ],
+      [
+        "pin_dia",
+        "3.9 mm"
+      ],
+      [
+        "clamp_slit",
+        "1.6 mm"
+      ],
+      [
+        "screw_pitch",
+        "16 mm"
+      ],
+      [
+        "jaw_outer_drive",
+        "-24.0 mm"
+      ],
+      [
+        "jaw_cbore_drive",
+        "-22.4 mm"
+      ],
+      [
+        "jaw_mate_drive",
+        "-18.9 mm"
+      ],
+      [
+        "jaw_inner_drive",
+        "-17.4 mm"
+      ],
+      [
+        "jaw_inner_pass",
+        "16.0 mm"
+      ],
+      [
+        "jaw_mate_pass",
+        "17.5 mm"
+      ],
+      [
+        "jaw_cbore_pass",
+        "21.0 mm"
+      ],
+      [
+        "jaw_outer_pass",
+        "24.0 mm"
+      ],
+      [
+        "arm_dia",
+        "20.0 mm"
+      ],
+      [
+        "horn_screw_dia",
+        "3.2 mm"
+      ],
+      [
+        "horn_cbore_dia",
+        "5.4 mm"
+      ],
+      [
+        "entry_angle",
+        "51.9055 deg"
+      ],
+      [
+        "brush_total_length",
+        "56 mm"
+      ],
+      [
+        "brush_mass",
+        "8 g"
+      ],
+      [
+        "yoke_index",
+        "0 deg"
+      ],
+      [
+        "jaw_trim_x",
+        "15.076 mm"
+      ],
+      [
+        "sc_hole_pitch",
+        "7.4 mm"
+      ],
+      [
+        "sc_screw_clearance",
+        "3.4 mm"
+      ],
+      [
+        "sc_mount_thickness",
+        "10 mm"
+      ],
+      [
+        "sc_head_dia",
+        "6.2 mm"
+      ],
+      [
+        "sc_head_depth",
+        "3.2 mm"
+      ],
+      [
+        "sc_brush_axis_x",
+        "50 mm"
+      ],
+      [
+        "sc_brush_axis_y",
+        "2.762946202 mm"
+      ],
+      [
+        "brush_glue_allowance",
+        "1.0 mm"
+      ],
+      [
+        "brush_cartridge_od",
+        "22 mm"
+      ],
+      [
+        "brush_cartridge_id",
+        "brush_dia + brush_glue_allowance"
+      ],
+      [
+        "brush_fit_clearance",
+        "0.6 mm"
+      ],
+      [
+        "brush_receiver_id",
+        "brush_cartridge_od + brush_fit_clearance"
+      ],
+      [
+        "brush_receiver_od",
+        "brush_cartridge_od + 10 mm"
+      ],
+      [
+        "brush_flange_od",
+        "brush_cartridge_od + 8 mm"
+      ],
+      [
+        "brush_sleeve_length",
+        "36 mm"
+      ],
+      [
+        "brush_receiver_thickness",
+        "6 mm"
+      ],
+      [
+        "brush_flange_thickness",
+        "4 mm"
+      ],
+      [
+        "brush_nut_af",
+        "5.8 mm"
+      ],
+      [
+        "brush_nut_depth",
+        "2.6 mm"
+      ],
+      [
+        "brush_guide_dia",
+        "brush_dia + 0.4 mm"
+      ],
+      [
+        "sc_slide_width",
+        "10 mm"
+      ],
+      [
+        "sc_lid_flexure_gap",
+        "1.5 mm"
+      ],
+      [
+        "sc_lid_top",
+        "35.4 mm"
+      ],
+      [
+        "sc_lid_bolt_pitch",
+        "16 mm"
+      ],
+      [
+        "centered_brush_axis_x",
+        "30 mm"
+      ],
+      [
+        "centered_brush_axis_y",
+        "sc_brush_axis_y"
+      ],
+      [
+        "centered_receiver_z",
+        "-22.5 mm"
+      ],
+      [
+        "centered_cartridge_flange_z",
+        "centered_receiver_z - brush_flange_thickness"
+      ],
+      [
+        "centered_brush_stop_z",
+        "7.5 mm"
+      ],
+      [
+        "centered_brush_cap_thickness",
+        "2 mm"
+      ],
+      [
+        "v5_brush_axis_x",
+        "78 mm"
+      ],
+      [
+        "v5_brush_sleeve_length",
+        "24 mm"
+      ],
+      [
+        "v5_cartridge_flange_z",
+        "8.5 mm"
+      ],
+      [
+        "v5_brush_stop_z",
+        "v5_cartridge_flange_z + v5_brush_sleeve_length - 2 mm"
+      ],
+      [
+        "v5_rotary_axis_x",
+        "-2 mm"
+      ],
+      [
+        "v5_rotary_axis_z",
+        "34 mm"
+      ],
+      [
+        "v6_tool_translation_x",
+        "-16 mm"
+      ],
+      [
+        "v6_brush_axis_x",
+        "v5_brush_axis_x + v6_tool_translation_x"
+      ]
+    ],
+    "occurrences": [
+      {
+        "name": "Wrist_Roll_Follower_SO101 v1:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "ボディ1",
+            "volume_mm3": 0.0,
+            "faces": 0,
+            "bounds_cm": [
+              [
+                0.5,
+                0.5,
+                0.5
+              ],
+              [
+                0.5,
+                0.5,
+                0.5
+              ]
+            ]
+          },
+          {
+            "name": "ボディ2",
+            "volume_mm3": 40239.62780957502,
+            "faces": 186,
+            "bounds_cm": [
+              [
+                -2.4400293546521414,
+                -2.45192144793536,
+                -0.9924099329447704
+              ],
+              [
+                1.3662748787941439,
+                2.7480785520646402,
+                5.52759
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "部品１:1",
+        "visible": false,
+        "transform": [
+          0.9999999999999991,
+          -3.2751579226441956e-15,
+          4.3293867896380924e-15,
+          -0.1622628494696552,
+          -1.8318679906315213e-15,
+          -1.0000000000000007,
+          -4.0245584642661915e-16,
+          0.12629462023601076,
+          1.165734175856402e-15,
+          -1.1518563880485997e-15,
+          -1.0,
+          3.3895568113228793,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "SO101_Yoke_SC616C_Slide_In_Base",
+            "volume_mm3": 15190.66848698307,
+            "faces": 114,
+            "bounds_cm": [
+              [
+                -1.162262849469666,
+                -2.173705379764,
+                0.44999999999999174
+              ],
+              [
+                3.70000000000001,
+                4.156294620236017,
+                4.389556811322889
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "STS3215_c:1",
+        "visible": true,
+        "transform": [
+          -2.636779683484746e-16,
+          1.5681900222830336e-15,
+          1.0,
+          -0.20000000000000284,
+          -2.7755575615628997e-16,
+          1.0,
+          -1.5681900222830336e-15,
+          0.10000000000000345,
+          -1.000000000000003,
+          -5.689893001203915e-16,
+          -2.636779683484742e-16,
+          3.4000000000000052,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": []
+      },
+      {
+        "name": "クランプ:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "ç­ã¯ã©ã³ã",
+            "volume_mm3": 7560.623406907392,
+            "faces": 29,
+            "bounds_cm": [
+              [
+                1.6500000000000001,
+                -2.1,
+                1.2344
+              ],
+              [
+                3.99,
+                2.1,
+                3.1344000000000003
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "筆:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "ç­_åç§",
+            "volume_mm3": 8299.040593233478,
+            "faces": 3,
+            "bounds_cm": [
+              [
+                2.3899999999999997,
+                -0.5,
+                -2.2656
+              ],
+              [
+                3.3899999999999997,
+                0.5,
+                10.834400000000002
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "SC616C_1kg_Fusion:1",
+        "visible": true,
+        "transform": [
+          2.2204460492502263e-16,
+          -1.2212453270876509e-15,
+          -1.000000000000001,
+          6.35,
+          -1.0000000000000002,
+          3.622102617839579e-15,
+          -2.2204460492502786e-16,
+          3.7462946202360055,
+          3.622102617839576e-15,
+          1.0000000000000013,
+          -1.235123114895508e-15,
+          3.199999999999995,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": []
+      },
+      {
+        "name": "Brush_Load_Carrier:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "Brush_Load_Carrier_M3_Captive_Nuts_FDM",
+            "volume_mm3": 6331.074693360861,
+            "faces": 53,
+            "bounds_cm": [
+              [
+                2.4,
+                -2.323705379763991,
+                1.25
+              ],
+              [
+                6.6,
+                2.8762946202360085,
+                3.0500000000000003
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Brush_Cartridge_15mm:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "Brush_Cartridge_15mm_FDM",
+            "volume_mm3": 8531.709330455738,
+            "faces": 35,
+            "bounds_cm": [
+              [
+                3.5,
+                -2.3237053798,
+                0.8500000000000001
+              ],
+              [
+                6.5,
+                2.8762946202000004,
+                4.45
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "SC616C_Slide_In_Top_Cover:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "SC616C_Slide_In_Top_Cover_FDM",
+            "volume_mm3": 2651.583812865026,
+            "faces": 10,
+            "bounds_cm": [
+              [
+                1.8,
+                1.5962946202360069,
+                3.05
+              ],
+              [
+                4.2,
+                4.1562946202360065,
+                3.54
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Wrist_Roll_Follower_SO101 v1:3",
+        "visible": false,
+        "transform": [
+          0.9999999999999936,
+          5.04811271609238e-44,
+          4.116867849121931e-30,
+          -0.19999999999999996,
+          -7.138335960180981e-44,
+          -0.9999999999999939,
+          1.340594302234876e-14,
+          0.022196673926735244,
+          6.113672015462816e-30,
+          -1.3405943022348844e-14,
+          -1.0000000000000002,
+          3.2777638160534086,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "ボディ1",
+            "volume_mm3": 0.0,
+            "faces": 0,
+            "bounds_cm": [
+              [
+                0.2999999999999968,
+                -0.477803326073255,
+                2.777763816053402
+              ],
+              [
+                0.2999999999999968,
+                -0.477803326073255,
+                2.777763816053402
+              ]
+            ]
+          },
+          {
+            "name": "ボディ2",
+            "volume_mm3": 40239.62780957502,
+            "faces": 186,
+            "bounds_cm": [
+              [
+                -2.6400293546521256,
+                -2.7258818781379013,
+                -2.2498261839466287
+              ],
+              [
+                1.1662748787941348,
+                2.474118121862155,
+                4.270173748998213
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Brush_Load_Carrier_Centered:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "Centered_Carrier_M3_Captive_Nuts_FDM",
+            "volume_mm3": 8457.924935501684,
+            "faces": 55,
+            "bounds_cm": [
+              [
+                1.4000000000000004,
+                -2.3237053798,
+                -2.25
+              ],
+              [
+                4.6,
+                2.8762946202000004,
+                3.0500000000000007
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Brush_Cartridge_Centered_15mm:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "Centered_15mm_Hot_Glue_Cartridge_With_Stop",
+            "volume_mm3": 8933.833190115252,
+            "faces": 36,
+            "bounds_cm": [
+              [
+                1.5,
+                -2.3237053798,
+                -2.65
+              ],
+              [
+                4.5,
+                2.8762946202000004,
+                0.9500000000000002
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "部品１_V5可動域改善:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "V5_one_piece_yoke_M3_clearance_slide_socket",
+            "volume_mm3": 29688.678172181015,
+            "faces": 71,
+            "bounds_cm": [
+              [
+                -1.5,
+                -3.25,
+                2.0999999999999996
+              ],
+              [
+                8.52,
+                4.156294620236,
+                5.550000000000001
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Brush_Load_Carrier_Compact_V5:1",
+        "visible": true,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          -1.6,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "V5_compact_carrier_two_M3_nuts",
+            "volume_mm3": 6573.724935501749,
+            "faces": 49,
+            "bounds_cm": [
+              [
+                4.6,
+                -2.3237053798,
+                1.25
+              ],
+              [
+                7.800000000000001,
+                2.8762946202000004,
+                4.550000000000001
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Brush_Cartridge_Symmetric_15mm_V5:1",
+        "visible": true,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          -1.6,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "V5_XY_mirror_symmetric_hot_glue_cartridge",
+            "volume_mm3": 6846.800123811279,
+            "faces": 36,
+            "bounds_cm": [
+              [
+                4.699999999999999,
+                -2.3237053798,
+                0.85
+              ],
+              [
+                7.700000000000001,
+                2.8762946202000004,
+                3.2500000000000004
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Wrist_Roll_Clearance_V5:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "V5_wrist_with_concentric_pad_relief",
+            "volume_mm3": 3.3316342766821095e-05,
+            "faces": 5,
+            "bounds_cm": [
+              [
+                -2.03990459310043,
+                1.6382390339770168,
+                -0.7500000111758709
+              ],
+              [
+                -2.0354622218727383,
+                1.6910447386932341,
+                -0.749770505676092
+              ]
+            ]
+          },
+          {
+            "name": "V5_wrist_with_concentric_pad_relief (1)",
+            "volume_mm3": 22072.992902446946,
+            "faces": 176,
+            "bounds_cm": [
+              [
+                -2.6400293546521416,
+                -2.7258818781378933,
+                -0.44977050567609206
+              ],
+              [
+                1.1662748787941442,
+                2.4741181218621184,
+                4.270173748998198
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "部品１_V5_短縮補強_16mm:1",
+        "visible": false,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "V6_short_deep_rails_closed_tie_supported_socket",
+            "volume_mm3": 34383.20028727208,
+            "faces": 85,
+            "bounds_cm": [
+              [
+                -1.5,
+                -3.65,
+                2.1
+              ],
+              [
+                6.92,
+                4.156294620236,
+                4.95
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "部品１_V8_元取付形状保持:1",
+        "visible": true,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "ボディ1",
+            "volume_mm3": 38550.50206478457,
+            "faces": 100,
+            "bounds_cm": [
+              [
+                -1.5,
+                -3.6499999999999995,
+                2.1
+              ],
+              [
+                6.92,
+                4.156294620236,
+                4.95
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Wrist_Roll_Clearance_V8_元取付対応:1",
+        "visible": true,
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bodies": [
+          {
+            "name": "Wrist_V8_latest_user_edits_plus_shallow_annular_reliefs",
+            "volume_mm3": 22025.213051512656,
+            "faces": 182,
+            "bounds_cm": [
+              [
+                -2.6400293546521416,
+                -2.7258818781378933,
+                -0.44977050567609206
+              ],
+              [
+                1.1662748787941442,
+                2.4741181218621184,
+                4.270173748998198
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "generative_outcome_adopted": false,
+  "print_orientation_not_yet_tested": true,
+  "physical_print_or_load_test_performed": false
+}

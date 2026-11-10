@@ -1,0 +1,39 @@
+{
+  "fixed_holes_world_mm": [
+    [
+      30,
+      26.962946202360094,
+      24.5
+    ],
+    [
+      30,
+      34.36294620236009,
+      24.5
+    ]
+  ],
+  "future_brush_axis_mm": [
+    30,
+    1.2629462023600935
+  ],
+  "cell_translation_mm": [
+    5.5,
+    -0.5370537976399066,
+    0
+  ],
+  "rotation_unchanged": true,
+  "mount_thickness_mm": 6,
+  "M3_clearance_mm": 3.4,
+  "head_recess_diameter_mm": 6.2,
+  "head_recess_depth_mm": 3.2,
+  "recommended_screw": "2x M3x8 socket head, 5.2 mm nominal engagement",
+  "support_contact_y_mm": [
+    23.462946202360094,
+    38.462946202360094
+  ],
+  "central_web_side_clearance_mm": 1.5,
+  "body_volume_before_mm3": 10989.765644774594,
+  "body_volume_after_mm3": 12562.820785034331,
+  "timeline_marker": 67,
+  "timeline_count": 98,
+  "future_15mm_brush_to_original_yoke_wall_mm": 2.6126284946963843
+}

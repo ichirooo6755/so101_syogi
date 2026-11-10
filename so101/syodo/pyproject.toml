@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "so101-calligraphy"
+version = "0.5.0"
+description = "CPU-only SO-101 realistic brush calligraphy learning with MuJoCo"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = { text = "MIT" }
+dependencies = [
+  "gymnasium>=1.0,<2",
+  "matplotlib>=3.8,<4",
+  "mujoco>=3.2,<4",
+  "numpy>=1.26,<3",
+  "scipy>=1.11,<2",
+  "fonttools>=4.50,<5",
+  "pillow>=10,<13",
+  "stable-baselines3>=2.4,<3",
+  "svgpathtools>=1.6,<2",
+  "imageio>=2.34,<3",
+  "imageio-ffmpeg>=0.5,<1",
+]
+
+[project.optional-dependencies]
+camera = ["opencv-contrib-python-headless>=4.10,<5"]
+dev = [
+  "pytest>=8,<10",
+]
+
+[project.scripts]
+so101-train = "so101_calligraphy.training.train:main"
+so101-train-education = "so101_calligraphy.training.education:main"
+so101-train-beauty = "so101_calligraphy.training.beauty:main"
+so101-train-professional = "so101_calligraphy.training.professional:main"
+so101-replay = "so101_calligraphy.training.replay:main"
+so101-check-env = "so101_calligraphy.envs.check:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+so101_calligraphy = ["assets/*.xml"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

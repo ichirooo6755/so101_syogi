@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "gussets": [
+    {
+      "rib": 1,
+      "connected_solids_after_tool_relief": 1,
+      "root_connection_volume_mm3": 139.33003798530115,
+      "root_connection_unchanged": true,
+      "sections": [
+        {
+          "Y_mm": 40.01,
+          "original_area_mm2": 45.26651895394708,
+          "after_relief_area_mm2": 45.26651895394708
+        },
+        {
+          "Y_mm": 41.01,
+          "original_area_mm2": 46.877445620084586,
+          "after_relief_area_mm2": 46.877445620084586
+        },
+        {
+          "Y_mm": 42.01,
+          "original_area_mm2": 48.20791106369407,
+          "after_relief_area_mm2": 48.20791106369407
+        },
+        {
+          "Y_mm": 43.01,
+          "original_area_mm2": 49.257915284864644,
+          "after_relief_area_mm2": 49.257915284864644
+        },
+        {
+          "Y_mm": 44.01,
+          "original_area_mm2": 50.02689101400038,
+          "after_relief_area_mm2": 50.02689101400038
+        },
+        {
+          "Y_mm": 45.01,
+          "original_area_mm2": 50.51097559814103,
+          "after_relief_area_mm2": 50.51097559814103
+        }
+      ]
+    },
+    {
+      "rib": 2,
+      "connected_solids_after_tool_relief": 1,
+      "root_connection_volume_mm3": 96.97009738401017,
+      "root_connection_unchanged": true,
+      "sections": [
+        {
+          "Y_mm": 40.01,
+          "original_area_mm2": 33.6182284735626,
+          "after_relief_area_mm2": 33.41734718013196
+        },
+        {
+          "Y_mm": 41.01,
+          "original_area_mm2": 33.42797513505223,
+          "after_relief_area_mm2": 32.311959837212314
+        },
+        {
+          "Y_mm": 42.01,
+          "original_area_mm2": 33.20466465571367,
+          "after_relief_area_mm2": 30.755084954692055
+        },
+        {
+          "Y_mm": 43.01,
+          "original_area_mm2": 32.9482970356649,
+          "after_relief_area_mm2": 29.37854374127608
+        },
+        {
+          "Y_mm": 44.01,
+          "original_area_mm2": 32.6588722749048,
+          "after_relief_area_mm2": 28.23120535908965
+        },
+        {
+          "Y_mm": 45.01,
+          "original_area_mm2": 32.33639037332028,
+          "after_relief_area_mm2": 27.297977085444636
+        }
+      ]
+    }
+  ],
+  "not_a_structural_stress_or_strength_test": true
+}

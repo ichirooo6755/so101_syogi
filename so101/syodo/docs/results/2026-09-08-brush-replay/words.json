@@ -1,0 +1,362 @@
+[
+  {
+    "word": "文字",
+    "run": "runs/hardware-two-character/20260909-010639",
+    "replay": {
+      "model": "mujoco_rigid_holder_three_segment_tuft_v2",
+      "mujoco_version": "3.11.0",
+      "physical_writing_verified": false,
+      "material_calibrated": false,
+      "arm_motion": "prescribed_waypoints_with_large_armature",
+      "material_parameters_source": "bundled_material_hypothesis_with_configured_tuft_length",
+      "ink_model": "existing_force_width_mapping_at_simulated_contact",
+      "parameters": {
+        "timestep_s": 0.001,
+        "sample_period_s": 0.01,
+        "settle_s": 0.5,
+        "stiffness_scale": 1.0,
+        "friction_scale": 1.0,
+        "distributed_contact": true
+      },
+      "brush_total_length_mm": 120.00000000000004,
+      "brush_rigid_length_mm": 80.00000000000001,
+      "brush_tuft_length_mm": 40.00000000000003,
+      "unbent_tip_reference_gap_mm": 1.4304896245381993e-14,
+      "paper_surface_z_m": 0.014444658759796392,
+      "paper_contact_solref": [
+        0.05,
+        1.0
+      ],
+      "brush_joint_stiffness": [
+        0.035,
+        0.035,
+        0.026,
+        0.026,
+        0.018,
+        0.018
+      ],
+      "brush_joint_damping": [
+        0.002,
+        0.002,
+        0.0016,
+        0.0016,
+        0.0012,
+        0.0012
+      ],
+      "metrics": {
+        "duration_s": 94.12500000008538,
+        "intended_contact_s": 35.25000000000855,
+        "actual_contact_s": 23.041000000005177,
+        "missed_contact_s": 15.471999999996864,
+        "missed_contact_fraction": 0.4389219858154074,
+        "unintended_contact_s": 3.2629999999997517,
+        "high_air_s": 47.92099999997902,
+        "high_air_contact_s": 0.0,
+        "high_air_contact_fraction": 0.0,
+        "contact_xy_error_p90_mm": 9.395209093863679,
+        "contact_xy_error_max_mm": 24.722549916328003,
+        "force_peak_n": 10.523151604779878,
+        "contact_impulse_ns": 29.559862276870014,
+        "deflection_max_mm": 30.254002026360627,
+        "bend_max_deg": 26.04918704176875,
+        "prescribed_arm_error_max_deg": 0.010056745846807382,
+        "ink_area_mm2": 1867.0,
+        "unintended_ink_fraction": 0.13183515638245083,
+        "solver_warnings": 0
+      },
+      "limitations": [
+        "stiffness, friction, damping and tip cross section unmeasured",
+        "ink pressure and width are not calibrated for the physical 40 mm tuft",
+        "three capsule bundles and terminal sphere; individual and split hairs omitted",
+        "capsule radius does not reproduce water-dependent hair opening",
+        "no servo lag or closed-loop pressure correction replayed",
+        "no hardware acceptance inferred from simulated contact"
+      ],
+      "word": "文字",
+      "scenario": "nominal",
+      "trace_sha256": "35373a38b0e6c3ab2ed841f3505cf974ac55d1daf56dec71b561c28a962b7ad4",
+      "desk_fingerprint": "3f9a6e1cafd672cd9e26f1a68e1ff51366fd454ad58288d35376c344c706a6e9",
+      "speed": 1.5
+    },
+    "preflight": {
+      "results": [
+        {
+          "word": "文字",
+          "trace": "/Users/sugawaraichirou/Documents/syodo-issue-resolution/runs/hardware-two-character/20260909-010639/trace.npz",
+          "trace_schema": 5,
+          "trace_sha256": "35373a38b0e6c3ab2ed841f3505cf974ac55d1daf56dec71b561c28a962b7ad4",
+          "desk_fingerprint": "3f9a6e1cafd672cd9e26f1a68e1ff51366fd454ad58288d35376c344c706a6e9",
+          "count": 754,
+          "pen_down_count": 282,
+          "measurement_kind": "forward_kinematics_of_commanded_positions",
+          "physical_writing_verified": false,
+          "metrics": {
+            "fk_error_max_mm": 0.08114973698407162,
+            "fk_error_p90_mm": 0.0020397704910975617,
+            "write_fk_error_max_mm": 0.08114973698407162,
+            "write_xy_error_max_mm": 0.08073952243338967,
+            "tilt_max_deg": 5.623851544123252,
+            "joint_step_max_deg": 4.999986489789209,
+            "joint_margin_min_deg": 2.00000000000013,
+            "air_fk_error_max_mm": 0.06342394423923747,
+            "transfer_clearance_min_mm": 59.999219843174096,
+            "last_clearance_mm": 59.99798934427823,
+            "standby_error_mm": 0.023141223986084158
+          },
+          "gates": {
+            "position_within_1mm": true,
+            "upright_within_8deg": true,
+            "step_within_5deg": true,
+            "joint_margin_2deg": true,
+            "air_position_within_1mm": true,
+            "transfer_clearance_60mm": true,
+            "final_lift_60mm": true,
+            "standby_position_within_1mm": true
+          },
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  },
+  {
+    "word": "学習",
+    "run": "runs/hardware-two-character/20260909-010742",
+    "replay": {
+      "model": "mujoco_rigid_holder_three_segment_tuft_v2",
+      "mujoco_version": "3.11.0",
+      "physical_writing_verified": false,
+      "material_calibrated": false,
+      "arm_motion": "prescribed_waypoints_with_large_armature",
+      "material_parameters_source": "bundled_material_hypothesis_with_configured_tuft_length",
+      "ink_model": "existing_force_width_mapping_at_simulated_contact",
+      "parameters": {
+        "timestep_s": 0.001,
+        "sample_period_s": 0.01,
+        "settle_s": 0.5,
+        "stiffness_scale": 1.0,
+        "friction_scale": 1.0,
+        "distributed_contact": true
+      },
+      "brush_total_length_mm": 120.00000000000001,
+      "brush_rigid_length_mm": 79.99999999999997,
+      "brush_tuft_length_mm": 40.00000000000002,
+      "unbent_tip_reference_gap_mm": 2.8609792490763985e-14,
+      "paper_surface_z_m": 0.014444658759796392,
+      "paper_contact_solref": [
+        0.05,
+        1.0
+      ],
+      "brush_joint_stiffness": [
+        0.035,
+        0.035,
+        0.026,
+        0.026,
+        0.018,
+        0.018
+      ],
+      "brush_joint_damping": [
+        0.002,
+        0.002,
+        0.0016,
+        0.0016,
+        0.0012,
+        0.0012
+      ],
+      "metrics": {
+        "duration_s": 161.87500000040887,
+        "intended_contact_s": 46.874999999981455,
+        "actual_contact_s": 36.37900000000592,
+        "missed_contact_s": 18.585999999999732,
+        "missed_contact_fraction": 0.3965013333334845,
+        "unintended_contact_s": 8.090000000000956,
+        "high_air_s": 92.17200000007605,
+        "high_air_contact_s": 0.0,
+        "high_air_contact_fraction": 0.0,
+        "contact_xy_error_p90_mm": 25.828007380746666,
+        "contact_xy_error_max_mm": 27.641084503090337,
+        "force_peak_n": 10.969739370457475,
+        "contact_impulse_ns": 48.995560369940435,
+        "deflection_max_mm": 30.939613507128936,
+        "bend_max_deg": 26.243166487561123,
+        "prescribed_arm_error_max_deg": 0.014934031040145238,
+        "ink_area_mm2": 2841.0,
+        "unintended_ink_fraction": 0.19820847990236296,
+        "solver_warnings": 0
+      },
+      "limitations": [
+        "stiffness, friction, damping and tip cross section unmeasured",
+        "ink pressure and width are not calibrated for the physical 40 mm tuft",
+        "three capsule bundles and terminal sphere; individual and split hairs omitted",
+        "capsule radius does not reproduce water-dependent hair opening",
+        "no servo lag or closed-loop pressure correction replayed",
+        "no hardware acceptance inferred from simulated contact"
+      ],
+      "word": "学習",
+      "scenario": "nominal",
+      "trace_sha256": "3b4b1114e3f05ce0e75b175dbe1a91454ffc7f4b0c6ffc61d4984e16f57dc6c6",
+      "desk_fingerprint": "3f9a6e1cafd672cd9e26f1a68e1ff51366fd454ad58288d35376c344c706a6e9",
+      "speed": 1.5
+    },
+    "preflight": {
+      "results": [
+        {
+          "word": "学習",
+          "trace": "/Users/sugawaraichirou/Documents/syodo-issue-resolution/runs/hardware-two-character/20260909-010742/trace.npz",
+          "trace_schema": 5,
+          "trace_sha256": "3b4b1114e3f05ce0e75b175dbe1a91454ffc7f4b0c6ffc61d4984e16f57dc6c6",
+          "desk_fingerprint": "3f9a6e1cafd672cd9e26f1a68e1ff51366fd454ad58288d35376c344c706a6e9",
+          "count": 1296,
+          "pen_down_count": 375,
+          "measurement_kind": "forward_kinematics_of_commanded_positions",
+          "physical_writing_verified": false,
+          "metrics": {
+            "fk_error_max_mm": 0.08481922535927831,
+            "fk_error_p90_mm": 0.0027321459430325835,
+            "write_fk_error_max_mm": 0.08311254097247632,
+            "write_xy_error_max_mm": 0.08239233094443695,
+            "tilt_max_deg": 5.401924785239664,
+            "joint_step_max_deg": 4.999994259197776,
+            "joint_margin_min_deg": 2.00000000000013,
+            "air_fk_error_max_mm": 0.060613818400618705,
+            "transfer_clearance_min_mm": 59.9990783032296,
+            "last_clearance_mm": 59.99871247969318,
+            "standby_error_mm": 0.023141223986084158
+          },
+          "gates": {
+            "position_within_1mm": true,
+            "upright_within_8deg": true,
+            "step_within_5deg": true,
+            "joint_margin_2deg": true,
+            "air_position_within_1mm": true,
+            "transfer_clearance_60mm": true,
+            "final_lift_60mm": true,
+            "standby_position_within_1mm": true
+          },
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  },
+  {
+    "word": "菅原",
+    "run": "runs/hardware-two-character/20260909-010831",
+    "replay": {
+      "model": "mujoco_rigid_holder_three_segment_tuft_v2",
+      "mujoco_version": "3.11.0",
+      "physical_writing_verified": false,
+      "material_calibrated": false,
+      "arm_motion": "prescribed_waypoints_with_large_armature",
+      "material_parameters_source": "bundled_material_hypothesis_with_configured_tuft_length",
+      "ink_model": "existing_force_width_mapping_at_simulated_contact",
+      "parameters": {
+        "timestep_s": 0.001,
+        "sample_period_s": 0.01,
+        "settle_s": 0.5,
+        "stiffness_scale": 1.0,
+        "friction_scale": 1.0,
+        "distributed_contact": true
+      },
+      "brush_total_length_mm": 120.00000000000003,
+      "brush_rigid_length_mm": 80.0,
+      "brush_tuft_length_mm": 40.00000000000002,
+      "unbent_tip_reference_gap_mm": 6.938893903907228e-15,
+      "paper_surface_z_m": 0.014444658759796392,
+      "paper_contact_solref": [
+        0.05,
+        1.0
+      ],
+      "brush_joint_stiffness": [
+        0.035,
+        0.035,
+        0.026,
+        0.026,
+        0.018,
+        0.018
+      ],
+      "brush_joint_damping": [
+        0.002,
+        0.002,
+        0.0016,
+        0.0016,
+        0.0012,
+        0.0012
+      ],
+      "metrics": {
+        "duration_s": 179.62500000049363,
+        "intended_contact_s": 49.37499999997563,
+        "actual_contact_s": 34.07300000001129,
+        "missed_contact_s": 22.761000000004834,
+        "missed_contact_fraction": 0.4609822784813381,
+        "unintended_contact_s": 7.459000000000826,
+        "high_air_s": 106.401000000144,
+        "high_air_contact_s": 0.0,
+        "high_air_contact_fraction": 0.0,
+        "contact_xy_error_p90_mm": 26.443005652483603,
+        "contact_xy_error_max_mm": 27.91978787683062,
+        "force_peak_n": 11.11769335982598,
+        "contact_impulse_ns": 55.71149480440877,
+        "deflection_max_mm": 31.15572139913883,
+        "bend_max_deg": 25.96726278776842,
+        "prescribed_arm_error_max_deg": 0.010100402173239363,
+        "ink_area_mm2": 2773.0,
+        "unintended_ink_fraction": 0.17312564225237853,
+        "solver_warnings": 0
+      },
+      "limitations": [
+        "stiffness, friction, damping and tip cross section unmeasured",
+        "ink pressure and width are not calibrated for the physical 40 mm tuft",
+        "three capsule bundles and terminal sphere; individual and split hairs omitted",
+        "capsule radius does not reproduce water-dependent hair opening",
+        "no servo lag or closed-loop pressure correction replayed",
+        "no hardware acceptance inferred from simulated contact"
+      ],
+      "word": "菅原",
+      "scenario": "nominal",
+      "trace_sha256": "20c36c784ff4f96be77d4aa979d3ae6698b5438d84d43e060d97a211dada7006",
+      "desk_fingerprint": "3f9a6e1cafd672cd9e26f1a68e1ff51366fd454ad58288d35376c344c706a6e9",
+      "speed": 1.5
+    },
+    "preflight": {
+      "results": [
+        {
+          "word": "菅原",
+          "trace": "/Users/sugawaraichirou/Documents/syodo-issue-resolution/runs/hardware-two-character/20260909-010831/trace.npz",
+          "trace_schema": 5,
+          "trace_sha256": "20c36c784ff4f96be77d4aa979d3ae6698b5438d84d43e060d97a211dada7006",
+          "desk_fingerprint": "3f9a6e1cafd672cd9e26f1a68e1ff51366fd454ad58288d35376c344c706a6e9",
+          "count": 1438,
+          "pen_down_count": 395,
+          "measurement_kind": "forward_kinematics_of_commanded_positions",
+          "physical_writing_verified": false,
+          "metrics": {
+            "fk_error_max_mm": 0.10713343666550888,
+            "fk_error_p90_mm": 0.0021848764200751735,
+            "write_fk_error_max_mm": 0.10713343666550888,
+            "write_xy_error_max_mm": 0.10668857121319847,
+            "tilt_max_deg": 6.83524776975422,
+            "joint_step_max_deg": 4.999999999998218,
+            "joint_margin_min_deg": 2.00000000000013,
+            "air_fk_error_max_mm": 0.057568656705314185,
+            "transfer_clearance_min_mm": 59.99922226571336,
+            "last_clearance_mm": 59.99882845717161,
+            "standby_error_mm": 0.023141223986084158
+          },
+          "gates": {
+            "position_within_1mm": true,
+            "upright_within_8deg": true,
+            "step_within_5deg": true,
+            "joint_margin_2deg": true,
+            "air_position_within_1mm": true,
+            "transfer_clearance_60mm": true,
+            "final_lift_60mm": true,
+            "standby_position_within_1mm": true
+          },
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  }
+]

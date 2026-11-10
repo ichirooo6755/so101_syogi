@@ -1,0 +1,63 @@
+{
+  "fixed_boss_centers_mm": [
+    [
+      22,
+      30.662946202360068
+    ],
+    [
+      38,
+      30.662946202360068
+    ]
+  ],
+  "slide_width_mm": 10,
+  "cell_width_max_mm": 9.3,
+  "cover_start_y_mm": 15.96294620236007,
+  "fixed_top_contact_start_y_mm": 23.462946202360072,
+  "cover_end_y_mm": 41.56294620236007,
+  "cover_top_z_mm": 35.4,
+  "central_underside_z_mm": 32,
+  "fixed_underside_z_mm": 30.5,
+  "central_top_gap_mm": 1.5,
+  "rear_stop_y_mm": 38.56294620236007,
+  "nominal_rear_end_clearance_mm": 0.1,
+  "cover_screws": "2x M3x10, nominal 5.1 mm engagement in printed base",
+  "cartridge_screws": "2x M3x10, 6 mm engagement, metal nuts no longer used",
+  "threads": [
+    {
+      "name": "V3_cover_M3x0p5_modeled",
+      "designation": "M3x0.5",
+      "class": "6H",
+      "is_modeled": true
+    },
+    {
+      "name": "V3_cartridge_M3x0p5_modeled",
+      "designation": "M3x0.5",
+      "class": "6H",
+      "is_modeled": true
+    }
+  ],
+  "sensor_transform": [
+    2.2204460492502263e-16,
+    -1.2212453270876509e-15,
+    -1.000000000000001,
+    3.15,
+    -1.0000000000000002,
+    3.622102617839579e-15,
+    -2.2204460492502786e-16,
+    3.7462946202360063,
+    3.622102617839576e-15,
+    1.0000000000000013,
+    -1.2351231148955076e-15,
+    1.699999999999995,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "part_volumes_mm3": {
+    "部品１:1": 14785.357414337828,
+    "Brush_Load_Carrier:1": 5758.613494540635,
+    "Brush_Cartridge_15mm:1": 8531.709330455738,
+    "SC616C_Slide_In_Top_Cover:1": 2651.583812865026
+  }
+}

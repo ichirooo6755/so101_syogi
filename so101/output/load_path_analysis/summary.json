@@ -1,0 +1,103 @@
+{
+  "verdict": "Screening only: idealized mechanical load path is viable; electrical accuracy is not validated",
+  "source_unchanged": true,
+  "live_snapshot_match": {
+    "base": true,
+    "carrier": true,
+    "cartridge": true,
+    "sensor": true
+  },
+  "mesh_comparisons": [
+    {
+      "case": "normal_1N",
+      "coarse_max_mm": 0.013874835270676358,
+      "fine_max_mm": 0.015674456907101078,
+      "refined_max_mm": 0.017492244642475122,
+      "coarse_to_fine_relative_change": 0.11481237577101813,
+      "fine_to_refined_relative_change": 0.10391963824700032
+    },
+    {
+      "case": "normal_5N",
+      "coarse_max_mm": 0.069374176353382,
+      "fine_max_mm": 0.0783722845355057,
+      "refined_max_mm": 0.08746122321237558,
+      "coarse_to_fine_relative_change": 0.11481237577101894,
+      "fine_to_refined_relative_change": 0.10391963824699652
+    },
+    {
+      "case": "side_X_0p5N",
+      "coarse_max_mm": 0.02587123262481364,
+      "fine_max_mm": 0.028785249116190986,
+      "refined_max_mm": 0.030992342293004342,
+      "coarse_to_fine_relative_change": 0.1012329780303442,
+      "fine_to_refined_relative_change": 0.0712141456088508
+    },
+    {
+      "case": "side_Y_0p5N",
+      "coarse_max_mm": 0.007050463333947447,
+      "fine_max_mm": 0.007755935898196826,
+      "refined_max_mm": 0.008212662059345977,
+      "coarse_to_fine_relative_change": 0.09095905039821105,
+      "fine_to_refined_relative_change": 0.05561243818980693
+    }
+  ],
+  "gap_checks_rigid_base": [
+    {
+      "case": "normal_1N",
+      "remaining_gap_lower_bounds_mm": {
+        "base_to_carrier": 1.9826191091150485,
+        "base_to_cartridge": 2.810934880103525,
+        "base_to_flexure": 1.4960130837496541,
+        "carrier_to_flexure": 0.47863219286456743
+      }
+    },
+    {
+      "case": "normal_5N",
+      "remaining_gap_lower_bounds_mm": {
+        "base_to_carrier": 1.9130955455752425,
+        "base_to_cartridge": 2.7409659015336247,
+        "base_to_flexure": 1.4800654187480076,
+        "carrier_to_flexure": 0.3931609643231151
+      }
+    },
+    {
+      "case": "side_X_0p5N",
+      "remaining_gap_lower_bounds_mm": {
+        "base_to_carrier": 1.9713633685971534,
+        "base_to_cartridge": 2.7974347824529957,
+        "base_to_flexure": 1.497853327343447,
+        "carrier_to_flexure": 0.46921669594046517
+      }
+    },
+    {
+      "case": "side_Y_0p5N",
+      "remaining_gap_lower_bounds_mm": {
+        "base_to_carrier": 1.9925563004764728,
+        "base_to_cartridge": 2.8202144626866543,
+        "base_to_flexure": 1.4977802762704437,
+        "carrier_to_flexure": 0.49033657674678144
+      }
+    }
+  ],
+  "combined_5N_Z_plus_0p5N_X_max_displacement_upper_bound_mm": 0.11845356550537992,
+  "combined_carrier_to_flexure_gap_lower_bound_mm": 0.3623776602636497,
+  "force_and_moment_balance_checked": true,
+  "actual_gauge_or_bridge_output_simulated": false,
+  "mesh_convergence_certified": false,
+  "force_transfer_efficiency_independently_validated": false,
+  "mesh_maximum_displacement_change_below_10_percent": false,
+  "software": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "gmsh": "4.15.2",
+    "scikit-fem": "12.0.2",
+    "meshio": "5.3.5",
+    "matplotlib": "3.11.2"
+  },
+  "snapshot_step_sha256": {
+    "base": "75ff8da3458a2c3d5c4b4ce401f3ceea3224c555e855c9c5a68a261117b4eeee",
+    "carrier": "529d82dbdaf7ce6c9b2eb071b1702d18ce72ddb6f3df92a4e3ef6f4953b39960",
+    "cartridge": "c73d28bcc1103f1a9cc296f3906e2db160e1bd7aa84353068d4fc8bba7be9b06",
+    "sensor": "e3daaa65d5c705ff6741ac229c5240cee4413bf0adf636c26af3b4d843fdd90b"
+  }
+}

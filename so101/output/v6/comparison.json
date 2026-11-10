@@ -1,0 +1,222 @@
+{
+  "source": "Independent local FEA of actual Fusion-exported BRep solids, NOT Fusion cloud solver results",
+  "printed_E_MPa": 1500,
+  "printed_nu": 0.35,
+  "approx_sensor_E_MPa": 69000,
+  "boundary": "Both servo-horn mating faces fixed; real touching interfaces ideally bonded",
+  "brush_total_length_mm": 82.5,
+  "brush_stop_z_mm": 30.5,
+  "brush_tip_z_mm": -52,
+  "user_allows_brush_trimming": true,
+  "reference_loads_are_assumed_test_cases": true,
+  "base_length_reduction_mm": 16,
+  "rail_span_change_mm": [
+    74,
+    56
+  ],
+  "base_volume_change_mm3": [
+    29688.678172181015,
+    34383.20028727208
+  ],
+  "native_Fusion_base_matches_offline_candidate": true,
+  "cases": [
+    {
+      "case": "normal_6N",
+      "force_N": [
+        0.0,
+        0.0,
+        6.0
+      ],
+      "additional_torque_Nmm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "V5_base_max_displacement_mm": 0.23542192754991842,
+      "V6_base_max_displacement_mm": 0.09292040317447302,
+      "base_deflection_reduction_fraction": 0.6053026829679221,
+      "V5_assembly_max_displacement_mm": 0.6532208788181504,
+      "V6_assembly_max_displacement_mm": 0.26086106736635584,
+      "V5_base_peak_von_mises_MPa": 7.876235138519753,
+      "V6_base_peak_von_mises_MPa": 4.415755008691859,
+      "V6_equilibrium_residual_N": 3.45097378618118e-10
+    },
+    {
+      "case": "normal_6N_side_X_0p5N",
+      "force_N": [
+        0.5,
+        0.0,
+        6.0
+      ],
+      "additional_torque_Nmm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "V5_base_max_displacement_mm": 0.2496750627944715,
+      "V6_base_max_displacement_mm": 0.10410584101158818,
+      "base_deflection_reduction_fraction": 0.5830346857776243,
+      "V5_assembly_max_displacement_mm": 0.6781967824021073,
+      "V6_assembly_max_displacement_mm": 0.28234110773164656,
+      "V5_base_peak_von_mises_MPa": 7.059617565625058,
+      "V6_base_peak_von_mises_MPa": 4.519648754543168,
+      "V6_equilibrium_residual_N": 3.3233929300598474e-10
+    },
+    {
+      "case": "normal_6N_side_X_m0p5N",
+      "force_N": [
+        -0.5,
+        0.0,
+        6.0
+      ],
+      "additional_torque_Nmm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "V5_base_max_displacement_mm": 0.2274921777940496,
+      "V6_base_max_displacement_mm": 0.08757267197751066,
+      "base_deflection_reduction_fraction": 0.6150519423274814,
+      "V5_assembly_max_displacement_mm": 0.6457275564035473,
+      "V6_assembly_max_displacement_mm": 0.26527877523151366,
+      "V5_base_peak_von_mises_MPa": 8.698136300700936,
+      "V6_base_peak_von_mises_MPa": 4.719324713439306,
+      "V6_equilibrium_residual_N": 3.66431075596058e-10
+    },
+    {
+      "case": "normal_6N_side_Y_0p5N",
+      "force_N": [
+        0.0,
+        0.5,
+        6.0
+      ],
+      "additional_torque_Nmm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "V5_base_max_displacement_mm": 0.2134956076119378,
+      "V6_base_max_displacement_mm": 0.09053436565180902,
+      "base_deflection_reduction_fraction": 0.5759427247029381,
+      "V5_assembly_max_displacement_mm": 0.46343675797796285,
+      "V6_assembly_max_displacement_mm": 0.18903290043766563,
+      "V5_base_peak_von_mises_MPa": 5.766081579291667,
+      "V6_base_peak_von_mises_MPa": 3.4808739029187885,
+      "V6_equilibrium_residual_N": 2.1811845833590305e-10
+    },
+    {
+      "case": "normal_6N_side_Y_m0p5N",
+      "force_N": [
+        0.0,
+        -0.5,
+        6.0
+      ],
+      "additional_torque_Nmm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "V5_base_max_displacement_mm": 0.29698470955819734,
+      "V6_base_max_displacement_mm": 0.1041620094411911,
+      "base_deflection_reduction_fraction": 0.6492681067784756,
+      "V5_assembly_max_displacement_mm": 0.8628834258557941,
+      "V6_assembly_max_displacement_mm": 0.3379572542921063,
+      "V5_base_peak_von_mises_MPa": 9.987459388383243,
+      "V6_base_peak_von_mises_MPa": 5.352525771947818,
+      "V6_equilibrium_residual_N": 4.767184865524323e-10
+    },
+    {
+      "case": "normal_6N_twist_Z_10Nmm",
+      "force_N": [
+        0.0,
+        0.0,
+        6.0
+      ],
+      "additional_torque_Nmm": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "V5_base_max_displacement_mm": 0.22823419579093496,
+      "V6_base_max_displacement_mm": 0.09458807843043746,
+      "base_deflection_reduction_fraction": 0.5855657032345793,
+      "V5_assembly_max_displacement_mm": 0.644773316331856,
+      "V6_assembly_max_displacement_mm": 0.2588849711988246,
+      "V5_base_peak_von_mises_MPa": 7.573797135601819,
+      "V6_base_peak_von_mises_MPa": 4.418131860191445,
+      "V6_equilibrium_residual_N": 3.515924005128692e-10
+    },
+    {
+      "case": "normal_6N_twist_Z_m10Nmm",
+      "force_N": [
+        0.0,
+        0.0,
+        6.0
+      ],
+      "additional_torque_Nmm": [
+        0.0,
+        0.0,
+        -10.0
+      ],
+      "V5_base_max_displacement_mm": 0.24355328972121806,
+      "V6_base_max_displacement_mm": 0.09223031886015734,
+      "base_deflection_reduction_fraction": 0.6213135984912038,
+      "V5_assembly_max_displacement_mm": 0.6634788724072123,
+      "V6_assembly_max_displacement_mm": 0.263723500480504,
+      "V5_base_peak_von_mises_MPa": 8.196939943498045,
+      "V6_base_peak_von_mises_MPa": 4.420858878174482,
+      "V6_equilibrium_residual_N": 3.422940588735131e-10
+    },
+    {
+      "case": "combined_6N_X0p5_Y0p5_twist_Z_10Nmm",
+      "force_N": [
+        0.5,
+        0.5,
+        6.0
+      ],
+      "additional_torque_Nmm": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "V5_base_max_displacement_mm": 0.2551241896405937,
+      "V6_base_max_displacement_mm": 0.10347922037730067,
+      "base_deflection_reduction_fraction": 0.5943966719773728,
+      "V5_assembly_max_displacement_mm": 0.5178697013403045,
+      "V6_assembly_max_displacement_mm": 0.22503122690884436,
+      "V5_base_peak_von_mises_MPa": 4.770434903853249,
+      "V6_base_peak_von_mises_MPa": 3.595410064509012,
+      "V6_equilibrium_residual_N": 2.3604123622912795e-10
+    }
+  ],
+  "mesh_sensitivity": [
+    {
+      "version": "V5",
+      "coarse_base_u_mm": 0.2036340728465345,
+      "fine_base_u_mm": 0.23542192754991842,
+      "relative_change_from_coarse": 0.15610282826951227,
+      "fine_nodes": 74893,
+      "fine_tetrahedra": 339908
+    },
+    {
+      "version": "V6",
+      "coarse_base_u_mm": 0.08569758612531196,
+      "fine_base_u_mm": 0.09292040317447302,
+      "relative_change_from_coarse": 0.08428261956643013,
+      "fine_nodes": 77698,
+      "fine_tetrahedra": 353001
+    }
+  ],
+  "mesh_convergence_certified": false,
+  "limitations": [
+    "First-order tetrahedra are mesh-sensitive; compare trends, not certified absolute values",
+    "No layer anisotropy, infill, creep, temperature, bolt preload, slip, contact separation or hot-glue compliance",
+    "Servo and user-cut wrist compliance excluded by clamped horn boundary",
+    "Brush treated as a rigid load application, not an elastic brush model",
+    "Approximate sensor solid has no measured gauges, bridge, adhesive, resin or electrical cross-sensitivity",
+    "Force equilibrium through sensor is not a validation of electrical accuracy"
+  ],
+  "generative_design_used": false,
+  "FDM_strength_certified": false,
+  "electrical_output_validated": false
+}

@@ -1,0 +1,594 @@
+[
+  {
+    "dx_mm": 45,
+    "dz_mm": 35,
+    "first_collision_coarse_deg": {
+      "hardware": [
+        null,
+        null
+      ],
+      "with_assumed_brush": [
+        null,
+        null
+      ]
+    },
+    "sweep": [
+      {
+        "angle": -160,
+        "hits": []
+      },
+      {
+        "angle": -150,
+        "hits": []
+      },
+      {
+        "angle": -140,
+        "hits": []
+      },
+      {
+        "angle": -130,
+        "hits": []
+      },
+      {
+        "angle": -120,
+        "hits": []
+      },
+      {
+        "angle": -110,
+        "hits": []
+      },
+      {
+        "angle": -100,
+        "hits": []
+      },
+      {
+        "angle": -90,
+        "hits": []
+      },
+      {
+        "angle": -80,
+        "hits": []
+      },
+      {
+        "angle": -70,
+        "hits": []
+      },
+      {
+        "angle": -60,
+        "hits": []
+      },
+      {
+        "angle": -50,
+        "hits": []
+      },
+      {
+        "angle": -40,
+        "hits": []
+      },
+      {
+        "angle": -30,
+        "hits": []
+      },
+      {
+        "angle": -20,
+        "hits": []
+      },
+      {
+        "angle": -10,
+        "hits": []
+      },
+      {
+        "angle": 0,
+        "hits": []
+      },
+      {
+        "angle": 10,
+        "hits": []
+      },
+      {
+        "angle": 20,
+        "hits": []
+      },
+      {
+        "angle": 30,
+        "hits": []
+      },
+      {
+        "angle": 40,
+        "hits": []
+      },
+      {
+        "angle": 50,
+        "hits": []
+      },
+      {
+        "angle": 60,
+        "hits": []
+      },
+      {
+        "angle": 70,
+        "hits": []
+      },
+      {
+        "angle": 80,
+        "hits": []
+      },
+      {
+        "angle": 90,
+        "hits": []
+      },
+      {
+        "angle": 100,
+        "hits": []
+      },
+      {
+        "angle": 110,
+        "hits": []
+      },
+      {
+        "angle": 120,
+        "hits": []
+      },
+      {
+        "angle": 130,
+        "hits": []
+      },
+      {
+        "angle": 140,
+        "hits": []
+      },
+      {
+        "angle": 150,
+        "hits": []
+      },
+      {
+        "angle": 160,
+        "hits": []
+      }
+    ]
+  },
+  {
+    "dx_mm": 50,
+    "dz_mm": 35,
+    "first_collision_coarse_deg": {
+      "hardware": [
+        null,
+        null
+      ],
+      "with_assumed_brush": [
+        null,
+        null
+      ]
+    },
+    "sweep": [
+      {
+        "angle": -160,
+        "hits": []
+      },
+      {
+        "angle": -150,
+        "hits": []
+      },
+      {
+        "angle": -140,
+        "hits": []
+      },
+      {
+        "angle": -130,
+        "hits": []
+      },
+      {
+        "angle": -120,
+        "hits": []
+      },
+      {
+        "angle": -110,
+        "hits": []
+      },
+      {
+        "angle": -100,
+        "hits": []
+      },
+      {
+        "angle": -90,
+        "hits": []
+      },
+      {
+        "angle": -80,
+        "hits": []
+      },
+      {
+        "angle": -70,
+        "hits": []
+      },
+      {
+        "angle": -60,
+        "hits": []
+      },
+      {
+        "angle": -50,
+        "hits": []
+      },
+      {
+        "angle": -40,
+        "hits": []
+      },
+      {
+        "angle": -30,
+        "hits": []
+      },
+      {
+        "angle": -20,
+        "hits": []
+      },
+      {
+        "angle": -10,
+        "hits": []
+      },
+      {
+        "angle": 0,
+        "hits": []
+      },
+      {
+        "angle": 10,
+        "hits": []
+      },
+      {
+        "angle": 20,
+        "hits": []
+      },
+      {
+        "angle": 30,
+        "hits": []
+      },
+      {
+        "angle": 40,
+        "hits": []
+      },
+      {
+        "angle": 50,
+        "hits": []
+      },
+      {
+        "angle": 60,
+        "hits": []
+      },
+      {
+        "angle": 70,
+        "hits": []
+      },
+      {
+        "angle": 80,
+        "hits": []
+      },
+      {
+        "angle": 90,
+        "hits": []
+      },
+      {
+        "angle": 100,
+        "hits": []
+      },
+      {
+        "angle": 110,
+        "hits": []
+      },
+      {
+        "angle": 120,
+        "hits": []
+      },
+      {
+        "angle": 130,
+        "hits": []
+      },
+      {
+        "angle": 140,
+        "hits": []
+      },
+      {
+        "angle": 150,
+        "hits": []
+      },
+      {
+        "angle": 160,
+        "hits": []
+      }
+    ]
+  },
+  {
+    "dx_mm": 55,
+    "dz_mm": 35,
+    "first_collision_coarse_deg": {
+      "hardware": [
+        null,
+        null
+      ],
+      "with_assumed_brush": [
+        null,
+        null
+      ]
+    },
+    "sweep": [
+      {
+        "angle": -160,
+        "hits": []
+      },
+      {
+        "angle": -150,
+        "hits": []
+      },
+      {
+        "angle": -140,
+        "hits": []
+      },
+      {
+        "angle": -130,
+        "hits": []
+      },
+      {
+        "angle": -120,
+        "hits": []
+      },
+      {
+        "angle": -110,
+        "hits": []
+      },
+      {
+        "angle": -100,
+        "hits": []
+      },
+      {
+        "angle": -90,
+        "hits": []
+      },
+      {
+        "angle": -80,
+        "hits": []
+      },
+      {
+        "angle": -70,
+        "hits": []
+      },
+      {
+        "angle": -60,
+        "hits": []
+      },
+      {
+        "angle": -50,
+        "hits": []
+      },
+      {
+        "angle": -40,
+        "hits": []
+      },
+      {
+        "angle": -30,
+        "hits": []
+      },
+      {
+        "angle": -20,
+        "hits": []
+      },
+      {
+        "angle": -10,
+        "hits": []
+      },
+      {
+        "angle": 0,
+        "hits": []
+      },
+      {
+        "angle": 10,
+        "hits": []
+      },
+      {
+        "angle": 20,
+        "hits": []
+      },
+      {
+        "angle": 30,
+        "hits": []
+      },
+      {
+        "angle": 40,
+        "hits": []
+      },
+      {
+        "angle": 50,
+        "hits": []
+      },
+      {
+        "angle": 60,
+        "hits": []
+      },
+      {
+        "angle": 70,
+        "hits": []
+      },
+      {
+        "angle": 80,
+        "hits": []
+      },
+      {
+        "angle": 90,
+        "hits": []
+      },
+      {
+        "angle": 100,
+        "hits": []
+      },
+      {
+        "angle": 110,
+        "hits": []
+      },
+      {
+        "angle": 120,
+        "hits": []
+      },
+      {
+        "angle": 130,
+        "hits": []
+      },
+      {
+        "angle": 140,
+        "hits": []
+      },
+      {
+        "angle": 150,
+        "hits": []
+      },
+      {
+        "angle": 160,
+        "hits": []
+      }
+    ]
+  },
+  {
+    "dx_mm": 50,
+    "dz_mm": 0,
+    "first_collision_coarse_deg": {
+      "hardware": [
+        null,
+        null
+      ],
+      "with_assumed_brush": [
+        null,
+        null
+      ]
+    },
+    "sweep": [
+      {
+        "angle": -160,
+        "hits": []
+      },
+      {
+        "angle": -150,
+        "hits": []
+      },
+      {
+        "angle": -140,
+        "hits": []
+      },
+      {
+        "angle": -130,
+        "hits": []
+      },
+      {
+        "angle": -120,
+        "hits": []
+      },
+      {
+        "angle": -110,
+        "hits": []
+      },
+      {
+        "angle": -100,
+        "hits": []
+      },
+      {
+        "angle": -90,
+        "hits": []
+      },
+      {
+        "angle": -80,
+        "hits": []
+      },
+      {
+        "angle": -70,
+        "hits": []
+      },
+      {
+        "angle": -60,
+        "hits": []
+      },
+      {
+        "angle": -50,
+        "hits": []
+      },
+      {
+        "angle": -40,
+        "hits": []
+      },
+      {
+        "angle": -30,
+        "hits": []
+      },
+      {
+        "angle": -20,
+        "hits": []
+      },
+      {
+        "angle": -10,
+        "hits": []
+      },
+      {
+        "angle": 0,
+        "hits": []
+      },
+      {
+        "angle": 10,
+        "hits": []
+      },
+      {
+        "angle": 20,
+        "hits": []
+      },
+      {
+        "angle": 30,
+        "hits": []
+      },
+      {
+        "angle": 40,
+        "hits": []
+      },
+      {
+        "angle": 50,
+        "hits": []
+      },
+      {
+        "angle": 60,
+        "hits": []
+      },
+      {
+        "angle": 70,
+        "hits": []
+      },
+      {
+        "angle": 80,
+        "hits": []
+      },
+      {
+        "angle": 90,
+        "hits": []
+      },
+      {
+        "angle": 100,
+        "hits": []
+      },
+      {
+        "angle": 110,
+        "hits": []
+      },
+      {
+        "angle": 120,
+        "hits": []
+      },
+      {
+        "angle": 130,
+        "hits": []
+      },
+      {
+        "angle": 140,
+        "hits": []
+      },
+      {
+        "angle": 150,
+        "hits": []
+      },
+      {
+        "angle": 160,
+        "hits": []
+      }
+    ]
+  }
+]

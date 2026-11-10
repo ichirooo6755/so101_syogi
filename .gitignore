@@ -8,16 +8,18 @@ __pycache__/
 shogi/.venv*/
 shogi/vendor/
 shogi/build/
+so101/.analysis-venv/
+so101/syodo/.venv/
 
 # 実機の較正・秘密情報
 shogi/app/follower_offsets.json
 shogi/firmware/ShogiCamera/wifi_config.h
+so101/syodo/data/hardware/desk.json
 
-# 生成物・重い試行データ
+# 生成物・重い試行データ (一覧は docs/large-artifacts.md)
 shogi/simulation/runs/
 shogi/simulation/model/shogi_scene_*.xml
-shogi/output/firmware_xiao/
-shogi/output/xiao_camera_firmware.zip
-shogi/output/xiao_mount_package.zip
-shogi/output/camera_xiao/slice/
-shogi/output/upper_arm_extension/slice_*/
+so101/syodo/runs/
+so101/syodo/build/
+*.vtu
+*.msh

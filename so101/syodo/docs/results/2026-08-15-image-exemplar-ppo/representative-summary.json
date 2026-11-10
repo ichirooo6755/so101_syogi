@@ -1,0 +1,60 @@
+{
+  "ablation": "all",
+  "count": 9,
+  "success_rate": 1.0,
+  "mean_beauty_score": 77.47290838216803,
+  "p10_beauty_score": 75.10952752582419,
+  "minimum_beauty_score": 74.92021387941585,
+  "total_drips": 0,
+  "collision_count": 0,
+  "component_means": {
+    "glyph_shape": 47.599832595002916,
+    "stroke_placement": 83.27195917853481,
+    "stroke_length": 68.60551995402324,
+    "stroke_angle": 96.10844264771892,
+    "line_width": 43.893302730801054,
+    "trajectory": 94.5616678992864,
+    "stroke_order": 100.0,
+    "smoothness": 95.52324649406191,
+    "brushwork": 61.16822844583682,
+    "ink_quality": 96.9162775034556,
+    "ink_loading": 72.6846523648016,
+    "drip_control": 100.0,
+    "collision_safety": 100.0,
+    "balance": 91.1166462679486
+  },
+  "component_minimums": {
+    "glyph_shape": 31.323617736359733,
+    "stroke_placement": 55.64995415224576,
+    "stroke_length": 34.424135588961256,
+    "stroke_angle": 90.36033232623699,
+    "line_width": 29.014210546491427,
+    "trajectory": 92.91259753638832,
+    "stroke_order": 100.0,
+    "smoothness": 94.93702001013735,
+    "brushwork": 50.38627990717781,
+    "ink_quality": 91.13293475883778,
+    "ink_loading": 61.305270300131255,
+    "drip_control": 100.0,
+    "collision_safety": 100.0,
+    "balance": 60.511965490376106
+  },
+  "technique_means": {
+    "tome": {
+      "count": 48,
+      "finish": 43.79191522103148,
+      "width": 26.802310723779087
+    },
+    "hane": {
+      "count": 12,
+      "finish": 48.416172173872376,
+      "width": 58.59002880885288
+    },
+    "harai": {
+      "count": 22,
+      "finish": 50.76209899297975,
+      "width": 36.5082046883836
+    }
+  },
+  "robust_score": 76.37152426753164
+}

@@ -1,0 +1,34 @@
+{
+  "head_diameter_mm": 5.5,
+  "shaft_diameter_mm": 3,
+  "shaft_clearance_mm": 3.4,
+  "nut_AF_mm": 5.5,
+  "nut_pocket_AF_mm": 5.8,
+  "full_nominal_nut_engagement_mm": 2.4,
+  "head_stops": [
+    {
+      "name": "M3x8_saddle_-14",
+      "head_pushed_0p1mm_overlap_mm3": 1.467909167389863
+    },
+    {
+      "name": "M3x8_saddle_14",
+      "head_pushed_0p1mm_overlap_mm3": 1.467909167389863
+    },
+    {
+      "name": "M3x8_HX_-19.2",
+      "head_pushed_0p1mm_overlap_mm3": 1.4679091673899294
+    },
+    {
+      "name": "M3x8_HX_19.2",
+      "head_pushed_0p1mm_overlap_mm3": 1.4679091673899294
+    },
+    {
+      "name": "M3x8_level",
+      "head_pushed_0p1mm_overlap_mm3": 1.4679091673898639
+    },
+    {
+      "name": "M3x10_camera",
+      "head_pushed_0p1mm_overlap_mm3": 1.4679091673898554
+    }
+  ]
+}

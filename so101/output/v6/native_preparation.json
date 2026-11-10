@@ -1,0 +1,13 @@
+{
+  "main_saved": true,
+  "main_cloud_version": 23,
+  "native_simulation_document": "so101_V6_短縮補強_筆圧検証",
+  "native_cloud_id": "urn:adsk.wipprod:dm.lineage:Ii9Ej9eXRkyACC42sW6jfw",
+  "parts": {
+    "base": 34383.20028727208,
+    "carrier": 6573.724935501749,
+    "cartridge": 6846.8001238112865,
+    "sensor": 1844.31869791654
+  },
+  "native_solved": false
+}

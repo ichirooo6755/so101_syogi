@@ -1,0 +1,69 @@
+{
+  "source_modified": false,
+  "parts": [
+    {
+      "part": "base",
+      "stem": "01_base_original_mount_V8",
+      "is_solid": true,
+      "lumps": [
+        {
+          "shells": [
+            {
+              "is_void": false,
+              "faces": 92
+            },
+            {
+              "is_void": true,
+              "faces": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part": "carrier",
+      "stem": "02_load_carrier_V5",
+      "is_solid": true,
+      "lumps": [
+        {
+          "shells": [
+            {
+              "is_void": false,
+              "faces": 49
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part": "cartridge",
+      "stem": "03_brush_cartridge_15mm_V5",
+      "is_solid": true,
+      "lumps": [
+        {
+          "shells": [
+            {
+              "is_void": false,
+              "faces": 36
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part": "wrist",
+      "stem": "04_wrist_clearance_V8",
+      "is_solid": true,
+      "lumps": [
+        {
+          "shells": [
+            {
+              "is_void": false,
+              "faces": 182
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
