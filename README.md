@@ -28,6 +28,7 @@ SO-101（SO-ARM101 系 6 軸アーム）で、実物の将棋と囲碁を人と�
 .
 ├── README.md                  # このファイル（全体の引き継ぎ）
 ├── docs/
+│   ├── organization-2026-11-10.md  # 2026-11-10 の整理の経緯・選別判断・検証結果
 │   ├── repo-map.md            # 元フォルダとの対応・上げなかったものと理由
 │   └── board-geometry.md      # 盤面のマス／交点の位置関係（将棋9×9・囲碁19路）
 ├── shogi/                     # 将棋本体（元 ~/Documents/ChatGPT/syogi）
