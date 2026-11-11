@@ -1,0 +1,75 @@
+flowchart TB
+    ui_backend["ブラウザ画面・Python API<br/>対局操作・状態表示・JSON保存"]
+    ui_extension["画面の拡張<br/>ゲーム選択・実機停止・較正設定"]
+    camera["撮影・四隅検出・画像補正<br/>XIAO USB / Wi-Fi / Mac"]
+    image_guard["手・遮蔽・画像鮮度の確認<br/>MediaPipe等は採用候補"]
+    board_tracking["実測較正・盤追従の統合<br/>レンズ・ロボット座標・観測姿勢"]
+    motion_integration["共通搬送・運動学の統合<br/>ChessMotion由来の搬送段階<br/>公式FK・IKとの接続"]
+    simulation["MuJoCoで経路・接触を評価<br/>延長腕・実測寸法・周囲の駒や石へ対応"]
+    lerobot_control["公式LeRobot実機経路の統合<br/>関節較正・速度・追従誤差・通信停止監視"]
+    live_gate["実機送信ゲート<br/>現在は送信停止"]
+    execution_monitor["検証後の実機操作<br/>近接補正・把持・解放を段階ごとに確認"]
+    post_action_verify["観測姿勢へ戻り再撮影<br/>盤・駒台・石を予定状態と照合"]
+    commit_record["一致：着手確定・棋譜保存<br/>次の手番へ"]
+    recovery["不一致：停止・再撮影<br/>途中状態を記録して復旧"]
+    hardware_models["機械・モデルの整備<br/>上腕延長の選定・爪・カメラ取付<br/>CAD・URDF・MuJoCoの寸法統一"]
+    teaching_snapshots["静止4姿勢の教示記録"]
+    continuous_teaching["Leader追従・連続教示<br/>画像・関節角・指令を同期記録"]
+    skill_learning["教示を経路候補へ利用<br/>必要時だけ短い動作をACTで学習"]
+    subgraph shogi["将棋"]
+        direction TB
+        shogi_vision["着手推定<br/>9×9マスの画像差分"]
+        shogi_classifier["駒種・所有者方向・成りの認識<br/>実画像でResNet-18を微調整"]
+        shogi_rules["局面・合法手管理<br/>python-shogi"]
+        shogi_ai["将棋AI<br/>Fairy-Stockfish"]
+        shogi_stand["駒台管理の統合<br/>駒種・空きスロット・実測位置"]
+        shogi_plan["将棋操作計画の拡張<br/>移動・取り・打ち<br/>裏返し台での成り・成駒戻し"]
+    end
+    subgraph go["囲碁"]
+        direction TB
+        go_vision["交点認識<br/>黒石・白石・空"]
+        go_geometry["盤の設定<br/>9路・13路・19路の交点座標"]
+        go_rules["局面・ルール管理<br/>捕獲・コウ・パス・終局"]
+        go_ai["囲碁AI<br/>エンジン未選定"]
+        go_inventory["碁笥・回収先の管理<br/>石の供給位置・アゲハマ置き場"]
+        go_plan["囲碁操作計画<br/>着手交点へ配置<br/>捕獲した複数の石を回収"]
+    end
+    ui_backend --> ui_extension
+    ui_extension --> camera
+    camera --> image_guard
+    image_guard --> board_tracking
+    board_tracking --> shogi_vision
+    board_tracking --> go_vision
+    shogi_vision --> shogi_classifier
+    shogi_classifier --> shogi_rules
+    shogi_rules --> shogi_ai
+    shogi_ai --> shogi_stand
+    shogi_stand --> shogi_plan
+    go_vision --> go_geometry
+    go_geometry --> go_rules
+    go_rules --> go_ai
+    go_ai --> go_inventory
+    go_inventory --> go_plan
+    shogi_plan --> motion_integration
+    go_plan --> motion_integration
+    motion_integration --> simulation
+    simulation --> lerobot_control
+    lerobot_control --> live_gate
+    live_gate --> execution_monitor
+    execution_monitor --> post_action_verify
+    post_action_verify --> commit_record
+    post_action_verify --> recovery
+    hardware_models --> simulation
+    teaching_snapshots --> continuous_teaching
+    continuous_teaching --> skill_learning
+    skill_learning --> motion_integration
+    classDef implemented fill:#ffffff,stroke:#64748b,stroke-width:1.5px;
+    class ui_backend,camera,shogi_vision,shogi_rules,shogi_ai,live_gate,teaching_snapshots implemented;
+    classDef prototype_unintegrated fill:#fff3df,stroke:#d18a21,stroke-width:2px;
+    class board_tracking,shogi_stand,shogi_plan,simulation,lerobot_control,hardware_models prototype_unintegrated;
+    classDef planned fill:#eaf5ff,stroke:#2684c7,stroke-width:2px,stroke-dasharray:5 5;
+    class ui_extension,image_guard,shogi_classifier,go_vision,go_geometry,go_rules,go_ai,go_inventory,go_plan,motion_integration,execution_monitor,post_action_verify,commit_record,recovery,continuous_teaching,skill_learning planned;
+    classDef in_progress fill:#fff8cc,stroke:#b89b18,stroke-width:2px;
+    classDef software_verified fill:#e3f6e8,stroke:#33844a,stroke-width:2px;
+    classDef hardware_verified fill:#bce8c9,stroke:#146b36,stroke-width:2.5px;
+    classDef blocked fill:#ffe2e2,stroke:#c34141,stroke-width:2px;

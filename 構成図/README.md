@@ -1,0 +1,92 @@
+# 構成図
+
+将棋・囲碁の共通構成、現行バックエンド、未実装・未統合の予定をすぐ表示するためのJSONとコマンドです。
+
+**[構成図を見る](構成図.md)** · [SVG](構成図.svg) · [正本JSON](構成図.json) · [呼び出しプロンプト](呼び出しプロンプト.md)
+
+## すぐ表示する
+
+リポジトリのルートで実行します。Python標準ライブラリのみで動き、ロボットへの接続や通信は行いません。
+Macの `python3`、Windowsの `py` でも同じ引数を使えます。
+
+```sh
+python "構成図/show.py" open
+```
+
+`open` は最新JSONでMermaid・SVG・計画内の図を再生成し、通信不要のSVGをブラウザで開きます。
+開いた後に進捗を更新した場合は、再度 `open` するかブラウザを再読み込みします。
+
+チャットに貼れるMermaidだけを出力する場合:
+
+```sh
+python "構成図/show.py" show
+```
+
+表示のみの `show` はファイルを変更せず、毎回正本JSONから色を計算します。
+保存済みの図や過去のチャットを色の正本として使いません。
+
+チャットでの呼び出し文:
+
+> so101_syogi の構成図を表示せよ。構成図/呼び出しプロンプト.md に従い、正本JSONの最新進捗で色を生成せよ。
+
+## 進捗を更新する
+
+状態の正本は `構成図.json` の `modules[].status` と `modules[].progress` です。
+状態と確認根拠を記録すると、色・図・互換JSON・計画内の図を同時に更新します。
+
+```sh
+python "構成図/show.py" list
+python "構成図/show.py" set-status go_vision in_progress --evidence "交点分類の実装を開始。対象コミットまたは作業内容を記載"
+python "構成図/show.py" set-status go_vision software_verified --evidence "対象コミット、試験条件、実行した確認と結果を記載"
+```
+
+上の更新例は操作方法です。現在の囲碁実装が検証済みという意味ではありません。
+確認根拠は必須で、更新日時と前後の状態を履歴に残します。
+
+| status | 表示 | 色 |
+| --- | --- | --- |
+| planned | 未実装・予定 | 青・破線枠 |
+| in_progress | 実装中 | 黄 |
+| prototype_unintegrated | 試作あり・統合待ち | 橙 |
+| implemented | 既存実装 | 白 |
+| software_verified | ソフトウェア検証済み | 薄緑 |
+| hardware_verified | 実機検証済み | 緑 |
+| blocked | 課題で停止 | 赤 |
+
+色はJSONの `status_definitions[].style` に従います。実機送信の停止と作業進捗は別管理で、
+状態更新コマンドが実機ゲートを解除することはありません。
+ファイルがある、Issueが閉じた、という理由だけで検証済みに自動昇格させません。
+実装・試験の根拠を状態に記録するまで、図は勝手に完了色になりません。
+
+JSONを直接編集した場合や表示設定を変更した場合:
+
+```sh
+python "構成図/show.py" sync
+python "構成図/show.py" check
+```
+
+`sync` は正本から生成物を更新し、`check` は変更せずに同期漏れを検出します。
+`show` / `open` / `set-status` は保存済み図の古い色を再利用しません。
+GitHub上の図はコミットされた生成物なので、更新したJSONと生成物を一緒にコミットしてください。
+
+## ファイル
+
+| ファイル | 役割 |
+| --- | --- |
+| `構成図.json` | 構成・進捗・確認根拠・接続関係の正本 |
+| `図設定.json` | ラベル・将棋／囲碁の列・直線的なSVG配置 |
+| `show.py` | 表示・進捗更新・自動色付け・同期コマンド |
+| `構成図.md` / `構成図.mmd` / `構成図.svg` | 自動生成した図 |
+| `呼び出しプロンプト.md` | チャットで同じ図を呼び出す手順 |
+| `test_show.py` | 進捗変更・自動色付け・同期のテスト |
+
+以前の `docs/shogi-go-architecture-plan.json` は互換用の自動生成コピーです。
+編集は正本に行い、互換コピー・計画内Mermaid・出力図を手で変更しないでください。
+図の対象を増やす場合は、正本のmodulesとedges、図設定のlabels・groups・positionsを一緒に更新します。
+
+検証:
+
+```sh
+python -m unittest discover -s "構成図" -p "test_*.py" -v
+```
+

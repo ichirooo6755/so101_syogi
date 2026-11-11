@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "title": "SO-101 将棋・囲碁のバックエンド構成と共通実装計画",
   "updated_on": "2026-11-11",
   "timezone": "Asia/Tokyo",
@@ -31,17 +31,79 @@
     "implemented": {
       "label": "既存実装",
       "diagram_color": "white",
-      "meaning": "現在のソフトウェア実装がある。実物での精度や対局成立は別途検証する。"
+      "meaning": "現在のソフトウェア実装がある。実物での精度や対局成立は別途検証する。",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#64748b",
+        "stroke_width": 1.5,
+        "dash": null
+      }
     },
     "prototype_unintegrated": {
       "label": "試作あり・統合待ち",
       "diagram_color": "orange",
-      "meaning": "関連コードや比較試作はあるが、予定する対局ループへの統合や実機検証が未完了。"
+      "meaning": "関連コードや比較試作はあるが、予定する対局ループへの統合や実機検証が未完了。",
+      "style": {
+        "fill": "#fff3df",
+        "stroke": "#d18a21",
+        "stroke_width": 2,
+        "dash": null
+      }
     },
     "planned": {
       "label": "未実装・予定",
       "diagram_color": "blue_dashed_border",
-      "meaning": "今回整理した目標構成。候補技術には選定条件を付記する。"
+      "meaning": "今回整理した目標構成。候補技術には選定条件を付記する。",
+      "style": {
+        "fill": "#eaf5ff",
+        "stroke": "#2684c7",
+        "stroke_width": 2,
+        "dash": "5 5"
+      }
+    },
+    "in_progress": {
+      "label": "実装中",
+      "diagram_color": "yellow",
+      "meaning": "実装作業中。完成や検証済みを意味しない。",
+      "style": {
+        "fill": "#fff8cc",
+        "stroke": "#b89b18",
+        "stroke_width": 2,
+        "dash": null
+      }
+    },
+    "software_verified": {
+      "label": "ソフトウェア検証済み",
+      "diagram_color": "light_green",
+      "meaning": "記録した条件と根拠の範囲でソフトウェアを検証。実機検証は別。",
+      "style": {
+        "fill": "#e3f6e8",
+        "stroke": "#33844a",
+        "stroke_width": 2,
+        "dash": null
+      }
+    },
+    "hardware_verified": {
+      "label": "実機検証済み",
+      "diagram_color": "green",
+      "meaning": "記録した機体・較正・試験条件の範囲で実機を検証。",
+      "style": {
+        "fill": "#bce8c9",
+        "stroke": "#146b36",
+        "stroke_width": 2.5,
+        "dash": null
+      }
+    },
+    "blocked": {
+      "label": "課題で停止",
+      "diagram_color": "red",
+      "meaning": "未解決の課題により作業を停止。理由と再開条件を確認根拠に記録する。",
+      "style": {
+        "fill": "#ffe2e2",
+        "stroke": "#c34141",
+        "stroke_width": 2,
+        "dash": null
+      }
     }
   },
   "current_architecture": {
@@ -167,7 +229,12 @@
         "起動時トークン、Host、Originを検査。画面は約2秒ごとに状態を取得"
       ],
       "planned": [],
-      "runtime_role": "対局進行と外部プロセスの統括"
+      "runtime_role": "対局進行と外部プロセスの統括",
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "ui_extension",
@@ -179,7 +246,12 @@
         "将棋／囲碁を選択",
         "実機停止と一時停止・再開を区別",
         "較正・教示・モーター・シミュレーションを設定画面へ整理"
-      ]
+      ],
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "camera",
@@ -199,7 +271,12 @@
       "planned": [
         "XIAO実機で画質・焦点・撮影遅延・切断復帰を検証"
       ],
-      "hardware_validation": "XIAOの書込み・撮影は未検証"
+      "hardware_validation": "XIAOの書込み・撮影は未検証",
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "image_guard",
@@ -214,7 +291,12 @@
       "technology_candidates": [
         "MediaPipe Hand Landmarker"
       ],
-      "selection_note": "実際の画角で評価して採否を決める"
+      "selection_note": "実際の画角で評価して採否を決める",
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "board_tracking",
@@ -234,7 +316,12 @@
         "毎回同じ観測姿勢へ戻る方式から統合",
         "観測姿勢を変える段階では手首とカメラの外部較正を追加",
         "盤と別置きの駒台を盤移動に連動させない"
-      ]
+      ],
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "shogi_vision",
@@ -251,7 +338,12 @@
       ],
       "planned": [
         "実物の駒・照明・影・遮蔽への精度を測定"
-      ]
+      ],
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "shogi_classifier",
@@ -265,7 +357,12 @@
         "手・遮蔽・低信頼画像を棄却し、合法手と複数フレームで照合",
         "撮影日・配置ごとに学習と評価を分離"
       ],
-      "technology": "ResNet-18の微調整"
+      "technology": "ResNet-18の微調整",
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "shogi_rules",
@@ -280,7 +377,12 @@
       ],
       "planned": [
         "特殊ルールと反復局面のライブラリ対応範囲を確認して試験"
-      ]
+      ],
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "shogi_ai",
@@ -295,7 +397,12 @@
         "現行の探索指定はgo movetime 500",
         "腕の到達範囲でAIの合法手候補を除外しない"
       ],
-      "planned": []
+      "planned": [],
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "shogi_stand",
@@ -313,7 +420,12 @@
         "駒種・空きスロット・表裏・途中状態を管理",
         "取った成駒を表に戻して登録",
         "必要な容量と全スロットへの到達を実測で確認"
-      ]
+      ],
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "shogi_plan",
@@ -332,7 +444,12 @@
         "実測駒台を操作列へ統合",
         "受動的な裏返し台で成り・成駒取りを成立させる",
         "画像で表裏と配置を確認し、途中状態から再開できるようにする"
-      ]
+      ],
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "go_vision",
@@ -344,7 +461,12 @@
         "交点ごとに黒石・白石・空を認識",
         "盤座標補正後に直前局面と照合"
       ],
-      "game": "go"
+      "game": "go",
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "go_geometry",
@@ -357,7 +479,12 @@
         "9路・13路・19路の座標と到達性を評価",
         "19路が難しい場合は小さい盤から試験"
       ],
-      "game": "go"
+      "game": "go",
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "go_rules",
@@ -370,7 +497,12 @@
         "採用ルールとルールエンジンを選定"
       ],
       "game": "go",
-      "selection_status": "未選定"
+      "selection_status": "未選定",
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "go_ai",
@@ -383,7 +515,12 @@
       ],
       "game": "go",
       "selection_status": "未選定",
-      "selected_engine": null
+      "selected_engine": null,
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "go_inventory",
@@ -395,7 +532,12 @@
         "石を取り出す位置、捕獲した石の回収先を実測",
         "供給・回収状況を管理"
       ],
-      "game": "go"
+      "game": "go",
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "go_plan",
@@ -408,7 +550,12 @@
         "捕獲された複数の石を回収",
         "周囲の石に接触しない把持・配置経路を作る"
       ],
-      "game": "go"
+      "game": "go",
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "motion_integration",
@@ -425,7 +572,12 @@
         "so-arm101-chess-robot ChessMotion / ArmBackend / MockArm",
         "LeRobot RobotKinematics / Placo"
       ],
-      "selection_note": "将棋計画の採用・参照先。囲碁への共通化は本構成案"
+      "selection_note": "将棋計画の採用・参照先。囲碁への共通化は本構成案",
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "simulation",
@@ -444,7 +596,12 @@
         "延長腕、実測した質量・関節限界・爪・駒・石・カメラ・配線をモデルへ反映",
         "隣接物と持った駒・石を含む連続経路を評価",
         "囲碁用の盤・石・碁笥モデルを追加"
-      ]
+      ],
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "lerobot_control",
@@ -461,7 +618,12 @@
         "get_observation / send_actionで実測追従を確認",
         "速度・加速度・関節範囲・追従誤差・通信停止を監視",
         "単一プロセスでバスを所有し、既存コントローラーと二重接続しない"
-      ]
+      ],
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "live_gate",
@@ -479,7 +641,12 @@
         "関節対応・座標・把持・停止を実機検証してから新経路へ接続"
       ],
       "live_motor_commands_enabled": false,
-      "gate_release_policy": "文書追加では解除しない。実機検証と実装変更が必要"
+      "gate_release_policy": "文書追加では解除しない。実機検証と実装変更が必要",
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "execution_monitor",
@@ -491,7 +658,12 @@
         "近接画像で位置を確認して短く補正",
         "爪の開度、画像、持上げ後の対象の有無で把持を確認",
         "接近・把持・運搬・配置・解放の途中状態を記録"
-      ]
+      ],
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "post_action_verify",
@@ -502,7 +674,12 @@
       "planned": [
         "観測姿勢へ戻り、盤・駒台・石の状態を予定局面と照合",
         "元位置が空で目的位置が正しく、隣接物が動いていないことを確認"
-      ]
+      ],
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "commit_record",
@@ -514,7 +691,12 @@
         "物理状態の照合に成功した後だけAIの着手を確定",
         "棋譜と実行記録を保存し、次の手番へ移る"
       ],
-      "existing_manual_path": "現行APIには人による確認後のconfirm_aiがあるが、自動照合と永続棋譜保存は未実装"
+      "existing_manual_path": "現行APIには人による確認後のconfirm_aiがあるが、自動照合と永続棋譜保存は未実装",
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "recovery",
@@ -526,7 +708,12 @@
         "認識・把持・通信・到達の失敗を区別して停止",
         "再接続・再試行時に同じ駒や石を二重に操作しない",
         "実物を再照合してから再開"
-      ]
+      ],
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "hardware_models",
@@ -546,7 +733,12 @@
         "原則1リンクの延長と盤配置を選定",
         "爪・マウント・配線・裏返し台を含め到達・干渉・負荷を検証",
         "CAD / URDF / MuJoCoを同じ実測寸法から生成"
-      ]
+      ],
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "teaching_snapshots",
@@ -562,7 +754,12 @@
         "較正・USBの識別情報を保持し、ローカルJSONへ保存",
         "連続経路の記録・追従・学習・再生はまだしない"
       ],
-      "planned": []
+      "planned": [],
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "continuous_teaching",
@@ -574,7 +771,12 @@
         "時刻・画像・実測関節角・指令・開閉量・盤位置・対象・成否を同期記録",
         "腕の長さ・較正・マウントを識別し、標準腕の記録と延長腕を混同しない",
         "追従と停止を確認した上で連続経路を記録"
-      ]
+      ],
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "skill_learning",
@@ -591,7 +793,12 @@
       "technology_candidates": [
         "LeRobot ACT"
       ],
-      "deployment": "推論・対局・時間制約のある実機制御はMac。遠隔学習環境は利用条件と実測時間が判明してから判断"
+      "deployment": "推論・対局・時間制約のある実機制御はMac。遠隔学習環境は利用条件と実測時間が判明してから判断",
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     },
     {
       "id": "file_store",
@@ -613,7 +820,12 @@
         "仮想環境・vendor・build",
         "Wi-Fi情報・実機較正値"
       ],
-      "database": "将棋本体にDBサービスはない"
+      "database": "将棋本体にDBサービスはない",
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
+        "history": []
+      }
     }
   ],
   "target_architecture": {
@@ -826,8 +1038,8 @@
     "diagram": {
       "format": "mermaid",
       "direction": "TB",
-      "source": "flowchart TB\n    ui_backend[\"ブラウザ画面・Python API<br/>対局操作・状態表示・JSON保存\"]\n    ui_extension[\"画面の拡張<br/>ゲーム選択・実機停止・較正設定\"]\n    camera[\"撮影・四隅検出・画像補正<br/>XIAO USB / Wi-Fi / Mac\"]\n    image_guard[\"手・遮蔽・画像鮮度の確認<br/>MediaPipe等は採用候補\"]\n    board_tracking[\"実測較正・盤追従の統合<br/>レンズ・ロボット座標・観測姿勢\"]\n    subgraph Shogi[\"将棋\"]\n        direction TB\n        shogi_vision[\"着手推定<br/>9×9マスの画像差分\"]\n        shogi_classifier[\"駒種・所有者方向・成りの認識<br/>実画像でResNet-18を微調整\"]\n        shogi_rules[\"局面・合法手管理<br/>python-shogi\"]\n        shogi_ai[\"将棋AI<br/>Fairy-Stockfish\"]\n        shogi_stand[\"駒台管理の統合<br/>駒種・空きスロット・実測位置\"]\n        shogi_plan[\"将棋操作計画の拡張<br/>移動・取り・打ち<br/>裏返し台での成り・成駒戻し\"]\n    end\n    subgraph Go[\"囲碁：未実装\"]\n        direction TB\n        go_vision[\"交点認識<br/>黒石・白石・空\"]\n        go_geometry[\"盤の設定<br/>9路・13路・19路の交点座標\"]\n        go_rules[\"局面・ルール管理<br/>捕獲・コウ・パス・終局\"]\n        go_ai[\"囲碁AI<br/>エンジン未選定\"]\n        go_inventory[\"碁笥・回収先の管理<br/>石の供給位置・アゲハマ置き場\"]\n        go_plan[\"囲碁操作計画<br/>着手交点へ配置<br/>捕獲した複数の石を回収\"]\n    end\n    motion_integration[\"共通搬送・運動学の統合<br/>ChessMotion由来の搬送段階<br/>公式FK・IKとの接続\"]\n    simulation[\"MuJoCoで経路・接触を評価<br/>延長腕・実測寸法・周囲の駒や石へ対応\"]\n    lerobot_control[\"公式LeRobot実機経路の統合<br/>関節較正・速度・追従誤差・通信停止監視\"]\n    live_gate[\"実機送信ゲート<br/>現在は送信停止\"]\n    execution_monitor[\"検証後の実機操作<br/>近接補正・把持・解放を段階ごとに確認\"]\n    post_action_verify[\"観測姿勢へ戻り再撮影<br/>盤・駒台・石を予定状態と照合\"]\n    commit_record[\"一致：着手確定・棋譜保存<br/>次の手番へ\"]\n    recovery[\"不一致：停止・再撮影<br/>途中状態を記録して復旧\"]\n    hardware_models[\"機械・モデルの整備<br/>上腕延長の選定・爪・カメラ取付<br/>CAD・URDF・MuJoCoの寸法統一\"]\n    teaching_snapshots[\"既存：4姿勢の静止教示記録\"]\n    continuous_teaching[\"Leader追従・連続教示<br/>画像・関節角・指令を同期記録\"]\n    skill_learning[\"教示を経路候補へ利用<br/>必要時だけ短い動作をACTで学習\"]\n    ui_backend --> ui_extension\n    ui_extension --> camera\n    camera --> image_guard\n    image_guard --> board_tracking\n    board_tracking --> shogi_vision\n    board_tracking --> go_vision\n    shogi_vision --> shogi_classifier\n    shogi_classifier --> shogi_rules\n    shogi_rules --> shogi_ai\n    shogi_ai --> shogi_stand\n    shogi_stand --> shogi_plan\n    go_vision --> go_geometry\n    go_geometry --> go_rules\n    go_rules --> go_ai\n    go_ai --> go_inventory\n    go_inventory --> go_plan\n    shogi_plan --> motion_integration\n    go_plan --> motion_integration\n    motion_integration --> simulation\n    simulation --> lerobot_control\n    lerobot_control --> live_gate\n    live_gate --> execution_monitor\n    execution_monitor --> post_action_verify\n    post_action_verify --> commit_record\n    post_action_verify --> recovery\n    hardware_models --> simulation\n    teaching_snapshots --> continuous_teaching\n    continuous_teaching --> skill_learning\n    skill_learning --> motion_integration\n    classDef implemented fill:#ffffff,stroke:#64748b,stroke-width:1.5px;\n    classDef prototype_unintegrated fill:#fff3df,stroke:#d18a21,stroke-width:2px;\n    classDef planned fill:#eaf5ff,stroke:#2684c7,stroke-width:2px,stroke-dasharray:5 5;\n    class ui_backend,camera,shogi_vision,shogi_rules,shogi_ai,live_gate,teaching_snapshots implemented;\n    class board_tracking,shogi_stand,shogi_plan,simulation,lerobot_control,hardware_models prototype_unintegrated;\n    class ui_extension,image_guard,shogi_classifier,go_vision,go_geometry,go_rules,go_ai,go_inventory,go_plan,motion_integration,execution_monitor,post_action_verify,commit_record,recovery,continuous_teaching,skill_learning planned;",
-      "note": "file_storeはui_backendのJSON保存という注記に集約。色は各モジュールのstatusを反映。"
+      "source": "flowchart TB\n    ui_backend[\"ブラウザ画面・Python API<br/>対局操作・状態表示・JSON保存\"]\n    ui_extension[\"画面の拡張<br/>ゲーム選択・実機停止・較正設定\"]\n    camera[\"撮影・四隅検出・画像補正<br/>XIAO USB / Wi-Fi / Mac\"]\n    image_guard[\"手・遮蔽・画像鮮度の確認<br/>MediaPipe等は採用候補\"]\n    board_tracking[\"実測較正・盤追従の統合<br/>レンズ・ロボット座標・観測姿勢\"]\n    motion_integration[\"共通搬送・運動学の統合<br/>ChessMotion由来の搬送段階<br/>公式FK・IKとの接続\"]\n    simulation[\"MuJoCoで経路・接触を評価<br/>延長腕・実測寸法・周囲の駒や石へ対応\"]\n    lerobot_control[\"公式LeRobot実機経路の統合<br/>関節較正・速度・追従誤差・通信停止監視\"]\n    live_gate[\"実機送信ゲート<br/>現在は送信停止\"]\n    execution_monitor[\"検証後の実機操作<br/>近接補正・把持・解放を段階ごとに確認\"]\n    post_action_verify[\"観測姿勢へ戻り再撮影<br/>盤・駒台・石を予定状態と照合\"]\n    commit_record[\"一致：着手確定・棋譜保存<br/>次の手番へ\"]\n    recovery[\"不一致：停止・再撮影<br/>途中状態を記録して復旧\"]\n    hardware_models[\"機械・モデルの整備<br/>上腕延長の選定・爪・カメラ取付<br/>CAD・URDF・MuJoCoの寸法統一\"]\n    teaching_snapshots[\"静止4姿勢の教示記録\"]\n    continuous_teaching[\"Leader追従・連続教示<br/>画像・関節角・指令を同期記録\"]\n    skill_learning[\"教示を経路候補へ利用<br/>必要時だけ短い動作をACTで学習\"]\n    subgraph shogi[\"将棋\"]\n        direction TB\n        shogi_vision[\"着手推定<br/>9×9マスの画像差分\"]\n        shogi_classifier[\"駒種・所有者方向・成りの認識<br/>実画像でResNet-18を微調整\"]\n        shogi_rules[\"局面・合法手管理<br/>python-shogi\"]\n        shogi_ai[\"将棋AI<br/>Fairy-Stockfish\"]\n        shogi_stand[\"駒台管理の統合<br/>駒種・空きスロット・実測位置\"]\n        shogi_plan[\"将棋操作計画の拡張<br/>移動・取り・打ち<br/>裏返し台での成り・成駒戻し\"]\n    end\n    subgraph go[\"囲碁\"]\n        direction TB\n        go_vision[\"交点認識<br/>黒石・白石・空\"]\n        go_geometry[\"盤の設定<br/>9路・13路・19路の交点座標\"]\n        go_rules[\"局面・ルール管理<br/>捕獲・コウ・パス・終局\"]\n        go_ai[\"囲碁AI<br/>エンジン未選定\"]\n        go_inventory[\"碁笥・回収先の管理<br/>石の供給位置・アゲハマ置き場\"]\n        go_plan[\"囲碁操作計画<br/>着手交点へ配置<br/>捕獲した複数の石を回収\"]\n    end\n    ui_backend --> ui_extension\n    ui_extension --> camera\n    camera --> image_guard\n    image_guard --> board_tracking\n    board_tracking --> shogi_vision\n    board_tracking --> go_vision\n    shogi_vision --> shogi_classifier\n    shogi_classifier --> shogi_rules\n    shogi_rules --> shogi_ai\n    shogi_ai --> shogi_stand\n    shogi_stand --> shogi_plan\n    go_vision --> go_geometry\n    go_geometry --> go_rules\n    go_rules --> go_ai\n    go_ai --> go_inventory\n    go_inventory --> go_plan\n    shogi_plan --> motion_integration\n    go_plan --> motion_integration\n    motion_integration --> simulation\n    simulation --> lerobot_control\n    lerobot_control --> live_gate\n    live_gate --> execution_monitor\n    execution_monitor --> post_action_verify\n    post_action_verify --> commit_record\n    post_action_verify --> recovery\n    hardware_models --> simulation\n    teaching_snapshots --> continuous_teaching\n    continuous_teaching --> skill_learning\n    skill_learning --> motion_integration\n    classDef implemented fill:#ffffff,stroke:#64748b,stroke-width:1.5px;\n    class ui_backend,camera,shogi_vision,shogi_rules,shogi_ai,live_gate,teaching_snapshots implemented;\n    classDef prototype_unintegrated fill:#fff3df,stroke:#d18a21,stroke-width:2px;\n    class board_tracking,shogi_stand,shogi_plan,simulation,lerobot_control,hardware_models prototype_unintegrated;\n    classDef planned fill:#eaf5ff,stroke:#2684c7,stroke-width:2px,stroke-dasharray:5 5;\n    class ui_extension,image_guard,shogi_classifier,go_vision,go_geometry,go_rules,go_ai,go_inventory,go_plan,motion_integration,execution_monitor,post_action_verify,commit_record,recovery,continuous_teaching,skill_learning planned;\n    classDef in_progress fill:#fff8cc,stroke:#b89b18,stroke-width:2px;\n    classDef software_verified fill:#e3f6e8,stroke:#33844a,stroke-width:2px;\n    classDef hardware_verified fill:#bce8c9,stroke:#146b36,stroke-width:2.5px;\n    classDef blocked fill:#ffe2e2,stroke:#c34141,stroke-width:2px;",
+      "note": "show.pyがmodules[].statusと図設定.jsonから自動生成する。手で色やsourceを書き換えない。file_storeはui_backendのJSON保存に集約。"
     }
   },
   "execution_policy": {
@@ -979,5 +1191,16 @@
       "既存テストスイートの再実行",
       "実機・カメラ・学習の試験"
     ]
+  },
+  "canonical_path": "構成図/構成図.json",
+  "generated_copies": [
+    "docs/shogi-go-architecture-plan.json"
+  ],
+  "progress_policy": {
+    "authority": "modules[].statusとmodules[].progress",
+    "update_command": "python \"構成図/show.py\" set-status <module_id> <status> --evidence \"<確認根拠>\"",
+    "color_update": "show / open / syncは毎回正本JSONから色を生成する。set-statusは状態と根拠を記録して全生成物を更新する。",
+    "snapshot_note": "currentとplannedは初期棚卸しの説明。以後の状態と確認根拠はstatusとprogress.historyで追跡する。",
+    "inference_policy": "ファイルの存在やIssueの完了だけでは実装・検証完了と判定しない。変更内容と確認根拠に基づき状態を記録する。"
   }
 }

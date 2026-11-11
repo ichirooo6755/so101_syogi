@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0.0",
+  "title": "SO-101 将棋・囲碁 構成図",
+  "source": "構成図/構成図.json",
+  "direction": "TB",
+  "hidden_modules": [
+    "file_store"
+  ],
+  "labels": {
+    "ui_backend": "ブラウザ画面・Python API<br/>対局操作・状態表示・JSON保存",
+    "ui_extension": "画面の拡張<br/>ゲーム選択・実機停止・較正設定",
+    "camera": "撮影・四隅検出・画像補正<br/>XIAO USB / Wi-Fi / Mac",
+    "image_guard": "手・遮蔽・画像鮮度の確認<br/>MediaPipe等は採用候補",
+    "board_tracking": "実測較正・盤追従の統合<br/>レンズ・ロボット座標・観測姿勢",
+    "shogi_vision": "着手推定<br/>9×9マスの画像差分",
+    "shogi_classifier": "駒種・所有者方向・成りの認識<br/>実画像でResNet-18を微調整",
+    "shogi_rules": "局面・合法手管理<br/>python-shogi",
+    "shogi_ai": "将棋AI<br/>Fairy-Stockfish",
+    "shogi_stand": "駒台管理の統合<br/>駒種・空きスロット・実測位置",
+    "shogi_plan": "将棋操作計画の拡張<br/>移動・取り・打ち<br/>裏返し台での成り・成駒戻し",
+    "go_vision": "交点認識<br/>黒石・白石・空",
+    "go_geometry": "盤の設定<br/>9路・13路・19路の交点座標",
+    "go_rules": "局面・ルール管理<br/>捕獲・コウ・パス・終局",
+    "go_ai": "囲碁AI<br/>エンジン未選定",
+    "go_inventory": "碁笥・回収先の管理<br/>石の供給位置・アゲハマ置き場",
+    "go_plan": "囲碁操作計画<br/>着手交点へ配置<br/>捕獲した複数の石を回収",
+    "motion_integration": "共通搬送・運動学の統合<br/>ChessMotion由来の搬送段階<br/>公式FK・IKとの接続",
+    "simulation": "MuJoCoで経路・接触を評価<br/>延長腕・実測寸法・周囲の駒や石へ対応",
+    "lerobot_control": "公式LeRobot実機経路の統合<br/>関節較正・速度・追従誤差・通信停止監視",
+    "live_gate": "実機送信ゲート<br/>現在は送信停止",
+    "execution_monitor": "検証後の実機操作<br/>近接補正・把持・解放を段階ごとに確認",
+    "post_action_verify": "観測姿勢へ戻り再撮影<br/>盤・駒台・石を予定状態と照合",
+    "commit_record": "一致：着手確定・棋譜保存<br/>次の手番へ",
+    "recovery": "不一致：停止・再撮影<br/>途中状態を記録して復旧",
+    "hardware_models": "機械・モデルの整備<br/>上腕延長の選定・爪・カメラ取付<br/>CAD・URDF・MuJoCoの寸法統一",
+    "teaching_snapshots": "静止4姿勢の教示記録",
+    "continuous_teaching": "Leader追従・連続教示<br/>画像・関節角・指令を同期記録",
+    "skill_learning": "教示を経路候補へ利用<br/>必要時だけ短い動作をACTで学習"
+  },
+  "groups": [
+    {
+      "id": "shogi",
+      "label": "将棋",
+      "modules": [
+        "shogi_vision",
+        "shogi_classifier",
+        "shogi_rules",
+        "shogi_ai",
+        "shogi_stand",
+        "shogi_plan"
+      ]
+    },
+    {
+      "id": "go",
+      "label": "囲碁",
+      "modules": [
+        "go_vision",
+        "go_geometry",
+        "go_rules",
+        "go_ai",
+        "go_inventory",
+        "go_plan"
+      ]
+    }
+  ],
+  "svg": {
+    "columns": {
+      "support": 300,
+      "shogi": 890,
+      "go": 1490,
+      "main": 1190
+    },
+    "width": 1800,
+    "node_width": 500,
+    "node_height": 112,
+    "row_gap": 150,
+    "top": 180,
+    "positions": {
+      "ui_backend": {
+        "column": "main",
+        "row": 0
+      },
+      "ui_extension": {
+        "column": "main",
+        "row": 1
+      },
+      "camera": {
+        "column": "main",
+        "row": 2
+      },
+      "image_guard": {
+        "column": "main",
+        "row": 3
+      },
+      "board_tracking": {
+        "column": "main",
+        "row": 4
+      },
+      "shogi_vision": {
+        "column": "shogi",
+        "row": 5
+      },
+      "shogi_classifier": {
+        "column": "shogi",
+        "row": 6
+      },
+      "shogi_rules": {
+        "column": "shogi",
+        "row": 7
+      },
+      "shogi_ai": {
+        "column": "shogi",
+        "row": 8
+      },
+      "shogi_stand": {
+        "column": "shogi",
+        "row": 9
+      },
+      "shogi_plan": {
+        "column": "shogi",
+        "row": 10
+      },
+      "go_vision": {
+        "column": "go",
+        "row": 5
+      },
+      "go_geometry": {
+        "column": "go",
+        "row": 6
+      },
+      "go_rules": {
+        "column": "go",
+        "row": 7
+      },
+      "go_ai": {
+        "column": "go",
+        "row": 8
+      },
+      "go_inventory": {
+        "column": "go",
+        "row": 9
+      },
+      "go_plan": {
+        "column": "go",
+        "row": 10
+      },
+      "motion_integration": {
+        "column": "main",
+        "row": 11
+      },
+      "simulation": {
+        "column": "main",
+        "row": 12
+      },
+      "lerobot_control": {
+        "column": "main",
+        "row": 13
+      },
+      "live_gate": {
+        "column": "main",
+        "row": 14
+      },
+      "execution_monitor": {
+        "column": "main",
+        "row": 15
+      },
+      "post_action_verify": {
+        "column": "main",
+        "row": 16
+      },
+      "commit_record": {
+        "column": "shogi",
+        "row": 17
+      },
+      "recovery": {
+        "column": "go",
+        "row": 17
+      },
+      "hardware_models": {
+        "column": "support",
+        "row": 12
+      },
+      "teaching_snapshots": {
+        "column": "support",
+        "row": 6
+      },
+      "continuous_teaching": {
+        "column": "support",
+        "row": 7
+      },
+      "skill_learning": {
+        "column": "support",
+        "row": 8
+      }
+    }
+  },
+  "generated_outputs": [
+    "構成図/構成図.md",
+    "構成図/構成図.mmd",
+    "構成図/構成図.svg",
+    "docs/shogi-go-architecture-plan.json",
+    "shogi/docs/shogi-implementation-plan.md"
+  ]
+}
+

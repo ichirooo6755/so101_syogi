@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 2851.0" role="img" aria-labelledby="title desc">
+<title id="title">SO-101 将棋・囲碁 構成図</title>
+<desc id="desc">JSONの進捗状態から生成。既存実装は実機検証済みを意味しません。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker></defs>
+<rect width="1800" height="2851.0" fill="#f8fafc"/>
+<g font-family="sans-serif" fill="#172536">
+<text x="40" y="36" font-size="26" font-weight="bold">SO-101 将棋・囲碁 構成図</text>
+<text x="40" y="108" font-size="17">進捗更新日: 2026-11-11 ／ 実機送信ゲート: 停止。線は目標構成の接続関係。</text>
+<rect x="40" y="58" width="22" height="22" fill="#ffffff" stroke="#64748b"/>
+<text x="71" y="75" font-size="17">既存実装</text>
+<rect x="287" y="58" width="22" height="22" fill="#fff3df" stroke="#d18a21"/>
+<text x="318" y="75" font-size="17">試作あり・統合待ち</text>
+<rect x="534" y="58" width="22" height="22" fill="#eaf5ff" stroke="#2684c7" stroke-dasharray="5 5"/>
+<text x="565" y="75" font-size="17">未実装・予定</text>
+<rect x="781" y="58" width="22" height="22" fill="#fff8cc" stroke="#b89b18"/>
+<text x="812" y="75" font-size="17">実装中</text>
+<rect x="1028" y="58" width="22" height="22" fill="#e3f6e8" stroke="#33844a"/>
+<text x="1059" y="75" font-size="17">ソフトウェア検証済み</text>
+<rect x="1275" y="58" width="22" height="22" fill="#bce8c9" stroke="#146b36"/>
+<text x="1306" y="75" font-size="17">実機検証済み</text>
+<rect x="1522" y="58" width="22" height="22" fill="#ffe2e2" stroke="#c34141"/>
+<text x="1553" y="75" font-size="17">課題で停止</text>
+<text x="650.0" y="859.0" text-anchor="start" font-size="23" font-weight="bold">将棋</text>
+<text x="1730.0" y="859.0" text-anchor="end" font-size="23" font-weight="bold">囲碁</text>
+<path data-from="ui_backend" data-to="ui_extension" d="M 1190 236.0 V 255.0 H 1190 V 274.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="ui_extension" data-to="camera" d="M 1190 386.0 V 405.0 H 1190 V 424.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="camera" data-to="image_guard" d="M 1190 536.0 V 555.0 H 1190 V 574.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="image_guard" data-to="board_tracking" d="M 1190 686.0 V 705.0 H 1190 V 724.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="board_tracking" data-to="shogi_vision" d="M 1190 836.0 V 855.0 H 890 V 874.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="board_tracking" data-to="go_vision" d="M 1190 836.0 V 855.0 H 1490 V 874.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="shogi_vision" data-to="shogi_classifier" d="M 890 986.0 V 1005.0 H 890 V 1024.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="shogi_classifier" data-to="shogi_rules" d="M 890 1136.0 V 1155.0 H 890 V 1174.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="shogi_rules" data-to="shogi_ai" d="M 890 1286.0 V 1305.0 H 890 V 1324.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="shogi_ai" data-to="shogi_stand" d="M 890 1436.0 V 1455.0 H 890 V 1474.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="shogi_stand" data-to="shogi_plan" d="M 890 1586.0 V 1605.0 H 890 V 1624.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="go_vision" data-to="go_geometry" d="M 1490 986.0 V 1005.0 H 1490 V 1024.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="go_geometry" data-to="go_rules" d="M 1490 1136.0 V 1155.0 H 1490 V 1174.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="go_rules" data-to="go_ai" d="M 1490 1286.0 V 1305.0 H 1490 V 1324.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="go_ai" data-to="go_inventory" d="M 1490 1436.0 V 1455.0 H 1490 V 1474.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="go_inventory" data-to="go_plan" d="M 1490 1586.0 V 1605.0 H 1490 V 1624.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="shogi_plan" data-to="motion_integration" d="M 890 1736.0 V 1755.0 H 1190 V 1774.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="go_plan" data-to="motion_integration" d="M 1490 1736.0 V 1755.0 H 1190 V 1774.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="motion_integration" data-to="simulation" d="M 1190 1886.0 V 1905.0 H 1190 V 1924.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="simulation" data-to="lerobot_control" d="M 1190 2036.0 V 2055.0 H 1190 V 2074.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="lerobot_control" data-to="live_gate" d="M 1190 2186.0 V 2205.0 H 1190 V 2224.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="live_gate" data-to="execution_monitor" d="M 1190 2336.0 V 2355.0 H 1190 V 2374.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="execution_monitor" data-to="post_action_verify" d="M 1190 2486.0 V 2505.0 H 1190 V 2524.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="post_action_verify" data-to="commit_record" d="M 1190 2636.0 V 2655.0 H 890 V 2674.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="post_action_verify" data-to="recovery" d="M 1190 2636.0 V 2655.0 H 1490 V 2674.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="hardware_models" data-to="simulation" d="M 550.0 1980 H 940.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="teaching_snapshots" data-to="continuous_teaching" d="M 300 1136.0 V 1155.0 H 300 V 1174.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="continuous_teaching" data-to="skill_learning" d="M 300 1286.0 V 1305.0 H 300 V 1324.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<path data-from="skill_learning" data-to="motion_integration" d="M 300 1436.0 V 1605.0 H 1190 V 1774.0" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<g data-module="ui_backend" data-status="implemented">
+<title>ブラウザ画面・Pythonバックエンド: 既存実装</title>
+<rect x="940.0" y="124.0" width="500" height="112" rx="10" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+<text x="1190" y="175" text-anchor="middle" font-size="18">ブラウザ画面・Python API</text>
+<text x="1190" y="197" text-anchor="middle" font-size="18">対局操作・状態表示・JSON保存</text>
+</g>
+<g data-module="ui_extension" data-status="planned">
+<title>対局画面・設定画面の拡張: 未実装・予定</title>
+<rect x="940.0" y="274.0" width="500" height="112" rx="10" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1190" y="325" text-anchor="middle" font-size="18">画面の拡張</text>
+<text x="1190" y="347" text-anchor="middle" font-size="18">ゲーム選択・実機停止・較正設定</text>
+</g>
+<g data-module="camera" data-status="implemented">
+<title>撮影・盤四隅検出・画像補正: 既存実装</title>
+<rect x="940.0" y="424.0" width="500" height="112" rx="10" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+<text x="1190" y="475" text-anchor="middle" font-size="18">撮影・四隅検出・画像補正</text>
+<text x="1190" y="497" text-anchor="middle" font-size="18">XIAO USB / Wi-Fi / Mac</text>
+</g>
+<g data-module="image_guard" data-status="planned">
+<title>手・遮蔽・画像鮮度の確認: 未実装・予定</title>
+<rect x="940.0" y="574.0" width="500" height="112" rx="10" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1190" y="625" text-anchor="middle" font-size="18">手・遮蔽・画像鮮度の確認</text>
+<text x="1190" y="647" text-anchor="middle" font-size="18">MediaPipe等は採用候補</text>
+</g>
+<g data-module="board_tracking" data-status="prototype_unintegrated">
+<title>実測較正・盤追従の対局ループへの統合: 試作あり・統合待ち</title>
+<rect x="940.0" y="724.0" width="500" height="112" rx="10" fill="#fff3df" stroke="#d18a21" stroke-width="2"/>
+<text x="1190" y="775" text-anchor="middle" font-size="18">実測較正・盤追従の統合</text>
+<text x="1190" y="797" text-anchor="middle" font-size="18">レンズ・ロボット座標・観測姿勢</text>
+</g>
+<g data-module="shogi_vision" data-status="implemented">
+<title>画像差分による将棋の着手推定: 既存実装</title>
+<rect x="640.0" y="874.0" width="500" height="112" rx="10" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+<text x="890" y="925" text-anchor="middle" font-size="18">着手推定</text>
+<text x="890" y="947" text-anchor="middle" font-size="18">9×9マスの画像差分</text>
+</g>
+<g data-module="shogi_classifier" data-status="planned">
+<title>駒種・方向・成りの認識: 未実装・予定</title>
+<rect x="640.0" y="1024.0" width="500" height="112" rx="10" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="890" y="1075" text-anchor="middle" font-size="18">駒種・所有者方向・成りの認識</text>
+<text x="890" y="1097" text-anchor="middle" font-size="18">実画像でResNet-18を微調整</text>
+</g>
+<g data-module="shogi_rules" data-status="implemented">
+<title>将棋の局面・合法手管理: 既存実装</title>
+<rect x="640.0" y="1174.0" width="500" height="112" rx="10" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+<text x="890" y="1225" text-anchor="middle" font-size="18">局面・合法手管理</text>
+<text x="890" y="1247" text-anchor="middle" font-size="18">python-shogi</text>
+</g>
+<g data-module="shogi_ai" data-status="implemented">
+<title>将棋AI: 既存実装</title>
+<rect x="640.0" y="1324.0" width="500" height="112" rx="10" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+<text x="890" y="1375" text-anchor="middle" font-size="18">将棋AI</text>
+<text x="890" y="1397" text-anchor="middle" font-size="18">Fairy-Stockfish</text>
+</g>
+<g data-module="shogi_stand" data-status="prototype_unintegrated">
+<title>将棋の駒台管理: 試作あり・統合待ち</title>
+<rect x="640.0" y="1474.0" width="500" height="112" rx="10" fill="#fff3df" stroke="#d18a21" stroke-width="2"/>
+<text x="890" y="1525" text-anchor="middle" font-size="18">駒台管理の統合</text>
+<text x="890" y="1547" text-anchor="middle" font-size="18">駒種・空きスロット・実測位置</text>
+</g>
+<g data-module="shogi_plan" data-status="prototype_unintegrated">
+<title>将棋の操作計画と裏返し台: 試作あり・統合待ち</title>
+<rect x="640.0" y="1624.0" width="500" height="112" rx="10" fill="#fff3df" stroke="#d18a21" stroke-width="2"/>
+<text x="890" y="1664" text-anchor="middle" font-size="18">将棋操作計画の拡張</text>
+<text x="890" y="1686" text-anchor="middle" font-size="18">移動・取り・打ち</text>
+<text x="890" y="1708" text-anchor="middle" font-size="18">裏返し台での成り・成駒戻し</text>
+</g>
+<g data-module="go_vision" data-status="planned">
+<title>囲碁の交点認識: 未実装・予定</title>
+<rect x="1240.0" y="874.0" width="500" height="112" rx="10" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1490" y="925" text-anchor="middle" font-size="18">交点認識</text>
+<text x="1490" y="947" text-anchor="middle" font-size="18">黒石・白石・空</text>
+</g>
+<g data-module="go_geometry" data-status="planned">
+<title>囲碁盤の交点座標: 未実装・予定</title>
+<rect x="1240.0" y="1024.0" width="500" height="112" rx="10" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1490" y="1075" text-anchor="middle" font-size="18">盤の設定</text>
+<text x="1490" y="1097" text-anchor="middle" font-size="18">9路・13路・19路の交点座標</text>
+</g>
+<g data-module="go_rules" data-status="planned">
+<title>囲碁の局面・ルール管理: 未実装・予定</title>
+<rect x="1240.0" y="1174.0" width="500" height="112" rx="10" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1490" y="1225" text-anchor="middle" font-size="18">局面・ルール管理</text>
+<text x="1490" y="1247" text-anchor="middle" font-size="18">捕獲・コウ・パス・終局</text>
+</g>
+<g data-module="go_ai" data-status="planned">
+<title>囲碁AI: 未実装・予定</title>
+<rect x="1240.0" y="1324.0" width="500" height="112" rx="10" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1490" y="1375" text-anchor="middle" font-size="18">囲碁AI</text>
+<text x="1490" y="1397" text-anchor="middle" font-size="18">エンジン未選定</text>
+</g>
+<g data-module="go_inventory" data-status="planned">
+<title>碁笥・アゲハマ置き場: 未実装・予定</title>
+<rect x="1240.0" y="1474.0" width="500" height="112" rx="10" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1490" y="1525" text-anchor="middle" font-size="18">碁笥・回収先の管理</text>
+<text x="1490" y="1547" text-anchor="middle" font-size="18">石の供給位置・アゲハマ置き場</text>
+</g>
+<g data-module="go_plan" data-status="planned">
+<title>囲碁の操作計画: 未実装・予定</title>
+<rect x="1240.0" y="1624.0" width="500" height="112" rx="10" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1490" y="1664" text-anchor="middle" font-size="18">囲碁操作計画</text>
+<text x="1490" y="1686" text-anchor="middle" font-size="18">着手交点へ配置</text>
+<text x="1490" y="1708" text-anchor="middle" font-size="18">捕獲した複数の石を回収</text>
+</g>
+<g data-module="motion_integration" data-status="planned">
+<title>共通搬送・公式運動学の統合: 未実装・予定</title>
+<rect x="940.0" y="1774.0" width="500" height="112" rx="10" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1190" y="1814" text-anchor="middle" font-size="18">共通搬送・運動学の統合</text>
+<text x="1190" y="1836" text-anchor="middle" font-size="18">ChessMotion由来の搬送段階</text>
+<text x="1190" y="1858" text-anchor="middle" font-size="18">公式FK・IKとの接続</text>
+</g>
+<g data-module="simulation" data-status="prototype_unintegrated">
+<title>実測モデルとMuJoCo経路評価の統合: 試作あり・統合待ち</title>
+<rect x="940.0" y="1924.0" width="500" height="112" rx="10" fill="#fff3df" stroke="#d18a21" stroke-width="2"/>
+<text x="1190" y="1975" text-anchor="middle" font-size="18">MuJoCoで経路・接触を評価</text>
+<text x="1190" y="1997" text-anchor="middle" font-size="18">延長腕・実測寸法・周囲の駒や石へ対応</text>
+</g>
+<g data-module="lerobot_control" data-status="prototype_unintegrated">
+<title>公式LeRobot実機経路: 試作あり・統合待ち</title>
+<rect x="940.0" y="2074.0" width="500" height="112" rx="10" fill="#fff3df" stroke="#d18a21" stroke-width="2"/>
+<text x="1190" y="2125" text-anchor="middle" font-size="18">公式LeRobot実機経路の統合</text>
+<text x="1190" y="2147" text-anchor="middle" font-size="18">関節較正・速度・追従誤差・通信停止監視</text>
+</g>
+<g data-module="live_gate" data-status="implemented">
+<title>実機送信ゲート: 既存実装</title>
+<rect x="940.0" y="2224.0" width="500" height="112" rx="10" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+<text x="1190" y="2275" text-anchor="middle" font-size="18">実機送信ゲート</text>
+<text x="1190" y="2297" text-anchor="middle" font-size="18">現在は送信停止</text>
+</g>
+<g data-module="execution_monitor" data-status="planned">
+<title>実機操作中の段階確認: 未実装・予定</title>
+<rect x="940.0" y="2374.0" width="500" height="112" rx="10" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1190" y="2425" text-anchor="middle" font-size="18">検証後の実機操作</text>
+<text x="1190" y="2447" text-anchor="middle" font-size="18">近接補正・把持・解放を段階ごとに確認</text>
+</g>
+<g data-module="post_action_verify" data-status="planned">
+<title>動作後の盤・駒台の再観測: 未実装・予定</title>
+<rect x="940.0" y="2524.0" width="500" height="112" rx="10" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1190" y="2575" text-anchor="middle" font-size="18">観測姿勢へ戻り再撮影</text>
+<text x="1190" y="2597" text-anchor="middle" font-size="18">盤・駒台・石を予定状態と照合</text>
+</g>
+<g data-module="commit_record" data-status="planned">
+<title>着手確定・棋譜保存: 未実装・予定</title>
+<rect x="640.0" y="2674.0" width="500" height="112" rx="10" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="890" y="2725" text-anchor="middle" font-size="18">一致：着手確定・棋譜保存</text>
+<text x="890" y="2747" text-anchor="middle" font-size="18">次の手番へ</text>
+</g>
+<g data-module="recovery" data-status="planned">
+<title>停止・再撮影・途中状態からの復旧: 未実装・予定</title>
+<rect x="1240.0" y="2674.0" width="500" height="112" rx="10" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1490" y="2725" text-anchor="middle" font-size="18">不一致：停止・再撮影</text>
+<text x="1490" y="2747" text-anchor="middle" font-size="18">途中状態を記録して復旧</text>
+</g>
+<g data-module="hardware_models" data-status="prototype_unintegrated">
+<title>機械設計・寸法モデル: 試作あり・統合待ち</title>
+<rect x="50.0" y="1924.0" width="500" height="112" rx="10" fill="#fff3df" stroke="#d18a21" stroke-width="2"/>
+<text x="300" y="1964" text-anchor="middle" font-size="18">機械・モデルの整備</text>
+<text x="300" y="1986" text-anchor="middle" font-size="18">上腕延長の選定・爪・カメラ取付</text>
+<text x="300" y="2008" text-anchor="middle" font-size="18">CAD・URDF・MuJoCoの寸法統一</text>
+</g>
+<g data-module="teaching_snapshots" data-status="implemented">
+<title>静止姿勢の教示記録: 既存実装</title>
+<rect x="50.0" y="1024.0" width="500" height="112" rx="10" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+<text x="300" y="1086" text-anchor="middle" font-size="18">静止4姿勢の教示記録</text>
+</g>
+<g data-module="continuous_teaching" data-status="planned">
+<title>Leader追従・連続教示: 未実装・予定</title>
+<rect x="50.0" y="1174.0" width="500" height="112" rx="10" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="300" y="1225" text-anchor="middle" font-size="18">Leader追従・連続教示</text>
+<text x="300" y="1247" text-anchor="middle" font-size="18">画像・関節角・指令を同期記録</text>
+</g>
+<g data-module="skill_learning" data-status="planned">
+<title>教示経路の利用と短いスキル学習: 未実装・予定</title>
+<rect x="50.0" y="1324.0" width="500" height="112" rx="10" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="300" y="1375" text-anchor="middle" font-size="18">教示を経路候補へ利用</text>
+<text x="300" y="1397" text-anchor="middle" font-size="18">必要時だけ短い動作をACTで学習</text>
+</g>
+</g>
+</svg>
