@@ -188,3 +188,102 @@ Leader は標準長のままでも関節角の教示に使えるが、延長 Fol
 GitHub には段階ごとに小さな変更を反映し、README に「実装済み」「ソフトウェアで検証」「実機で検証」「未確認」を分けて書く。各試験にはコード・モデル・較正の識別子、寸法、局面、画像、実測角、成功条件、失敗理由を残す。鍵・Wi-Fi 情報・個人の接続情報は含めず、重い映像・学習データ・重みは必要なものを選んで別管理する。
 
 最初の着手単位は **「公式 API で 1 関節を確実に動かし、実測できる」** と **「1 本だけ延長した候補が全操作域を満たすか判定できる」** の 2 つ。その基準を通した腕に、チェス由来の搬送と将棋の対局処理を接続する。
+
+**将棋・囲碁の共通構成計画（2026-11-11 追記）**
+
+将棋の現行バックエンド、囲碁の追加構成、未実装・未統合の予定機能を
+[構成・実装計画JSON](../../docs/shogi-go-architecture-plan.json) にまとめた。
+JSONには構成要素、実装状態、接続関係、依存環境、図、実施順序を収録する。
+既存の実施順序と合格条件を維持し、ここに示す構成案を接続先の整理に使う。
+
+| 表示 | 状態 |
+| --- | --- |
+| 白 | 既存のソフトウェア実装。実機での完成を意味しない |
+| 橙 | 試作あり。対局ループへの統合や実機検証が未完了 |
+| 青破線枠 | 未実装・予定。条件付き機能や技術候補はJSONに条件を記載 |
+
+現在の実機送信ゲートは停止したまま。図の接続は完成を目指す構成であり、
+全経路が稼働していることを示さない。囲碁のAI・ルールは未選定で、囲碁は全て未実装。
+駒台・盤追従・LeRobot制御は試作と対局統合を区別する。
+Leaderの静止4姿勢の記録と、今後の追従・連続記録・学習も区別する。
+
+```mermaid
+flowchart TB
+    ui_backend["ブラウザ画面・Python API<br/>対局操作・状態表示・JSON保存"]
+    ui_extension["画面の拡張<br/>ゲーム選択・実機停止・較正設定"]
+    camera["撮影・四隅検出・画像補正<br/>XIAO USB / Wi-Fi / Mac"]
+    image_guard["手・遮蔽・画像鮮度の確認<br/>MediaPipe等は採用候補"]
+    board_tracking["実測較正・盤追従の統合<br/>レンズ・ロボット座標・観測姿勢"]
+    subgraph Shogi["将棋"]
+        direction TB
+        shogi_vision["着手推定<br/>9×9マスの画像差分"]
+        shogi_classifier["駒種・所有者方向・成りの認識<br/>実画像でResNet-18を微調整"]
+        shogi_rules["局面・合法手管理<br/>python-shogi"]
+        shogi_ai["将棋AI<br/>Fairy-Stockfish"]
+        shogi_stand["駒台管理の統合<br/>駒種・空きスロット・実測位置"]
+        shogi_plan["将棋操作計画の拡張<br/>移動・取り・打ち<br/>裏返し台での成り・成駒戻し"]
+    end
+    subgraph Go["囲碁：未実装"]
+        direction TB
+        go_vision["交点認識<br/>黒石・白石・空"]
+        go_geometry["盤の設定<br/>9路・13路・19路の交点座標"]
+        go_rules["局面・ルール管理<br/>捕獲・コウ・パス・終局"]
+        go_ai["囲碁AI<br/>エンジン未選定"]
+        go_inventory["碁笥・回収先の管理<br/>石の供給位置・アゲハマ置き場"]
+        go_plan["囲碁操作計画<br/>着手交点へ配置<br/>捕獲した複数の石を回収"]
+    end
+    motion_integration["共通搬送・運動学の統合<br/>ChessMotion由来の搬送段階<br/>公式FK・IKとの接続"]
+    simulation["MuJoCoで経路・接触を評価<br/>延長腕・実測寸法・周囲の駒や石へ対応"]
+    lerobot_control["公式LeRobot実機経路の統合<br/>関節較正・速度・追従誤差・通信停止監視"]
+    live_gate["実機送信ゲート<br/>現在は送信停止"]
+    execution_monitor["検証後の実機操作<br/>近接補正・把持・解放を段階ごとに確認"]
+    post_action_verify["観測姿勢へ戻り再撮影<br/>盤・駒台・石を予定状態と照合"]
+    commit_record["一致：着手確定・棋譜保存<br/>次の手番へ"]
+    recovery["不一致：停止・再撮影<br/>途中状態を記録して復旧"]
+    hardware_models["機械・モデルの整備<br/>上腕延長の選定・爪・カメラ取付<br/>CAD・URDF・MuJoCoの寸法統一"]
+    teaching_snapshots["既存：4姿勢の静止教示記録"]
+    continuous_teaching["Leader追従・連続教示<br/>画像・関節角・指令を同期記録"]
+    skill_learning["教示を経路候補へ利用<br/>必要時だけ短い動作をACTで学習"]
+    ui_backend --> ui_extension
+    ui_extension --> camera
+    camera --> image_guard
+    image_guard --> board_tracking
+    board_tracking --> shogi_vision
+    board_tracking --> go_vision
+    shogi_vision --> shogi_classifier
+    shogi_classifier --> shogi_rules
+    shogi_rules --> shogi_ai
+    shogi_ai --> shogi_stand
+    shogi_stand --> shogi_plan
+    go_vision --> go_geometry
+    go_geometry --> go_rules
+    go_rules --> go_ai
+    go_ai --> go_inventory
+    go_inventory --> go_plan
+    shogi_plan --> motion_integration
+    go_plan --> motion_integration
+    motion_integration --> simulation
+    simulation --> lerobot_control
+    lerobot_control --> live_gate
+    live_gate --> execution_monitor
+    execution_monitor --> post_action_verify
+    post_action_verify --> commit_record
+    post_action_verify --> recovery
+    hardware_models --> simulation
+    teaching_snapshots --> continuous_teaching
+    continuous_teaching --> skill_learning
+    skill_learning --> motion_integration
+    classDef implemented fill:#ffffff,stroke:#64748b,stroke-width:1.5px;
+    classDef prototype_unintegrated fill:#fff3df,stroke:#d18a21,stroke-width:2px;
+    classDef planned fill:#eaf5ff,stroke:#2684c7,stroke-width:2px,stroke-dasharray:5 5;
+    class ui_backend,camera,shogi_vision,shogi_rules,shogi_ai,live_gate,teaching_snapshots implemented;
+    class board_tracking,shogi_stand,shogi_plan,simulation,lerobot_control,hardware_models prototype_unintegrated;
+    class ui_extension,image_guard,shogi_classifier,go_vision,go_geometry,go_rules,go_ai,go_inventory,go_plan,motion_integration,execution_monitor,post_action_verify,commit_record,recovery,continuous_teaching,skill_learning planned;
+```
+
+将棋では画像差分に駒種・方向・成りの認識を加え、実測駒台と裏返し台を操作列へ統合する。
+囲碁では交点認識、局面・ルール・AI、碁笥と回収先、複数石の捕獲回収を追加する。
+共通側は撮影・座標較正・搬送・経路評価・実機制御・再観測を接続する。
+実物の予定状態との一致を確認してから着手と棋譜を確定し、不一致は停止・再撮影・復旧へ進める。
+
+この追記はコード・設定・計画の静的確認による整理であり、起動・テスト・実機試験の完了報告ではない。
