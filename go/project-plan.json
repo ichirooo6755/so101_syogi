@@ -1,0 +1,813 @@
+{
+  "schema_version": 1,
+  "schema_note": "正式なJSON。予定の変更時は本ファイルとgo/README.mdを更新する。コピー済み・統合済み・検証済みを区別する。",
+  "plan_updated_on": "2026-11-11",
+  "project": {
+    "id": "so101_go_integration",
+    "name": "SO-101 将棋・囲碁の囲碁統合",
+    "main_repository": "https://github.com/ichirooo6755/so101_syogi",
+    "working_branch": "codex/go-integration",
+    "base_commit": "01800a7465432a66d08bee2e9018e23d044ab396",
+    "goal": "本リポジトリを本体とし、KataGoLocal由来の囲碁機能と将棋側の観測・較正・搬送・SO-101制御を接続する。まず9路、その後13/19路を評価する。",
+    "readme": "go/README.md",
+    "primary_tracking_issue": "https://github.com/ichirooo6755/so101_syogi/issues/5"
+  },
+  "current_state": {
+    "source_copy": "completed",
+    "source_modification": "none",
+    "component_extraction": "not_started",
+    "language_selection": "pending",
+    "language_conversion": "not_started",
+    "software_integration": "not_started",
+    "imported_code_build": "not_run",
+    "imported_functional_tests": "not_run",
+    "go_simulation": "not_run",
+    "go_hardware_validation": "not_run",
+    "human_note": "コピーは原文ソースの参照取り込みであり、単独ビルド可能な部品化や対局機能の完成を示さない。既存の将棋実機ゲートは維持する。"
+  },
+  "source_import": {
+    "repository": "https://github.com/notdaigo/KataGoLocal",
+    "repository_visibility": "private",
+    "commit": "7232592822c350cfa2a5720102c8bb39bd942ac5",
+    "destination_prefix": "go/imports/katago-local/",
+    "method": "selected_files_copied_byte_for_byte_with_original_relative_paths",
+    "policy": "既存コードは改変せずコピーする。抽出・言語変更・旧互換処理の除去・API統合は後続の作業とする。依存マニフェストは参照資料であり、全依存の採用を意味しない。",
+    "source_repository_changes": "none",
+    "file_count": 31,
+    "files": [
+      {
+        "source_path": "desktop/src/game.ts",
+        "target_path": "go/imports/katago-local/desktop/src/game.ts",
+        "source_git_blob_sha": "e65936da71643657a94d63dd7399fd4385235b62",
+        "sha256": "b67b50685b4ef3ddb4f47fda4d6e01f59a271e29358d7dc7cbd3fdcf811e150c",
+        "size_bytes": 5886
+      },
+      {
+        "source_path": "desktop/src/record.ts",
+        "target_path": "go/imports/katago-local/desktop/src/record.ts",
+        "source_git_blob_sha": "5df586c9ae79bd11b739e99f106b45268c070760",
+        "sha256": "8b415a86228b11a197226d98097800347c63f03822242e4849fa53aae73362de",
+        "size_bytes": 19125
+      },
+      {
+        "source_path": "desktop/src/sgf.ts",
+        "target_path": "go/imports/katago-local/desktop/src/sgf.ts",
+        "source_git_blob_sha": "c962c5c034a80121b0d429e19cb7060b8d307a7e",
+        "sha256": "35669a8184cb84a5c4cbadf16f9db77ad63af42a3a677bed37843c9d69a58e57",
+        "size_bytes": 5652
+      },
+      {
+        "source_path": "desktop/src/application.ts",
+        "target_path": "go/imports/katago-local/desktop/src/application.ts",
+        "source_git_blob_sha": "368429ab6602f872b9aba71e6d7b06fdff2d9eba",
+        "sha256": "1a0ca6b3acf133c40eae80e7464c9b7b43eb1175fef999c3dd0f955b81c22a16",
+        "size_bytes": 15624
+      },
+      {
+        "source_path": "desktop/src/computation.ts",
+        "target_path": "go/imports/katago-local/desktop/src/computation.ts",
+        "source_git_blob_sha": "74e67d424ad1b4d2e0ff69f791c67f751dd991e7",
+        "sha256": "ae10cd1f7c582ab9f46cf06a672dce26db4aec383dc7462e2ec0e0dee8a53e7a",
+        "size_bytes": 2033
+      },
+      {
+        "source_path": "desktop/src/moveReview.ts",
+        "target_path": "go/imports/katago-local/desktop/src/moveReview.ts",
+        "source_git_blob_sha": "a03874fa2c7434630742df56bdd10895773fd9bf",
+        "sha256": "ae5c804ac77b9624bca7e16742474509d64a673ca9cd063650ff8f682190fc82",
+        "size_bytes": 1744
+      },
+      {
+        "source_path": "desktop/src/GobanView.tsx",
+        "target_path": "go/imports/katago-local/desktop/src/GobanView.tsx",
+        "source_git_blob_sha": "027eb17f3ffa7d18c503f63789dafd49f0bfce21",
+        "sha256": "9afa940f321bf10aa344d6f6786b1cca25fb562ec14eba65298fb0a9e80f701f",
+        "size_bytes": 1730
+      },
+      {
+        "source_path": "desktop/src/styles.css",
+        "target_path": "go/imports/katago-local/desktop/src/styles.css",
+        "source_git_blob_sha": "94f85634b6bf528b7d444f237c664730d9627291",
+        "sha256": "cf266aff6dca6c6b499267138b6b04b17138361a1eaf8565a2e1862ee94eab9b",
+        "size_bytes": 22856
+      },
+      {
+        "source_path": "desktop/src/backend.ts",
+        "target_path": "go/imports/katago-local/desktop/src/backend.ts",
+        "source_git_blob_sha": "bc69aaa082877a88a457c6a7abb0e3dd375335af",
+        "sha256": "20ac9a7cbf124798930613656c19f26dca2897ad1e59d11819cb6fc96053a421",
+        "size_bytes": 3629
+      },
+      {
+        "source_path": "desktop/src/sabaki-sgf.d.ts",
+        "target_path": "go/imports/katago-local/desktop/src/sabaki-sgf.d.ts",
+        "source_git_blob_sha": "972431ea03d259bb7d21483bf6dc117edd266202",
+        "sha256": "d6a8850a8bf6565cf9f8a72ea04c0d6837b0e02077ab52b3a772f23aeeecafa5",
+        "size_bytes": 645
+      },
+      {
+        "source_path": "desktop/src/shudan.d.ts",
+        "target_path": "go/imports/katago-local/desktop/src/shudan.d.ts",
+        "source_git_blob_sha": "ebb2a7b488e5c462e318d5c7f6e6a5cd0f35bdc1",
+        "sha256": "f0aa853bdbe86f4d4d7ee9b8b7f18470942d86a6fa920e06ec443eef3e432c7a",
+        "size_bytes": 1112
+      },
+      {
+        "source_path": "desktop/src/sgf-browser-node.ts",
+        "target_path": "go/imports/katago-local/desktop/src/sgf-browser-node.ts",
+        "source_git_blob_sha": "194df3032a1fd6d1cfde40fa496b6e358605b186",
+        "sha256": "b5e50649781021d7687bfd6693b96eaa89edc3ef521865b4fd6ff051c0dcdba1",
+        "size_bytes": 582
+      },
+      {
+        "source_path": "desktop/package.json",
+        "target_path": "go/imports/katago-local/desktop/package.json",
+        "source_git_blob_sha": "e8c37fbbbd0498d393c1e96282ba69ce1d67044c",
+        "sha256": "3c1071918f564e0253710cbfec70af793ec524aeb183e3ef2dca223e025eb9d1",
+        "size_bytes": 806
+      },
+      {
+        "source_path": "desktop/package-lock.json",
+        "target_path": "go/imports/katago-local/desktop/package-lock.json",
+        "source_git_blob_sha": "4681515d1c2bf4be7b179a8fbf19522d80684932",
+        "sha256": "4584f206de59ff4e257ad21619e6a1442a0b01e95978c838b5dac5a90f80bc23",
+        "size_bytes": 70601
+      },
+      {
+        "source_path": "desktop/tests/game.test.mjs",
+        "target_path": "go/imports/katago-local/desktop/tests/game.test.mjs",
+        "source_git_blob_sha": "70981d87f412c52bf7bd42cc8e275b69a7c84de8",
+        "sha256": "ba25a11c963a0fd41f98a0191ed92bc4c893b70619f892231f604de0e7487225",
+        "size_bytes": 3133
+      },
+      {
+        "source_path": "desktop/tests/record.test.mjs",
+        "target_path": "go/imports/katago-local/desktop/tests/record.test.mjs",
+        "source_git_blob_sha": "3564917c7aa70519d0cf9c695ceea171824e1851",
+        "sha256": "0637bc38558f7b07414a8692f0c804ffe66e6f67bea50a00917cd7ffdecf3caa",
+        "size_bytes": 5849
+      },
+      {
+        "source_path": "desktop/tests/application.test.mjs",
+        "target_path": "go/imports/katago-local/desktop/tests/application.test.mjs",
+        "source_git_blob_sha": "52449859ffcb2ad046d14a42ac939983d94bd41b",
+        "sha256": "ae4ccf5b251fb5a62b371226dedb06e7c95ee89339bb31a94262aebe4b651a25",
+        "size_bytes": 14131
+      },
+      {
+        "source_path": "desktop/tests/moveReview.test.mjs",
+        "target_path": "go/imports/katago-local/desktop/tests/moveReview.test.mjs",
+        "source_git_blob_sha": "b62b1ef8b6bffd292b300600eacdcc721bf78aea",
+        "sha256": "323280a428f3e0d2c3817f12d5cb15802cdae5eaf84179913f180c894e4ce716",
+        "size_bytes": 3261
+      },
+      {
+        "source_path": "crates/katago-local/src/domain.rs",
+        "target_path": "go/imports/katago-local/crates/katago-local/src/domain.rs",
+        "source_git_blob_sha": "49e69a3c35cb0c8bf79e22992368df0e077750e3",
+        "sha256": "e4a7ac97f7e0c83df9072f7c6dfcf0e7f589544348dc2401564382f360f8e4ae",
+        "size_bytes": 11196
+      },
+      {
+        "source_path": "crates/katago-local/src/protocol.rs",
+        "target_path": "go/imports/katago-local/crates/katago-local/src/protocol.rs",
+        "source_git_blob_sha": "f53fb9e08a7e363a2031bbd9180950d10a4f38af",
+        "sha256": "32480244387b952e8b7ce3353e64e924cc5e750fab83c11d6fc6f5729558731f",
+        "size_bytes": 15146
+      },
+      {
+        "source_path": "crates/katago-local/src/engine.rs",
+        "target_path": "go/imports/katago-local/crates/katago-local/src/engine.rs",
+        "source_git_blob_sha": "d729321f9a98d15160d9ac1608b2da5fe3af6454",
+        "sha256": "f5e3ed8b37204cce6acc7a53c59c96cfb9763af9c592707f7c0683511358025f",
+        "size_bytes": 22217
+      },
+      {
+        "source_path": "crates/katago-local/src/storage.rs",
+        "target_path": "go/imports/katago-local/crates/katago-local/src/storage.rs",
+        "source_git_blob_sha": "9aa106a8ccfd00c66e0ec4a5055b58c16f5817db",
+        "sha256": "c5f87b3b07695b87fe4cc8426ed58be8467e66702a4673053f8f4e96bd6a6226",
+        "size_bytes": 6585
+      },
+      {
+        "source_path": "crates/katago-local/src/transport.rs",
+        "target_path": "go/imports/katago-local/crates/katago-local/src/transport.rs",
+        "source_git_blob_sha": "a9b2fac18b4edb34cd65c73574c8dabdadfa446b",
+        "sha256": "7c28bcba057ac5bf50e9b767801c53cb8abda61213a8a77dd99e8ba6b9cf4e96",
+        "size_bytes": 4429
+      },
+      {
+        "source_path": "crates/katago-local/src/compute.rs",
+        "target_path": "go/imports/katago-local/crates/katago-local/src/compute.rs",
+        "source_git_blob_sha": "0f8f80381f8f136080fd253a5717a553c7967451",
+        "sha256": "3f2eab342a478de68ca2be65749f79001f5f3ad45eb386673e04eafb9bca9f41",
+        "size_bytes": 4865
+      },
+      {
+        "source_path": "crates/katago-local/Cargo.toml",
+        "target_path": "go/imports/katago-local/crates/katago-local/Cargo.toml",
+        "source_git_blob_sha": "f80e2579c7d6d322d2a8955749d17a3e4741a666",
+        "sha256": "74f1d1a33e797dc50897a7433e65de6233d6c5c2237c560027a393db339a43e8",
+        "size_bytes": 908
+      },
+      {
+        "source_path": "crates/katago-local/tests/engine.rs",
+        "target_path": "go/imports/katago-local/crates/katago-local/tests/engine.rs",
+        "source_git_blob_sha": "c39e80683fbdfb1aaf3289c874d66b83efcd71ed",
+        "sha256": "ffc92c806ef845994d24f1fbfbadc21a54c60601038b032bccf7166ee6c8ddea",
+        "size_bytes": 11819
+      },
+      {
+        "source_path": "crates/katago-local/tests/support/protocol_fixture.rs",
+        "target_path": "go/imports/katago-local/crates/katago-local/tests/support/protocol_fixture.rs",
+        "source_git_blob_sha": "1e98f4096a580630daaa48f20774f7729d21e31e",
+        "sha256": "16c87ab6e788dde3ad2e90d0d5d178d8e5b68b1b5646b07ea4f201373287c0bd",
+        "size_bytes": 2994
+      },
+      {
+        "source_path": "tools/test_desktop_engine.mjs",
+        "target_path": "go/imports/katago-local/tools/test_desktop_engine.mjs",
+        "source_git_blob_sha": "4da4b060a5e4db072c54fea95e68b7e43fde0cca",
+        "sha256": "d9c111800174ab65fb537875c6f11d322becb977ed298112f6578c7eff7553e8",
+        "size_bytes": 7909
+      },
+      {
+        "source_path": "vendor/config/default_gtp.cfg",
+        "target_path": "go/imports/katago-local/vendor/config/default_gtp.cfg",
+        "source_git_blob_sha": "7c3a8f8341f278e5f51ca331fa203a66dc4f4b52",
+        "sha256": "807c646c5e4f6f5a3193f6da4c216782486ec2a3c3015e543a34f605ce2c0e3f",
+        "size_bytes": 34333
+      },
+      {
+        "source_path": "vendor/config/analysis_example.cfg",
+        "target_path": "go/imports/katago-local/vendor/config/analysis_example.cfg",
+        "source_git_blob_sha": "4aed2f4f85b145f78cac8349f1148869f1ed58f8",
+        "sha256": "8bbe04b7a940128def93bf7c7af198fa08fc124d99df0758b4e8e7469d9d3963",
+        "size_bytes": 23823
+      },
+      {
+        "source_path": "vendor/manifest.json",
+        "target_path": "go/imports/katago-local/vendor/manifest.json",
+        "source_git_blob_sha": "3d2851d81a896c114e53cb6dbd0ddbf3ba3c0cad",
+        "sha256": "c3880ff5591df15d08693e7f5041e697b37b5217d8dbca16380170c51a64a6b7",
+        "size_bytes": 1618
+      }
+    ]
+  },
+  "decisions": {
+    "compatibility": {
+      "policy": "do_not_preserve_legacy_compatibility",
+      "not_required": [
+        "旧CLI/API名・引数・戻り値の維持",
+        "旧DB・旧解析キャッシュ形式の読込・変換",
+        "旧アプリの画面遷移・配布形式の維持",
+        "旧実装との出力一致のみを目的とする比較"
+      ],
+      "still_required": [
+        "採用した囲碁ルールの正しさ",
+        "棋譜・履歴・解析条件の一貫性",
+        "中断・古い応答・実機失敗で確定局面を壊さないこと"
+      ],
+      "unchanged_copy_note": "取り込んだengine.rs・domain.rs・storage.rs・transport.rs・エンジンテスト等には旧互換処理の断片や未同梱コードへの参照が残る。原文コピーのため残したもので、後続の抽出で整理する。"
+    },
+    "language_and_runtime": {
+      "status": "pending",
+      "existing_main_application": [
+        "Python",
+        "HTML",
+        "JavaScript"
+      ],
+      "imported_source_languages": [
+        "TypeScript",
+        "TSX/React",
+        "Rust"
+      ],
+      "principle": "既存の将棋側との対応を優先する。移植元の言語・API・フレームワークを維持することを条件にしない。",
+      "options_to_compare": [
+        "囲碁の局面・棋譜・対局管理をPythonへ書き換える、または要件を満たす既存ライブラリに置き換える",
+        "KataGoのGTP/Analysis通信をPythonへ移植し、本体から直接呼ぶ",
+        "KataGo通信・中断・プロセス管理のRust部品を残し、Pythonが子プロセスとして呼ぶ",
+        "TypeScriptの局面・SGF処理を残す場合に限り、Pythonとの明示的な通信境界と実行環境を設ける",
+        "囲碁画面を既存HTML/JavaScriptへ合わせるか、任意のReact部品として組み込む"
+      ],
+      "constraints": [
+        "Python本体とブラウザーで別々の確定局面を持たず、局面の正本を一つに定める",
+        "Node.js・React・Tauriの追加を前提にしない",
+        "KataGo本体を再実装しない",
+        "実機の時間制約がある制御は既存ローカル制御側に置く",
+        "言語を変えても機能の対応と検証ケースを残す"
+      ],
+      "acceptance": "構成図、採用言語、呼出し契約、局面の正本、実行環境、依存版と選定理由を記録する。"
+    }
+  },
+  "migration_items": [
+    {
+      "id": "M01",
+      "priority": "required",
+      "title": "囲碁の局面・ルール",
+      "source_paths": [
+        "desktop/src/game.ts"
+      ],
+      "source_copy_status": "copied_unchanged",
+      "adaptation_status": "not_started",
+      "scope": [
+        "石配置",
+        "手番",
+        "取り上げ",
+        "自殺手",
+        "単純コウ",
+        "パス",
+        "座標変換"
+      ],
+      "todo": "本体から利用できる局面機能へ抽出する。Python化・ライブラリ置換も比較する。",
+      "acceptance": [
+        "9路の着手と石取りを独立して試験できる",
+        "スーパーコウや終局の未対応範囲を明示する"
+      ]
+    },
+    {
+      "id": "M02",
+      "priority": "required",
+      "title": "棋譜・SGF",
+      "source_paths": [
+        "desktop/src/record.ts",
+        "desktop/src/sgf.ts"
+      ],
+      "source_copy_status": "copied_unchanged",
+      "adaptation_status": "not_started",
+      "scope": [
+        "着手履歴",
+        "初期配置",
+        "分岐",
+        "コメント",
+        "SGF読込・保存",
+        "KataGo用履歴"
+      ],
+      "todo": "対局管理から棋譜入出力を呼べる境界を作る。言語変更時も機能と文字コードの扱いを対応させる。",
+      "acceptance": [
+        "SGF保存・再読込で盤面・手番・履歴が一致する",
+        "不正な入力で現在の棋譜を破壊しない"
+      ]
+    },
+    {
+      "id": "M03",
+      "priority": "required",
+      "title": "KataGoとの通信",
+      "source_paths": [
+        "crates/katago-local/src/protocol.rs",
+        "crates/katago-local/src/engine.rs",
+        "crates/katago-local/src/transport.rs",
+        "crates/katago-local/src/compute.rs"
+      ],
+      "source_copy_status": "copied_unchanged",
+      "adaptation_status": "not_started",
+      "scope": [
+        "GTP/Analysis",
+        "AI応手",
+        "局面評価",
+        "非同期処理",
+        "中断",
+        "タイムアウト",
+        "プロセス回収",
+        "診断ログ"
+      ],
+      "todo": "Python実装またはRust子プロセスを比較し、旧互換処理とWindows固有の前提を外す。",
+      "acceptance": [
+        "9路の局面と履歴から合法な応手が得られる",
+        "中断・EOF・終了時に不要なKataGoプロセスを残さない"
+      ]
+    },
+    {
+      "id": "M04",
+      "priority": "required",
+      "title": "共通データ定義",
+      "source_paths": [
+        "crates/katago-local/src/domain.rs",
+        "desktop/src/backend.ts"
+      ],
+      "source_copy_status": "copied_unchanged",
+      "adaptation_status": "not_started",
+      "scope": [
+        "色",
+        "交点",
+        "局面",
+        "ルール",
+        "コミ",
+        "探索条件",
+        "解析結果"
+      ],
+      "todo": "旧アプリの型・Tauri通信から必要なデータを切り離し、Python本体との型と座標の契約を決める。",
+      "acceptance": [
+        "色・座標・パス・投了・盤サイズ・単位が一意に定義される",
+        "局面の正本が一つに定まる"
+      ]
+    },
+    {
+      "id": "M05",
+      "priority": "required",
+      "title": "AI処理と着手確定の管理",
+      "source_paths": [
+        "desktop/src/application.ts",
+        "desktop/src/computation.ts"
+      ],
+      "source_copy_status": "copied_unchanged",
+      "adaptation_status": "not_started",
+      "scope": [
+        "結果の保留",
+        "中断",
+        "局面リビジョン",
+        "古い応答の破棄"
+      ],
+      "todo": "画面中心の確定処理を抽出し、将棋側のpendingと対応させ、実盤面確認後に確定する方式へ改める。",
+      "acceptance": [
+        "AI応手取得だけでは実物の着手を確定しない",
+        "古い応答・再試行で同じ手を二重確定しない"
+      ]
+    },
+    {
+      "id": "M06",
+      "priority": "basic",
+      "title": "設定保存・解析キャッシュ",
+      "source_paths": [
+        "crates/katago-local/src/storage.rs"
+      ],
+      "source_copy_status": "copied_unchanged",
+      "adaptation_status": "not_started",
+      "scope": [
+        "設定保存",
+        "解析結果の保存",
+        "原子的ファイル保存"
+      ],
+      "todo": "必要な保存機能を抽出し、旧DBの変換を含めず新しい形式を定義する。",
+      "acceptance": [
+        "異なる局面・履歴・ルール・モデル・探索条件を混同しない",
+        "保存失敗で既存ファイルを破壊しない"
+      ]
+    },
+    {
+      "id": "M07",
+      "priority": "later",
+      "title": "解析・検討機能",
+      "source_paths": [
+        "desktop/src/moveReview.ts",
+        "crates/katago-local/src/engine.rs"
+      ],
+      "source_copy_status": "copied_unchanged",
+      "adaptation_status": "not_started",
+      "scope": [
+        "勝率",
+        "目差",
+        "候補手",
+        "読み筋",
+        "各手の評価"
+      ],
+      "todo": "対局制御とは独立した任意の解析機能として抽出する。",
+      "acceptance": [
+        "解析が確定局面や実機動作を変更しない",
+        "評価の視点と対象局面を明示する"
+      ]
+    },
+    {
+      "id": "M08",
+      "priority": "optional",
+      "title": "碁盤表示部品",
+      "source_paths": [
+        "desktop/src/GobanView.tsx",
+        "desktop/src/styles.css"
+      ],
+      "source_copy_status": "copied_unchanged",
+      "adaptation_status": "not_started",
+      "scope": [
+        "盤・石・候補手の表示",
+        "等比拡縮",
+        "小画面での表示"
+      ],
+      "todo": "既存HTML/JavaScriptへの書き換えを含めて採否を判断し、必要な表示部分だけを取り込む。",
+      "acceptance": [
+        "ロボットが参照する確定局面と表示が一致する",
+        "画面サイズで交点や着手座標が変わらない"
+      ]
+    },
+    {
+      "id": "M09",
+      "priority": "required",
+      "title": "機能テスト",
+      "source_paths": [
+        "desktop/tests/game.test.mjs",
+        "desktop/tests/record.test.mjs",
+        "desktop/tests/application.test.mjs",
+        "desktop/tests/moveReview.test.mjs",
+        "crates/katago-local/tests/engine.rs",
+        "crates/katago-local/tests/support/protocol_fixture.rs",
+        "tools/test_desktop_engine.mjs"
+      ],
+      "source_copy_status": "copied_unchanged",
+      "adaptation_status": "not_started",
+      "scope": [
+        "ルール",
+        "SGF往復",
+        "実エンジン応手",
+        "中断",
+        "古い結果の拒否"
+      ],
+      "todo": "新しい構成と言語で有効なケースを移植し、旧互換性比較や旧API専用のケースは採用しない。",
+      "acceptance": [
+        "原文テストのコピーを実行成功として数えない",
+        "採用機能のテストと実KataGoでの連携結果を記録する"
+      ]
+    }
+  ],
+  "shared_shogi_components": [
+    {
+      "id": "S01",
+      "area": "カメラ・ファーム",
+      "existing_paths": [
+        "shogi/app/usb_camera.py",
+        "shogi/app/mac_camera.py",
+        "shogi/firmware/ShogiCamera/"
+      ],
+      "required_adaptation": "取得画像を囲碁認識へ渡し、鮮度・遮蔽・切断を評価する。"
+    },
+    {
+      "id": "S02",
+      "area": "四隅検出・較正",
+      "existing_paths": [
+        "shogi/app/markers.py",
+        "shogi/app/board_tracking.py",
+        "shogi/app/board_pose.py"
+      ],
+      "required_adaptation": "実測の囲碁盤・観測姿勢で検証する。画像補正とロボット較正を区別する。"
+    },
+    {
+      "id": "S03",
+      "area": "盤座標",
+      "existing_paths": [
+        "shogi/app/board_map.py",
+        "docs/board-geometry.md"
+      ],
+      "required_adaptation": "将棋のマス中心と筋段を固定流用せず、囲碁の交点と盤の向きへ一般化する。"
+    },
+    {
+      "id": "S04",
+      "area": "動作計画・シミュレーション",
+      "existing_paths": [
+        "shogi/app/motion.py",
+        "shogi/app/move_plan.py",
+        "shogi/simulation/"
+      ],
+      "required_adaptation": "碁石・隣接石・供給回収場所・全交点・連続経路の到達と接触を評価する。"
+    },
+    {
+      "id": "S05",
+      "area": "実機制御・教示",
+      "existing_paths": [
+        "shogi/app/robot_arm.py",
+        "shogi/app/lerobot_motion.py",
+        "shogi/app/teach_capture.py",
+        "shogi/app/teach_store.py"
+      ],
+      "required_adaptation": "機体識別・較正・停止を共通利用し、実機ゲート通過前は動かさない。未統合の試作は別途検証する。"
+    },
+    {
+      "id": "S06",
+      "area": "対局ループ",
+      "existing_paths": [
+        "shogi/app/server.py",
+        "shogi/app/vision_turn.py"
+      ],
+      "required_adaptation": "予定手とリビジョンの考え方を共通化する。SFEN/USI・駒の移動・固定9×9の認識を囲碁用に置き換える。"
+    }
+  ],
+  "new_implementation_tasks": [
+    {
+      "id": "N01",
+      "title": "言語・プロセス境界の決定",
+      "status": "not_started",
+      "depends_on": [],
+      "work": "Pythonへの書き換え・ライブラリ置換・Rust子プロセス・TypeScript維持を比較し、局面の正本と呼出し契約を決める。",
+      "acceptance": "採用言語、理由、依存、色・座標・単位、実行環境を記録する。"
+    },
+    {
+      "id": "N02",
+      "title": "ゲーム別アダプター",
+      "status": "not_started",
+      "depends_on": [
+        "N01",
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M05"
+      ],
+      "work": "Python本体の対局ループと囲碁を接続し、将棋固有のSFEN/USIを分離する。",
+      "acceptance": "9路の人の着手・KataGo応手・棋譜保存が画面やアームなしで往復する。"
+    },
+    {
+      "id": "N03",
+      "title": "実寸と交点のロボット座標",
+      "status": "not_started",
+      "depends_on": [
+        "N01"
+      ],
+      "work": "盤・石・爪・供給回収位置を実測し、9路から座標変換と到達範囲を定義する。",
+      "shogi_components": [
+        "S02",
+        "S03"
+      ],
+      "acceptance": "較正に使用していない交点でも誤差を測定でき、単位・向き・日付が記録される。"
+    },
+    {
+      "id": "N04",
+      "title": "黒石・白石・空交点の認識",
+      "status": "not_started",
+      "depends_on": [
+        "N02",
+        "N03"
+      ],
+      "work": "人の着手・複数石取り・遮蔽・盤ずれを照合する。将棋の9×9画像差分をそのまま採用しない。",
+      "shogi_components": [
+        "S01",
+        "S02",
+        "S06"
+      ],
+      "acceptance": "撮影条件を分けた評価画像で正誤と棄却を記録し、不確かな局面を自動確定しない。"
+    },
+    {
+      "id": "N05",
+      "title": "石の供給・配置・回収",
+      "status": "not_started",
+      "depends_on": [
+        "N03"
+      ],
+      "work": "供給場所からの把持、交点への配置、取られた複数石の回収、隣接石との干渉を扱う。",
+      "shogi_components": [
+        "S04",
+        "S05"
+      ],
+      "acceptance": "単石と密集配置で供給から離脱までの操作列・障害物・回収位置を評価できる。"
+    },
+    {
+      "id": "N06",
+      "title": "実盤確認後の確定と途中復旧",
+      "status": "not_started",
+      "depends_on": [
+        "N02",
+        "N04",
+        "N05"
+      ],
+      "work": "着手予定・配置・回収・再観測・確定の状態を記録し、失敗・切断・再試行・二重実行を扱う。パス・投了は物理動作と分ける。",
+      "acceptance": "模擬アームで各段階の失敗を再現し、盤面を先行確定せず同じ石を二重処理しない。"
+    },
+    {
+      "id": "N07",
+      "title": "厳密なルールと終局",
+      "status": "not_started",
+      "depends_on": [
+        "N01",
+        "M01",
+        "M02",
+        "M03"
+      ],
+      "work": "採用ルール・スーパーコウ・連続パス・投了・死活確認・地合い計算・結果確定を定義し実装する。",
+      "acceptance": "既存の単純コウ処理と追加する判定を区別し、履歴を含む代表局面と終局を検証する。"
+    },
+    {
+      "id": "N08",
+      "title": "Mac主体のKataGo実行環境",
+      "status": "not_started",
+      "depends_on": [
+        "N01",
+        "M03",
+        "M04"
+      ],
+      "work": "KataGo・モデル・設定の取得配置とパス、利用する計算方式、起動・中断・ログを整備する。Windows専用処理は移植しない。",
+      "acceptance": "対象環境で実エンジン応手と中断を確認し、実行ファイル・モデル・設定の識別情報を残す。"
+    },
+    {
+      "id": "N09",
+      "title": "9路の模擬対局・シミュレーション",
+      "status": "not_started",
+      "depends_on": [
+        "N02",
+        "N03",
+        "N05",
+        "N06",
+        "N07",
+        "N08",
+        "M09"
+      ],
+      "work": "全交点と供給回収位置の到達・干渉・連続経路、複数石取り、パス、途中失敗を評価する。",
+      "acceptance": "使用モデル・寸法・局面・成功条件・失敗を記録する。静止IKだけを実機動作成功と数えない。"
+    },
+    {
+      "id": "N10",
+      "title": "9路の実機評価と13/19路への拡張",
+      "status": "not_started",
+      "depends_on": [
+        "N09"
+      ],
+      "external_dependencies": [
+        "https://github.com/ichirooo6755/so101_syogi/issues/1",
+        "https://github.com/ichirooo6755/so101_syogi/issues/2",
+        "https://github.com/ichirooo6755/so101_syogi/issues/3"
+      ],
+      "work": "機体識別・関節制御・較正・停止を確認してから単石、複数石回収、連続対局を段階評価する。13/19路は別途到達評価する。",
+      "acceptance": "実機の盤と確定局面の一致を記録し、未解決箇所を残した状態を全盤対応や対局完成と表記しない。"
+    }
+  ],
+  "milestones": [
+    {
+      "id": "P0",
+      "title": "原文コピーと計画の保存",
+      "status": "completed",
+      "deliverables": [
+        "go/imports/katago-local/",
+        "go/README.md",
+        "go/project-plan.json"
+      ],
+      "evidence": "各ファイルの移植元blob SHA、SHA-256、サイズをsource_import.filesに記録する。"
+    },
+    {
+      "id": "P1",
+      "title": "言語と局面の正本を決める",
+      "status": "not_started",
+      "task_ids": [
+        "N01"
+      ]
+    },
+    {
+      "id": "P2",
+      "title": "9路の局面・SGF・実KataGo",
+      "status": "not_started",
+      "task_ids": [
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M05",
+        "M09",
+        "N02",
+        "N07",
+        "N08"
+      ]
+    },
+    {
+      "id": "P3",
+      "title": "模擬アームと予定・実行・確定・復旧",
+      "status": "not_started",
+      "task_ids": [
+        "N04",
+        "N05",
+        "N06"
+      ]
+    },
+    {
+      "id": "P4",
+      "title": "実寸を反映した9路シミュレーション",
+      "status": "not_started",
+      "task_ids": [
+        "N03",
+        "N09"
+      ]
+    },
+    {
+      "id": "P5",
+      "title": "9路の実機と盤サイズ拡張",
+      "status": "not_started",
+      "task_ids": [
+        "N10"
+      ]
+    },
+    {
+      "id": "P6",
+      "title": "任意の解析・表示機能",
+      "status": "not_started",
+      "task_ids": [
+        "M06",
+        "M07",
+        "M08"
+      ]
+    }
+  ],
+  "excluded_from_import": [
+    "crates/katago-local/src/legacy.rs",
+    "crates/katago-local/src/board.rs",
+    "crates/katago-local/src/sgf.rs",
+    "crates/katago-local/tests/compatibility.rs と互換性fixture",
+    "desktop/src/App.tsx とTauriシェル・Windowsインストーラー",
+    "crates/katago-local/src/compute/windows.rs とWindows用vendor.rs",
+    "KataGo実行ファイル・DLL・モデル・ダウンロードZIP",
+    "DB・認証情報・実機較正値・ブラウザープロファイル・実験の大容量データ"
+  ],
+  "validation": {
+    "source_copy_integrity": "source_git_blob_sha_and_sha256_recorded_for_every_file",
+    "json_format": "strict_json",
+    "build_and_functional_tests": "not_run_for_unintegrated_source_snapshot",
+    "hardware": "not_run",
+    "reporting_policy": "コピー・抽出・統合・機能試験・シミュレーション・実機試験を別の状態で更新する。原文テストをコピーしただけで成功扱いにしない。"
+  },
+  "schedule": {
+    "completion_date": null,
+    "human_note": "言語、実行環境、実寸、実機接続・較正が未確定のため完了日を固定しない。"
+  }
+}

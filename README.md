@@ -1,12 +1,14 @@
 # SO-101 で将棋と囲碁をやる
 
 SO-101（SO-ARM101 系 6 軸アーム）で、実物の将棋と囲碁を人と対局できるようにするプロジェクトです。
-**現状は将棋の開発途中で、実機対局はまだ成立していません。囲碁は未着手です。**
+**将棋の実機対局はまだ成立していません。囲碁はKataGoLocal由来ソースの無変更コピーと計画整備までで、対局機能・実機制御への統合は未完了です。**
 
 - 対象リポジトリ: https://github.com/ichirooo6755/so101_syogi
 - 作業元（ローカル）: `~/Documents/ChatGPT/syogi` が将棋の本体、`~/Documents/ChatGPT/so101` が SO-101 本体まわり（カメラ／ロードセル台座・書道）。どちらも本リポジトリに入れました。`nnw`、`kobelco` は別プロジェクトなので入れていません（理由は [docs/repo-map.md](docs/repo-map.md)）。
 
-## 現在地（2026-11-10 時点・引き継ぎ用）
+## 現在地（2026-11-11 更新・引き継ぎ用）
+
+囲碁のソース取り込み・計画を2026-11-11に更新しました。将棋・本体の実機状況は既存記録に基づき、今回再検証したものではありません。
 
 | 項目 | 状態 |
 | --- | --- |
@@ -16,7 +18,7 @@ SO-101（SO-ARM101 系 6 軸アーム）で、実物の将棋と囲碁を人と�
 | 実機（Follower） | USB 未接続の記録が最新。`shogi/app/robot_arm.py` はトルク有効化を拒否する。実機で駒をつかむ／取る／打つ／成るは未検証 |
 | 上腕延長部品 | +50 / +58 / +75 / +100 / +125 mm の比較試作（STEP/STL・試算 JSON）。最終寸法は未決定、未印刷のものを含む |
 | 手首カメラ | XIAO ESP32S3 Sense 用ファーム（`shogi/firmware/ShogiCamera/`）とマウント試作あり。実機撮影は未試験 |
-| 囲碁 | **未着手。** 設計メモだけ [go/README.md](go/README.md) に置いた |
+| 囲碁 | **ソース取り込み・計画整備済み、機能未統合。** KataGoLocalの31ファイルを無変更でコピー。[go/README.md](go/README.md) と [go/project-plan.json](go/project-plan.json) に移植・新規実装・言語変更のTODOを記録 |
 
 進捗の全体地図は [docs/progress.md](docs/progress.md)。
 詳しい現状・次にやることは将棋側の正本 [shogi/README.md](shogi/README.md) と
@@ -45,8 +47,10 @@ SO-101 本体側は [so101/README.md](so101/README.md) が優先です。
 │   ├── tests/                 # 単体テスト
 │   ├── scripts/fetch_upstream.sh  # vendor/ の再取得（Fairy-Stockfish 等）
 │   └── output/                # 延長部品 STEP/STL と試算 JSON、マウント試作
-├── go/                        # 囲碁（未着手、設計メモのみ）
-│   └── README.md
+├── go/                        # 囲碁（原文ソース取り込み済み・機能未統合）
+│   ├── README.md              # 現状・コピー範囲・統合方針
+│   ├── project-plan.json      # TODO・言語変更候補・状態・コピーのハッシュ一覧
+│   └── imports/katago-local/  # KataGoLocal由来の選択ソース（無変更）
 └── so101/                     # SO-101 本体まわり（元 ~/Documents/ChatGPT/so101）
     ├── README.md              # 本体側の進捗の索引
     ├── output/                # 手首カメラ＋HX711台座 V1–V8、筆保持 V2–V8
@@ -95,3 +99,4 @@ make -C vendor/Fairy-Stockfish/src -j4 build ARCH=apple-silicon largeboards=yes
 - 実機が未準備な状態で成功を保証する記述を増やさないこと。「シミュレーションで浮いた＝実機でできる」ではありません。
 - 鍵・Wi-Fi 情報・個人の接続情報をコミットしないこと。
 - 大きな学習データ・動画・重みは本リポジトリに入れず、別管理にして参照だけ書くこと。
+

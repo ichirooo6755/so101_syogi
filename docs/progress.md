@@ -1,4 +1,6 @@
-# 進捗の一覧（2026-11-10 時点）
+# 進捗の一覧（2026-11-11 更新）
+
+2026-11-11の更新は囲碁の原文ソース取り込みと計画整備です。将棋・SO-101の実機状況は従来の記録を維持し、今回再試験したものではありません。
 
 `~/Documents/ChatGPT/` にあった SO-101・将棋・囲碁まわりの進捗を、本リポジトリに入れたあとの
 **現状の正本**です。詳細は各 README を優先し、ここは全体の地図です。
@@ -6,7 +8,7 @@
 | 領域 | 状態の一文 | 詳細の正本 |
 | --- | --- | --- |
 | 将棋 | 開発途中。Mac 上の対局ループとシミュレーションはあるが、実機対局は未成立 | [`shogi/README.md`](../shogi/README.md)、[`shogi/docs/shogi-implementation-plan.md`](../shogi/docs/shogi-implementation-plan.md) |
-| 囲碁 | 未着手（設計メモのみ） | [`go/README.md`](../go/README.md) |
+| 囲碁 | KataGoLocalの31ファイルを無変更コピー。抽出・言語変換・対局/実機への統合は未着手 | [`go/README.md`](../go/README.md)、[`go/project-plan.json`](../go/project-plan.json) |
 | SO-101 台座・CAD | 手首カメラ＋HX711 台座は V8（ねじ固定）まで試作。筆保持は V8 本体4点。実印刷・強度・通電は未検証 | [`so101/README.md`](../so101/README.md)、[`so101/output/README.md`](../so101/output/README.md) |
 | SO-101 書道 | 実機で 1–4 文字を書く段階。正本は別リポジトリ [syodo](https://github.com/ichirooo6755/syodo)。本リポジトリの `so101/syodo/` は同内容の取り込み（学習 run・データセットは大容量のため未収録） | [`so101/syodo/README.md`](../so101/syodo/README.md)、[`so101/syodo/docs/hardware-open.md`](../so101/syodo/docs/hardware-open.md)、[`so101/syodo/docs/training-runs.md`](../so101/syodo/docs/training-runs.md) |
 | 薄膜シミュ | 履歴として取り込み。コードと代表出力のみ（大きな状態ファイルは未収録） | [`so101/soap_film/README.md`](../so101/soap_film/README.md) |
@@ -28,8 +30,11 @@
 
 ## 囲碁の進捗（要約）
 
-- ローカルにも実装ファイルは無かった。`go/README.md` に将棋からの流用見込みと、交点座標・石の把持・碁笥・ルール選定の洗い出しだけ置いた。
-- 盤座標の設計置き場は [`board-geometry.md`](board-geometry.md)。
+- `go/imports/katago-local/` に、KataGoLocalのコミット `7232592822c350cfa2a5720102c8bb39bd942ac5` から局面・SGF・KataGo通信・確定管理・保存・任意UI・機能テスト等の31ファイルをバイト列無変更でコピーしました。
+- コピーは未統合のソース参照です。部品としての抽出、依存整理、言語選定・Pythonへの書き換え、ビルド・機能試験・囲碁シミュレーション・囲碁実機試験は未実施です。
+- [`go/project-plan.json`](../go/project-plan.json) に移植対象M01–M09、新規実装N01–N10、将棋側の対応先、優先度・依存関係・完了条件、コピーのblob SHA/SHA-256を記録しました。
+- 旧API・旧DB/キャッシュ形式の互換維持は対象外。将棋のPython + HTML/JavaScriptへ合わせた言語変更も候補です。
+- 盤座標の設計置き場は [`board-geometry.md`](board-geometry.md)。実機は既存の将棋側ゲート通過後に進めます。
 
 ## 大容量で実ファイルを入れていない進捗データ
 
@@ -51,3 +56,4 @@
 - 元: `~/Documents/ChatGPT/so101` → 本リポ `so101/`（学習 run 等の超大容量は除く）
 - 入れていない: `kobelco/`、`nnw/`（対応表は [repo-map.md](repo-map.md)）
 - 整理の経緯: [organization-2026-11-10.md](organization-2026-11-10.md)
+

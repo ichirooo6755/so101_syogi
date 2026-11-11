@@ -1,0 +1,37 @@
+{
+  "default_paths": {
+    "analysis_config_path": "vendor/config/analysis_example.cfg",
+    "cuda_path": "vendor/katago-cuda/katago.exe",
+    "gtp_config_path": "vendor/config/default_gtp.cfg",
+    "katago_path": "vendor/katago/katago.exe",
+    "model_path": "vendor/models/b10c384h6nbttflrs.bin.gz",
+    "opencl_path": "vendor/katago-opencl/katago.exe"
+  },
+  "engine_asset": "katago-v1.17.1-eigenavx2-windows-x64.zip",
+  "engine_sha256": "f13f1126575a22dc728e931011b1b2e404ce2d02b566876a44a01aea3d27e293",
+  "engines": [
+    {
+      "asset": "katago-v1.17.1-eigenavx2-windows-x64.zip",
+      "backend": "cpu",
+      "path": "vendor/katago/katago.exe",
+      "sha256": "f13f1126575a22dc728e931011b1b2e404ce2d02b566876a44a01aea3d27e293"
+    },
+    {
+      "asset": "katago-v1.17.1-opencl-windows-x64.zip",
+      "backend": "opencl",
+      "path": "vendor/katago-opencl/katago.exe",
+      "sha256": "68d0a9b11ef7e3c1ddfc5bcd400306ca66c3770dd67a22cb377d3aaaf32e8c66"
+    },
+    {
+      "asset": "katago-v1.17.1-cuda12.1-cudnn9.8.0-windows-x64.zip",
+      "backend": "cuda",
+      "path": "vendor/katago-cuda/katago.exe",
+      "sha256": "b081832d48b4a553436ad5c54f9c4f4feff39df7b52e68228929e9f8a70988bc"
+    }
+  ],
+  "gpu_runtime_note": "GPUドライバーが必要。CUDA版はCUDA 12／cuDNN 9ランタイムも必要で、利用できない場合は同梱OpenCL版を試す。",
+  "katago_version": "v1.17.1",
+  "model_asset": "b10c384h6nbttflrs.bin.gz",
+  "model_sha256": "0ba27eced5180b3e3d0b898b280c541112989765e789d1eb6cd0d31b2b2c1229",
+  "source": "https://github.com/lightvector/KataGo/releases/tag/v1.17.1"
+}
