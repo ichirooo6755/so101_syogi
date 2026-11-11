@@ -36,7 +36,7 @@
 | モーター・較正・教示 | [huggingface/lerobot](https://github.com/huggingface/lerobot) | `SO101Follower`、`SO101Leader`、`get_observation`、`send_action`、データ記録を使う。低水準のサーボ通信を作り直さない |
 | チェス由来の搬送 | [yanizhang-yz/so-arm101-chess-robot](https://github.com/yanizhang-yz/so-arm101-chess-robot/tree/bb091cb96cf24192d632fee56ef959599b57de29) | `ChessMotion` の接近・段階下降・把持・持ち上げ・配置と `ArmBackend` / `MockArm` を第一候補とする。9×9、平たい駒、駒台、裏返しの橋渡しを追加する |
 | FK・IK | [LeRobot RobotKinematics / Placo](https://github.com/huggingface/lerobot/blob/main/src/lerobot/model/kinematics.py) | 公式モデルを使う運動学の基準。候補の残差・関節範囲・経路接触は別途検査する。チェス側の IK は比較用に残す |
-| 将棋の局面・指し手 | [python-shogi](https://github.com/The-User-Python/python-shogi)、[Fairy-Stockfish](https://github.com/fairy-stockfish/Fairy-Stockfish) | 既存導入を継続。局面・合法手・USI を再実装せず、Mac で AI の応手を計算する |
+| 将棋の局面・指し手 | [python-shogi](https://github.com/The-User-Python/python-shogi)、[やねうら王](https://github.com/yaneurao/YaneuraOu) | 局面管理は継続し、応手はやねうら王/USIへ変更。実行ファイルと対応する評価関数を準備してMacで検証する |
 | 四隅・カメラ較正 | [OpenCV ArUco](https://docs.opencv.org/4.x/d9/d6a/group__aruco.html)、[calib3d](https://docs.opencv.org/4.x/d9/d0c/group__calib3d.html) | 既存の四隅マーカー、レンズ歪み補正、盤座標変換を利用。カメラが動く観測には外部較正も必要 |
 | 人の手の検出 | [MediaPipe Hand Landmarker](https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker/python) と画像の動き | 観測画像に手がある間の着手確定を抑止する候補。実際の画角で評価し、検出なしだけで安全を保証しない |
 | 駒認識 | [Torchvision ResNet-18](https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.resnet18.html) | 既存の画像分類器を実際の駒で微調整。正規化した 81 マスと合法手の比較に使う |
@@ -149,7 +149,7 @@ USB-C は既存の [JPEG 取得ファーム](../firmware/ShogiCamera/README.md)�
 
 **学習するもの・しないもの**
 
-将棋の思考は Fairy-Stockfish に任せるので、新たな棋力学習は不要。関節制御・較正・届く範囲は設計と実測で成立させる。学習の対象は次の順序で限定する。
+将棋の思考はやねうら王に任せるので、新たな棋力学習は不要。関節制御・較正・届く範囲は設計と実測で成立させる。学習の対象は次の順序で限定する。
 
 1. **駒種・向き・成りの認識。** 盤補正後の各マスを既存 ResNet-18 で分類する。14 駒種×2 方向＋空の 29 クラスを基準とし、手・遮蔽・低信頼画像は別に棄却する。実物の駒、XIAO、実照明で撮影し、まず各非空クラス 100〜300 枚を収集の目安とする。これは必要枚数の保証ではなく、誤りを見て追加する。連続動画の隣接フレームを学習と評価に分けず、撮影日・配置ごとに分離する。
 2. **難しい箇所の教示。** Leader で成功する接近・把持・解放を教える。最初は記録を IK の初期姿勢や候補経路に利用する。数例で直る箇所に、いきなり大きな学習をかけない。物理的に届かないマスは設計へ戻す。
@@ -189,9 +189,9 @@ GitHub には段階ごとに小さな変更を反映し、README に「実装済
 
 最初の着手単位は **「公式 API で 1 関節を確実に動かし、実測できる」** と **「1 本だけ延長した候補が全操作域を満たすか判定できる」** の 2 つ。その基準を通した腕に、チェス由来の搬送と将棋の対局処理を接続する。
 
-**将棋・囲碁の共通構成計画（2026-11-11 追記）**
+**将棋・囲碁・チェスの共通構成計画（2026-11-11 追記）**
 
-将棋の現行バックエンド、囲碁の追加構成、未実装・未統合の予定機能を
+将棋の現行バックエンド、囲碁・チェスの追加構成、未実装・未統合の予定機能を
 [構成・実装計画JSON](../../構成図/構成図.json) にまとめた。
 JSONには構成要素、実装状態、接続関係、依存環境、図、実施順序を収録する。
 既存の実施順序と合格条件を維持し、ここに示す構成案を接続先の整理に使う。
@@ -207,7 +207,8 @@ JSONには構成要素、実装状態、接続関係、依存環境、図、実�
 | 赤 | 課題で停止。理由と再開条件は確認根拠を参照 |
 
 現在の実機送信ゲートは停止したまま。図の接続は完成を目指す構成であり、
-全経路が稼働していることを示さない。囲碁のAI・ルールは未選定で、囲碁は全て未実装。
+全経路が稼働していることを示さない。囲碁のAI・ルールは未選定。チェスはStockfish/UCIを採用し、囲碁・チェスの機能は全て未実装。
+将棋はやねうら王/USIへ変更し、実バイナリ・評価関数での応手は別途検証する。
 駒台・盤追従・LeRobot制御は試作と対局統合を区別する。
 Leaderの静止4姿勢の記録と、今後の追従・連続記録・学習も区別する。
 
@@ -236,7 +237,7 @@ flowchart TB
         shogi_vision["着手推定<br/>9×9マスの画像差分"]
         shogi_classifier["駒種・所有者方向・成りの認識<br/>実画像でResNet-18を微調整"]
         shogi_rules["局面・合法手管理<br/>python-shogi"]
-        shogi_ai["将棋AI<br/>Fairy-Stockfish"]
+        shogi_ai["将棋AI<br/>やねうら王 / USI"]
         shogi_stand["駒台管理の統合<br/>駒種・空きスロット・実測位置"]
         shogi_plan["将棋操作計画の拡張<br/>移動・取り・打ち<br/>裏返し台での成り・成駒戻し"]
     end
@@ -248,6 +249,15 @@ flowchart TB
         go_ai["囲碁AI<br/>エンジン未選定"]
         go_inventory["碁笥・回収先の管理<br/>石の供給位置・アゲハマ置き場"]
         go_plan["囲碁操作計画<br/>着手交点へ配置<br/>捕獲した複数の石を回収"]
+    end
+    subgraph chess["チェス"]
+        direction TB
+        chess_vision["盤・駒の認識<br/>8×8・白黒6種＋空"]
+        chess_geometry["盤の設定<br/>8×8のマス座標・駒寸法"]
+        chess_rules["局面・合法手管理<br/>FEN・特殊手・終局"]
+        chess_ai["チェスAI<br/>Stockfish / UCI"]
+        chess_inventory["回収先・交換駒管理<br/>捕獲駒・昇格用の駒・ポーン"]
+        chess_plan["チェス操作計画<br/>移動・取り・キャスリング<br/>アンパッサン・昇格"]
     end
     ui_backend --> ui_extension
     ui_extension --> camera
@@ -278,12 +288,19 @@ flowchart TB
     teaching_snapshots --> continuous_teaching
     continuous_teaching --> skill_learning
     skill_learning --> motion_integration
+    board_tracking --> chess_vision
+    chess_vision --> chess_geometry
+    chess_geometry --> chess_rules
+    chess_rules --> chess_ai
+    chess_ai --> chess_inventory
+    chess_inventory --> chess_plan
+    chess_plan --> motion_integration
     classDef implemented fill:#ffffff,stroke:#64748b,stroke-width:1.5px;
     class ui_backend,camera,shogi_vision,shogi_rules,shogi_ai,live_gate,teaching_snapshots implemented;
     classDef prototype_unintegrated fill:#fff3df,stroke:#d18a21,stroke-width:2px;
     class board_tracking,shogi_stand,shogi_plan,simulation,lerobot_control,hardware_models prototype_unintegrated;
     classDef planned fill:#eaf5ff,stroke:#2684c7,stroke-width:2px,stroke-dasharray:5 5;
-    class ui_extension,image_guard,shogi_classifier,go_vision,go_geometry,go_rules,go_ai,go_inventory,go_plan,motion_integration,execution_monitor,post_action_verify,commit_record,recovery,continuous_teaching,skill_learning planned;
+    class ui_extension,image_guard,shogi_classifier,go_vision,go_geometry,go_rules,go_ai,go_inventory,go_plan,chess_vision,chess_geometry,chess_rules,chess_ai,chess_inventory,chess_plan,motion_integration,execution_monitor,post_action_verify,commit_record,recovery,continuous_teaching,skill_learning planned;
     classDef in_progress fill:#fff8cc,stroke:#b89b18,stroke-width:2px;
     classDef software_verified fill:#e3f6e8,stroke:#33844a,stroke-width:2px;
     classDef hardware_verified fill:#bce8c9,stroke:#146b36,stroke-width:2.5px;
@@ -293,6 +310,7 @@ flowchart TB
 
 将棋では画像差分に駒種・方向・成りの認識を加え、実測駒台と裏返し台を操作列へ統合する。
 囲碁では交点認識、局面・ルール・AI、碁笥と回収先、複数石の捕獲回収を追加する。
+チェスでは8×8の駒認識、局面・合法手、Stockfish/UCI、回収先・交換駒、移動・取り・キャスリング・アンパッサン・昇格を追加する。詳細は [チェス計画](../../chess/README.md)。
 共通側は撮影・座標較正・搬送・経路評価・実機制御・再観測を接続する。
 実物の予定状態との一致を確認してから着手と棋譜を確定し、不一致は停止・再撮影・復旧へ進める。
 

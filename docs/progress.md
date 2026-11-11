@@ -1,19 +1,20 @@
-# 進捗の一覧（2026-11-10 時点）
+# 進捗の一覧（2026-11-11 時点）
 
-`~/Documents/ChatGPT/` にあった SO-101・将棋・囲碁まわりの進捗を、本リポジトリに入れたあとの
+`~/Documents/ChatGPT/` にあった SO-101・将棋・囲碁まわりの進捗と、その後追加したチェスの計画をまとめた
 **現状の正本**です。詳細は各 README を優先し、ここは全体の地図です。
 
 | 領域 | 状態の一文 | 詳細の正本 |
 | --- | --- | --- |
 | 将棋 | 開発途中。Mac 上の対局ループとシミュレーションはあるが、実機対局は未成立 | [`shogi/README.md`](../shogi/README.md)、[`shogi/docs/shogi-implementation-plan.md`](../shogi/docs/shogi-implementation-plan.md) |
 | 囲碁 | 未着手（設計メモのみ） | [`go/README.md`](../go/README.md) |
+| チェス | 構成分岐と設計を追加。Stockfish/UCIを採用、機能は未実装 | [`chess/README.md`](../chess/README.md) |
 | SO-101 台座・CAD | 手首カメラ＋HX711 台座は V8（ねじ固定）まで試作。筆保持は V8 本体4点。実印刷・強度・通電は未検証 | [`so101/README.md`](../so101/README.md)、[`so101/output/README.md`](../so101/output/README.md) |
 | SO-101 書道 | 実機で 1–4 文字を書く段階。正本は別リポジトリ [syodo](https://github.com/ichirooo6755/syodo)。本リポジトリの `so101/syodo/` は同内容の取り込み（学習 run・データセットは大容量のため未収録） | [`so101/syodo/README.md`](../so101/syodo/README.md)、[`so101/syodo/docs/hardware-open.md`](../so101/syodo/docs/hardware-open.md)、[`so101/syodo/docs/training-runs.md`](../so101/syodo/docs/training-runs.md) |
 | 薄膜シミュ | 履歴として取り込み。コードと代表出力のみ（大きな状態ファイルは未収録） | [`so101/soap_film/README.md`](../so101/soap_film/README.md) |
 
 ## 将棋の進捗（要約）
 
-- **できること**: GUI、「対局を始める」、ArUco 四隅で盤正面化の試作、画像差分＋合法手で人の手候補、Fairy-Stockfish の応手、MuJoCo での移動・取り・打ち・成り計画と到達評価。
+- **できること**: GUI、「対局を始める」、ArUco 四隅で盤正面化の試作、画像差分＋合法手で人の手候補、やねうら王/USIへの応手呼出経路（実バイナリ・評価関数は未検証）、MuJoCo での移動・取り・打ち・成り計画と到達評価。
 - **できないこと／未検証**: 実機へのモーター送信（`shogi/app/robot_arm.py` が拒否）、実盤でのマーカー検出精度、実機での把持・取り・打ち・成り、駒台の本実装、上腕延長の最終寸法決定と印刷・組付け。
 - **延長部品**: +50 / +58 / +75 / +100 / +125 mm の比較試作（STEP/STL・試算 JSON）が `shogi/output/upper_arm_extension/` にある。最終寸法は未決定。
 - **手首カメラ**: XIAO ESP32S3 Sense 用ファームとマウント試作あり。実機撮影は未試験。
@@ -30,6 +31,12 @@
 
 - ローカルにも実装ファイルは無かった。`go/README.md` に将棋からの流用見込みと、交点座標・石の把持・碁笥・ルール選定の洗い出しだけ置いた。
 - 盤座標の設計置き場は [`board-geometry.md`](board-geometry.md)。
+
+## チェスの進捗（要約）
+
+- 構成図に将棋・囲碁と並ぶチェス分岐を追加。AIはStockfish/UCIを採用。
+- 8×8盤認識、局面管理、Stockfish接続、回収先・交換駒、特殊操作は未実装。
+- 設計は [`chess/README.md`](../chess/README.md)、進捗の色は正本JSONを参照。
 
 ## 大容量で実ファイルを入れていない進捗データ
 

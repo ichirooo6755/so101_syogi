@@ -1,21 +1,22 @@
 {
   "schema_version": "1.1.0",
-  "title": "SO-101 将棋・囲碁のバックエンド構成と共通実装計画",
+  "title": "SO-101 将棋・囲碁・チェスのバックエンド構成と共通実装計画",
   "updated_on": "2026-11-11",
   "timezone": "Asia/Tokyo",
   "repository": "https://github.com/ichirooo6755/so101_syogi",
   "source_snapshot": {
     "branch": "main",
-    "commit": "01800a7465432a66d08bee2e9018e23d044ab396",
-    "review_scope": "コード・依存設定・README・実装計画の静的確認。今回の整理で起動・テスト・実機試験は行っていない。"
+    "commit": "17f121af9d1936a37df7d2adc233f40a28e02fc2",
+    "review_scope": "mainの既存構成を基準に、チェス分岐とStockfish選定、将棋のやねうら王への切替を反映。実バイナリ・実機の検証は別。"
   },
-  "document_role": "既存の将棋実装計画と囲碁設計メモに、構成・状態・接続関係を機械可読な形で追記する補助計画",
+  "document_role": "将棋の実装計画、囲碁・チェスの設計メモを共通構成・状態・接続関係で整理する補助計画",
   "scope_notes": [
     "完成後の構成案と現在の実装状態を分離する",
     "implementedはソフトウェア実装があることを示し、実機検証完了を示さない",
-    "この文書の追加では実装状態や実機送信ゲートを変更しない",
+    "エンジン呼出先と構成計画を変更。実機送信ゲートは変更しない",
     "囲碁は全て未実装で、エンジンとルールは未選定",
-    "技術候補と条件付き学習は採用完了として扱わない"
+    "技術候補と条件付き学習は採用完了として扱わない",
+    "チェスのAIはStockfish/UCIを採用するが、チェス機能は全て未実装・予定"
   ],
   "sources": [
     "README.md",
@@ -25,7 +26,9 @@
     "shogi/README.md",
     "shogi/docs/shogi-implementation-plan.md",
     "shogi/docs/leader-teaching.md",
-    "go/README.md"
+    "go/README.md",
+    "chess/README.md",
+    "shogi/app/shogi_engine.py"
   ],
   "status_definitions": {
     "implemented": {
@@ -111,7 +114,7 @@
     "backend": "Python標準ThreadingHTTPServerを127.0.0.1の動的ポートで起動。POST /apiのactionで処理を振り分ける。",
     "game_state": "python-shogiの局面と画像・保留手・ジョブをメモリで管理。DBによる対局永続化はない。",
     "concurrency": "RLock、バックグラウンドスレッド、ローカル子プロセス。",
-    "shogi_engine": "Fairy-Stockfish / USI / 1手500ms。子プロセスの結果を合法手と照合する。",
+    "shogi_engine": "やねうら王 / USI / 1手500ms。SHOGI_ENGINE_PATHと任意のSHOGI_EVAL_DIRで導入先を指定し、応手を全合法手と照合する。実バイナリ・評価関数の動作は別途検証する。",
     "planning": "将棋の操作列から標準腕の逆運動学経由点を作り、MuJoCoでオフライン評価する。",
     "persistence": "静止教示・計画・試行結果をローカルJSONに保存。自動の棋譜・実行途中状態の保存は計画段階。",
     "live_status": "実機送信は停止。現時点では実機対局は成立していない。"
@@ -185,6 +188,10 @@
       "role": "囲碁の設計メモ。実装は未着手"
     },
     {
+      "path": "chess",
+      "role": "Stockfishを使うチェスの設計。実装は未着手"
+    },
+    {
       "path": "so101",
       "role": "アーム周辺CAD・台座・組立資料"
     },
@@ -203,8 +210,8 @@
   ],
   "upstream_dependencies": [
     {
-      "name": "Fairy-Stockfish",
-      "revision": "53c1f2bd14a2d3b685904ccf8ec9dec8401800ff",
+      "name": "YaneuraOu",
+      "revision": "3b8d53fa8b976bf6d54656de43026e03f28722ce",
       "retrieval": "shogi/scripts/fetch_upstream.sh"
     },
     {
@@ -243,7 +250,7 @@
       "implementation_paths": [],
       "current": [],
       "planned": [
-        "将棋／囲碁を選択",
+        "将棋／囲碁／チェスを選択",
         "実機停止と一時停止・再開を区別",
         "較正・教示・モーター・シミュレーションを設定画面へ整理"
       ],
@@ -390,19 +397,32 @@
       "status": "implemented",
       "implementation_paths": [
         "shogi/app/server.py",
+        "shogi/app/shogi_engine.py",
         "shogi/scripts/fetch_upstream.sh"
       ],
       "current": [
-        "Fairy-Stockfishをローカルの子プロセスとしてUSIで呼ぶ",
-        "現行の探索指定はgo movetime 500",
+        "やねうら王をローカル子プロセスとしてUSIで呼ぶ",
+        "実行ファイルはSHOGI_ENGINE_PATH、評価関数の配置は任意のSHOGI_EVAL_DIRで指定",
+        "usi → EvalDir設定（指定時）→ isready → usinewgame → position sfen → go movetime 500",
         "腕の到達範囲でAIの合法手候補を除外しない"
       ],
-      "planned": [],
+      "planned": [
+        "導入した実バイナリ・対応する評価関数で起動と応手を検証"
+      ],
       "progress": {
         "updated_on": "2026-11-11",
-        "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
-        "history": []
-      }
+        "evidence": "基準main 17f121af9d1936a37df7d2adc233f40a28e02fc2からやねうら王/USIへ変更。shogi_engine.pyで実行ファイル・EvalDir指定、USI初期化、全合法手照合、終了処理を実装。モック単体テスト8件に合格。実バイナリ・評価関数・実機での検証は未実施。",
+        "history": [
+          {
+            "from": "implemented",
+            "to": "implemented",
+            "updated_at": "2026-11-11T19:10:26.677523+09:00",
+            "evidence": "基準main 17f121af9d1936a37df7d2adc233f40a28e02fc2からやねうら王/USIへ変更。shogi_engine.pyで実行ファイル・EvalDir指定、USI初期化、全合法手照合、終了処理を実装。モック単体テスト8件に合格。実バイナリ・評価関数・実機での検証は未実施。"
+          }
+        ]
+      },
+      "selected_engine": "YaneuraOu",
+      "protocol": "USI"
     },
     {
       "id": "shogi_stand",
@@ -558,6 +578,118 @@
       }
     },
     {
+      "id": "chess_vision",
+      "label": "チェスの盤・駒認識",
+      "status": "planned",
+      "implementation_paths": [],
+      "current": [],
+      "planned": [
+        "盤補正後に白黒6駒種と空を識別",
+        "遮蔽・持ち上げ途中を棄却し、直前局面と照合"
+      ],
+      "game": "chess",
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "2026-11-11のユーザー指定でチェス分岐を追加。設計とエンジン選定のみで、実装・対局試験は未実施。",
+        "history": []
+      }
+    },
+    {
+      "id": "chess_geometry",
+      "label": "チェス盤のマス座標",
+      "status": "planned",
+      "implementation_paths": [],
+      "current": [],
+      "planned": [
+        "実盤・全駒種・把持位置を実測",
+        "全64マス、回収先、昇格用交換駒への到達と隣接駒への干渉を評価"
+      ],
+      "game": "chess",
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "2026-11-11のユーザー指定でチェス分岐を追加。設計とエンジン選定のみで、実装・対局試験は未実施。",
+        "history": []
+      }
+    },
+    {
+      "id": "chess_rules",
+      "label": "チェスの局面・ルール管理",
+      "status": "planned",
+      "implementation_paths": [],
+      "current": [],
+      "planned": [
+        "FENと着手履歴、キャスリング権、アンパッサン、昇格を管理",
+        "チェック・反復・引き分け・終局を検証"
+      ],
+      "game": "chess",
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "2026-11-11のユーザー指定でチェス分岐を追加。設計とエンジン選定のみで、実装・対局試験は未実施。",
+        "history": []
+      },
+      "technology_candidates": [
+        "python-chess"
+      ],
+      "selection_note": "採用版とルール対応範囲は実装時に検証"
+    },
+    {
+      "id": "chess_ai",
+      "label": "チェスAI",
+      "status": "planned",
+      "implementation_paths": [],
+      "current": [],
+      "planned": [
+        "公式StockfishをUCIで接続",
+        "FEN・着手履歴から応手を取得し合法性を照合",
+        "採用する版・ビルド・評価ファイルを固定して起動・異常終了を試験"
+      ],
+      "game": "chess",
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "2026-11-11のユーザー指定でチェス分岐を追加。設計とエンジン選定のみで、実装・対局試験は未実施。",
+        "history": []
+      },
+      "selected_engine": "Stockfish",
+      "protocol": "UCI",
+      "source": "https://github.com/official-stockfish/Stockfish"
+    },
+    {
+      "id": "chess_inventory",
+      "label": "チェスの回収先・交換駒管理",
+      "status": "planned",
+      "implementation_paths": [],
+      "current": [],
+      "planned": [
+        "捕獲駒の回収先を実測・管理",
+        "昇格用交換駒と取り外したポーンの置き場、途中状態を管理"
+      ],
+      "game": "chess",
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "2026-11-11のユーザー指定でチェス分岐を追加。設計とエンジン選定のみで、実装・対局試験は未実施。",
+        "history": []
+      }
+    },
+    {
+      "id": "chess_plan",
+      "label": "チェス操作計画",
+      "status": "planned",
+      "implementation_paths": [],
+      "current": [],
+      "planned": [
+        "通常移動・取りを共通搬送へ変換",
+        "キャスリングでキングとルークを移動",
+        "アンパッサンで移動先以外の駒を回収",
+        "昇格でポーンを交換し、途中状態から復旧可能にする"
+      ],
+      "game": "chess",
+      "progress": {
+        "updated_on": "2026-11-11",
+        "evidence": "2026-11-11のユーザー指定でチェス分岐を追加。設計とエンジン選定のみで、実装・対局試験は未実施。",
+        "history": []
+      }
+    },
+    {
       "id": "motion_integration",
       "label": "共通搬送・公式運動学の統合",
       "status": "planned",
@@ -572,7 +704,7 @@
         "so-arm101-chess-robot ChessMotion / ArmBackend / MockArm",
         "LeRobot RobotKinematics / Placo"
       ],
-      "selection_note": "将棋計画の採用・参照先。囲碁への共通化は本構成案",
+      "selection_note": "将棋計画の採用・参照先。囲碁・チェスへの共通化は本構成案",
       "progress": {
         "updated_on": "2026-11-11",
         "evidence": "初期棚卸し: 01800a7465432a66d08bee2e9018e23d044ab396 のコード・計画を静的確認。起動・実機試験による完了判定ではない。",
@@ -830,7 +962,7 @@
   ],
   "target_architecture": {
     "direction": "top_to_bottom",
-    "layout": "共通の観測処理から将棋・囲碁の2列へ分岐し、共通搬送・制御・再確認へ合流する。",
+    "layout": "共通の観測処理から将棋・囲碁・チェスの3列へ分岐し、共通搬送・制御・再確認へ合流する。",
     "edge_semantics": "edgesは完成を目指す構成の接続関係であり、現在全て接続済みという意味ではない。",
     "groups": [
       {
@@ -879,6 +1011,18 @@
           "go_ai",
           "go_inventory",
           "go_plan"
+        ]
+      },
+      {
+        "id": "chess",
+        "label": "チェス",
+        "modules": [
+          "chess_vision",
+          "chess_geometry",
+          "chess_rules",
+          "chess_ai",
+          "chess_inventory",
+          "chess_plan"
         ]
       }
     ],
@@ -1033,12 +1177,47 @@
         "to": "file_store",
         "relationship": "persistence",
         "diagram": false
+      },
+      {
+        "from": "board_tracking",
+        "to": "chess_vision",
+        "relationship": "target_flow"
+      },
+      {
+        "from": "chess_vision",
+        "to": "chess_geometry",
+        "relationship": "target_flow"
+      },
+      {
+        "from": "chess_geometry",
+        "to": "chess_rules",
+        "relationship": "target_flow"
+      },
+      {
+        "from": "chess_rules",
+        "to": "chess_ai",
+        "relationship": "target_flow"
+      },
+      {
+        "from": "chess_ai",
+        "to": "chess_inventory",
+        "relationship": "target_flow"
+      },
+      {
+        "from": "chess_inventory",
+        "to": "chess_plan",
+        "relationship": "target_flow"
+      },
+      {
+        "from": "chess_plan",
+        "to": "motion_integration",
+        "relationship": "target_flow"
       }
     ],
     "diagram": {
       "format": "mermaid",
       "direction": "TB",
-      "source": "flowchart TB\n    ui_backend[\"ブラウザ画面・Python API<br/>対局操作・状態表示・JSON保存\"]\n    ui_extension[\"画面の拡張<br/>ゲーム選択・実機停止・較正設定\"]\n    camera[\"撮影・四隅検出・画像補正<br/>XIAO USB / Wi-Fi / Mac\"]\n    image_guard[\"手・遮蔽・画像鮮度の確認<br/>MediaPipe等は採用候補\"]\n    board_tracking[\"実測較正・盤追従の統合<br/>レンズ・ロボット座標・観測姿勢\"]\n    motion_integration[\"共通搬送・運動学の統合<br/>ChessMotion由来の搬送段階<br/>公式FK・IKとの接続\"]\n    simulation[\"MuJoCoで経路・接触を評価<br/>延長腕・実測寸法・周囲の駒や石へ対応\"]\n    lerobot_control[\"公式LeRobot実機経路の統合<br/>関節較正・速度・追従誤差・通信停止監視\"]\n    live_gate[\"実機送信ゲート<br/>現在は送信停止\"]\n    execution_monitor[\"検証後の実機操作<br/>近接補正・把持・解放を段階ごとに確認\"]\n    post_action_verify[\"観測姿勢へ戻り再撮影<br/>盤・駒台・石を予定状態と照合\"]\n    commit_record[\"一致：着手確定・棋譜保存<br/>次の手番へ\"]\n    recovery[\"不一致：停止・再撮影<br/>途中状態を記録して復旧\"]\n    hardware_models[\"機械・モデルの整備<br/>上腕延長の選定・爪・カメラ取付<br/>CAD・URDF・MuJoCoの寸法統一\"]\n    teaching_snapshots[\"静止4姿勢の教示記録\"]\n    continuous_teaching[\"Leader追従・連続教示<br/>画像・関節角・指令を同期記録\"]\n    skill_learning[\"教示を経路候補へ利用<br/>必要時だけ短い動作をACTで学習\"]\n    subgraph shogi[\"将棋\"]\n        direction TB\n        shogi_vision[\"着手推定<br/>9×9マスの画像差分\"]\n        shogi_classifier[\"駒種・所有者方向・成りの認識<br/>実画像でResNet-18を微調整\"]\n        shogi_rules[\"局面・合法手管理<br/>python-shogi\"]\n        shogi_ai[\"将棋AI<br/>Fairy-Stockfish\"]\n        shogi_stand[\"駒台管理の統合<br/>駒種・空きスロット・実測位置\"]\n        shogi_plan[\"将棋操作計画の拡張<br/>移動・取り・打ち<br/>裏返し台での成り・成駒戻し\"]\n    end\n    subgraph go[\"囲碁\"]\n        direction TB\n        go_vision[\"交点認識<br/>黒石・白石・空\"]\n        go_geometry[\"盤の設定<br/>9路・13路・19路の交点座標\"]\n        go_rules[\"局面・ルール管理<br/>捕獲・コウ・パス・終局\"]\n        go_ai[\"囲碁AI<br/>エンジン未選定\"]\n        go_inventory[\"碁笥・回収先の管理<br/>石の供給位置・アゲハマ置き場\"]\n        go_plan[\"囲碁操作計画<br/>着手交点へ配置<br/>捕獲した複数の石を回収\"]\n    end\n    ui_backend --> ui_extension\n    ui_extension --> camera\n    camera --> image_guard\n    image_guard --> board_tracking\n    board_tracking --> shogi_vision\n    board_tracking --> go_vision\n    shogi_vision --> shogi_classifier\n    shogi_classifier --> shogi_rules\n    shogi_rules --> shogi_ai\n    shogi_ai --> shogi_stand\n    shogi_stand --> shogi_plan\n    go_vision --> go_geometry\n    go_geometry --> go_rules\n    go_rules --> go_ai\n    go_ai --> go_inventory\n    go_inventory --> go_plan\n    shogi_plan --> motion_integration\n    go_plan --> motion_integration\n    motion_integration --> simulation\n    simulation --> lerobot_control\n    lerobot_control --> live_gate\n    live_gate --> execution_monitor\n    execution_monitor --> post_action_verify\n    post_action_verify --> commit_record\n    post_action_verify --> recovery\n    hardware_models --> simulation\n    teaching_snapshots --> continuous_teaching\n    continuous_teaching --> skill_learning\n    skill_learning --> motion_integration\n    classDef implemented fill:#ffffff,stroke:#64748b,stroke-width:1.5px;\n    class ui_backend,camera,shogi_vision,shogi_rules,shogi_ai,live_gate,teaching_snapshots implemented;\n    classDef prototype_unintegrated fill:#fff3df,stroke:#d18a21,stroke-width:2px;\n    class board_tracking,shogi_stand,shogi_plan,simulation,lerobot_control,hardware_models prototype_unintegrated;\n    classDef planned fill:#eaf5ff,stroke:#2684c7,stroke-width:2px,stroke-dasharray:5 5;\n    class ui_extension,image_guard,shogi_classifier,go_vision,go_geometry,go_rules,go_ai,go_inventory,go_plan,motion_integration,execution_monitor,post_action_verify,commit_record,recovery,continuous_teaching,skill_learning planned;\n    classDef in_progress fill:#fff8cc,stroke:#b89b18,stroke-width:2px;\n    classDef software_verified fill:#e3f6e8,stroke:#33844a,stroke-width:2px;\n    classDef hardware_verified fill:#bce8c9,stroke:#146b36,stroke-width:2.5px;\n    classDef blocked fill:#ffe2e2,stroke:#c34141,stroke-width:2px;",
+      "source": "flowchart TB\n    ui_backend[\"ブラウザ画面・Python API<br/>対局操作・状態表示・JSON保存\"]\n    ui_extension[\"画面の拡張<br/>ゲーム選択・実機停止・較正設定\"]\n    camera[\"撮影・四隅検出・画像補正<br/>XIAO USB / Wi-Fi / Mac\"]\n    image_guard[\"手・遮蔽・画像鮮度の確認<br/>MediaPipe等は採用候補\"]\n    board_tracking[\"実測較正・盤追従の統合<br/>レンズ・ロボット座標・観測姿勢\"]\n    motion_integration[\"共通搬送・運動学の統合<br/>ChessMotion由来の搬送段階<br/>公式FK・IKとの接続\"]\n    simulation[\"MuJoCoで経路・接触を評価<br/>延長腕・実測寸法・周囲の駒や石へ対応\"]\n    lerobot_control[\"公式LeRobot実機経路の統合<br/>関節較正・速度・追従誤差・通信停止監視\"]\n    live_gate[\"実機送信ゲート<br/>現在は送信停止\"]\n    execution_monitor[\"検証後の実機操作<br/>近接補正・把持・解放を段階ごとに確認\"]\n    post_action_verify[\"観測姿勢へ戻り再撮影<br/>盤・駒台・石を予定状態と照合\"]\n    commit_record[\"一致：着手確定・棋譜保存<br/>次の手番へ\"]\n    recovery[\"不一致：停止・再撮影<br/>途中状態を記録して復旧\"]\n    hardware_models[\"機械・モデルの整備<br/>上腕延長の選定・爪・カメラ取付<br/>CAD・URDF・MuJoCoの寸法統一\"]\n    teaching_snapshots[\"静止4姿勢の教示記録\"]\n    continuous_teaching[\"Leader追従・連続教示<br/>画像・関節角・指令を同期記録\"]\n    skill_learning[\"教示を経路候補へ利用<br/>必要時だけ短い動作をACTで学習\"]\n    subgraph shogi[\"将棋\"]\n        direction TB\n        shogi_vision[\"着手推定<br/>9×9マスの画像差分\"]\n        shogi_classifier[\"駒種・所有者方向・成りの認識<br/>実画像でResNet-18を微調整\"]\n        shogi_rules[\"局面・合法手管理<br/>python-shogi\"]\n        shogi_ai[\"将棋AI<br/>やねうら王 / USI\"]\n        shogi_stand[\"駒台管理の統合<br/>駒種・空きスロット・実測位置\"]\n        shogi_plan[\"将棋操作計画の拡張<br/>移動・取り・打ち<br/>裏返し台での成り・成駒戻し\"]\n    end\n    subgraph go[\"囲碁\"]\n        direction TB\n        go_vision[\"交点認識<br/>黒石・白石・空\"]\n        go_geometry[\"盤の設定<br/>9路・13路・19路の交点座標\"]\n        go_rules[\"局面・ルール管理<br/>捕獲・コウ・パス・終局\"]\n        go_ai[\"囲碁AI<br/>エンジン未選定\"]\n        go_inventory[\"碁笥・回収先の管理<br/>石の供給位置・アゲハマ置き場\"]\n        go_plan[\"囲碁操作計画<br/>着手交点へ配置<br/>捕獲した複数の石を回収\"]\n    end\n    subgraph chess[\"チェス\"]\n        direction TB\n        chess_vision[\"盤・駒の認識<br/>8×8・白黒6種＋空\"]\n        chess_geometry[\"盤の設定<br/>8×8のマス座標・駒寸法\"]\n        chess_rules[\"局面・合法手管理<br/>FEN・特殊手・終局\"]\n        chess_ai[\"チェスAI<br/>Stockfish / UCI\"]\n        chess_inventory[\"回収先・交換駒管理<br/>捕獲駒・昇格用の駒・ポーン\"]\n        chess_plan[\"チェス操作計画<br/>移動・取り・キャスリング<br/>アンパッサン・昇格\"]\n    end\n    ui_backend --> ui_extension\n    ui_extension --> camera\n    camera --> image_guard\n    image_guard --> board_tracking\n    board_tracking --> shogi_vision\n    board_tracking --> go_vision\n    shogi_vision --> shogi_classifier\n    shogi_classifier --> shogi_rules\n    shogi_rules --> shogi_ai\n    shogi_ai --> shogi_stand\n    shogi_stand --> shogi_plan\n    go_vision --> go_geometry\n    go_geometry --> go_rules\n    go_rules --> go_ai\n    go_ai --> go_inventory\n    go_inventory --> go_plan\n    shogi_plan --> motion_integration\n    go_plan --> motion_integration\n    motion_integration --> simulation\n    simulation --> lerobot_control\n    lerobot_control --> live_gate\n    live_gate --> execution_monitor\n    execution_monitor --> post_action_verify\n    post_action_verify --> commit_record\n    post_action_verify --> recovery\n    hardware_models --> simulation\n    teaching_snapshots --> continuous_teaching\n    continuous_teaching --> skill_learning\n    skill_learning --> motion_integration\n    board_tracking --> chess_vision\n    chess_vision --> chess_geometry\n    chess_geometry --> chess_rules\n    chess_rules --> chess_ai\n    chess_ai --> chess_inventory\n    chess_inventory --> chess_plan\n    chess_plan --> motion_integration\n    classDef implemented fill:#ffffff,stroke:#64748b,stroke-width:1.5px;\n    class ui_backend,camera,shogi_vision,shogi_rules,shogi_ai,live_gate,teaching_snapshots implemented;\n    classDef prototype_unintegrated fill:#fff3df,stroke:#d18a21,stroke-width:2px;\n    class board_tracking,shogi_stand,shogi_plan,simulation,lerobot_control,hardware_models prototype_unintegrated;\n    classDef planned fill:#eaf5ff,stroke:#2684c7,stroke-width:2px,stroke-dasharray:5 5;\n    class ui_extension,image_guard,shogi_classifier,go_vision,go_geometry,go_rules,go_ai,go_inventory,go_plan,chess_vision,chess_geometry,chess_rules,chess_ai,chess_inventory,chess_plan,motion_integration,execution_monitor,post_action_verify,commit_record,recovery,continuous_teaching,skill_learning planned;\n    classDef in_progress fill:#fff8cc,stroke:#b89b18,stroke-width:2px;\n    classDef software_verified fill:#e3f6e8,stroke:#33844a,stroke-width:2px;\n    classDef hardware_verified fill:#bce8c9,stroke:#146b36,stroke-width:2.5px;\n    classDef blocked fill:#ffe2e2,stroke:#c34141,stroke-width:2px;",
       "note": "show.pyがmodules[].statusと図設定.jsonから自動生成する。手で色やsourceを書き換えない。file_storeはui_backendのJSON保存に集約。"
     }
   },
@@ -1061,7 +1240,8 @@
       "到達しやすさで将棋AIの合法手を黙って制限しない",
       "盤ずれと別置きの駒台・回収先の移動を混同しない",
       "学習ポリシーにも同じ関節・速度・接触制約を適用する",
-      "通信再接続や再試行で同じ対象を二重操作しない"
+      "通信再接続や再試行で同じ対象を二重操作しない",
+      "将棋のやねうら王/USIとチェスのStockfish/UCIを混同せず、ゲームごとの合法手と局面表現で検証する"
     ]
   },
   "implementation_order": {
@@ -1178,17 +1358,52 @@
         ]
       }
     ],
-    "learning_policy": "幾何・機械・較正・認識の不具合を切り分けた後、必要な短い動作に教示と学習を追加する。"
+    "learning_policy": "幾何・機械・較正・認識の不具合を切り分けた後、必要な短い動作に教示と学習を追加する。",
+    "chess_stages": [
+      {
+        "id": "chess_0",
+        "title": "盤と駒の実測",
+        "work": [
+          "8×8盤、全駒種、回収先、昇格用交換駒を実測して到達性を評価"
+        ]
+      },
+      {
+        "id": "chess_1",
+        "title": "局面・認識・Stockfish",
+        "work": [
+          "駒認識とFEN・着手履歴を統合",
+          "Stockfish/UCIと合法手、特殊手、引き分け・終局を検証"
+        ]
+      },
+      {
+        "id": "chess_2",
+        "title": "搬送・特殊操作",
+        "work": [
+          "移動・取り・キャスリング・アンパッサン・昇格と隣接駒への干渉を評価"
+        ]
+      },
+      {
+        "id": "chess_3",
+        "title": "実機統合・復旧",
+        "work": [
+          "共通の関節制御・較正・停止の実機ゲート通過後に試験",
+          "操作後照合と途中状態からの復旧を含めて対局を評価"
+        ]
+      }
+    ]
   },
   "validation_scope": {
     "performed_for_this_document": [
       "JSON構文の検証",
       "モジュールID・接続参照・グループ・実装パス・リンクの整合性確認",
-      "JSONと計画内Mermaid図の一致確認"
+      "JSONと計画内Mermaid図の一致確認",
+      "構成図コマンドの単体テスト12件に合格（3分岐・色・同期・SVGのノード/接続交差を含む）",
+      "やねうら王USIアダプターのモック単体テスト8件に合格（実バイナリは未使用）"
     ],
     "not_performed": [
-      "アプリの起動",
-      "既存テストスイートの再実行",
+      "将棋GUIの起動",
+      "将棋GUI・シミュレーションの既存スイート全体の再実行",
+      "やねうら王・Stockfishの実バイナリと評価関数の試験",
       "実機・カメラ・学習の試験"
     ]
   },

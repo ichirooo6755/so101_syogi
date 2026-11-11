@@ -4,7 +4,6 @@ import base64
 import hashlib
 import math
 import ipaddress
-import queue
 import json
 import secrets
 import subprocess
@@ -33,6 +32,7 @@ import usb_camera
 import mac_camera
 import teach_store
 import teaching_tasks
+from shogi_engine import bestmove as shogi_bestmove
 
 ROOT = Path(__file__).resolve().parent
 TOKEN = secrets.token_urlsafe(32)
@@ -164,40 +164,7 @@ def candidates(old, new):
 
 
 def engine_move():
-    engine = ROOT.parent / 'vendor' / 'Fairy-Stockfish' / 'src' / 'stockfish'
-    if not engine.is_file():
-        raise ValueError('将棋エンジンが見つかりません。README を確認してください')
-    proc=subprocess.Popen([str(engine)],stdin=subprocess.PIPE,stdout=subprocess.PIPE,
-                          stderr=subprocess.DEVNULL,text=True,bufsize=1)
-    lines=queue.Queue()
-    def read_output():
-        for line in proc.stdout:
-            lines.put(line.strip())
-    threading.Thread(target=read_output,daemon=True).start()
-    def send(line):
-        proc.stdin.write(line+'\n');proc.stdin.flush()
-    def wait_for(prefix):
-        import time
-        deadline=time.monotonic()+15
-        while True:
-            try: line=lines.get(timeout=max(0,deadline-time.monotonic()))
-            except queue.Empty: raise ValueError('将棋エンジンの応答がありません')
-            if line.startswith(prefix): return line
-    try:
-        send('usi');wait_for('usiok')
-        send('isready');wait_for('readyok')
-        send('position sfen '+board.sfen())
-        # The engine chooses from all legal moves. Robot reach is a separate
-        # mechanical constraint and must not silently change shogi strategy.
-        send('go movetime 500')
-        result=wait_for('bestmove ').split()[1]
-        if result in ('resign','(none)','0000'): return None
-        move=shogi.Move.from_usi(result)
-        if move not in board.legal_moves: raise ValueError('エンジンの手が合法手と一致しません')
-        return result
-    finally:
-        proc.kill();proc.wait(timeout=3)
-        proc.stdin.close();proc.stdout.close()
+    return shogi_bestmove(board.sfen(), {move.usi() for move in board.legal_moves})
 
 
 def use_tracked_board(track):

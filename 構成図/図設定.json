@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "title": "SO-101 将棋・囲碁 構成図",
+  "title": "SO-101 将棋・囲碁・チェス 構成図",
   "source": "構成図/構成図.json",
   "direction": "TB",
   "hidden_modules": [
@@ -15,7 +15,7 @@
     "shogi_vision": "着手推定<br/>9×9マスの画像差分",
     "shogi_classifier": "駒種・所有者方向・成りの認識<br/>実画像でResNet-18を微調整",
     "shogi_rules": "局面・合法手管理<br/>python-shogi",
-    "shogi_ai": "将棋AI<br/>Fairy-Stockfish",
+    "shogi_ai": "将棋AI<br/>やねうら王 / USI",
     "shogi_stand": "駒台管理の統合<br/>駒種・空きスロット・実測位置",
     "shogi_plan": "将棋操作計画の拡張<br/>移動・取り・打ち<br/>裏返し台での成り・成駒戻し",
     "go_vision": "交点認識<br/>黒石・白石・空",
@@ -35,7 +35,13 @@
     "hardware_models": "機械・モデルの整備<br/>上腕延長の選定・爪・カメラ取付<br/>CAD・URDF・MuJoCoの寸法統一",
     "teaching_snapshots": "静止4姿勢の教示記録",
     "continuous_teaching": "Leader追従・連続教示<br/>画像・関節角・指令を同期記録",
-    "skill_learning": "教示を経路候補へ利用<br/>必要時だけ短い動作をACTで学習"
+    "skill_learning": "教示を経路候補へ利用<br/>必要時だけ短い動作をACTで学習",
+    "chess_vision": "盤・駒の認識<br/>8×8・白黒6種＋空",
+    "chess_geometry": "盤の設定<br/>8×8のマス座標・駒寸法",
+    "chess_rules": "局面・合法手管理<br/>FEN・特殊手・終局",
+    "chess_ai": "チェスAI<br/>Stockfish / UCI",
+    "chess_inventory": "回収先・交換駒管理<br/>捕獲駒・昇格用の駒・ポーン",
+    "chess_plan": "チェス操作計画<br/>移動・取り・キャスリング<br/>アンパッサン・昇格"
   },
   "groups": [
     {
@@ -61,6 +67,18 @@
         "go_inventory",
         "go_plan"
       ]
+    },
+    {
+      "id": "chess",
+      "label": "チェス",
+      "modules": [
+        "chess_vision",
+        "chess_geometry",
+        "chess_rules",
+        "chess_ai",
+        "chess_inventory",
+        "chess_plan"
+      ]
     }
   ],
   "svg": {
@@ -68,9 +86,10 @@
       "support": 300,
       "shogi": 890,
       "go": 1490,
-      "main": 1190
+      "main": 1190,
+      "chess": 2090
     },
-    "width": 1800,
+    "width": 2400,
     "node_width": 500,
     "node_height": 112,
     "row_gap": 150,
@@ -191,6 +210,30 @@
       "skill_learning": {
         "column": "support",
         "row": 8
+      },
+      "chess_vision": {
+        "column": "chess",
+        "row": 5
+      },
+      "chess_geometry": {
+        "column": "chess",
+        "row": 6
+      },
+      "chess_rules": {
+        "column": "chess",
+        "row": 7
+      },
+      "chess_ai": {
+        "column": "chess",
+        "row": 8
+      },
+      "chess_inventory": {
+        "column": "chess",
+        "row": 9
+      },
+      "chess_plan": {
+        "column": "chess",
+        "row": 10
       }
     }
   },
@@ -202,4 +245,3 @@
     "shogi/docs/shogi-implementation-plan.md"
   ]
 }
-

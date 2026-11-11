@@ -87,6 +87,30 @@ class DiagramTest(unittest.TestCase):
         node = svg.find(".//{http://www.w3.org/2000/svg}g[@data-module='go_vision']")
         self.assertEqual(node.find("{http://www.w3.org/2000/svg}rect").attrib["fill"], "#123abc")
 
+    def test_chess_branch_shares_observation_and_motion_and_stays_planned(self):
+        self.assertEqual([group['id'] for group in self.config['groups']], ['shogi', 'go', 'chess'])
+        group = next(group for group in self.config['groups'] if group['id'] == 'chess')
+        edges = {(edge['from'], edge['to']) for edge in self.data['target_architecture']['edges']
+                 if edge.get('diagram', True)}
+        chain = ['board_tracking', *group['modules'], 'motion_integration']
+        self.assertTrue(set(zip(chain, chain[1:])) <= edges)
+        modules = {module['id']: module for module in self.data['modules']}
+        for ident in group['modules']:
+            self.assertEqual(modules[ident]['status'], 'planned')
+            self.assertEqual(modules[ident]['implementation_paths'], [])
+            self.assertEqual(self.config['svg']['positions'][ident]['column'], 'chess')
+
+    def test_game_engines_and_protocols_are_distinct(self):
+        modules = {module['id']: module for module in self.data['modules']}
+        self.assertEqual((modules['shogi_ai']['selected_engine'], modules['shogi_ai']['protocol']), ('YaneuraOu', 'USI'))
+        self.assertEqual((modules['chess_ai']['selected_engine'], modules['chess_ai']['protocol']), ('Stockfish', 'UCI'))
+        self.assertIsNone(modules['go_ai']['selected_engine'])
+        diagram = show.render_mermaid(self.data, self.config)
+        self.assertIn('やねうら王 / USI', diagram)
+        self.assertIn('Stockfish / UCI', diagram)
+        self.assertNotIn('Fairy-Stockfish', diagram)
+        self.assertFalse(self.data['execution_policy']['live_motor_commands_enabled'])
+
     def test_open_regenerates_latest_status_and_opens_offline_svg(self):
         show.set_status(self.data, "go_vision", "in_progress", "テスト用の変更")
         (self.root / show.SOURCE).write_text(json.dumps(self.data, ensure_ascii=False), encoding="utf-8")
@@ -157,7 +181,7 @@ class DiagramTest(unittest.TestCase):
             rectangle = node.find(ns + "rect")
             x, y, w, h = (float(rectangle.attrib[key]) for key in ("x", "y", "width", "height"))
             boxes[node.attrib["data-module"]] = (x, y, x + w, y + h)
-        self.assertEqual(len(boxes), 29)
+        self.assertEqual(len(boxes), len(self.config['labels']))
         for ident, (left, top, right, bottom) in boxes.items():
             for other, (x1, y1, x2, y2) in boxes.items():
                 if ident != other:
