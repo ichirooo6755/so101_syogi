@@ -27,7 +27,7 @@ class DiagramTest(unittest.TestCase):
         self.assertEqual(self.root.resolve().parent, REPO.resolve())
         self.previous_root = show.ROOT
         show.ROOT = self.root
-        for relative in (show.SOURCE, show.CONFIG, show.PLAN):
+        for relative in (show.SOURCE, show.CONFIG, show.PLAN, show.TAG_LAYOUT, show.TAG_TEMPLATE, "構成図/tagged.py"):
             target = self.root / relative
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(REPO / relative, target)
@@ -111,13 +111,18 @@ class DiagramTest(unittest.TestCase):
         self.assertNotIn('Fairy-Stockfish', diagram)
         self.assertFalse(self.data['execution_policy']['live_motor_commands_enabled'])
 
-    def test_open_regenerates_latest_status_and_opens_offline_svg(self):
+    def test_open_regenerates_latest_status_and_opens_tagged_html(self):
         show.set_status(self.data, "go_vision", "in_progress", "テスト用の変更")
         (self.root / show.SOURCE).write_text(json.dumps(self.data, ensure_ascii=False), encoding="utf-8")
         with patch.object(show.webbrowser, "open", return_value=True) as browser:
             code, _, error = self.run_main(["open"])
         self.assertEqual((code, error), (0, ""))
-        browser.assert_called_once_with((self.root / "構成図/構成図.svg").as_uri())
+        browser.assert_called_once_with((self.root / show.TAG_HTML).as_uri())
+        tagged_html = (self.root / show.TAG_HTML).read_text(encoding="utf-8")
+        self.assertRegex(tagged_html, r'<article [^>]+class="part in_progress"[^>]+data-source-module="go_vision"')
+        tagged_svg = ET.parse(self.root / show.TAG_SVG).getroot()
+        node = tagged_svg.find(".//{http://www.w3.org/2000/svg}g[@data-tags='#囲碁 #盤面認識 #駒石認識']")
+        self.assertEqual(node.attrib["data-status"], "in_progress")
         svg = ET.parse(self.root / "構成図/構成図.svg").getroot()
         node = svg.find(".//{http://www.w3.org/2000/svg}g[@data-module='go_vision']")
         self.assertEqual(node.attrib["data-status"], "in_progress")

@@ -1,0 +1,605 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 4022" role="img" aria-labelledby="diagram-title"><title id="diagram-title">SO-101 将棋・囲碁・チェス 構成図</title><rect width="1440" height="4022" fill="#f8fafc"/><defs><marker id="arrow" viewBox="0 0 8 8" refX="7.5" refY="4" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#526578"/></marker></defs><g font-family="sans-serif" fill="#172536">
+<text x="30" y="37" font-size="27" font-weight="700">SO-101 将棋・囲碁・チェス 構成図</text>
+<text x="30" y="66" font-size="16" font-weight="400">進捗更新日 2026-11-11 ／ 実機送信ゲート 停止</text>
+<rect x="30" y="84" width="16" height="16" rx="2" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+<text x="53" y="98" font-size="14" font-weight="400">既存実装</text>
+<rect x="205" y="84" width="16" height="16" rx="2" fill="#fff3df" stroke="#d18a21" stroke-width="2"/>
+<text x="228" y="98" font-size="14" font-weight="400">試作あり・統合待ち</text>
+<rect x="380" y="84" width="16" height="16" rx="2" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="403" y="98" font-size="14" font-weight="400">未実装・予定</text>
+<rect x="555" y="84" width="16" height="16" rx="2" fill="#fff8cc" stroke="#b89b18" stroke-width="2"/>
+<text x="578" y="98" font-size="14" font-weight="400">実装中</text>
+<rect x="730" y="84" width="16" height="16" rx="2" fill="#e3f6e8" stroke="#33844a" stroke-width="2"/>
+<text x="753" y="98" font-size="14" font-weight="400">ソフトウェア検証済み</text>
+<rect x="905" y="84" width="16" height="16" rx="2" fill="#bce8c9" stroke="#146b36" stroke-width="2.5"/>
+<text x="928" y="98" font-size="14" font-weight="400">実機検証済み</text>
+<rect x="1080" y="84" width="16" height="16" rx="2" fill="#ffe2e2" stroke="#c34141" stroke-width="2"/>
+<text x="1103" y="98" font-size="14" font-weight="400">課題で停止</text>
+<rect x="1255" y="84" width="16" height="16" rx="2" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
+<text x="1278" y="98" font-size="14" font-weight="400">細分案</text>
+<text x="30" y="141" font-size="21" font-weight="700">#対局管理</text>
+<text x="30.0" y="175" font-size="17" font-weight="650">ブラウザ画面・Python API</text>
+<g data-tags="#統合 #対局管理 #対局操作" data-status="implemented"><title>#統合 #対局管理 #対局操作</title>
+<rect x="30.0" y="184" width="683.0" height="72" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+<text x="42.0" y="203" font-size="13" font-weight="600">#統合 #対局操作</text>
+<text x="42.0" y="226" font-size="19" font-weight="600">対局操作</text>
+<text x="42.0" y="247" font-size="16" font-weight="400">対象盤の対局を開始・操作する。</text>
+</g>
+<g data-tags="#統合 #対局管理 #状態表示" data-status="review"><title>#統合 #対局管理 #状態表示</title>
+<rect x="30.0" y="263" width="683.0" height="72" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
+<text x="42.0" y="282" font-size="13" font-weight="600">#統合 #状態表示</text>
+<text x="42.0" y="305" font-size="19" font-weight="600">状態表示</text>
+<text x="42.0" y="326" font-size="16" font-weight="400">盤ごとの手番・認識結果・AI思考・アーム待ちを表示する。</text>
+</g>
+<g data-tags="#統合 #対局管理 #API振り分け" data-status="implemented"><title>#統合 #対局管理 #API振り分け</title>
+<rect x="30.0" y="342" width="683.0" height="72" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+<text x="42.0" y="361" font-size="13" font-weight="600">#統合 #API振り分け</text>
+<text x="42.0" y="384" font-size="19" font-weight="600">API振り分け</text>
+<text x="42.0" y="405" font-size="16" font-weight="400">画面の操作を対象盤と処理に渡す。</text>
+</g>
+<g data-tags="#統合 #対局管理 #ローカル保存" data-status="implemented"><title>#統合 #対局管理 #ローカル保存</title>
+<rect x="30.0" y="421" width="683.0" height="72" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+<text x="42.0" y="440" font-size="13" font-weight="600">#統合 #ローカル保存</text>
+<text x="42.0" y="463" font-size="19" font-weight="600">ローカル保存</text>
+<text x="42.0" y="484" font-size="16" font-weight="400">教示をJSONに保存する。棋譜・復旧用の途中状態の永続保存は追加予定。</text>
+</g>
+<text x="727.0" y="175" font-size="17" font-weight="650">画面の拡張</text>
+<g data-tags="#統合 #対局管理 #ゲームと盤の選択" data-status="planned"><title>#統合 #対局管理 #ゲームと盤の選択</title>
+<rect x="727.0" y="184" width="683.0" height="72" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="739.0" y="203" font-size="13" font-weight="600">#統合 #ゲームと盤の選択</text>
+<text x="739.0" y="226" font-size="19" font-weight="600">ゲームと盤の選択</text>
+<text x="739.0" y="247" font-size="16" font-weight="400">チェス・囲碁・将棋から対象のゲームと盤を選ぶ。</text>
+</g>
+<g data-tags="#統合 #対局管理 #対局一時停止" data-status="planned"><title>#統合 #対局管理 #対局一時停止</title>
+<rect x="727.0" y="263" width="683.0" height="72" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="739.0" y="282" font-size="13" font-weight="600">#統合 #対局一時停止</text>
+<text x="739.0" y="305" font-size="19" font-weight="600">対局一時停止</text>
+<text x="739.0" y="326" font-size="16" font-weight="400">指定した盤の対局を一時停止・再開する。</text>
+</g>
+<g data-tags="#統合 #対局管理 #実機停止操作" data-status="planned"><title>#統合 #対局管理 #実機停止操作</title>
+<rect x="727.0" y="342" width="683.0" height="72" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="739.0" y="361" font-size="13" font-weight="600">#統合 #実機停止操作</text>
+<text x="739.0" y="384" font-size="19" font-weight="600">実機停止操作</text>
+<text x="739.0" y="405" font-size="16" font-weight="400">画面から共有アームの停止を要求する。</text>
+</g>
+<g data-tags="#統合 #対局管理 #設定画面" data-status="planned"><title>#統合 #対局管理 #設定画面</title>
+<rect x="727.0" y="421" width="683.0" height="72" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="739.0" y="440" font-size="13" font-weight="600">#統合 #設定画面</text>
+<text x="739.0" y="463" font-size="19" font-weight="600">設定画面</text>
+<text x="739.0" y="484" font-size="16" font-weight="400">較正・教示・モーター・シミュレーションを設定する。</text>
+</g>
+<text x="218.0" y="545" font-size="19" font-weight="700">#チェス</text>
+<text x="624.0" y="545" font-size="19" font-weight="700">#囲碁</text>
+<text x="1030.0" y="545" font-size="19" font-weight="700">#将棋</text>
+<rect x="30" y="558" width="1380" height="32" rx="6" fill="#e4eaf0" stroke="#e4eaf0" stroke-width="1"/>
+<text x="42" y="581" font-size="20" font-weight="700">#盤面認識</text>
+<text x="42" y="625" font-size="16" font-weight="600">#撮影</text>
+<g data-tags="#統合 #盤面認識 #撮影" data-status="implemented"><title>#統合 #盤面認識 #撮影</title>
+<rect x="206.0" y="603" width="1204.0" height="72" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+<text x="218.0" y="622" font-size="13" font-weight="600">#統合 #撮影</text>
+<text x="218.0" y="645" font-size="19" font-weight="600">対象盤を撮影</text>
+<text x="218.0" y="666" font-size="16" font-weight="400">盤を指定して画像を取得する。</text>
+</g>
+<text x="42" y="720" font-size="16" font-weight="600">#画像確認</text>
+<g data-tags="#統合 #盤面認識 #画像確認" data-status="planned"><title>#統合 #盤面認識 #画像確認</title>
+<rect x="206.0" y="698" width="1204.0" height="72" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="218.0" y="717" font-size="13" font-weight="600">#統合 #画像確認</text>
+<text x="218.0" y="740" font-size="19" font-weight="600">観測できる画像を選ぶ</text>
+<text x="218.0" y="761" font-size="16" font-weight="400">手の映り込み、遮蔽、画像の鮮度を確認する。</text>
+</g>
+<text x="42" y="815" font-size="16" font-weight="600">#盤較正</text>
+<g data-tags="#統合 #盤面認識 #四隅検出と正面化" data-status="implemented"><title>#統合 #盤面認識 #四隅検出と正面化</title>
+<rect x="206.0" y="793" width="595.0" height="72" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+<text x="218.0" y="812" font-size="13" font-weight="600">#統合 #四隅検出と正面化</text>
+<text x="218.0" y="835" font-size="19" font-weight="600">四隅検出と正面化</text>
+<text x="218.0" y="856" font-size="16" font-weight="400">カメラ画像から盤の四隅を検出し、画像を補正する。</text>
+</g>
+<g data-tags="#統合 #盤面認識 #実測較正と盤追従" data-status="prototype_unintegrated"><title>#統合 #盤面認識 #実測較正と盤追従</title>
+<rect x="815.0" y="793" width="595.0" height="72" rx="6" fill="#fff3df" stroke="#d18a21" stroke-width="2"/>
+<text x="827.0" y="812" font-size="13" font-weight="600">#統合 #実測較正と盤追従</text>
+<text x="827.0" y="835" font-size="19" font-weight="600">実測較正と盤追従</text>
+<text x="827.0" y="856" font-size="16" font-weight="400">レンズ・ロボット座標・観測姿勢の較正を対局に接続する。</text>
+</g>
+<g data-tags="#チェス #盤面認識 #盤較正" data-status="planned"><title>#チェス #盤面認識 #盤較正</title>
+<rect x="206.0" y="888" width="392.0" height="72" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="218.0" y="907" font-size="13" font-weight="600">#チェス #盤較正</text>
+<text x="218.0" y="930" font-size="19" font-weight="600">チェス盤のマス座標</text>
+<text x="218.0" y="951" font-size="16" font-weight="400">8×8のマス中心と駒寸法を扱う。</text>
+</g>
+<g data-tags="#囲碁 #盤面認識 #盤較正" data-status="planned"><title>#囲碁 #盤面認識 #盤較正</title>
+<rect x="612.0" y="888" width="392.0" height="72" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="624.0" y="907" font-size="13" font-weight="600">#囲碁 #盤較正</text>
+<text x="624.0" y="930" font-size="19" font-weight="600">囲碁盤の交点座標</text>
+<text x="624.0" y="951" font-size="16" font-weight="400">9路・13路・19路の交点位置を扱う。</text>
+</g>
+<g data-tags="#将棋 #盤面認識 #盤較正" data-status="review"><title>#将棋 #盤面認識 #盤較正</title>
+<rect x="1018.0" y="888" width="392.0" height="72" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
+<text x="1030.0" y="907" font-size="13" font-weight="600">#将棋 #盤較正</text>
+<text x="1030.0" y="930" font-size="19" font-weight="600">将棋盤のマス座標</text>
+<text x="1030.0" y="951" font-size="16" font-weight="400">9×9のマス中心を扱う。</text>
+</g>
+<text x="42" y="1005" font-size="16" font-weight="600">#駒石認識</text>
+<g data-tags="#チェス #盤面認識 #駒石認識" data-status="planned"><title>#チェス #盤面認識 #駒石認識</title>
+<rect x="206.0" y="983" width="392.0" height="72" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="218.0" y="1002" font-size="13" font-weight="600">#チェス #駒石認識</text>
+<text x="218.0" y="1025" font-size="19" font-weight="600">駒と空きマスの認識</text>
+<text x="218.0" y="1046" font-size="16" font-weight="400">駒種・白黒・空を判定する。</text>
+</g>
+<g data-tags="#囲碁 #盤面認識 #駒石認識" data-status="planned"><title>#囲碁 #盤面認識 #駒石認識</title>
+<rect x="612.0" y="983" width="392.0" height="72" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="624.0" y="1002" font-size="13" font-weight="600">#囲碁 #駒石認識</text>
+<text x="624.0" y="1025" font-size="19" font-weight="600">交点認識</text>
+<text x="624.0" y="1046" font-size="16" font-weight="400">黒石・白石・空を判定する。</text>
+</g>
+<g data-tags="#将棋 #盤面認識 #駒石認識" data-status="planned"><title>#将棋 #盤面認識 #駒石認識</title>
+<rect x="1018.0" y="983" width="392.0" height="72" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1030.0" y="1002" font-size="13" font-weight="600">#将棋 #駒石認識</text>
+<text x="1030.0" y="1025" font-size="19" font-weight="600">駒の認識</text>
+<text x="1030.0" y="1046" font-size="16" font-weight="400">駒種・所有者の向き・成り・空を判定する。</text>
+</g>
+<rect x="30" y="1078" width="1380" height="32" rx="6" fill="#e4eaf0" stroke="#e4eaf0" stroke-width="1"/>
+<text x="42" y="1101" font-size="20" font-weight="700">#局面確定とAI入力</text>
+<text x="42" y="1145" font-size="16" font-weight="600">#人の着手推定</text>
+<g data-tags="#統合 #局面確定とAI入力 #人の着手推定" data-status="review"><title>#統合 #局面確定とAI入力 #人の着手推定</title>
+<rect x="206.0" y="1123" width="1204.0" height="72" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
+<text x="218.0" y="1142" font-size="13" font-weight="600">#統合 #人の着手推定</text>
+<text x="218.0" y="1165" font-size="19" font-weight="600">認識結果と直前局面の照合</text>
+<text x="218.0" y="1186" font-size="16" font-weight="400">盤ごとの認識結果を着手候補の照合に渡す。</text>
+</g>
+<g data-tags="#チェス #局面確定とAI入力 #人の着手推定" data-status="review"><title>#チェス #局面確定とAI入力 #人の着手推定</title>
+<rect x="206.0" y="1218" width="392.0" height="91" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
+<text x="218.0" y="1237" font-size="13" font-weight="600">#チェス #人の着手推定</text>
+<text x="218.0" y="1260" font-size="19" font-weight="600">チェスの着手推定</text>
+<text x="218.0" y="1281" font-size="16" font-weight="400">移動・取り・特殊手による盤の変化を照合する</text>
+<text x="218.0" y="1300" font-size="16" font-weight="400">。</text>
+</g>
+<g data-tags="#囲碁 #局面確定とAI入力 #人の着手推定" data-status="review"><title>#囲碁 #局面確定とAI入力 #人の着手推定</title>
+<rect x="612.0" y="1218" width="392.0" height="91" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
+<text x="624.0" y="1237" font-size="13" font-weight="600">#囲碁 #人の着手推定</text>
+<text x="624.0" y="1260" font-size="19" font-weight="600">囲碁の着手推定</text>
+<text x="624.0" y="1281" font-size="16" font-weight="400">配置した石と捕獲された石を照合する。</text>
+</g>
+<g data-tags="#将棋 #局面確定とAI入力 #人の着手推定" data-status="implemented"><title>#将棋 #局面確定とAI入力 #人の着手推定</title>
+<rect x="1018.0" y="1218" width="392.0" height="91" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+<text x="1030.0" y="1237" font-size="13" font-weight="600">#将棋 #人の着手推定</text>
+<text x="1030.0" y="1260" font-size="19" font-weight="600">将棋の着手推定</text>
+<text x="1030.0" y="1281" font-size="16" font-weight="400">9×9の画像差分と合法手から、移動・取り・打</text>
+<text x="1030.0" y="1300" font-size="16" font-weight="400">ち・成りを絞る。</text>
+</g>
+<text x="42" y="1354" font-size="16" font-weight="600">#局面確定</text>
+<g data-tags="#統合 #局面確定とAI入力 #局面確定" data-status="review"><title>#統合 #局面確定とAI入力 #局面確定</title>
+<rect x="206.0" y="1332" width="1204.0" height="72" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
+<text x="218.0" y="1351" font-size="13" font-weight="600">#統合 #局面確定</text>
+<text x="218.0" y="1374" font-size="19" font-weight="600">盤別の局面管理</text>
+<text x="218.0" y="1395" font-size="16" font-weight="400">盤ごとに局面・手番・履歴を保持する。</text>
+</g>
+<g data-tags="#チェス #局面確定とAI入力 #局面確定" data-status="planned"><title>#チェス #局面確定とAI入力 #局面確定</title>
+<rect x="206.0" y="1427" width="392.0" height="91" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="218.0" y="1446" font-size="13" font-weight="600">#チェス #局面確定</text>
+<text x="218.0" y="1469" font-size="19" font-weight="600">チェスのルール管理</text>
+<text x="218.0" y="1490" font-size="16" font-weight="400">合法手、キャスリング権、アンパッサンの可否</text>
+<text x="218.0" y="1509" font-size="16" font-weight="400">、終局を扱う。</text>
+</g>
+<g data-tags="#囲碁 #局面確定とAI入力 #局面確定" data-status="planned"><title>#囲碁 #局面確定とAI入力 #局面確定</title>
+<rect x="612.0" y="1427" width="392.0" height="91" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="624.0" y="1446" font-size="13" font-weight="600">#囲碁 #局面確定</text>
+<text x="624.0" y="1469" font-size="19" font-weight="600">囲碁のルール管理</text>
+<text x="624.0" y="1490" font-size="16" font-weight="400">捕獲・コウ・パス・終局を扱う。</text>
+</g>
+<g data-tags="#将棋 #局面確定とAI入力 #局面確定" data-status="implemented"><title>#将棋 #局面確定とAI入力 #局面確定</title>
+<rect x="1018.0" y="1427" width="392.0" height="91" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+<text x="1030.0" y="1446" font-size="13" font-weight="600">#将棋 #局面確定</text>
+<text x="1030.0" y="1469" font-size="19" font-weight="600">将棋のルール管理</text>
+<text x="1030.0" y="1490" font-size="16" font-weight="400">合法手、持ち駒、成りを扱う。</text>
+</g>
+<text x="42" y="1563" font-size="16" font-weight="600">#AI入力変換</text>
+<g data-tags="#チェス #局面確定とAI入力 #AI入力変換" data-status="review"><title>#チェス #局面確定とAI入力 #AI入力変換</title>
+<rect x="206.0" y="1541" width="392.0" height="91" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
+<text x="218.0" y="1560" font-size="13" font-weight="600">#チェス #AI入力変換</text>
+<text x="218.0" y="1583" font-size="19" font-weight="600">UCI入力</text>
+<text x="218.0" y="1604" font-size="16" font-weight="400">FENや指し手履歴から探索対象の局面を渡す。</text>
+</g>
+<g data-tags="#囲碁 #局面確定とAI入力 #AI入力変換" data-status="review"><title>#囲碁 #局面確定とAI入力 #AI入力変換</title>
+<rect x="612.0" y="1541" width="392.0" height="91" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
+<text x="624.0" y="1560" font-size="13" font-weight="600">#囲碁 #AI入力変換</text>
+<text x="624.0" y="1583" font-size="19" font-weight="600">囲碁エンジン用の入力</text>
+<text x="624.0" y="1604" font-size="16" font-weight="400">エンジンの選定後に、局面とルールを渡す形式</text>
+<text x="624.0" y="1623" font-size="16" font-weight="400">を決める。</text>
+</g>
+<g data-tags="#将棋 #局面確定とAI入力 #AI入力変換" data-status="review"><title>#将棋 #局面確定とAI入力 #AI入力変換</title>
+<rect x="1018.0" y="1541" width="392.0" height="91" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
+<text x="1030.0" y="1560" font-size="13" font-weight="600">#将棋 #AI入力変換</text>
+<text x="1030.0" y="1583" font-size="19" font-weight="600">USI入力</text>
+<text x="1030.0" y="1604" font-size="16" font-weight="400">局面と指し手履歴をやねうら王へ渡す。</text>
+</g>
+<rect x="30" y="1655" width="1380" height="32" rx="6" fill="#e4eaf0" stroke="#e4eaf0" stroke-width="1"/>
+<text x="42" y="1678" font-size="20" font-weight="700">#AI着手決定</text>
+<text x="42" y="1722" font-size="16" font-weight="600">#探索要求</text>
+<g data-tags="#統合 #AI着手決定 #探索要求" data-status="review"><title>#統合 #AI着手決定 #探索要求</title>
+<rect x="206.0" y="1700" width="1204.0" height="72" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
+<text x="218.0" y="1719" font-size="13" font-weight="600">#統合 #探索要求</text>
+<text x="218.0" y="1742" font-size="19" font-weight="600">盤ごとに探索を要求</text>
+<text x="218.0" y="1763" font-size="16" font-weight="400">対象の盤・局面と探索条件を指定する。3面の探索は並行して進める。</text>
+</g>
+<text x="42" y="1817" font-size="16" font-weight="600">#着手探索</text>
+<g data-tags="#チェス #AI着手決定 #着手探索" data-status="planned"><title>#チェス #AI着手決定 #着手探索</title>
+<rect x="206.0" y="1795" width="392.0" height="91" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="218.0" y="1814" font-size="13" font-weight="600">#チェス #着手探索</text>
+<text x="218.0" y="1837" font-size="19" font-weight="600">Stockfish</text>
+<text x="218.0" y="1858" font-size="16" font-weight="400">UCIで局面を受け取り、次の一手を返す。</text>
+</g>
+<g data-tags="#囲碁 #AI着手決定 #着手探索" data-status="planned"><title>#囲碁 #AI着手決定 #着手探索</title>
+<rect x="612.0" y="1795" width="392.0" height="91" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="624.0" y="1814" font-size="13" font-weight="600">#囲碁 #着手探索</text>
+<text x="624.0" y="1837" font-size="19" font-weight="600">囲碁エンジン</text>
+<text x="624.0" y="1858" font-size="16" font-weight="400">エンジン未選定。局面から次の一手を選ぶ。</text>
+</g>
+<g data-tags="#将棋 #AI着手決定 #着手探索" data-status="implemented"><title>#将棋 #AI着手決定 #着手探索</title>
+<rect x="1018.0" y="1795" width="392.0" height="91" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+<text x="1030.0" y="1814" font-size="13" font-weight="600">#将棋 #着手探索</text>
+<text x="1030.0" y="1837" font-size="19" font-weight="600">やねうら王</text>
+<text x="1030.0" y="1858" font-size="16" font-weight="400">USIで次の一手を返す。実バイナリと評価関数の</text>
+<text x="1030.0" y="1877" font-size="16" font-weight="400">試験は未実施。</text>
+</g>
+<text x="42" y="1931" font-size="16" font-weight="600">#着手応答確認</text>
+<g data-tags="#統合 #AI着手決定 #着手応答確認" data-status="review"><title>#統合 #AI着手決定 #着手応答確認</title>
+<rect x="206.0" y="1909" width="1204.0" height="72" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
+<text x="218.0" y="1928" font-size="13" font-weight="600">#統合 #着手応答確認</text>
+<text x="218.0" y="1951" font-size="19" font-weight="600">探索結果と対象局面の照合</text>
+<text x="218.0" y="1972" font-size="16" font-weight="400">盤IDと要求時の局面を照合してから応答を受理する。</text>
+</g>
+<g data-tags="#チェス #AI着手決定 #着手応答確認" data-status="review"><title>#チェス #AI着手決定 #着手応答確認</title>
+<rect x="206.0" y="2004" width="392.0" height="72" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
+<text x="218.0" y="2023" font-size="13" font-weight="600">#チェス #着手応答確認</text>
+<text x="218.0" y="2046" font-size="19" font-weight="600">チェスの応答確認</text>
+<text x="218.0" y="2067" font-size="16" font-weight="400">指し手を合法手と照合する。</text>
+</g>
+<g data-tags="#囲碁 #AI着手決定 #着手応答確認" data-status="review"><title>#囲碁 #AI着手決定 #着手応答確認</title>
+<rect x="612.0" y="2004" width="392.0" height="72" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
+<text x="624.0" y="2023" font-size="13" font-weight="600">#囲碁 #着手応答確認</text>
+<text x="624.0" y="2046" font-size="19" font-weight="600">囲碁の応答確認</text>
+<text x="624.0" y="2067" font-size="16" font-weight="400">着手とパスを識別する。</text>
+</g>
+<g data-tags="#将棋 #AI着手決定 #着手応答確認" data-status="review"><title>#将棋 #AI着手決定 #着手応答確認</title>
+<rect x="1018.0" y="2004" width="392.0" height="72" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
+<text x="1030.0" y="2023" font-size="13" font-weight="600">#将棋 #着手応答確認</text>
+<text x="1030.0" y="2046" font-size="19" font-weight="600">将棋の応答確認</text>
+<text x="1030.0" y="2067" font-size="16" font-weight="400">指し手と投了を識別する。</text>
+</g>
+<text x="42" y="2094" font-size="13" font-weight="400">パス・投了・終局 → 対局管理</text>
+<rect x="30" y="2112" width="1380" height="32" rx="6" fill="#e4eaf0" stroke="#e4eaf0" stroke-width="1"/>
+<text x="42" y="2135" font-size="20" font-weight="700">#動作計画</text>
+<text x="42" y="2179" font-size="16" font-weight="600">#供給回収位置</text>
+<g data-tags="#チェス #動作計画 #供給回収位置" data-status="planned"><title>#チェス #動作計画 #供給回収位置</title>
+<rect x="206.0" y="2157" width="392.0" height="91" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="218.0" y="2176" font-size="13" font-weight="600">#チェス #供給回収位置</text>
+<text x="218.0" y="2199" font-size="19" font-weight="600">回収先と交換駒</text>
+<text x="218.0" y="2220" font-size="16" font-weight="400">捕獲駒・昇格用の交換駒・ポーンの置き場を扱</text>
+<text x="218.0" y="2239" font-size="16" font-weight="400">う。</text>
+</g>
+<g data-tags="#囲碁 #動作計画 #供給回収位置" data-status="planned"><title>#囲碁 #動作計画 #供給回収位置</title>
+<rect x="612.0" y="2157" width="392.0" height="91" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="624.0" y="2176" font-size="13" font-weight="600">#囲碁 #供給回収位置</text>
+<text x="624.0" y="2199" font-size="19" font-weight="600">碁笥とアゲハマ置き場</text>
+<text x="624.0" y="2220" font-size="16" font-weight="400">石の供給位置と捕獲石の回収先を扱う。</text>
+</g>
+<g data-tags="#将棋 #動作計画 #供給回収位置" data-status="prototype_unintegrated"><title>#将棋 #動作計画 #供給回収位置</title>
+<rect x="1018.0" y="2157" width="392.0" height="91" rx="6" fill="#fff3df" stroke="#d18a21" stroke-width="2"/>
+<text x="1030.0" y="2176" font-size="13" font-weight="600">#将棋 #供給回収位置</text>
+<text x="1030.0" y="2199" font-size="19" font-weight="600">持ち駒と駒台</text>
+<text x="1030.0" y="2220" font-size="16" font-weight="400">駒種・空きスロット・実測位置を扱う。</text>
+</g>
+<text x="42" y="2293" font-size="16" font-weight="600">#操作手順</text>
+<g data-tags="#チェス #動作計画 #操作手順" data-status="planned"><title>#チェス #動作計画 #操作手順</title>
+<rect x="206.0" y="2271" width="392.0" height="91" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="218.0" y="2290" font-size="13" font-weight="600">#チェス #操作手順</text>
+<text x="218.0" y="2313" font-size="19" font-weight="600">チェスの操作列</text>
+<text x="218.0" y="2334" font-size="16" font-weight="400">移動・取り・キャスリング・アンパッサン・昇</text>
+<text x="218.0" y="2353" font-size="16" font-weight="400">格を展開する。</text>
+</g>
+<g data-tags="#囲碁 #動作計画 #操作手順" data-status="planned"><title>#囲碁 #動作計画 #操作手順</title>
+<rect x="612.0" y="2271" width="392.0" height="91" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="624.0" y="2290" font-size="13" font-weight="600">#囲碁 #操作手順</text>
+<text x="624.0" y="2313" font-size="19" font-weight="600">囲碁の操作列</text>
+<text x="624.0" y="2334" font-size="16" font-weight="400">着手交点への配置と捕獲石の回収を展開する。</text>
+</g>
+<g data-tags="#将棋 #動作計画 #操作手順" data-status="prototype_unintegrated"><title>#将棋 #動作計画 #操作手順</title>
+<rect x="1018.0" y="2271" width="392.0" height="91" rx="6" fill="#fff3df" stroke="#d18a21" stroke-width="2"/>
+<text x="1030.0" y="2290" font-size="13" font-weight="600">#将棋 #操作手順</text>
+<text x="1030.0" y="2313" font-size="19" font-weight="600">将棋の操作列</text>
+<text x="1030.0" y="2334" font-size="16" font-weight="400">移動・取り・打ちと、裏返し台での成り・成駒</text>
+<text x="1030.0" y="2353" font-size="16" font-weight="400">戻しを展開する。</text>
+</g>
+<text x="42" y="2407" font-size="16" font-weight="600">#座標変換</text>
+<g data-tags="#統合 #動作計画 #座標変換" data-status="review"><title>#統合 #動作計画 #座標変換</title>
+<rect x="206.0" y="2385" width="1204.0" height="72" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
+<text x="218.0" y="2404" font-size="13" font-weight="600">#統合 #座標変換</text>
+<text x="218.0" y="2427" font-size="19" font-weight="600">アーム座標への変換</text>
+<text x="218.0" y="2448" font-size="16" font-weight="400">対象盤と供給・回収先の較正値から、操作位置をアーム座標に変換する。</text>
+</g>
+<text x="42" y="2502" font-size="16" font-weight="600">#経路生成</text>
+<g data-tags="#統合 #動作計画 #経路生成" data-status="planned"><title>#統合 #動作計画 #経路生成</title>
+<rect x="206.0" y="2480" width="1204.0" height="72" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="218.0" y="2499" font-size="13" font-weight="600">#統合 #経路生成</text>
+<text x="218.0" y="2522" font-size="19" font-weight="600">共通搬送と運動学</text>
+<text x="218.0" y="2543" font-size="16" font-weight="400">接近・下降・把持・持上げ・配置を共通化し、FK・IKで姿勢と経路を計算する。</text>
+</g>
+<text x="42" y="2597" font-size="16" font-weight="600">#経路検証</text>
+<g data-tags="#統合 #動作計画 #経路検証" data-status="prototype_unintegrated"><title>#統合 #動作計画 #経路検証</title>
+<rect x="206.0" y="2575" width="1204.0" height="72" rx="6" fill="#fff3df" stroke="#d18a21" stroke-width="2"/>
+<text x="218.0" y="2594" font-size="13" font-weight="600">#統合 #経路検証</text>
+<text x="218.0" y="2617" font-size="19" font-weight="600">MuJoCoによる経路・接触の評価</text>
+<text x="218.0" y="2638" font-size="16" font-weight="400">実測モデルで到達可否と、周囲の駒・石を含む干渉を確認する。</text>
+</g>
+<rect x="30" y="2670" width="1380" height="32" rx="6" fill="#e4eaf0" stroke="#e4eaf0" stroke-width="1"/>
+<text x="42" y="2693" font-size="20" font-weight="700">#アーム制御</text>
+<text x="42" y="2737" font-size="16" font-weight="600">#操作順管理</text>
+<g data-tags="#統合 #アーム制御 #操作順管理" data-status="review"><title>#統合 #アーム制御 #操作順管理</title>
+<rect x="206.0" y="2715" width="1204.0" height="72" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
+<text x="218.0" y="2734" font-size="13" font-weight="600">#統合 #操作順管理</text>
+<text x="218.0" y="2757" font-size="19" font-weight="600">共有アームの操作順</text>
+<text x="218.0" y="2778" font-size="16" font-weight="400">3面の物理操作を順番待ちに置き、盤IDと対象局面を各操作に引き継ぐ。</text>
+</g>
+<text x="42" y="2832" font-size="16" font-weight="600">#実機送信ゲート</text>
+<g data-tags="#統合 #アーム制御 #実機送信ゲート" data-status="implemented"><title>#統合 #アーム制御 #実機送信ゲート</title>
+<rect x="206.0" y="2810" width="1204.0" height="72" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+<text x="218.0" y="2829" font-size="13" font-weight="600">#統合 #実機送信ゲート</text>
+<text x="218.0" y="2852" font-size="19" font-weight="600">送信可否を判定</text>
+<text x="218.0" y="2873" font-size="16" font-weight="400">実機への指令送信を許可する条件を確認する。</text>
+</g>
+<text x="42" y="2927" font-size="16" font-weight="600">#関節制御</text>
+<g data-tags="#統合 #アーム制御 #関節制御" data-status="prototype_unintegrated"><title>#統合 #アーム制御 #関節制御</title>
+<rect x="206.0" y="2905" width="1204.0" height="72" rx="6" fill="#fff3df" stroke="#d18a21" stroke-width="2"/>
+<text x="218.0" y="2924" font-size="13" font-weight="600">#統合 #関節制御</text>
+<text x="218.0" y="2947" font-size="19" font-weight="600">LeRobot実機経路</text>
+<text x="218.0" y="2968" font-size="16" font-weight="400">関節較正と速度制約を適用し、経路・把持・解放を指令する。</text>
+</g>
+<text x="42" y="3022" font-size="16" font-weight="600">#動作監視</text>
+<g data-tags="#統合 #アーム制御 #関節と通信の監視" data-status="prototype_unintegrated"><title>#統合 #アーム制御 #関節と通信の監視</title>
+<rect x="206.0" y="3000" width="595.0" height="72" rx="6" fill="#fff3df" stroke="#d18a21" stroke-width="2"/>
+<text x="218.0" y="3019" font-size="13" font-weight="600">#統合 #関節と通信の監視</text>
+<text x="218.0" y="3042" font-size="19" font-weight="600">関節の追従と通信を監視</text>
+<text x="218.0" y="3063" font-size="16" font-weight="400">追従誤差と通信停止を監視する。</text>
+</g>
+<g data-tags="#統合 #アーム制御 #操作段階の確認" data-status="planned"><title>#統合 #アーム制御 #操作段階の確認</title>
+<rect x="815.0" y="3000" width="595.0" height="72" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="827.0" y="3019" font-size="13" font-weight="600">#統合 #操作段階の確認</text>
+<text x="827.0" y="3042" font-size="19" font-weight="600">操作の各段階を確認</text>
+<text x="827.0" y="3063" font-size="16" font-weight="400">近接補正・把持・解放を段階ごとに確認し、異常時に停止する。</text>
+</g>
+<rect x="30" y="3095" width="1380" height="32" rx="6" fill="#e4eaf0" stroke="#e4eaf0" stroke-width="1"/>
+<text x="42" y="3118" font-size="20" font-weight="700">#操作後確認と棋譜更新</text>
+<text x="42" y="3162" font-size="16" font-weight="600">#再撮影</text>
+<g data-tags="#統合 #操作後確認と棋譜更新 #再撮影" data-status="planned"><title>#統合 #操作後確認と棋譜更新 #再撮影</title>
+<rect x="206.0" y="3140" width="1204.0" height="72" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="218.0" y="3159" font-size="13" font-weight="600">#統合 #再撮影</text>
+<text x="218.0" y="3182" font-size="19" font-weight="600">対象盤の再観測</text>
+<text x="218.0" y="3203" font-size="16" font-weight="400">観測姿勢に戻って対象盤を再撮影する。</text>
+</g>
+<text x="42" y="3257" font-size="16" font-weight="600">#結果照合</text>
+<g data-tags="#統合 #操作後確認と棋譜更新 #結果照合" data-status="planned"><title>#統合 #操作後確認と棋譜更新 #結果照合</title>
+<rect x="206.0" y="3235" width="1204.0" height="72" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="218.0" y="3254" font-size="13" font-weight="600">#統合 #結果照合</text>
+<text x="218.0" y="3277" font-size="19" font-weight="600">予定状態との照合</text>
+<text x="218.0" y="3298" font-size="16" font-weight="400">操作した盤と周辺の在庫を、着手後の予定状態と比較する。</text>
+</g>
+<g data-tags="#チェス #操作後確認と棋譜更新 #結果照合" data-status="review"><title>#チェス #操作後確認と棋譜更新 #結果照合</title>
+<rect x="206.0" y="3330" width="392.0" height="72" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
+<text x="218.0" y="3349" font-size="13" font-weight="600">#チェス #結果照合</text>
+<text x="218.0" y="3372" font-size="19" font-weight="600">チェスの確認対象</text>
+<text x="218.0" y="3393" font-size="16" font-weight="400">移動した駒、交換駒、回収先を照合する。</text>
+</g>
+<g data-tags="#囲碁 #操作後確認と棋譜更新 #結果照合" data-status="review"><title>#囲碁 #操作後確認と棋譜更新 #結果照合</title>
+<rect x="612.0" y="3330" width="392.0" height="72" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
+<text x="624.0" y="3349" font-size="13" font-weight="600">#囲碁 #結果照合</text>
+<text x="624.0" y="3372" font-size="19" font-weight="600">囲碁の確認対象</text>
+<text x="624.0" y="3393" font-size="16" font-weight="400">配置した石と捕獲石を照合する。</text>
+</g>
+<g data-tags="#将棋 #操作後確認と棋譜更新 #結果照合" data-status="review"><title>#将棋 #操作後確認と棋譜更新 #結果照合</title>
+<rect x="1018.0" y="3330" width="392.0" height="72" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
+<text x="1030.0" y="3349" font-size="13" font-weight="600">#将棋 #結果照合</text>
+<text x="1030.0" y="3372" font-size="19" font-weight="600">将棋の確認対象</text>
+<text x="1030.0" y="3393" font-size="16" font-weight="400">移動した駒、成り、駒台を照合する。</text>
+</g>
+<text x="42" y="3447" font-size="16" font-weight="600">#照合結果</text>
+<g data-tags="#統合 #操作後確認と棋譜更新 #着手確定" data-status="planned"><title>#統合 #操作後確認と棋譜更新 #着手確定</title>
+<rect x="206.0" y="3425" width="595.0" height="72" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="218.0" y="3444" font-size="13" font-weight="600">#統合 #着手確定</text>
+<text x="218.0" y="3467" font-size="19" font-weight="600">一致した場合</text>
+<text x="218.0" y="3488" font-size="16" font-weight="400">対象盤の着手を確定し、棋譜を保存して次の手番へ進む。</text>
+</g>
+<g data-tags="#統合 #操作後確認と棋譜更新 #復旧" data-status="planned"><title>#統合 #操作後確認と棋譜更新 #復旧</title>
+<rect x="815.0" y="3425" width="595.0" height="72" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="827.0" y="3444" font-size="13" font-weight="600">#統合 #復旧</text>
+<text x="827.0" y="3467" font-size="19" font-weight="600">不一致の場合</text>
+<text x="827.0" y="3488" font-size="16" font-weight="400">停止して途中状態を記録し、再観測して復旧に進む。</text>
+</g>
+<text x="30" y="3546" font-size="21" font-weight="700">#開発支援</text>
+<text x="30.0" y="3580" font-size="17" font-weight="650">機械・モデルの整備</text>
+<g data-tags="#統合 #開発支援 #上腕延長" data-status="prototype_unintegrated"><title>#統合 #開発支援 #上腕延長</title>
+<rect x="30.0" y="3589" width="334.5" height="72" rx="6" fill="#fff3df" stroke="#d18a21" stroke-width="2"/>
+<text x="42.0" y="3608" font-size="13" font-weight="600">#統合 #上腕延長</text>
+<text x="42.0" y="3631" font-size="19" font-weight="600">上腕延長</text>
+<text x="42.0" y="3652" font-size="16" font-weight="400">延長するリンクと寸法を選ぶ。</text>
+</g>
+<g data-tags="#統合 #開発支援 #爪と取付" data-status="prototype_unintegrated"><title>#統合 #開発支援 #爪と取付</title>
+<rect x="30.0" y="3668" width="334.5" height="91" rx="6" fill="#fff3df" stroke="#d18a21" stroke-width="2"/>
+<text x="42.0" y="3687" font-size="13" font-weight="600">#統合 #爪と取付</text>
+<text x="42.0" y="3710" font-size="19" font-weight="600">爪と取付</text>
+<text x="42.0" y="3731" font-size="16" font-weight="400">爪・カメラマウント・配線の配置を決め</text>
+<text x="42.0" y="3750" font-size="16" font-weight="400">る。</text>
+</g>
+<g data-tags="#統合 #開発支援 #寸法モデル" data-status="prototype_unintegrated"><title>#統合 #開発支援 #寸法モデル</title>
+<rect x="30.0" y="3766" width="334.5" height="91" rx="6" fill="#fff3df" stroke="#d18a21" stroke-width="2"/>
+<text x="42.0" y="3785" font-size="13" font-weight="600">#統合 #寸法モデル</text>
+<text x="42.0" y="3808" font-size="19" font-weight="600">寸法モデル</text>
+<text x="42.0" y="3829" font-size="16" font-weight="400">CAD・URDF・MuJoCoに同じ実測寸法を反</text>
+<text x="42.0" y="3848" font-size="16" font-weight="400">映する。</text>
+</g>
+<g data-tags="#統合 #開発支援 #機械検証" data-status="prototype_unintegrated"><title>#統合 #開発支援 #機械検証</title>
+<rect x="30.0" y="3864" width="334.5" height="91" rx="6" fill="#fff3df" stroke="#d18a21" stroke-width="2"/>
+<text x="42.0" y="3883" font-size="13" font-weight="600">#統合 #機械検証</text>
+<text x="42.0" y="3906" font-size="19" font-weight="600">機械検証</text>
+<text x="42.0" y="3927" font-size="16" font-weight="400">各盤への到達範囲、干渉、負荷を確認す</text>
+<text x="42.0" y="3946" font-size="16" font-weight="400">る。</text>
+</g>
+<text x="378.5" y="3580" font-size="17" font-weight="650">静止4姿勢の教示記録</text>
+<g data-tags="#統合 #開発支援 #静止姿勢記録" data-status="implemented"><title>#統合 #開発支援 #静止姿勢記録</title>
+<rect x="378.5" y="3589" width="334.5" height="91" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+<text x="390.5" y="3608" font-size="13" font-weight="600">#統合 #静止姿勢記録</text>
+<text x="390.5" y="3631" font-size="19" font-weight="600">静止姿勢記録</text>
+<text x="390.5" y="3652" font-size="16" font-weight="400">LeaderとFollowerの4段階の静止姿勢を</text>
+<text x="390.5" y="3671" font-size="16" font-weight="400">保存する。</text>
+</g>
+<g data-tags="#統合 #開発支援 #教示条件記録" data-status="implemented"><title>#統合 #開発支援 #教示条件記録</title>
+<rect x="378.5" y="3687" width="334.5" height="91" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+<text x="390.5" y="3706" font-size="13" font-weight="600">#統合 #教示条件記録</text>
+<text x="390.5" y="3729" font-size="19" font-weight="600">教示条件記録</text>
+<text x="390.5" y="3750" font-size="16" font-weight="400">較正と使用機器の識別情報を教示に紐づ</text>
+<text x="390.5" y="3769" font-size="16" font-weight="400">ける。</text>
+</g>
+<text x="727.0" y="3580" font-size="17" font-weight="650">Leader追従・連続教示</text>
+<g data-tags="#統合 #開発支援 #教示追従" data-status="planned"><title>#統合 #開発支援 #教示追従</title>
+<rect x="727.0" y="3589" width="334.5" height="91" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="739.0" y="3608" font-size="13" font-weight="600">#統合 #教示追従</text>
+<text x="739.0" y="3631" font-size="19" font-weight="600">教示追従</text>
+<text x="739.0" y="3652" font-size="16" font-weight="400">教示中のFollowerの追従と停止を確認す</text>
+<text x="739.0" y="3671" font-size="16" font-weight="400">る。</text>
+</g>
+<g data-tags="#統合 #開発支援 #教示同期記録" data-status="planned"><title>#統合 #開発支援 #教示同期記録</title>
+<rect x="727.0" y="3687" width="334.5" height="91" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="739.0" y="3706" font-size="13" font-weight="600">#統合 #教示同期記録</text>
+<text x="739.0" y="3729" font-size="19" font-weight="600">教示同期記録</text>
+<text x="739.0" y="3750" font-size="16" font-weight="400">画像・関節角・指令・開閉量・対象・成</text>
+<text x="739.0" y="3769" font-size="16" font-weight="400">否を同期して記録する。</text>
+</g>
+<g data-tags="#統合 #開発支援 #教示機体識別" data-status="planned"><title>#統合 #開発支援 #教示機体識別</title>
+<rect x="727.0" y="3785" width="334.5" height="91" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="739.0" y="3804" font-size="13" font-weight="600">#統合 #教示機体識別</text>
+<text x="739.0" y="3827" font-size="19" font-weight="600">教示機体識別</text>
+<text x="739.0" y="3848" font-size="16" font-weight="400">腕の長さ・較正・マウントを記録し、機</text>
+<text x="739.0" y="3867" font-size="16" font-weight="400">体ごとに教示を識別する。</text>
+</g>
+<text x="1075.5" y="3580" font-size="17" font-weight="650">教示経路の利用と学習</text>
+<g data-tags="#統合 #開発支援 #教示経路候補" data-status="planned"><title>#統合 #開発支援 #教示経路候補</title>
+<rect x="1075.5" y="3589" width="334.5" height="91" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1087.5" y="3608" font-size="13" font-weight="600">#統合 #教示経路候補</text>
+<text x="1087.5" y="3631" font-size="19" font-weight="600">教示経路候補</text>
+<text x="1087.5" y="3652" font-size="16" font-weight="400">教示を逆運動学の初期姿勢や搬送経路の</text>
+<text x="1087.5" y="3671" font-size="16" font-weight="400">候補に使う。</text>
+</g>
+<g data-tags="#統合 #開発支援 #短動作学習" data-status="planned"><title>#統合 #開発支援 #短動作学習</title>
+<rect x="1075.5" y="3687" width="334.5" height="91" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1087.5" y="3706" font-size="13" font-weight="600">#統合 #短動作学習</text>
+<text x="1087.5" y="3729" font-size="19" font-weight="600">短動作学習</text>
+<text x="1087.5" y="3750" font-size="16" font-weight="400">必要時に把持・解放などの短い動作をAC</text>
+<text x="1087.5" y="3769" font-size="16" font-weight="400">Tで学習する。</text>
+</g>
+<g data-tags="#統合 #開発支援 #学習動作検証" data-status="planned"><title>#統合 #開発支援 #学習動作検証</title>
+<rect x="1075.5" y="3785" width="334.5" height="91" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1087.5" y="3804" font-size="13" font-weight="600">#統合 #学習動作検証</text>
+<text x="1087.5" y="3827" font-size="19" font-weight="600">学習動作検証</text>
+<text x="1087.5" y="3848" font-size="16" font-weight="400">学習した動作を関節範囲・速度・接触の</text>
+<text x="1087.5" y="3867" font-size="16" font-weight="400">制約で確認する。</text>
+</g>
+<text x="30" y="4001" font-size="14" font-weight="400">実線の矢印は対局の流れ、破線の矢印は機械モデル・教示の入力。灰色は独立した進捗記録のない細分案。</text></g>
+<g fill="none" stroke="#526578" stroke-width="1.7">
+<path d="M 713.0 168 H 725.0" marker-end="url(#arrow)"/>
+<path d="M 808.0 675 V 686.5 H 808.0 V 696" marker-end="url(#arrow)"/>
+<path d="M 503.5 781.5 H 1112.5"/>
+<path d="M 808.0 770 V 781.5"/>
+<path d="M 503.5 781.5 V 791" marker-end="url(#arrow)"/>
+<path d="M 1112.5 781.5 V 791" marker-end="url(#arrow)"/>
+<path d="M 402.0 876.5 H 1214.0"/>
+<path d="M 503.5 865 V 876.5"/>
+<path d="M 1112.5 865 V 876.5"/>
+<path d="M 402.0 876.5 V 886" marker-end="url(#arrow)"/>
+<path d="M 808.0 876.5 V 886" marker-end="url(#arrow)"/>
+<path d="M 1214.0 876.5 V 886" marker-end="url(#arrow)"/>
+<path d="M 402.0 960 V 971.5 H 402.0 V 981" marker-end="url(#arrow)"/>
+<path d="M 808.0 960 V 971.5 H 808.0 V 981" marker-end="url(#arrow)"/>
+<path d="M 1214.0 960 V 971.5 H 1214.0 V 981" marker-end="url(#arrow)"/>
+<path d="M 402.0 1089.0 H 1214.0"/>
+<path d="M 402.0 1055 V 1089.0"/>
+<path d="M 808.0 1055 V 1089.0"/>
+<path d="M 1214.0 1055 V 1089.0"/>
+<path d="M 808.0 1089.0 V 1121" marker-end="url(#arrow)"/>
+<path d="M 402.0 1206.5 H 1214.0"/>
+<path d="M 808.0 1195 V 1206.5"/>
+<path d="M 402.0 1206.5 V 1216" marker-end="url(#arrow)"/>
+<path d="M 808.0 1206.5 V 1216" marker-end="url(#arrow)"/>
+<path d="M 1214.0 1206.5 V 1216" marker-end="url(#arrow)"/>
+<path d="M 402.0 1320.5 H 1214.0"/>
+<path d="M 402.0 1309 V 1320.5"/>
+<path d="M 808.0 1309 V 1320.5"/>
+<path d="M 1214.0 1309 V 1320.5"/>
+<path d="M 808.0 1320.5 V 1330" marker-end="url(#arrow)"/>
+<path d="M 402.0 1415.5 H 1214.0"/>
+<path d="M 808.0 1404 V 1415.5"/>
+<path d="M 402.0 1415.5 V 1425" marker-end="url(#arrow)"/>
+<path d="M 808.0 1415.5 V 1425" marker-end="url(#arrow)"/>
+<path d="M 1214.0 1415.5 V 1425" marker-end="url(#arrow)"/>
+<path d="M 402.0 1518 V 1529.5 H 402.0 V 1539" marker-end="url(#arrow)"/>
+<path d="M 808.0 1518 V 1529.5 H 808.0 V 1539" marker-end="url(#arrow)"/>
+<path d="M 1214.0 1518 V 1529.5 H 1214.0 V 1539" marker-end="url(#arrow)"/>
+<path d="M 402.0 1666.0 H 1214.0"/>
+<path d="M 402.0 1632 V 1666.0"/>
+<path d="M 808.0 1632 V 1666.0"/>
+<path d="M 1214.0 1632 V 1666.0"/>
+<path d="M 808.0 1666.0 V 1698" marker-end="url(#arrow)"/>
+<path d="M 402.0 1783.5 H 1214.0"/>
+<path d="M 808.0 1772 V 1783.5"/>
+<path d="M 402.0 1783.5 V 1793" marker-end="url(#arrow)"/>
+<path d="M 808.0 1783.5 V 1793" marker-end="url(#arrow)"/>
+<path d="M 1214.0 1783.5 V 1793" marker-end="url(#arrow)"/>
+<path d="M 402.0 1897.5 H 1214.0"/>
+<path d="M 402.0 1886 V 1897.5"/>
+<path d="M 808.0 1886 V 1897.5"/>
+<path d="M 1214.0 1886 V 1897.5"/>
+<path d="M 808.0 1897.5 V 1907" marker-end="url(#arrow)"/>
+<path d="M 402.0 1992.5 H 1214.0"/>
+<path d="M 808.0 1981 V 1992.5"/>
+<path d="M 402.0 1992.5 V 2002" marker-end="url(#arrow)"/>
+<path d="M 808.0 1992.5 V 2002" marker-end="url(#arrow)"/>
+<path d="M 1214.0 1992.5 V 2002" marker-end="url(#arrow)"/>
+<path d="M 402.0 2076 V 2116.5 H 402.0 V 2155" marker-end="url(#arrow)"/>
+<path d="M 808.0 2076 V 2116.5 H 808.0 V 2155" marker-end="url(#arrow)"/>
+<path d="M 1214.0 2076 V 2116.5 H 1214.0 V 2155" marker-end="url(#arrow)"/>
+<path d="M 402.0 2248 V 2259.5 H 402.0 V 2269" marker-end="url(#arrow)"/>
+<path d="M 808.0 2248 V 2259.5 H 808.0 V 2269" marker-end="url(#arrow)"/>
+<path d="M 1214.0 2248 V 2259.5 H 1214.0 V 2269" marker-end="url(#arrow)"/>
+<path d="M 402.0 2373.5 H 1214.0"/>
+<path d="M 402.0 2362 V 2373.5"/>
+<path d="M 808.0 2362 V 2373.5"/>
+<path d="M 1214.0 2362 V 2373.5"/>
+<path d="M 808.0 2373.5 V 2383" marker-end="url(#arrow)"/>
+<path d="M 808.0 2457 V 2468.5 H 808.0 V 2478" marker-end="url(#arrow)"/>
+<path d="M 808.0 2552 V 2563.5 H 808.0 V 2573" marker-end="url(#arrow)"/>
+<path d="M 808.0 2647 V 2681.0 H 808.0 V 2713" marker-end="url(#arrow)"/>
+<path d="M 808.0 2787 V 2798.5 H 808.0 V 2808" marker-end="url(#arrow)"/>
+<path d="M 808.0 2882 V 2893.5 H 808.0 V 2903" marker-end="url(#arrow)"/>
+<path d="M 503.5 2988.5 H 1112.5"/>
+<path d="M 808.0 2977 V 2988.5"/>
+<path d="M 503.5 2988.5 V 2998" marker-end="url(#arrow)"/>
+<path d="M 1112.5 2988.5 V 2998" marker-end="url(#arrow)"/>
+<path d="M 503.5 3106.0 H 1112.5"/>
+<path d="M 503.5 3072 V 3106.0"/>
+<path d="M 1112.5 3072 V 3106.0"/>
+<path d="M 808.0 3106.0 V 3138" marker-end="url(#arrow)"/>
+<path d="M 808.0 3212 V 3223.5 H 808.0 V 3233" marker-end="url(#arrow)"/>
+<path d="M 402.0 3318.5 H 1214.0"/>
+<path d="M 808.0 3307 V 3318.5"/>
+<path d="M 402.0 3318.5 V 3328" marker-end="url(#arrow)"/>
+<path d="M 808.0 3318.5 V 3328" marker-end="url(#arrow)"/>
+<path d="M 1214.0 3318.5 V 3328" marker-end="url(#arrow)"/>
+<path d="M 402.0 3413.5 H 1214.0"/>
+<path d="M 402.0 3402 V 3413.5"/>
+<path d="M 808.0 3402 V 3413.5"/>
+<path d="M 1214.0 3402 V 3413.5"/>
+<path d="M 503.5 3413.5 V 3423" marker-end="url(#arrow)"/>
+<path d="M 1112.5 3413.5 V 3423" marker-end="url(#arrow)"/>
+<path d="M 713.0 3573 H 725.0" marker-end="url(#arrow)" stroke-dasharray="6 5"/>
+<path d="M 1061.5 3573 H 1073.5" marker-end="url(#arrow)" stroke-dasharray="6 5"/>
+<path d="M 1068.5 493 V 503 H 1425 V 639.0 H 1412.0" marker-end="url(#arrow)"/>
+<path d="M 197.25 3955 V 3972 H 14 V 2611.0 H 204.0" marker-end="url(#arrow)" stroke-dasharray="6 5"/>
+<path d="M 1242.75 3876 V 3972 H 1425 V 2516.0 H 1412.0" marker-end="url(#arrow)" stroke-dasharray="6 5"/></g></svg>

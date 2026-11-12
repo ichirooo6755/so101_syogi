@@ -241,6 +241,8 @@
     "構成図/構成図.md",
     "構成図/構成図.mmd",
     "構成図/構成図.svg",
+    "構成図/構成図.html",
+    "構成図/タグ付き構成図.svg",
     "docs/shogi-go-architecture-plan.json",
     "shogi/docs/shogi-implementation-plan.md"
   ]

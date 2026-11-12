@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><!-- TITLE --></title>
+<style>
+:root {
+  color-scheme: light;
+  font-family: 'BIZ UDPGothic', 'Yu Gothic UI', system-ui, sans-serif;
+  --paper: #f3f5f7;
+  --ink: #172536;
+  --muted: #48586a;
+  --line: #cdd6df;
+  --step: #e4eaf0;
+  --accent: #154f58;
+  --tag-width: clamp(86px, 15vw, 164px);
+  --gap: clamp(5px, 1vw, 12px);
+  background: var(--paper);
+  color: var(--ink);
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: var(--accent); }
+main { max-width: 1320px; margin-inline: auto; padding: 24px clamp(10px, 2vw, 28px) 32px; }
+header { margin-bottom: 18px; }
+h1, h2, h3, h4, p { margin: 0; }
+h1 { font-size: clamp(20px, 3vw, 29px); letter-spacing: .01em; }
+header p, footer, .annotation { color: var(--muted); font-size: 12px; }
+header p { margin-top: 6px; }
+.legend { display: flex; flex-wrap: wrap; gap: 5px 14px; margin: 10px 0 12px; padding: 0; list-style: none; font-size: 12px; }
+.legend li { display: inline-flex; gap: 5px; align-items: center; }
+.legend i { display: inline-block; width: 12px; height: 12px; background: var(--fill); border: 1px var(--edge) var(--stroke); }
+nav { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; }
+nav a { text-underline-offset: 2px; }
+section, article { scroll-margin-top: 46px; }
+.review { --fill: #f3f5f7; --stroke: #c2ccd6; --edge: solid; --weight: 1px; }
+.column-head {
+  display: grid;
+  grid-template-columns: var(--tag-width) repeat(3, minmax(0, 1fr));
+  gap: var(--gap);
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  padding: 6px 8px;
+  background: var(--paper);
+  font-weight: 650;
+}
+.column-head span { background: #263e50; color: #fff; padding: 6px 8px; border-radius: 5px; font-size: clamp(11px, 1.25vw, 14px); text-align: center; }
+.column-head span:first-child { background: var(--step); color: var(--ink); text-align: left; }
+.phase { border: 1px solid var(--line); border-radius: 8px; background: #fff; margin-bottom: 10px; overflow: clip; }
+h2 { font-size: 17px; font-weight: 650; }
+.phase h2 { background: var(--step); padding: 9px 12px; }
+.phase h2 span { color: var(--accent); margin-right: 5px; }
+.substep {
+  display: grid;
+  grid-template-columns: var(--tag-width) minmax(0, 1fr);
+  gap: var(--gap);
+  padding: 7px;
+}
+.substep + .substep { border-top: 1px solid #e3e9ef; }
+.substep h3 { padding: 6px 4px; font-size: clamp(11px, 1.2vw, 14px); line-height: 1.4; color: var(--muted); overflow-wrap: anywhere; }
+.lane, .game-cell, .utility-grid > section { display: grid; gap: 6px; align-content: start; min-width: 0; }
+.shared { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); gap: var(--gap); }
+.game-band { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.game-cell { align-content: stretch; }
+.part {
+  border: var(--weight) var(--edge) var(--stroke);
+  background: var(--fill);
+  padding: 7px 9px;
+  border-radius: 5px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.part h4 { font-weight: 650; font-size: clamp(12px, 1.25vw, 15px); line-height: 1.38; }
+.part p { margin-top: 2px; color: var(--muted); font-size: clamp(11px, 1.1vw, 13px); line-height: 1.42; }
+.part-tag { display: block; margin-bottom: 2px; color: var(--accent); font-size: 11px; font-weight: 650; }
+.branch { margin: 0 0 10px calc(var(--tag-width) + var(--gap)); padding: 6px 9px; color: var(--muted); font-size: 12px; border-left: 2px solid var(--line); }
+.utility { border-top: 2px solid var(--line); padding: 10px 0 14px; }
+.utility h2 { margin-bottom: 8px; }
+.utility-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+.support .utility-grid { grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr)); }
+.utility-grid h3 { padding: 4px 0; font-size: 14px; }
+.connections { display: flex; flex-wrap: wrap; gap: 4px 28px; margin: 12px 0 6px; padding-left: 18px; color: var(--muted); font-size: 13px; }
+footer { border-top: 1px solid var(--line); padding-top: 10px; }
+@media (max-width: 600px) {
+  main { padding-top: 14px; }
+  .substep { padding: 5px; }
+  .column-head { padding-inline: 6px; }
+  .column-head span, .part { padding-inline: 5px; }
+  .utility-grid h3 { font-size: 12px; }
+}
+@media print {
+  .column-head { position: static; }
+  .part { break-inside: avoid; }
+}
+
+main { position: relative; }
+.connector-layer { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; overflow: visible; }
+.connector-paths path { fill: none; stroke: #526578; stroke-width: 1.35; stroke-linecap: round; stroke-linejoin: round; }
+.connector-paths .dependency { stroke-dasharray: 4 3; }
+.column-head { z-index: 2; }
+.phase { margin-bottom: 14px; }
+.phase h2 { font-size: clamp(13px, 3vw, 17px); }
+.substep { padding-block: 10px; }
+.lane { gap: 18px; }
+.branch { margin-left: 0; margin-right: calc(100% - var(--tag-width) - var(--gap)); padding: 4px 6px; overflow-wrap: anywhere; font-size: 11px; }
+.utility-grid, .support .utility-grid { gap: 18px; }
+.utility-grid > section { padding: 7px; border: 1px solid var(--line); background: #fff; border-radius: 7px; }
+.support .utility-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-bottom: 26px; }
+@media (max-width: 590px) {
+  .support .utility-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+<!-- STATUS_STYLES --></style></head>
+<body><main><!-- CONTENT -->
+<svg class="connector-layer" aria-hidden="true" focusable="false">
+  <defs>
+    <marker id="flow-arrow" viewBox="0 0 8 8" refX="7.5" refY="4" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#526578"/>
+    </marker>
+  </defs>
+  <g class="connector-paths"></g>
+</svg>
+<script>
+(() => {
+  const diagram = document.querySelector("main");
+  const layer = diagram.querySelector(".connector-layer");
+  const paths = layer.querySelector(".connector-paths");
+  const svgNamespace = "http://www.w3.org/2000/svg";
+  const groups = [...diagram.querySelectorAll(".lane > .shared, .lane > .game-band")];
+  const management = [...diagram.querySelectorAll("#management .utility-grid > section")];
+  const supportGrid = diagram.querySelector("#support .utility-grid");
+  const support = [...supportGrid.children];
+  const card = (stage, part) => document.getElementById("part-統合-" + stage + "-" + part);
+  const endpoints = {
+    model: card("動作計画", "経路検証"),
+    teaching: card("動作計画", "経路生成"),
+  };
+
+  function draw() {
+    const frame = diagram.getBoundingClientRect();
+    const bounds = element => {
+      const rect = element.getBoundingClientRect();
+      return {
+        left: rect.left - frame.left, right: rect.right - frame.left,
+        top: rect.top - frame.top, bottom: rect.bottom - frame.top,
+        x: (rect.left + rect.right) / 2 - frame.left,
+      };
+    };
+    const connectors = document.createDocumentFragment();
+    layer.setAttribute("viewBox", "0 0 " + frame.width + " " + frame.height);
+
+    function path(commands, {arrow = false, dependency = false} = {}) {
+      const edge = document.createElementNS(svgNamespace, "path");
+      edge.setAttribute("d", commands.join(" "));
+      if (arrow) edge.setAttribute("marker-end", "url(#flow-arrow)");
+      if (dependency) edge.setAttribute("class", "dependency");
+      connectors.append(edge);
+    }
+
+    function connect(from, to, dependency = false) {
+      const starts = from.map(bounds);
+      const ends = to.map(bounds);
+      const sourceBottom = Math.max(...starts.map(box => box.bottom));
+      const targetTop = Math.min(...ends.map(box => box.top));
+      const middle = (sourceBottom + targetTop) / 2;
+      const inLanes = from.length === to.length && from.every((item, index) =>
+        item.dataset.scope && item.dataset.scope === to[index].dataset.scope);
+
+      if (inLanes) {
+        starts.forEach((start, index) => {
+          const end = ends[index];
+          path(["M", start.x, start.bottom, "V", middle, "H", end.x, "V", end.top - 1.2],
+               {arrow: true, dependency});
+        });
+        return;
+      }
+
+      const centers = [...starts, ...ends].map(box => box.x);
+      if (Math.max(...centers) - Math.min(...centers) > 0.5) {
+        path(["M", Math.min(...centers), middle, "H", Math.max(...centers)], {dependency});
+      }
+      starts.forEach(start => path(["M", start.x, start.bottom, "V", middle], {dependency}));
+      ends.forEach(end => path(["M", end.x, middle, "V", end.top - 1.2], {arrow: true, dependency}));
+    }
+
+    function betweenGroups(from, to, dependency = false) {
+      const start = bounds(from);
+      const end = bounds(to);
+      if (Math.abs(start.top - end.top) < 2) {
+        const y = start.top + 19;
+        path(["M", start.right, y, "H", end.left - 1.2], {arrow: true, dependency});
+      } else {
+        connect([from], [to], dependency);
+      }
+    }
+
+    function aroundDiagram(from, to, rail, bridgeY, dependency = false) {
+      const start = bounds(from);
+      const end = bounds(to);
+      const entry = rail < end.left ? end.left - 1.2 : end.right + 1.2;
+      const entryY = (end.top + end.bottom) / 2;
+      path(["M", start.x, start.bottom, "V", bridgeY, "H", rail, "V", entryY, "H", entry],
+           {arrow: true, dependency});
+    }
+
+    groups.slice(1).forEach((group, index) => {
+      connect([...groups[index].querySelectorAll(".part")], [...group.querySelectorAll(".part")]);
+    });
+
+    betweenGroups(management[0], management[1]);
+    aroundDiagram(management[1], groups[0].querySelector(".part"), frame.width - 4, bounds(management[1]).bottom + 7);
+    betweenGroups(support[1], support[2], true);
+    betweenGroups(support[2], support[3], true);
+    const supportBridge = bounds(supportGrid).bottom + 12;
+    aroundDiagram(support[0], endpoints.model, 4, supportBridge, true);
+    aroundDiagram(support[3], endpoints.teaching, frame.width - 4, supportBridge, true);
+
+    paths.replaceChildren(connectors);
+  }
+
+  draw();
+  new ResizeObserver(draw).observe(diagram);
+  document.fonts.ready.then(draw);
+})();
+</script>
+
+</main></body></html>

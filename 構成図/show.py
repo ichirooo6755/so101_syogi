@@ -16,9 +16,15 @@ import sys
 import tempfile
 import webbrowser
 
+import tagged
+
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = "構成図/構成図.json"
 CONFIG = "構成図/図設定.json"
+TAG_LAYOUT = "構成図/タグ付き構成.json"
+TAG_TEMPLATE = "構成図/tagged_template.html"
+TAG_HTML = "構成図/構成図.html"
+TAG_SVG = "構成図/タグ付き構成図.svg"
 PLAN = "shogi/docs/shogi-implementation-plan.md"
 START = "<!-- generated:architecture-diagram:start -->"
 END = "<!-- generated:architecture-diagram:end -->"
@@ -202,7 +208,7 @@ def render_svg(data, config):
 def render_markdown(data, config, mermaid):
     counts = Counter(module["status"] for module in data["modules"])
     lines = [f'# {config["title"]}', "", f'進捗更新日: {data["updated_on"]}。色は[正本JSON](構成図.json)の進捗状態から生成します。',
-             "", "[ブラウザ用SVG](構成図.svg) · [呼び出し方](README.md) · [呼び出しプロンプト](呼び出しプロンプト.md)",
+             "", "[ブラウザ用HTML](構成図.html) · [タグ付きSVG](タグ付き構成図.svg) · [呼び出し方](README.md) · [呼び出しプロンプト](呼び出しプロンプト.md)",
              "", "既存実装は実機での完成を意味しません。" + live_note(data) + "。", "",
              "| 状態 | 件数 |", "| --- | ---: |"]
     for name, definition in data["status_definitions"].items():
@@ -218,6 +224,10 @@ def render_markdown(data, config, mermaid):
     return "\n".join(lines)
 
 
+def render_tagged_html(data, config, layout):
+    return tagged.render_html(data, config, layout, (ROOT / TAG_TEMPLATE).read_text(encoding="utf-8"))
+
+
 def build_outputs(data, config):
     validate(data, config)
     data = copy.deepcopy(data)
@@ -229,12 +239,15 @@ def build_outputs(data, config):
         raise ValueError("計画の構成図生成マーカーが不正です。既存文書を上書きしません")
     begin, finish = plan.index(START), plan.index(END) + len(END)
     section = START + "\n```mermaid\n" + mermaid + "\n```\n" + END
+    layout = read_json(ROOT / TAG_LAYOUT)
     return {
         SOURCE: serialized,
         "docs/shogi-go-architecture-plan.json": serialized,
         "構成図/構成図.mmd": mermaid + "\n",
         "構成図/構成図.md": render_markdown(data, config, mermaid),
         "構成図/構成図.svg": render_svg(data, config),
+        TAG_HTML: render_tagged_html(data, config, layout),
+        TAG_SVG: tagged.render_svg(data, config, layout),
         PLAN: plan[:begin] + section + plan[finish:],
     }
 
@@ -283,8 +296,8 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command")
     show = commands.add_parser("show", help="最新JSONから図を標準出力へ表示")
-    show.add_argument("--format", choices=("markdown", "mermaid", "svg"), default="markdown")
-    commands.add_parser("open", help="最新のSVGを生成してブラウザで開く（通信不要）")
+    show.add_argument("--format", choices=("markdown", "mermaid", "svg", "html", "tagged-svg"), default="markdown")
+    commands.add_parser("open", help="最新のタグ付き構成図を生成してブラウザで開く（通信不要）")
     commands.add_parser("sync", help="JSON・図・計画資料を再生成")
     commands.add_parser("check", help="生成物がJSONと一致するか確認（変更しない）")
     commands.add_parser("list", help="構成要素IDと進捗を一覧表示")
@@ -300,6 +313,10 @@ def main(argv=None):
             output_format = getattr(args, "format", "markdown")
             if output_format == "svg":
                 print(render_svg(data, config), end="")
+            elif output_format == "html":
+                print(render_tagged_html(data, config, read_json(ROOT / TAG_LAYOUT)), end="")
+            elif output_format == "tagged-svg":
+                print(tagged.render_svg(data, config, read_json(ROOT / TAG_LAYOUT)), end="")
             else:
                 diagram = render_mermaid(data, config)
                 print(diagram if output_format == "mermaid" else "```mermaid\n" + diagram + "\n```")
@@ -312,7 +329,7 @@ def main(argv=None):
             changed = sync(data, config, check=command == "check")
             print("構成図は最新です。" if not changed else "更新: " + ", ".join(changed))
             if command == "open":
-                target = (ROOT / "構成図/構成図.svg").as_uri()
+                target = (ROOT / TAG_HTML).as_uri()
                 if not webbrowser.open(target):
                     print("ブラウザで開いてください: " + target)
         return 0

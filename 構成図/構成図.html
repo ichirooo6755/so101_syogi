@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SO-101 将棋・囲碁・チェス 構成図</title>
+<style>
+:root {
+  color-scheme: light;
+  font-family: 'BIZ UDPGothic', 'Yu Gothic UI', system-ui, sans-serif;
+  --paper: #f3f5f7;
+  --ink: #172536;
+  --muted: #48586a;
+  --line: #cdd6df;
+  --step: #e4eaf0;
+  --accent: #154f58;
+  --tag-width: clamp(86px, 15vw, 164px);
+  --gap: clamp(5px, 1vw, 12px);
+  background: var(--paper);
+  color: var(--ink);
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: var(--accent); }
+main { max-width: 1320px; margin-inline: auto; padding: 24px clamp(10px, 2vw, 28px) 32px; }
+header { margin-bottom: 18px; }
+h1, h2, h3, h4, p { margin: 0; }
+h1 { font-size: clamp(20px, 3vw, 29px); letter-spacing: .01em; }
+header p, footer, .annotation { color: var(--muted); font-size: 12px; }
+header p { margin-top: 6px; }
+.legend { display: flex; flex-wrap: wrap; gap: 5px 14px; margin: 10px 0 12px; padding: 0; list-style: none; font-size: 12px; }
+.legend li { display: inline-flex; gap: 5px; align-items: center; }
+.legend i { display: inline-block; width: 12px; height: 12px; background: var(--fill); border: 1px var(--edge) var(--stroke); }
+nav { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; }
+nav a { text-underline-offset: 2px; }
+section, article { scroll-margin-top: 46px; }
+.review { --fill: #f3f5f7; --stroke: #c2ccd6; --edge: solid; --weight: 1px; }
+.column-head {
+  display: grid;
+  grid-template-columns: var(--tag-width) repeat(3, minmax(0, 1fr));
+  gap: var(--gap);
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  padding: 6px 8px;
+  background: var(--paper);
+  font-weight: 650;
+}
+.column-head span { background: #263e50; color: #fff; padding: 6px 8px; border-radius: 5px; font-size: clamp(11px, 1.25vw, 14px); text-align: center; }
+.column-head span:first-child { background: var(--step); color: var(--ink); text-align: left; }
+.phase { border: 1px solid var(--line); border-radius: 8px; background: #fff; margin-bottom: 10px; overflow: clip; }
+h2 { font-size: 17px; font-weight: 650; }
+.phase h2 { background: var(--step); padding: 9px 12px; }
+.phase h2 span { color: var(--accent); margin-right: 5px; }
+.substep {
+  display: grid;
+  grid-template-columns: var(--tag-width) minmax(0, 1fr);
+  gap: var(--gap);
+  padding: 7px;
+}
+.substep + .substep { border-top: 1px solid #e3e9ef; }
+.substep h3 { padding: 6px 4px; font-size: clamp(11px, 1.2vw, 14px); line-height: 1.4; color: var(--muted); overflow-wrap: anywhere; }
+.lane, .game-cell, .utility-grid > section { display: grid; gap: 6px; align-content: start; min-width: 0; }
+.shared { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); gap: var(--gap); }
+.game-band { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.game-cell { align-content: stretch; }
+.part {
+  border: var(--weight) var(--edge) var(--stroke);
+  background: var(--fill);
+  padding: 7px 9px;
+  border-radius: 5px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.part h4 { font-weight: 650; font-size: clamp(12px, 1.25vw, 15px); line-height: 1.38; }
+.part p { margin-top: 2px; color: var(--muted); font-size: clamp(11px, 1.1vw, 13px); line-height: 1.42; }
+.part-tag { display: block; margin-bottom: 2px; color: var(--accent); font-size: 11px; font-weight: 650; }
+.branch { margin: 0 0 10px calc(var(--tag-width) + var(--gap)); padding: 6px 9px; color: var(--muted); font-size: 12px; border-left: 2px solid var(--line); }
+.utility { border-top: 2px solid var(--line); padding: 10px 0 14px; }
+.utility h2 { margin-bottom: 8px; }
+.utility-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+.support .utility-grid { grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr)); }
+.utility-grid h3 { padding: 4px 0; font-size: 14px; }
+.connections { display: flex; flex-wrap: wrap; gap: 4px 28px; margin: 12px 0 6px; padding-left: 18px; color: var(--muted); font-size: 13px; }
+footer { border-top: 1px solid var(--line); padding-top: 10px; }
+@media (max-width: 600px) {
+  main { padding-top: 14px; }
+  .substep { padding: 5px; }
+  .column-head { padding-inline: 6px; }
+  .column-head span, .part { padding-inline: 5px; }
+  .utility-grid h3 { font-size: 12px; }
+}
+@media print {
+  .column-head { position: static; }
+  .part { break-inside: avoid; }
+}
+
+main { position: relative; }
+.connector-layer { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; overflow: visible; }
+.connector-paths path { fill: none; stroke: #526578; stroke-width: 1.35; stroke-linecap: round; stroke-linejoin: round; }
+.connector-paths .dependency { stroke-dasharray: 4 3; }
+.column-head { z-index: 2; }
+.phase { margin-bottom: 14px; }
+.phase h2 { font-size: clamp(13px, 3vw, 17px); }
+.substep { padding-block: 10px; }
+.lane { gap: 18px; }
+.branch { margin-left: 0; margin-right: calc(100% - var(--tag-width) - var(--gap)); padding: 4px 6px; overflow-wrap: anywhere; font-size: 11px; }
+.utility-grid, .support .utility-grid { gap: 18px; }
+.utility-grid > section { padding: 7px; border: 1px solid var(--line); background: #fff; border-radius: 7px; }
+.support .utility-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-bottom: 26px; }
+@media (max-width: 590px) {
+  .support .utility-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.implemented{--fill:#ffffff;--stroke:#64748b;--edge:solid;--weight:1.5px}.prototype_unintegrated{--fill:#fff3df;--stroke:#d18a21;--edge:solid;--weight:2px}.planned{--fill:#eaf5ff;--stroke:#2684c7;--edge:dashed;--weight:2px}.in_progress{--fill:#fff8cc;--stroke:#b89b18;--edge:solid;--weight:2px}.software_verified{--fill:#e3f6e8;--stroke:#33844a;--edge:solid;--weight:2px}.hardware_verified{--fill:#bce8c9;--stroke:#146b36;--edge:solid;--weight:2.5px}.blocked{--fill:#ffe2e2;--stroke:#c34141;--edge:solid;--weight:2px}</style></head>
+<body><main><header><h1>SO-101 将棋・囲碁・チェス 構成図</h1><p>進捗更新日 2026-11-11　／　実機送信ゲート 停止</p><ul class="legend" aria-label="進捗の凡例"><li><i class="implemented"></i>既存実装</li><li><i class="prototype_unintegrated"></i>試作あり・統合待ち</li><li><i class="planned"></i>未実装・予定</li><li><i class="in_progress"></i>実装中</li><li><i class="software_verified"></i>ソフトウェア検証済み</li><li><i class="hardware_verified"></i>実機検証済み</li><li><i class="blocked"></i>課題で停止</li><li><i class="review"></i>細分案</li></ul><nav aria-label="段階へ移動"><a href="#management">対局管理</a><a href="#recognition">盤面認識</a><a href="#position">局面確定とAI入力</a><a href="#engine">AI着手決定</a><a href="#planning">動作計画</a><a href="#control">アーム制御</a><a href="#verification">操作後確認と棋譜更新</a><a href="#support">開発支援</a></nav></header>
+<section class="utility management" id="management"><h2>#対局管理</h2><div class="utility-grid"><section><h3>ブラウザ画面・Python API</h3><article id="part-統合-対局管理-対局操作" class="part implemented" data-scope="統合" data-stage="対局管理" data-part="対局操作" data-source-module="ui_backend" title="#統合 #対局管理 #対局操作" aria-label="対局操作 #統合 #対局管理 #対局操作"><span class="part-tag">#統合 #対局操作</span><h4>対局操作</h4><p>対象盤の対局を開始・操作する。</p></article><article id="part-統合-対局管理-状態表示" class="part review" data-scope="統合" data-stage="対局管理" data-part="状態表示" title="#統合 #対局管理 #状態表示" aria-label="状態表示 #統合 #対局管理 #状態表示"><span class="part-tag">#統合 #状態表示</span><h4>状態表示</h4><p>盤ごとの手番・認識結果・AI思考・アーム待ちを表示する。</p></article><article id="part-統合-対局管理-API振り分け" class="part implemented" data-scope="統合" data-stage="対局管理" data-part="API振り分け" data-source-module="ui_backend" title="#統合 #対局管理 #API振り分け" aria-label="API振り分け #統合 #対局管理 #API振り分け"><span class="part-tag">#統合 #API振り分け</span><h4>API振り分け</h4><p>画面の操作を対象盤と処理に渡す。</p></article><article id="part-統合-対局管理-ローカル保存" class="part implemented" data-scope="統合" data-stage="対局管理" data-part="ローカル保存" data-source-module="file_store" title="#統合 #対局管理 #ローカル保存" aria-label="ローカル保存 #統合 #対局管理 #ローカル保存"><span class="part-tag">#統合 #ローカル保存</span><h4>ローカル保存</h4><p>教示をJSONに保存する。棋譜・復旧用の途中状態の永続保存は追加予定。</p></article></section><section><h3>画面の拡張</h3><article id="part-統合-対局管理-ゲームと盤の選択" class="part planned" data-scope="統合" data-stage="対局管理" data-part="ゲームと盤の選択" data-source-module="ui_extension" title="#統合 #対局管理 #ゲームと盤の選択" aria-label="ゲームと盤の選択 #統合 #対局管理 #ゲームと盤の選択"><span class="part-tag">#統合 #ゲームと盤の選択</span><h4>ゲームと盤の選択</h4><p>チェス・囲碁・将棋から対象のゲームと盤を選ぶ。</p></article><article id="part-統合-対局管理-対局一時停止" class="part planned" data-scope="統合" data-stage="対局管理" data-part="対局一時停止" data-source-module="ui_extension" title="#統合 #対局管理 #対局一時停止" aria-label="対局一時停止 #統合 #対局管理 #対局一時停止"><span class="part-tag">#統合 #対局一時停止</span><h4>対局一時停止</h4><p>指定した盤の対局を一時停止・再開する。</p></article><article id="part-統合-対局管理-実機停止操作" class="part planned" data-scope="統合" data-stage="対局管理" data-part="実機停止操作" data-source-module="ui_extension" title="#統合 #対局管理 #実機停止操作" aria-label="実機停止操作 #統合 #対局管理 #実機停止操作"><span class="part-tag">#統合 #実機停止操作</span><h4>実機停止操作</h4><p>画面から共有アームの停止を要求する。</p></article><article id="part-統合-対局管理-設定画面" class="part planned" data-scope="統合" data-stage="対局管理" data-part="設定画面" data-source-module="ui_extension" title="#統合 #対局管理 #設定画面" aria-label="設定画面 #統合 #対局管理 #設定画面"><span class="part-tag">#統合 #設定画面</span><h4>設定画面</h4><p>較正・教示・モーター・シミュレーションを設定する。</p></article></section></div></section>
+<div class="flow">
+<div class="column-head"><span>段階・パーツ</span>
+<span>#チェス</span>
+<span>#囲碁</span>
+<span>#将棋</span>
+</div>
+<section class="phase" id="recognition" aria-label="盤面認識"><h2>#盤面認識</h2>
+<div class="substep"><h3>#撮影</h3><div class="lane">
+<div class="shared">
+<article id="part-統合-盤面認識-撮影" class="part implemented" data-scope="統合" data-stage="盤面認識" data-part="撮影" data-source-module="camera" title="#統合 #盤面認識 #撮影" aria-label="対象盤を撮影 #統合 #盤面認識 #撮影"><span class="part-tag">#統合</span><h4>対象盤を撮影</h4><p>盤を指定して画像を取得する。</p></article>
+</div>
+</div></div>
+<div class="substep"><h3>#画像確認</h3><div class="lane">
+<div class="shared">
+<article id="part-統合-盤面認識-画像確認" class="part planned" data-scope="統合" data-stage="盤面認識" data-part="画像確認" data-source-module="image_guard" title="#統合 #盤面認識 #画像確認" aria-label="観測できる画像を選ぶ #統合 #盤面認識 #画像確認"><span class="part-tag">#統合</span><h4>観測できる画像を選ぶ</h4><p>手の映り込み、遮蔽、画像の鮮度を確認する。</p></article>
+</div>
+</div></div>
+<div class="substep"><h3>#盤較正</h3><div class="lane">
+<div class="shared">
+<article id="part-統合-盤面認識-四隅検出と正面化" class="part implemented" data-scope="統合" data-stage="盤面認識" data-part="四隅検出と正面化" data-source-module="camera" title="#統合 #盤面認識 #四隅検出と正面化" aria-label="四隅検出と正面化 #統合 #盤面認識 #四隅検出と正面化"><span class="part-tag">#統合 #四隅検出と正面化</span><h4>四隅検出と正面化</h4><p>カメラ画像から盤の四隅を検出し、画像を補正する。</p></article>
+<article id="part-統合-盤面認識-実測較正と盤追従" class="part prototype_unintegrated" data-scope="統合" data-stage="盤面認識" data-part="実測較正と盤追従" data-source-module="board_tracking" title="#統合 #盤面認識 #実測較正と盤追従" aria-label="実測較正と盤追従 #統合 #盤面認識 #実測較正と盤追従"><span class="part-tag">#統合 #実測較正と盤追従</span><h4>実測較正と盤追従</h4><p>レンズ・ロボット座標・観測姿勢の較正を対局に接続する。</p></article>
+</div>
+<div class="game-band">
+<div class="game-cell"><article id="part-チェス-盤面認識-盤較正" class="part planned" data-scope="チェス" data-stage="盤面認識" data-part="盤較正" data-source-module="chess_geometry" title="#チェス #盤面認識 #盤較正" aria-label="チェス盤のマス座標 #チェス #盤面認識 #盤較正"><span class="part-tag">#チェス</span><h4>チェス盤のマス座標</h4><p>8×8のマス中心と駒寸法を扱う。</p></article></div>
+<div class="game-cell"><article id="part-囲碁-盤面認識-盤較正" class="part planned" data-scope="囲碁" data-stage="盤面認識" data-part="盤較正" data-source-module="go_geometry" title="#囲碁 #盤面認識 #盤較正" aria-label="囲碁盤の交点座標 #囲碁 #盤面認識 #盤較正"><span class="part-tag">#囲碁</span><h4>囲碁盤の交点座標</h4><p>9路・13路・19路の交点位置を扱う。</p></article></div>
+<div class="game-cell"><article id="part-将棋-盤面認識-盤較正" class="part review" data-scope="将棋" data-stage="盤面認識" data-part="盤較正" title="#将棋 #盤面認識 #盤較正" aria-label="将棋盤のマス座標 #将棋 #盤面認識 #盤較正"><span class="part-tag">#将棋</span><h4>将棋盤のマス座標</h4><p>9×9のマス中心を扱う。</p></article></div>
+</div>
+</div></div>
+<div class="substep"><h3>#駒石認識</h3><div class="lane">
+<div class="game-band">
+<div class="game-cell"><article id="part-チェス-盤面認識-駒石認識" class="part planned" data-scope="チェス" data-stage="盤面認識" data-part="駒石認識" data-source-module="chess_vision" title="#チェス #盤面認識 #駒石認識" aria-label="駒と空きマスの認識 #チェス #盤面認識 #駒石認識"><span class="part-tag">#チェス</span><h4>駒と空きマスの認識</h4><p>駒種・白黒・空を判定する。</p></article></div>
+<div class="game-cell"><article id="part-囲碁-盤面認識-駒石認識" class="part planned" data-scope="囲碁" data-stage="盤面認識" data-part="駒石認識" data-source-module="go_vision" title="#囲碁 #盤面認識 #駒石認識" aria-label="交点認識 #囲碁 #盤面認識 #駒石認識"><span class="part-tag">#囲碁</span><h4>交点認識</h4><p>黒石・白石・空を判定する。</p></article></div>
+<div class="game-cell"><article id="part-将棋-盤面認識-駒石認識" class="part planned" data-scope="将棋" data-stage="盤面認識" data-part="駒石認識" data-source-module="shogi_classifier" title="#将棋 #盤面認識 #駒石認識" aria-label="駒の認識 #将棋 #盤面認識 #駒石認識"><span class="part-tag">#将棋</span><h4>駒の認識</h4><p>駒種・所有者の向き・成り・空を判定する。</p></article></div>
+</div>
+</div></div>
+</section>
+<section class="phase" id="position" aria-label="局面確定とAI入力"><h2>#局面確定とAI入力</h2>
+<div class="substep"><h3>#人の着手推定</h3><div class="lane">
+<div class="shared">
+<article id="part-統合-局面確定とAI入力-人の着手推定" class="part review" data-scope="統合" data-stage="局面確定とAI入力" data-part="人の着手推定" title="#統合 #局面確定とAI入力 #人の着手推定" aria-label="認識結果と直前局面の照合 #統合 #局面確定とAI入力 #人の着手推定"><span class="part-tag">#統合</span><h4>認識結果と直前局面の照合</h4><p>盤ごとの認識結果を着手候補の照合に渡す。</p></article>
+</div>
+<div class="game-band">
+<div class="game-cell"><article id="part-チェス-局面確定とAI入力-人の着手推定" class="part review" data-scope="チェス" data-stage="局面確定とAI入力" data-part="人の着手推定" title="#チェス #局面確定とAI入力 #人の着手推定" aria-label="チェスの着手推定 #チェス #局面確定とAI入力 #人の着手推定"><span class="part-tag">#チェス</span><h4>チェスの着手推定</h4><p>移動・取り・特殊手による盤の変化を照合する。</p></article></div>
+<div class="game-cell"><article id="part-囲碁-局面確定とAI入力-人の着手推定" class="part review" data-scope="囲碁" data-stage="局面確定とAI入力" data-part="人の着手推定" title="#囲碁 #局面確定とAI入力 #人の着手推定" aria-label="囲碁の着手推定 #囲碁 #局面確定とAI入力 #人の着手推定"><span class="part-tag">#囲碁</span><h4>囲碁の着手推定</h4><p>配置した石と捕獲された石を照合する。</p></article></div>
+<div class="game-cell"><article id="part-将棋-局面確定とAI入力-人の着手推定" class="part implemented" data-scope="将棋" data-stage="局面確定とAI入力" data-part="人の着手推定" data-source-module="shogi_vision" title="#将棋 #局面確定とAI入力 #人の着手推定" aria-label="将棋の着手推定 #将棋 #局面確定とAI入力 #人の着手推定"><span class="part-tag">#将棋</span><h4>将棋の着手推定</h4><p>9×9の画像差分と合法手から、移動・取り・打ち・成りを絞る。</p></article></div>
+</div>
+</div></div>
+<div class="substep"><h3>#局面確定</h3><div class="lane">
+<div class="shared">
+<article id="part-統合-局面確定とAI入力-局面確定" class="part review" data-scope="統合" data-stage="局面確定とAI入力" data-part="局面確定" title="#統合 #局面確定とAI入力 #局面確定" aria-label="盤別の局面管理 #統合 #局面確定とAI入力 #局面確定"><span class="part-tag">#統合</span><h4>盤別の局面管理</h4><p>盤ごとに局面・手番・履歴を保持する。</p></article>
+</div>
+<div class="game-band">
+<div class="game-cell"><article id="part-チェス-局面確定とAI入力-局面確定" class="part planned" data-scope="チェス" data-stage="局面確定とAI入力" data-part="局面確定" data-source-module="chess_rules" title="#チェス #局面確定とAI入力 #局面確定" aria-label="チェスのルール管理 #チェス #局面確定とAI入力 #局面確定"><span class="part-tag">#チェス</span><h4>チェスのルール管理</h4><p>合法手、キャスリング権、アンパッサンの可否、終局を扱う。</p></article></div>
+<div class="game-cell"><article id="part-囲碁-局面確定とAI入力-局面確定" class="part planned" data-scope="囲碁" data-stage="局面確定とAI入力" data-part="局面確定" data-source-module="go_rules" title="#囲碁 #局面確定とAI入力 #局面確定" aria-label="囲碁のルール管理 #囲碁 #局面確定とAI入力 #局面確定"><span class="part-tag">#囲碁</span><h4>囲碁のルール管理</h4><p>捕獲・コウ・パス・終局を扱う。</p></article></div>
+<div class="game-cell"><article id="part-将棋-局面確定とAI入力-局面確定" class="part implemented" data-scope="将棋" data-stage="局面確定とAI入力" data-part="局面確定" data-source-module="shogi_rules" title="#将棋 #局面確定とAI入力 #局面確定" aria-label="将棋のルール管理 #将棋 #局面確定とAI入力 #局面確定"><span class="part-tag">#将棋</span><h4>将棋のルール管理</h4><p>合法手、持ち駒、成りを扱う。</p></article></div>
+</div>
+</div></div>
+<div class="substep"><h3>#AI入力変換</h3><div class="lane">
+<div class="game-band">
+<div class="game-cell"><article id="part-チェス-局面確定とAI入力-AI入力変換" class="part review" data-scope="チェス" data-stage="局面確定とAI入力" data-part="AI入力変換" title="#チェス #局面確定とAI入力 #AI入力変換" aria-label="UCI入力 #チェス #局面確定とAI入力 #AI入力変換"><span class="part-tag">#チェス</span><h4>UCI入力</h4><p>FENや指し手履歴から探索対象の局面を渡す。</p></article></div>
+<div class="game-cell"><article id="part-囲碁-局面確定とAI入力-AI入力変換" class="part review" data-scope="囲碁" data-stage="局面確定とAI入力" data-part="AI入力変換" title="#囲碁 #局面確定とAI入力 #AI入力変換" aria-label="囲碁エンジン用の入力 #囲碁 #局面確定とAI入力 #AI入力変換"><span class="part-tag">#囲碁</span><h4>囲碁エンジン用の入力</h4><p>エンジンの選定後に、局面とルールを渡す形式を決める。</p></article></div>
+<div class="game-cell"><article id="part-将棋-局面確定とAI入力-AI入力変換" class="part review" data-scope="将棋" data-stage="局面確定とAI入力" data-part="AI入力変換" title="#将棋 #局面確定とAI入力 #AI入力変換" aria-label="USI入力 #将棋 #局面確定とAI入力 #AI入力変換"><span class="part-tag">#将棋</span><h4>USI入力</h4><p>局面と指し手履歴をやねうら王へ渡す。</p></article></div>
+</div>
+</div></div>
+</section>
+<section class="phase" id="engine" aria-label="AI着手決定"><h2>#AI着手決定</h2>
+<div class="substep"><h3>#探索要求</h3><div class="lane">
+<div class="shared">
+<article id="part-統合-AI着手決定-探索要求" class="part review" data-scope="統合" data-stage="AI着手決定" data-part="探索要求" title="#統合 #AI着手決定 #探索要求" aria-label="盤ごとに探索を要求 #統合 #AI着手決定 #探索要求"><span class="part-tag">#統合</span><h4>盤ごとに探索を要求</h4><p>対象の盤・局面と探索条件を指定する。3面の探索は並行して進める。</p></article>
+</div>
+</div></div>
+<div class="substep"><h3>#着手探索</h3><div class="lane">
+<div class="game-band">
+<div class="game-cell"><article id="part-チェス-AI着手決定-着手探索" class="part planned" data-scope="チェス" data-stage="AI着手決定" data-part="着手探索" data-source-module="chess_ai" title="#チェス #AI着手決定 #着手探索" aria-label="Stockfish #チェス #AI着手決定 #着手探索"><span class="part-tag">#チェス</span><h4>Stockfish</h4><p>UCIで局面を受け取り、次の一手を返す。</p></article></div>
+<div class="game-cell"><article id="part-囲碁-AI着手決定-着手探索" class="part planned" data-scope="囲碁" data-stage="AI着手決定" data-part="着手探索" data-source-module="go_ai" title="#囲碁 #AI着手決定 #着手探索" aria-label="囲碁エンジン #囲碁 #AI着手決定 #着手探索"><span class="part-tag">#囲碁</span><h4>囲碁エンジン</h4><p>エンジン未選定。局面から次の一手を選ぶ。</p></article></div>
+<div class="game-cell"><article id="part-将棋-AI着手決定-着手探索" class="part implemented" data-scope="将棋" data-stage="AI着手決定" data-part="着手探索" data-source-module="shogi_ai" title="#将棋 #AI着手決定 #着手探索" aria-label="やねうら王 #将棋 #AI着手決定 #着手探索"><span class="part-tag">#将棋</span><h4>やねうら王</h4><p>USIで次の一手を返す。実バイナリと評価関数の試験は未実施。</p></article></div>
+</div>
+</div></div>
+<div class="substep"><h3>#着手応答確認</h3><div class="lane">
+<div class="shared">
+<article id="part-統合-AI着手決定-着手応答確認" class="part review" data-scope="統合" data-stage="AI着手決定" data-part="着手応答確認" title="#統合 #AI着手決定 #着手応答確認" aria-label="探索結果と対象局面の照合 #統合 #AI着手決定 #着手応答確認"><span class="part-tag">#統合</span><h4>探索結果と対象局面の照合</h4><p>盤IDと要求時の局面を照合してから応答を受理する。</p></article>
+</div>
+<div class="game-band">
+<div class="game-cell"><article id="part-チェス-AI着手決定-着手応答確認" class="part review" data-scope="チェス" data-stage="AI着手決定" data-part="着手応答確認" title="#チェス #AI着手決定 #着手応答確認" aria-label="チェスの応答確認 #チェス #AI着手決定 #着手応答確認"><span class="part-tag">#チェス</span><h4>チェスの応答確認</h4><p>指し手を合法手と照合する。</p></article></div>
+<div class="game-cell"><article id="part-囲碁-AI着手決定-着手応答確認" class="part review" data-scope="囲碁" data-stage="AI着手決定" data-part="着手応答確認" title="#囲碁 #AI着手決定 #着手応答確認" aria-label="囲碁の応答確認 #囲碁 #AI着手決定 #着手応答確認"><span class="part-tag">#囲碁</span><h4>囲碁の応答確認</h4><p>着手とパスを識別する。</p></article></div>
+<div class="game-cell"><article id="part-将棋-AI着手決定-着手応答確認" class="part review" data-scope="将棋" data-stage="AI着手決定" data-part="着手応答確認" title="#将棋 #AI着手決定 #着手応答確認" aria-label="将棋の応答確認 #将棋 #AI着手決定 #着手応答確認"><span class="part-tag">#将棋</span><h4>将棋の応答確認</h4><p>指し手と投了を識別する。</p></article></div>
+</div>
+</div></div>
+</section>
+<aside class="branch">パス・投了・終局 → <a href="#management">対局管理</a></aside>
+<section class="phase" id="planning" aria-label="動作計画"><h2>#動作計画</h2>
+<div class="substep"><h3>#供給回収位置</h3><div class="lane">
+<div class="game-band">
+<div class="game-cell"><article id="part-チェス-動作計画-供給回収位置" class="part planned" data-scope="チェス" data-stage="動作計画" data-part="供給回収位置" data-source-module="chess_inventory" title="#チェス #動作計画 #供給回収位置" aria-label="回収先と交換駒 #チェス #動作計画 #供給回収位置"><span class="part-tag">#チェス</span><h4>回収先と交換駒</h4><p>捕獲駒・昇格用の交換駒・ポーンの置き場を扱う。</p></article></div>
+<div class="game-cell"><article id="part-囲碁-動作計画-供給回収位置" class="part planned" data-scope="囲碁" data-stage="動作計画" data-part="供給回収位置" data-source-module="go_inventory" title="#囲碁 #動作計画 #供給回収位置" aria-label="碁笥とアゲハマ置き場 #囲碁 #動作計画 #供給回収位置"><span class="part-tag">#囲碁</span><h4>碁笥とアゲハマ置き場</h4><p>石の供給位置と捕獲石の回収先を扱う。</p></article></div>
+<div class="game-cell"><article id="part-将棋-動作計画-供給回収位置" class="part prototype_unintegrated" data-scope="将棋" data-stage="動作計画" data-part="供給回収位置" data-source-module="shogi_stand" title="#将棋 #動作計画 #供給回収位置" aria-label="持ち駒と駒台 #将棋 #動作計画 #供給回収位置"><span class="part-tag">#将棋</span><h4>持ち駒と駒台</h4><p>駒種・空きスロット・実測位置を扱う。</p></article></div>
+</div>
+</div></div>
+<div class="substep"><h3>#操作手順</h3><div class="lane">
+<div class="game-band">
+<div class="game-cell"><article id="part-チェス-動作計画-操作手順" class="part planned" data-scope="チェス" data-stage="動作計画" data-part="操作手順" data-source-module="chess_plan" title="#チェス #動作計画 #操作手順" aria-label="チェスの操作列 #チェス #動作計画 #操作手順"><span class="part-tag">#チェス</span><h4>チェスの操作列</h4><p>移動・取り・キャスリング・アンパッサン・昇格を展開する。</p></article></div>
+<div class="game-cell"><article id="part-囲碁-動作計画-操作手順" class="part planned" data-scope="囲碁" data-stage="動作計画" data-part="操作手順" data-source-module="go_plan" title="#囲碁 #動作計画 #操作手順" aria-label="囲碁の操作列 #囲碁 #動作計画 #操作手順"><span class="part-tag">#囲碁</span><h4>囲碁の操作列</h4><p>着手交点への配置と捕獲石の回収を展開する。</p></article></div>
+<div class="game-cell"><article id="part-将棋-動作計画-操作手順" class="part prototype_unintegrated" data-scope="将棋" data-stage="動作計画" data-part="操作手順" data-source-module="shogi_plan" title="#将棋 #動作計画 #操作手順" aria-label="将棋の操作列 #将棋 #動作計画 #操作手順"><span class="part-tag">#将棋</span><h4>将棋の操作列</h4><p>移動・取り・打ちと、裏返し台での成り・成駒戻しを展開する。</p></article></div>
+</div>
+</div></div>
+<div class="substep"><h3>#座標変換</h3><div class="lane">
+<div class="shared">
+<article id="part-統合-動作計画-座標変換" class="part review" data-scope="統合" data-stage="動作計画" data-part="座標変換" title="#統合 #動作計画 #座標変換" aria-label="アーム座標への変換 #統合 #動作計画 #座標変換"><span class="part-tag">#統合</span><h4>アーム座標への変換</h4><p>対象盤と供給・回収先の較正値から、操作位置をアーム座標に変換する。</p></article>
+</div>
+</div></div>
+<div class="substep"><h3>#経路生成</h3><div class="lane">
+<div class="shared">
+<article id="part-統合-動作計画-経路生成" class="part planned" data-scope="統合" data-stage="動作計画" data-part="経路生成" data-source-module="motion_integration" title="#統合 #動作計画 #経路生成" aria-label="共通搬送と運動学 #統合 #動作計画 #経路生成"><span class="part-tag">#統合</span><h4>共通搬送と運動学</h4><p>接近・下降・把持・持上げ・配置を共通化し、FK・IKで姿勢と経路を計算する。</p></article>
+</div>
+</div></div>
+<div class="substep"><h3>#経路検証</h3><div class="lane">
+<div class="shared">
+<article id="part-統合-動作計画-経路検証" class="part prototype_unintegrated" data-scope="統合" data-stage="動作計画" data-part="経路検証" data-source-module="simulation" title="#統合 #動作計画 #経路検証" aria-label="MuJoCoによる経路・接触の評価 #統合 #動作計画 #経路検証"><span class="part-tag">#統合</span><h4>MuJoCoによる経路・接触の評価</h4><p>実測モデルで到達可否と、周囲の駒・石を含む干渉を確認する。</p></article>
+</div>
+</div></div>
+</section>
+<section class="phase" id="control" aria-label="アーム制御"><h2>#アーム制御</h2>
+<div class="substep"><h3>#操作順管理</h3><div class="lane">
+<div class="shared">
+<article id="part-統合-アーム制御-操作順管理" class="part review" data-scope="統合" data-stage="アーム制御" data-part="操作順管理" title="#統合 #アーム制御 #操作順管理" aria-label="共有アームの操作順 #統合 #アーム制御 #操作順管理"><span class="part-tag">#統合</span><h4>共有アームの操作順</h4><p>3面の物理操作を順番待ちに置き、盤IDと対象局面を各操作に引き継ぐ。</p></article>
+</div>
+</div></div>
+<div class="substep"><h3>#実機送信ゲート</h3><div class="lane">
+<div class="shared">
+<article id="part-統合-アーム制御-実機送信ゲート" class="part implemented" data-scope="統合" data-stage="アーム制御" data-part="実機送信ゲート" data-source-module="live_gate" title="#統合 #アーム制御 #実機送信ゲート" aria-label="送信可否を判定 #統合 #アーム制御 #実機送信ゲート"><span class="part-tag">#統合</span><h4>送信可否を判定</h4><p>実機への指令送信を許可する条件を確認する。</p></article>
+</div>
+</div></div>
+<div class="substep"><h3>#関節制御</h3><div class="lane">
+<div class="shared">
+<article id="part-統合-アーム制御-関節制御" class="part prototype_unintegrated" data-scope="統合" data-stage="アーム制御" data-part="関節制御" data-source-module="lerobot_control" title="#統合 #アーム制御 #関節制御" aria-label="LeRobot実機経路 #統合 #アーム制御 #関節制御"><span class="part-tag">#統合</span><h4>LeRobot実機経路</h4><p>関節較正と速度制約を適用し、経路・把持・解放を指令する。</p></article>
+</div>
+</div></div>
+<div class="substep"><h3>#動作監視</h3><div class="lane">
+<div class="shared">
+<article id="part-統合-アーム制御-関節と通信の監視" class="part prototype_unintegrated" data-scope="統合" data-stage="アーム制御" data-part="関節と通信の監視" data-source-module="lerobot_control" title="#統合 #アーム制御 #関節と通信の監視" aria-label="関節の追従と通信を監視 #統合 #アーム制御 #関節と通信の監視"><span class="part-tag">#統合 #関節と通信の監視</span><h4>関節の追従と通信を監視</h4><p>追従誤差と通信停止を監視する。</p></article>
+<article id="part-統合-アーム制御-操作段階の確認" class="part planned" data-scope="統合" data-stage="アーム制御" data-part="操作段階の確認" data-source-module="execution_monitor" title="#統合 #アーム制御 #操作段階の確認" aria-label="操作の各段階を確認 #統合 #アーム制御 #操作段階の確認"><span class="part-tag">#統合 #操作段階の確認</span><h4>操作の各段階を確認</h4><p>近接補正・把持・解放を段階ごとに確認し、異常時に停止する。</p></article>
+</div>
+</div></div>
+</section>
+<section class="phase" id="verification" aria-label="操作後確認と棋譜更新"><h2>#操作後確認と棋譜更新</h2>
+<div class="substep"><h3>#再撮影</h3><div class="lane">
+<div class="shared">
+<article id="part-統合-操作後確認と棋譜更新-再撮影" class="part planned" data-scope="統合" data-stage="操作後確認と棋譜更新" data-part="再撮影" data-source-module="post_action_verify" title="#統合 #操作後確認と棋譜更新 #再撮影" aria-label="対象盤の再観測 #統合 #操作後確認と棋譜更新 #再撮影"><span class="part-tag">#統合</span><h4>対象盤の再観測</h4><p>観測姿勢に戻って対象盤を再撮影する。</p></article>
+</div>
+</div></div>
+<div class="substep"><h3>#結果照合</h3><div class="lane">
+<div class="shared">
+<article id="part-統合-操作後確認と棋譜更新-結果照合" class="part planned" data-scope="統合" data-stage="操作後確認と棋譜更新" data-part="結果照合" data-source-module="post_action_verify" title="#統合 #操作後確認と棋譜更新 #結果照合" aria-label="予定状態との照合 #統合 #操作後確認と棋譜更新 #結果照合"><span class="part-tag">#統合</span><h4>予定状態との照合</h4><p>操作した盤と周辺の在庫を、着手後の予定状態と比較する。</p></article>
+</div>
+<div class="game-band">
+<div class="game-cell"><article id="part-チェス-操作後確認と棋譜更新-結果照合" class="part review" data-scope="チェス" data-stage="操作後確認と棋譜更新" data-part="結果照合" title="#チェス #操作後確認と棋譜更新 #結果照合" aria-label="チェスの確認対象 #チェス #操作後確認と棋譜更新 #結果照合"><span class="part-tag">#チェス</span><h4>チェスの確認対象</h4><p>移動した駒、交換駒、回収先を照合する。</p></article></div>
+<div class="game-cell"><article id="part-囲碁-操作後確認と棋譜更新-結果照合" class="part review" data-scope="囲碁" data-stage="操作後確認と棋譜更新" data-part="結果照合" title="#囲碁 #操作後確認と棋譜更新 #結果照合" aria-label="囲碁の確認対象 #囲碁 #操作後確認と棋譜更新 #結果照合"><span class="part-tag">#囲碁</span><h4>囲碁の確認対象</h4><p>配置した石と捕獲石を照合する。</p></article></div>
+<div class="game-cell"><article id="part-将棋-操作後確認と棋譜更新-結果照合" class="part review" data-scope="将棋" data-stage="操作後確認と棋譜更新" data-part="結果照合" title="#将棋 #操作後確認と棋譜更新 #結果照合" aria-label="将棋の確認対象 #将棋 #操作後確認と棋譜更新 #結果照合"><span class="part-tag">#将棋</span><h4>将棋の確認対象</h4><p>移動した駒、成り、駒台を照合する。</p></article></div>
+</div>
+</div></div>
+<div class="substep"><h3>#照合結果</h3><div class="lane">
+<div class="shared">
+<article id="part-統合-操作後確認と棋譜更新-着手確定" class="part planned" data-scope="統合" data-stage="操作後確認と棋譜更新" data-part="着手確定" data-source-module="commit_record" title="#統合 #操作後確認と棋譜更新 #着手確定" aria-label="一致した場合 #統合 #操作後確認と棋譜更新 #着手確定"><span class="part-tag">#統合 #着手確定</span><h4>一致した場合</h4><p>対象盤の着手を確定し、棋譜を保存して次の手番へ進む。</p></article>
+<article id="part-統合-操作後確認と棋譜更新-復旧" class="part planned" data-scope="統合" data-stage="操作後確認と棋譜更新" data-part="復旧" data-source-module="recovery" title="#統合 #操作後確認と棋譜更新 #復旧" aria-label="不一致の場合 #統合 #操作後確認と棋譜更新 #復旧"><span class="part-tag">#統合 #復旧</span><h4>不一致の場合</h4><p>停止して途中状態を記録し、再観測して復旧に進む。</p></article>
+</div>
+</div></div>
+</section>
+</div>
+<section class="utility support" id="support"><h2>#開発支援</h2><div class="utility-grid"><section><h3>機械・モデルの整備</h3><article id="part-統合-開発支援-上腕延長" class="part prototype_unintegrated" data-scope="統合" data-stage="開発支援" data-part="上腕延長" data-source-module="hardware_models" title="#統合 #開発支援 #上腕延長" aria-label="上腕延長 #統合 #開発支援 #上腕延長"><span class="part-tag">#統合 #上腕延長</span><h4>上腕延長</h4><p>延長するリンクと寸法を選ぶ。</p></article><article id="part-統合-開発支援-爪と取付" class="part prototype_unintegrated" data-scope="統合" data-stage="開発支援" data-part="爪と取付" data-source-module="hardware_models" title="#統合 #開発支援 #爪と取付" aria-label="爪と取付 #統合 #開発支援 #爪と取付"><span class="part-tag">#統合 #爪と取付</span><h4>爪と取付</h4><p>爪・カメラマウント・配線の配置を決める。</p></article><article id="part-統合-開発支援-寸法モデル" class="part prototype_unintegrated" data-scope="統合" data-stage="開発支援" data-part="寸法モデル" data-source-module="hardware_models" title="#統合 #開発支援 #寸法モデル" aria-label="寸法モデル #統合 #開発支援 #寸法モデル"><span class="part-tag">#統合 #寸法モデル</span><h4>寸法モデル</h4><p>CAD・URDF・MuJoCoに同じ実測寸法を反映する。</p></article><article id="part-統合-開発支援-機械検証" class="part prototype_unintegrated" data-scope="統合" data-stage="開発支援" data-part="機械検証" data-source-module="hardware_models" title="#統合 #開発支援 #機械検証" aria-label="機械検証 #統合 #開発支援 #機械検証"><span class="part-tag">#統合 #機械検証</span><h4>機械検証</h4><p>各盤への到達範囲、干渉、負荷を確認する。</p></article></section><section><h3>静止4姿勢の教示記録</h3><article id="part-統合-開発支援-静止姿勢記録" class="part implemented" data-scope="統合" data-stage="開発支援" data-part="静止姿勢記録" data-source-module="teaching_snapshots" title="#統合 #開発支援 #静止姿勢記録" aria-label="静止姿勢記録 #統合 #開発支援 #静止姿勢記録"><span class="part-tag">#統合 #静止姿勢記録</span><h4>静止姿勢記録</h4><p>LeaderとFollowerの4段階の静止姿勢を保存する。</p></article><article id="part-統合-開発支援-教示条件記録" class="part implemented" data-scope="統合" data-stage="開発支援" data-part="教示条件記録" data-source-module="teaching_snapshots" title="#統合 #開発支援 #教示条件記録" aria-label="教示条件記録 #統合 #開発支援 #教示条件記録"><span class="part-tag">#統合 #教示条件記録</span><h4>教示条件記録</h4><p>較正と使用機器の識別情報を教示に紐づける。</p></article></section><section><h3>Leader追従・連続教示</h3><article id="part-統合-開発支援-教示追従" class="part planned" data-scope="統合" data-stage="開発支援" data-part="教示追従" data-source-module="continuous_teaching" title="#統合 #開発支援 #教示追従" aria-label="教示追従 #統合 #開発支援 #教示追従"><span class="part-tag">#統合 #教示追従</span><h4>教示追従</h4><p>教示中のFollowerの追従と停止を確認する。</p></article><article id="part-統合-開発支援-教示同期記録" class="part planned" data-scope="統合" data-stage="開発支援" data-part="教示同期記録" data-source-module="continuous_teaching" title="#統合 #開発支援 #教示同期記録" aria-label="教示同期記録 #統合 #開発支援 #教示同期記録"><span class="part-tag">#統合 #教示同期記録</span><h4>教示同期記録</h4><p>画像・関節角・指令・開閉量・対象・成否を同期して記録する。</p></article><article id="part-統合-開発支援-教示機体識別" class="part planned" data-scope="統合" data-stage="開発支援" data-part="教示機体識別" data-source-module="continuous_teaching" title="#統合 #開発支援 #教示機体識別" aria-label="教示機体識別 #統合 #開発支援 #教示機体識別"><span class="part-tag">#統合 #教示機体識別</span><h4>教示機体識別</h4><p>腕の長さ・較正・マウントを記録し、機体ごとに教示を識別する。</p></article></section><section><h3>教示経路の利用と学習</h3><article id="part-統合-開発支援-教示経路候補" class="part planned" data-scope="統合" data-stage="開発支援" data-part="教示経路候補" data-source-module="skill_learning" title="#統合 #開発支援 #教示経路候補" aria-label="教示経路候補 #統合 #開発支援 #教示経路候補"><span class="part-tag">#統合 #教示経路候補</span><h4>教示経路候補</h4><p>教示を逆運動学の初期姿勢や搬送経路の候補に使う。</p></article><article id="part-統合-開発支援-短動作学習" class="part planned" data-scope="統合" data-stage="開発支援" data-part="短動作学習" data-source-module="skill_learning" title="#統合 #開発支援 #短動作学習" aria-label="短動作学習 #統合 #開発支援 #短動作学習"><span class="part-tag">#統合 #短動作学習</span><h4>短動作学習</h4><p>必要時に把持・解放などの短い動作をACTで学習する。</p></article><article id="part-統合-開発支援-学習動作検証" class="part planned" data-scope="統合" data-stage="開発支援" data-part="学習動作検証" data-source-module="skill_learning" title="#統合 #開発支援 #学習動作検証" aria-label="学習動作検証 #統合 #開発支援 #学習動作検証"><span class="part-tag">#統合 #学習動作検証</span><h4>学習動作検証</h4><p>学習した動作を関節範囲・速度・接触の制約で確認する。</p></article></section></div><ul class="connections"><li>寸法モデル → <a href="#part-統合-動作計画-経路検証">経路検証</a></li><li>静止教示 → 連続教示 → 教示経路候補 → <a href="#part-統合-動作計画-経路生成">経路生成</a></li></ul></section>
+<footer>実線は対局の流れ、破線の矢印は機械モデル・教示の入力です。進捗色は正本JSONに対応し、灰色は独立した進捗記録のない細分案です。</footer>
+<svg class="connector-layer" aria-hidden="true" focusable="false">
+  <defs>
+    <marker id="flow-arrow" viewBox="0 0 8 8" refX="7.5" refY="4" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#526578"/>
+    </marker>
+  </defs>
+  <g class="connector-paths"></g>
+</svg>
+<script>
+(() => {
+  const diagram = document.querySelector("main");
+  const layer = diagram.querySelector(".connector-layer");
+  const paths = layer.querySelector(".connector-paths");
+  const svgNamespace = "http://www.w3.org/2000/svg";
+  const groups = [...diagram.querySelectorAll(".lane > .shared, .lane > .game-band")];
+  const management = [...diagram.querySelectorAll("#management .utility-grid > section")];
+  const supportGrid = diagram.querySelector("#support .utility-grid");
+  const support = [...supportGrid.children];
+  const card = (stage, part) => document.getElementById("part-統合-" + stage + "-" + part);
+  const endpoints = {
+    model: card("動作計画", "経路検証"),
+    teaching: card("動作計画", "経路生成"),
+  };
+
+  function draw() {
+    const frame = diagram.getBoundingClientRect();
+    const bounds = element => {
+      const rect = element.getBoundingClientRect();
+      return {
+        left: rect.left - frame.left, right: rect.right - frame.left,
+        top: rect.top - frame.top, bottom: rect.bottom - frame.top,
+        x: (rect.left + rect.right) / 2 - frame.left,
+      };
+    };
+    const connectors = document.createDocumentFragment();
+    layer.setAttribute("viewBox", "0 0 " + frame.width + " " + frame.height);
+
+    function path(commands, {arrow = false, dependency = false} = {}) {
+      const edge = document.createElementNS(svgNamespace, "path");
+      edge.setAttribute("d", commands.join(" "));
+      if (arrow) edge.setAttribute("marker-end", "url(#flow-arrow)");
+      if (dependency) edge.setAttribute("class", "dependency");
+      connectors.append(edge);
+    }
+
+    function connect(from, to, dependency = false) {
+      const starts = from.map(bounds);
+      const ends = to.map(bounds);
+      const sourceBottom = Math.max(...starts.map(box => box.bottom));
+      const targetTop = Math.min(...ends.map(box => box.top));
+      const middle = (sourceBottom + targetTop) / 2;
+      const inLanes = from.length === to.length && from.every((item, index) =>
+        item.dataset.scope && item.dataset.scope === to[index].dataset.scope);
+
+      if (inLanes) {
+        starts.forEach((start, index) => {
+          const end = ends[index];
+          path(["M", start.x, start.bottom, "V", middle, "H", end.x, "V", end.top - 1.2],
+               {arrow: true, dependency});
+        });
+        return;
+      }
+
+      const centers = [...starts, ...ends].map(box => box.x);
+      if (Math.max(...centers) - Math.min(...centers) > 0.5) {
+        path(["M", Math.min(...centers), middle, "H", Math.max(...centers)], {dependency});
+      }
+      starts.forEach(start => path(["M", start.x, start.bottom, "V", middle], {dependency}));
+      ends.forEach(end => path(["M", end.x, middle, "V", end.top - 1.2], {arrow: true, dependency}));
+    }
+
+    function betweenGroups(from, to, dependency = false) {
+      const start = bounds(from);
+      const end = bounds(to);
+      if (Math.abs(start.top - end.top) < 2) {
+        const y = start.top + 19;
+        path(["M", start.right, y, "H", end.left - 1.2], {arrow: true, dependency});
+      } else {
+        connect([from], [to], dependency);
+      }
+    }
+
+    function aroundDiagram(from, to, rail, bridgeY, dependency = false) {
+      const start = bounds(from);
+      const end = bounds(to);
+      const entry = rail < end.left ? end.left - 1.2 : end.right + 1.2;
+      const entryY = (end.top + end.bottom) / 2;
+      path(["M", start.x, start.bottom, "V", bridgeY, "H", rail, "V", entryY, "H", entry],
+           {arrow: true, dependency});
+    }
+
+    groups.slice(1).forEach((group, index) => {
+      connect([...groups[index].querySelectorAll(".part")], [...group.querySelectorAll(".part")]);
+    });
+
+    betweenGroups(management[0], management[1]);
+    aroundDiagram(management[1], groups[0].querySelector(".part"), frame.width - 4, bounds(management[1]).bottom + 7);
+    betweenGroups(support[1], support[2], true);
+    betweenGroups(support[2], support[3], true);
+    const supportBridge = bounds(supportGrid).bottom + 12;
+    aroundDiagram(support[0], endpoints.model, 4, supportBridge, true);
+    aroundDiagram(support[3], endpoints.teaching, frame.width - 4, supportBridge, true);
+
+    paths.replaceChildren(connectors);
+  }
+
+  draw();
+  new ResizeObserver(draw).observe(diagram);
+  document.fonts.ready.then(draw);
+})();
+</script>
+
+</main></body></html>

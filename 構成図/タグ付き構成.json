@@ -1,0 +1,733 @@
+{
+  "schema_version": 1,
+  "scopes": [
+    "統合",
+    "チェス",
+    "囲碁",
+    "将棋"
+  ],
+  "stages": [
+    {
+      "id": "recognition",
+      "tag": "盤面認識",
+      "rows": [
+        {
+          "label": "撮影",
+          "parts": [
+            {
+              "scope": "統合",
+              "tag": "撮影",
+              "title": "対象盤を撮影",
+              "description": "盤を指定して画像を取得する。",
+              "module_id": "camera"
+            }
+          ]
+        },
+        {
+          "label": "画像確認",
+          "parts": [
+            {
+              "scope": "統合",
+              "tag": "画像確認",
+              "title": "観測できる画像を選ぶ",
+              "description": "手の映り込み、遮蔽、画像の鮮度を確認する。",
+              "module_id": "image_guard"
+            }
+          ]
+        },
+        {
+          "label": "盤較正",
+          "parts": [
+            {
+              "scope": "統合",
+              "tag": "四隅検出と正面化",
+              "title": "四隅検出と正面化",
+              "description": "カメラ画像から盤の四隅を検出し、画像を補正する。",
+              "module_id": "camera"
+            },
+            {
+              "scope": "統合",
+              "tag": "実測較正と盤追従",
+              "title": "実測較正と盤追従",
+              "description": "レンズ・ロボット座標・観測姿勢の較正を対局に接続する。",
+              "module_id": "board_tracking"
+            },
+            {
+              "scope": "チェス",
+              "tag": "盤較正",
+              "title": "チェス盤のマス座標",
+              "description": "8×8のマス中心と駒寸法を扱う。",
+              "module_id": "chess_geometry"
+            },
+            {
+              "scope": "囲碁",
+              "tag": "盤較正",
+              "title": "囲碁盤の交点座標",
+              "description": "9路・13路・19路の交点位置を扱う。",
+              "module_id": "go_geometry"
+            },
+            {
+              "scope": "将棋",
+              "tag": "盤較正",
+              "title": "将棋盤のマス座標",
+              "description": "9×9のマス中心を扱う。",
+              "related_module_ids": [
+                "shogi_vision"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "駒石認識",
+          "parts": [
+            {
+              "scope": "チェス",
+              "tag": "駒石認識",
+              "title": "駒と空きマスの認識",
+              "description": "駒種・白黒・空を判定する。",
+              "module_id": "chess_vision"
+            },
+            {
+              "scope": "囲碁",
+              "tag": "駒石認識",
+              "title": "交点認識",
+              "description": "黒石・白石・空を判定する。",
+              "module_id": "go_vision"
+            },
+            {
+              "scope": "将棋",
+              "tag": "駒石認識",
+              "title": "駒の認識",
+              "description": "駒種・所有者の向き・成り・空を判定する。",
+              "module_id": "shogi_classifier"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "position",
+      "tag": "局面確定とAI入力",
+      "rows": [
+        {
+          "label": "人の着手推定",
+          "parts": [
+            {
+              "scope": "統合",
+              "tag": "人の着手推定",
+              "title": "認識結果と直前局面の照合",
+              "description": "盤ごとの認識結果を着手候補の照合に渡す。",
+              "related_module_ids": [
+                "shogi_vision",
+                "board_tracking"
+              ]
+            },
+            {
+              "scope": "チェス",
+              "tag": "人の着手推定",
+              "title": "チェスの着手推定",
+              "description": "移動・取り・特殊手による盤の変化を照合する。",
+              "related_module_ids": [
+                "chess_rules"
+              ]
+            },
+            {
+              "scope": "囲碁",
+              "tag": "人の着手推定",
+              "title": "囲碁の着手推定",
+              "description": "配置した石と捕獲された石を照合する。",
+              "related_module_ids": [
+                "go_rules"
+              ]
+            },
+            {
+              "scope": "将棋",
+              "tag": "人の着手推定",
+              "title": "将棋の着手推定",
+              "description": "9×9の画像差分と合法手から、移動・取り・打ち・成りを絞る。",
+              "module_id": "shogi_vision"
+            }
+          ]
+        },
+        {
+          "label": "局面確定",
+          "parts": [
+            {
+              "scope": "統合",
+              "tag": "局面確定",
+              "title": "盤別の局面管理",
+              "description": "盤ごとに局面・手番・履歴を保持する。",
+              "related_module_ids": [
+                "ui_backend"
+              ]
+            },
+            {
+              "scope": "チェス",
+              "tag": "局面確定",
+              "title": "チェスのルール管理",
+              "description": "合法手、キャスリング権、アンパッサンの可否、終局を扱う。",
+              "module_id": "chess_rules"
+            },
+            {
+              "scope": "囲碁",
+              "tag": "局面確定",
+              "title": "囲碁のルール管理",
+              "description": "捕獲・コウ・パス・終局を扱う。",
+              "module_id": "go_rules"
+            },
+            {
+              "scope": "将棋",
+              "tag": "局面確定",
+              "title": "将棋のルール管理",
+              "description": "合法手、持ち駒、成りを扱う。",
+              "module_id": "shogi_rules"
+            }
+          ]
+        },
+        {
+          "label": "AI入力変換",
+          "parts": [
+            {
+              "scope": "チェス",
+              "tag": "AI入力変換",
+              "title": "UCI入力",
+              "description": "FENや指し手履歴から探索対象の局面を渡す。",
+              "related_module_ids": [
+                "chess_ai"
+              ]
+            },
+            {
+              "scope": "囲碁",
+              "tag": "AI入力変換",
+              "title": "囲碁エンジン用の入力",
+              "description": "エンジンの選定後に、局面とルールを渡す形式を決める。",
+              "related_module_ids": [
+                "go_ai"
+              ]
+            },
+            {
+              "scope": "将棋",
+              "tag": "AI入力変換",
+              "title": "USI入力",
+              "description": "局面と指し手履歴をやねうら王へ渡す。",
+              "related_module_ids": [
+                "shogi_ai"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "engine",
+      "tag": "AI着手決定",
+      "rows": [
+        {
+          "label": "探索要求",
+          "parts": [
+            {
+              "scope": "統合",
+              "tag": "探索要求",
+              "title": "盤ごとに探索を要求",
+              "description": "対象の盤・局面と探索条件を指定する。3面の探索は並行して進める。",
+              "related_module_ids": [
+                "chess_ai",
+                "go_ai",
+                "shogi_ai"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "着手探索",
+          "parts": [
+            {
+              "scope": "チェス",
+              "tag": "着手探索",
+              "title": "Stockfish",
+              "description": "UCIで局面を受け取り、次の一手を返す。",
+              "module_id": "chess_ai"
+            },
+            {
+              "scope": "囲碁",
+              "tag": "着手探索",
+              "title": "囲碁エンジン",
+              "description": "エンジン未選定。局面から次の一手を選ぶ。",
+              "module_id": "go_ai"
+            },
+            {
+              "scope": "将棋",
+              "tag": "着手探索",
+              "title": "やねうら王",
+              "description": "USIで次の一手を返す。実バイナリと評価関数の試験は未実施。",
+              "module_id": "shogi_ai"
+            }
+          ]
+        },
+        {
+          "label": "着手応答確認",
+          "parts": [
+            {
+              "scope": "統合",
+              "tag": "着手応答確認",
+              "title": "探索結果と対象局面の照合",
+              "description": "盤IDと要求時の局面を照合してから応答を受理する。",
+              "related_module_ids": [
+                "chess_ai",
+                "go_ai",
+                "shogi_ai"
+              ]
+            },
+            {
+              "scope": "チェス",
+              "tag": "着手応答確認",
+              "title": "チェスの応答確認",
+              "description": "指し手を合法手と照合する。",
+              "related_module_ids": [
+                "chess_rules"
+              ]
+            },
+            {
+              "scope": "囲碁",
+              "tag": "着手応答確認",
+              "title": "囲碁の応答確認",
+              "description": "着手とパスを識別する。",
+              "related_module_ids": [
+                "go_rules"
+              ]
+            },
+            {
+              "scope": "将棋",
+              "tag": "着手応答確認",
+              "title": "将棋の応答確認",
+              "description": "指し手と投了を識別する。",
+              "related_module_ids": [
+                "shogi_rules"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "planning",
+      "tag": "動作計画",
+      "rows": [
+        {
+          "label": "供給回収位置",
+          "parts": [
+            {
+              "scope": "チェス",
+              "tag": "供給回収位置",
+              "title": "回収先と交換駒",
+              "description": "捕獲駒・昇格用の交換駒・ポーンの置き場を扱う。",
+              "module_id": "chess_inventory"
+            },
+            {
+              "scope": "囲碁",
+              "tag": "供給回収位置",
+              "title": "碁笥とアゲハマ置き場",
+              "description": "石の供給位置と捕獲石の回収先を扱う。",
+              "module_id": "go_inventory"
+            },
+            {
+              "scope": "将棋",
+              "tag": "供給回収位置",
+              "title": "持ち駒と駒台",
+              "description": "駒種・空きスロット・実測位置を扱う。",
+              "module_id": "shogi_stand"
+            }
+          ]
+        },
+        {
+          "label": "操作手順",
+          "parts": [
+            {
+              "scope": "チェス",
+              "tag": "操作手順",
+              "title": "チェスの操作列",
+              "description": "移動・取り・キャスリング・アンパッサン・昇格を展開する。",
+              "module_id": "chess_plan"
+            },
+            {
+              "scope": "囲碁",
+              "tag": "操作手順",
+              "title": "囲碁の操作列",
+              "description": "着手交点への配置と捕獲石の回収を展開する。",
+              "module_id": "go_plan"
+            },
+            {
+              "scope": "将棋",
+              "tag": "操作手順",
+              "title": "将棋の操作列",
+              "description": "移動・取り・打ちと、裏返し台での成り・成駒戻しを展開する。",
+              "module_id": "shogi_plan"
+            }
+          ]
+        },
+        {
+          "label": "座標変換",
+          "parts": [
+            {
+              "scope": "統合",
+              "tag": "座標変換",
+              "title": "アーム座標への変換",
+              "description": "対象盤と供給・回収先の較正値から、操作位置をアーム座標に変換する。",
+              "related_module_ids": [
+                "board_tracking",
+                "motion_integration"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "経路生成",
+          "parts": [
+            {
+              "scope": "統合",
+              "tag": "経路生成",
+              "title": "共通搬送と運動学",
+              "description": "接近・下降・把持・持上げ・配置を共通化し、FK・IKで姿勢と経路を計算する。",
+              "module_id": "motion_integration"
+            }
+          ]
+        },
+        {
+          "label": "経路検証",
+          "parts": [
+            {
+              "scope": "統合",
+              "tag": "経路検証",
+              "title": "MuJoCoによる経路・接触の評価",
+              "description": "実測モデルで到達可否と、周囲の駒・石を含む干渉を確認する。",
+              "module_id": "simulation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "control",
+      "tag": "アーム制御",
+      "rows": [
+        {
+          "label": "操作順管理",
+          "parts": [
+            {
+              "scope": "統合",
+              "tag": "操作順管理",
+              "title": "共有アームの操作順",
+              "description": "3面の物理操作を順番待ちに置き、盤IDと対象局面を各操作に引き継ぐ。",
+              "related_module_ids": [
+                "ui_backend",
+                "lerobot_control"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "実機送信ゲート",
+          "parts": [
+            {
+              "scope": "統合",
+              "tag": "実機送信ゲート",
+              "title": "送信可否を判定",
+              "description": "実機への指令送信を許可する条件を確認する。",
+              "module_id": "live_gate"
+            }
+          ]
+        },
+        {
+          "label": "関節制御",
+          "parts": [
+            {
+              "scope": "統合",
+              "tag": "関節制御",
+              "title": "LeRobot実機経路",
+              "description": "関節較正と速度制約を適用し、経路・把持・解放を指令する。",
+              "module_id": "lerobot_control"
+            }
+          ]
+        },
+        {
+          "label": "動作監視",
+          "parts": [
+            {
+              "scope": "統合",
+              "tag": "関節と通信の監視",
+              "title": "関節の追従と通信を監視",
+              "description": "追従誤差と通信停止を監視する。",
+              "module_id": "lerobot_control"
+            },
+            {
+              "scope": "統合",
+              "tag": "操作段階の確認",
+              "title": "操作の各段階を確認",
+              "description": "近接補正・把持・解放を段階ごとに確認し、異常時に停止する。",
+              "module_id": "execution_monitor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verification",
+      "tag": "操作後確認と棋譜更新",
+      "rows": [
+        {
+          "label": "再撮影",
+          "parts": [
+            {
+              "scope": "統合",
+              "tag": "再撮影",
+              "title": "対象盤の再観測",
+              "description": "観測姿勢に戻って対象盤を再撮影する。",
+              "module_id": "post_action_verify"
+            }
+          ]
+        },
+        {
+          "label": "結果照合",
+          "parts": [
+            {
+              "scope": "統合",
+              "tag": "結果照合",
+              "title": "予定状態との照合",
+              "description": "操作した盤と周辺の在庫を、着手後の予定状態と比較する。",
+              "module_id": "post_action_verify"
+            },
+            {
+              "scope": "チェス",
+              "tag": "結果照合",
+              "title": "チェスの確認対象",
+              "description": "移動した駒、交換駒、回収先を照合する。",
+              "related_module_ids": [
+                "chess_plan"
+              ]
+            },
+            {
+              "scope": "囲碁",
+              "tag": "結果照合",
+              "title": "囲碁の確認対象",
+              "description": "配置した石と捕獲石を照合する。",
+              "related_module_ids": [
+                "go_plan"
+              ]
+            },
+            {
+              "scope": "将棋",
+              "tag": "結果照合",
+              "title": "将棋の確認対象",
+              "description": "移動した駒、成り、駒台を照合する。",
+              "related_module_ids": [
+                "shogi_plan"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "照合結果",
+          "parts": [
+            {
+              "scope": "統合",
+              "tag": "着手確定",
+              "title": "一致した場合",
+              "description": "対象盤の着手を確定し、棋譜を保存して次の手番へ進む。",
+              "module_id": "commit_record"
+            },
+            {
+              "scope": "統合",
+              "tag": "復旧",
+              "title": "不一致の場合",
+              "description": "停止して途中状態を記録し、再観測して復旧に進む。",
+              "module_id": "recovery"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "management": [
+    {
+      "id": "ui_backend",
+      "title": "ブラウザ画面・Python API",
+      "parts": [
+        {
+          "scope": "統合",
+          "tag": "対局操作",
+          "title": "対局操作",
+          "description": "対象盤の対局を開始・操作する。",
+          "module_id": "ui_backend"
+        },
+        {
+          "scope": "統合",
+          "tag": "状態表示",
+          "title": "状態表示",
+          "description": "盤ごとの手番・認識結果・AI思考・アーム待ちを表示する。",
+          "related_module_ids": [
+            "ui_backend",
+            "ui_extension"
+          ]
+        },
+        {
+          "scope": "統合",
+          "tag": "API振り分け",
+          "title": "API振り分け",
+          "description": "画面の操作を対象盤と処理に渡す。",
+          "module_id": "ui_backend"
+        },
+        {
+          "scope": "統合",
+          "tag": "ローカル保存",
+          "title": "ローカル保存",
+          "description": "教示をJSONに保存する。棋譜・復旧用の途中状態の永続保存は追加予定。",
+          "module_id": "file_store"
+        }
+      ]
+    },
+    {
+      "id": "ui_extension",
+      "title": "画面の拡張",
+      "parts": [
+        {
+          "scope": "統合",
+          "tag": "ゲームと盤の選択",
+          "title": "ゲームと盤の選択",
+          "description": "チェス・囲碁・将棋から対象のゲームと盤を選ぶ。",
+          "module_id": "ui_extension"
+        },
+        {
+          "scope": "統合",
+          "tag": "対局一時停止",
+          "title": "対局一時停止",
+          "description": "指定した盤の対局を一時停止・再開する。",
+          "module_id": "ui_extension"
+        },
+        {
+          "scope": "統合",
+          "tag": "実機停止操作",
+          "title": "実機停止操作",
+          "description": "画面から共有アームの停止を要求する。",
+          "module_id": "ui_extension"
+        },
+        {
+          "scope": "統合",
+          "tag": "設定画面",
+          "title": "設定画面",
+          "description": "較正・教示・モーター・シミュレーションを設定する。",
+          "module_id": "ui_extension"
+        }
+      ]
+    }
+  ],
+  "support": [
+    {
+      "id": "hardware_models",
+      "title": "機械・モデルの整備",
+      "parts": [
+        {
+          "scope": "統合",
+          "tag": "上腕延長",
+          "title": "上腕延長",
+          "description": "延長するリンクと寸法を選ぶ。",
+          "module_id": "hardware_models"
+        },
+        {
+          "scope": "統合",
+          "tag": "爪と取付",
+          "title": "爪と取付",
+          "description": "爪・カメラマウント・配線の配置を決める。",
+          "module_id": "hardware_models"
+        },
+        {
+          "scope": "統合",
+          "tag": "寸法モデル",
+          "title": "寸法モデル",
+          "description": "CAD・URDF・MuJoCoに同じ実測寸法を反映する。",
+          "module_id": "hardware_models"
+        },
+        {
+          "scope": "統合",
+          "tag": "機械検証",
+          "title": "機械検証",
+          "description": "各盤への到達範囲、干渉、負荷を確認する。",
+          "module_id": "hardware_models"
+        }
+      ]
+    },
+    {
+      "id": "teaching_snapshots",
+      "title": "静止4姿勢の教示記録",
+      "parts": [
+        {
+          "scope": "統合",
+          "tag": "静止姿勢記録",
+          "title": "静止姿勢記録",
+          "description": "LeaderとFollowerの4段階の静止姿勢を保存する。",
+          "module_id": "teaching_snapshots"
+        },
+        {
+          "scope": "統合",
+          "tag": "教示条件記録",
+          "title": "教示条件記録",
+          "description": "較正と使用機器の識別情報を教示に紐づける。",
+          "module_id": "teaching_snapshots"
+        }
+      ]
+    },
+    {
+      "id": "continuous_teaching",
+      "title": "Leader追従・連続教示",
+      "parts": [
+        {
+          "scope": "統合",
+          "tag": "教示追従",
+          "title": "教示追従",
+          "description": "教示中のFollowerの追従と停止を確認する。",
+          "module_id": "continuous_teaching"
+        },
+        {
+          "scope": "統合",
+          "tag": "教示同期記録",
+          "title": "教示同期記録",
+          "description": "画像・関節角・指令・開閉量・対象・成否を同期して記録する。",
+          "module_id": "continuous_teaching"
+        },
+        {
+          "scope": "統合",
+          "tag": "教示機体識別",
+          "title": "教示機体識別",
+          "description": "腕の長さ・較正・マウントを記録し、機体ごとに教示を識別する。",
+          "module_id": "continuous_teaching"
+        }
+      ]
+    },
+    {
+      "id": "skill_learning",
+      "title": "教示経路の利用と学習",
+      "parts": [
+        {
+          "scope": "統合",
+          "tag": "教示経路候補",
+          "title": "教示経路候補",
+          "description": "教示を逆運動学の初期姿勢や搬送経路の候補に使う。",
+          "module_id": "skill_learning"
+        },
+        {
+          "scope": "統合",
+          "tag": "短動作学習",
+          "title": "短動作学習",
+          "description": "必要時に把持・解放などの短い動作をACTで学習する。",
+          "module_id": "skill_learning"
+        },
+        {
+          "scope": "統合",
+          "tag": "学習動作検証",
+          "title": "学習動作検証",
+          "description": "学習した動作を関節範囲・速度・接触の制約で確認する。",
+          "module_id": "skill_learning"
+        }
+      ]
+    }
+  ]
+}
