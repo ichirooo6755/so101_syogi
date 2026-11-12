@@ -5,7 +5,7 @@
 <rect width="2400" height="2851.0" fill="#f8fafc"/>
 <g font-family="sans-serif" fill="#172536">
 <text x="40" y="36" font-size="26" font-weight="bold">SO-101 将棋・囲碁・チェス 構成図</text>
-<text x="40" y="108" font-size="17">進捗更新日: 2026-11-11 ／ 実機送信ゲート: 停止。線は目標構成の接続関係。</text>
+<text x="40" y="108" font-size="17">進捗更新日: 2026-11-12 ／ 実機送信ゲート: 停止。線は目標構成の接続関係。</text>
 <rect x="40" y="58" width="22" height="22" fill="#ffffff" stroke="#64748b"/>
 <text x="71" y="75" font-size="17">既存実装</text>
 <rect x="287" y="58" width="22" height="22" fill="#fff3df" stroke="#d18a21"/>
@@ -104,8 +104,9 @@
 <g data-module="shogi_rules" data-status="implemented">
 <title>将棋の局面・合法手管理: 既存実装</title>
 <rect x="640.0" y="1174.0" width="500" height="112" rx="10" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
-<text x="890" y="1225" text-anchor="middle" font-size="18">局面・合法手管理</text>
-<text x="890" y="1247" text-anchor="middle" font-size="18">python-shogi</text>
+<text x="890" y="1214" text-anchor="middle" font-size="18">局面・合法手管理</text>
+<text x="890" y="1236" text-anchor="middle" font-size="18">現行 python-shogi</text>
+<text x="890" y="1258" text-anchor="middle" font-size="18">統合版 tsshogi（予定）</text>
 </g>
 <g data-module="shogi_ai" data-status="implemented">
 <title>将棋AI: 既存実装</title>
@@ -142,13 +143,13 @@
 <title>囲碁の局面・ルール管理: 未実装・予定</title>
 <rect x="1240.0" y="1174.0" width="500" height="112" rx="10" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
 <text x="1490" y="1225" text-anchor="middle" font-size="18">局面・ルール管理</text>
-<text x="1490" y="1247" text-anchor="middle" font-size="18">捕獲・コウ・パス・終局</text>
+<text x="1490" y="1247" text-anchor="middle" font-size="18">@sabaki/go-board</text>
 </g>
 <g data-module="go_ai" data-status="planned">
 <title>囲碁AI: 未実装・予定</title>
 <rect x="1240.0" y="1324.0" width="500" height="112" rx="10" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
 <text x="1490" y="1375" text-anchor="middle" font-size="18">囲碁AI</text>
-<text x="1490" y="1397" text-anchor="middle" font-size="18">エンジン未選定</text>
+<text x="1490" y="1397" text-anchor="middle" font-size="18">KataGo</text>
 </g>
 <g data-module="go_inventory" data-status="planned">
 <title>碁笥・アゲハマ置き場: 未実装・予定</title>
@@ -179,7 +180,7 @@
 <title>チェスの局面・ルール管理: 未実装・予定</title>
 <rect x="1840.0" y="1174.0" width="500" height="112" rx="10" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
 <text x="2090" y="1225" text-anchor="middle" font-size="18">局面・合法手管理</text>
-<text x="2090" y="1247" text-anchor="middle" font-size="18">FEN・特殊手・終局</text>
+<text x="2090" y="1247" text-anchor="middle" font-size="18">chess.js</text>
 </g>
 <g data-module="chess_ai" data-status="planned">
 <title>チェスAI: 未実装・予定</title>

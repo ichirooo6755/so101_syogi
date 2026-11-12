@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 4022" role="img" aria-labelledby="diagram-title"><title id="diagram-title">SO-101 将棋・囲碁・チェス 構成図</title><rect width="1440" height="4022" fill="#f8fafc"/><defs><marker id="arrow" viewBox="0 0 8 8" refX="7.5" refY="4" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#526578"/></marker></defs><g font-family="sans-serif" fill="#172536">
 <text x="30" y="37" font-size="27" font-weight="700">SO-101 将棋・囲碁・チェス 構成図</text>
-<text x="30" y="66" font-size="16" font-weight="400">進捗更新日 2026-11-11 ／ 実機送信ゲート 停止</text>
+<text x="30" y="66" font-size="16" font-weight="400">進捗更新日 2026-11-12 ／ 実機送信ゲート 停止</text>
 <rect x="30" y="84" width="16" height="16" rx="2" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
 <text x="53" y="98" font-size="14" font-weight="400">既存実装</text>
 <rect x="205" y="84" width="16" height="16" rx="2" fill="#fff3df" stroke="#d18a21" stroke-width="2"/>
@@ -177,20 +177,22 @@
 <rect x="206.0" y="1427" width="392.0" height="91" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
 <text x="218.0" y="1446" font-size="13" font-weight="600">#チェス #局面確定</text>
 <text x="218.0" y="1469" font-size="19" font-weight="600">チェスのルール管理</text>
-<text x="218.0" y="1490" font-size="16" font-weight="400">合法手、キャスリング権、アンパッサンの可否</text>
-<text x="218.0" y="1509" font-size="16" font-weight="400">、終局を扱う。</text>
+<text x="218.0" y="1490" font-size="16" font-weight="400">chess.jsで合法手、キャスリング、アンパッサ</text>
+<text x="218.0" y="1509" font-size="16" font-weight="400">ン、昇格を扱う。</text>
 </g>
 <g data-tags="#囲碁 #局面確定とAI入力 #局面確定" data-status="planned"><title>#囲碁 #局面確定とAI入力 #局面確定</title>
 <rect x="612.0" y="1427" width="392.0" height="91" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
 <text x="624.0" y="1446" font-size="13" font-weight="600">#囲碁 #局面確定</text>
 <text x="624.0" y="1469" font-size="19" font-weight="600">囲碁のルール管理</text>
-<text x="624.0" y="1490" font-size="16" font-weight="400">捕獲・コウ・パス・終局を扱う。</text>
+<text x="624.0" y="1490" font-size="16" font-weight="400">Sabakiの@sabaki/go-boardで盤面、捕獲、単純</text>
+<text x="624.0" y="1509" font-size="16" font-weight="400">コウを扱う。</text>
 </g>
 <g data-tags="#将棋 #局面確定とAI入力 #局面確定" data-status="implemented"><title>#将棋 #局面確定とAI入力 #局面確定</title>
 <rect x="1018.0" y="1427" width="392.0" height="91" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
 <text x="1030.0" y="1446" font-size="13" font-weight="600">#将棋 #局面確定</text>
 <text x="1030.0" y="1469" font-size="19" font-weight="600">将棋のルール管理</text>
-<text x="1030.0" y="1490" font-size="16" font-weight="400">合法手、持ち駒、成りを扱う。</text>
+<text x="1030.0" y="1490" font-size="16" font-weight="400">現行はpython-shogi。統合版はtsshogiで合法手</text>
+<text x="1030.0" y="1509" font-size="16" font-weight="400">、持ち駒、成りを扱う予定。</text>
 </g>
 <text x="42" y="1563" font-size="16" font-weight="600">#AI入力変換</text>
 <g data-tags="#チェス #局面確定とAI入力 #AI入力変換" data-status="review"><title>#チェス #局面確定とAI入力 #AI入力変換</title>
@@ -202,9 +204,9 @@
 <g data-tags="#囲碁 #局面確定とAI入力 #AI入力変換" data-status="review"><title>#囲碁 #局面確定とAI入力 #AI入力変換</title>
 <rect x="612.0" y="1541" width="392.0" height="91" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
 <text x="624.0" y="1560" font-size="13" font-weight="600">#囲碁 #AI入力変換</text>
-<text x="624.0" y="1583" font-size="19" font-weight="600">囲碁エンジン用の入力</text>
-<text x="624.0" y="1604" font-size="16" font-weight="400">エンジンの選定後に、局面とルールを渡す形式</text>
-<text x="624.0" y="1623" font-size="16" font-weight="400">を決める。</text>
+<text x="624.0" y="1583" font-size="19" font-weight="600">KataGo用の入力</text>
+<text x="624.0" y="1604" font-size="16" font-weight="400">KataGoの接続方式と、局面・対局ルールを渡す</text>
+<text x="624.0" y="1623" font-size="16" font-weight="400">形式を決める。</text>
 </g>
 <g data-tags="#将棋 #局面確定とAI入力 #AI入力変換" data-status="review"><title>#将棋 #局面確定とAI入力 #AI入力変換</title>
 <rect x="1018.0" y="1541" width="392.0" height="91" rx="6" fill="#f3f5f7" stroke="#c2ccd6" stroke-width="1"/>
@@ -231,8 +233,9 @@
 <g data-tags="#囲碁 #AI着手決定 #着手探索" data-status="planned"><title>#囲碁 #AI着手決定 #着手探索</title>
 <rect x="612.0" y="1795" width="392.0" height="91" rx="6" fill="#eaf5ff" stroke="#2684c7" stroke-width="2" stroke-dasharray="5 5"/>
 <text x="624.0" y="1814" font-size="13" font-weight="600">#囲碁 #着手探索</text>
-<text x="624.0" y="1837" font-size="19" font-weight="600">囲碁エンジン</text>
-<text x="624.0" y="1858" font-size="16" font-weight="400">エンジン未選定。局面から次の一手を選ぶ。</text>
+<text x="624.0" y="1837" font-size="19" font-weight="600">KataGo</text>
+<text x="624.0" y="1858" font-size="16" font-weight="400">囲碁AIとして採用。局面から次の一手を取得す</text>
+<text x="624.0" y="1877" font-size="16" font-weight="400">る接続は未実装。</text>
 </g>
 <g data-tags="#将棋 #AI着手決定 #着手探索" data-status="implemented"><title>#将棋 #AI着手決定 #着手探索</title>
 <rect x="1018.0" y="1795" width="392.0" height="91" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>

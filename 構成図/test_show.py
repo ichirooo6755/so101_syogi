@@ -104,10 +104,13 @@ class DiagramTest(unittest.TestCase):
         modules = {module['id']: module for module in self.data['modules']}
         self.assertEqual((modules['shogi_ai']['selected_engine'], modules['shogi_ai']['protocol']), ('YaneuraOu', 'USI'))
         self.assertEqual((modules['chess_ai']['selected_engine'], modules['chess_ai']['protocol']), ('Stockfish', 'UCI'))
-        self.assertIsNone(modules['go_ai']['selected_engine'])
+        self.assertEqual(modules['go_ai']['selected_engine'], 'KataGo')
+        self.assertEqual(modules['go_ai']['status'], 'planned')
+        self.assertIsNone(modules['go_ai'].get('protocol'))
         diagram = show.render_mermaid(self.data, self.config)
         self.assertIn('やねうら王 / USI', diagram)
         self.assertIn('Stockfish / UCI', diagram)
+        self.assertIn('囲碁AI<br/>KataGo', diagram)
         self.assertNotIn('Fairy-Stockfish', diagram)
         self.assertFalse(self.data['execution_policy']['live_motor_commands_enabled'])
 

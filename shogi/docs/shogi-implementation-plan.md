@@ -207,7 +207,8 @@ JSONには構成要素、実装状態、接続関係、依存環境、図、実�
 | 赤 | 課題で停止。理由と再開条件は確認根拠を参照 |
 
 現在の実機送信ゲートは停止したまま。図の接続は完成を目指す構成であり、
-全経路が稼働していることを示さない。囲碁のAI・ルールは未選定。チェスはStockfish/UCIを採用し、囲碁・チェスの機能は全て未実装。
+全経路が稼働していることを示さない。囲碁AIはKataGoを採用し、接続方式と対局ルールは今後決める。
+チェスはStockfish/UCIを採用。囲碁・チェスの機能は未実装。
 将棋はやねうら王/USIへ変更し、実バイナリ・評価関数での応手は別途検証する。
 駒台・盤追従・LeRobot制御は試作と対局統合を区別する。
 Leaderの静止4姿勢の記録と、今後の追従・連続記録・学習も区別する。
@@ -236,7 +237,7 @@ flowchart TB
         direction TB
         shogi_vision["着手推定<br/>9×9マスの画像差分"]
         shogi_classifier["駒種・所有者方向・成りの認識<br/>実画像でResNet-18を微調整"]
-        shogi_rules["局面・合法手管理<br/>python-shogi"]
+        shogi_rules["局面・合法手管理<br/>現行 python-shogi<br/>統合版 tsshogi（予定）"]
         shogi_ai["将棋AI<br/>やねうら王 / USI"]
         shogi_stand["駒台管理の統合<br/>駒種・空きスロット・実測位置"]
         shogi_plan["将棋操作計画の拡張<br/>移動・取り・打ち<br/>裏返し台での成り・成駒戻し"]
@@ -245,8 +246,8 @@ flowchart TB
         direction TB
         go_vision["交点認識<br/>黒石・白石・空"]
         go_geometry["盤の設定<br/>9路・13路・19路の交点座標"]
-        go_rules["局面・ルール管理<br/>捕獲・コウ・パス・終局"]
-        go_ai["囲碁AI<br/>エンジン未選定"]
+        go_rules["局面・ルール管理<br/>@sabaki/go-board"]
+        go_ai["囲碁AI<br/>KataGo"]
         go_inventory["碁笥・回収先の管理<br/>石の供給位置・アゲハマ置き場"]
         go_plan["囲碁操作計画<br/>着手交点へ配置<br/>捕獲した複数の石を回収"]
     end
@@ -254,7 +255,7 @@ flowchart TB
         direction TB
         chess_vision["盤・駒の認識<br/>8×8・白黒6種＋空"]
         chess_geometry["盤の設定<br/>8×8のマス座標・駒寸法"]
-        chess_rules["局面・合法手管理<br/>FEN・特殊手・終局"]
+        chess_rules["局面・合法手管理<br/>chess.js"]
         chess_ai["チェスAI<br/>Stockfish / UCI"]
         chess_inventory["回収先・交換駒管理<br/>捕獲駒・昇格用の駒・ポーン"]
         chess_plan["チェス操作計画<br/>移動・取り・キャスリング<br/>アンパッサン・昇格"]
@@ -309,7 +310,7 @@ flowchart TB
 <!-- generated:architecture-diagram:end -->
 
 将棋では画像差分に駒種・方向・成りの認識を加え、実測駒台と裏返し台を操作列へ統合する。
-囲碁では交点認識、局面・ルール・AI、碁笥と回収先、複数石の捕獲回収を追加する。
+囲碁では交点認識、局面・ルール管理、KataGo接続、碁笥と回収先、複数石の捕獲回収を追加する。
 チェスでは8×8の駒認識、局面・合法手、Stockfish/UCI、回収先・交換駒、移動・取り・キャスリング・アンパッサン・昇格を追加する。詳細は [チェス計画](../../chess/README.md)。
 共通側は撮影・座標較正・搬送・経路評価・実機制御・再観測を接続する。
 実物の予定状態との一致を確認してから着手と棋譜を確定し、不一致は停止・再撮影・復旧へ進める。

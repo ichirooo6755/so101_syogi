@@ -1,0 +1,10 @@
+{
+  "name": "so101-game-rules",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@sabaki/go-board": "file:vendor/sabaki-go-board-1.4.3.tgz",
+    "chess.js": "file:vendor/chess.js-1.4.0.tgz",
+    "tsshogi": "file:vendor/tsshogi-2.3.4.tgz"
+  }
+}

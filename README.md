@@ -48,8 +48,10 @@ SO-101（SO-ARM101 系 6 軸アーム）で、実物の将棋・囲碁・チェ�
 | ゲーム | エンジン | 接続 | 状態 |
 | --- | --- | --- | --- |
 | 将棋 | やねうら王（YaneuraOu） | USI | 呼出先を変更。実バイナリ・評価関数の導入と試験が必要 |
-| 囲碁 | 未選定 | 未選定 | 未実装 |
+| 囲碁 | KataGo | 未決定 | 未実装 |
 | チェス | Stockfish | UCI | 採用決定、機能は未実装 |
+
+統合版のルール判定はTypeScriptで行い、囲碁は `@sabaki/go-board`、将棋は `tsshogi`、チェスは `chess.js` を使う。[配布物・バージョン・導入手順](rules/README.md)
 
 ## 現在地（2026-11-11 時点・引き継ぎ用）
 
@@ -61,7 +63,7 @@ SO-101（SO-ARM101 系 6 軸アーム）で、実物の将棋・囲碁・チェ�
 | 実機（Follower） | USB 未接続の記録が最新。`shogi/app/robot_arm.py` はトルク有効化を拒否する。実機で駒をつかむ／取る／打つ／成るは未検証 |
 | 上腕延長部品 | +50 / +58 / +75 / +100 / +125 mm の比較試作（STEP/STL・試算 JSON）。最終寸法は未決定、未印刷のものを含む |
 | 手首カメラ | XIAO ESP32S3 Sense 用ファーム（`shogi/firmware/ShogiCamera/`）とマウント試作あり。実機撮影は未試験 |
-| 囲碁 | **未着手。** 設計メモだけ [go/README.md](go/README.md) に置いた |
+| 囲碁 | **KataGoを採用。** SO-101側は未実装。[囲碁の計画](go/README.md) |
 | チェス | **実装予定。** Stockfish/UCIを採用。[chess/README.md](chess/README.md) と構成図に分岐を追加 |
 
 進捗の全体地図は [docs/progress.md](docs/progress.md)。

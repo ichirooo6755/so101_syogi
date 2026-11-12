@@ -165,21 +165,21 @@
               "scope": "チェス",
               "tag": "局面確定",
               "title": "チェスのルール管理",
-              "description": "合法手、キャスリング権、アンパッサンの可否、終局を扱う。",
+              "description": "chess.jsで合法手、キャスリング、アンパッサン、昇格を扱う。",
               "module_id": "chess_rules"
             },
             {
               "scope": "囲碁",
               "tag": "局面確定",
               "title": "囲碁のルール管理",
-              "description": "捕獲・コウ・パス・終局を扱う。",
+              "description": "Sabakiの@sabaki/go-boardで盤面、捕獲、単純コウを扱う。",
               "module_id": "go_rules"
             },
             {
               "scope": "将棋",
               "tag": "局面確定",
               "title": "将棋のルール管理",
-              "description": "合法手、持ち駒、成りを扱う。",
+              "description": "現行はpython-shogi。統合版はtsshogiで合法手、持ち駒、成りを扱う予定。",
               "module_id": "shogi_rules"
             }
           ]
@@ -199,8 +199,8 @@
             {
               "scope": "囲碁",
               "tag": "AI入力変換",
-              "title": "囲碁エンジン用の入力",
-              "description": "エンジンの選定後に、局面とルールを渡す形式を決める。",
+              "title": "KataGo用の入力",
+              "description": "KataGoの接続方式と、局面・対局ルールを渡す形式を決める。",
               "related_module_ids": [
                 "go_ai"
               ]
@@ -251,8 +251,8 @@
             {
               "scope": "囲碁",
               "tag": "着手探索",
-              "title": "囲碁エンジン",
-              "description": "エンジン未選定。局面から次の一手を選ぶ。",
+              "title": "KataGo",
+              "description": "囲碁AIとして採用。局面から次の一手を取得する接続は未実装。",
               "module_id": "go_ai"
             },
             {
