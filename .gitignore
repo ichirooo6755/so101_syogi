@@ -7,6 +7,11 @@ __pycache__/
 # Python environments / upstream (再取得可能)
 shogi/.venv*/
 shogi/vendor/
+/go/vendor/KataGo/engine/
+/go/vendor/KataGo/models/
+/go/vendor/KataGo/gtp_logs/
+/go/vendor/KataGo/analysis_logs/
+/go/vendor/.install-*/
 shogi/build/
 so101/.analysis-venv/
 so101/syodo/.venv/

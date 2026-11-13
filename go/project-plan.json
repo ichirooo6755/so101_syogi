@@ -673,14 +673,14 @@
     },
     {
       "id": "N08",
-      "title": "Mac主体のKataGo実行環境",
-      "status": "not_started",
+      "title": "macOSとWindowsのKataGo実行環境",
+      "status": "in_progress",
       "depends_on": [
         "N01",
         "M03",
         "M04"
       ],
-      "work": "KataGo・モデル・設定の取得配置とパス、利用する計算方式、起動・中断・ログを整備する。Windows専用処理は移植しない。",
+      "work": "KataGo v1.17.1・モデル・設定の配置と起動を用意し、Windows x64で9路の応手を確認済み。macOSのビルドと応手、対局アプリからの中断を検証する。",
       "acceptance": "対象環境で実エンジン応手と中断を確認し、実行ファイル・モデル・設定の識別情報を残す。"
     },
     {

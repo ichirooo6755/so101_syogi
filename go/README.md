@@ -82,9 +82,26 @@
 - [ ] N05: 石の供給、把持、配置、複数石の回収を実装し、隣接石との干渉と取り出し可能性を評価する。
 - [ ] N06: 「着手予定→配置→回収→再観測→局面確定」の途中状態を記録し、失敗・切断・再試行で同じ石を二度処理しない復旧を作る。パス・投了は物理動作と区別する。
 - [ ] N07: 採用ルール、スーパーコウ、連続パス、投了、死活確認・地合い計算・結果確定を整備する。既存の単純コウ処理だけで全ルール対応とはしない。
-- [ ] N08: Mac主体の実行環境に合わせてKataGo・モデル・設定の配置と起動を整備する。移植元のWindows用パスやGPU検出をそのまま採用しない。
+- [ ] N08: [KataGo・モデル・設定の配置と起動手順](#katagoの準備と起動)を用意済み。Windows x64で9路の応手を確認。macOSでのビルド・応手と対局アプリからの中断は未検証。
 - [ ] N09: 9路の模擬対局と全交点・供給/回収位置の連続経路をシミュレーションで評価し、成功条件・失敗記録を残す。
 - [ ] N10: 将棋側の実機ゲートを通した機体で単石・複数石回収・連続対局を段階評価する。実測と未検証を分けて記録する。
+
+## KataGoの準備と起動
+
+リポジトリのルートでPython 3.11以降と `tar` を使います。Windows x64では公式のKataGo v1.17.1 CPU版を取得します。macOSではXcode Command Line ToolsとHomebrewの `cmake`、`eigen` を用意すると、同じバージョンをCPU向けにビルドできます。
+
+```sh
+python install_game_engine.py go
+python go/run_katago.py gtp
+```
+
+Windowsで `python` が使えない場合は `py`、macOSでは `python3` で実行できます。再利用する配布ファイルの保存先は `--cache` で指定できます。取得した配布物はSHA-256を照合します。
+
+- 実行ファイルは `go/vendor/KataGo/engine/katago`、Windowsでは同じ場所の `katago.exe`。Windows版に同梱されたDLLも隣に配置します。
+- 学習済みモデルは `go/vendor/KataGo/models/b10c384h6nbttflrs.bin.gz`。
+- 設定は `go/vendor/KataGo/config/`。GTP用の `default_gtp.cfg` と解析用の `analysis_example.cfg` を収録し、`python go/run_katago.py analysis` で解析モードを起動します。
+
+[KataGo v1.17.1 公式配布](https://github.com/lightvector/KataGo/releases/tag/v1.17.1)
 
 ## 進める順序
 
