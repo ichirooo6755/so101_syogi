@@ -18,14 +18,13 @@
 
 ## 起動と準備
 
-既存環境がある Mac では `将棋GUI.command` を開きます。新しい環境では、次のように依存する既存リポジトリを取得し、エンジンをビルドします。取得スクリプトは既に存在する `vendor` 内のフォルダーを変更しません。
+既存環境がある Mac では `将棋GUI.command` を開きます。新しい環境では、`shogi/` で次の手順を実行します。
 
 ```sh
 ./scripts/fetch_upstream.sh
+python3 ../install_game_engine.py shogi
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
-export SHOGI_ENGINE_PATH="/absolute/path/to/yaneuraou"
-export SHOGI_EVAL_DIR="/absolute/path/to/eval"
 ./将棋GUI.command
 ```
 
@@ -43,15 +42,14 @@ export SHOGI_EVAL_DIR="/absolute/path/to/eval"
 ## 将棋エンジンの準備（2026-11-11変更）
 
 将棋は [やねうら王](https://github.com/yaneurao/YaneuraOu) をUSIで呼びます。
-`fetch_upstream.sh` はソースを固定コミットで取得するだけなので、実行環境に合う通常対局用バイナリと、その方式に対応する評価関数を別途準備してください。
-公式のビルド・配布手順と評価関数の利用条件を確認し、導入した版・設定を記録します。
+リポジトリのルートで `python install_game_engine.py shogi` を実行すると、やねうら王 V9.00 の標準NNUE版と対応する [Háo 評価関数](https://github.com/nodchip/tanuki-/releases/tag/tanuki-.halfkp_256x2-32-32.2023-05-08) を取得し、SHA-256を照合します。Python 3.11以降と `.7z` に対応した `tar` が必要です。Apple Silicon、Intel Mac、Windows x64に対応し、macOSでは `python3`、Windowsでは `py` でも実行できます。
 
 - `SHOGI_ENGINE_PATH`：やねうら王実行ファイルのパス。未指定時は `vendor/YaneuraOu/engine/yaneuraou`（Windowsは `.exe`）を使います。
-- `SHOGI_EVAL_DIR`：任意。指定すると `isready` 前にUSIの `EvalDir` を設定します。未指定時は実行ファイルの隣を作業ディレクトリとし、エンジン既定の評価関数配置を使います。
+- `SHOGI_EVAL_DIR`：任意。指定すると `isready` 前にUSIの `EvalDir` を設定します。未指定時は実行ファイルの隣の `eval/nn.bin` を読み込みます。
 - 端末で上の環境変数を指定して `./将棋GUI.command` を実行します。Finderから開く場合は、既定の配置を使うか起動環境へ設定してください。
 - 本体・評価関数が未準備でもGUI自体は起動できますが、応手は計算できず設定確認を表示します。Fairy-Stockfishへの自動フォールバックはありません。
 
-USIの接続順序・合法手照合・終了時の後始末はモックによる単体テストの対象です。実バイナリ・評価関数での応手と実機対局は別途検証します。
+USIの接続順序・合法手照合・終了時の後始末は単体テストの対象です。Windowsで準備できる範囲は将棋エンジンです。カメラとGUIの起動手順は上記のMac構成を参照してください。
 チェスでは [Stockfish/UCI](../chess/README.md) を採用し、将棋のUSI接続と分けます。
 
 ## 延長部品と到達範囲（既存の検討記録）

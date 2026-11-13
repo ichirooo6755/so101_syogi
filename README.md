@@ -112,11 +112,9 @@ SO-101 本体側は [so101/README.md](so101/README.md) が優先です。
 ```sh
 cd shogi
 ./scripts/fetch_upstream.sh          # vendor/ を取得（既存は変更しない）
+python3 ../install_game_engine.py shogi
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
-# やねうら王本体と対応する評価関数を準備して指定
-export SHOGI_ENGINE_PATH="/absolute/path/to/yaneuraou"
-export SHOGI_EVAL_DIR="/absolute/path/to/eval"
 ./将棋GUI.command
 ```
 

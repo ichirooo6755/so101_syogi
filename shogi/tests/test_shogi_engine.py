@@ -86,6 +86,11 @@ class EngineTest(unittest.TestCase):
                 shogi_engine.bestmove('sfen', {'7g7f'})
         popen.assert_not_called()
 
+    def test_process_launch_failure_reports_os_error(self):
+        with patch.object(shogi_engine.subprocess, 'Popen', side_effect=OSError('blocked by OS')):
+            with self.assertRaisesRegex(ValueError, 'やねうら王を起動できません.*blocked by OS'):
+                shogi_engine.bestmove('sfen', {'7g7f'})
+
     def test_illegal_move_is_rejected_and_process_is_closed(self):
         proc = self.process('bestmove 9a9b')
         with patch.object(shogi_engine.subprocess, 'Popen', return_value=proc):

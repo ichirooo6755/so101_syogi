@@ -34,9 +34,12 @@ def bestmove(sfen, legal_moves):
             raise ValueError('SHOGI_EVAL_DIR に評価関数のディレクトリを指定してください')
         if '\n' in evaluation or '\r' in evaluation:
             raise ValueError('評価関数のパスに改行は使えません')
-    proc = subprocess.Popen(
-        [str(engine)], cwd=str(engine.parent), stdin=subprocess.PIPE,
-        stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True, bufsize=1)
+    try:
+        proc = subprocess.Popen(
+            [str(engine)], cwd=str(engine.parent), stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True, bufsize=1)
+    except OSError as exc:
+        raise ValueError(f'やねうら王を起動できません: {exc}') from exc
     lines = queue.Queue()
 
     def read_output():

@@ -7,6 +7,8 @@ __pycache__/
 # Python environments / upstream (再取得可能)
 shogi/.venv*/
 shogi/vendor/
+/chess/vendor/Stockfish/engine/
+/chess/vendor/.install-*/
 shogi/build/
 so101/.analysis-venv/
 so101/syodo/.venv/
