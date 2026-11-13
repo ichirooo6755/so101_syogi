@@ -31,6 +31,20 @@
 - ローカルにも実装ファイルは無かった。`go/README.md` に将棋からの流用見込みと、交点座標・石の把持・碁笥・ルール選定の洗い出しだけ置いた。
 - 盤座標の設計置き場は [`board-geometry.md`](board-geometry.md)。
 
+## 対局エンジンとルールライブラリの収録状況（2026-11-13 確認）
+
+今回の対象ブランチ3本に、実ファイルの収録に関する未コミットの変更はありません。囲碁と将棋・チェスはローカルでコミット済みで、GitHub への push が残っています。
+
+| 対象 | ブランチ | ローカルでコミット済みの内容 | GitHub の状態 |
+| --- | --- | --- | --- |
+| 囲碁・KataGo | [`codex/go-integration`](https://github.com/ichirooo6755/so101_syogi/tree/codex/go-integration) | `5cc3e4c`、`b468399`、`56cf79b`、`b7d06d6`。 `go/vendor/KataGo/` の Windows x64 用 v1.17.1 と DLL、Apple Silicon・Intel Mac 用 v1.17.2 と共有ライブラリ、学習済みモデル、対応ソース、ライセンス、出典。設定と起動方法を更新し、取得スクリプトを削除。 | `deaf1b2` まで。左記4件の push 待ち。 |
+| 将棋・やねうら王 | [`codex/chess-stockfish-yaneuraou`](https://github.com/ichirooo6755/so101_syogi/tree/codex/chess-stockfish-yaneuraou) | `6d713cf`。 `shogi/vendor/YaneuraOu/` の Windows x64・Apple Silicon・Intel Mac 用 V9.00、Háo 評価関数 `engine/eval/nn.bin`、対応ソースとライセンス、起動パスの更新。 | `edc9f68` まで。左記1件の push 待ち。 |
+| チェス・Stockfish | [`codex/chess-stockfish-yaneuraou`](https://github.com/ichirooo6755/so101_syogi/tree/codex/chess-stockfish-yaneuraou) | 同じ `6d713cf`。 `chess/vendor/Stockfish/` の Stockfish 19 Windows x64 実行ファイル、macOS ユニバーサル版のアーカイブ、NNUE、対応ソースとライセンス、起動方法の更新と取得スクリプトの削除。 | 将棋と同じコミットで反映予定。 |
+| 3ゲームのルールライブラリ | [`codex/game-rule-libraries`](https://github.com/ichirooo6755/so101_syogi/tree/codex/game-rule-libraries/rules/vendor) | `rules/vendor/` の `@sabaki/go-board` 1.4.3、`tsshogi` 2.3.4、`chess.js` 1.4.0 の配布ファイル。 | `bb82c00` で収録を確認済み。 |
+
+- [ ] `codex/go-integration` と `codex/chess-stockfish-yaneuraou` のコミットを GitHub に反映する。通常の push は大容量転送中にタイムアウトまたは切断し、Git LFS はリポジトリの予算超過で拒否された。
+- [ ] 反映後に両ブランチを新規にチェックアウトし、エンジンと評価ファイルが収録されていること、取得スクリプトを使わず起動できることを確認する。Windows では KataGo の応手・解析と Stockfish の応手を確認済み。やねうら王はこのPCのアプリケーション制御で起動が止まり、macOS での各エンジンの動作確認も残っている。
+
 ## 大容量で実ファイルを入れていない進捗データ
 
 進捗が無いのではなく、GitHub 上限のため実ファイルを入れず、生成元と要約で辿れるようにしたものです。一覧は [large-artifacts.md](large-artifacts.md)。
