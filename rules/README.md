@@ -15,4 +15,6 @@ cd rules
 npm ci --offline --ignore-scripts
 ```
 
+Windows の PowerShell で `npm` のスクリプト実行が制限されている場合は、`rules/` で `npm.cmd ci --offline --ignore-scripts` を実行する。
+
 各ライブラリの上流資料は、[SabakiHQ/go-board](https://github.com/SabakiHQ/go-board)、[sunfish-shogi/tsshogi](https://github.com/sunfish-shogi/tsshogi)、[jhlywa/chess.js](https://github.com/jhlywa/chess.js) を参照。
